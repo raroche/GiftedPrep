@@ -13,6 +13,7 @@ docs/research/difficulty-model.md: 90 clockwise easiest, then 180, then 270.
 import sys, json, random
 sys.path.insert(0, 'tools')
 from _figural import *
+from _symmetry import canonical, rotation_is_invisible, visible_rotations
 from _authoring import write
 
 ASYMMETRIC = ['righttriangle', 'trapezoid', 'parallelogram', 'kite', 'chevron',
@@ -28,7 +29,13 @@ def item(grade, rng, num, difficulty):
     color = rng.choice(colors)
 
     if mode == 'rotate':
-        deg = rng.choice(rot_choices(grade))
+        # Both shapes must be able to show the turn. star4, plus and cross are
+        # in the asymmetric-looking list but are four-fold symmetric.
+        angles = [d for d in rot_choices(grade)
+                  if not rotation_is_invisible(s1, d) and not rotation_is_invisible(s2, d)]
+        if not angles:
+            return None
+        deg = rng.choice(angles)
         a = {'s': s1, 'c': color}
         b = {'s': s1, 'c': color, 'r': deg}
         c = {'s': s2, 'c': color}
@@ -81,9 +88,14 @@ def item(grade, rng, num, difficulty):
 
 
 def _build(grade, num, difficulty, a, b, c, key, wrongs, why, strat, n):
+    def sig(x):
+        return json.dumps([canonical(s) for s in (x if isinstance(x, list) else [x])],
+                          sort_keys=True)
     items = [('key', key, None)]
+    seen = {sig(key)}
     for w in wrongs:
-        if w != key and all(w != it[1] for it in items) and len(items) < n:
+        if sig(w) not in seen and len(items) < n:
+            seen.add(sig(w))
             items.append(('near', w, None))
     tagged = letter_ids(items[:n])
     if len(tagged) < n:
@@ -121,6 +133,9 @@ if __name__ == '__main__':
             tries += 1
             q = item(grade, rng, start + made, PLAN[made % len(PLAN)])
             if not q:
+                continue
+            ok, why = item_is_sound(q)
+            if not ok:
                 continue
             sig = json.dumps(q['figure'], sort_keys=True)
             if sig in sigs:

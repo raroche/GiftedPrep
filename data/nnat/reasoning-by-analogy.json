@@ -220,7 +220,7 @@
                 "s": "kite",
                 "c": "grey",
                 "f": "outline",
-                "z": 0.43
+                "z": 0.39
               }
             ]
           }
@@ -313,8 +313,8 @@
             "shapes": [
               {
                 "s": "recttall",
-                "c": "blue",
-                "r": 180
+                "c": "yellow",
+                "r": 90
               }
             ]
           }
@@ -326,7 +326,8 @@
               {
                 "s": "recttall",
                 "c": "blue",
-                "r": 270
+                "r": 90,
+                "z": 0.47
               }
             ]
           }
@@ -345,13 +346,13 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty yellow kite, then an empty yellow kite, turned a quarter turn. Bottom row: an empty yellow circle, then an empty box.",
+        "alt": "Top row: an empty blue pentagon, then a big empty blue pentagon. Bottom row: an empty blue plus sign, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "yellow",
+                "s": "pentagon",
+                "c": "blue",
                 "f": "outline"
               }
             ]
@@ -359,18 +360,18 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "yellow",
+                "s": "pentagon",
+                "c": "blue",
                 "f": "outline",
-                "r": 90
+                "z": 1.2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "yellow",
+                "s": "plus",
+                "c": "blue",
                 "f": "outline"
               }
             ]
@@ -386,10 +387,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "yellow",
+                "s": "plus",
+                "c": "blue",
                 "f": "outline",
-                "r": 90
+                "z": 1.2
               }
             ]
           }
@@ -399,8 +400,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "yellow",
+                "s": "plus",
+                "c": "blue",
                 "f": "outline"
               }
             ]
@@ -411,10 +412,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "yellow",
+                "s": "pentagon",
+                "c": "blue",
                 "f": "outline",
-                "r": 90
+                "z": 1.2
               }
             ]
           }
@@ -424,10 +425,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "yellow",
+                "s": "plus",
+                "c": "blue",
                 "f": "outline",
-                "r": 270
+                "z": 0.72
               }
             ]
           }
@@ -437,17 +438,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "yellow",
+                "s": "plus",
+                "c": "green",
                 "f": "outline",
-                "r": 180
+                "z": 1.2
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the shape turns a quarter turn. Choice b did not turn.",
+      "explanation": "Going across, the shape gets bigger. Choice b did not get bigger.",
       "strategy": "Say the change out loud, then do exactly that to the shape below."
     },
     {
@@ -752,7 +753,7 @@
               {
                 "s": "trapezoid",
                 "c": "green",
-                "z": 0.78
+                "z": 0.8
               }
             ]
           }
@@ -771,35 +772,33 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small empty yellow ring, then a big empty yellow ring. Bottom row: a small empty yellow slanted rectangle, then an empty box.",
+        "alt": "Top row: an empty yellow pentagon, then an empty yellow pentagon, turned a quarter turn. Bottom row: an empty yellow half circle, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "ring",
+                "s": "pentagon",
                 "c": "yellow",
-                "f": "outline",
-                "z": 0.6
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "ring",
+                "s": "pentagon",
                 "c": "yellow",
                 "f": "outline",
-                "z": 1.2
+                "r": 90
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "semicircle",
                 "c": "yellow",
-                "f": "outline",
-                "z": 0.6
+                "f": "outline"
               }
             ]
           },
@@ -814,10 +813,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "semicircle",
                 "c": "yellow",
                 "f": "outline",
-                "z": 1.2
+                "r": 90
               }
             ]
           }
@@ -827,10 +826,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "semicircle",
                 "c": "yellow",
-                "f": "outline",
-                "z": 0.6
+                "f": "outline"
               }
             ]
           }
@@ -840,10 +838,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
+                "s": "pentagon",
                 "c": "yellow",
                 "f": "outline",
-                "z": 1.2
+                "r": 90
               }
             ]
           }
@@ -853,10 +851,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "semicircle",
                 "c": "yellow",
                 "f": "outline",
-                "z": 0.72
+                "r": 270
               }
             ]
           }
@@ -866,17 +864,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "semicircle",
                 "c": "yellow",
                 "f": "outline",
-                "z": 0.49
+                "r": 180
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the shape gets bigger. Choice b did not get bigger.",
+      "explanation": "Going across, the shape turns a quarter turn. Choice b did not turn.",
       "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
@@ -888,29 +886,33 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a green octagon, then a grey octagon. Bottom row: a green arrow, then an empty box.",
+        "alt": "Top row: an empty green oval, then a big empty green oval. Bottom row: an empty green cross, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "green"
+                "s": "oval",
+                "c": "green",
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "grey"
+                "s": "oval",
+                "c": "green",
+                "f": "outline",
+                "z": 1.2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "green"
+                "s": "cross",
+                "c": "green",
+                "f": "outline"
               }
             ]
           },
@@ -925,8 +927,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "grey"
+                "s": "cross",
+                "c": "green",
+                "f": "outline",
+                "z": 1.2
               }
             ]
           }
@@ -936,8 +940,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "green"
+                "s": "cross",
+                "c": "green",
+                "f": "outline"
               }
             ]
           }
@@ -947,8 +952,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "grey"
+                "s": "oval",
+                "c": "green",
+                "f": "outline",
+                "z": 1.2
               }
             ]
           }
@@ -958,9 +965,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "grey",
-                "z": 0.47
+                "s": "cross",
+                "c": "green",
+                "f": "outline",
+                "z": 0.72
               }
             ]
           }
@@ -970,16 +978,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "grey",
-                "z": 0.42
+                "s": "cross",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the color turns grey. Choice b kept the old color.",
+      "explanation": "Going across, the shape gets bigger. Choice b did not get bigger.",
       "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
@@ -1294,7 +1303,7 @@
                 "s": "triangledown",
                 "c": "green",
                 "f": "outline",
-                "z": 0.43
+                "z": 0.39
               }
             ]
           }
@@ -1313,31 +1322,30 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a yellow wide rectangle, then a big empty yellow wide rectangle. Bottom row: a yellow hexagon, then an empty box.",
+        "alt": "Top row: a grey right triangle, then a big green right triangle. Bottom row: a grey oval, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "yellow"
+                "s": "righttriangle",
+                "c": "grey"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "yellow",
-                "z": 1.2,
-                "f": "outline"
+                "s": "righttriangle",
+                "c": "green",
+                "z": 1.2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow"
+                "s": "oval",
+                "c": "grey"
               }
             ]
           },
@@ -1352,10 +1360,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
-                "z": 1.2,
-                "f": "outline"
+                "s": "oval",
+                "c": "green",
+                "z": 1.2
               }
             ]
           }
@@ -1365,9 +1372,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
-                "f": "outline"
+                "s": "oval",
+                "c": "green"
               }
             ]
           }
@@ -1377,8 +1383,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
+                "s": "oval",
+                "c": "grey",
                 "z": 1.2
               }
             ]
@@ -1389,10 +1395,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "yellow",
-                "z": 1.2,
-                "f": "outline"
+                "s": "righttriangle",
+                "c": "green",
+                "z": 1.2
               }
             ]
           }
@@ -1402,17 +1407,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
-                "z": 0.72,
-                "f": "outline"
+                "s": "oval",
+                "c": "green",
+                "z": 0.72
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the shape gets bigger, and the shape empties out. Choice b did not get bigger. Choice c stayed filled in.",
+      "explanation": "Two things change: the shape gets bigger, and the color turns green. Choice b did not get bigger. Choice c kept the old color.",
       "strategy": "Two changes means two checks. Go through them one at a time."
     },
     {
@@ -1536,36 +1540,32 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small empty grey oval, then a small empty grey oval, turned a quarter turn. Bottom row: a small empty grey ring, then an empty box.",
+        "alt": "Top row: an empty blue bow tie, then a small blue bow tie. Bottom row: an empty blue square, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "oval",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
+                "s": "bowtie",
+                "c": "blue",
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "oval",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.5,
-                "r": 90
+                "s": "bowtie",
+                "c": "blue",
+                "z": 0.5
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
+                "s": "square",
+                "c": "blue",
+                "f": "outline"
               }
             ]
           },
@@ -1580,11 +1580,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.5,
-                "r": 90
+                "s": "square",
+                "c": "blue",
+                "z": 0.5
               }
             ]
           }
@@ -1594,10 +1592,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.5
+                "s": "square",
+                "c": "blue"
               }
             ]
           }
@@ -1607,11 +1603,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "grey",
+                "s": "square",
+                "c": "blue",
                 "f": "outline",
-                "z": 0.6,
-                "r": 90
+                "z": 0.5
               }
             ]
           }
@@ -1621,11 +1616,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.5,
-                "r": 90
+                "s": "bowtie",
+                "c": "blue",
+                "z": 0.5
               }
             ]
           }
@@ -1635,18 +1628,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.5,
-                "r": 180
+                "s": "square",
+                "c": "blue",
+                "z": 0.85
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the shape turns a quarter turn, and the shape gets smaller. Choice b did not turn. Choice c did not get smaller.",
+      "explanation": "Two things change: the shape gets smaller, and the shape fills in. Choice b did not get smaller. Choice c never filled in.",
       "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
     },
     {
@@ -1769,33 +1760,30 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty blue circle, then a big empty grey circle. Bottom row: an empty blue cross, then an empty box.",
+        "alt": "Top row: a green pentagon, then a small yellow pentagon. Bottom row: a green half circle, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "blue",
-                "f": "outline"
+                "s": "pentagon",
+                "c": "green"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "grey",
-                "f": "outline",
-                "z": 1.2
+                "s": "pentagon",
+                "c": "yellow",
+                "z": 0.5
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "cross",
-                "c": "blue",
-                "f": "outline"
+                "s": "semicircle",
+                "c": "green"
               }
             ]
           },
@@ -1810,10 +1798,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "grey",
-                "f": "outline",
-                "z": 1.2
+                "s": "semicircle",
+                "c": "yellow",
+                "z": 0.5
               }
             ]
           }
@@ -1823,9 +1810,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "grey",
-                "f": "outline"
+                "s": "semicircle",
+                "c": "green",
+                "z": 0.5
               }
             ]
           }
@@ -1835,10 +1822,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "blue",
-                "f": "outline",
-                "z": 1.2
+                "s": "semicircle",
+                "c": "yellow"
               }
             ]
           }
@@ -1848,10 +1833,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "grey",
-                "f": "outline",
-                "z": 1.2
+                "s": "pentagon",
+                "c": "yellow",
+                "z": 0.5
               }
             ]
           }
@@ -1861,17 +1845,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.72
+                "s": "semicircle",
+                "c": "yellow",
+                "z": 0.85
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the shape gets bigger, and the color turns grey. Choice b did not get bigger. Choice c kept the old color.",
+      "explanation": "Two things change: the color turns yellow, and the shape gets smaller. Choice b kept the old color. Choice c did not get smaller.",
       "strategy": "List every change on your fingers, then test the answer against every finger."
     },
     {
@@ -1955,7 +1938,7 @@
               {
                 "s": "square",
                 "c": "green",
-                "z": 0.57
+                "z": 0.55
               }
             ]
           }
@@ -1985,12 +1968,12 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty grey oval, then an empty grey oval, turned upside down. Bottom row: an empty grey half circle, then an empty box.",
+        "alt": "Top row: an empty grey kite, then a grey kite. Bottom row: an empty grey square, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "oval",
+                "s": "kite",
                 "c": "grey",
                 "f": "outline"
               }
@@ -1999,17 +1982,15 @@
           {
             "shapes": [
               {
-                "s": "oval",
-                "c": "grey",
-                "f": "outline",
-                "r": 180
+                "s": "kite",
+                "c": "grey"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "semicircle",
+                "s": "square",
                 "c": "grey",
                 "f": "outline"
               }
@@ -2026,10 +2007,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "grey",
-                "f": "outline",
-                "r": 180
+                "s": "square",
+                "c": "grey"
               }
             ]
           }
@@ -2039,7 +2018,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
+                "s": "square",
                 "c": "grey",
                 "f": "outline"
               }
@@ -2051,10 +2030,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "grey",
-                "f": "outline",
-                "r": 180
+                "s": "kite",
+                "c": "grey"
               }
             ]
           }
@@ -2064,10 +2041,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "grey",
-                "f": "outline",
-                "r": 90
+                "s": "square",
+                "c": "green"
               }
             ]
           }
@@ -2077,17 +2052,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
+                "s": "square",
                 "c": "grey",
-                "f": "outline",
-                "r": 270
+                "z": 1.05
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the shape turns upside down. Choice b did not turn.",
+      "explanation": "Going across, the shape fills in. Choice b never filled in.",
       "strategy": "Say the change out loud, then do exactly that to the shape below."
     },
     {
@@ -2099,35 +2073,31 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small empty yellow kite, then a small empty grey kite. Bottom row: a small empty yellow trapezoid, then an empty box.",
+        "alt": "Top row: an empty green upside-down triangle, then a green upside-down triangle. Bottom row: an empty green wide rectangle, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "yellow",
-                "f": "outline",
-                "z": 0.6
+                "s": "triangledown",
+                "c": "green",
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
+                "s": "triangledown",
+                "c": "green"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow",
-                "f": "outline",
-                "z": 0.6
+                "s": "rectwide",
+                "c": "green",
+                "f": "outline"
               }
             ]
           },
@@ -2142,10 +2112,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
+                "s": "rectwide",
+                "c": "green"
               }
             ]
           }
@@ -2155,10 +2123,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow",
-                "f": "outline",
-                "z": 0.6
+                "s": "rectwide",
+                "c": "green",
+                "f": "outline"
               }
             ]
           }
@@ -2168,10 +2135,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
+                "s": "triangledown",
+                "c": "green"
               }
             ]
           }
@@ -2181,10 +2146,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "green",
-                "f": "outline",
-                "z": 0.6
+                "s": "rectwide",
+                "c": "blue"
               }
             ]
           }
@@ -2194,17 +2157,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "grey",
-                "f": "outline",
-                "z": 1.15
+                "s": "rectwide",
+                "c": "green",
+                "z": 0.37
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the color turns grey. Choice b kept the old color.",
+      "explanation": "Going across, the shape fills in. Choice b never filled in.",
       "strategy": "Say the change out loud, then do exactly that to the shape below."
     },
     {
@@ -2541,30 +2503,33 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a yellow chevron, then two yellow chevrons. Bottom row: a yellow oval, then an empty box.",
+        "alt": "Top row: an empty green slanted rectangle, then a big empty green slanted rectangle. Bottom row: an empty green bow tie, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "chevron",
-                "c": "yellow"
+                "s": "parallelogram",
+                "c": "green",
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "chevron",
-                "c": "yellow",
-                "n": 2
+                "s": "parallelogram",
+                "c": "green",
+                "f": "outline",
+                "z": 1.2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow"
+                "s": "bowtie",
+                "c": "green",
+                "f": "outline"
               }
             ]
           },
@@ -2579,9 +2544,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow",
-                "n": 2
+                "s": "bowtie",
+                "c": "green",
+                "f": "outline",
+                "z": 1.2
               }
             ]
           }
@@ -2591,8 +2557,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow"
+                "s": "bowtie",
+                "c": "green",
+                "f": "outline"
               }
             ]
           }
@@ -2602,9 +2569,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "chevron",
-                "c": "yellow",
-                "n": 2
+                "s": "parallelogram",
+                "c": "green",
+                "f": "outline",
+                "z": 1.2
               }
             ]
           }
@@ -2614,9 +2582,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow",
-                "n": 1
+                "s": "bowtie",
+                "c": "green",
+                "f": "outline",
+                "z": 0.72
               }
             ]
           }
@@ -2626,16 +2595,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow",
-                "n": 3
+                "s": "bowtie",
+                "c": "green",
+                "f": "outline",
+                "z": 1.32
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, there are 2 of them instead. Choice b kept the old number.",
+      "explanation": "Going across, the shape gets bigger. Choice b did not get bigger.",
       "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
@@ -2647,34 +2617,30 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small empty grey pentagon, then a small grey pentagon. Bottom row: a small empty grey slanted rectangle, then an empty box.",
+        "alt": "Top row: a green star, then a green star, with a criss cross pattern inside. Bottom row: a green right triangle, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
+                "s": "star",
+                "c": "green"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "grey",
-                "z": 0.6
+                "s": "star",
+                "c": "green",
+                "f": "grid"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
+                "s": "righttriangle",
+                "c": "green"
               }
             ]
           },
@@ -2689,9 +2655,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "grey",
-                "z": 0.6
+                "s": "righttriangle",
+                "c": "green",
+                "f": "grid"
               }
             ]
           }
@@ -2701,10 +2667,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
+                "s": "righttriangle",
+                "c": "green"
               }
             ]
           }
@@ -2714,9 +2678,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "grey",
-                "z": 0.6
+                "s": "star",
+                "c": "green",
+                "f": "grid"
               }
             ]
           }
@@ -2726,9 +2690,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "yellow",
-                "z": 0.6
+                "s": "righttriangle",
+                "c": "blue",
+                "f": "grid"
               }
             ]
           }
@@ -2738,16 +2702,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "grey",
-                "z": 1.01
+                "s": "righttriangle",
+                "c": "yellow",
+                "f": "grid"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the shape fills in. Choice b never filled in.",
+      "explanation": "Going across, the inside becomes a criss cross pattern. Choice b did not become a criss cross pattern.",
       "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
@@ -3065,8 +3029,8 @@
             "shapes": [
               {
                 "s": "bowtie",
-                "c": "green",
-                "r": 180
+                "c": "yellow",
+                "r": 90
               }
             ]
           }
@@ -3085,31 +3049,34 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a green slanted rectangle, then a small green slanted rectangle, with a criss cross pattern inside. Bottom row: a green trapezoid, then an empty box.",
+        "alt": "Top row: a small empty green plus sign, then a small grey plus sign. Bottom row: a small empty green oval, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green"
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "parallelogram",
+                "s": "plus",
                 "c": "green",
-                "z": 0.5,
-                "f": "grid"
+                "f": "outline",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "green"
+                "s": "plus",
+                "c": "grey",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6
               }
             ]
           },
@@ -3124,10 +3091,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "green",
-                "z": 0.5,
-                "f": "grid"
+                "s": "oval",
+                "c": "grey",
+                "z": 0.6
               }
             ]
           }
@@ -3137,9 +3103,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "green",
-                "f": "grid"
+                "s": "oval",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
               }
             ]
           }
@@ -3149,9 +3116,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "oval",
                 "c": "green",
-                "z": 0.5
+                "z": 0.6
               }
             ]
           }
@@ -3161,10 +3128,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green",
-                "z": 0.5,
-                "f": "grid"
+                "s": "plus",
+                "c": "grey",
+                "z": 0.6
               }
             ]
           }
@@ -3174,17 +3140,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "green",
-                "z": 0.85,
-                "f": "grid"
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.6
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the shape gets smaller, and the inside becomes a criss cross pattern. Choice b did not get smaller. Choice c did not become a criss cross pattern.",
+      "explanation": "Two things change: the shape fills in, and the color turns grey. Choice b never filled in. Choice c kept the old color.",
       "strategy": "Two changes means two checks. Go through them one at a time."
     },
     {
@@ -3313,25 +3278,13 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small yellow slanted rectangle, then a small yellow slanted rectangle, with flat stripes inside and turned upside down. Bottom row: a small yellow oval, then an empty box.",
+        "alt": "Top row: a green oval, then a small empty green oval. Bottom row: a green six-pointed star, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "yellow",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "parallelogram",
-                "c": "yellow",
-                "z": 0.6,
-                "r": 180,
-                "f": "stripesh"
+                "s": "oval",
+                "c": "green"
               }
             ]
           },
@@ -3339,106 +3292,8 @@
             "shapes": [
               {
                 "s": "oval",
-                "c": "yellow",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "missing": true
-          }
-        ]
-      },
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "oval",
-                "c": "yellow",
-                "z": 0.6,
-                "r": 180,
-                "f": "stripesh"
-              }
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "oval",
-                "c": "yellow",
-                "z": 0.6,
-                "f": "stripesh"
-              }
-            ]
-          }
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "oval",
-                "c": "yellow",
-                "z": 0.6,
-                "r": 180
-              }
-            ]
-          }
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "parallelogram",
-                "c": "yellow",
-                "z": 0.6,
-                "r": 180,
-                "f": "stripesh"
-              }
-            ]
-          }
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "oval",
-                "c": "yellow",
-                "z": 0.6,
-                "r": 270,
-                "f": "stripesh"
-              }
-            ]
-          }
-        }
-      ],
-      "answer": "a",
-      "explanation": "Two things change: the shape turns upside down, and the inside becomes flat stripes. Choice b did not turn. Choice c did not become flat stripes.",
-      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
-    },
-    {
-      "id": "nnat-rba-g2-14",
-      "grade": 2,
-      "difficulty": 4,
-      "prompt": "Finish the bottom row the same way.",
-      "figure": {
-        "kind": "matrix",
-        "rows": 2,
-        "cols": 2,
-        "alt": "Top row: an empty grey hexagon, then a big empty grey hexagon, turned upside down. Bottom row: an empty grey bow tie, then an empty box.",
-        "cells": [
-          {
-            "shapes": [
-              {
-                "s": "hexagon",
-                "c": "grey",
+                "c": "green",
+                "z": 0.5,
                 "f": "outline"
               }
             ]
@@ -3446,41 +3301,28 @@
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "grey",
-                "f": "outline",
-                "r": 180,
-                "z": 1.2
+                "s": "star6",
+                "c": "green"
               }
             ]
           },
           {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "grey",
+                "s": "star6",
+                "c": "green",
+                "z": 0.5,
                 "f": "outline"
               }
             ]
-          },
-          {
-            "missing": true
-          }
-        ]
-      },
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "outline",
-                "r": 180,
-                "z": 1.2
-              }
-            ]
           }
         },
         {
@@ -3488,10 +3330,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "outline",
-                "z": 1.2
+                "s": "star6",
+                "c": "green",
+                "f": "outline"
               }
             ]
           }
@@ -3501,124 +3342,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "outline",
-                "r": 180
-              }
-            ]
-          }
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "hexagon",
-                "c": "grey",
-                "f": "outline",
-                "r": 180,
-                "z": 1.2
-              }
-            ]
-          }
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "outline",
-                "r": 90,
-                "z": 1.2
-              }
-            ]
-          }
-        }
-      ],
-      "answer": "a",
-      "explanation": "Two things change: the shape turns upside down, and the shape gets bigger. Choice b did not turn. Choice c did not get bigger.",
-      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
-    },
-    {
-      "id": "nnat-rba-g2-10",
-      "grade": 2,
-      "difficulty": 5,
-      "prompt": "Finish the bottom row the same way.",
-      "figure": {
-        "kind": "matrix",
-        "rows": 2,
-        "cols": 2,
-        "alt": "Top row: a small green trapezoid, then a small green trapezoid, turned a quarter turn. Bottom row: a small green pentagon, then an empty box.",
-        "cells": [
-          {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "green",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "green",
-                "z": 0.5,
-                "r": 90
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "pentagon",
-                "c": "green",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "missing": true
-          }
-        ]
-      },
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "pentagon",
-                "c": "green",
-                "z": 0.5,
-                "r": 90
-              }
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "pentagon",
-                "c": "green",
-                "z": 0.6,
-                "r": 90
-              }
-            ]
-          }
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "pentagon",
+                "s": "star6",
                 "c": "green",
                 "z": 0.5
               }
@@ -3630,10 +3354,121 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "oval",
                 "c": "green",
                 "z": 0.5,
-                "r": 90
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "green",
+                "z": 0.85,
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape gets smaller, and the shape empties out. Choice b did not get smaller. Choice c stayed filled in.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g2-14",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a blue ring, then three small blue rings. Bottom row: a blue pentagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue",
+                "n": 3,
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "n": 3,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue",
+                "n": 3,
+                "z": 0.5
               }
             ]
           }
@@ -3644,16 +3479,127 @@
             "shapes": [
               {
                 "s": "pentagon",
-                "c": "green",
-                "z": 0.85,
-                "r": 90
+                "c": "blue",
+                "n": 3,
+                "z": 0.85
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the shape gets smaller, and the shape turns a quarter turn. Choice b did not get smaller. Choice c did not turn.",
+      "explanation": "Two things change: there are 3 of them instead, and the shape gets smaller. Choice b kept the old number. Choice c did not get smaller.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g2-10",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a green pentagon, then a small empty green pentagon. Bottom row: a green star, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline",
+                "z": 0.85
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape empties out, and the shape gets smaller. Choice b stayed filled in. Choice c did not get smaller.",
       "strategy": "List every change on your fingers, then test the answer against every finger."
     },
     {
@@ -3665,30 +3611,31 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a green oval, then a blue oval, turned a quarter turn. Bottom row: a green upside-down triangle, then an empty box.",
+        "alt": "Top row: a blue triangle, then a big empty blue triangle. Bottom row: a blue cross, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "oval",
-                "c": "green"
+                "s": "triangle",
+                "c": "blue"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "oval",
+                "s": "triangle",
                 "c": "blue",
-                "r": 90
+                "z": 1.2,
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "triangledown",
-                "c": "green"
+                "s": "cross",
+                "c": "blue"
               }
             ]
           },
@@ -3703,9 +3650,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangledown",
+                "s": "cross",
                 "c": "blue",
-                "r": 90
+                "z": 1.2,
+                "f": "outline"
               }
             ]
           }
@@ -3715,9 +3663,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangledown",
-                "c": "green",
-                "r": 90
+                "s": "cross",
+                "c": "blue",
+                "f": "outline"
               }
             ]
           }
@@ -3727,8 +3675,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangledown",
-                "c": "blue"
+                "s": "cross",
+                "c": "blue",
+                "z": 1.2
               }
             ]
           }
@@ -3738,9 +3687,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
+                "s": "triangle",
                 "c": "blue",
-                "r": 90
+                "z": 1.2,
+                "f": "outline"
               }
             ]
           }
@@ -3750,16 +3700,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangledown",
+                "s": "cross",
                 "c": "blue",
-                "r": 270
+                "z": 0.72,
+                "f": "outline"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the color turns blue, and the shape turns a quarter turn. Choice b kept the old color. Choice c did not turn.",
+      "explanation": "Two things change: the shape gets bigger, and the shape empties out. Choice b did not get bigger. Choice c stayed filled in.",
       "strategy": "List every change on your fingers, then test the answer against every finger."
     },
     {
@@ -3771,13 +3722,13 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty blue six-pointed star, then three empty blue six-pointed stars. Bottom row: an empty blue star, then an empty box.",
+        "alt": "Top row: an empty green slanted rectangle, then a green slanted rectangle, with dots inside. Bottom row: an empty green half circle, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "star6",
-                "c": "blue",
+                "s": "parallelogram",
+                "c": "green",
                 "f": "outline"
               }
             ]
@@ -3785,18 +3736,17 @@
           {
             "shapes": [
               {
-                "s": "star6",
-                "c": "blue",
-                "f": "outline",
-                "n": 3
+                "s": "parallelogram",
+                "c": "green",
+                "f": "dots"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "blue",
+                "s": "semicircle",
+                "c": "green",
                 "f": "outline"
               }
             ]
@@ -3812,10 +3762,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "blue",
-                "f": "outline",
-                "n": 3
+                "s": "semicircle",
+                "c": "green",
+                "f": "dots"
               }
             ]
           }
@@ -3825,8 +3774,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "blue",
+                "s": "semicircle",
+                "c": "green",
                 "f": "outline"
               }
             ]
@@ -3837,10 +3786,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "blue",
-                "f": "outline",
-                "n": 3
+                "s": "parallelogram",
+                "c": "green",
+                "f": "dots"
               }
             ]
           }
@@ -3850,10 +3798,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "blue",
-                "f": "outline",
-                "n": 5
+                "s": "semicircle",
+                "c": "green",
+                "f": "dots",
+                "z": 1.01
               }
             ]
           }
@@ -3863,17 +3811,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "blue",
-                "f": "outline",
-                "n": 4
+                "s": "semicircle",
+                "c": "green",
+                "f": "dots",
+                "z": 0.76
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, there are 3 of them instead. Choice b kept the old number.",
+      "explanation": "Going across, the inside becomes dots. Choice b did not become dots.",
       "strategy": "Say the change out loud, then do exactly that to the shape below."
     },
     {
@@ -3885,36 +3833,30 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small empty blue slanted rectangle, then a small empty blue slanted rectangle, turned upside down. Bottom row: a small empty blue wide rectangle, then an empty box.",
+        "alt": "Top row: a yellow pentagon, then an empty yellow pentagon. Bottom row: a yellow diamond, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6
+                "s": "pentagon",
+                "c": "yellow"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6,
-                "r": 180
+                "s": "pentagon",
+                "c": "yellow",
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6
+                "s": "diamond",
+                "c": "yellow"
               }
             ]
           },
@@ -3929,11 +3871,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6,
-                "r": 180
+                "s": "diamond",
+                "c": "yellow",
+                "f": "outline"
               }
             ]
           }
@@ -3943,10 +3883,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6
+                "s": "diamond",
+                "c": "yellow"
               }
             ]
           }
@@ -3956,11 +3894,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6,
-                "r": 180
+                "s": "pentagon",
+                "c": "yellow",
+                "f": "outline"
               }
             ]
           }
@@ -3970,11 +3906,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6,
-                "r": 90
+                "s": "diamond",
+                "c": "green",
+                "f": "outline"
               }
             ]
           }
@@ -3984,18 +3918,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "diamond",
                 "c": "blue",
-                "f": "outline",
-                "z": 0.6,
-                "r": 270
+                "f": "outline"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the shape turns upside down. Choice b did not turn.",
+      "explanation": "Going across, the shape empties out. Choice b stayed filled in.",
       "strategy": "Say the change out loud, then do exactly that to the shape below."
     },
     {
@@ -4007,13 +3939,21 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty yellow hexagon, then a yellow hexagon. Bottom row: an empty yellow half circle, then an empty box.",
+        "alt": "Top row: a grey six-pointed star, then an empty grey six-pointed star. Bottom row: a grey cross, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
+                "s": "star6",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "grey",
                 "f": "outline"
               }
             ]
@@ -4021,17 +3961,8 @@
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow"
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "semicircle",
-                "c": "yellow",
-                "f": "outline"
+                "s": "cross",
+                "c": "grey"
               }
             ]
           },
@@ -4046,8 +3977,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "yellow"
+                "s": "cross",
+                "c": "grey",
+                "f": "outline"
               }
             ]
           }
@@ -4057,9 +3989,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "yellow",
-                "f": "outline"
+                "s": "cross",
+                "c": "grey"
               }
             ]
           }
@@ -4069,8 +4000,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow"
+                "s": "star6",
+                "c": "grey",
+                "f": "outline"
               }
             ]
           }
@@ -4080,8 +4012,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green"
+                "s": "cross",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.99
               }
             ]
           }
@@ -4091,15 +4025,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "blue"
+                "s": "cross",
+                "c": "green",
+                "f": "outline"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the shape fills in. Choice b never filled in.",
+      "explanation": "Going across, the shape empties out. Choice b stayed filled in.",
       "strategy": "Say the change out loud, then do exactly that to the shape below."
     },
     {
@@ -4216,252 +4151,14 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small empty green arrow, then a big empty blue arrow. Bottom row: a small empty green octagon, then an empty box.",
-        "cells": [
-          {
-            "shapes": [
-              {
-                "s": "arrow",
-                "c": "green",
-                "f": "outline",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "arrow",
-                "c": "blue",
-                "f": "outline",
-                "z": 1.2
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "green",
-                "f": "outline",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "missing": true
-          }
-        ]
-      },
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "blue",
-                "f": "outline",
-                "z": 1.2
-              }
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6
-              }
-            ]
-          }
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "green",
-                "f": "outline",
-                "z": 1.2
-              }
-            ]
-          }
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "arrow",
-                "c": "blue",
-                "f": "outline",
-                "z": 1.2
-              }
-            ]
-          }
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.72
-              }
-            ]
-          }
-        }
-      ],
-      "answer": "a",
-      "explanation": "Two things change: the shape gets bigger, and the color turns blue. Choice b did not get bigger. Choice c kept the old color.",
-      "strategy": "Check what changed AND what stayed the same. Both are clues."
-    },
-    {
-      "id": "nnat-rba-g3-12",
-      "grade": 3,
-      "difficulty": 2,
-      "prompt": "Which figure completes the matrix?",
-      "figure": {
-        "kind": "matrix",
-        "rows": 2,
-        "cols": 2,
-        "alt": "Top row: a small empty grey triangle, then two small grey triangles, with a criss cross pattern inside. Bottom row: a small empty grey bow tie, then an empty box.",
-        "cells": [
-          {
-            "shapes": [
-              {
-                "s": "triangle",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "triangle",
-                "c": "grey",
-                "f": "grid",
-                "z": 0.6,
-                "n": 2
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "missing": true
-          }
-        ]
-      },
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "grid",
-                "z": 0.6,
-                "n": 2
-              }
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "grid",
-                "z": 0.6
-              }
-            ]
-          }
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6,
-                "n": 2
-              }
-            ]
-          }
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "triangle",
-                "c": "grey",
-                "f": "grid",
-                "z": 0.6,
-                "n": 2
-              }
-            ]
-          }
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "grey",
-                "f": "grid",
-                "z": 0.6,
-                "n": 4
-              }
-            ]
-          }
-        }
-      ],
-      "answer": "a",
-      "explanation": "Two things change: there are 2 of them instead, and the inside becomes a criss cross pattern. Choice b kept the old number. Choice c did not become a criss cross pattern.",
-      "strategy": "Check what changed AND what stayed the same. Both are clues."
-    },
-    {
-      "id": "nnat-rba-g3-17",
-      "grade": 3,
-      "difficulty": 2,
-      "prompt": "Which figure completes the matrix?",
-      "figure": {
-        "kind": "matrix",
-        "rows": 2,
-        "cols": 2,
-        "alt": "Top row: a grey six-pointed star, then a small empty grey six-pointed star. Bottom row: a grey cross, then an empty box.",
+        "alt": "Top row: a small yellow six-pointed star, then two small empty yellow six-pointed stars. Bottom row: a small yellow star, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
                 "s": "star6",
-                "c": "grey"
+                "c": "yellow",
+                "z": 0.6
               }
             ]
           },
@@ -4469,17 +4166,19 @@
             "shapes": [
               {
                 "s": "star6",
-                "c": "grey",
+                "c": "yellow",
+                "z": 0.6,
                 "f": "outline",
-                "z": 0.5
+                "n": 2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "cross",
-                "c": "grey"
+                "s": "star",
+                "c": "yellow",
+                "z": 0.6
               }
             ]
           },
@@ -4494,10 +4193,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "grey",
+                "s": "star",
+                "c": "yellow",
+                "z": 0.6,
                 "f": "outline",
-                "z": 0.5
+                "n": 2
               }
             ]
           }
@@ -4507,9 +4207,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "grey",
-                "z": 0.5
+                "s": "star",
+                "c": "yellow",
+                "z": 0.6,
+                "n": 2
               }
             ]
           }
@@ -4519,8 +4220,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "grey",
+                "s": "star",
+                "c": "yellow",
+                "z": 0.6,
                 "f": "outline"
               }
             ]
@@ -4532,8 +4234,226 @@
             "shapes": [
               {
                 "s": "star6",
-                "c": "grey",
+                "c": "yellow",
+                "z": 0.6,
                 "f": "outline",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.6,
+                "f": "outline",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape empties out, and there are 2 of them instead. Choice b stayed filled in. Choice c kept the old number.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g3-12",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty blue slanted rectangle, then a small blue slanted rectangle. Bottom row: an empty blue oval, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue",
+                "z": 0.85
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape fills in, and the shape gets smaller. Choice b never filled in. Choice c did not get smaller.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g3-17",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a grey circle, then a small yellow circle. Bottom row: a grey cross, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
                 "z": 0.5
               }
             ]
@@ -4545,8 +4465,7 @@
             "shapes": [
               {
                 "s": "cross",
-                "c": "grey",
-                "f": "outline",
+                "c": "yellow",
                 "z": 0.85
               }
             ]
@@ -4554,7 +4473,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the shape empties out, and the shape gets smaller. Choice b stayed filled in. Choice c did not get smaller.",
+      "explanation": "Two things change: the shape gets smaller, and the color turns yellow. Choice b did not get smaller. Choice c kept the old color.",
       "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
@@ -4825,14 +4744,24 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty green slanted rectangle, then a green slanted rectangle, with stripes inside and turned upside down. Bottom row: an empty green hexagon, then an empty box.",
+        "alt": "Top row: a small blue triangle, then a small blue triangle, with upright stripes inside. Bottom row: a small blue slanted rectangle, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green",
-                "f": "outline"
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.5,
+                "f": "stripesv"
               }
             ]
           },
@@ -4840,18 +4769,8 @@
             "shapes": [
               {
                 "s": "parallelogram",
-                "c": "green",
-                "f": "stripesd",
-                "r": 180
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "hexagon",
-                "c": "green",
-                "f": "outline"
+                "c": "blue",
+                "z": 0.6
               }
             ]
           },
@@ -4866,10 +4785,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "green",
-                "f": "stripesd",
-                "r": 180
+                "s": "parallelogram",
+                "c": "blue",
+                "z": 0.5,
+                "f": "stripesv"
               }
             ]
           }
@@ -4879,10 +4798,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "green",
-                "f": "outline",
-                "r": 180
+                "s": "parallelogram",
+                "c": "blue",
+                "z": 0.6,
+                "f": "stripesv"
               }
             ]
           }
@@ -4892,9 +4811,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "green",
-                "f": "stripesd"
+                "s": "parallelogram",
+                "c": "blue",
+                "z": 0.5
               }
             ]
           }
@@ -4904,10 +4823,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green",
-                "f": "stripesd",
-                "r": 180
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.5,
+                "f": "stripesv"
               }
             ]
           }
@@ -4917,17 +4836,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "green",
-                "f": "stripesd",
-                "r": 270
+                "s": "parallelogram",
+                "c": "blue",
+                "z": 0.85,
+                "f": "stripesv"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the inside becomes stripes, and the shape turns upside down. Choice b did not become stripes. Choice c did not turn.",
+      "explanation": "Two things change: the shape gets smaller, and the inside becomes upright stripes. Choice b did not get smaller. Choice c did not become upright stripes.",
       "strategy": "Two changes means two checks. Go through them one at a time."
     },
     {
@@ -4939,13 +4858,14 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a yellow right triangle, then an empty blue right triangle. Bottom row: a yellow star, then an empty box.",
+        "alt": "Top row: a small blue right triangle, then four small blue right triangles. Bottom row: a small blue ring, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
                 "s": "righttriangle",
-                "c": "yellow"
+                "c": "blue",
+                "z": 0.6
               }
             ]
           },
@@ -4954,15 +4874,17 @@
               {
                 "s": "righttriangle",
                 "c": "blue",
-                "f": "outline"
+                "z": 0.5,
+                "n": 4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow"
+                "s": "ring",
+                "c": "blue",
+                "z": 0.6
               }
             ]
           },
@@ -4977,9 +4899,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
+                "s": "ring",
                 "c": "blue",
-                "f": "outline"
+                "z": 0.5,
+                "n": 4
               }
             ]
           }
@@ -4989,9 +4912,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow",
-                "f": "outline"
+                "s": "ring",
+                "c": "blue",
+                "z": 0.6,
+                "n": 4
               }
             ]
           }
@@ -5001,8 +4925,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "blue"
+                "s": "ring",
+                "c": "blue",
+                "z": 0.5
               }
             ]
           }
@@ -5014,7 +4939,8 @@
               {
                 "s": "righttriangle",
                 "c": "blue",
-                "f": "outline"
+                "z": 0.5,
+                "n": 4
               }
             ]
           }
@@ -5024,16 +4950,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "green",
-                "f": "outline"
+                "s": "ring",
+                "c": "blue",
+                "z": 0.85,
+                "n": 4
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the color turns blue, and the shape empties out. Choice b kept the old color. Choice c stayed filled in.",
+      "explanation": "Two things change: the shape gets smaller, and there are 4 of them instead. Choice b did not get smaller. Choice c kept the old number.",
       "strategy": "Two changes means two checks. Go through them one at a time."
     },
     {
@@ -5162,22 +5089,13 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a grey upside-down triangle, then a small empty green upside-down triangle. Bottom row: a grey four-pointed star, then an empty box.",
+        "alt": "Top row: an empty yellow chevron, then two small empty grey chevrons. Bottom row: an empty yellow arrow, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "triangledown",
-                "c": "grey"
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "triangledown",
-                "c": "green",
-                "z": 0.5,
+                "s": "chevron",
+                "c": "yellow",
                 "f": "outline"
               }
             ]
@@ -5185,8 +5103,20 @@
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "grey"
+                "s": "chevron",
+                "c": "grey",
+                "f": "outline",
+                "n": 2,
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "f": "outline"
               }
             ]
           },
@@ -5201,10 +5131,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
-                "z": 0.5,
-                "f": "outline"
+                "s": "arrow",
+                "c": "grey",
+                "f": "outline",
+                "n": 2,
+                "z": 0.5
               }
             ]
           }
@@ -5214,9 +5145,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
-                "f": "outline"
+                "s": "arrow",
+                "c": "yellow",
+                "f": "outline",
+                "n": 2,
+                "z": 0.5
               }
             ]
           }
@@ -5226,8 +5159,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
+                "s": "arrow",
+                "c": "grey",
+                "f": "outline",
                 "z": 0.5
               }
             ]
@@ -5238,10 +5172,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
+                "s": "arrow",
                 "c": "grey",
-                "z": 0.5,
-                "f": "outline"
+                "f": "outline",
+                "n": 2
               }
             ]
           }
@@ -5251,17 +5185,18 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangledown",
-                "c": "green",
-                "z": 0.5,
-                "f": "outline"
+                "s": "chevron",
+                "c": "grey",
+                "f": "outline",
+                "n": 2,
+                "z": 0.5
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: the shape gets smaller, the shape empties out, and the color turns green. Choice b did not get smaller. Choice c stayed filled in.",
+      "explanation": "Three things change: the color turns grey, there are 2 of them instead, and the shape gets smaller. Choice b kept the old color. Choice c kept the old number.",
       "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
     },
     {
@@ -5273,13 +5208,13 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty yellow six-pointed star, then a small grey six-pointed star, with a criss cross pattern inside. Bottom row: an empty yellow hexagon, then an empty box.",
+        "alt": "Top row: an empty green circle, then three big green circles. Bottom row: an empty green trapezoid, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "star6",
-                "c": "yellow",
+                "s": "circle",
+                "c": "green",
                 "f": "outline"
               }
             ]
@@ -5287,18 +5222,18 @@
           {
             "shapes": [
               {
-                "s": "star6",
-                "c": "grey",
-                "f": "grid",
-                "z": 0.5
+                "s": "circle",
+                "c": "green",
+                "n": 3,
+                "z": 1.2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
+                "s": "trapezoid",
+                "c": "green",
                 "f": "outline"
               }
             ]
@@ -5314,10 +5249,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "grey",
-                "f": "grid",
-                "z": 0.5
+                "s": "trapezoid",
+                "c": "green",
+                "n": 3,
+                "z": 1.2
               }
             ]
           }
@@ -5327,10 +5262,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
-                "f": "grid",
-                "z": 0.5
+                "s": "trapezoid",
+                "c": "green",
+                "z": 1.2
               }
             ]
           }
@@ -5340,9 +5274,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "grey",
-                "f": "grid"
+                "s": "trapezoid",
+                "c": "green",
+                "f": "outline",
+                "n": 3,
+                "z": 1.2
               }
             ]
           }
@@ -5352,10 +5288,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.5
+                "s": "trapezoid",
+                "c": "green",
+                "n": 3
               }
             ]
           }
@@ -5365,17 +5300,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "grey",
-                "f": "grid",
-                "z": 0.5
+                "s": "circle",
+                "c": "green",
+                "n": 3,
+                "z": 1.2
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: the color turns grey, the shape gets smaller, and the inside becomes a criss cross pattern. Choice b kept the old color. Choice c did not get smaller.",
+      "explanation": "Three things change: there are 3 of them instead, the shape fills in, and the shape gets bigger. Choice b kept the old number. Choice c never filled in.",
       "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
     },
     {
@@ -5510,34 +5445,32 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small blue kite, then four small blue kites, with a criss cross pattern inside. Bottom row: a small blue octagon, then an empty box.",
+        "alt": "Top row: a green ring, then two small empty green rings. Bottom row: a green arrow, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
-                "z": 0.6
+                "s": "ring",
+                "c": "green"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
+                "s": "ring",
+                "c": "green",
+                "n": 2,
                 "z": 0.5,
-                "n": 4,
-                "f": "grid"
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "blue",
-                "z": 0.6
+                "s": "arrow",
+                "c": "green"
               }
             ]
           },
@@ -5552,11 +5485,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "blue",
+                "s": "arrow",
+                "c": "green",
+                "n": 2,
                 "z": 0.5,
-                "n": 4,
-                "f": "grid"
+                "f": "outline"
               }
             ]
           }
@@ -5566,10 +5499,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "blue",
+                "s": "arrow",
+                "c": "green",
                 "z": 0.5,
-                "f": "grid"
+                "f": "outline"
               }
             ]
           }
@@ -5579,11 +5512,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "blue",
-                "z": 0.6,
-                "n": 4,
-                "f": "grid"
+                "s": "arrow",
+                "c": "green",
+                "n": 2,
+                "f": "outline"
               }
             ]
           }
@@ -5593,10 +5525,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "blue",
-                "z": 0.5,
-                "n": 4
+                "s": "arrow",
+                "c": "green",
+                "n": 2,
+                "z": 0.5
               }
             ]
           }
@@ -5606,18 +5538,18 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
+                "s": "ring",
+                "c": "green",
+                "n": 2,
                 "z": 0.5,
-                "n": 4,
-                "f": "grid"
+                "f": "outline"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: there are 4 of them instead, the shape gets smaller, and the inside becomes a criss cross pattern. Choice b kept the old number. Choice c did not get smaller.",
+      "explanation": "Three things change: there are 2 of them instead, the shape gets smaller, and the shape empties out. Choice b kept the old number. Choice c did not get smaller.",
       "strategy": "List every change on your fingers, then test the answer against every finger."
     },
     {
@@ -5629,31 +5561,35 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a blue wide rectangle, then four small green wide rectangles. Bottom row: a blue half circle, then an empty box.",
+        "alt": "Top row: a small empty grey tall rectangle, then three small grey tall rectangles. Bottom row: a small empty grey oval, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "blue"
+                "s": "recttall",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "green",
+                "s": "recttall",
+                "c": "grey",
                 "z": 0.5,
-                "n": 4
+                "n": 3
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "blue"
+                "s": "oval",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
               }
             ]
           },
@@ -5668,10 +5604,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green",
+                "s": "oval",
+                "c": "grey",
                 "z": 0.5,
-                "n": 4
+                "n": 3
               }
             ]
           }
@@ -5681,9 +5617,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green",
-                "n": 4
+                "s": "oval",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5,
+                "n": 3
               }
             ]
           }
@@ -5693,10 +5631,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "blue",
-                "z": 0.5,
-                "n": 4
+                "s": "oval",
+                "c": "grey",
+                "z": 0.5
               }
             ]
           }
@@ -5706,9 +5643,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green",
-                "z": 0.5
+                "s": "oval",
+                "c": "grey",
+                "z": 0.6,
+                "n": 3
               }
             ]
           }
@@ -5718,17 +5656,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "green",
+                "s": "recttall",
+                "c": "grey",
                 "z": 0.5,
-                "n": 4
+                "n": 3
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: the shape gets smaller, the color turns green, and there are 4 of them instead. Choice b did not get smaller. Choice c kept the old color.",
+      "explanation": "Three things change: the shape fills in, there are 3 of them instead, and the shape gets smaller. Choice b never filled in. Choice c kept the old number.",
       "strategy": "List every change on your fingers, then test the answer against every finger."
     },
     {
@@ -5740,13 +5678,14 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small grey right triangle, then a small blue right triangle. Bottom row: a small grey ring, then an empty box.",
+        "alt": "Top row: a small empty green arrow, then a small empty green arrow, turned three quarters of the way round. Bottom row: a small empty green trapezoid, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "grey",
+                "s": "arrow",
+                "c": "green",
+                "f": "outline",
                 "z": 0.6
               }
             ]
@@ -5754,17 +5693,20 @@
           {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "blue",
-                "z": 0.6
+                "s": "arrow",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6,
+                "r": 270
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "grey",
+                "s": "trapezoid",
+                "c": "green",
+                "f": "outline",
                 "z": 0.6
               }
             ]
@@ -5780,9 +5722,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "blue",
-                "z": 0.6
+                "s": "trapezoid",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6,
+                "r": 270
               }
             ]
           }
@@ -5792,8 +5736,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "grey",
+                "s": "trapezoid",
+                "c": "green",
+                "f": "outline",
                 "z": 0.6
               }
             ]
@@ -5804,9 +5749,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "blue",
-                "z": 0.6
+                "s": "arrow",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6,
+                "r": 270
               }
             ]
           }
@@ -5816,9 +5763,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
+                "s": "trapezoid",
                 "c": "green",
-                "z": 0.6
+                "f": "outline",
+                "z": 0.6,
+                "r": 90
               }
             ]
           }
@@ -5828,16 +5777,18 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "blue",
-                "z": 0.67
+                "s": "trapezoid",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6,
+                "r": 180
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the color turns blue. Choice b kept the old color.",
+      "explanation": "Going across, the shape turns three quarters of the way round. Choice b did not turn.",
       "strategy": "Say the change out loud, then do exactly that to the shape below."
     },
     {
@@ -5849,35 +5800,30 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small empty blue tall rectangle, then a small blue tall rectangle, with stripes inside. Bottom row: a small empty blue pentagon, then an empty box.",
+        "alt": "Top row: a yellow half circle, then four yellow half circles. Bottom row: a yellow cross, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6
+                "s": "semicircle",
+                "c": "yellow"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "blue",
-                "f": "stripesd",
-                "z": 0.6
+                "s": "semicircle",
+                "c": "yellow",
+                "n": 4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6
+                "s": "cross",
+                "c": "yellow"
               }
             ]
           },
@@ -5892,10 +5838,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "f": "stripesd",
-                "z": 0.6
+                "s": "cross",
+                "c": "yellow",
+                "n": 4
               }
             ]
           }
@@ -5905,10 +5850,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "f": "outline",
-                "z": 0.6
+                "s": "cross",
+                "c": "yellow"
               }
             ]
           }
@@ -5918,10 +5861,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "blue",
-                "f": "stripesd",
-                "z": 0.6
+                "s": "semicircle",
+                "c": "yellow",
+                "n": 4
               }
             ]
           }
@@ -5931,10 +5873,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "green",
-                "f": "stripesd",
-                "z": 0.6
+                "s": "cross",
+                "c": "yellow",
+                "n": 6
               }
             ]
           }
@@ -5944,17 +5885,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "grey",
-                "f": "stripesd",
-                "z": 0.6
+                "s": "cross",
+                "c": "yellow",
+                "n": 3
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the inside becomes stripes. Choice b did not become stripes.",
+      "explanation": "Going across, there are 4 of them instead. Choice b kept the old number.",
       "strategy": "Say the change out loud, then do exactly that to the shape below."
     },
     {
@@ -6049,7 +5989,7 @@
               {
                 "s": "semicircle",
                 "c": "yellow",
-                "z": 0.5
+                "z": 0.47
               }
             ]
           }
@@ -6174,14 +6114,13 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small yellow right triangle, then a big yellow right triangle, with flat stripes inside. Bottom row: a small yellow trapezoid, then an empty box.",
+        "alt": "Top row: a blue right triangle, then a small empty blue right triangle. Bottom row: a blue kite, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
                 "s": "righttriangle",
-                "c": "yellow",
-                "z": 0.6
+                "c": "blue"
               }
             ]
           },
@@ -6189,18 +6128,17 @@
             "shapes": [
               {
                 "s": "righttriangle",
-                "c": "yellow",
-                "z": 1.2,
-                "f": "stripesh"
+                "c": "blue",
+                "z": 0.5,
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow",
-                "z": 0.6
+                "s": "kite",
+                "c": "blue"
               }
             ]
           },
@@ -6215,10 +6153,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow",
-                "z": 1.2,
-                "f": "stripesh"
+                "s": "kite",
+                "c": "blue",
+                "z": 0.5,
+                "f": "outline"
               }
             ]
           }
@@ -6228,9 +6166,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow",
-                "z": 1.2
+                "s": "kite",
+                "c": "blue",
+                "f": "outline"
               }
             ]
           }
@@ -6240,10 +6178,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow",
-                "z": 0.6,
-                "f": "stripesh"
+                "s": "kite",
+                "c": "blue",
+                "z": 0.5
               }
             ]
           }
@@ -6254,9 +6191,9 @@
             "shapes": [
               {
                 "s": "righttriangle",
-                "c": "yellow",
-                "z": 1.2,
-                "f": "stripesh"
+                "c": "blue",
+                "z": 0.5,
+                "f": "outline"
               }
             ]
           }
@@ -6266,17 +6203,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow",
-                "z": 0.72,
-                "f": "stripesh"
+                "s": "kite",
+                "c": "blue",
+                "z": 0.85,
+                "f": "outline"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: the inside becomes flat stripes, and the shape gets bigger. Choice b did not become flat stripes. Choice c did not get bigger.",
+      "explanation": "Two things change: the shape gets smaller, and the shape empties out. Choice b did not get smaller. Choice c stayed filled in.",
       "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
@@ -6288,23 +6225,14 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty blue triangle, then three blue triangles. Bottom row: an empty blue wide rectangle, then an empty box.",
+        "alt": "Top row: a small grey wide rectangle, then a small blue wide rectangle. Bottom row: a small grey pentagon, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "blue",
-                "f": "outline"
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "triangle",
-                "c": "blue",
-                "n": 3
+                "s": "rectwide",
+                "c": "grey",
+                "z": 0.6
               }
             ]
           },
@@ -6313,7 +6241,16 @@
               {
                 "s": "rectwide",
                 "c": "blue",
-                "f": "outline"
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "grey",
+                "z": 0.6
               }
             ]
           },
@@ -6328,9 +6265,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "pentagon",
                 "c": "blue",
-                "n": 3
+                "z": 0.5
               }
             ]
           }
@@ -6340,8 +6277,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "blue"
+                "s": "pentagon",
+                "c": "grey",
+                "z": 0.5
               }
             ]
           }
@@ -6351,10 +6289,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "pentagon",
                 "c": "blue",
-                "f": "outline",
-                "n": 3
+                "z": 0.6
               }
             ]
           }
@@ -6364,9 +6301,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
+                "s": "rectwide",
                 "c": "blue",
-                "n": 3
+                "z": 0.5
               }
             ]
           }
@@ -6376,16 +6313,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "pentagon",
                 "c": "blue",
-                "n": 2
+                "z": 0.85
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Two things change: there are 3 of them instead, and the shape fills in. Choice b kept the old number. Choice c never filled in.",
+      "explanation": "Two things change: the color turns blue, and the shape gets smaller. Choice b kept the old color. Choice c did not get smaller.",
       "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
@@ -6614,14 +6551,25 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small blue hexagon, then four small blue hexagons, turned upside down. Bottom row: a small blue arrow, then an empty box.",
+        "alt": "Top row: an empty green four-pointed star, then four small green four-pointed stars, with upright stripes inside. Bottom row: an empty green hexagon, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
-                "z": 0.6
+                "s": "star4",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "stripesv",
+                "n": 4,
+                "z": 0.5
               }
             ]
           },
@@ -6629,19 +6577,8 @@
             "shapes": [
               {
                 "s": "hexagon",
-                "c": "blue",
-                "z": 0.5,
-                "r": 180,
-                "n": 4
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "arrow",
-                "c": "blue",
-                "z": 0.6
+                "c": "green",
+                "f": "outline"
               }
             ]
           },
@@ -6656,11 +6593,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "blue",
-                "z": 0.5,
-                "r": 180,
-                "n": 4
+                "s": "hexagon",
+                "c": "green",
+                "f": "stripesv",
+                "n": 4,
+                "z": 0.5
               }
             ]
           }
@@ -6670,11 +6607,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "blue",
-                "z": 0.6,
-                "r": 180,
-                "n": 4
+                "s": "hexagon",
+                "c": "green",
+                "f": "stripesv",
+                "z": 0.5
               }
             ]
           }
@@ -6684,10 +6620,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "blue",
-                "z": 0.5,
-                "n": 4
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline",
+                "n": 4,
+                "z": 0.5
               }
             ]
           }
@@ -6697,10 +6634,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "blue",
-                "z": 0.5,
-                "r": 180
+                "s": "hexagon",
+                "c": "green",
+                "f": "stripesv",
+                "n": 4
               }
             ]
           }
@@ -6710,18 +6647,18 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
-                "z": 0.5,
-                "r": 180,
-                "n": 4
+                "s": "star4",
+                "c": "green",
+                "f": "stripesv",
+                "n": 4,
+                "z": 0.5
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: the shape gets smaller, the shape turns upside down, and there are 4 of them instead. Choice b did not get smaller. Choice c did not turn.",
+      "explanation": "Three things change: there are 4 of them instead, the inside becomes upright stripes, and the shape gets smaller. Choice b kept the old number. Choice c did not become upright stripes.",
       "strategy": "Two changes means two checks. Go through them one at a time."
     },
     {
@@ -6733,37 +6670,31 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small empty green kite, then four small green kites, with stripes inside and turned a quarter turn. Bottom row: a small empty green half circle, then an empty box.",
+        "alt": "Top row: a blue upside-down triangle, then a small empty grey upside-down triangle. Bottom row: a blue square, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "green",
-                "f": "outline",
-                "z": 0.6
+                "s": "triangledown",
+                "c": "blue"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "green",
-                "f": "stripesd",
-                "z": 0.6,
-                "r": 90,
-                "n": 4
+                "s": "triangledown",
+                "c": "grey",
+                "z": 0.5,
+                "f": "outline"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green",
-                "f": "outline",
-                "z": 0.6
+                "s": "square",
+                "c": "blue"
               }
             ]
           },
@@ -6778,12 +6709,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green",
-                "f": "stripesd",
-                "z": 0.6,
-                "r": 90,
-                "n": 4
+                "s": "square",
+                "c": "grey",
+                "z": 0.5,
+                "f": "outline"
               }
             ]
           }
@@ -6793,11 +6722,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green",
-                "f": "stripesd",
-                "z": 0.6,
-                "n": 4
+                "s": "square",
+                "c": "grey",
+                "f": "outline"
               }
             ]
           }
@@ -6807,11 +6734,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green",
-                "f": "stripesd",
-                "z": 0.6,
-                "r": 90
+                "s": "square",
+                "c": "blue",
+                "z": 0.5,
+                "f": "outline"
               }
             ]
           }
@@ -6821,12 +6747,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "green",
-                "f": "outline",
-                "z": 0.6,
-                "r": 90,
-                "n": 4
+                "s": "square",
+                "c": "grey",
+                "z": 0.5
               }
             ]
           }
@@ -6836,19 +6759,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "green",
-                "f": "stripesd",
-                "z": 0.6,
-                "r": 90,
-                "n": 4
+                "s": "triangledown",
+                "c": "grey",
+                "z": 0.5,
+                "f": "outline"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: the shape turns a quarter turn, there are 4 of them instead, and the inside becomes stripes. Choice b did not turn. Choice c kept the old number.",
+      "explanation": "Three things change: the shape gets smaller, the color turns grey, and the shape empties out. Choice b did not get smaller. Choice c kept the old color.",
       "strategy": "Two changes means two checks. Go through them one at a time."
     },
     {
@@ -7126,34 +7047,32 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a small yellow hexagon, then two big yellow hexagons, turned upside down. Bottom row: a small yellow oval, then an empty box.",
+        "alt": "Top row: a grey chevron, then a small empty grey chevron, turned three quarters of the way round. Bottom row: a grey triangle, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
-                "z": 0.6
+                "s": "chevron",
+                "c": "grey"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "yellow",
-                "z": 1.2,
-                "n": 2,
-                "r": 180
+                "s": "chevron",
+                "c": "grey",
+                "f": "outline",
+                "r": 270,
+                "z": 0.5
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow",
-                "z": 0.6
+                "s": "triangle",
+                "c": "grey"
               }
             ]
           },
@@ -7168,11 +7087,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow",
-                "z": 1.2,
-                "n": 2,
-                "r": 180
+                "s": "triangle",
+                "c": "grey",
+                "f": "outline",
+                "r": 270,
+                "z": 0.5
               }
             ]
           }
@@ -7182,10 +7101,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow",
-                "z": 1.2,
-                "r": 180
+                "s": "triangle",
+                "c": "grey",
+                "r": 270,
+                "z": 0.5
               }
             ]
           }
@@ -7195,129 +7114,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow",
-                "z": 1.2,
-                "n": 2
-              }
-            ]
-          }
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "oval",
-                "c": "yellow",
-                "z": 0.6,
-                "n": 2,
-                "r": 180
-              }
-            ]
-          }
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "hexagon",
-                "c": "yellow",
-                "z": 1.2,
-                "n": 2,
-                "r": 180
-              }
-            ]
-          }
-        }
-      ],
-      "answer": "a",
-      "explanation": "Three things change: there are 2 of them instead, the shape turns upside down, and the shape gets bigger. Choice b kept the old number. Choice c did not turn.",
-      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
-    },
-    {
-      "id": "nnat-rba-g4-14",
-      "grade": 4,
-      "difficulty": 4,
-      "prompt": "Which figure completes the matrix?",
-      "figure": {
-        "kind": "matrix",
-        "rows": 2,
-        "cols": 2,
-        "alt": "Top row: a small empty yellow square, then three small empty grey squares. Bottom row: a small empty yellow cross, then an empty box.",
-        "cells": [
-          {
-            "shapes": [
-              {
-                "s": "square",
-                "c": "yellow",
-                "f": "outline",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "square",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.5,
-                "n": 3
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "cross",
-                "c": "yellow",
-                "f": "outline",
-                "z": 0.6
-              }
-            ]
-          },
-          {
-            "missing": true
-          }
-        ]
-      },
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "cross",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.5,
-                "n": 3
-              }
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "cross",
-                "c": "grey",
-                "f": "outline",
-                "z": 0.6,
-                "n": 3
-              }
-            ]
-          }
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "cross",
+                "s": "triangle",
                 "c": "grey",
                 "f": "outline",
                 "z": 0.5
@@ -7330,11 +7127,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "yellow",
+                "s": "triangle",
+                "c": "grey",
                 "f": "outline",
-                "z": 0.5,
-                "n": 3
+                "r": 270
               }
             ]
           }
@@ -7344,10 +7140,129 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
+                "s": "chevron",
                 "c": "grey",
                 "f": "outline",
-                "z": 0.5,
+                "r": 270,
+                "z": 0.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the shape empties out, the shape turns three quarters of the way round, and the shape gets smaller. Choice b stayed filled in. Choice c did not turn.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g4-14",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty yellow ring, then three big empty blue rings. Bottom row: an empty yellow tall rectangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2,
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2,
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "f": "outline",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.2,
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2,
                 "n": 3
               }
             ]
@@ -7355,7 +7270,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: the shape gets smaller, there are 3 of them instead, and the color turns grey. Choice b did not get smaller. Choice c kept the old number.",
+      "explanation": "Three things change: the shape gets bigger, the color turns blue, and there are 3 of them instead. Choice b did not get bigger. Choice c kept the old color.",
       "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
     },
     {
@@ -7489,24 +7404,13 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a blue ring, then four empty blue rings, turned three quarters of the way round. Bottom row: a blue square, then an empty box.",
+        "alt": "Top row: a yellow square, then four small empty yellow squares. Bottom row: a yellow right triangle, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "blue"
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "ring",
-                "c": "blue",
-                "r": 270,
-                "f": "outline",
-                "n": 4
+                "s": "square",
+                "c": "yellow"
               }
             ]
           },
@@ -7514,7 +7418,18 @@
             "shapes": [
               {
                 "s": "square",
-                "c": "blue"
+                "c": "yellow",
+                "z": 0.5,
+                "n": 4,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "yellow"
               }
             ]
           },
@@ -7529,11 +7444,11 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "blue",
-                "r": 270,
-                "f": "outline",
-                "n": 4
+                "s": "righttriangle",
+                "c": "yellow",
+                "z": 0.5,
+                "n": 4,
+                "f": "outline"
               }
             ]
           }
@@ -7543,10 +7458,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "blue",
-                "f": "outline",
-                "n": 4
+                "s": "righttriangle",
+                "c": "yellow",
+                "n": 4,
+                "f": "outline"
               }
             ]
           }
@@ -7556,10 +7471,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "blue",
-                "r": 270,
-                "n": 4
+                "s": "righttriangle",
+                "c": "yellow",
+                "z": 0.5,
+                "f": "outline"
               }
             ]
           }
@@ -7569,10 +7484,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "blue",
-                "r": 270,
-                "f": "outline"
+                "s": "righttriangle",
+                "c": "yellow",
+                "z": 0.5,
+                "n": 4
               }
             ]
           }
@@ -7582,18 +7497,18 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "blue",
-                "r": 270,
-                "f": "outline",
-                "n": 4
+                "s": "square",
+                "c": "yellow",
+                "z": 0.5,
+                "n": 4,
+                "f": "outline"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: the shape turns three quarters of the way round, the shape empties out, and there are 4 of them instead. Choice b did not turn. Choice c stayed filled in.",
+      "explanation": "Three things change: the shape gets smaller, there are 4 of them instead, and the shape empties out. Choice b did not get smaller. Choice c kept the old number.",
       "strategy": "List every change on your fingers, then test the answer against every finger."
     },
     {
@@ -7605,24 +7520,13 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a green diamond, then a small empty green diamond, turned upside down. Bottom row: a green tall rectangle, then an empty box.",
+        "alt": "Top row: a blue tall rectangle, then three small yellow tall rectangles. Bottom row: a blue oval, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "diamond",
-                "c": "green"
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "diamond",
-                "c": "green",
-                "r": 180,
-                "f": "outline",
-                "z": 0.5
+                "s": "recttall",
+                "c": "blue"
               }
             ]
           },
@@ -7630,7 +7534,17 @@
             "shapes": [
               {
                 "s": "recttall",
-                "c": "green"
+                "c": "yellow",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue"
               }
             ]
           },
@@ -7645,11 +7559,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "green",
-                "r": 180,
-                "f": "outline",
-                "z": 0.5
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.5,
+                "n": 3
               }
             ]
           }
@@ -7659,10 +7572,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "green",
-                "f": "outline",
-                "z": 0.5
+                "s": "oval",
+                "c": "yellow",
+                "n": 3
               }
             ]
           }
@@ -7672,9 +7584,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "green",
-                "r": 180,
+                "s": "oval",
+                "c": "yellow",
                 "z": 0.5
               }
             ]
@@ -7685,10 +7596,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "green",
-                "r": 180,
-                "f": "outline"
+                "s": "oval",
+                "c": "blue",
+                "z": 0.5,
+                "n": 3
               }
             ]
           }
@@ -7698,18 +7609,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "diamond",
-                "c": "green",
-                "r": 180,
-                "f": "outline",
-                "z": 0.5
+                "s": "recttall",
+                "c": "yellow",
+                "z": 0.5,
+                "n": 3
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three things change: the shape turns upside down, the shape empties out, and the shape gets smaller. Choice b did not turn. Choice c stayed filled in.",
+      "explanation": "Three things change: the shape gets smaller, there are 3 of them instead, and the color turns yellow. Choice b did not get smaller. Choice c kept the old number.",
       "strategy": "List every change on your fingers, then test the answer against every finger."
     }
   ]

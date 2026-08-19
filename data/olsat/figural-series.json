@@ -219,35 +219,36 @@
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "purple"
+                "s": "trapezoid",
+                "c": "green",
+                "n": 1
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "purple",
-                "r": 90
+                "s": "trapezoid",
+                "c": "green",
+                "n": 3
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "purple",
-                "r": 180
+                "s": "trapezoid",
+                "c": "green",
+                "n": 5
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "purple",
-                "r": 270
+                "s": "trapezoid",
+                "c": "green",
+                "n": 7
               }
             ]
           },
@@ -262,8 +263,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "purple"
+                "s": "trapezoid",
+                "c": "green",
+                "n": 9
               }
             ]
           }
@@ -273,9 +275,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "purple",
-                "r": 270
+                "s": "trapezoid",
+                "c": "green",
+                "n": 7
               }
             ]
           }
@@ -285,9 +287,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "purple",
-                "r": 180
+                "s": "trapezoid",
+                "c": "green",
+                "n": 9,
+                "z": 0.55
               }
             ]
           }
@@ -297,15 +300,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "green"
+                "s": "trapezoid",
+                "c": "blue",
+                "n": 9
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a purple circle. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine green trapezoids. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -607,35 +611,36 @@
           {
             "shapes": [
               {
-                "s": "leaf",
-                "c": "teal"
+                "s": "pentagon",
+                "c": "teal",
+                "z": 0.4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "leaf",
+                "s": "pentagon",
                 "c": "teal",
-                "r": 90
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "leaf",
+                "s": "pentagon",
                 "c": "teal",
-                "r": 180
+                "z": 0.85
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "leaf",
+                "s": "pentagon",
                 "c": "teal",
-                "r": 270
+                "z": 1.1
               }
             ]
           },
@@ -650,8 +655,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "leaf",
-                "c": "teal"
+                "s": "pentagon",
+                "c": "teal",
+                "z": 1.35
               }
             ]
           }
@@ -661,9 +667,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "leaf",
+                "s": "pentagon",
                 "c": "teal",
-                "r": 270
+                "z": 1.1
               }
             ]
           }
@@ -673,9 +679,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "leaf",
+                "s": "pentagon",
                 "c": "teal",
-                "r": 180
+                "z": 0.4
               }
             ]
           }
@@ -685,16 +691,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "leaf",
-                "c": "pink",
-                "n": 1
+                "s": "pentagon",
+                "c": "yellow",
+                "z": 1.35
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a teal leaf. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big teal pentagon. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -1104,17 +1110,17 @@
           {
             "shapes": [
               {
-                "s": "plus",
-                "c": "orange",
-                "n": 2
+                "s": "semicircle",
+                "c": "blue",
+                "n": 1
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "plus",
-                "c": "orange",
+                "s": "semicircle",
+                "c": "blue",
                 "n": 3
               }
             ]
@@ -1122,18 +1128,18 @@
           {
             "shapes": [
               {
-                "s": "plus",
-                "c": "orange",
-                "n": 4
+                "s": "semicircle",
+                "c": "blue",
+                "n": 5
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "plus",
-                "c": "orange",
-                "n": 5
+                "s": "semicircle",
+                "c": "blue",
+                "n": 7
               }
             ]
           },
@@ -1148,9 +1154,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "plus",
-                "c": "orange",
-                "n": 6
+                "s": "semicircle",
+                "c": "blue",
+                "n": 9
               }
             ]
           }
@@ -1160,9 +1166,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "plus",
-                "c": "orange",
-                "n": 5
+                "s": "semicircle",
+                "c": "blue",
+                "n": 7
               }
             ]
           }
@@ -1172,9 +1178,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "plus",
-                "c": "orange",
-                "n": 7
+                "s": "semicircle",
+                "c": "yellow",
+                "n": 9
               }
             ]
           }
@@ -1184,16 +1190,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "plus",
-                "c": "orange",
-                "n": 4
+                "s": "semicircle",
+                "c": "blue",
+                "n": 9,
+                "r": 180
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six orange plus signs. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine blue half circles. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -1208,17 +1215,17 @@
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "pink",
-                "n": 1
+                "s": "square",
+                "c": "green",
+                "n": 2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "pink",
+                "s": "square",
+                "c": "green",
                 "n": 3
               }
             ]
@@ -1226,18 +1233,18 @@
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "pink",
-                "n": 5
+                "s": "square",
+                "c": "green",
+                "n": 4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "pink",
-                "n": 7
+                "s": "square",
+                "c": "green",
+                "n": 5
               }
             ]
           },
@@ -1252,9 +1259,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "pink",
-                "n": 9
+                "s": "square",
+                "c": "green",
+                "n": 6
               }
             ]
           }
@@ -1264,9 +1271,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "pink",
-                "n": 7
+                "s": "square",
+                "c": "green",
+                "n": 5
               }
             ]
           }
@@ -1276,9 +1283,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "yellow",
-                "n": 9
+                "s": "square",
+                "c": "green",
+                "n": 7
               }
             ]
           }
@@ -1288,17 +1295,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
+                "s": "square",
                 "c": "pink",
-                "n": 9,
-                "r": 180
+                "n": 4
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine pink rings. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six green squares. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -1313,35 +1319,36 @@
           {
             "shapes": [
               {
-                "s": "square",
-                "c": "green"
+                "s": "octagon",
+                "c": "red",
+                "n": 1
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "square",
-                "c": "green",
-                "r": 90
+                "s": "octagon",
+                "c": "red",
+                "n": 2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "square",
-                "c": "green",
-                "r": 180
+                "s": "octagon",
+                "c": "red",
+                "n": 3
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "square",
-                "c": "green",
-                "r": 270
+                "s": "octagon",
+                "c": "red",
+                "n": 4
               }
             ]
           },
@@ -1356,8 +1363,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "green"
+                "s": "octagon",
+                "c": "red",
+                "n": 5
               }
             ]
           }
@@ -1367,9 +1375,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "green",
-                "r": 270
+                "s": "octagon",
+                "c": "red",
+                "n": 4
               }
             ]
           }
@@ -1379,9 +1387,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "green",
-                "r": 180
+                "s": "octagon",
+                "c": "red",
+                "n": 6
               }
             ]
           }
@@ -1391,16 +1399,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "green",
-                "n": 1
+                "s": "cloud",
+                "c": "red",
+                "n": 4
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a green square. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get five red octagons. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -1415,35 +1423,36 @@
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "red"
+                "s": "star6",
+                "c": "purple",
+                "n": 1
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "red",
-                "r": 90
+                "s": "star6",
+                "c": "purple",
+                "n": 2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "red",
-                "r": 180
+                "s": "star6",
+                "c": "purple",
+                "n": 3
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "red",
-                "r": 270
+                "s": "star6",
+                "c": "purple",
+                "n": 4
               }
             ]
           },
@@ -1458,8 +1467,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "red"
+                "s": "star6",
+                "c": "purple",
+                "n": 5
               }
             ]
           }
@@ -1469,9 +1479,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "red",
-                "r": 270
+                "s": "star6",
+                "c": "purple",
+                "n": 4
               }
             ]
           }
@@ -1481,9 +1491,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "red",
-                "r": 180
+                "s": "star6",
+                "c": "purple",
+                "n": 6
               }
             ]
           }
@@ -1493,15 +1503,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "blue"
+                "s": "star6",
+                "c": "purple",
+                "n": 5,
+                "r": 90
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a red octagon. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get five purple six-pointed stars. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -1516,36 +1528,35 @@
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "teal",
-                "n": 1
+                "s": "house",
+                "c": "red"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "teal",
-                "n": 2
+                "s": "house",
+                "c": "red",
+                "r": 90
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "teal",
-                "n": 3
+                "s": "house",
+                "c": "red",
+                "r": 180
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "teal",
-                "n": 4
+                "s": "house",
+                "c": "red",
+                "r": 270
               }
             ]
           },
@@ -1560,9 +1571,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "teal",
-                "n": 5
+                "s": "house",
+                "c": "red"
               }
             ]
           }
@@ -1572,9 +1582,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "teal",
-                "n": 4
+                "s": "house",
+                "c": "red",
+                "r": 270
               }
             ]
           }
@@ -1584,9 +1594,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "teal",
-                "n": 6
+                "s": "house",
+                "c": "red",
+                "r": 180
               }
             ]
           }
@@ -1596,16 +1606,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "diamond",
-                "c": "teal",
-                "n": 5
+                "s": "house",
+                "c": "red",
+                "n": 3
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get five teal rings. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a red house. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -1620,17 +1630,17 @@
           {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "pink",
-                "n": 1
+                "s": "hexagon",
+                "c": "green",
+                "n": 2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "pink",
+                "s": "hexagon",
+                "c": "green",
                 "n": 3
               }
             ]
@@ -1638,18 +1648,18 @@
           {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "pink",
-                "n": 5
+                "s": "hexagon",
+                "c": "green",
+                "n": 4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "pink",
-                "n": 7
+                "s": "hexagon",
+                "c": "green",
+                "n": 5
               }
             ]
           },
@@ -1664,9 +1674,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "pink",
-                "n": 9
+                "s": "hexagon",
+                "c": "green",
+                "n": 6
               }
             ]
           }
@@ -1676,9 +1686,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "pink",
-                "n": 7
+                "s": "hexagon",
+                "c": "green",
+                "n": 5
               }
             ]
           }
@@ -1688,9 +1698,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "pink",
-                "n": 9
+                "s": "hexagon",
+                "c": "green",
+                "n": 7
               }
             ]
           }
@@ -1700,16 +1710,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "red",
-                "n": 8
+                "s": "hexagon",
+                "c": "green",
+                "n": 7,
+                "z": 1.5
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine pink clouds. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six green hexagons. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -1724,8 +1735,8 @@
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
+                "s": "plus",
+                "c": "teal",
                 "z": 0.4
               }
             ]
@@ -1733,8 +1744,8 @@
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
+                "s": "plus",
+                "c": "teal",
                 "z": 0.6
               }
             ]
@@ -1742,8 +1753,8 @@
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
+                "s": "plus",
+                "c": "teal",
                 "z": 0.85
               }
             ]
@@ -1751,8 +1762,8 @@
           {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
+                "s": "plus",
+                "c": "teal",
                 "z": 1.1
               }
             ]
@@ -1768,8 +1779,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
+                "s": "plus",
+                "c": "teal",
                 "z": 1.35
               }
             ]
@@ -1780,8 +1791,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
+                "s": "plus",
+                "c": "teal",
                 "z": 1.1
               }
             ]
@@ -1792,8 +1803,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "blue",
+                "s": "plus",
+                "c": "teal",
                 "z": 0.4
               }
             ]
@@ -1804,17 +1815,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
+                "s": "plus",
                 "c": "blue",
-                "z": 1.35,
-                "n": 2
+                "z": 1.35
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big blue hexagon. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big teal plus sign. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -1829,8 +1839,8 @@
           {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "purple",
+                "s": "lightning",
+                "c": "orange",
                 "n": 1
               }
             ]
@@ -1838,17 +1848,8 @@
           {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "purple",
-                "n": 2
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "arrow",
-                "c": "purple",
+                "s": "lightning",
+                "c": "orange",
                 "n": 3
               }
             ]
@@ -1856,9 +1857,18 @@
           {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "purple",
-                "n": 4
+                "s": "lightning",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange",
+                "n": 7
               }
             ]
           },
@@ -1873,9 +1883,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "purple",
-                "n": 5
+                "s": "lightning",
+                "c": "orange",
+                "n": 9
               }
             ]
           }
@@ -1885,9 +1895,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "purple",
-                "n": 4
+                "s": "lightning",
+                "c": "orange",
+                "n": 7
               }
             ]
           }
@@ -1897,9 +1907,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "purple",
-                "n": 6
+                "s": "lightning",
+                "c": "orange",
+                "n": 9,
+                "z": 1.5
               }
             ]
           }
@@ -1909,17 +1920,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "yellow",
-                "n": 5,
-                "z": 0.55
+                "s": "lightning",
+                "c": "green",
+                "n": 9,
+                "r": 270
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get five purple arrows. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine orange lightning bolts. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -2121,16 +2132,16 @@
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "orange"
+                "s": "trapezoid",
+                "c": "purple"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "orange",
+                "s": "trapezoid",
+                "c": "purple",
                 "r": 90
               }
             ]
@@ -2138,8 +2149,8 @@
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "orange",
+                "s": "trapezoid",
+                "c": "purple",
                 "r": 180
               }
             ]
@@ -2147,8 +2158,8 @@
           {
             "shapes": [
               {
-                "s": "circle",
-                "c": "orange",
+                "s": "trapezoid",
+                "c": "purple",
                 "r": 270
               }
             ]
@@ -2164,8 +2175,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "orange"
+                "s": "trapezoid",
+                "c": "purple"
               }
             ]
           }
@@ -2175,8 +2186,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "orange",
+                "s": "trapezoid",
+                "c": "purple",
                 "r": 270
               }
             ]
@@ -2187,8 +2198,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "orange",
+                "s": "trapezoid",
+                "c": "purple",
                 "r": 180
               }
             ]
@@ -2199,16 +2210,15 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "blue",
-                "r": 90
+                "s": "trapezoid",
+                "c": "yellow"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get an orange circle. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a purple trapezoid. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -2223,8 +2233,8 @@
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow",
+                "s": "moon",
+                "c": "purple",
                 "z": 0.4
               }
             ]
@@ -2232,8 +2242,8 @@
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow",
+                "s": "moon",
+                "c": "purple",
                 "z": 0.6
               }
             ]
@@ -2241,8 +2251,8 @@
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow",
+                "s": "moon",
+                "c": "purple",
                 "z": 0.85
               }
             ]
@@ -2250,8 +2260,8 @@
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow",
+                "s": "moon",
+                "c": "purple",
                 "z": 1.1
               }
             ]
@@ -2267,8 +2277,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow",
+                "s": "moon",
+                "c": "purple",
                 "z": 1.35
               }
             ]
@@ -2279,8 +2289,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow",
+                "s": "moon",
+                "c": "purple",
                 "z": 1.1
               }
             ]
@@ -2291,8 +2301,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "yellow",
+                "s": "moon",
+                "c": "purple",
                 "z": 0.4
               }
             ]
@@ -2303,17 +2313,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "green",
+                "s": "triangledown",
+                "c": "purple",
                 "z": 1.35,
-                "r": 180
+                "r": 90
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big yellow star. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big purple moon. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -2524,35 +2534,36 @@
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "blue"
+                "s": "square",
+                "c": "pink",
+                "z": 0.4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "blue",
-                "r": 90
+                "s": "square",
+                "c": "pink",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "blue",
-                "r": 180
+                "s": "square",
+                "c": "pink",
+                "z": 0.85
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "blue",
-                "r": 270
+                "s": "square",
+                "c": "pink",
+                "z": 1.1
               }
             ]
           },
@@ -2567,8 +2578,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "blue"
+                "s": "square",
+                "c": "pink",
+                "z": 1.35
               }
             ]
           }
@@ -2578,9 +2590,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "blue",
-                "r": 270
+                "s": "square",
+                "c": "pink",
+                "z": 1.1
               }
             ]
           }
@@ -2590,9 +2602,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "blue",
-                "r": 180
+                "s": "square",
+                "c": "pink",
+                "z": 0.4
               }
             ]
           }
@@ -2602,17 +2614,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "blue",
-                "r": 90,
-                "n": 3
+                "s": "square",
+                "c": "purple",
+                "z": 1.35,
+                "r": 270
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a blue bow tie. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big pink square. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -2627,36 +2639,36 @@
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
-                "z": 0.4
+                "s": "star",
+                "c": "pink",
+                "n": 2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
-                "z": 0.6
+                "s": "star",
+                "c": "pink",
+                "n": 3
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
-                "z": 0.85
+                "s": "star",
+                "c": "pink",
+                "n": 4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
-                "z": 1.1
+                "s": "star",
+                "c": "pink",
+                "n": 5
               }
             ]
           },
@@ -2671,9 +2683,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
-                "z": 1.35
+                "s": "star",
+                "c": "pink",
+                "n": 6
               }
             ]
           }
@@ -2683,9 +2695,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
-                "z": 1.1
+                "s": "star",
+                "c": "pink",
+                "n": 5
               }
             ]
           }
@@ -2695,9 +2707,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
-                "z": 0.4
+                "s": "star",
+                "c": "pink",
+                "n": 7
               }
             ]
           }
@@ -2707,16 +2719,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
-                "z": 0.74
+                "s": "star",
+                "c": "blue",
+                "n": 6
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big teal octagon. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six pink stars. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -2731,36 +2743,36 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
-                "n": 2
+                "s": "crescent",
+                "c": "red",
+                "z": 0.4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
-                "n": 3
+                "s": "crescent",
+                "c": "red",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
-                "n": 4
+                "s": "crescent",
+                "c": "red",
+                "z": 0.85
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
-                "n": 5
+                "s": "crescent",
+                "c": "red",
+                "z": 1.1
               }
             ]
           },
@@ -2775,9 +2787,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
-                "n": 6
+                "s": "crescent",
+                "c": "red",
+                "z": 1.35
               }
             ]
           }
@@ -2787,9 +2799,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
-                "n": 5
+                "s": "crescent",
+                "c": "red",
+                "z": 1.1
               }
             ]
           }
@@ -2799,9 +2811,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "blue",
-                "n": 7
+                "s": "crescent",
+                "c": "red",
+                "z": 0.4
               }
             ]
           }
@@ -2811,16 +2823,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
-                "n": 6
+                "s": "crescent",
+                "c": "red",
+                "z": 1.35,
+                "n": 2
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six blue kites. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big red crescent. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -2928,8 +2941,9 @@
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red",
+                "s": "lightning",
+                "c": "orange",
+                "n": 1,
                 "z": 1.3
               }
             ]
@@ -2937,8 +2951,9 @@
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red",
+                "s": "lightning",
+                "c": "orange",
+                "n": 3,
                 "z": 1.1
               }
             ]
@@ -2946,8 +2961,9 @@
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red",
+                "s": "lightning",
+                "c": "orange",
+                "n": 5,
                 "z": 0.9
               }
             ]
@@ -2955,8 +2971,9 @@
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red",
+                "s": "lightning",
+                "c": "orange",
+                "n": 7,
                 "z": 0.7
               }
             ]
@@ -2972,8 +2989,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red",
+                "s": "lightning",
+                "c": "orange",
+                "n": 9,
                 "z": 0.5
               }
             ]
@@ -2984,9 +3002,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red",
-                "z": 1.1
+                "s": "lightning",
+                "c": "orange",
+                "n": 7
               }
             ]
           }
@@ -2996,9 +3014,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red",
-                "z": 0.4
+                "s": "lightning",
+                "c": "orange",
+                "n": 9
               }
             ]
           }
@@ -3008,17 +3026,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red",
-                "z": 0.5,
-                "n": 3
+                "s": "lightning",
+                "c": "blue",
+                "n": 9,
+                "z": 0.5
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small red bow tie. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by two each step, and at the same time the shape gets smaller. Carry that on one more step and you get nine small orange lightning bolts. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -3033,7 +3051,7 @@
           {
             "shapes": [
               {
-                "s": "heart",
+                "s": "triangledown",
                 "c": "teal",
                 "n": 1,
                 "z": 1.3
@@ -3043,7 +3061,7 @@
           {
             "shapes": [
               {
-                "s": "heart",
+                "s": "triangledown",
                 "c": "teal",
                 "n": 2,
                 "z": 1.1
@@ -3053,7 +3071,7 @@
           {
             "shapes": [
               {
-                "s": "heart",
+                "s": "triangledown",
                 "c": "teal",
                 "n": 3,
                 "z": 0.9
@@ -3063,7 +3081,7 @@
           {
             "shapes": [
               {
-                "s": "heart",
+                "s": "triangledown",
                 "c": "teal",
                 "n": 4,
                 "z": 0.7
@@ -3081,7 +3099,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "heart",
+                "s": "triangledown",
                 "c": "teal",
                 "n": 5,
                 "z": 0.5
@@ -3094,7 +3112,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "heart",
+                "s": "triangledown",
                 "c": "teal",
                 "n": 4
               }
@@ -3106,7 +3124,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "heart",
+                "s": "triangledown",
                 "c": "teal",
                 "n": 6
               }
@@ -3118,18 +3136,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "heart",
-                "c": "teal",
+                "s": "triangledown",
+                "c": "yellow",
                 "n": 5,
-                "z": 0.5,
-                "r": 180
+                "z": 0.5
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step, and at the same time the shape gets smaller. Carry that on one more step and you get five small teal hearts. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step, and at the same time the shape gets smaller. Carry that on one more step and you get five small teal upside-down triangles. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -3144,8 +3161,8 @@
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "orange",
+                "s": "triangle",
+                "c": "green",
                 "z": 1.3
               }
             ]
@@ -3153,112 +3170,8 @@
           {
             "shapes": [
               {
-                "s": "ring",
-                "c": "orange",
-                "z": 1.1
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "ring",
-                "c": "orange",
-                "z": 0.9
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "ring",
-                "c": "orange",
-                "z": 0.7
-              }
-            ]
-          },
-          {
-            "missing": true
-          }
-        ]
-      },
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "ring",
-                "c": "orange",
-                "z": 0.5
-              }
-            ]
-          }
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "ring",
-                "c": "orange",
-                "z": 1.1
-              }
-            ]
-          }
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "ring",
-                "c": "orange",
-                "z": 0.4
-              }
-            ]
-          }
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "ring",
-                "c": "orange",
-                "z": 0.3
-              }
-            ]
-          }
-        }
-      ],
-      "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small orange ring. Choice b stopped one step early.",
-      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
-    },
-    {
-      "id": "olsat-fse-g2-12",
-      "grade": 2,
-      "difficulty": 5,
-      "prompt": "What comes next?",
-      "figure": {
-        "kind": "series",
-        "alt": "A row of shapes that change step by step, then an empty box.",
-        "cells": [
-          {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "teal",
-                "z": 1.3
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "teal",
+                "s": "triangle",
+                "c": "green",
                 "r": 90,
                 "z": 1.1
               }
@@ -3267,8 +3180,8 @@
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "teal",
+                "s": "triangle",
+                "c": "green",
                 "r": 180,
                 "z": 0.9
               }
@@ -3277,8 +3190,8 @@
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "teal",
+                "s": "triangle",
+                "c": "green",
                 "r": 270,
                 "z": 0.7
               }
@@ -3295,8 +3208,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "teal",
+                "s": "triangle",
+                "c": "green",
                 "z": 0.5
               }
             ]
@@ -3307,8 +3220,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "teal",
+                "s": "triangle",
+                "c": "green",
                 "r": 270
               }
             ]
@@ -3319,8 +3232,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "teal",
+                "s": "triangle",
+                "c": "green",
                 "r": 180
               }
             ]
@@ -3331,22 +3244,20 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "teal",
-                "z": 0.5,
-                "r": 180,
-                "n": 1
+                "s": "triangle",
+                "c": "purple",
+                "z": 0.5
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small teal bow tie. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small green triangle. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
-      "id": "olsat-fse-g2-16",
+      "id": "olsat-fse-g2-12",
       "grade": 2,
       "difficulty": 5,
       "prompt": "What comes next?",
@@ -3357,8 +3268,9 @@
           {
             "shapes": [
               {
-                "s": "lightning",
+                "s": "rectwide",
                 "c": "orange",
+                "f": "outline",
                 "z": 1.3
               }
             ]
@@ -3366,7 +3278,7 @@
           {
             "shapes": [
               {
-                "s": "lightning",
+                "s": "rectwide",
                 "c": "orange",
                 "z": 1.1
               }
@@ -3375,8 +3287,9 @@
           {
             "shapes": [
               {
-                "s": "lightning",
+                "s": "rectwide",
                 "c": "orange",
+                "f": "dots",
                 "z": 0.9
               }
             ]
@@ -3384,8 +3297,9 @@
           {
             "shapes": [
               {
-                "s": "lightning",
+                "s": "rectwide",
                 "c": "orange",
+                "f": "outline",
                 "z": 0.7
               }
             ]
@@ -3401,7 +3315,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "lightning",
+                "s": "rectwide",
                 "c": "orange",
                 "z": 0.5
               }
@@ -3413,8 +3327,114 @@
           "figure": {
             "shapes": [
               {
-                "s": "lightning",
+                "s": "rectwide",
                 "c": "orange",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "orange",
+                "z": 0.5,
+                "n": 1,
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small orange wide rectangle. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "purple",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "purple",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "purple",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "purple",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "purple",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "purple",
                 "z": 1.1
               }
             ]
@@ -3425,8 +3445,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "lightning",
-                "c": "orange",
+                "s": "leaf",
+                "c": "purple",
                 "z": 0.4
               }
             ]
@@ -3437,16 +3457,18 @@
           "figure": {
             "shapes": [
               {
-                "s": "lightning",
-                "c": "red",
-                "z": 0.5
+                "s": "leaf",
+                "c": "purple",
+                "z": 0.5,
+                "n": 2,
+                "r": 270
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small orange lightning bolt. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small purple leaf. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -3461,35 +3483,36 @@
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "green",
-                "f": "outline"
+                "s": "moon",
+                "c": "pink",
+                "z": 0.4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "green"
+                "s": "moon",
+                "c": "pink",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "green",
-                "f": "dots"
+                "s": "moon",
+                "c": "pink",
+                "z": 0.85
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "star",
-                "c": "green",
-                "f": "outline"
+                "s": "moon",
+                "c": "pink",
+                "z": 1.1
               }
             ]
           },
@@ -3504,8 +3527,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "green"
+                "s": "moon",
+                "c": "pink",
+                "z": 1.35
               }
             ]
           }
@@ -3515,9 +3539,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "green",
-                "f": "outline"
+                "s": "moon",
+                "c": "pink",
+                "z": 1.1
               }
             ]
           }
@@ -3527,9 +3551,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "green",
-                "f": "dots"
+                "s": "moon",
+                "c": "pink",
+                "z": 0.4
               }
             ]
           }
@@ -3539,8 +3563,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "arrow",
-                "c": "pink"
+                "s": "moon",
+                "c": "pink",
+                "z": 0.74
               }
             ]
           }
@@ -3550,16 +3575,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "blue",
-                "n": 3
+                "s": "moon",
+                "c": "orange",
+                "z": 1.35
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a green star. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big pink moon. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -3574,8 +3599,8 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
+                "s": "kite",
+                "c": "yellow",
                 "z": 0.4
               }
             ]
@@ -3583,8 +3608,8 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
+                "s": "kite",
+                "c": "yellow",
                 "z": 0.6
               }
             ]
@@ -3592,8 +3617,8 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
+                "s": "kite",
+                "c": "yellow",
                 "z": 0.85
               }
             ]
@@ -3601,8 +3626,8 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
+                "s": "kite",
+                "c": "yellow",
                 "z": 1.1
               }
             ]
@@ -3618,8 +3643,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
+                "s": "kite",
+                "c": "yellow",
                 "z": 1.35
               }
             ]
@@ -3630,8 +3655,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
+                "s": "kite",
+                "c": "yellow",
                 "z": 1.1
               }
             ]
@@ -3642,8 +3667,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
+                "s": "kite",
+                "c": "yellow",
                 "z": 0.4
               }
             ]
@@ -3654,9 +3679,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "orange",
-                "z": 1.5
+                "s": "kite",
+                "c": "green",
+                "z": 1.35,
+                "r": 270
               }
             ]
           }
@@ -3666,16 +3692,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "orange",
-                "z": 0.74
+                "s": "kite",
+                "c": "red",
+                "z": 1.35,
+                "r": 180
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big red pentagon. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big yellow kite. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -3797,7 +3824,7 @@
           {
             "shapes": [
               {
-                "s": "square",
+                "s": "pentagon",
                 "c": "pink",
                 "n": 2
               }
@@ -3806,7 +3833,7 @@
           {
             "shapes": [
               {
-                "s": "square",
+                "s": "pentagon",
                 "c": "pink",
                 "n": 3
               }
@@ -3815,7 +3842,7 @@
           {
             "shapes": [
               {
-                "s": "square",
+                "s": "pentagon",
                 "c": "pink",
                 "n": 4
               }
@@ -3824,7 +3851,7 @@
           {
             "shapes": [
               {
-                "s": "square",
+                "s": "pentagon",
                 "c": "pink",
                 "n": 5
               }
@@ -3841,7 +3868,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
+                "s": "pentagon",
                 "c": "pink",
                 "n": 6
               }
@@ -3853,7 +3880,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
+                "s": "pentagon",
                 "c": "pink",
                 "n": 5
               }
@@ -3865,7 +3892,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
+                "s": "pentagon",
                 "c": "pink",
                 "n": 7
               }
@@ -3877,10 +3904,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
+                "s": "flag",
                 "c": "pink",
-                "n": 6,
-                "r": 90
+                "n": 6
               }
             ]
           }
@@ -3890,8 +3916,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "orange",
+                "s": "flag",
+                "c": "purple",
                 "n": 6
               }
             ]
@@ -3899,7 +3925,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six pink squares. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six pink pentagons. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -3914,17 +3940,17 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "purple",
-                "n": 2
+                "s": "leaf",
+                "c": "orange",
+                "n": 1
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "purple",
+                "s": "leaf",
+                "c": "orange",
                 "n": 3
               }
             ]
@@ -3932,18 +3958,18 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "purple",
-                "n": 4
+                "s": "leaf",
+                "c": "orange",
+                "n": 5
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "purple",
-                "n": 5
+                "s": "leaf",
+                "c": "orange",
+                "n": 7
               }
             ]
           },
@@ -3958,9 +3984,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "purple",
-                "n": 6
+                "s": "leaf",
+                "c": "orange",
+                "n": 9
               }
             ]
           }
@@ -3970,9 +3996,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "purple",
-                "n": 5
+                "s": "leaf",
+                "c": "orange",
+                "n": 7
               }
             ]
           }
@@ -3982,9 +4008,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "purple",
-                "n": 7
+                "s": "leaf",
+                "c": "orange",
+                "n": 9,
+                "z": 0.55
               }
             ]
           }
@@ -3994,10 +4021,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
+                "s": "leaf",
                 "c": "green",
-                "n": 6,
-                "r": 270
+                "n": 9
               }
             ]
           }
@@ -4007,16 +4033,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "ring",
-                "c": "purple",
-                "n": 4
+                "s": "circle",
+                "c": "orange",
+                "n": 9
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six purple triangles. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine orange leaves. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -4253,35 +4279,36 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple",
-                "f": "outline"
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple"
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple",
-                "f": "dots"
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.85
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple",
-                "f": "outline"
+                "s": "triangle",
+                "c": "yellow",
+                "z": 1.1
               }
             ]
           },
@@ -4296,8 +4323,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple"
+                "s": "triangle",
+                "c": "yellow",
+                "z": 1.35
               }
             ]
           }
@@ -4307,9 +4335,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple",
-                "f": "outline"
+                "s": "triangle",
+                "c": "yellow",
+                "z": 1.1
               }
             ]
           }
@@ -4319,9 +4347,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple",
-                "f": "dots"
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.4
               }
             ]
           }
@@ -4331,10 +4359,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple",
-                "n": 3,
-                "r": 180
+                "s": "bowtie",
+                "c": "yellow",
+                "z": 1.5
               }
             ]
           }
@@ -4344,16 +4371,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple",
-                "r": 270
+                "s": "triangle",
+                "c": "yellow",
+                "z": 1.35,
+                "n": 3
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a purple pentagon. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big yellow triangle. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -4368,36 +4396,36 @@
           {
             "shapes": [
               {
-                "s": "square",
-                "c": "purple",
-                "n": 2
+                "s": "octagon",
+                "c": "pink",
+                "z": 0.4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "square",
-                "c": "purple",
-                "n": 3
+                "s": "octagon",
+                "c": "pink",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "square",
-                "c": "purple",
-                "n": 4
+                "s": "octagon",
+                "c": "pink",
+                "z": 0.85
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "square",
-                "c": "purple",
-                "n": 5
+                "s": "octagon",
+                "c": "pink",
+                "z": 1.1
               }
             ]
           },
@@ -4412,9 +4440,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "purple",
-                "n": 6
+                "s": "octagon",
+                "c": "pink",
+                "z": 1.35
               }
             ]
           }
@@ -4424,9 +4452,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "purple",
-                "n": 5
+                "s": "octagon",
+                "c": "pink",
+                "z": 1.1
               }
             ]
           }
@@ -4436,9 +4464,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "purple",
-                "n": 7
+                "s": "octagon",
+                "c": "pink",
+                "z": 0.4
               }
             ]
           }
@@ -4448,9 +4476,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
+                "s": "octagon",
                 "c": "red",
-                "n": 6
+                "z": 1.35
               }
             ]
           }
@@ -4460,17 +4488,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "yellow",
-                "n": 6,
-                "z": 1.5
+                "s": "octagon",
+                "c": "pink",
+                "z": 0.74,
+                "n": 1
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six purple squares. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big pink octagon. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -4485,36 +4513,36 @@
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "yellow",
-                "n": 1
+                "s": "kite",
+                "c": "red",
+                "z": 0.4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "yellow",
-                "n": 3
+                "s": "kite",
+                "c": "red",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "yellow",
-                "n": 5
+                "s": "kite",
+                "c": "red",
+                "z": 0.85
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "yellow",
-                "n": 7
+                "s": "kite",
+                "c": "red",
+                "z": 1.1
               }
             ]
           },
@@ -4529,9 +4557,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "yellow",
-                "n": 9
+                "s": "kite",
+                "c": "red",
+                "z": 1.35
               }
             ]
           }
@@ -4541,9 +4569,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "yellow",
-                "n": 7
+                "s": "kite",
+                "c": "red",
+                "z": 1.1
               }
             ]
           }
@@ -4553,10 +4581,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "yellow",
-                "n": 9,
-                "r": 270
+                "s": "kite",
+                "c": "red",
+                "z": 0.4
               }
             ]
           }
@@ -4566,9 +4593,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "flag",
-                "c": "green",
-                "n": 9
+                "s": "kite",
+                "c": "red",
+                "z": 0.74
               }
             ]
           }
@@ -4578,16 +4605,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "flag",
-                "c": "orange",
-                "n": 9
+                "s": "kite",
+                "c": "red",
+                "z": 0.74,
+                "r": 90
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine yellow bow ties. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big red kite. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -4717,7 +4745,7 @@
           {
             "shapes": [
               {
-                "s": "star6",
+                "s": "pentagon",
                 "c": "red",
                 "z": 1.3
               }
@@ -4726,7 +4754,7 @@
           {
             "shapes": [
               {
-                "s": "star6",
+                "s": "pentagon",
                 "c": "red",
                 "z": 1.1
               }
@@ -4735,7 +4763,7 @@
           {
             "shapes": [
               {
-                "s": "star6",
+                "s": "pentagon",
                 "c": "red",
                 "z": 0.9
               }
@@ -4744,7 +4772,7 @@
           {
             "shapes": [
               {
-                "s": "star6",
+                "s": "pentagon",
                 "c": "red",
                 "z": 0.7
               }
@@ -4761,7 +4789,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
+                "s": "pentagon",
                 "c": "red",
                 "z": 0.5
               }
@@ -4773,7 +4801,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
+                "s": "pentagon",
                 "c": "red",
                 "z": 1.1
               }
@@ -4785,7 +4813,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
+                "s": "pentagon",
                 "c": "red",
                 "z": 0.4
               }
@@ -4797,11 +4825,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "z": 0.5,
-                "n": 1,
-                "r": 180
+                "s": "pentagon",
+                "c": "orange",
+                "z": 0.8
               }
             ]
           }
@@ -4811,16 +4837,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
-                "z": 0.8
+                "s": "pentagon",
+                "c": "orange",
+                "z": 0.3
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small red six-pointed star. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small red pentagon. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -4835,8 +4861,8 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "teal",
+                "s": "trapezoid",
+                "c": "orange",
                 "z": 1.3
               }
             ]
@@ -4844,8 +4870,8 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "teal",
+                "s": "trapezoid",
+                "c": "orange",
                 "z": 1.1
               }
             ]
@@ -4853,8 +4879,8 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "teal",
+                "s": "trapezoid",
+                "c": "orange",
                 "z": 0.9
               }
             ]
@@ -4862,8 +4888,8 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "teal",
+                "s": "trapezoid",
+                "c": "orange",
                 "z": 0.7
               }
             ]
@@ -4879,8 +4905,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "teal",
+                "s": "trapezoid",
+                "c": "orange",
                 "z": 0.5
               }
             ]
@@ -4891,8 +4917,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "teal",
+                "s": "trapezoid",
+                "c": "orange",
                 "z": 1.1
               }
             ]
@@ -4903,8 +4929,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "teal",
+                "s": "trapezoid",
+                "c": "orange",
                 "z": 0.4
               }
             ]
@@ -4915,10 +4941,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal",
+                "s": "house",
+                "c": "orange",
                 "z": 0.5,
-                "r": 180
+                "n": 1
               }
             ]
           }
@@ -4928,17 +4954,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "yellow",
+                "s": "trapezoid",
+                "c": "orange",
                 "z": 0.5,
-                "r": 90
+                "n": 2
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small teal kite. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small orange trapezoid. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -4953,8 +4979,8 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
+                "s": "parallelogram",
+                "c": "green",
                 "z": 1.3
               }
             ]
@@ -4962,8 +4988,8 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
+                "s": "parallelogram",
+                "c": "green",
                 "z": 1.1
               }
             ]
@@ -4971,8 +4997,8 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
+                "s": "parallelogram",
+                "c": "green",
                 "z": 0.9
               }
             ]
@@ -4980,8 +5006,8 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
+                "s": "parallelogram",
+                "c": "green",
                 "z": 0.7
               }
             ]
@@ -4997,8 +5023,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
+                "s": "parallelogram",
+                "c": "green",
                 "z": 0.5
               }
             ]
@@ -5009,8 +5035,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
+                "s": "parallelogram",
+                "c": "green",
                 "z": 1.1
               }
             ]
@@ -5021,8 +5047,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
+                "s": "parallelogram",
+                "c": "green",
                 "z": 0.4
               }
             ]
@@ -5033,9 +5059,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "yellow",
-                "z": 0.8
+                "s": "heart",
+                "c": "green",
+                "z": 0.5
               }
             ]
           }
@@ -5045,8 +5071,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "yellow",
+                "s": "parallelogram",
+                "c": "pink",
                 "z": 0.5,
                 "n": 3
               }
@@ -5055,7 +5081,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small yellow triangle. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small green slanted rectangle. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -5189,9 +5215,8 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "pink",
-                "f": "outline",
+                "s": "star4",
+                "c": "purple",
                 "z": 1.3
               }
             ]
@@ -5199,8 +5224,8 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "pink",
+                "s": "star4",
+                "c": "purple",
                 "z": 1.1
               }
             ]
@@ -5208,9 +5233,8 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "pink",
-                "f": "dots",
+                "s": "star4",
+                "c": "purple",
                 "z": 0.9
               }
             ]
@@ -5218,9 +5242,8 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "pink",
-                "f": "outline",
+                "s": "star4",
+                "c": "purple",
                 "z": 0.7
               }
             ]
@@ -5236,8 +5259,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "pink",
+                "s": "star4",
+                "c": "purple",
                 "z": 0.5
               }
             ]
@@ -5248,9 +5271,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "pink",
-                "f": "outline"
+                "s": "star4",
+                "c": "purple",
+                "z": 1.1
               }
             ]
           }
@@ -5260,9 +5283,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "pink",
-                "f": "dots"
+                "s": "star4",
+                "c": "purple",
+                "z": 0.4
               }
             ]
           }
@@ -5272,10 +5295,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "moon",
-                "c": "pink",
+                "s": "star6",
+                "c": "purple",
                 "z": 0.5,
-                "n": 3
+                "r": 180
               }
             ]
           }
@@ -5285,18 +5308,18 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "pink",
+                "s": "star4",
+                "c": "purple",
                 "z": 0.5,
-                "r": 180,
-                "n": 1
+                "r": 90,
+                "n": 3
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small pink pentagon. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small purple four-pointed star. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -5311,9 +5334,8 @@
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "pink",
-                "f": "outline",
+                "s": "rectwide",
+                "c": "yellow",
                 "z": 1.3
               }
             ]
@@ -5321,8 +5343,8 @@
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "pink",
+                "s": "rectwide",
+                "c": "yellow",
                 "z": 1.1
               }
             ]
@@ -5330,9 +5352,8 @@
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "pink",
-                "f": "dots",
+                "s": "rectwide",
+                "c": "yellow",
                 "z": 0.9
               }
             ]
@@ -5340,9 +5361,8 @@
           {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "pink",
-                "f": "outline",
+                "s": "rectwide",
+                "c": "yellow",
                 "z": 0.7
               }
             ]
@@ -5358,8 +5378,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "pink",
+                "s": "rectwide",
+                "c": "yellow",
                 "z": 0.5
               }
             ]
@@ -5370,9 +5390,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "pink",
-                "f": "outline"
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 1.1
               }
             ]
           }
@@ -5382,9 +5402,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "pink",
-                "f": "dots"
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 0.4
               }
             ]
           }
@@ -5394,9 +5414,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "red",
-                "z": 0.5
+                "s": "rectwide",
+                "c": "green",
+                "z": 0.5,
+                "r": 270
               }
             ]
           }
@@ -5406,17 +5427,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "pink",
-                "z": 0.3,
-                "n": 1
+                "s": "rectwide",
+                "c": "orange",
+                "z": 0.8
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small pink octagon. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small yellow wide rectangle. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -5431,16 +5451,16 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink"
+                "s": "cloud",
+                "c": "teal"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink",
+                "s": "cloud",
+                "c": "teal",
                 "r": 90
               }
             ]
@@ -5448,8 +5468,8 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink",
+                "s": "cloud",
+                "c": "teal",
                 "r": 180
               }
             ]
@@ -5457,8 +5477,8 @@
           {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink",
+                "s": "cloud",
+                "c": "teal",
                 "r": 270
               }
             ]
@@ -5474,8 +5494,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink"
+                "s": "cloud",
+                "c": "teal"
               }
             ]
           }
@@ -5485,8 +5505,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink",
+                "s": "cloud",
+                "c": "teal",
                 "r": 270
               }
             ]
@@ -5497,8 +5517,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink",
+                "s": "cloud",
+                "c": "teal",
                 "r": 180
               }
             ]
@@ -5509,10 +5529,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink",
-                "z": 0.55,
-                "n": 1
+                "s": "circle",
+                "c": "teal",
+                "z": 0.55
               }
             ]
           }
@@ -5522,16 +5541,15 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink",
-                "n": 1
+                "s": "rectwide",
+                "c": "teal"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a pink triangle. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a teal cloud. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -5546,35 +5564,36 @@
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green",
-                "f": "outline"
+                "s": "bowtie",
+                "c": "pink",
+                "n": 2
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green"
+                "s": "bowtie",
+                "c": "pink",
+                "n": 3
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green",
-                "f": "dots"
+                "s": "bowtie",
+                "c": "pink",
+                "n": 4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green",
-                "f": "outline"
+                "s": "bowtie",
+                "c": "pink",
+                "n": 5
               }
             ]
           },
@@ -5589,8 +5608,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green"
+                "s": "bowtie",
+                "c": "pink",
+                "n": 6
               }
             ]
           }
@@ -5600,9 +5620,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green",
-                "f": "outline"
+                "s": "bowtie",
+                "c": "pink",
+                "n": 5
               }
             ]
           }
@@ -5612,9 +5632,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "green",
-                "f": "dots"
+                "s": "bowtie",
+                "c": "pink",
+                "n": 7
               }
             ]
           }
@@ -5624,8 +5644,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "blue"
+                "s": "cross",
+                "c": "pink",
+                "n": 6,
+                "z": 1.5
               }
             ]
           }
@@ -5635,16 +5657,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "green",
-                "r": 90
+                "s": "parallelogram",
+                "c": "pink",
+                "n": 6
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a green slanted rectangle. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six pink bow ties. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -5726,36 +5748,35 @@
           {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "orange",
-                "z": 0.4
+                "s": "cloud",
+                "c": "orange"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "cloud",
                 "c": "orange",
-                "z": 0.6
+                "r": 90
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "cloud",
                 "c": "orange",
-                "z": 0.85
+                "r": 180
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "cloud",
                 "c": "orange",
-                "z": 1.1
+                "r": 270
               }
             ]
           },
@@ -5770,9 +5791,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "orange",
-                "z": 1.35
+                "s": "cloud",
+                "c": "orange"
               }
             ]
           }
@@ -5782,9 +5802,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "cloud",
                 "c": "orange",
-                "z": 1.1
+                "r": 270
               }
             ]
           }
@@ -5794,9 +5814,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "cloud",
                 "c": "orange",
-                "z": 0.4
+                "r": 180
               }
             ]
           }
@@ -5806,10 +5826,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "house",
+                "s": "hexagon",
                 "c": "orange",
-                "z": 1.35,
-                "n": 1
+                "r": 270
               }
             ]
           }
@@ -5819,17 +5838,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "cloud",
                 "c": "orange",
-                "z": 1.35,
-                "n": 2
+                "z": 0.55
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big orange trapezoid. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get an orange cloud. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -5844,35 +5862,35 @@
           {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red",
-                "f": "outline"
+                "s": "moon",
+                "c": "purple"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red"
+                "s": "moon",
+                "c": "purple",
+                "r": 90
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red",
-                "f": "dots"
+                "s": "moon",
+                "c": "purple",
+                "r": 180
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red",
-                "f": "outline"
+                "s": "moon",
+                "c": "purple",
+                "r": 270
               }
             ]
           },
@@ -5887,8 +5905,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red"
+                "s": "moon",
+                "c": "purple"
               }
             ]
           }
@@ -5898,9 +5916,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red",
-                "f": "outline"
+                "s": "moon",
+                "c": "purple",
+                "r": 270
               }
             ]
           }
@@ -5910,9 +5928,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red",
-                "f": "dots"
+                "s": "moon",
+                "c": "purple",
+                "r": 180
               }
             ]
           }
@@ -5922,9 +5940,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red",
-                "n": 3
+                "s": "moon",
+                "c": "purple",
+                "n": 2,
+                "z": 1.5
               }
             ]
           }
@@ -5934,16 +5953,15 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "red",
-                "r": 90
+                "s": "moon",
+                "c": "pink"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a red cross. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a purple moon. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -6071,16 +6089,16 @@
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple"
+                "s": "moon",
+                "c": "red"
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple",
+                "s": "moon",
+                "c": "red",
                 "r": 90
               }
             ]
@@ -6088,8 +6106,8 @@
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple",
+                "s": "moon",
+                "c": "red",
                 "r": 180
               }
             ]
@@ -6097,8 +6115,8 @@
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple",
+                "s": "moon",
+                "c": "red",
                 "r": 270
               }
             ]
@@ -6114,8 +6132,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple"
+                "s": "moon",
+                "c": "red"
               }
             ]
           }
@@ -6125,8 +6143,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple",
+                "s": "moon",
+                "c": "red",
                 "r": 270
               }
             ]
@@ -6137,8 +6155,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple",
+                "s": "moon",
+                "c": "red",
                 "r": 180
               }
             ]
@@ -6149,9 +6167,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "purple",
-                "r": 180
+                "s": "moon",
+                "c": "pink",
+                "z": 0.55
               }
             ]
           }
@@ -6161,17 +6179,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple",
-                "r": 90,
-                "n": 3
+                "s": "oval",
+                "c": "red",
+                "z": 1.5
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a purple four-pointed star. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a red moon. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -6186,35 +6203,36 @@
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "f": "outline"
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 0.4
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue"
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 0.6
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "f": "dots"
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 0.85
               }
             ]
           },
           {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "f": "outline"
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 1.1
               }
             ]
           },
@@ -6229,8 +6247,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue"
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 1.35
               }
             ]
           }
@@ -6240,9 +6259,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "f": "outline"
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 1.1
               }
             ]
           }
@@ -6252,9 +6271,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "f": "dots"
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 0.4
               }
             ]
           }
@@ -6264,9 +6283,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue",
-                "r": 90
+                "s": "trapezoid",
+                "c": "pink",
+                "z": 1.35
               }
             ]
           }
@@ -6276,16 +6295,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "green",
-                "r": 180
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 0.74,
+                "n": 1
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a blue pentagon. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big teal trapezoid. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -6300,8 +6320,8 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
+                "s": "bowtie",
+                "c": "blue",
                 "z": 0.4
               }
             ]
@@ -6309,8 +6329,8 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
+                "s": "bowtie",
+                "c": "blue",
                 "z": 0.6
               }
             ]
@@ -6318,8 +6338,8 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
+                "s": "bowtie",
+                "c": "blue",
                 "z": 0.85
               }
             ]
@@ -6327,8 +6347,8 @@
           {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
+                "s": "bowtie",
+                "c": "blue",
                 "z": 1.1
               }
             ]
@@ -6344,8 +6364,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
+                "s": "bowtie",
+                "c": "blue",
                 "z": 1.35
               }
             ]
@@ -6356,8 +6376,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
+                "s": "bowtie",
+                "c": "blue",
                 "z": 1.1
               }
             ]
@@ -6368,8 +6388,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
+                "s": "bowtie",
+                "c": "blue",
                 "z": 0.4
               }
             ]
@@ -6380,9 +6400,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
-                "z": 0.74
+                "s": "bowtie",
+                "c": "teal",
+                "z": 1.35,
+                "n": 2
               }
             ]
           }
@@ -6392,17 +6413,16 @@
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "red",
-                "z": 0.74,
-                "r": 90
+                "s": "bowtie",
+                "c": "green",
+                "z": 0.74
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big red kite. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big blue bow tie. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -6614,9 +6634,8 @@
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
-                "f": "outline",
+                "s": "arrow",
+                "c": "blue",
                 "z": 1.3
               }
             ]
@@ -6624,8 +6643,8 @@
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
+                "s": "arrow",
+                "c": "blue",
                 "z": 1.1
               }
             ]
@@ -6633,9 +6652,8 @@
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
-                "f": "dots",
+                "s": "arrow",
+                "c": "blue",
                 "z": 0.9
               }
             ]
@@ -6643,9 +6661,8 @@
           {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
-                "f": "outline",
+                "s": "arrow",
+                "c": "blue",
                 "z": 0.7
               }
             ]
@@ -6661,8 +6678,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
+                "s": "arrow",
+                "c": "blue",
                 "z": 0.5
               }
             ]
@@ -6673,9 +6690,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
-                "f": "outline"
+                "s": "arrow",
+                "c": "blue",
+                "z": 1.1
               }
             ]
           }
@@ -6685,9 +6702,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
-                "f": "dots"
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.4
               }
             ]
           }
@@ -6697,10 +6714,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green",
-                "z": 0.8,
-                "n": 1
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.3,
+                "r": 270
               }
             ]
           }
@@ -6710,16 +6727,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "lightning",
-                "c": "green",
-                "z": 0.8
+                "s": "star",
+                "c": "blue",
+                "z": 0.5,
+                "r": 270
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small green four-pointed star. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small blue arrow. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -6734,8 +6752,9 @@
           {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "green",
+                "s": "bowtie",
+                "c": "purple",
+                "f": "outline",
                 "z": 1.3
               }
             ]
@@ -6743,8 +6762,8 @@
           {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "green",
+                "s": "bowtie",
+                "c": "purple",
                 "z": 1.1
               }
             ]
@@ -6752,8 +6771,9 @@
           {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "green",
+                "s": "bowtie",
+                "c": "purple",
+                "f": "dots",
                 "z": 0.9
               }
             ]
@@ -6761,8 +6781,9 @@
           {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "green",
+                "s": "bowtie",
+                "c": "purple",
+                "f": "outline",
                 "z": 0.7
               }
             ]
@@ -6778,8 +6799,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "green",
+                "s": "bowtie",
+                "c": "purple",
                 "z": 0.5
               }
             ]
@@ -6790,9 +6811,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "green",
-                "z": 1.1
+                "s": "bowtie",
+                "c": "purple",
+                "f": "outline"
               }
             ]
           }
@@ -6802,9 +6823,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "green",
-                "z": 0.4
+                "s": "bowtie",
+                "c": "purple",
+                "f": "dots"
               }
             ]
           }
@@ -6814,10 +6835,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "yellow",
+                "s": "bowtie",
+                "c": "teal",
                 "z": 0.5,
-                "r": 180
+                "r": 90
               }
             ]
           }
@@ -6827,16 +6848,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "crescent",
+                "s": "bowtie",
                 "c": "yellow",
-                "z": 0.5
+                "z": 0.5,
+                "r": 180
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small green crescent. Choice b stopped one step early.",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small purple bow tie. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -6851,8 +6873,9 @@
           {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "bowtie",
                 "c": "green",
+                "n": 2,
                 "z": 1.3
               }
             ]
@@ -6860,8 +6883,9 @@
           {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "bowtie",
                 "c": "green",
+                "n": 3,
                 "z": 1.1
               }
             ]
@@ -6869,8 +6893,9 @@
           {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "bowtie",
                 "c": "green",
+                "n": 4,
                 "z": 0.9
               }
             ]
@@ -6878,8 +6903,9 @@
           {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "bowtie",
                 "c": "green",
+                "n": 5,
                 "z": 0.7
               }
             ]
@@ -6895,8 +6921,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "bowtie",
                 "c": "green",
+                "n": 6,
                 "z": 0.5
               }
             ]
@@ -6907,9 +6934,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "bowtie",
                 "c": "green",
-                "z": 1.1
+                "n": 5
               }
             ]
           }
@@ -6919,9 +6946,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "bowtie",
                 "c": "green",
-                "z": 0.4
+                "n": 7
               }
             ]
           }
@@ -6931,8 +6958,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "heart",
+                "s": "diamond",
                 "c": "green",
+                "n": 6,
                 "z": 0.5
               }
             ]
@@ -6943,17 +6971,18 @@
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "pink",
+                "s": "triangledown",
+                "c": "green",
+                "n": 6,
                 "z": 0.5,
-                "n": 3
+                "r": 90
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small green slanted rectangle. Choice b stopped one step early.",
+      "explanation": "Look along the row: the number goes up by one each step, and at the same time the shape gets smaller. Carry that on one more step and you get six small green bow ties. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -7119,9 +7148,8 @@
           {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "n": 2,
+                "s": "triangle",
+                "c": "teal",
                 "z": 1.3
               }
             ]
@@ -7129,9 +7157,8 @@
           {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "n": 3,
+                "s": "triangle",
+                "c": "teal",
                 "z": 1.1
               }
             ]
@@ -7139,9 +7166,8 @@
           {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "n": 4,
+                "s": "triangle",
+                "c": "teal",
                 "z": 0.9
               }
             ]
@@ -7149,9 +7175,8 @@
           {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "n": 5,
+                "s": "triangle",
+                "c": "teal",
                 "z": 0.7
               }
             ]
@@ -7167,9 +7192,8 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "n": 6,
+                "s": "triangle",
+                "c": "teal",
                 "z": 0.5
               }
             ]
@@ -7180,9 +7204,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "n": 5
+                "s": "triangle",
+                "c": "teal",
+                "z": 1.1
               }
             ]
           }
@@ -7192,9 +7216,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "n": 7
+                "s": "triangle",
+                "c": "teal",
+                "z": 0.4
               }
             ]
           }
@@ -7204,10 +7228,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
-                "c": "red",
-                "n": 8,
-                "z": 0.5
+                "s": "star",
+                "c": "teal",
+                "z": 0.5,
+                "n": 3
               }
             ]
           }
@@ -7217,10 +7241,10 @@
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "red",
-                "n": 6,
+                "s": "triangle",
+                "c": "teal",
                 "z": 0.5,
+                "n": 2,
                 "r": 270
               }
             ]
@@ -7228,7 +7252,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the number goes up by one each step, and at the same time the shape gets smaller. Carry that on one more step and you get six small red six-pointed stars. Choice b stopped one step early.",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small teal triangle. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
@@ -7243,8 +7267,9 @@
           {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "lightning",
                 "c": "yellow",
+                "f": "outline",
                 "z": 1.3
               }
             ]
@@ -7252,7 +7277,7 @@
           {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "lightning",
                 "c": "yellow",
                 "z": 1.1
               }
@@ -7261,8 +7286,9 @@
           {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "lightning",
                 "c": "yellow",
+                "f": "dots",
                 "z": 0.9
               }
             ]
@@ -7270,8 +7296,9 @@
           {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "lightning",
                 "c": "yellow",
+                "f": "outline",
                 "z": 0.7
               }
             ]
@@ -7287,7 +7314,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "lightning",
                 "c": "yellow",
                 "z": 0.5
               }
@@ -7299,9 +7326,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "lightning",
                 "c": "yellow",
-                "z": 1.1
+                "f": "outline"
               }
             ]
           }
@@ -7311,9 +7338,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "lightning",
                 "c": "yellow",
-                "z": 0.4
+                "f": "dots"
               }
             ]
           }
@@ -7323,9 +7350,9 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "green",
-                "z": 0.5,
+                "s": "lightning",
+                "c": "yellow",
+                "z": 0.8,
                 "r": 270
               }
             ]
@@ -7336,16 +7363,17 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "orange",
-                "z": 0.8
+                "s": "octagon",
+                "c": "yellow",
+                "z": 0.5,
+                "r": 180
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small yellow wide rectangle. Choice b stopped one step early.",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small yellow lightning bolt. Choice b stopped one step early.",
       "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     }
   ]

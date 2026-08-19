@@ -553,7 +553,7 @@
           "figure": {
             "text": "🍯"
           },
-          "label": "a beehive"
+          "label": "a hive full of honey"
         },
         {
           "id": "b",
@@ -565,9 +565,9 @@
         {
           "id": "c",
           "figure": {
-            "text": "🍯"
+            "text": "🐛"
           },
-          "label": "honey"
+          "label": "a caterpillar"
         },
         {
           "id": "d",
@@ -578,7 +578,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "A bird lives in a nest. A bee lives in a hive. A flower is where the bee visits, not where it lives.",
+      "explanation": "A bird lives in a nest. A bee lives in a hive. A flower is where the bee goes to feed, not where it lives.",
       "strategy": "Home and the animal that lives in it."
     },
     {

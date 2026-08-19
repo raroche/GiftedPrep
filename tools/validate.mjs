@@ -16,6 +16,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { SHAPE_NAMES, FILL_NAMES, renderFigure } from '../assets/js/modules/figures.js';
+import { canonicalFigure } from './_symmetry.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
@@ -147,6 +148,45 @@ for (const cat of manifest.categories) {
     });
 
     if (!ids.has(q.answer)) err(where, `answer "${q.answer}" matches no choice`);
+
+    /* Two choices that DRAW the same thing give the question two right answers.
+       Comparing the raw specs is not enough: a plus turned 90 degrees is a
+       different spec but an identical picture, because a plus is four-fold
+       symmetric. canonicalFigure() collapses a spec to what it looks like. */
+    const drawn = new Map();
+    choices.forEach((c) => {
+      const key = c.figure
+        ? JSON.stringify(canonicalFigure(c.figure))
+        : `TEXT:${String(c.text).trim().toLowerCase()}`;
+      if (drawn.has(key)) {
+        const first = drawn.get(key);
+        const fatal = first === q.answer || c.id === q.answer;
+        const msg = `choices "${first}" and "${c.id}" are the same`
+          + (c.figure ? ' picture' : ' text')
+          + (fatal ? ' — the question has two correct answers' : '');
+        if (fatal) err(where, msg); else warn(where, msg);
+      } else drawn.set(key, c.id);
+    });
+
+    /* A transformation the child cannot see makes the key indistinguishable
+       from "nothing happened". Catches a rotation applied to a shape whose own
+       symmetry hides it. */
+    const fig = q.figure || {};
+    let pair = null;
+    if (fig.kind === 'analogy') pair = [fig.a, fig.b];
+    else if (fig.kind === 'matrix' && fig.rows === 2 && fig.cols === 2) pair = (fig.cells || []).slice(0, 2);
+    if (pair && pair[0] && pair[1]
+        && JSON.stringify(canonicalFigure(pair[0])) === JSON.stringify(canonicalFigure(pair[1]))) {
+      err(where, 'the first pair shows no visible change, so the rule cannot be worked out');
+    }
+    if (fig.kind === 'series') {
+      const steps = new Map();
+      (fig.cells || []).filter((c) => !c.missing).forEach((c, i) => {
+        const k = JSON.stringify(canonicalFigure(c));
+        if (steps.has(k)) warn(where, `series steps ${steps.get(k) + 1} and ${i + 1} look identical`);
+        else steps.set(k, i);
+      });
+    }
 
     /* Explanations name the tempting wrong answer by letter. If a choice is
        later removed or renumbered, that reference silently points at nothing

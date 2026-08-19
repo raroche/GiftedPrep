@@ -8,6 +8,7 @@ another, so the answer has to satisfy both.
 import sys, json, random
 sys.path.insert(0, 'tools')
 from _figural import *
+from _symmetry import canonical, rotation_is_invisible
 from _authoring import write
 
 CHOICES = {('cogat', 1): 4, ('cogat', 2): 4, ('cogat', 3): 5, ('cogat', 4): 5,
@@ -23,7 +24,12 @@ def series_item(cat_id, test, grade, rng, colors, shapes, num, difficulty):
     color = rng.choice(colors)
     n_choices = CHOICES[(test, grade)]
 
-    modes = ['count', 'size', 'rotate']
+    modes = ['count', 'size']
+    # Only offer a rotating series when a quarter turn is actually visible on
+    # this shape. On a plus or a square it is not, and every frame would look
+    # identical.
+    if not rotation_is_invisible(shape, 90):
+        modes.append('rotate')
     if grade >= 2:
         modes.append('fill')
     mode = rng.choice(modes)
@@ -69,9 +75,10 @@ def series_item(cat_id, test, grade, rng, colors, shapes, num, difficulty):
         rule_words += ", and at the same time the shape gets smaller"
 
     key = steps[4]
+    seen = lambda: [canonical(it[1]) for it in items]
     items = [('key', key, None)]
     for w in wrongs:
-        if w != key and all(w != it[1] for it in items):
+        if canonical(w) not in seen():
             items.append(('near', w, None))
     # Keep trying perturbations until the slate is full. Giving up early is how
     # an item ends up with three choices where the grade needs five.
@@ -147,8 +154,9 @@ def grid_item(cat_id, test, grade, rng, colors, shapes, num, difficulty):
     grid = [{"shapes": [s]} for s in cells[:8]] + [{"missing": True}]
 
     items = [('key', key, None)]
+    seen = lambda: [canonical(it[1]) for it in items]
     for cand in (cell(0, 2), cell(2, 0), cell(1, 2), cell(2, 1)):
-        if cand != key and all(cand != it[1] for it in items) and len(items) < n_choices:
+        if canonical(cand) not in seen() and len(items) < n_choices:
             items.append(('near', cand, None))
     guard = 0
     while len(items) < n_choices and guard < 200:
@@ -156,7 +164,7 @@ def grid_item(cat_id, test, grade, rng, colors, shapes, num, difficulty):
         cand = dict(key, c=rng.choice(colors), s=rng.choice(shapes))
         if rng.random() < 0.4:
             cand['z'] = round(rng.uniform(0.4, 1.3), 2)
-        if all(cand != it[1] for it in items):
+        if canonical(cand) not in seen():
             items.append(('near', cand, None))
 
     tagged = letter_ids(items[:n_choices])
@@ -196,6 +204,9 @@ def extend(path, cat_id, test, maker, per_grade, colors, shapes, seed):
             tries += 1
             q = maker(cat_id, test, grade, rng, colors, shapes,
                       start + made, PLAN[made % len(PLAN)])
+            ok, why = item_is_sound(q)
+            if not ok:
+                continue
             sig = json.dumps(q['figure'], sort_keys=True)
             if sig in seen:
                 continue

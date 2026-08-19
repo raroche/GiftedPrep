@@ -114,6 +114,9 @@ def extend(path, cat_id, test, per_grade, colors, seed):
         while made < per_grade and tries < per_grade * 40:
             tries += 1
             q = item(cat_id, test, grade, rng, colors, start + made, PLAN[made % len(PLAN)])
+            ok, why = item_is_sound(q)
+            if not ok:
+                continue
             sig = json.dumps([c.get('figure') for c in q['choices']], sort_keys=True)
             if sig in sigs:
                 continue

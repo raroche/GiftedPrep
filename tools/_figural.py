@@ -19,6 +19,7 @@ Rotation values follow Blum & Holling's measured difficulty ordering:
 Grades 1-2 use 90 clockwise only.
 """
 import random
+from _symmetry import canonical, rotation_is_invisible, visible_rotations
 
 # ---------------------------------------------------------------- rules
 
@@ -60,6 +61,14 @@ def apply_all(shape, rules):
 
 # ---------------------------------------------------------------- distractors
 
+def _seen(items):
+    return [canonical(it[1]) for it in items]
+
+
+def _is_new(cand, items):
+    return canonical(cand) not in _seen(items)
+
+
 def build_choices(base, rules, invariant_breaker, n_choices, rng, colors=None):
     """
     The key applies every rule. One distractor per rule applies everything but
@@ -72,12 +81,12 @@ def build_choices(base, rules, invariant_breaker, n_choices, rng, colors=None):
     for i, r in enumerate(rules):
         others = [x for j, x in enumerate(rules) if j != i]
         cand = apply_all(base, others)
-        if cand != key:
+        if _is_new(cand, items):
             items.append(('omit', cand, r))
 
     if invariant_breaker:
         cand = invariant_breaker(dict(key))
-        if cand != key:
+        if _is_new(cand, items):
             items.append(('invariant', cand, None))
 
     # Near misses: nudge one attribute of the key without touching a rule.
@@ -99,22 +108,27 @@ def build_choices(base, rules, invariant_breaker, n_choices, rng, colors=None):
     for cand in near:
         if len(items) >= n_choices:
             break
-        if all(cand != it[1] for it in items):
+        if _is_new(cand, items):
             items.append(('near', cand, None))
 
     # Last resort filler: a different colour. Must stay inside the caller's
     # palette, because the NNAT is restricted to five validated colours.
     fallback = list(colors) if colors else ['blue', 'green', 'yellow', 'red']
-    while len(items) < n_choices:
+    guard = 0
+    while len(items) < n_choices and guard < 300:
+        guard += 1
         cand = dict(key, c=rng.choice(fallback))
-        if all(cand != it[1] for it in items):
+        if _is_new(cand, items):
             items.append(('near', cand, None))
-        else:
-            cand = dict(key, z=round(rng.uniform(0.4, 1.3), 2))
-            if all(cand != it[1] for it in items):
+            continue
+        cand = dict(key, z=round(rng.uniform(0.35, 1.4), 2))
+        if _is_new(cand, items):
+            items.append(('near', cand, None))
+            continue
+        if 'n' in cand or rng.random() < 0.5:
+            cand = dict(key, n=rng.randint(1, 6))
+            if _is_new(cand, items):
                 items.append(('near', cand, None))
-            else:
-                break
 
     items = items[:n_choices]
     return items
@@ -191,7 +205,7 @@ def rule_pool(grade, rng, colors):
         lambda: recolor(rng.choice(colors)),
         lambda: resize(1.2, True),
         lambda: resize(0.5, False),
-        lambda: rotate(rng.choice(rot_choices(grade))),
+        lambda: rotate(rng.choice(rot_choices(grade))),   # filtered below
     ]
     if grade >= 2:
         pool.append(lambda: recount(rng.choice([2, 3, 4])))
@@ -200,8 +214,15 @@ def rule_pool(grade, rng, colors):
     return pool
 
 
-def pick_rules(grade, count, base, rng, colors):
-    """Choose `count` rules that all actually change `base` and do not collide."""
+def pick_rules(grade, count, base, rng, colors, also_visible_on=()):
+    """Choose `count` rules that all visibly change `base`, and do not collide.
+
+    `also_visible_on` lists other shapes the same rules will be applied to.
+    A rotation that is visible on a cloud is invisible on a plus, so a rule that
+    cannot be seen on every shape it will touch is rejected outright. That is
+    the bug this argument exists to prevent.
+    """
+    targets = [base.get('s')] + list(also_visible_on)
     pool = rule_pool(grade, rng, colors)
     rng.shuffle(pool)
     chosen, used_keys = [], set()
@@ -211,8 +232,11 @@ def pick_rules(grade, count, base, rng, colors):
         r = make()
         if r.key in used_keys:
             continue
-        if r.apply(base) == base:
+        if canonical(r.apply(base)) == canonical(base):
             continue
+        if r.key == 'r':
+            if any(rotation_is_invisible(t, r.value) for t in targets if t):
+                continue
         chosen.append(r)
         used_keys.add(r.key)
     return chosen
@@ -289,3 +313,53 @@ def describe(shape, capital=False):
         phrase = phrase + ', ' + ' and '.join(extras)
 
     return phrase[0].upper() + phrase[1:] if capital else phrase
+
+
+# ---------------------------------------------------------------- final gate
+
+def item_is_sound(q):
+    """Reject an item that cannot be answered, whatever produced it.
+
+    Individual dedupe sites are easy to miss and easy to reintroduce. This is
+    the single gate every generator runs before accepting a question, so a
+    broken item is discarded and retried rather than shipped.
+
+    Two failures matter:
+
+      * two choices that draw the same picture -- if one of them is the key the
+        question has two correct answers, and if neither is it wastes a slot;
+      * a stem whose transformation is invisible, which makes the key
+        indistinguishable from "nothing changed".
+    """
+    import json as _json
+    from _symmetry import canonical_figure
+
+    sigs = {}
+    for c in q.get('choices', []):
+        sig = (_json.dumps(canonical_figure(c['figure']), sort_keys=True)
+               if c.get('figure') else 'TEXT:' + str(c.get('text')))
+        if sig in sigs:
+            return False, f"choices {sigs[sig]} and {c['id']} draw the same picture"
+        sigs[sig] = c['id']
+
+    fig = q.get('figure') or {}
+    cells = []
+    if fig.get('kind') == 'analogy':
+        cells = [fig.get('a'), fig.get('b')]
+    elif fig.get('kind') == 'matrix' and fig.get('rows') == 2 and fig.get('cols') == 2:
+        cells = (fig.get('cells') or [])[:2]
+    if len(cells) == 2 and all(cells):
+        a = _json.dumps(canonical_figure(cells[0]), sort_keys=True)
+        b = _json.dumps(canonical_figure(cells[1]), sort_keys=True)
+        if a == b:
+            return False, "the first pair shows no visible change"
+
+    if fig.get('kind') == 'series':
+        drawn = [c for c in (fig.get('cells') or []) if not c.get('missing')]
+        seen = set()
+        for c in drawn:
+            sig = _json.dumps(canonical_figure(c), sort_keys=True)
+            if sig in seen:
+                return False, "two steps of the series look identical"
+            seen.add(sig)
+    return True, ''

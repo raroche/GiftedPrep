@@ -91,7 +91,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "All three are circles. The colors are all different, so color is not the rule. The rule is round. Only choice a is a circle.",
+      "explanation": "All three are circles. The colours are all different, so colour is not the rule. The rule is round. Only choice a is a circle.",
       "strategy": "If one thing changes in all three, that thing is not the rule. Look for what stays the same."
     },
     {
@@ -245,7 +245,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Every box has exactly two shapes. The shape and the color change every time, so they are not the rule. The rule is: there are two of them.",
+      "explanation": "Every box has exactly two shapes. The shape and the colour change every time, so they are not the rule. The rule is: there are two of them.",
       "strategy": "Count first. Sometimes the answer is about how many, not about what shape."
     },
     {
@@ -335,70 +335,11 @@
         }
       ],
       "answer": "a",
-      "explanation": "Every shape has slanted stripes inside. The shapes and colors are all different. The stripes are the rule.",
+      "explanation": "Every shape has slanted stripes inside. The shapes and colours are all different. The stripes are the rule.",
       "strategy": "Look inside the shape, not only at its outline."
     },
     {
       "id": "cogat-fc-g1-7",
-      "grade": 1,
-      "difficulty": 2,
-      "prompt": "Which one does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "moon",
-                "c": "orange"
-              }
-            ]
-          },
-          "label": "an orange moon"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "purple"
-              }
-            ]
-          },
-          "label": "a purple octagon"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal octagon"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal octagon"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is an orange moon.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
-    },
-    {
-      "id": "cogat-fc-g1-8",
       "grade": 1,
       "difficulty": 2,
       "prompt": "Which one does not belong?",
@@ -461,6 +402,69 @@
       "strategy": "Count every box before you look at the shapes."
     },
     {
+      "id": "cogat-fc-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four red pentagons"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two pink squares"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two pink tall rectangles"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two red chevrons"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is four red pentagons.",
+      "strategy": "Count every box before you look at the shapes."
+    },
+    {
       "id": "cogat-fc-g1-14",
       "grade": 1,
       "difficulty": 2,
@@ -471,53 +475,57 @@
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "teal"
+                "s": "triangle",
+                "c": "red",
+                "f": "grid"
               }
             ]
           },
-          "label": "a teal wide rectangle"
+          "label": "a red triangle, with a criss cross pattern inside"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "green"
+                "s": "circle",
+                "c": "teal",
+                "f": "outline"
               }
             ]
           },
-          "label": "a green tall rectangle"
+          "label": "an empty teal circle"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "red"
+                "s": "diamond",
+                "c": "purple",
+                "f": "outline"
               }
             ]
           },
-          "label": "a red tall rectangle"
+          "label": "an empty purple diamond"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "blue"
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline"
               }
             ]
           },
-          "label": "a blue tall rectangle"
+          "label": "an empty yellow kite"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal wide rectangle.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a red triangle, with a criss cross pattern inside.",
+      "strategy": "Look inside the shape, not only at its outline."
     },
     {
       "id": "cogat-fc-g1-4",
@@ -564,7 +572,7 @@
               {
                 "s": "triangle",
                 "c": "yellow",
-                "r": 90
+                "r": 45
               }
             ]
           }
@@ -576,7 +584,7 @@
               {
                 "s": "square",
                 "c": "yellow",
-                "r": 90
+                "r": 45
               }
             ]
           }
@@ -605,7 +613,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "All three are triangles. They are turned different ways and colored differently, so turning and color are not the rule. Three corners is the rule. Choice c has four corners.",
+      "explanation": "All three are triangles. They are turned different ways and coloured differently, so turning and colour are not the rule. Three corners is the rule. Choice c has four corners.",
       "strategy": "A shape turned around is still the same shape. Count its corners to be sure."
     },
     {
@@ -736,187 +744,6 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
-                "n": 4
-              }
-            ]
-          },
-          "label": "four red pentagons"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "square",
-                "c": "pink",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two pink squares"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "recttall",
-                "c": "pink",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two pink tall rectangles"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "chevron",
-                "c": "red",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two red chevrons"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is four red pentagons.",
-      "strategy": "Count every box before you look at the shapes."
-    },
-    {
-      "id": "cogat-fc-g1-10",
-      "grade": 1,
-      "difficulty": 3,
-      "prompt": "Which one does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "crescent",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal crescent"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "kite",
-                "c": "red"
-              }
-            ]
-          },
-          "label": "a red kite"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "kite",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue kite"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "kite",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue kite"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal crescent.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
-    },
-    {
-      "id": "cogat-fc-g1-15",
-      "grade": 1,
-      "difficulty": 3,
-      "prompt": "Which one does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "triangledown",
-                "c": "yellow"
-              }
-            ]
-          },
-          "label": "a yellow upside-down triangle"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "oval",
-                "c": "pink"
-              }
-            ]
-          },
-          "label": "a pink oval"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "oval",
-                "c": "green"
-              }
-            ]
-          },
-          "label": "a green oval"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "oval",
-                "c": "yellow"
-              }
-            ]
-          },
-          "label": "a yellow oval"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a yellow upside-down triangle.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
-    },
-    {
-      "id": "cogat-fc-g1-11",
-      "grade": 1,
-      "difficulty": 4,
-      "prompt": "Which one does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
                 "s": "circle",
                 "c": "pink",
                 "f": "grid"
@@ -970,9 +797,9 @@
       "strategy": "Look inside the shape, not only at its outline."
     },
     {
-      "id": "cogat-fc-g1-12",
+      "id": "cogat-fc-g1-10",
       "grade": 1,
-      "difficulty": 4,
+      "difficulty": 3,
       "prompt": "Which one does not belong?",
       "choices": [
         {
@@ -1033,131 +860,9 @@
       "strategy": "Count every box before you look at the shapes."
     },
     {
-      "id": "cogat-fc-g1-16",
+      "id": "cogat-fc-g1-15",
       "grade": 1,
-      "difficulty": 4,
-      "prompt": "Which one does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "triangle",
-                "c": "red",
-                "f": "grid"
-              }
-            ]
-          },
-          "label": "a red triangle, with a criss cross pattern inside"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "circle",
-                "c": "teal",
-                "f": "outline"
-              }
-            ]
-          },
-          "label": "an empty teal circle"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "diamond",
-                "c": "purple",
-                "f": "outline"
-              }
-            ]
-          },
-          "label": "an empty purple diamond"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "kite",
-                "c": "yellow",
-                "f": "outline"
-              }
-            ]
-          },
-          "label": "an empty yellow kite"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a red triangle, with a criss cross pattern inside.",
-      "strategy": "Look inside the shape, not only at its outline."
-    },
-    {
-      "id": "cogat-fc-g1-13",
-      "grade": 1,
-      "difficulty": 5,
-      "prompt": "Which one does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "moon",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal moon"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star6",
-                "c": "purple"
-              }
-            ]
-          },
-          "label": "a purple six-pointed star"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star6",
-                "c": "orange"
-              }
-            ]
-          },
-          "label": "an orange six-pointed star"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star6",
-                "c": "red"
-              }
-            ]
-          },
-          "label": "a red six-pointed star"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal moon.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
-    },
-    {
-      "id": "cogat-fc-g1-17",
-      "grade": 1,
-      "difficulty": 5,
+      "difficulty": 3,
       "prompt": "Which one does not belong?",
       "choices": [
         {
@@ -1214,6 +919,308 @@
       "strategy": "Look at the outline shape first. It is usually the simplest rule."
     },
     {
+      "id": "cogat-fc-g1-11",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal moon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple six-pointed star"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange six-pointed star"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red six-pointed star"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal moon.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "cogat-fc-g1-12",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal wide rectangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green tall rectangle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red tall rectangle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue tall rectangle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal wide rectangle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "cogat-fc-g1-16",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "teal",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty teal oval"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a yellow wide rectangle, with a criss cross pattern inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a green kite, with a criss cross pattern inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "pink",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a pink hexagon, with a criss cross pattern inside"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an empty teal oval.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
+      "id": "cogat-fc-g1-13",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow upside-down triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink oval"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green oval"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow oval"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a yellow upside-down triangle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "cogat-fc-g1-17",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red six-pointed star"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "yellow",
+                "f": "stripesd"
+              }
+            ]
+          },
+          "label": "a yellow diamond, with stripes inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "f": "stripesd"
+              }
+            ]
+          },
+          "label": "a purple kite, with stripes inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "orange",
+                "f": "stripesd"
+              }
+            ]
+          },
+          "label": "an orange heart, with stripes inside"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a red six-pointed star.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
       "id": "cogat-fc-g2-6",
       "grade": 2,
       "difficulty": 1,
@@ -1224,52 +1231,52 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "purple"
+                "s": "parallelogram",
+                "c": "teal"
               }
             ]
           },
-          "label": "a purple star"
+          "label": "a teal slanted rectangle"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "purple"
+                "s": "ring",
+                "c": "pink"
               }
             ]
           },
-          "label": "a purple right triangle"
+          "label": "a pink ring"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "teal"
+                "s": "ring",
+                "c": "green"
               }
             ]
           },
-          "label": "a teal right triangle"
+          "label": "a green ring"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "teal"
+                "s": "ring",
+                "c": "purple"
               }
             ]
           },
-          "label": "a teal right triangle"
+          "label": "a purple ring"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a purple star.",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal slanted rectangle.",
       "strategy": "Look at the outline shape first. It is usually the simplest rule."
     },
     {
@@ -1458,53 +1465,57 @@
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "green"
+                "s": "recttall",
+                "c": "pink",
+                "n": 4
               }
             ]
           },
-          "label": "a green right triangle"
+          "label": "four pink tall rectangles"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "purple"
+                "s": "hexagon",
+                "c": "green",
+                "n": 3
               }
             ]
           },
-          "label": "a purple cross"
+          "label": "three green hexagons"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "diamond",
-                "c": "yellow"
+                "s": "parallelogram",
+                "c": "orange",
+                "n": 3
               }
             ]
           },
-          "label": "a yellow diamond"
+          "label": "three orange slanted rectangles"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "yellow"
+                "s": "triangledown",
+                "c": "orange",
+                "n": 3
               }
             ]
           },
-          "label": "a yellow slanted rectangle"
+          "label": "three orange upside-down triangles"
         }
       ],
       "answer": "a",
-      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a green right triangle.",
-      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is four pink tall rectangles.",
+      "strategy": "Count every box before you look at the shapes."
     },
     {
       "id": "cogat-fc-g2-8",
@@ -1517,12 +1528,13 @@
           "figure": {
             "shapes": [
               {
-                "s": "crescent",
-                "c": "orange"
+                "s": "ring",
+                "c": "red",
+                "n": 1
               }
             ]
           },
-          "label": "an orange crescent"
+          "label": "a red ring"
         },
         {
           "id": "b",
@@ -1530,40 +1542,43 @@
             "shapes": [
               {
                 "s": "chevron",
-                "c": "green"
+                "c": "teal",
+                "n": 2
               }
             ]
           },
-          "label": "a green chevron"
+          "label": "two teal chevrons"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "purple"
+                "s": "circle",
+                "c": "teal",
+                "n": 2
               }
             ]
           },
-          "label": "a purple tall rectangle"
+          "label": "two teal circles"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "yellow"
+                "s": "oval",
+                "c": "pink",
+                "n": 2
               }
             ]
           },
-          "label": "a yellow cross"
+          "label": "two pink ovals"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is an orange crescent.",
-      "strategy": "Trace the outline with your finger. If it bends, it is curved."
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is a red ring.",
+      "strategy": "Count every box before you look at the shapes."
     },
     {
       "id": "cogat-fc-g2-14",
@@ -1576,56 +1591,55 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "red",
-                "f": "outline"
+                "s": "pentagon",
+                "c": "red"
               }
             ]
           },
-          "label": "an empty red circle"
+          "label": "a red pentagon"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
+                "s": "chevron",
                 "c": "purple",
-                "f": "dots"
+                "f": "grid"
               }
             ]
           },
-          "label": "a purple wide rectangle, with dots inside"
+          "label": "a purple chevron, with a criss cross pattern inside"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "blue",
-                "f": "dots"
+                "s": "plus",
+                "c": "red",
+                "f": "grid"
               }
             ]
           },
-          "label": "a blue four-pointed star, with dots inside"
+          "label": "a red plus sign, with a criss cross pattern inside"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "blue",
-                "f": "dots"
+                "s": "cross",
+                "c": "purple",
+                "f": "grid"
               }
             ]
           },
-          "label": "a blue six-pointed star, with dots inside"
+          "label": "a purple cross, with a criss cross pattern inside"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an empty red circle.",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a red pentagon.",
       "strategy": "Look inside the shape, not only at its outline."
     },
     {
@@ -1807,7 +1821,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "All three are arrows. They point different ways and are different colors, so neither direction nor color is the rule. Being an arrow is the rule. Choice b is a chevron, which has no arrow head.",
+      "explanation": "All three are arrows. They point different ways and are different colours, so neither direction nor colour is the rule. Being an arrow is the rule. Choice b is a chevron, which has no arrow head.",
       "strategy": "Direction changing in every example is a signal that direction is NOT the rule."
     },
     {
@@ -1821,56 +1835,56 @@
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "pink",
+                "s": "righttriangle",
+                "c": "yellow",
                 "n": 3
               }
             ]
           },
-          "label": "three pink stars"
+          "label": "three yellow right triangles"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "purple",
+                "s": "semicircle",
+                "c": "blue",
                 "n": 2
               }
             ]
           },
-          "label": "two purple four-pointed stars"
+          "label": "two blue half circles"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "plus",
-                "c": "teal",
+                "s": "triangle",
+                "c": "red",
                 "n": 2
               }
             ]
           },
-          "label": "two teal plus signs"
+          "label": "two red triangles"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "diamond",
+                "s": "rectwide",
                 "c": "yellow",
                 "n": 2
               }
             ]
           },
-          "label": "two yellow diamonds"
+          "label": "two yellow wide rectangles"
         }
       ],
       "answer": "a",
-      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is three pink stars.",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is three yellow right triangles.",
       "strategy": "Count every box before you look at the shapes."
     },
     {
@@ -1884,57 +1898,57 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
+                "s": "star4",
                 "c": "yellow",
-                "f": "stripesd"
+                "n": 1
               }
             ]
           },
-          "label": "a yellow pentagon, with stripes inside"
+          "label": "a yellow four-pointed star"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "triangledown",
-                "c": "orange",
-                "f": "dots"
+                "s": "diamond",
+                "c": "blue",
+                "n": 4
               }
             ]
           },
-          "label": "an orange upside-down triangle, with dots inside"
+          "label": "four blue diamonds"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "orange",
-                "f": "dots"
+                "s": "pentagon",
+                "c": "purple",
+                "n": 4
               }
             ]
           },
-          "label": "an orange tall rectangle, with dots inside"
+          "label": "four purple pentagons"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "pink",
-                "f": "dots"
+                "s": "chevron",
+                "c": "teal",
+                "n": 4
               }
             ]
           },
-          "label": "a pink star, with dots inside"
+          "label": "four teal chevrons"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a yellow pentagon, with stripes inside.",
-      "strategy": "Look inside the shape, not only at its outline."
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is a yellow four-pointed star.",
+      "strategy": "Count every box before you look at the shapes."
     },
     {
       "id": "cogat-fc-g2-15",
@@ -1947,53 +1961,53 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "green"
+                "s": "cloud",
+                "c": "purple"
               }
             ]
           },
-          "label": "a green triangle"
+          "label": "a purple cloud"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow"
+                "s": "octagon",
+                "c": "orange"
               }
             ]
           },
-          "label": "a yellow trapezoid"
+          "label": "an orange octagon"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "green"
+                "s": "recttall",
+                "c": "red"
               }
             ]
           },
-          "label": "a green trapezoid"
+          "label": "a red tall rectangle"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "yellow"
+                "s": "square",
+                "c": "teal"
               }
             ]
           },
-          "label": "a yellow trapezoid"
+          "label": "a teal square"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a green triangle.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is a purple cloud.",
+      "strategy": "Trace the outline with your finger. If it bends, it is curved."
     },
     {
       "id": "cogat-fc-g2-5",
@@ -2091,119 +2105,60 @@
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "red"
-              }
-            ]
-          },
-          "label": "a red bow tie"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "diamond",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal diamond"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "diamond",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal diamond"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "diamond",
-                "c": "pink"
-              }
-            ]
-          },
-          "label": "a pink diamond"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a red bow tie.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
-    },
-    {
-      "id": "cogat-fc-g2-12",
-      "grade": 2,
-      "difficulty": 4,
-      "prompt": "Which one does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "righttriangle",
-                "c": "yellow",
-                "n": 3
-              }
-            ]
-          },
-          "label": "three yellow right triangles"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "semicircle",
-                "c": "blue",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two blue half circles"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "triangle",
+                "s": "circle",
                 "c": "red",
-                "n": 2
+                "f": "outline"
               }
             ]
           },
-          "label": "two red triangles"
+          "label": "an empty red circle"
         },
         {
-          "id": "d",
+          "id": "b",
           "figure": {
             "shapes": [
               {
                 "s": "rectwide",
-                "c": "yellow",
-                "n": 2
+                "c": "purple",
+                "f": "dots"
               }
             ]
           },
-          "label": "two yellow wide rectangles"
+          "label": "a purple wide rectangle, with dots inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a blue four-pointed star, with dots inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a blue six-pointed star, with dots inside"
         }
       ],
       "answer": "a",
-      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is three yellow right triangles.",
-      "strategy": "Count every box before you look at the shapes."
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an empty red circle.",
+      "strategy": "Look inside the shape, not only at its outline."
     },
     {
-      "id": "cogat-fc-g2-16",
+      "id": "cogat-fc-g2-12",
       "grade": 2,
       "difficulty": 4,
       "prompt": "Which one does not belong?",
@@ -2266,9 +2221,9 @@
       "strategy": "Count every box before you look at the shapes."
     },
     {
-      "id": "cogat-fc-g2-13",
+      "id": "cogat-fc-g2-16",
       "grade": 2,
-      "difficulty": 5,
+      "difficulty": 4,
       "prompt": "Which one does not belong?",
       "choices": [
         {
@@ -2276,60 +2231,56 @@
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "yellow",
-                "n": 1
+                "s": "star6",
+                "c": "red"
               }
             ]
           },
-          "label": "a yellow four-pointed star"
+          "label": "a red six-pointed star"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "diamond",
-                "c": "blue",
-                "n": 4
+                "s": "kite",
+                "c": "teal"
               }
             ]
           },
-          "label": "four blue diamonds"
+          "label": "a teal kite"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "purple",
-                "n": 4
+                "s": "kite",
+                "c": "green"
               }
             ]
           },
-          "label": "four purple pentagons"
+          "label": "a green kite"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "chevron",
-                "c": "teal",
-                "n": 4
+                "s": "kite",
+                "c": "blue"
               }
             ]
           },
-          "label": "four teal chevrons"
+          "label": "a blue kite"
         }
       ],
       "answer": "a",
-      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is a yellow four-pointed star.",
-      "strategy": "Count every box before you look at the shapes."
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a red six-pointed star.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
     },
     {
-      "id": "cogat-fc-g2-17",
+      "id": "cogat-fc-g2-13",
       "grade": 2,
       "difficulty": 5,
       "prompt": "Which one does not belong?",
@@ -2392,6 +2343,65 @@
       "strategy": "Look inside the shape, not only at its outline."
     },
     {
+      "id": "cogat-fc-g2-17",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink pentagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red chevron"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange square"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange wide rectangle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a pink pentagon.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
       "id": "cogat-fc-g3-6",
       "grade": 3,
       "difficulty": 1,
@@ -2402,69 +2412,65 @@
           "figure": {
             "shapes": [
               {
-                "s": "moon",
-                "c": "pink"
+                "s": "triangledown",
+                "c": "orange"
               }
             ]
           },
-          "label": "a pink moon"
+          "label": "an orange upside-down triangle"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "chevron",
-                "c": "purple",
-                "f": "grid"
+                "s": "star6",
+                "c": "blue"
               }
             ]
           },
-          "label": "a purple chevron, with a criss cross pattern inside"
+          "label": "a blue six-pointed star"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "plus",
-                "c": "red",
-                "f": "grid"
+                "s": "star6",
+                "c": "purple"
               }
             ]
           },
-          "label": "a red plus sign, with a criss cross pattern inside"
+          "label": "a purple six-pointed star"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "purple",
-                "f": "grid"
+                "s": "star6",
+                "c": "yellow"
               }
             ]
           },
-          "label": "a purple cross, with a criss cross pattern inside"
+          "label": "a yellow six-pointed star"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
-                "f": "grid"
+                "s": "star6",
+                "c": "red"
               }
             ]
           },
-          "label": "a red pentagon, with a criss cross pattern inside"
+          "label": "a red six-pointed star"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a pink moon.",
-      "strategy": "Look inside the shape, not only at its outline."
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is an orange upside-down triangle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
     },
     {
       "id": "cogat-fc-g3-1",
@@ -2580,70 +2586,65 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "red",
-                "n": 1
+                "s": "oval",
+                "c": "blue"
               }
             ]
           },
-          "label": "a red square"
+          "label": "a blue oval"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "recttall",
-                "c": "purple",
-                "n": 3
+                "s": "pentagon",
+                "c": "blue"
               }
             ]
           },
-          "label": "three purple tall rectangles"
+          "label": "a blue pentagon"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
-                "c": "teal",
-                "n": 3
+                "s": "octagon",
+                "c": "red"
               }
             ]
           },
-          "label": "three teal slanted rectangles"
+          "label": "a red octagon"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "bowtie",
-                "c": "green",
-                "n": 3
+                "s": "cross",
+                "c": "blue"
               }
             ]
           },
-          "label": "three green bow ties"
+          "label": "a blue cross"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "blue",
-                "n": 3
+                "s": "kite",
+                "c": "orange"
               }
             ]
           },
-          "label": "three blue right triangles"
+          "label": "an orange kite"
         }
       ],
       "answer": "a",
-      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is a red square.",
-      "strategy": "Count every box before you look at the shapes."
+      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is a blue oval.",
+      "strategy": "Trace the outline with your finger. If it bends, it is curved."
     },
     {
       "id": "cogat-fc-g3-8",
@@ -2656,24 +2657,26 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "blue"
+                "s": "semicircle",
+                "c": "blue",
+                "n": 5
               }
             ]
           },
-          "label": "a blue pentagon"
+          "label": "five blue half circles"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "chevron",
-                "c": "red"
+                "s": "triangle",
+                "c": "green",
+                "n": 4
               }
             ]
           },
-          "label": "a red chevron"
+          "label": "four green triangles"
         },
         {
           "id": "c",
@@ -2681,40 +2684,43 @@
             "shapes": [
               {
                 "s": "square",
-                "c": "orange"
+                "c": "green",
+                "n": 4
               }
             ]
           },
-          "label": "an orange square"
+          "label": "four green squares"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "orange"
+                "s": "chevron",
+                "c": "red",
+                "n": 4
               }
             ]
           },
-          "label": "an orange wide rectangle"
+          "label": "four red chevrons"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "pink"
+                "s": "cloud",
+                "c": "teal",
+                "n": 4
               }
             ]
           },
-          "label": "a pink star"
+          "label": "four teal clouds"
         }
       ],
       "answer": "a",
-      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a blue pentagon.",
-      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is five blue half circles.",
+      "strategy": "Count every box before you look at the shapes."
     },
     {
       "id": "cogat-fc-g3-14",
@@ -2727,65 +2733,70 @@
           "figure": {
             "shapes": [
               {
-                "s": "chevron",
-                "c": "purple"
+                "s": "cross",
+                "c": "purple",
+                "n": 3
               }
             ]
           },
-          "label": "a purple chevron"
+          "label": "three purple crosses"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green"
+                "s": "star6",
+                "c": "blue",
+                "n": 4
               }
             ]
           },
-          "label": "a green four-pointed star"
+          "label": "four blue six-pointed stars"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "yellow"
+                "s": "triangledown",
+                "c": "green",
+                "n": 4
               }
             ]
           },
-          "label": "a yellow four-pointed star"
+          "label": "four green upside-down triangles"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "red"
+                "s": "star",
+                "c": "red",
+                "n": 4
               }
             ]
           },
-          "label": "a red four-pointed star"
+          "label": "four red stars"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "green"
+                "s": "trapezoid",
+                "c": "pink",
+                "n": 4
               }
             ]
           },
-          "label": "a green four-pointed star"
+          "label": "four pink trapezoids"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a purple chevron.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is three purple crosses.",
+      "strategy": "Count every box before you look at the shapes."
     },
     {
       "id": "cogat-fc-g3-2",
@@ -2922,7 +2933,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "The rule has two parts: an outlined shape, and a small yellow star inside it. Choice b swapped the star for a circle. Choice c filled the outer shape in. Choice e changed the star's color.",
+      "explanation": "The rule has two parts: an outlined shape, and a small yellow star inside it. Choice b swapped the star for a circle. Choice c filled the outer shape in. Choice e changed the star's colour.",
       "strategy": "Rules can have two parts joined by AND. Say the rule as a full sentence: an empty shape AND a yellow star inside."
     },
     {
@@ -3025,7 +3036,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Here the rule has two parts that both hold in all three: exactly three shapes, and all of them blue. Choice b is the right count but the wrong color. Choice c is the right color but four shapes.",
+      "explanation": "Here the rule has two parts that both hold in all three: exactly three shapes, and all of them blue. Choice b is the right count but the wrong colour. Choice c is the right colour but four shapes.",
       "strategy": "When two things stay the same across all three, both are part of the rule."
     },
     {
@@ -3039,65 +3050,65 @@
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "blue"
+                "s": "semicircle",
+                "c": "green"
               }
             ]
           },
-          "label": "a blue right triangle"
+          "label": "a green half circle"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "diamond",
-                "c": "red"
+                "s": "plus",
+                "c": "green"
               }
             ]
           },
-          "label": "a red diamond"
+          "label": "a green plus sign"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
-                "c": "orange"
+                "s": "star6",
+                "c": "teal"
               }
             ]
           },
-          "label": "an orange trapezoid"
+          "label": "a teal six-pointed star"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "blue"
+                "s": "star",
+                "c": "green"
               }
             ]
           },
-          "label": "a blue wide rectangle"
+          "label": "a green star"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "orange"
+                "s": "trapezoid",
+                "c": "yellow"
               }
             ]
           },
-          "label": "an orange octagon"
+          "label": "a yellow trapezoid"
         }
       ],
       "answer": "a",
-      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a blue right triangle.",
-      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is a green half circle.",
+      "strategy": "Trace the outline with your finger. If it bends, it is curved."
     },
     {
       "id": "cogat-fc-g3-10",
@@ -3110,65 +3121,70 @@
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "red"
+                "s": "diamond",
+                "c": "teal",
+                "f": "grid"
               }
             ]
           },
-          "label": "a red circle"
+          "label": "a teal diamond, with a criss cross pattern inside"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "green"
+                "s": "parallelogram",
+                "c": "teal",
+                "f": "stripesd"
               }
             ]
           },
-          "label": "a green square"
+          "label": "a teal slanted rectangle, with stripes inside"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "diamond",
-                "c": "yellow"
+                "s": "moon",
+                "c": "blue",
+                "f": "stripesd"
               }
             ]
           },
-          "label": "a yellow diamond"
+          "label": "a blue moon, with stripes inside"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
-                "c": "pink"
+                "s": "star4",
+                "c": "orange",
+                "f": "stripesd"
               }
             ]
           },
-          "label": "a pink right triangle"
+          "label": "an orange four-pointed star, with stripes inside"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "chevron",
-                "c": "purple"
+                "s": "rectwide",
+                "c": "red",
+                "f": "stripesd"
               }
             ]
           },
-          "label": "a purple chevron"
+          "label": "a red wide rectangle, with stripes inside"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is a red circle.",
-      "strategy": "Trace the outline with your finger. If it bends, it is curved."
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a teal diamond, with a criss cross pattern inside.",
+      "strategy": "Look inside the shape, not only at its outline."
     },
     {
       "id": "cogat-fc-g3-15",
@@ -3181,70 +3197,70 @@
           "figure": {
             "shapes": [
               {
-                "s": "triangledown",
-                "c": "teal",
-                "f": "dots"
+                "s": "star4",
+                "c": "red",
+                "n": 2
               }
             ]
           },
-          "label": "a teal upside-down triangle, with dots inside"
+          "label": "two red four-pointed stars"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "moon",
-                "c": "teal",
-                "f": "stripesd"
+                "s": "rectwide",
+                "c": "green",
+                "n": 4
               }
             ]
           },
-          "label": "a teal moon, with stripes inside"
+          "label": "four green wide rectangles"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "star4",
-                "c": "blue",
-                "f": "stripesd"
+                "s": "octagon",
+                "c": "teal",
+                "n": 4
               }
             ]
           },
-          "label": "a blue four-pointed star, with stripes inside"
+          "label": "four teal octagons"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "orange",
-                "f": "stripesd"
+                "s": "kite",
+                "c": "pink",
+                "n": 4
               }
             ]
           },
-          "label": "an orange wide rectangle, with stripes inside"
+          "label": "four pink kites"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "diamond",
+                "s": "triangle",
                 "c": "red",
-                "f": "stripesd"
+                "n": 4
               }
             ]
           },
-          "label": "a red diamond, with stripes inside"
+          "label": "four red triangles"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a teal upside-down triangle, with dots inside.",
-      "strategy": "Look inside the shape, not only at its outline."
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is two red four-pointed stars.",
+      "strategy": "Count every box before you look at the shapes."
     },
     {
       "id": "cogat-fc-g3-4",
@@ -3353,148 +3369,6 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "green"
-              }
-            ]
-          },
-          "label": "a green pentagon"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "square",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue square"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "parallelogram",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue slanted rectangle"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "diamond",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue diamond"
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star",
-                "c": "orange"
-              }
-            ]
-          },
-          "label": "an orange star"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a green pentagon.",
-      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
-    },
-    {
-      "id": "cogat-fc-g3-12",
-      "grade": 3,
-      "difficulty": 4,
-      "prompt": "Which figure does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "pentagon",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue pentagon"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "octagon",
-                "c": "pink"
-              }
-            ]
-          },
-          "label": "a pink octagon"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue bow tie"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "recttall",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue tall rectangle"
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star4",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue four-pointed star"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a blue pentagon.",
-      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
-    },
-    {
-      "id": "cogat-fc-g3-16",
-      "grade": 3,
-      "difficulty": 4,
-      "prompt": "Which figure does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
                 "s": "semicircle",
                 "c": "teal"
               }
@@ -3554,6 +3428,153 @@
       "answer": "a",
       "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal half circle.",
       "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "cogat-fc-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three pink leaves"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two orange crescents"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two blue six-pointed stars"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two teal wide rectangles"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two orange bow ties"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is three pink leaves.",
+      "strategy": "Count every box before you look at the shapes."
+    },
+    {
+      "id": "cogat-fc-g3-16",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange pentagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange kite"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow bow tie"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal trapezoid"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple chevron"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is an orange pentagon.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
     },
     {
       "id": "cogat-fc-g3-5",
@@ -3670,153 +3691,6 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red"
-              }
-            ]
-          },
-          "label": "a red pentagon"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "rectwide",
-                "c": "red"
-              }
-            ]
-          },
-          "label": "a red wide rectangle"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "diamond",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal diamond"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue star"
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "chevron",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal chevron"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a red pentagon.",
-      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
-    },
-    {
-      "id": "cogat-fc-g3-17",
-      "grade": 3,
-      "difficulty": 5,
-      "prompt": "Which figure does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "leaf",
-                "c": "pink",
-                "n": 3
-              }
-            ]
-          },
-          "label": "three pink leaves"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "crescent",
-                "c": "orange",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two orange crescents"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star6",
-                "c": "blue",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two blue six-pointed stars"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "rectwide",
-                "c": "teal",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two teal wide rectangles"
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "orange",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two orange bow ties"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is three pink leaves.",
-      "strategy": "Count every box before you look at the shapes."
-    },
-    {
-      "id": "cogat-fc-g4-6",
-      "grade": 4,
-      "difficulty": 1,
-      "prompt": "Which figure does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
                 "s": "triangledown",
                 "c": "purple"
               }
@@ -3876,6 +3750,153 @@
       "answer": "a",
       "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a purple upside-down triangle.",
       "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
+      "id": "cogat-fc-g3-17",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink pentagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue diamond"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green slanted rectangle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange trapezoid"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue plus sign"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a pink pentagon.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
+      "id": "cogat-fc-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty blue half circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a teal heart, with dots inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a blue octagon, with dots inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a purple kite, with dots inside"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a green plus sign, with dots inside"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an empty blue half circle.",
+      "strategy": "Look inside the shape, not only at its outline."
     },
     {
       "id": "cogat-fc-g4-1",
@@ -3976,7 +3997,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Every figure is filled with dots. The shape changes every time and the color changes every time, so neither of those is the rule. Only choice a is dotted. Choice b has a grid, c is solid, d has stripes and e is solid.",
+      "explanation": "Every figure is filled with dots. The shape changes every time and the colour changes every time, so neither of those is the rule. Only choice a is dotted. Choice b has a grid, c is solid, d has stripes and e is solid.",
       "strategy": "Fill patterns are easy to skim past. Zoom in mentally on what is inside the outline."
     },
     {
@@ -3990,102 +4011,26 @@
           "figure": {
             "shapes": [
               {
-                "s": "cross",
-                "c": "purple",
-                "n": 3
-              }
-            ]
-          },
-          "label": "three purple crosses"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star6",
+                "s": "semicircle",
                 "c": "blue",
-                "n": 4
+                "f": "stripesd"
               }
             ]
           },
-          "label": "four blue six-pointed stars"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "triangledown",
-                "c": "green",
-                "n": 4
-              }
-            ]
-          },
-          "label": "four green upside-down triangles"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star",
-                "c": "red",
-                "n": 4
-              }
-            ]
-          },
-          "label": "four red stars"
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "pink",
-                "n": 4
-              }
-            ]
-          },
-          "label": "four pink trapezoids"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is three purple crosses.",
-      "strategy": "Count every box before you look at the shapes."
-    },
-    {
-      "id": "cogat-fc-g4-8",
-      "grade": 4,
-      "difficulty": 2,
-      "prompt": "Which figure does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "star4",
-                "c": "red",
-                "n": 2
-              }
-            ]
-          },
-          "label": "two red four-pointed stars"
+          "label": "a blue half circle, with stripes inside"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "rectwide",
-                "c": "green",
-                "n": 4
+                "s": "triangle",
+                "c": "pink",
+                "f": "grid"
               }
             ]
           },
-          "label": "four green wide rectangles"
+          "label": "a pink triangle, with a criss cross pattern inside"
         },
         {
           "id": "c",
@@ -4093,46 +4038,46 @@
             "shapes": [
               {
                 "s": "octagon",
-                "c": "teal",
-                "n": 4
+                "c": "purple",
+                "f": "grid"
               }
             ]
           },
-          "label": "four teal octagons"
+          "label": "a purple octagon, with a criss cross pattern inside"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "pink",
-                "n": 4
+                "s": "pentagon",
+                "c": "red",
+                "f": "grid"
               }
             ]
           },
-          "label": "four pink kites"
+          "label": "a red pentagon, with a criss cross pattern inside"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "red",
-                "n": 4
+                "s": "circle",
+                "c": "purple",
+                "f": "grid"
               }
             ]
           },
-          "label": "four red triangles"
+          "label": "a purple circle, with a criss cross pattern inside"
         }
       ],
       "answer": "a",
-      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is two red four-pointed stars.",
-      "strategy": "Count every box before you look at the shapes."
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a blue half circle, with stripes inside.",
+      "strategy": "Look inside the shape, not only at its outline."
     },
     {
-      "id": "cogat-fc-g4-14",
+      "id": "cogat-fc-g4-8",
       "grade": 4,
       "difficulty": 2,
       "prompt": "Which figure does not belong?",
@@ -4201,6 +4146,82 @@
       "answer": "a",
       "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a pink pentagon.",
       "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
+      "id": "cogat-fc-g4-14",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four orange crosses"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three purple bow ties"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three blue tall rectangles"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three pink ovals"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three yellow crescents"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is four orange crosses.",
+      "strategy": "Count every box before you look at the shapes."
     },
     {
       "id": "cogat-fc-g4-2",
@@ -4316,148 +4337,6 @@
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "orange"
-              }
-            ]
-          },
-          "label": "an orange pentagon"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "kite",
-                "c": "orange"
-              }
-            ]
-          },
-          "label": "an orange kite"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "bowtie",
-                "c": "yellow"
-              }
-            ]
-          },
-          "label": "a yellow bow tie"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "teal"
-              }
-            ]
-          },
-          "label": "a teal trapezoid"
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "chevron",
-                "c": "purple"
-              }
-            ]
-          },
-          "label": "a purple chevron"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is an orange pentagon.",
-      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
-    },
-    {
-      "id": "cogat-fc-g4-10",
-      "grade": 4,
-      "difficulty": 3,
-      "prompt": "Which figure does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
-                "s": "pentagon",
-                "c": "pink"
-              }
-            ]
-          },
-          "label": "a pink pentagon"
-        },
-        {
-          "id": "b",
-          "figure": {
-            "shapes": [
-              {
-                "s": "diamond",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue diamond"
-        },
-        {
-          "id": "c",
-          "figure": {
-            "shapes": [
-              {
-                "s": "parallelogram",
-                "c": "green"
-              }
-            ]
-          },
-          "label": "a green slanted rectangle"
-        },
-        {
-          "id": "d",
-          "figure": {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "orange"
-              }
-            ]
-          },
-          "label": "an orange trapezoid"
-        },
-        {
-          "id": "e",
-          "figure": {
-            "shapes": [
-              {
-                "s": "plus",
-                "c": "blue"
-              }
-            ]
-          },
-          "label": "a blue plus sign"
-        }
-      ],
-      "answer": "a",
-      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a pink pentagon.",
-      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
-    },
-    {
-      "id": "cogat-fc-g4-15",
-      "grade": 4,
-      "difficulty": 3,
-      "prompt": "Which figure does not belong?",
-      "choices": [
-        {
-          "id": "a",
-          "figure": {
-            "shapes": [
-              {
                 "s": "triangledown",
                 "c": "pink"
               }
@@ -4516,6 +4395,153 @@
       ],
       "answer": "a",
       "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a pink upside-down triangle.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
+      "id": "cogat-fc-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty green leaf"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "teal",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a teal six-pointed star, with a criss cross pattern inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a purple moon, with a criss cross pattern inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a blue slanted rectangle, with a criss cross pattern inside"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "teal",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a teal upside-down triangle, with a criss cross pattern inside"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an empty green leaf.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
+      "id": "cogat-fc-g4-15",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple slanted rectangle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue plus sign"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red wide rectangle"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green cross"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a teal triangle.",
       "strategy": "Counting corners turns a shape puzzle into a number puzzle."
     },
     {
@@ -4684,7 +4710,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Each box holds the same shape twice, in the same color: a big one on the left and a small one on the right. Choice b puts the small one first. Choice c changed the second shape. Choice d changed its color. Choice e has only one shape.",
+      "explanation": "Each box holds the same shape twice, in the same colour: a big one on the left and a small one on the right. Choice b puts the small one first. Choice c changed the second shape. Choice d changed its colour. Choice e has only one shape.",
       "strategy": "Position matters. Big-then-small is a different rule from small-then-big."
     },
     {
@@ -4794,69 +4820,68 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "blue",
-                "f": "outline"
+                "s": "square",
+                "c": "blue"
               }
             ]
           },
-          "label": "an empty blue half circle"
+          "label": "a blue square"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "heart",
-                "c": "teal",
+                "s": "oval",
+                "c": "yellow",
                 "f": "dots"
               }
             ]
           },
-          "label": "a teal heart, with dots inside"
+          "label": "a yellow oval, with dots inside"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "blue",
+                "s": "pentagon",
+                "c": "green",
                 "f": "dots"
               }
             ]
           },
-          "label": "a blue octagon, with dots inside"
+          "label": "a green pentagon, with dots inside"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "kite",
-                "c": "purple",
+                "s": "righttriangle",
+                "c": "blue",
                 "f": "dots"
               }
             ]
           },
-          "label": "a purple kite, with dots inside"
+          "label": "a blue right triangle, with dots inside"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "plus",
+                "s": "star",
                 "c": "green",
                 "f": "dots"
               }
             ]
           },
-          "label": "a green plus sign, with dots inside"
+          "label": "a green star, with dots inside"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an empty blue half circle.",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a blue square.",
       "strategy": "Look inside the shape, not only at its outline."
     },
     {
@@ -4870,70 +4895,70 @@
           "figure": {
             "shapes": [
               {
-                "s": "semicircle",
-                "c": "blue",
-                "f": "stripesd"
+                "s": "rectwide",
+                "c": "teal",
+                "n": 3
               }
             ]
           },
-          "label": "a blue half circle, with stripes inside"
+          "label": "three teal wide rectangles"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "triangle",
-                "c": "pink",
-                "f": "grid"
+                "s": "kite",
+                "c": "blue",
+                "n": 2
               }
             ]
           },
-          "label": "a pink triangle, with a criss cross pattern inside"
+          "label": "two blue kites"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "purple",
-                "f": "grid"
+                "s": "circle",
+                "c": "red",
+                "n": 2
               }
             ]
           },
-          "label": "a purple octagon, with a criss cross pattern inside"
+          "label": "two red circles"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "red",
-                "f": "grid"
+                "s": "triangle",
+                "c": "blue",
+                "n": 2
               }
             ]
           },
-          "label": "a red pentagon, with a criss cross pattern inside"
+          "label": "two blue triangles"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "circle",
-                "c": "purple",
-                "f": "grid"
+                "s": "chevron",
+                "c": "red",
+                "n": 2
               }
             ]
           },
-          "label": "a purple circle, with a criss cross pattern inside"
+          "label": "two red chevrons"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a blue half circle, with stripes inside.",
-      "strategy": "Look inside the shape, not only at its outline."
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is three teal wide rectangles.",
+      "strategy": "Count every box before you look at the shapes."
     },
     {
       "id": "cogat-fc-g4-16",
@@ -4946,69 +4971,68 @@
           "figure": {
             "shapes": [
               {
-                "s": "leaf",
-                "c": "green",
-                "f": "outline"
+                "s": "diamond",
+                "c": "yellow"
               }
             ]
           },
-          "label": "an empty green leaf"
+          "label": "a yellow diamond"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "star6",
-                "c": "teal",
+                "s": "square",
+                "c": "pink",
                 "f": "grid"
               }
             ]
           },
-          "label": "a teal six-pointed star, with a criss cross pattern inside"
+          "label": "a pink square, with a criss cross pattern inside"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "moon",
-                "c": "purple",
+                "s": "chevron",
+                "c": "red",
                 "f": "grid"
               }
             ]
           },
-          "label": "a purple moon, with a criss cross pattern inside"
+          "label": "a red chevron, with a criss cross pattern inside"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "parallelogram",
+                "s": "hexagon",
                 "c": "blue",
                 "f": "grid"
               }
             ]
           },
-          "label": "a blue slanted rectangle, with a criss cross pattern inside"
+          "label": "a blue hexagon, with a criss cross pattern inside"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "triangledown",
-                "c": "teal",
+                "s": "semicircle",
+                "c": "green",
                 "f": "grid"
               }
             ]
           },
-          "label": "a teal upside-down triangle, with a criss cross pattern inside"
+          "label": "a green half circle, with a criss cross pattern inside"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an empty green leaf.",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a yellow diamond.",
       "strategy": "Look inside the shape, not only at its outline."
     },
     {
@@ -5113,7 +5137,7 @@
       ],
       "answer": "a",
       "explanation": "The counts are three, five and seven. Every one is an odd number, and each is two more than the one before. The next odd number after seven is nine. Every other answer is an even number.",
-      "strategy": "When all five answers are the same shape and color, the rule is definitely about the number. Count and look for odd, even, or a step."
+      "strategy": "When all five answers are the same shape and colour, the rule is definitely about the number. Count and look for odd, even, or a step."
     },
     {
       "id": "cogat-fc-g4-13",
@@ -5126,65 +5150,70 @@
           "figure": {
             "shapes": [
               {
-                "s": "octagon",
-                "c": "teal"
+                "s": "circle",
+                "c": "teal",
+                "f": "dots"
               }
             ]
           },
-          "label": "a teal octagon"
+          "label": "a teal circle, with dots inside"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "orange"
+                "s": "leaf",
+                "c": "green",
+                "f": "stripesd"
               }
             ]
           },
-          "label": "an orange cloud"
+          "label": "a green leaf, with stripes inside"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "teal"
+                "s": "ring",
+                "c": "pink",
+                "f": "stripesd"
               }
             ]
           },
-          "label": "a teal cloud"
+          "label": "a pink ring, with stripes inside"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "teal"
+                "s": "moon",
+                "c": "blue",
+                "f": "stripesd"
               }
             ]
           },
-          "label": "a teal cloud"
+          "label": "a blue moon, with stripes inside"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "cloud",
-                "c": "purple"
+                "s": "heart",
+                "c": "blue",
+                "f": "stripesd"
               }
             ]
           },
-          "label": "a purple cloud"
+          "label": "a blue heart, with stripes inside"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal octagon.",
-      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a teal circle, with dots inside.",
+      "strategy": "Look inside the shape, not only at its outline."
     },
     {
       "id": "cogat-fc-g4-17",
@@ -5197,69 +5226,70 @@
           "figure": {
             "shapes": [
               {
-                "s": "square",
-                "c": "blue"
+                "s": "heart",
+                "c": "green",
+                "n": 1
               }
             ]
           },
-          "label": "a blue square"
+          "label": "a green heart"
         },
         {
           "id": "b",
           "figure": {
             "shapes": [
               {
-                "s": "oval",
-                "c": "yellow",
-                "f": "dots"
+                "s": "triangledown",
+                "c": "blue",
+                "n": 3
               }
             ]
           },
-          "label": "a yellow oval, with dots inside"
+          "label": "three blue upside-down triangles"
         },
         {
           "id": "c",
           "figure": {
             "shapes": [
               {
-                "s": "pentagon",
-                "c": "green",
-                "f": "dots"
+                "s": "crescent",
+                "c": "purple",
+                "n": 3
               }
             ]
           },
-          "label": "a green pentagon, with dots inside"
+          "label": "three purple crescents"
         },
         {
           "id": "d",
           "figure": {
             "shapes": [
               {
-                "s": "righttriangle",
+                "s": "moon",
                 "c": "blue",
-                "f": "dots"
+                "n": 3
               }
             ]
           },
-          "label": "a blue right triangle, with dots inside"
+          "label": "three blue moons"
         },
         {
           "id": "e",
           "figure": {
             "shapes": [
               {
-                "s": "star",
-                "c": "green",
-                "f": "dots"
+                "s": "oval",
+                "c": "teal",
+                "n": 3
               }
             ]
           },
-          "label": "a green star, with dots inside"
+          "label": "three teal ovals"
         }
       ],
       "answer": "a",
-      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a blue square.",
-      "strategy": "Look inside the shape, not only at its outline."
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is a green heart.",
+      "strategy": "Count every box before you look at the shapes."
     }
   ]
 }

@@ -9,6 +9,7 @@ answer is C with the row rules applied.
 import sys, json, random
 sys.path.insert(0, 'tools')
 from _figural import *
+from _symmetry import canonical, rotation_is_invisible
 from _authoring import write
 
 CHOICES = {('cogat', 1): 4, ('cogat', 2): 4, ('cogat', 3): 5, ('cogat', 4): 5,
@@ -34,7 +35,8 @@ def make(cat_id, test, grade, index, rng, kind, colors, shapes, start_num):
     if rng.random() < 0.3:
         base['z'] = 0.6
 
-    rules = pick_rules(grade, n_rules, base, rng, colors)
+    # The same rules are applied to s2 as well, so they must be visible on both.
+    rules = pick_rules(grade, n_rules, base, rng, colors, also_visible_on=(s2,))
     if not rules:
         return None
 
@@ -95,6 +97,9 @@ def extend(path, cat_id, test, kind, per_grade, colors, shapes, seed):
             q = make(cat_id, test, grade, i, rng, kind, colors, shapes, start)
             i += 1
             if not q:
+                continue
+            ok, why = item_is_sound(q)
+            if not ok:
                 continue
             sig = json.dumps(q['figure'], sort_keys=True)
             if sig in seen:
