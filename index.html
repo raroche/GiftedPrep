@@ -88,6 +88,11 @@
           <div class="gp-row gp-row--wrap" id="gp-grade-picker" role="radiogroup" aria-label="Grade level"></div>
         </fieldset>
         <p class="gp-muted gp-grade-note" id="gp-grade-note"></p>
+        <fieldset class="gp-fieldset">
+          <legend class="gp-fieldset__legend">How many questions?</legend>
+          <div class="gp-row gp-row--wrap" id="gp-count-picker" role="radiogroup" aria-label="Questions per practice set"></div>
+        </fieldset>
+        <p class="gp-muted gp-grade-note" id="gp-count-note"></p>
       </div>
       </div>
 
@@ -95,7 +100,7 @@
         <button type="button" class="gp-card gp-card--action" data-action="quick-start">
           <span class="gp-card__icon" data-icon="shuffle"></span>
           <span class="gp-card__title">Quick practice</span>
-          <span class="gp-card__sub">12 mixed puzzles from all three tests. Best place to start.</span>
+          <span class="gp-card__sub" id="gp-quick-sub">Mixed puzzles from all three tests. Best place to start.</span>
         </button>
         <a class="gp-card gp-card--action" href="#/categories/all">
           <span class="gp-card__icon" data-icon="sort"></span>

@@ -896,6 +896,15 @@ button, a, label, summary, [role="button"] {
 /* margin-left:auto keeps the switch hard right in both states: beside the
    title, and on its own line once the pair no longer fits. */
 #gp-lang-toggle { flex: none; margin-left: auto; }
+
+/* The set-length pills hold one or two digits, so the 108px min-width meant
+   for word labels pushed them onto a second row on a phone. They keep the full
+   56px height, so the touch target is unchanged. */
+#gp-count-picker .gp-pill {
+  min-width: 0;
+  flex: 1 1 0;
+  padding-inline: var(--gp-space-3);
+}
 @media (max-width: 560px) {
   /* The label stays here even though the top bar drops its labels: the flag
      alone is not an accessible name for a language switch. */

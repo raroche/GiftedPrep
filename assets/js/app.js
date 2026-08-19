@@ -144,6 +144,35 @@ function renderGradePicker() {
   $('#gp-grade-note').textContent = GRADE_NOTES[state.settings.grade] || '';
 }
 
+/* Set lengths a child can sit through. 10 is about five minutes at this age;
+   30 is close to a real screening section and is there for grades 3-4. */
+const QUESTION_COUNTS = [10, 15, 20, 30];
+
+const COUNT_NOTES = {
+  10: 'A short set, about five minutes. Good for a first try or a school night.',
+  15: 'A little longer. Still short enough to finish in one sitting.',
+  20: 'A solid practice set. Take a break afterwards.',
+  30: 'The longest set, close to the length of a real test section.'
+};
+
+function questionCount() {
+  const n = Number(state.settings.questionCount);
+  return QUESTION_COUNTS.includes(n) ? n : 10;
+}
+
+function renderCountPicker() {
+  const chosen = questionCount();
+  $('#gp-count-picker').innerHTML = QUESTION_COUNTS.map((n) => `
+    <button type="button" class="gp-pill${n === chosen ? ' is-selected' : ''}"
+            role="radio" aria-checked="${n === chosen}" data-count="${n}"
+            aria-label="${n} questions">
+      ${n}
+    </button>`).join('');
+  $('#gp-count-note').textContent = COUNT_NOTES[chosen] || '';
+  const sub = $('#gp-quick-sub');
+  if (sub) sub.textContent = `${chosen} mixed puzzles from all three tests. Best place to start.`;
+}
+
 function renderHomeStats() {
   const totals = storage.getTotals();
   const card = $('#gp-home-stats');
@@ -273,7 +302,7 @@ function renderCategories(testId) {
 /* Building a session                                                  */
 /* ------------------------------------------------------------------ */
 
-async function startSession({ testId = null, categoryId = null, limit = 12, label = '' }) {
+async function startSession({ testId = null, categoryId = null, limit = 10, label = '' }) {
   try {
     const wantTest = testId && testId !== 'all' ? testId : null;
     const ids = categoryId
@@ -575,6 +604,7 @@ function route() {
   switch (head) {
     case 'home':
       renderGradePicker();
+      renderCountPicker();
       renderHomeStats();
       showScreen('home');
       break;
@@ -637,12 +667,20 @@ function onClick(ev) {
     return;
   }
 
+  const count = ev.target.closest('[data-count]');
+  if (count) {
+    state.settings.questionCount = Number(count.dataset.count);
+    storage.setSetting('questionCount', state.settings.questionCount);
+    renderCountPicker();
+    return;
+  }
+
   const choice = ev.target.closest('.gp-choice');
   if (choice && !state.answered) { handleAnswer(choice.dataset.choice); return; }
 
   const cat = ev.target.closest('[data-category]');
   if (cat) {
-    startSession({ categoryId: cat.dataset.category, limit: 10 });
+    startSession({ categoryId: cat.dataset.category, limit: questionCount() });
     return;
   }
 
@@ -650,15 +688,15 @@ function onClick(ev) {
   if (!action) return;
   switch (action.dataset.action) {
     case 'quick-start':
-      startSession({ limit: 12 });
+      startSession({ limit: questionCount() });
       break;
     case 'start-all': {
       const testId = $('#screen-categories').dataset.test || null;
-      startSession({ testId, limit: 12 });
+      startSession({ testId, limit: questionCount() });
       break;
     }
     case 'again':
-      startSession(state.lastRun || { limit: 12 });
+      startSession({ ...(state.lastRun || {}), limit: questionCount() });
       break;
     case 'reset-progress':
       if (window.confirm('Clear all practice history? Your grade and colour settings are kept.')) {

@@ -41,6 +41,8 @@ const DEFAULTS = {
     speechRate: 0.85,
     lastTest: null,
     lastCategory: null,
+    /* How many questions a practice set holds. One of QUESTION_COUNTS. */
+    questionCount: 10,
     /* Language of the Parent Guide only. The child-facing screens are English. */
     guideLang: 'en'
   },
