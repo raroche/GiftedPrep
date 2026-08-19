@@ -1,0 +1,547 @@
+{
+  "id": "olsat-aural-reasoning",
+  "test": "olsat",
+  "battery": "verbal-reasoning",
+  "name": "Listening Riddles",
+  "icon": "ear",
+  "blurb": "Work out the answer from the clues you hear.",
+  "childIntro": "Listen to the clues. They will not tell you the answer directly. You have to work it out.",
+  "howItWorks": "The teacher reads a short scenario once and the child marks a picture. It is different from Following Directions because the answer is never stated. The child has to make a step of reasoning: the clues rule things out, and what is left is the answer. It appears only at OLSAT levels A to C.",
+  "parentTip": "Play this at dinner. Give three clues about something in the room and let your child guess, then swap. The habit to build is crossing things off. After each clue, ask which options are now impossible. Children who guess from the first clue alone are the ones who get these wrong.",
+  "questions": [
+    {
+      "id": "olsat-ar-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "I am thinking of an animal that has paws. Which one is it?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐕"
+          },
+          "label": "a dog"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🦆"
+          },
+          "label": "a duck"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐍"
+          },
+          "label": "a snake"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Paws are soft feet with pads. A dog has paws. A fish has fins, a duck has webbed feet and a snake has no feet at all.",
+      "strategy": "Think about what the word means, then check each animal one by one."
+    },
+    {
+      "id": "olsat-ar-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "I am thinking of something you wear that keeps your hands warm. Which one?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧤"
+          },
+          "label": "gloves"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🧣"
+          },
+          "label": "a scarf"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👟"
+          },
+          "label": "shoes"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧢"
+          },
+          "label": "a hat"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Gloves go on your hands. A scarf keeps your neck warm, shoes go on your feet, and a hat goes on your head.",
+      "strategy": "Two clues here: something you wear, and hands. Both have to be true."
+    },
+    {
+      "id": "olsat-ar-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Ella has a pet that lives in water and has no legs. What is it?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐸"
+          },
+          "label": "a frog"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐢"
+          },
+          "label": "a turtle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐈"
+          },
+          "label": "a cat"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Frogs and turtles live in water but they have legs. A cat has legs and does not live in water. A fish lives in water and has no legs.",
+      "strategy": "Cross off after each clue. Water rules out the cat. No legs rules out the frog and the turtle."
+    },
+    {
+      "id": "olsat-ar-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Sam is good at a sport that does not use a ball. Which sport is it?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🏊"
+          },
+          "label": "swimming"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⚽"
+          },
+          "label": "football"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏀"
+          },
+          "label": "basketball"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎾"
+          },
+          "label": "tennis"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Football, basketball and tennis all use a ball. Swimming does not. The clue tells you what to rule out, not what to pick.",
+      "strategy": "When a clue says does NOT, cross things off instead of choosing."
+    },
+    {
+      "id": "olsat-ar-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Mia picked two flowers. Ben picked twice as many as Mia. How many did Ben pick?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "four flowers",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow",
+                    "n": 4
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "four"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "two flowers",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow",
+                    "n": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "two"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "three flowers",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow",
+                    "n": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "three"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "six flowers",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow",
+                    "n": 6
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "six"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twice as many means double. Mia picked two, so Ben picked two and two more, which is four.",
+      "strategy": "Twice as many means the same amount again. Two and two makes four."
+    },
+    {
+      "id": "olsat-ar-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "I am thinking of something that gives light and you can carry it. What is it?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🔦"
+          },
+          "label": "a torch"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "☀️"
+          },
+          "label": "the sun"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪟"
+          },
+          "label": "a window"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🕯️"
+          },
+          "label": "a candle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A torch gives light and fits in your hand. A candle gives light too, but a torch is the one you carry about safely and switch on. The sun cannot be carried and a window only lets light through.",
+      "strategy": "When two answers nearly fit, go back to the exact words of the clue."
+    },
+    {
+      "id": "olsat-ar-g2-2",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Tom's pet is not a bird and it can fly. What is it?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🦇"
+          },
+          "label": "a bat"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐦"
+          },
+          "label": "a bird"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐈"
+          },
+          "label": "a cat"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        }
+      ],
+      "answer": "a",
+      "explanation": "It can fly, which rules out the cat and the fish. It is not a bird, which rules out the bird. A bat can fly and is not a bird.",
+      "strategy": "Take the clues one at a time and cross off after each one."
+    },
+    {
+      "id": "olsat-ar-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "There were five birds on a fence. Two flew away. Then one more landed. How many birds are there now?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "four birds",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue",
+                    "n": 4
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "four"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "three birds",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue",
+                    "n": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "three"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "six birds",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue",
+                    "n": 6
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "six"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "eight birds",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue",
+                    "n": 8
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "eight"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five take away two is three. Then one more lands, so three plus one is four. Choice b stops after the first step.",
+      "strategy": "Two steps. Do the first, say the number out loud, then do the second."
+    },
+    {
+      "id": "olsat-ar-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Anna is taller than Ben. Ben is taller than Carl. Who is the shortest?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧒"
+          },
+          "label": "Carl"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🧑"
+          },
+          "label": "Anna"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👦"
+          },
+          "label": "Ben"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "❓"
+          },
+          "label": "you cannot tell"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Line them up. Anna is above Ben, and Ben is above Carl. So Carl is at the bottom.",
+      "strategy": "Draw a ladder in your head with the tallest at the top."
+    },
+    {
+      "id": "olsat-ar-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Leo has 3 red pens and 2 blue pens. He gives away the blue ones. How many are left?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "three pens",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "line",
+                    "c": "red",
+                    "n": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "three"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "five pens",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "line",
+                    "c": "red",
+                    "n": 5
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "five"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "two pens",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "line",
+                    "c": "red",
+                    "n": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "two"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "one pen",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "line",
+                    "c": "red",
+                    "n": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "one"
+        }
+      ],
+      "answer": "a",
+      "explanation": "He started with five pens altogether. He gave away the two blue ones, so the three red ones are left. Choice c is how many he gave away, not how many he kept.",
+      "strategy": "Watch for questions that ask what is LEFT rather than what was given away."
+    }
+  ]
+}

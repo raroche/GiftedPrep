@@ -1,0 +1,1769 @@
+{
+  "id": "nnat-spatial-visualization",
+  "test": "nnat",
+  "battery": "nonverbal",
+  "name": "Spatial Visualization",
+  "icon": "rotate",
+  "blurb": "Picture the shapes moving, turning or joining up.",
+  "childIntro": "The first pair shows something happening to a shape. Make the same thing happen to the third shape in your head.",
+  "howItWorks": "Pearson describes this as recognising how two or more designs would look if they were combined, which may involve rotations or overlapping. It is the only NNAT type that needs imagined movement rather than a static rule, so it does not appear until second grade.",
+  "parentTip": "The distractor that catches most children is a mirror image where a rotation was needed. Turning a shape and flipping it look the same for symmetrical shapes but completely different for others. Cut a shape out of paper and let your child physically turn it, then physically flip it, so the difference becomes obvious.",
+  "questions": [
+    {
+      "id": "nnat-sv-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "The first shape turns. Turn the third shape the same way.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A blue right triangle turns a quarter turn. A green trapezoid must turn the same way.",
+        "a": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "blue"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "blue",
+              "r": 90
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "green"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The first shape turns one quarter turn clockwise. Do exactly the same to the trapezoid. Choice b turned the other way.",
+      "strategy": "Turn your head to check. If the shape looks right with your head tipped one way, that is the direction."
+    },
+    {
+      "id": "nnat-sv-g2-2",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Make the same change happen.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A yellow flag flips all the way over. A green house must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "yellow"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "yellow",
+              "r": 180
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "house",
+              "c": "green"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The shape turns halfway round, so it ends up upside down. Choices b and d only turned a quarter of the way.",
+      "strategy": "Half a turn means upside down. A quarter turn means lying on its side."
+    },
+    {
+      "id": "nnat-sv-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Two shapes sit together. What happens to the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A blue circle with a yellow triangle on top becomes just the blue circle. A green square with a yellow star on top becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "blue"
+            },
+            {
+              "s": "triangle",
+              "c": "yellow",
+              "z": 0.55
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "blue"
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "green"
+            },
+            {
+              "s": "star",
+              "c": "yellow",
+              "z": 0.55
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.55
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The small shape on top is taken away and the big shape underneath is left. So the star goes and the green square stays.",
+      "strategy": "Ask what was removed, not what was added."
+    },
+    {
+      "id": "nnat-sv-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Make the same change happen.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A small green arrow becomes a big green arrow turned all the way round. A small blue chevron must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "green",
+              "z": 0.5
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "green",
+              "z": 1.1,
+              "r": 180
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "blue",
+              "z": 0.5
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "blue",
+                "z": 1.1,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "blue",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "blue",
+                "z": 0.5,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "z": 1.1,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 1.1,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things happen: it grows and it turns halfway round. Choice b grew but did not turn, choice c turned but did not grow.",
+      "strategy": "Two changes, two checks. Size first, then turn."
+    },
+    {
+      "id": "nnat-sv-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Make the same change happen.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty square holding a blue circle becomes an empty blue circle holding a yellow square. Now do the same to a triangle holding a star.",
+        "a": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "yellow",
+              "f": "outline"
+            },
+            {
+              "s": "circle",
+              "c": "blue",
+              "z": 0.35
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "blue",
+              "f": "outline"
+            },
+            {
+              "s": "square",
+              "c": "yellow",
+              "z": 0.35
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "green",
+              "f": "outline"
+            },
+            {
+              "s": "star",
+              "c": "yellow",
+              "z": 0.35
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "f": "outline"
+              },
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline"
+              },
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.35
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The inside shape and the outside shape swap places. Each keeps its own colour. The outer shape is always empty and the inner one filled.",
+      "strategy": "After a swap, check that each shape kept its own colour."
+    },
+    {
+      "id": "nnat-sv-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A blue kite turns a quarter turn. A green crescent must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "kite",
+              "c": "blue"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "kite",
+              "c": "blue",
+              "r": 90
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "crescent",
+              "c": "green"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One quarter turn clockwise. Choice b is the mirror trap: it turns the same distance the wrong way.",
+      "strategy": "Clockwise means the way a clock's hands go. Say it out loud before you choose."
+    },
+    {
+      "id": "nnat-sv-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A yellow right triangle is turned all the way over. A blue leaf must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "yellow"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "yellow",
+              "r": 180
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "leaf",
+              "c": "blue"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The shape is turned halfway round. Choices b and c stopped at a quarter turn.",
+      "strategy": "Half a turn moves every point to the opposite side of the centre."
+    },
+    {
+      "id": "nnat-sv-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Two shapes are put on top of each other. What do you get?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty blue circle gains a small yellow triangle in the middle. An empty green square must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "triangle",
+              "c": "yellow",
+              "z": 0.5
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "circle",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small yellow triangle is added in the middle and nothing else changes. Choice b added the wrong shape and choice c filled the outer shape in.",
+      "strategy": "Ask exactly what was added, and check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A small green bowtie becomes a big one turned a quarter turn. A small yellow lightning bolt must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "bowtie",
+              "c": "green",
+              "z": 0.6
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "bowtie",
+              "c": "green",
+              "z": 1.15,
+              "r": 90
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "lightning",
+              "c": "yellow",
+              "z": 0.6
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "yellow",
+                "z": 1.15,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "yellow",
+                "z": 1.15,
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "yellow",
+                "z": 0.6,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "z": 1.15,
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Grow, and turn a quarter turn clockwise. Choice b turned the wrong way, choice c did not grow, choice d did not turn.",
+      "strategy": "Three of the five choices differ only in the turn. Settle the turn first and the rest is quick."
+    },
+    {
+      "id": "nnat-sv-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Two blue triangles become four smaller ones turned upside down. Two green pentagons must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "blue",
+              "n": 2,
+              "z": 0.6
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "blue",
+              "n": 4,
+              "z": 0.4,
+              "r": 180
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "pentagon",
+              "c": "green",
+              "n": 2,
+              "z": 0.6
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "n": 4,
+                "z": 0.4,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "n": 4,
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "n": 2,
+                "z": 0.4,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "n": 4,
+                "z": 0.6,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 4,
+                "z": 0.4,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three rules: the count doubles, the shapes shrink, and they turn upside down. Each wrong answer drops exactly one.",
+      "strategy": "Count, size, turn. Check all three every time."
+    },
+    {
+      "id": "nnat-sv-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A blue house shape turns three quarters of the way round. A green flag must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "house",
+              "c": "blue"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "house",
+              "c": "blue",
+              "r": 270
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "green"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three quarters of a turn clockwise, which is the same as a quarter turn the other way. Choice b turned only a quarter clockwise.",
+      "strategy": "Three quarters clockwise equals one quarter anticlockwise. Use whichever is easier to picture."
+    },
+    {
+      "id": "nnat-sv-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A small shape inside a square moves from the top left to the bottom right. Now do the same inside a circle.",
+        "a": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "circle",
+              "c": "blue",
+              "z": 0.3,
+              "x": 30,
+              "y": 30
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "circle",
+              "c": "blue",
+              "z": 0.3,
+              "x": 70,
+              "y": 70
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "star",
+              "c": "yellow",
+              "z": 0.3,
+              "x": 30,
+              "y": 30
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.3,
+                "x": 70,
+                "y": 70
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.3,
+                "x": 70,
+                "y": 30
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.3,
+                "x": 30,
+                "y": 70
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.3,
+                "x": 30,
+                "y": 30
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.3,
+                "x": 70,
+                "y": 70
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The inner shape moves diagonally from the top left corner to the bottom right corner. Choices b and c moved it only sideways or only down.",
+      "strategy": "Diagonal movement changes both the across and the down position. Check both."
+    },
+    {
+      "id": "nnat-sv-g4-3",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A striped blue chevron becomes a solid green one turned a quarter turn. A striped blue trapezoid must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "blue",
+              "f": "stripesv"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "green",
+              "r": 90
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "blue",
+              "f": "stripesv"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "f": "stripesv",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three rules: the colour turns green, the stripes fill in solid, and the shape turns a quarter turn. Choice b kept the stripes, c did not turn, d stayed blue.",
+      "strategy": "With three rules, four of the five answers each break exactly one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-sv-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "One large yellow star becomes four small ones. One large green hexagon must do the same.",
+        "a": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "yellow",
+              "z": 1.05
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "yellow",
+              "n": 4,
+              "z": 0.4
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "hexagon",
+              "c": "green",
+              "z": 1.05
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "n": 4,
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "n": 4,
+                "z": 1.05
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "n": 2,
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "n": 4,
+                "z": 0.4,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 4,
+                "z": 0.4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One large shape becomes four small ones of the same kind and colour. Choice b kept them large, c made only two, and d added a turn that never happened.",
+      "strategy": "When a shape splits, check both the new count and the new size."
+    },
+    {
+      "id": "nnat-sv-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty triangle holding a yellow circle becomes an empty yellow circle holding an upside down green triangle. Now do the same to a square holding a star.",
+        "a": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "green",
+              "f": "outline",
+              "z": 1.15
+            },
+            {
+              "s": "circle",
+              "c": "yellow",
+              "z": 0.35,
+              "x": 50,
+              "y": 65
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.15
+            },
+            {
+              "s": "triangle",
+              "c": "green",
+              "z": 0.35,
+              "x": 50,
+              "y": 65,
+              "r": 180
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.15
+            },
+            {
+              "s": "star",
+              "c": "yellow",
+              "z": 0.35,
+              "x": 50,
+              "y": 65
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "square",
+                "c": "blue",
+                "z": 0.35,
+                "x": 50,
+                "y": 65,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "square",
+                "c": "blue",
+                "z": 0.35,
+                "x": 50,
+                "y": 65
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.35,
+                "x": 50,
+                "y": 65,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "square",
+                "c": "blue",
+                "z": 0.35,
+                "x": 50,
+                "y": 65,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 1.15
+              },
+              {
+                "s": "square",
+                "c": "blue",
+                "z": 0.35,
+                "x": 50,
+                "y": 65,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The two shapes swap places, each keeps its own colour, the outer one is empty and the inner one is filled, and the inner one is turned upside down. Choice b forgot the turn and choice c forgot the swap.",
+      "strategy": "Break a busy question into a list. Swap, colours, fills, turn. Then tick each one off."
+    }
+  ]
+}

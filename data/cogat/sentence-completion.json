@@ -1,0 +1,262 @@
+{
+  "id": "cogat-sentence-completion",
+  "test": "cogat",
+  "battery": "verbal",
+  "name": "Sentence Completion",
+  "icon": "words",
+  "blurb": "Listen to the sentence. Pick the picture that fits.",
+  "childIntro": "Listen carefully. You will hear a sentence or a question. Then pick the picture that answers it.",
+  "howItWorks": "This is the only CogAT subtest at grades 1 and 2 that uses spoken language. The teacher reads a sentence aloud, once, in English or Spanish, and the child chooses a picture. From grade 3 the child reads an incomplete sentence and picks the word that best fills the blank. Because it depends on language, schools may leave it out for children still learning English and score the Verbal battery from the other two parts instead.",
+  "parentTip": "For grades 1 and 2, the whole difficulty is that the sentence is read once and never repeated. Practise listening: read a sentence with two or three details in it and ask your child to say it back before answering. For grades 3 and 4, the hinge is almost always a small joining word. Although, unlike, but, however and because change what the blank needs. Have your child underline that word first.",
+  "questions": [
+    {
+      "id": "cogat-sc-g1-1", "grade": 1, "difficulty": 1,
+      "prompt": "Which one lives in the water?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐠" }, "label": "a fish" },
+        { "id": "b", "figure": { "text": "🐈" }, "label": "a cat" },
+        { "id": "c", "figure": { "text": "🐦" }, "label": "a bird" },
+        { "id": "d", "figure": { "text": "🐄" }, "label": "a cow" }
+      ],
+      "answer": "a",
+      "explanation": "A fish lives in the water. Cats, birds and cows all live on land.",
+      "strategy": "Listen for the important word. Here it is water."
+    },
+    {
+      "id": "cogat-sc-g1-2", "grade": 1, "difficulty": 2,
+      "prompt": "If you heard a bark, which animal made it?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐕" }, "label": "a dog" },
+        { "id": "b", "figure": { "text": "🐈" }, "label": "a cat" },
+        { "id": "c", "figure": { "text": "🐮" }, "label": "a cow" },
+        { "id": "d", "figure": { "text": "🐑" }, "label": "a sheep" }
+      ],
+      "answer": "a",
+      "explanation": "A dog barks. A cat meows, a cow moos and a sheep baas.",
+      "strategy": "Match the sound to the animal that makes it."
+    },
+    {
+      "id": "cogat-sc-g1-3", "grade": 1, "difficulty": 2,
+      "prompt": "Which picture shows something you use when it rains?",
+      "choices": [
+        { "id": "a", "figure": { "text": "☂️" }, "label": "an umbrella" },
+        { "id": "b", "figure": { "text": "🕶️" }, "label": "sunglasses" },
+        { "id": "c", "figure": { "text": "🧺" }, "label": "a picnic basket" },
+        { "id": "d", "figure": { "text": "⛱️" }, "label": "a beach umbrella" }
+      ],
+      "answer": "a",
+      "explanation": "An umbrella keeps the rain off you. A beach umbrella is for shade from the sun, and sunglasses are for bright light.",
+      "strategy": "Two answers can look similar. Listen again for the exact word: rain."
+    },
+    {
+      "id": "cogat-sc-g1-4", "grade": 1, "difficulty": 3,
+      "prompt": "Which picture shows something that is cold and that you eat?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🍦" }, "label": "an ice cream" },
+        { "id": "b", "figure": { "text": "🧊" }, "label": "an ice cube" },
+        { "id": "c", "figure": { "text": "🍲" }, "label": "hot soup" },
+        { "id": "d", "figure": { "text": "🧣" }, "label": "a scarf" }
+      ],
+      "answer": "a",
+      "explanation": "The sentence asked for two things at once: cold AND something you eat. An ice cream is both. An ice cube is cold but you do not eat it as food. Soup is food but it is hot.",
+      "strategy": "When the sentence says AND, both parts must be true."
+    },
+    {
+      "id": "cogat-sc-g1-5", "grade": 1, "difficulty": 3,
+      "prompt": "Which picture shows an animal with wings that cannot fly?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐧" }, "label": "a penguin" },
+        { "id": "b", "figure": { "text": "🦅" }, "label": "an eagle" },
+        { "id": "c", "figure": { "text": "🐟" }, "label": "a fish" },
+        { "id": "d", "figure": { "text": "🐘" }, "label": "an elephant" }
+      ],
+      "answer": "a",
+      "explanation": "A penguin has wings but it swims instead of flying. An eagle has wings and does fly. A fish and an elephant have no wings at all.",
+      "strategy": "The word CANNOT flips the sentence. Read it again slowly before you choose."
+    },
+
+    {
+      "id": "cogat-sc-g2-1", "grade": 2, "difficulty": 2,
+      "prompt": "Which picture shows something you would find inside a kitchen?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🍳" }, "label": "a frying pan" },
+        { "id": "b", "figure": { "text": "🛏️" }, "label": "a bed" },
+        { "id": "c", "figure": { "text": "🌳" }, "label": "a tree" },
+        { "id": "d", "figure": { "text": "🚗" }, "label": "a car" }
+      ],
+      "answer": "a",
+      "explanation": "A frying pan belongs in a kitchen. A bed is in a bedroom, and a tree and a car are outside.",
+      "strategy": "Picture the room in your head, then look around it."
+    },
+    {
+      "id": "cogat-sc-g2-2", "grade": 2, "difficulty": 2,
+      "prompt": "Which picture shows the animal that is between the two trees?",
+      "figure": { "kind": "series", "alt": "Four small scenes.", "cells": [
+        { "text": "🌳🐕🌳" }, { "text": "🐕🌳🌳" }, { "text": "🌳🌳🐕" }, { "text": "🐕🌳🐕" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🌳🐕🌳" }, "label": "tree, dog, tree" },
+        { "id": "b", "figure": { "text": "🐕🌳🌳" }, "label": "dog, tree, tree" },
+        { "id": "c", "figure": { "text": "🌳🌳🐕" }, "label": "tree, tree, dog" },
+        { "id": "d", "figure": { "text": "🐕🌳🐕" }, "label": "dog, tree, dog" }
+      ],
+      "answer": "a",
+      "explanation": "Between means in the middle with one thing on each side. Only choice a has the dog in the middle with a tree on the left and a tree on the right.",
+      "strategy": "Position words matter: between, next to, above, below, in front of. Each one means something exact."
+    },
+    {
+      "id": "cogat-sc-g2-3", "grade": 2, "difficulty": 3,
+      "prompt": "Which picture shows something that gives light but is not the sun?",
+      "choices": [
+        { "id": "a", "figure": { "text": "💡" }, "label": "a light bulb" },
+        { "id": "b", "figure": { "text": "☀️" }, "label": "the sun" },
+        { "id": "c", "figure": { "text": "🪟" }, "label": "a window" },
+        { "id": "d", "figure": { "text": "🌑" }, "label": "a dark moon" }
+      ],
+      "answer": "a",
+      "explanation": "A light bulb makes light. The sun makes light too, but the sentence said not the sun. A window lets light through but does not make it.",
+      "strategy": "The words NOT and EXCEPT rule an answer out. Listen for them."
+    },
+    {
+      "id": "cogat-sc-g2-4", "grade": 2, "difficulty": 3,
+      "prompt": "Sam has more apples than Kim. Which picture shows Sam's apples?",
+      "figure": { "kind": "sets", "alt": "Kim has three apples.", "groups": [
+        { "label": "Kim", "cells": [{ "shapes": [{ "s": "apple", "c": "red", "n": 3 }] }] }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "shapes": [{ "s": "apple", "c": "red", "n": 5 }] }, "label": "five apples" },
+        { "id": "b", "figure": { "shapes": [{ "s": "apple", "c": "red", "n": 2 }] }, "label": "two apples" },
+        { "id": "c", "figure": { "shapes": [{ "s": "apple", "c": "red", "n": 3 }] }, "label": "three apples" },
+        { "id": "d", "figure": { "shapes": [{ "s": "apple", "c": "red" }] }, "label": "one apple" }
+      ],
+      "answer": "a",
+      "explanation": "Kim has three apples. More than three means four or higher. Five is more than three. Choice c is the same, not more, and choices b and d are fewer.",
+      "strategy": "More than means bigger. The same amount does not count as more."
+    },
+    {
+      "id": "cogat-sc-g2-5", "grade": 2, "difficulty": 4,
+      "prompt": "Which picture shows something that floats and is not alive?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🛟" }, "label": "a rubber ring" },
+        { "id": "b", "figure": { "text": "🦆" }, "label": "a duck" },
+        { "id": "c", "figure": { "text": "🪨" }, "label": "a rock" },
+        { "id": "d", "figure": { "text": "🐟" }, "label": "a fish" }
+      ],
+      "answer": "a",
+      "explanation": "The sentence asks for two things: it floats AND it is not alive. A rubber ring floats and is not alive. A duck floats but is alive. A rock is not alive but it sinks.",
+      "strategy": "Draw two boxes in your head, one for each part of the sentence. The answer goes in both."
+    },
+
+    {
+      "id": "cogat-sc-g3-1", "grade": 3, "difficulty": 2,
+      "prompt": "Ben put the shirt back in the dryer because it was still ______.",
+      "choices": [
+        { "id": "a", "text": "damp" }, { "id": "b", "text": "warm" },
+        { "id": "c", "text": "clean" }, { "id": "d", "text": "folded" }, { "id": "e", "text": "striped" }
+      ],
+      "answer": "a",
+      "explanation": "The word because tells you the blank must give a reason to keep drying. Only damp does that. Warm is the trap: a shirt in a dryer really is warm, but being warm is no reason to dry it more.",
+      "strategy": "After because, the blank must explain what happened. Test each word by asking, is that a reason?"
+    },
+    {
+      "id": "cogat-sc-g3-2", "grade": 3, "difficulty": 3,
+      "prompt": "The sky turned ______ because a big storm was coming.",
+      "choices": [
+        { "id": "a", "text": "grey" }, { "id": "b", "text": "sunny" },
+        { "id": "c", "text": "happy" }, { "id": "d", "text": "damp" }, { "id": "e", "text": "loud" }
+      ],
+      "answer": "a",
+      "explanation": "A storm makes the sky dark and grey. Sunny is the opposite. Damp describes air, not how the sky looks, and a sky cannot be happy or loud.",
+      "strategy": "Check that the word can actually describe the thing in the sentence. A sky can be grey. A sky cannot be loud."
+    },
+    {
+      "id": "cogat-sc-g3-3", "grade": 3, "difficulty": 3,
+      "prompt": "Unlike her ______ brother, Maya was happy to speak in front of the class.",
+      "choices": [
+        { "id": "a", "text": "shy" }, { "id": "b", "text": "confident" },
+        { "id": "c", "text": "tall" }, { "id": "d", "text": "cheerful" }, { "id": "e", "text": "loud" }
+      ],
+      "answer": "a",
+      "explanation": "Unlike means the brother is the opposite of Maya. Maya was happy to speak, so her brother was not. Shy fits. Confident is the trap for anyone who misses the word unlike.",
+      "strategy": "Unlike, although, but and however all flip the sentence. Find that word and circle it first."
+    },
+    {
+      "id": "cogat-sc-g3-4", "grade": 3, "difficulty": 4,
+      "prompt": "Although the puzzle looked ______, Theo finished it in five minutes.",
+      "choices": [
+        { "id": "a", "text": "difficult" }, { "id": "b", "text": "easy" },
+        { "id": "c", "text": "colourful" }, { "id": "d", "text": "small" }, { "id": "e", "text": "new" }
+      ],
+      "answer": "a",
+      "explanation": "Although sets up a surprise. Finishing in five minutes is fast, so the surprising thing is that it looked hard. If it had looked easy there would be nothing surprising, so choice b breaks the sentence.",
+      "strategy": "Although means the two halves disagree. Make sure your word creates that disagreement."
+    },
+    {
+      "id": "cogat-sc-g3-5", "grade": 3, "difficulty": 5,
+      "prompt": "The path was ______, so the hikers had to walk in single file.",
+      "choices": [
+        { "id": "a", "text": "narrow" }, { "id": "b", "text": "long" },
+        { "id": "c", "text": "steep" }, { "id": "d", "text": "muddy" }, { "id": "e", "text": "rocky" }
+      ],
+      "answer": "a",
+      "explanation": "Single file means one behind the other. Only the width of the path forces that. A path can be long, steep, muddy or rocky and still be wide enough to walk side by side.",
+      "strategy": "Ask which word actually CAUSES the result. Several words may fit the picture; only one causes the effect."
+    },
+
+    {
+      "id": "cogat-sc-g4-1", "grade": 4, "difficulty": 2,
+      "prompt": "The library was ______, so we whispered.",
+      "choices": [
+        { "id": "a", "text": "silent" }, { "id": "b", "text": "large" },
+        { "id": "c", "text": "modern" }, { "id": "d", "text": "crowded" }, { "id": "e", "text": "open" }
+      ],
+      "answer": "a",
+      "explanation": "The word so links a cause to its effect. Whispering follows from silence. A library can be large, modern, crowded or open without anyone needing to whisper.",
+      "strategy": "So means the second half is the result of the first. Test the link in that direction."
+    },
+    {
+      "id": "cogat-sc-g4-2", "grade": 4, "difficulty": 3,
+      "prompt": "Despite the ______ weather, the match was played as planned.",
+      "choices": [
+        { "id": "a", "text": "stormy" }, { "id": "b", "text": "perfect" },
+        { "id": "c", "text": "warm" }, { "id": "d", "text": "usual" }, { "id": "e", "text": "expected" }
+      ],
+      "answer": "a",
+      "explanation": "Despite signals an obstacle that was overcome. Stormy weather is a reason the match might have been cancelled, so playing anyway is worth mentioning. Perfect and warm weather would be no obstacle at all.",
+      "strategy": "Despite and in spite of always introduce a problem. Look for the word that is a problem."
+    },
+    {
+      "id": "cogat-sc-g4-3", "grade": 4, "difficulty": 3,
+      "prompt": "The instructions were so ______ that even the youngest child could follow them.",
+      "choices": [
+        { "id": "a", "text": "clear" }, { "id": "b", "text": "long" },
+        { "id": "c", "text": "technical" }, { "id": "d", "text": "quiet" }, { "id": "e", "text": "printed" }
+      ],
+      "answer": "a",
+      "explanation": "So ______ that means the quality was strong enough to produce the result. Instructions a young child can follow are clear. Technical instructions would be harder, not easier.",
+      "strategy": "In a so ... that sentence, the blank must explain the outcome at the end."
+    },
+    {
+      "id": "cogat-sc-g4-4", "grade": 4, "difficulty": 4,
+      "prompt": "The evidence seemed ______ at first, but a closer look showed it proved nothing.",
+      "choices": [
+        { "id": "a", "text": "convincing" }, { "id": "b", "text": "weak" },
+        { "id": "c", "text": "missing" }, { "id": "d", "text": "old" }, { "id": "e", "text": "written" }
+      ],
+      "answer": "a",
+      "explanation": "But signals a turn. The second half says the evidence proved nothing, so the first half must say the opposite: it looked strong. Choice b says the same thing as the second half, which removes the contrast the word but demands.",
+      "strategy": "With but, the two halves must disagree. If your word agrees with the second half, it is wrong."
+    },
+    {
+      "id": "cogat-sc-g4-5", "grade": 4, "difficulty": 5,
+      "prompt": "Because the recipe called for an ______ ingredient, we had to visit three shops.",
+      "choices": [
+        { "id": "a", "text": "unusual" }, { "id": "b", "text": "expensive" },
+        { "id": "c", "text": "extra" }, { "id": "d", "text": "important" }, { "id": "e", "text": "old" }
+      ],
+      "answer": "a",
+      "explanation": "Visiting three shops means the ingredient was hard to find. Unusual explains that. Expensive is the near miss: something costly is usually still easy to find in one shop, it just costs more.",
+      "strategy": "When two words both sound sensible, pick the one that explains the exact detail given, here the three shops."
+    }
+  ]
+}

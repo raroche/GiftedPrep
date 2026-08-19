@@ -1,0 +1,2045 @@
+{
+  "id": "olsat-figural-series",
+  "test": "olsat",
+  "battery": "figural-reasoning",
+  "name": "Shape Series",
+  "icon": "series",
+  "blurb": "A row of shapes changes step by step. What comes next?",
+  "childIntro": "Look along the row. Something changes a little bit each time. What should the next one look like?",
+  "howItWorks": "A row of boxed figures shows a step by step change, and the child picks what comes next. It appears at every OLSAT level from kindergarten to grade 12. At the upper levels two things change at once, often moving in opposite directions.",
+  "parentTip": "The skill is describing the step in words. Ask what changed between box one and box two, then check the same change happened between two and three. If it did not, the step is not constant and something else is going on.",
+  "questions": [
+    {
+      "id": "olsat-fse-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "One circle, then two, then three, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One, two, three. One more each time. So four comes next.",
+      "strategy": "Count each box out loud as you go along the row."
+    },
+    {
+      "id": "olsat-fse-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A star that gets bigger each step.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.85
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The star grows a little bigger every step, so the next one is bigger again. Nothing else changes.",
+      "strategy": "Growing patterns keep growing. Look for the biggest one that is still a star."
+    },
+    {
+      "id": "olsat-fse-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "Squares alternating green, red, green, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Green and red take turns. The last one was green, so the next one is red.",
+      "strategy": "Take turns means look at the one just before and pick the other."
+    },
+    {
+      "id": "olsat-fse-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "An arrow turning a quarter turn each step.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The arrow turns a quarter turn clockwise each time: right, down, left. Next it points up.",
+      "strategy": "Follow the arrow tip around like the hand of a clock."
+    },
+    {
+      "id": "olsat-fse-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "Triangles counting one, three, five, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One, three, five. Two more each time. Five plus two is seven.",
+      "strategy": "Work out the jump between the first two, then check it again between the next two."
+    },
+    {
+      "id": "olsat-fse-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "Circles counting six, five, four, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count drops by one each time: six, five, four, three.",
+      "strategy": "Falling patterns are just as common as rising ones."
+    },
+    {
+      "id": "olsat-fse-g2-2",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A square alternating filled and empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Filled and empty take turns. The last one was filled, so the next is empty.",
+      "strategy": "Say it out loud: filled, empty, filled, empty."
+    },
+    {
+      "id": "olsat-fse-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "Stars that get more numerous and smaller each step.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 1,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 2,
+                "z": 0.75
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 3,
+                "z": 0.55
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 4,
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 5,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change together. The count goes up by one and the stars get smaller. Choice b grew the count but kept them big. Choice c shrank them but did not add one.",
+      "strategy": "More shapes usually means smaller shapes. Check both."
+    },
+    {
+      "id": "olsat-fse-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A shape turning by an eighth of a turn each step.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 135
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each step turns the shape by the same small amount, an eighth of a full turn. Choice b skipped a step.",
+      "strategy": "Count the steps rather than the angle. Each box is one step."
+    },
+    {
+      "id": "olsat-fse-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A hexagon going from empty to dotted to solid, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The fill goes empty, dotted, solid, and then the loop starts again at empty. Three steps and back to the beginning.",
+      "strategy": "When a pattern has three steps, check whether it loops back to the start."
+    },
+    {
+      "id": "olsat-fse-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "Squares counting two, four, six, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two more each step: two, four, six, eight.",
+      "strategy": "Find the step size first, then just add it on."
+    },
+    {
+      "id": "olsat-fse-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "An arrow turning by an eighth of a turn at each step.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 135
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 135
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 225
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each step adds an eighth of a turn clockwise. After one hundred and thirty five degrees comes one hundred and eighty, which points the opposite way to the start.",
+      "strategy": "Four steps of an eighth is a half turn. Use the count to check yourself."
+    },
+    {
+      "id": "olsat-fse-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "Circles counting one, two, four, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count doubles each time: one, two, four, eight. Choice b comes from adding two each time, but one plus two is three, not two.",
+      "strategy": "If the gaps keep growing, try doubling instead of adding."
+    },
+    {
+      "id": "olsat-fse-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "Stars that get fewer and bigger at each step.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 5,
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 4,
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 3,
+                "z": 0.75
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 2,
+                "z": 0.95
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 2,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 3,
+                "z": 0.95
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 1,
+                "z": 0.95
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 2,
+                "z": 0.95
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two rules moving in opposite directions: the count falls by one and the size grows. Choice b shrank the count but kept them small, and choice d dropped the count by two.",
+      "strategy": "Two rules going opposite ways is a favourite trick. Check each separately."
+    },
+    {
+      "id": "olsat-fse-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "Squares counting up while the fill alternates solid and empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 2,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 4,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 5,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two rules on different clocks. The count rises by one every step. The fill alternates solid, empty, solid, empty. The next box is the fifth, so it holds five squares and it is solid.",
+      "strategy": "One rule can change every step while another changes every other step. Track them apart."
+    },
+    {
+      "id": "olsat-fse-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "Triangles counting three, six, nine, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "11"
+        },
+        {
+          "id": "d",
+          "text": "18"
+        },
+        {
+          "id": "e",
+          "text": "9"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three more each step: three, six, nine, twelve. Choice d is doubling, which would give three, six, twelve.",
+      "strategy": "Once the count goes past nine it is easier to answer with a number than a picture."
+    },
+    {
+      "id": "olsat-fse-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A kite turning a quarter turn at each step, four steps shown.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four quarter turns make a full turn, so the fifth box looks exactly like the first.",
+      "strategy": "After a full turn a shape is back where it started. The pattern loops."
+    },
+    {
+      "id": "olsat-fse-g4-3",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "Circles doubling in number while the fill alternates.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 1,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 4,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 8
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "16 empty circles",
+          "label": "sixteen empty circles"
+        },
+        {
+          "id": "b",
+          "text": "16 solid circles",
+          "label": "sixteen solid circles"
+        },
+        {
+          "id": "c",
+          "text": "10 empty circles",
+          "label": "ten empty circles"
+        },
+        {
+          "id": "d",
+          "text": "9 empty circles",
+          "label": "nine empty circles"
+        },
+        {
+          "id": "e",
+          "text": "8 empty circles",
+          "label": "eight empty circles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two rules again. The count doubles: one, two, four, eight, sixteen. The fill alternates empty, solid, empty, solid, so the next is empty.",
+      "strategy": "Doubling grows fast. One, two, four, eight, sixteen, thirty-two."
+    },
+    {
+      "id": "olsat-fse-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A hexagon whose fill changes at each step: empty, dotted, striped, solid.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "stripesd"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "stripesd"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The fill goes from nothing to a little to a lot to completely solid, and then the loop starts again at empty.",
+      "strategy": "A four step loop returns to the start on the fifth box."
+    },
+    {
+      "id": "olsat-fse-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "Stars counting up, with a small dot appearing under every other box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 1
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 88
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 3
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 88
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 5
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 88
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 6
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 88
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 4
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 88
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count rises by one every box. The dot appears on boxes one, three and five, which are the odd numbered boxes. The next box is the fifth, so it has five stars and a dot.",
+      "strategy": "Number the boxes one to five. Then ask which box numbers get the extra detail."
+    }
+  ]
+}

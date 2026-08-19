@@ -1,0 +1,493 @@
+{
+  "id": "olsat-word-letter-matrix",
+  "test": "olsat",
+  "battery": "verbal-reasoning",
+  "name": "Word Matrix",
+  "icon": "grid",
+  "blurb": "A grid of words follows a rule. What is missing?",
+  "childIntro": "The words in the grid change in a pattern. Work out the pattern and fill in the missing word.",
+  "howItWorks": "A small grid of words or letters with one cell missing. It is the word version of a pattern matrix and runs at OLSAT levels D through G. The rule is often about adding or removing letters, and the hard version makes you run the rule backwards from a known ending.",
+  "parentTip": "The hardest version gives you the END of the pattern and makes you work backwards. If your child is stuck, ask them to write the rule as an arrow, for example add one letter to the front, then read the arrow in reverse.",
+  "questions": [
+    {
+      "id": "olsat-wlm-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each row adds a letter to the front and then to the end.",
+        "rows": [
+          [
+            "at",
+            "cat",
+            "cats"
+          ],
+          [
+            "ar",
+            "car",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "cars"
+        },
+        {
+          "id": "b",
+          "text": "care"
+        },
+        {
+          "id": "c",
+          "text": "cart"
+        },
+        {
+          "id": "d",
+          "text": "scar"
+        },
+        {
+          "id": "e",
+          "text": "arc"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Along the top row, a letter is added to the front, then a letter is added to the end. Doing the same to car gives cars.",
+      "strategy": "Say the change as an arrow: add to the front, then add to the end."
+    },
+    {
+      "id": "olsat-wlm-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where the pattern must be run backwards to find the first cell.",
+        "rows": [
+          [
+            "on",
+            "son",
+            "song"
+          ],
+          [
+            "?",
+            "hat",
+            "hats"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "at"
+        },
+        {
+          "id": "b",
+          "text": "ha"
+        },
+        {
+          "id": "c",
+          "text": "that"
+        },
+        {
+          "id": "d",
+          "text": "hate"
+        },
+        {
+          "id": "e",
+          "text": "hats"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In the top row, s is added to the front and then g to the end. In the bottom row the middle word is hat and the last is hats, so the first word must be hat with its front letter removed, which is at.",
+      "strategy": "Running a rule backwards means undoing it. Take the letter off instead of adding it."
+    },
+    {
+      "id": "olsat-wlm-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each word gains the ending that means more.",
+        "rows": [
+          [
+            "big",
+            "bigger"
+          ],
+          [
+            "tall",
+            "?"
+          ]
+        ],
+        "cellWidth": 130
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "taller"
+        },
+        {
+          "id": "b",
+          "text": "tallest"
+        },
+        {
+          "id": "c",
+          "text": "tall"
+        },
+        {
+          "id": "d",
+          "text": "height"
+        },
+        {
+          "id": "e",
+          "text": "high"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Big becomes bigger, which means more big. Tall becomes taller. Choice b, tallest, means the most of all, which is one step further.",
+      "strategy": "Endings carry meaning. The -er ending means more, and -est means the most."
+    },
+    {
+      "id": "olsat-wlm-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each word gains a beginning that means not.",
+        "rows": [
+          [
+            "happy",
+            "unhappy"
+          ],
+          [
+            "kind",
+            "?"
+          ]
+        ],
+        "cellWidth": 130
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "unkind"
+        },
+        {
+          "id": "b",
+          "text": "kindly"
+        },
+        {
+          "id": "c",
+          "text": "kinder"
+        },
+        {
+          "id": "d",
+          "text": "kindness"
+        },
+        {
+          "id": "e",
+          "text": "mean"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Adding un to the front turns a word into its opposite. Happy becomes unhappy, kind becomes unkind. Choice e means the same thing but does not follow the pattern of adding un.",
+      "strategy": "The pattern is about how the word is BUILT, not just what it means."
+    },
+    {
+      "id": "olsat-wlm-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid pairing a kind of writing with the mark that divides it.",
+        "rows": [
+          [
+            "words",
+            "hyphen"
+          ],
+          [
+            "numbers",
+            "?"
+          ]
+        ],
+        "cellWidth": 140
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "decimal point"
+        },
+        {
+          "id": "b",
+          "text": "hyphen"
+        },
+        {
+          "id": "c",
+          "text": "comma"
+        },
+        {
+          "id": "d",
+          "text": "letter"
+        },
+        {
+          "id": "e",
+          "text": "digit"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A hyphen is the little mark that divides parts of a word. The mark that divides parts of a number is the decimal point. Choice b just copies the row above.",
+      "strategy": "When a matrix is about meaning rather than spelling, ask what each thing DOES."
+    },
+    {
+      "id": "olsat-wlm-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each verb gains the -ing ending.",
+        "rows": [
+          [
+            "run",
+            "running"
+          ],
+          [
+            "swim",
+            "?"
+          ]
+        ],
+        "cellWidth": 130
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "swimming"
+        },
+        {
+          "id": "b",
+          "text": "swiming"
+        },
+        {
+          "id": "c",
+          "text": "swam"
+        },
+        {
+          "id": "d",
+          "text": "swimmer"
+        },
+        {
+          "id": "e",
+          "text": "swims"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Run becomes running, doubling the last letter before adding ing. Swim does the same and becomes swimming. Choice b forgets to double the m.",
+      "strategy": "Watch the spelling rule as well as the meaning. Short words double the last letter."
+    },
+    {
+      "id": "olsat-wlm-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where a verb becomes the person who does it.",
+        "rows": [
+          [
+            "teach",
+            "teacher"
+          ],
+          [
+            "?",
+            "builder"
+          ]
+        ],
+        "cellWidth": 130
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "build"
+        },
+        {
+          "id": "b",
+          "text": "building"
+        },
+        {
+          "id": "c",
+          "text": "built"
+        },
+        {
+          "id": "d",
+          "text": "builds"
+        },
+        {
+          "id": "e",
+          "text": "brick"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Teach becomes teacher, the person who teaches. So builder comes from build. Choice b is the thing, not the action.",
+      "strategy": "The -er ending can also mean the person who does it."
+    },
+    {
+      "id": "olsat-wlm-g4-3",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where the third word combines the first two and doubles a vowel.",
+        "rows": [
+          [
+            "se",
+            "sn",
+            "seen"
+          ],
+          [
+            "lo",
+            "lp",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "loop"
+        },
+        {
+          "id": "b",
+          "text": "lone"
+        },
+        {
+          "id": "c",
+          "text": "slop"
+        },
+        {
+          "id": "d",
+          "text": "lop"
+        },
+        {
+          "id": "e",
+          "text": "pool"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In the top row, se and sn combine into seen: the s stays, the e is doubled, and the n comes from the second cell. Doing the same to lo and lp gives loop.",
+      "strategy": "When a rule uses TWO earlier cells, write out exactly which letters come from where."
+    },
+    {
+      "id": "olsat-wlm-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What is the missing letter?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid of letters where each row skips one letter of the alphabet.",
+        "rows": [
+          [
+            "A",
+            "C",
+            "E"
+          ],
+          [
+            "B",
+            "D",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "F"
+        },
+        {
+          "id": "b",
+          "text": "E"
+        },
+        {
+          "id": "c",
+          "text": "G"
+        },
+        {
+          "id": "d",
+          "text": "C"
+        },
+        {
+          "id": "e",
+          "text": "H"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The top row goes A, C, E, skipping one letter each time. The bottom row goes B, D, so skipping one more gives F.",
+      "strategy": "Write the alphabet out along the edge of your paper. Then counting is easy."
+    },
+    {
+      "id": "olsat-wlm-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What word is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid showing three degrees of a describing word.",
+        "rows": [
+          [
+            "cold",
+            "colder",
+            "coldest"
+          ],
+          [
+            "?",
+            "better",
+            "best"
+          ]
+        ],
+        "cellWidth": 115
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "good"
+        },
+        {
+          "id": "b",
+          "text": "bad"
+        },
+        {
+          "id": "c",
+          "text": "well"
+        },
+        {
+          "id": "d",
+          "text": "goodest"
+        },
+        {
+          "id": "e",
+          "text": "gooder"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Cold, colder, coldest shows one thing, then more of it, then the most. Better and best are the more and most forms of good, even though they do not look like it.",
+      "strategy": "Some words change shape completely: good, better, best. Learn the odd ones as a set."
+    }
+  ]
+}

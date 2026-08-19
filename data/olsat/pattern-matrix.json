@@ -1,0 +1,3162 @@
+{
+  "id": "olsat-pattern-matrix",
+  "test": "olsat",
+  "battery": "figural-reasoning",
+  "name": "Pattern Matrix",
+  "icon": "grid",
+  "blurb": "A grid of shapes with one box empty. Fill it in.",
+  "childIntro": "Look across the rows and down the columns. Both tell you something. What belongs in the empty box?",
+  "howItWorks": "A three by three grid of figures with the bottom right box empty. Patterns run both across the rows and down the columns, and the answer has to satisfy both at once. It appears at every OLSAT level. This is the classic reasoning puzzle that psychologists have used for nearly a hundred years.",
+  "parentTip": "Two independent rules, one across and one down, is the standard build. Teach the two step routine: point along the row and say what changes, then point down the column and say what changes. Then say the answer out loud before looking at the choices. Predicting first stops a child from being pulled towards whichever picture merely looks familiar.",
+  "questions": [
+    {
+      "id": "olsat-pm-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the row sets the shape and the column sets the colour.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The row decides the shape, which is a triangle. The column decides the colour, which is green.",
+      "strategy": "Row for the shape. Column for the colour. Then put them together."
+    },
+    {
+      "id": "olsat-pm-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where every row counts one, two, three.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every row goes one, two, three. The bottom row is at two, so three comes next.",
+      "strategy": "Count each row before you look at the answers."
+    },
+    {
+      "id": "olsat-pm-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where shapes grow from small to large across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.7
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The shapes grow small, medium, large across every row. The row decides the shape, which is a triangle.",
+      "strategy": "Size is a pattern too. Small, medium, large."
+    },
+    {
+      "id": "olsat-pm-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the fill alternates solid and empty in each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "In every row the fill goes solid, empty, solid. The row also sets the shape and the colour, so the answer is a solid green star.",
+      "strategy": "Three things to check: shape, colour and fill."
+    },
+    {
+      "id": "olsat-pm-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of arrows turning a quarter turn across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each row turns the arrow a quarter turn clockwise, twice. The bottom row has done one turn, so one more gives a half turn from the start.",
+      "strategy": "Follow the arrow tip. Right, down, left."
+    },
+    {
+      "id": "olsat-pm-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the column sets the shape and the row sets the colour.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The column is circles and the row is green. So the answer is a green circle.",
+      "strategy": "Point along the row, then down the column. Two facts, one answer."
+    },
+    {
+      "id": "olsat-pm-g2-2",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the count rises by one across each row and each row starts one higher.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count rises by one across and by one down. The bottom row runs three, four, so five comes next.",
+      "strategy": "Two counting rules going the same way. Either one gets you there."
+    },
+    {
+      "id": "olsat-pm-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where a dot slides from left to right across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 26,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 50,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 26,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 50,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 26,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 50,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 26,
+                "y": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The dot slides left to right across each row. The row sets the shape, a triangle. Choice d lost the dot entirely.",
+      "strategy": "Track the small detail. The outer shape is set by the row."
+    },
+    {
+      "id": "olsat-pm-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the fill goes solid, empty, dotted across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "dots"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The fill goes solid, empty, dotted across every row. The row sets the colour, green.",
+      "strategy": "Write the three fills down in order, then find where the hole falls."
+    },
+    {
+      "id": "olsat-pm-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the count doubles and the shapes shrink across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 1,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2,
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 1,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 2,
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 1,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 2,
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4,
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Across each row the count doubles from one to two to four, and the shapes get smaller. The row sets the shape and colour.",
+      "strategy": "Doubling: one, two, four, eight. Not one, two, three."
+    },
+    {
+      "id": "olsat-pm-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the number of sides grows across each row and the colour comes from the row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The number of sides goes three, four, five across each row. The row sets the colour, green. So the answer is a green pentagon.",
+      "strategy": "Count sides rather than naming shapes. Three, four, five is a clearer pattern."
+    },
+    {
+      "id": "olsat-pm-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the count rises by two across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "teal",
+                "n": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count rises by two across each row: two, four, six. The row sets the shape, a star.",
+      "strategy": "Check the step size on a completed row first, then apply it."
+    },
+    {
+      "id": "olsat-pm-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where each step across or down turns the shape by an eighth of a turn.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 135
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 135
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 135
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 225
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every step, across or down, turns the shape by an eighth of a full turn. The bottom row runs a quarter, then three eighths, so a half turn comes next.",
+      "strategy": "Count steps rather than degrees. Each box is one step."
+    },
+    {
+      "id": "olsat-pm-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the outer shape comes from the row and the inner shape from the column.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.35
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The outer shape belongs to the row and the inner shape belongs to the column. The bottom row is hexagons and the last column is stars.",
+      "strategy": "When shapes are nested, treat the outside and the inside as two separate patterns."
+    },
+    {
+      "id": "olsat-pm-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the shape loop shifts on each row and the count rises across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count goes one, two, three across every row. The shape loop is star, circle, triangle, shifting one step at the start of each row, so the bottom row runs triangle, star, circle. Each shape keeps its own colour.",
+      "strategy": "Solve the count first because it is easy. Then work out the shape loop."
+    },
+    {
+      "id": "olsat-pm-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where shapes grow across each row and the row sets the shape.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "teal",
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange",
+                "z": 1
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Shapes grow small, medium, large across every row. The row sets the shape, a pentagon.",
+      "strategy": "Size sequences behave exactly like colour or count sequences."
+    },
+    {
+      "id": "olsat-pm-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the count drops by three across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 9
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count falls by three across every row: nine, six, three. The row sets the shape and colour.",
+      "strategy": "Falling by three. Say it backwards to check: nine, six, three."
+    },
+    {
+      "id": "olsat-pm-g4-3",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of arrows turning a quarter turn at every step across and down.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "red"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four quarter turns make a whole turn, so after three quarters the next one points the same way as the very first arrow.",
+      "strategy": "The turning loop has four positions and then repeats."
+    },
+    {
+      "id": "olsat-pm-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the dot travels top left, top right, bottom right across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 26,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 74,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 74,
+                "y": 74
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 26,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 74,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 74,
+                "y": 74
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 26,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 74,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 74,
+                "y": 74
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 26,
+                "y": 74
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 26,
+                "y": 26
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.18,
+                "x": 74,
+                "y": 74
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The dot moves top left, then top right, then bottom right along every row. The row sets the outer shape, a hexagon. Choice b puts the dot in a corner it never visits.",
+      "strategy": "Trace the dot's journey with your finger along a completed row first."
+    },
+    {
+      "id": "olsat-pm-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid with three rules at once: a shape loop, a count and an alternating fill.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 1,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 3,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 2,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 1,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 3,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 3,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 2,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 3,
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three rules. The count is one, two, three across every row. The shape loop is square, circle, triangle shifting one step each row, so the bottom row runs triangle, square, circle, and each shape keeps its own colour. The fill alternates empty, solid all the way along the line, and the box before the hole is solid, so the hole is empty.",
+      "strategy": "Three rules at once. Solve the easy one first, write the answer down, then start the next."
+    }
+  ]
+}

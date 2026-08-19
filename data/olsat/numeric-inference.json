@@ -1,0 +1,535 @@
+{
+  "id": "olsat-numeric-inference",
+  "test": "olsat",
+  "battery": "quantitative-reasoning",
+  "name": "Numeric Inference",
+  "icon": "numbers",
+  "blurb": "Three groups follow the same hidden rule. Fill in the gap.",
+  "childIntro": "Look at the first two groups. The numbers in each group follow the same secret rule. Use it to fill in the missing number in the third group.",
+  "howItWorks": "Three separate boxes, each holding two or three numbers linked by one shared rule. The first two boxes are complete so the rule can be worked out and then checked. The third has a number missing. It runs at OLSAT levels D through G.",
+  "parentTip": "This is the type that most rewards the check-it-twice habit. The first box alone is usually ambiguous. Teach your child to form a rule from box one and then verify it against box two BEFORE touching box three. If it fails on box two, the rule is wrong.",
+  "questions": [
+    {
+      "id": "olsat-nin-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups: four and eight, seven and fourteen, nine and question mark.",
+        "rows": [
+          [
+            "4",
+            "8"
+          ],
+          [
+            "7",
+            "14"
+          ],
+          [
+            "9",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "18"
+        },
+        {
+          "id": "b",
+          "text": "16"
+        },
+        {
+          "id": "c",
+          "text": "11"
+        },
+        {
+          "id": "d",
+          "text": "13"
+        },
+        {
+          "id": "e",
+          "text": "20"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four to eight could be doubling or adding four. Seven to fourteen is doubling, because seven plus four is eleven. So nine doubled is eighteen.",
+      "strategy": "The first pair is ambiguous on purpose. The second pair tells you which rule is right."
+    },
+    {
+      "id": "olsat-nin-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups where the second number is a third of the first.",
+        "rows": [
+          [
+            "12",
+            "4"
+          ],
+          [
+            "21",
+            "7"
+          ],
+          [
+            "27",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "9"
+        },
+        {
+          "id": "b",
+          "text": "8"
+        },
+        {
+          "id": "c",
+          "text": "23"
+        },
+        {
+          "id": "d",
+          "text": "3"
+        },
+        {
+          "id": "e",
+          "text": "13"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twelve divided by three is four. Twenty-one divided by three is seven. Twenty-seven divided by three is nine. Choice c comes from subtracting four instead.",
+      "strategy": "When the second number is much smaller, try dividing. Test the divisor on both known groups."
+    },
+    {
+      "id": "olsat-nin-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers each.",
+        "rows": [
+          [
+            "3",
+            "9",
+            "4"
+          ],
+          [
+            "5",
+            "25",
+            "6"
+          ],
+          [
+            "8",
+            "?",
+            "9"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "64"
+        },
+        {
+          "id": "b",
+          "text": "16"
+        },
+        {
+          "id": "c",
+          "text": "24"
+        },
+        {
+          "id": "d",
+          "text": "72"
+        },
+        {
+          "id": "e",
+          "text": "17"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In each group the middle number is the first number times itself. Three times three is nine. Five times five is twenty-five. Eight times eight is sixty-four. The third number is just the first number plus one, which lets you check the group is complete.",
+      "strategy": "Two rules in one group means two chances to check yourself."
+    },
+    {
+      "id": "olsat-nin-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups following a two step rule.",
+        "rows": [
+          [
+            "6",
+            "13"
+          ],
+          [
+            "9",
+            "19"
+          ],
+          [
+            "4",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "9"
+        },
+        {
+          "id": "b",
+          "text": "11"
+        },
+        {
+          "id": "c",
+          "text": "8"
+        },
+        {
+          "id": "d",
+          "text": "12"
+        },
+        {
+          "id": "e",
+          "text": "10"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Double it, then add one. Six doubled is twelve, plus one is thirteen. Nine doubled is eighteen, plus one is nineteen. Four doubled is eight, plus one is nine.",
+      "strategy": "If doubling is close but always one out, the rule has a second step."
+    },
+    {
+      "id": "olsat-nin-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups where the third number is always six.",
+        "rows": [
+          [
+            "10",
+            "4",
+            "6"
+          ],
+          [
+            "15",
+            "9",
+            "6"
+          ],
+          [
+            "21",
+            "?",
+            "6"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "15"
+        },
+        {
+          "id": "b",
+          "text": "14"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        },
+        {
+          "id": "d",
+          "text": "6"
+        },
+        {
+          "id": "e",
+          "text": "27"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In each group the first number minus the second gives the third, which is always six. Ten minus four is six. Fifteen minus nine is six. So twenty-one minus fifteen is six.",
+      "strategy": "When one number never changes, it is probably the ANSWER to the rule, not part of it."
+    },
+    {
+      "id": "olsat-nin-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups where the second number is seven times the first.",
+        "rows": [
+          [
+            "3",
+            "21"
+          ],
+          [
+            "5",
+            "35"
+          ],
+          [
+            "8",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "56"
+        },
+        {
+          "id": "b",
+          "text": "48"
+        },
+        {
+          "id": "c",
+          "text": "26"
+        },
+        {
+          "id": "d",
+          "text": "64"
+        },
+        {
+          "id": "e",
+          "text": "15"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three times seven is twenty-one. Five times seven is thirty-five. Eight times seven is fifty-six.",
+      "strategy": "Find the multiplier from the first group, then confirm on the second."
+    },
+    {
+      "id": "olsat-nin-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers, each ending in zero.",
+        "rows": [
+          [
+            "4",
+            "48",
+            "0"
+          ],
+          [
+            "-2",
+            "-24",
+            "0"
+          ],
+          [
+            "5",
+            "?",
+            "0"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "60"
+        },
+        {
+          "id": "b",
+          "text": "50"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        },
+        {
+          "id": "d",
+          "text": "55"
+        },
+        {
+          "id": "e",
+          "text": "0"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The second number is the first times twelve. Four times twelve is forty-eight. Minus two times twelve is minus twenty-four. Five times twelve is sixty. The third number is always zero because anything times zero is zero.",
+      "strategy": "Negative numbers follow the same rules. Work out the size first, then the sign."
+    },
+    {
+      "id": "olsat-nin-g4-3",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups where the second number is the square root of the first.",
+        "rows": [
+          [
+            "100",
+            "10"
+          ],
+          [
+            "64",
+            "8"
+          ],
+          [
+            "49",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "9"
+        },
+        {
+          "id": "c",
+          "text": "24"
+        },
+        {
+          "id": "d",
+          "text": "6"
+        },
+        {
+          "id": "e",
+          "text": "14"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The second number times itself gives the first. Ten times ten is one hundred. Eight times eight is sixty-four. Seven times seven is forty-nine.",
+      "strategy": "When the second number is much smaller, try the number that multiplies by itself to make the first."
+    },
+    {
+      "id": "olsat-nin-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups following a two step rule.",
+        "rows": [
+          [
+            "7",
+            "20"
+          ],
+          [
+            "10",
+            "29"
+          ],
+          [
+            "6",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "17"
+        },
+        {
+          "id": "b",
+          "text": "18"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        },
+        {
+          "id": "d",
+          "text": "19"
+        },
+        {
+          "id": "e",
+          "text": "20"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Times three, then minus one. Seven times three is twenty-one, minus one is twenty. Ten times three is thirty, minus one is twenty-nine. Six times three is eighteen, minus one is seventeen.",
+      "strategy": "Multiply first and see how far off you are. If you are one over both times, subtract one."
+    },
+    {
+      "id": "olsat-nin-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "2",
+            "3",
+            "13"
+          ],
+          [
+            "4",
+            "5",
+            "41"
+          ],
+          [
+            "3",
+            "6",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "45"
+        },
+        {
+          "id": "b",
+          "text": "18"
+        },
+        {
+          "id": "c",
+          "text": "27"
+        },
+        {
+          "id": "d",
+          "text": "36"
+        },
+        {
+          "id": "e",
+          "text": "9"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The third number is the first squared plus the second squared. Two times two is four, three times three is nine, and four plus nine is thirteen. Four times four is sixteen, five times five is twenty-five, and sixteen plus twenty-five is forty-one. Three times three is nine, six times six is thirty-six, and nine plus thirty-six is forty-five.",
+      "strategy": "When the third number is much bigger than the other two, squaring is usually involved."
+    }
+  ]
+}

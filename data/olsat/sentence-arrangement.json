@@ -1,0 +1,496 @@
+{
+  "id": "olsat-sentence-arrangement",
+  "test": "olsat",
+  "battery": "verbal-comprehension",
+  "name": "Sentence Arrangement",
+  "icon": "listOrder",
+  "blurb": "Unscramble the words, then answer about the last word.",
+  "childIntro": "The words are jumbled up. Put them in order in your head to make a good sentence. Then say which letter the last word starts with.",
+  "howItWorks": "This is the strangest question type on the whole test. The child is given a scrambled list of words, must build the best sentence from them in their head, and then answer a question about a single letter: what does the last word begin with. It runs at OLSAT levels D through G.",
+  "parentTip": "Two things make this hard. Building the sentence mentally with nothing to write on, and then remembering to answer the letter question rather than the sentence. A useful tip: look at the answer letters first. They often tell you which word the test expects at the end, because only one of them is possible.",
+  "questions": [
+    {
+      "id": "olsat-sar-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Put these words in order to make a sentence. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Six jumbled words: the, quietly, librarian, door, closed, the.",
+        "rows": [
+          [
+            "the",
+            "quietly",
+            "librarian",
+            "door",
+            "closed",
+            "the"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "d"
+        },
+        {
+          "id": "b",
+          "text": "t"
+        },
+        {
+          "id": "c",
+          "text": "q"
+        },
+        {
+          "id": "d",
+          "text": "l"
+        },
+        {
+          "id": "e",
+          "text": "c"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: The librarian quietly closed the door. The last word is door, which begins with d. Choice c catches anyone who puts quietly at the end.",
+      "strategy": "Find the person doing the action first. Then the action. Then what it was done to."
+    },
+    {
+      "id": "olsat-sar-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Six jumbled words: are, for, known, bees, honey, their.",
+        "rows": [
+          [
+            "are",
+            "for",
+            "known",
+            "bees",
+            "honey",
+            "their"
+          ]
+        ],
+        "cellWidth": 115
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "h"
+        },
+        {
+          "id": "b",
+          "text": "b"
+        },
+        {
+          "id": "c",
+          "text": "k"
+        },
+        {
+          "id": "d",
+          "text": "t"
+        },
+        {
+          "id": "e",
+          "text": "f"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: Bees are known for their honey. The last word is honey, which begins with h.",
+      "strategy": "Little words like for and their glue the sentence together. Put the big words in place first."
+    },
+    {
+      "id": "olsat-sar-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Seven jumbled words: a, garden, planted, she, in, seeds, the.",
+        "rows": [
+          [
+            "a",
+            "garden",
+            "planted",
+            "she",
+            "in",
+            "seeds",
+            "the"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "g"
+        },
+        {
+          "id": "b",
+          "text": "s"
+        },
+        {
+          "id": "c",
+          "text": "p"
+        },
+        {
+          "id": "d",
+          "text": "i"
+        },
+        {
+          "id": "e",
+          "text": "a"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: She planted a seed in the garden. Using the words given, it reads: She planted seeds in the garden. Either way the last word is garden, which begins with g.",
+      "strategy": "Places usually come at the end of a sentence. Look for the word that names a place."
+    },
+    {
+      "id": "olsat-sar-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Ten jumbled words.",
+        "rows": [
+          [
+            "diet",
+            "vegetables",
+            "Judy's",
+            "fruit",
+            "had",
+            "balance",
+            "a",
+            "good",
+            "of",
+            "and"
+          ]
+        ],
+        "cellWidth": 100
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "v"
+        },
+        {
+          "id": "b",
+          "text": "f"
+        },
+        {
+          "id": "c",
+          "text": "g"
+        },
+        {
+          "id": "d",
+          "text": "d"
+        },
+        {
+          "id": "e",
+          "text": "b"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: Judy's diet had a good balance of fruit and vegetables. The last word is vegetables, beginning with v. Note that fruit and vegetables could also be swapped, but f is not offered, which tells you which order the test wants.",
+      "strategy": "If two orders both work, look at the answer letters. Only one of them will be there."
+    },
+    {
+      "id": "olsat-sar-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Eight jumbled words.",
+        "rows": [
+          [
+            "influenced",
+            "deeply",
+            "by",
+            "ancient",
+            "we",
+            "civilizations",
+            "been",
+            "have"
+          ]
+        ],
+        "cellWidth": 105
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "c"
+        },
+        {
+          "id": "b",
+          "text": "w"
+        },
+        {
+          "id": "c",
+          "text": "i"
+        },
+        {
+          "id": "d",
+          "text": "d"
+        },
+        {
+          "id": "e",
+          "text": "a"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: We have been deeply influenced by ancient civilizations. The last word is civilizations, beginning with c. The hard part is building the chain have been influenced.",
+      "strategy": "Verb chains like have been going take practice. Say them out loud to hear whether they sound right."
+    },
+    {
+      "id": "olsat-sar-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Seven jumbled words.",
+        "rows": [
+          [
+            "cake",
+            "the",
+            "baked",
+            "birthday",
+            "grandmother",
+            "a",
+            "my"
+          ]
+        ],
+        "cellWidth": 105
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "c"
+        },
+        {
+          "id": "b",
+          "text": "g"
+        },
+        {
+          "id": "c",
+          "text": "b"
+        },
+        {
+          "id": "d",
+          "text": "m"
+        },
+        {
+          "id": "e",
+          "text": "a"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: My grandmother baked a birthday cake. The last word is cake, beginning with c. Birthday describes the cake, so it comes before it, not after.",
+      "strategy": "Describing words go in front of the thing they describe in English."
+    },
+    {
+      "id": "olsat-sar-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Eight jumbled words.",
+        "rows": [
+          [
+            "storm",
+            "because",
+            "cancelled",
+            "the",
+            "was",
+            "match",
+            "of",
+            "the"
+          ]
+        ],
+        "cellWidth": 105
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "s"
+        },
+        {
+          "id": "b",
+          "text": "m"
+        },
+        {
+          "id": "c",
+          "text": "c"
+        },
+        {
+          "id": "d",
+          "text": "b"
+        },
+        {
+          "id": "e",
+          "text": "w"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: The match was cancelled because of the storm. The last word is storm, beginning with s.",
+      "strategy": "Because of always introduces the reason, and the reason usually comes last."
+    },
+    {
+      "id": "olsat-sar-g4-3",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Six jumbled words.",
+        "rows": [
+          [
+            "mountains",
+            "the",
+            "above",
+            "eagle",
+            "soared",
+            "the"
+          ]
+        ],
+        "cellWidth": 115
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "m"
+        },
+        {
+          "id": "b",
+          "text": "e"
+        },
+        {
+          "id": "c",
+          "text": "s"
+        },
+        {
+          "id": "d",
+          "text": "a"
+        },
+        {
+          "id": "e",
+          "text": "t"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: The eagle soared above the mountains. The last word is mountains, beginning with m.",
+      "strategy": "Position words like above, under and behind are followed by the place."
+    },
+    {
+      "id": "olsat-sar-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Eight jumbled words.",
+        "rows": [
+          [
+            "carefully",
+            "instructions",
+            "the",
+            "before",
+            "read",
+            "starting",
+            "should",
+            "you"
+          ]
+        ],
+        "cellWidth": 105
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "s"
+        },
+        {
+          "id": "b",
+          "text": "i"
+        },
+        {
+          "id": "c",
+          "text": "c"
+        },
+        {
+          "id": "d",
+          "text": "y"
+        },
+        {
+          "id": "e",
+          "text": "r"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: You should read the instructions carefully before starting. The last word is starting, beginning with s.",
+      "strategy": "Before and after introduce a second part of the sentence, which usually goes at the end."
+    },
+    {
+      "id": "olsat-sar-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Put these words in order. What letter does the LAST word begin with?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Seven jumbled words.",
+        "rows": [
+          [
+            "discovery",
+            "led",
+            "to",
+            "an",
+            "the",
+            "experiment",
+            "unexpected"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "d"
+        },
+        {
+          "id": "b",
+          "text": "e"
+        },
+        {
+          "id": "c",
+          "text": "u"
+        },
+        {
+          "id": "d",
+          "text": "l"
+        },
+        {
+          "id": "e",
+          "text": "t"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sentence is: The experiment led to an unexpected discovery. The last word is discovery, beginning with d. Unexpected describes the discovery, so it goes before it.",
+      "strategy": "When a long describing word is in the list, find the thing it describes and put it just after."
+    }
+  ]
+}

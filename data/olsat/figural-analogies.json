@@ -1,0 +1,2084 @@
+{
+  "id": "olsat-figural-analogies",
+  "test": "olsat",
+  "battery": "figural-reasoning",
+  "name": "Shape Analogies",
+  "icon": "analogy",
+  "blurb": "The first two shapes change. Change the third one the same way.",
+  "childIntro": "Look at the first two shapes. Something happened to turn the first one into the second. Make that same thing happen to the third shape.",
+  "howItWorks": "Figure A becomes figure B. The child works out what happened and applies it to figure C. This runs at every OLSAT level from kindergarten to grade 12. At the lower levels one thing changes; by the upper levels two or three change at once.",
+  "parentTip": "Ask your child to say the change as a short sentence before looking at the answers. It flipped over. It got smaller and turned grey. Children who look at the answers first tend to pick whichever one merely looks similar.",
+  "questions": [
+    {
+      "id": "olsat-fan-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Make the same change to the third shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty circle becomes a filled circle. An empty square becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "blue",
+              "f": "outline"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "blue"
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "blue",
+              "f": "outline"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The shape gets filled in. Nothing else changes, so the square stays a square.",
+      "strategy": "Say the change out loud: it fills in."
+    },
+    {
+      "id": "olsat-fan-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Make the same change to the third shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A small star becomes a big star. A small heart becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "yellow",
+              "z": 0.5
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "yellow"
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "heart",
+              "c": "red",
+              "z": 0.5
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The shape gets bigger. The colour and the shape do not change.",
+      "strategy": "Only the size changed. Check that everything else stayed the same."
+    },
+    {
+      "id": "olsat-fan-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Make the same change to the third shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A green triangle turns upside down. An orange house shape turns how?",
+        "a": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "green"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "green",
+              "r": 180
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "house",
+              "c": "orange"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The shape flips all the way over. Choice c only turned it a quarter of the way.",
+      "strategy": "Upside down means half a turn. On its side means a quarter turn."
+    },
+    {
+      "id": "olsat-fan-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Make the same change to the third shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "One purple circle becomes three purple circles. One teal square becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "purple"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "purple",
+              "n": 3
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "teal"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One becomes three. So one square becomes three squares. Choice b has only two.",
+      "strategy": "Count both of the first two boxes before you look at the answers."
+    },
+    {
+      "id": "olsat-fan-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Make the same change to the third shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A small empty square becomes a big green square. A small empty triangle becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "grey",
+              "f": "outline",
+              "z": 0.5
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "green"
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "grey",
+              "f": "outline",
+              "z": 0.5
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "grey",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things happen: the shape grows and it turns green. Choice b is green but small. Choice c is big but still empty.",
+      "strategy": "Two changes means two checks. Size, then colour."
+    },
+    {
+      "id": "olsat-fan-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which shape completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A solid pentagon gains stripes. A solid hexagon becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "pentagon",
+              "c": "blue"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "pentagon",
+              "c": "blue",
+              "f": "stripesd"
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "hexagon",
+              "c": "red"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "stripesd"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "f": "stripesd"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The solid fill becomes slanted stripes. Choice b used dots, which is a different pattern.",
+      "strategy": "Stripes go one way. Dots are scattered. They are not the same."
+    },
+    {
+      "id": "olsat-fan-g2-2",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which shape completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A green arrow turns a quarter turn. A purple flag turns how?",
+        "a": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "green"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "green",
+              "r": 90
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "purple"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A quarter turn clockwise. Choice b turned the same distance the wrong way.",
+      "strategy": "Clockwise is the way a clock's hands move. Decide the direction first."
+    },
+    {
+      "id": "olsat-fan-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which shape completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Four circles become two circles. Six stars become what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "orange",
+              "n": 4
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "orange",
+              "n": 2
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "blue",
+              "n": 6
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four circles become two, which is half. Half of six is three. Choice c is what you get if you copy the number from the top pair instead of the rule.",
+      "strategy": "Half means split into two equal groups. Half of six is three."
+    },
+    {
+      "id": "olsat-fan-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which shape completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A square with a small circle inside loses the circle. A triangle with a small star inside becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "teal",
+              "f": "outline"
+            },
+            {
+              "s": "circle",
+              "c": "yellow",
+              "z": 0.35
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "teal",
+              "f": "outline"
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "red",
+              "f": "outline"
+            },
+            {
+              "s": "star",
+              "c": "green",
+              "z": 0.35
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "green",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The small shape inside is taken away and the empty outline is left. Choice d filled the triangle in, which never happened.",
+      "strategy": "Ask what was removed. Then check nothing else changed."
+    },
+    {
+      "id": "olsat-fan-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which shape completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Two blue diamonds become four smaller green diamonds, tilted. Two blue pentagons become what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "diamond",
+              "c": "blue",
+              "n": 2,
+              "z": 0.7
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "diamond",
+              "c": "green",
+              "n": 4,
+              "z": 0.45,
+              "r": 45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "pentagon",
+              "c": "blue",
+              "n": 2,
+              "z": 0.7
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "n": 4,
+                "z": 0.45,
+                "r": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "n": 4,
+                "z": 0.45,
+                "r": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "n": 2,
+                "z": 0.45,
+                "r": 45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three rules: the count doubles, the colour turns green, and the shapes tilt. Each wrong answer drops exactly one.",
+      "strategy": "Three rules, three checks. Count, colour, tilt."
+    },
+    {
+      "id": "olsat-fan-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A solid blue square becomes an empty one. A solid green octagon becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "blue"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "blue",
+              "f": "outline"
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "octagon",
+              "c": "green"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The fill is removed and only the outline is left. Nothing else changes.",
+      "strategy": "Empty is not the same as dotted. Check exactly what is inside."
+    },
+    {
+      "id": "olsat-fan-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A purple kite shrinks and turns a quarter turn. A teal leaf becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "kite",
+              "c": "purple"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "kite",
+              "c": "purple",
+              "r": 90,
+              "z": 0.55
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "leaf",
+              "c": "teal"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "r": 90,
+                "z": 0.55
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "r": 270,
+                "z": 0.55
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "z": 0.55
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "r": 90,
+                "z": 0.55
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Shrink, and turn a quarter turn clockwise. Choice b turned the wrong way, c did not turn, d did not shrink.",
+      "strategy": "Settle the turn first. Then check the size."
+    },
+    {
+      "id": "olsat-fan-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A circle holding a triangle becomes a triangle holding a circle. A square holding a star becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "red",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "triangle",
+              "c": "yellow",
+              "z": 0.4
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "triangle",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "circle",
+              "c": "red",
+              "z": 0.4
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "star",
+              "c": "blue",
+              "z": 0.4
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "square",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "square",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The inside and outside shapes swap places. Each keeps its own colour. The outer one is empty and the inner one is solid.",
+      "strategy": "After a swap, check each shape kept its own colour."
+    },
+    {
+      "id": "olsat-fan-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "One large orange star becomes four small ones. One large blue hexagon becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "orange",
+              "n": 1,
+              "z": 1.05
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "orange",
+              "n": 4,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "hexagon",
+              "c": "blue",
+              "n": 1,
+              "z": 1.05
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "n": 4,
+                "z": 1.05
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "n": 4,
+                "z": 0.45,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into four small ones of the same kind and colour. Choice b kept them big, c made only two, d added a turn that never happened.",
+      "strategy": "When a shape splits, check both the new count and the new size."
+    },
+    {
+      "id": "olsat-fan-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A small striped green trapezoid becomes three large solid red ones turned upside down. Now do the same to a chevron.",
+        "a": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "green",
+              "f": "stripesv",
+              "z": 0.6
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "red",
+              "n": 3,
+              "z": 1,
+              "r": 180
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "green",
+              "f": "stripesv",
+              "z": 0.6
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "red",
+                "n": 3,
+                "z": 1,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "red",
+                "n": 3,
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "n": 3,
+                "z": 1,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "red",
+                "n": 2,
+                "z": 1,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "red",
+                "f": "stripesv",
+                "n": 3,
+                "z": 1,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four rules: the count goes from one to three, the shapes grow, the colour turns red, and the stripes fill in solid, and they turn upside down. Each wrong answer keeps most of the rules and breaks one.",
+      "strategy": "Write every change down before you look. Then tick them off one by one."
+    },
+    {
+      "id": "olsat-fan-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A solid hexagon gains a criss cross pattern. A solid oval becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "hexagon",
+              "c": "teal"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "hexagon",
+              "c": "teal",
+              "f": "grid"
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "oval",
+              "c": "purple"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "purple",
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "teal",
+                "f": "grid"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Solid becomes a criss cross grid. Choice b used dots instead.",
+      "strategy": "Grid, dots and stripes are three different fills. Name what you see."
+    },
+    {
+      "id": "olsat-fan-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A red right triangle turns three quarters of the way round. A blue crescent becomes what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "red"
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "red",
+              "r": 270
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "crescent",
+              "c": "blue"
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three quarters of a turn clockwise, the same as a quarter turn anticlockwise. Choice b turned only a quarter clockwise.",
+      "strategy": "Three quarters one way equals one quarter the other. Use whichever is easier."
+    },
+    {
+      "id": "olsat-fan-g4-3",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Eight small green circles become four larger ones. Eight small orange squares become what?",
+        "a": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "green",
+              "n": 8,
+              "z": 0.32
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "circle",
+              "c": "green",
+              "n": 4,
+              "z": 0.5
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "orange",
+              "n": 8,
+              "z": 0.32
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "n": 4,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "n": 4,
+                "z": 0.32
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "n": 2,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "n": 8,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 4,
+                "z": 0.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count halves and the shapes grow. Choice b halved but stayed small. Choice c halved twice.",
+      "strategy": "Half of eight is four. Do the arithmetic before you look at the pictures."
+    },
+    {
+      "id": "olsat-fan-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A dot inside a square moves from the top left to the bottom right. Now do the same inside a pentagon.",
+        "a": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "dot",
+              "c": "ink",
+              "z": 0.2,
+              "x": 30,
+              "y": 30
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "square",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "dot",
+              "c": "ink",
+              "z": 0.2,
+              "x": 70,
+              "y": 70
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "pentagon",
+              "c": "red",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "dot",
+              "c": "ink",
+              "z": 0.2,
+              "x": 30,
+              "y": 30
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 70,
+                "y": 70
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 70,
+                "y": 30
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 30,
+                "y": 70
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 30,
+                "y": 30
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 70,
+                "y": 70
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The dot moves diagonally, from the top left corner to the bottom right. Choices b and c moved it only sideways or only down.",
+      "strategy": "Diagonal means both across and down. Check both."
+    },
+    {
+      "id": "olsat-fan-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A small dotted yellow star becomes two large solid blue stars, tilted. Now do the same to a cross.",
+        "a": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "yellow",
+              "f": "dots",
+              "z": 0.55
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star",
+              "c": "blue",
+              "n": 2,
+              "z": 1,
+              "r": 45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "yellow",
+              "f": "dots",
+              "z": 0.55
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "n": 2,
+                "z": 1,
+                "r": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "n": 2,
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow",
+                "n": 2,
+                "z": 1,
+                "r": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "z": 1,
+                "r": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "dots",
+                "n": 2,
+                "z": 1,
+                "r": 45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four rules: the count doubles, the shape grows, the colour turns blue, the dots become solid, and it tilts. Every wrong answer breaks exactly one of them.",
+      "strategy": "Four rules is the ceiling on this test. Make a list, then eliminate."
+    }
+  ]
+}

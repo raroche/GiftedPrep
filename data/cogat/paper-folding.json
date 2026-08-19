@@ -1,0 +1,3091 @@
+{
+  "id": "cogat-paper-folding",
+  "test": "cogat",
+  "battery": "nonverbal",
+  "name": "Paper Folding",
+  "icon": "fold",
+  "blurb": "Fold the paper, punch a hole, then open it up.",
+  "childIntro": "Watch the paper get folded. Then a hole is punched through it. What does the paper look like when you open it out flat?",
+  "howItWorks": "A square of paper is folded, then a hole is punched through every layer. The child pictures the paper opened flat again. In CogAT this is the purest imagination task on the whole test, and the one that responds best to practising with real paper. Grades K-2 see cuts at the edge; from grade 3 the holes are punched anywhere.",
+  "parentTip": "Do this one with real paper at the kitchen table. Fold a sheet exactly as the picture shows, punch it with a hole punch or push a pencil through, then let your child open it before they answer. Two or three real folds teach more than twenty questions on a screen. The rule to learn: number of layers times number of punches equals number of holes.",
+  "questions": [
+    {
+      "id": "cogat-pf-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "The paper is folded once. Then one hole is made. What does it look like open?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded in half from left to right, then one hole punched near the top right.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 74,
+                "y": 30
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 74,
+                    "y": 30
+                  },
+                  {
+                    "x": 26,
+                    "y": 30
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 74,
+                    "y": 30
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 74,
+                    "y": 30
+                  },
+                  {
+                    "x": 74,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 74,
+                    "y": 30
+                  },
+                  {
+                    "x": 26,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One fold makes two layers, so one punch makes two holes. When you open the paper the new hole appears on the other side of the fold line, at the same height. Choice b forgot to open the paper. Choice c put the second hole below instead of across.",
+      "strategy": "One fold means two holes. Find the fold line and put the second hole the same distance on the other side."
+    },
+    {
+      "id": "cogat-pf-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Folded once from the top. One hole is made. What does it look like open?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded in half from top to bottom, then one hole punched near the bottom left.",
+        "steps": [
+          {
+            "fold": "top",
+            "label": "fold"
+          },
+          {
+            "fold": "top",
+            "punches": [
+              {
+                "x": 28,
+                "y": 76
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 28,
+                    "y": 76
+                  },
+                  {
+                    "x": 28,
+                    "y": 24
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 28,
+                    "y": 76
+                  },
+                  {
+                    "x": 72,
+                    "y": 76
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 28,
+                    "y": 76
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 28,
+                    "y": 76
+                  },
+                  {
+                    "x": 28,
+                    "y": 24
+                  },
+                  {
+                    "x": 72,
+                    "y": 76
+                  },
+                  {
+                    "x": 72,
+                    "y": 24
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "This time the fold goes across the middle from side to side. So the second hole appears straight above the first one, not next to it. Choice b mirrored across the wrong line.",
+      "strategy": "The new hole always appears on the opposite side of the fold line. Find the fold line first."
+    },
+    {
+      "id": "cogat-pf-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Folded once. Two holes are made. What does it look like open?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded in half from left to right, then two holes punched on the right side.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 70,
+                "y": 28
+              },
+              {
+                "x": 70,
+                "y": 72
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 70,
+                    "y": 28
+                  },
+                  {
+                    "x": 70,
+                    "y": 72
+                  },
+                  {
+                    "x": 30,
+                    "y": 28
+                  },
+                  {
+                    "x": 30,
+                    "y": 72
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 70,
+                    "y": 28
+                  },
+                  {
+                    "x": 70,
+                    "y": 72
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 70,
+                    "y": 28
+                  },
+                  {
+                    "x": 30,
+                    "y": 28
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 70,
+                    "y": 28
+                  },
+                  {
+                    "x": 70,
+                    "y": 72
+                  },
+                  {
+                    "x": 30,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two layers and two punches makes four holes. Each hole gets a partner on the other side of the fold, at the same height. Choice b forgot to open it. Choice c only opened one of the two holes.",
+      "strategy": "Count first. Layers times punches. Two times two is four, so the answer must show four holes."
+    },
+    {
+      "id": "cogat-pf-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Folded once. One hole is made in the middle. What does it look like open?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded in half from left to right, then one hole punched right next to the fold line.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 58,
+                "y": 50
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 58,
+                    "y": 50
+                  },
+                  {
+                    "x": 42,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 58,
+                    "y": 50
+                  },
+                  {
+                    "x": 20,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 58,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 58,
+                    "y": 24
+                  },
+                  {
+                    "x": 42,
+                    "y": 24
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The hole was punched close to the fold, so its partner appears close to the fold too. The two holes end up near each other in the middle. Choice b put the partner far away, which would only happen if the punch had been near the edge.",
+      "strategy": "Near the fold means the two holes end up close together. Near the edge means they end up far apart."
+    },
+    {
+      "id": "cogat-pf-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Folded from the bottom. Two holes are made. What does it look like open?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded in half from bottom to top, then two holes punched on the top half.",
+        "steps": [
+          {
+            "fold": "bottom",
+            "label": "fold"
+          },
+          {
+            "fold": "bottom",
+            "punches": [
+              {
+                "x": 30,
+                "y": 26
+              },
+              {
+                "x": 70,
+                "y": 26
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 30,
+                    "y": 26
+                  },
+                  {
+                    "x": 70,
+                    "y": 26
+                  },
+                  {
+                    "x": 30,
+                    "y": 74
+                  },
+                  {
+                    "x": 70,
+                    "y": 74
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 30,
+                    "y": 26
+                  },
+                  {
+                    "x": 70,
+                    "y": 26
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 30,
+                    "y": 26
+                  },
+                  {
+                    "x": 70,
+                    "y": 26
+                  },
+                  {
+                    "x": 50,
+                    "y": 74
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 30,
+                    "y": 26
+                  },
+                  {
+                    "x": 30,
+                    "y": 74
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two punches through two layers makes four holes. The fold runs across the middle, so each hole gets a partner directly below it. The four holes make a neat rectangle.",
+      "strategy": "Two holes on top usually means two holes below. Look for the answer with the tidy matching pattern."
+    },
+    {
+      "id": "cogat-pf-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Folded once. One hole is made. Which one shows it opened out?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded in half from right to left, then one hole punched near the bottom left.",
+        "steps": [
+          {
+            "fold": "right",
+            "label": "fold"
+          },
+          {
+            "fold": "right",
+            "punches": [
+              {
+                "x": 26,
+                "y": 74
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 74
+                  },
+                  {
+                    "x": 74,
+                    "y": 74
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 74
+                  },
+                  {
+                    "x": 26,
+                    "y": 26
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 74
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 74
+                  },
+                  {
+                    "x": 74,
+                    "y": 26
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The fold line runs up and down, so the partner hole appears across from the first one at the same height. Choice b mirrored top to bottom. Choice d mirrored diagonally, which never happens with a straight fold.",
+      "strategy": "An up-and-down fold makes holes appear side by side. A side-to-side fold makes them appear one above the other."
+    },
+    {
+      "id": "cogat-pf-g2-2",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Folded twice. One hole is made. Which one shows it opened out?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded left to right, then folded top to bottom, then one hole punched in the bottom right quarter.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold 1"
+          },
+          {
+            "fold": "top",
+            "label": "fold 2"
+          },
+          {
+            "fold": "top",
+            "punches": [
+              {
+                "x": 72,
+                "y": 72
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 72,
+                    "y": 72
+                  },
+                  {
+                    "x": 28,
+                    "y": 72
+                  },
+                  {
+                    "x": 72,
+                    "y": 28
+                  },
+                  {
+                    "x": 28,
+                    "y": 28
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 72,
+                    "y": 72
+                  },
+                  {
+                    "x": 28,
+                    "y": 72
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 72,
+                    "y": 72
+                  },
+                  {
+                    "x": 28,
+                    "y": 28
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 72,
+                    "y": 72
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two folds make four layers. Four layers and one punch makes four holes, one in each quarter of the paper. Choice b only unfolded once.",
+      "strategy": "Count the folds first. One fold is two layers, two folds is four layers, three folds is eight."
+    },
+    {
+      "id": "cogat-pf-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Folded once. Two holes are made. Which one shows it opened out?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded top to bottom, then two holes punched on the bottom half, one near the fold and one near the edge.",
+        "steps": [
+          {
+            "fold": "top",
+            "label": "fold"
+          },
+          {
+            "fold": "top",
+            "punches": [
+              {
+                "x": 34,
+                "y": 62
+              },
+              {
+                "x": 70,
+                "y": 84
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 34,
+                    "y": 62
+                  },
+                  {
+                    "x": 70,
+                    "y": 84
+                  },
+                  {
+                    "x": 34,
+                    "y": 38
+                  },
+                  {
+                    "x": 70,
+                    "y": 16
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 34,
+                    "y": 62
+                  },
+                  {
+                    "x": 70,
+                    "y": 84
+                  },
+                  {
+                    "x": 34,
+                    "y": 16
+                  },
+                  {
+                    "x": 70,
+                    "y": 38
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 34,
+                    "y": 62
+                  },
+                  {
+                    "x": 70,
+                    "y": 84
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 34,
+                    "y": 62
+                  },
+                  {
+                    "x": 70,
+                    "y": 84
+                  },
+                  {
+                    "x": 66,
+                    "y": 38
+                  },
+                  {
+                    "x": 30,
+                    "y": 16
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each hole flips up over the fold line and keeps its distance. The hole near the fold lands near the fold on the other side. The hole near the bottom edge lands near the top edge. Choice b swapped which one went where.",
+      "strategy": "Distance from the fold is preserved. Close stays close, far stays far."
+    },
+    {
+      "id": "cogat-pf-g2-4",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Folded once. One hole sits right on the fold. Which one shows it opened out?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded left to right, then one hole punched exactly on the fold line.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 50,
+                "y": 40
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 50,
+                    "y": 40
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 60,
+                    "y": 40
+                  },
+                  {
+                    "x": 40,
+                    "y": 40
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 76,
+                    "y": 40
+                  },
+                  {
+                    "x": 24,
+                    "y": 40
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 50,
+                    "y": 40
+                  },
+                  {
+                    "x": 50,
+                    "y": 60
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "This is the special case. A hole punched exactly on the fold line does not make two holes. Its partner lands in exactly the same place, so there is still only one hole when you open the paper.",
+      "strategy": "A punch on the fold line never doubles. Watch out for it, because it breaks the usual counting rule."
+    },
+    {
+      "id": "cogat-pf-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Folded twice. One hole is made. Which one shows it opened out?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded right to left, then bottom to top, then one hole punched in the top left quarter.",
+        "steps": [
+          {
+            "fold": "right",
+            "label": "fold 1"
+          },
+          {
+            "fold": "bottom",
+            "label": "fold 2"
+          },
+          {
+            "fold": "bottom",
+            "punches": [
+              {
+                "x": 24,
+                "y": 22
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 24,
+                    "y": 22
+                  },
+                  {
+                    "x": 76,
+                    "y": 22
+                  },
+                  {
+                    "x": 24,
+                    "y": 78
+                  },
+                  {
+                    "x": 76,
+                    "y": 78
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 24,
+                    "y": 22
+                  },
+                  {
+                    "x": 76,
+                    "y": 78
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 24,
+                    "y": 22
+                  },
+                  {
+                    "x": 24,
+                    "y": 78
+                  },
+                  {
+                    "x": 50,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 50,
+                    "y": 22
+                  },
+                  {
+                    "x": 50,
+                    "y": 78
+                  },
+                  {
+                    "x": 24,
+                    "y": 50
+                  },
+                  {
+                    "x": 76,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two folds, four layers, one punch, four holes. Unfold one crease at a time. First the hole doubles across the up-and-down fold. Then both of those double across the side-to-side fold. You get one hole in each corner area.",
+      "strategy": "Unfold backwards, one crease at a time. Do not try to picture all the folds opening at once."
+    },
+    {
+      "id": "cogat-pf-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "The paper is folded, then punched. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded left to right, then two holes punched on the right half.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 66,
+                "y": 24
+              },
+              {
+                "x": 84,
+                "y": 62
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 66,
+                    "y": 24
+                  },
+                  {
+                    "x": 84,
+                    "y": 62
+                  },
+                  {
+                    "x": 34,
+                    "y": 24
+                  },
+                  {
+                    "x": 16,
+                    "y": 62
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 66,
+                    "y": 24
+                  },
+                  {
+                    "x": 84,
+                    "y": 62
+                  },
+                  {
+                    "x": 16,
+                    "y": 24
+                  },
+                  {
+                    "x": 34,
+                    "y": 62
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 66,
+                    "y": 24
+                  },
+                  {
+                    "x": 84,
+                    "y": 62
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 66,
+                    "y": 24
+                  },
+                  {
+                    "x": 84,
+                    "y": 62
+                  },
+                  {
+                    "x": 34,
+                    "y": 76
+                  },
+                  {
+                    "x": 16,
+                    "y": 38
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 66,
+                    "y": 24
+                  },
+                  {
+                    "x": 34,
+                    "y": 24
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two layers and two punches gives four holes. Each hole mirrors straight across the fold line and keeps its height. The hole nearer the fold stays nearer the fold; the one nearer the edge stays nearer the edge. Choice b swapped those distances.",
+      "strategy": "Mirroring keeps the height and swaps the side. Check both for every hole."
+    },
+    {
+      "id": "cogat-pf-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "The paper is folded twice, then punched. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded top to bottom, then left to right, then one hole punched in the bottom right quarter.",
+        "steps": [
+          {
+            "fold": "top",
+            "label": "fold 1"
+          },
+          {
+            "fold": "left",
+            "label": "fold 2"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 78,
+                "y": 68
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 68
+                  },
+                  {
+                    "x": 22,
+                    "y": 68
+                  },
+                  {
+                    "x": 78,
+                    "y": 32
+                  },
+                  {
+                    "x": 22,
+                    "y": 32
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 68
+                  },
+                  {
+                    "x": 22,
+                    "y": 68
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 68
+                  },
+                  {
+                    "x": 78,
+                    "y": 32
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 68
+                  },
+                  {
+                    "x": 22,
+                    "y": 32
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 68
+                  },
+                  {
+                    "x": 22,
+                    "y": 68
+                  },
+                  {
+                    "x": 78,
+                    "y": 32
+                  },
+                  {
+                    "x": 22,
+                    "y": 32
+                  },
+                  {
+                    "x": 50,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two folds make four layers, so one punch makes four holes. They land in the same spot within each of the four quarters. Choices b and c each unfolded only one of the two creases. Choice e added a hole that was never punched.",
+      "strategy": "Four layers and one punch gives exactly four holes. Use the count alone to throw out most answers fast."
+    },
+    {
+      "id": "cogat-pf-g3-3",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "The paper is folded twice, then punched twice. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded left to right, then top to bottom, then two holes punched in the bottom right quarter.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold 1"
+          },
+          {
+            "fold": "top",
+            "label": "fold 2"
+          },
+          {
+            "fold": "top",
+            "punches": [
+              {
+                "x": 62,
+                "y": 62
+              },
+              {
+                "x": 86,
+                "y": 86
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 62,
+                    "y": 62
+                  },
+                  {
+                    "x": 38,
+                    "y": 62
+                  },
+                  {
+                    "x": 62,
+                    "y": 38
+                  },
+                  {
+                    "x": 38,
+                    "y": 38
+                  },
+                  {
+                    "x": 86,
+                    "y": 86
+                  },
+                  {
+                    "x": 14,
+                    "y": 86
+                  },
+                  {
+                    "x": 86,
+                    "y": 14
+                  },
+                  {
+                    "x": 14,
+                    "y": 14
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 62,
+                    "y": 62
+                  },
+                  {
+                    "x": 38,
+                    "y": 62
+                  },
+                  {
+                    "x": 86,
+                    "y": 86
+                  },
+                  {
+                    "x": 14,
+                    "y": 86
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 62,
+                    "y": 62
+                  },
+                  {
+                    "x": 86,
+                    "y": 86
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 62,
+                    "y": 62
+                  },
+                  {
+                    "x": 38,
+                    "y": 38
+                  },
+                  {
+                    "x": 86,
+                    "y": 86
+                  },
+                  {
+                    "x": 14,
+                    "y": 14
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 62,
+                    "y": 62
+                  },
+                  {
+                    "x": 38,
+                    "y": 62
+                  },
+                  {
+                    "x": 62,
+                    "y": 38
+                  },
+                  {
+                    "x": 38,
+                    "y": 38
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four layers times two punches gives eight holes. The count alone rules out every other choice: b and d show four, c shows two, e shows four. Only choice a has eight.",
+      "strategy": "Layers times punches. Work out the number before you look at a single picture, then throw out everything with the wrong count."
+    },
+    {
+      "id": "cogat-pf-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "The paper is folded, then punched. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded bottom to top, then three holes punched in a row across the top half.",
+        "steps": [
+          {
+            "fold": "bottom",
+            "label": "fold"
+          },
+          {
+            "fold": "bottom",
+            "punches": [
+              {
+                "x": 26,
+                "y": 30
+              },
+              {
+                "x": 50,
+                "y": 30
+              },
+              {
+                "x": 74,
+                "y": 30
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 30
+                  },
+                  {
+                    "x": 50,
+                    "y": 30
+                  },
+                  {
+                    "x": 74,
+                    "y": 30
+                  },
+                  {
+                    "x": 26,
+                    "y": 70
+                  },
+                  {
+                    "x": 50,
+                    "y": 70
+                  },
+                  {
+                    "x": 74,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 30
+                  },
+                  {
+                    "x": 50,
+                    "y": 30
+                  },
+                  {
+                    "x": 74,
+                    "y": 30
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 30
+                  },
+                  {
+                    "x": 50,
+                    "y": 30
+                  },
+                  {
+                    "x": 74,
+                    "y": 30
+                  },
+                  {
+                    "x": 50,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 30
+                  },
+                  {
+                    "x": 50,
+                    "y": 30
+                  },
+                  {
+                    "x": 74,
+                    "y": 30
+                  },
+                  {
+                    "x": 74,
+                    "y": 70
+                  },
+                  {
+                    "x": 50,
+                    "y": 70
+                  },
+                  {
+                    "x": 26,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 26,
+                    "y": 30
+                  },
+                  {
+                    "x": 26,
+                    "y": 70
+                  },
+                  {
+                    "x": 50,
+                    "y": 30
+                  },
+                  {
+                    "x": 50,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two layers and three punches gives six holes: two neat rows of three, one row mirrored below the other. Choice d has six holes but one of them is in the wrong place.",
+      "strategy": "Getting the right count is only half the job. After that, check that every hole is in the right spot."
+    },
+    {
+      "id": "cogat-pf-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "The paper is folded, then punched. One punch sits on the crease. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded left to right, then two holes punched: one on the fold line and one out near the right edge.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 50,
+                "y": 26
+              },
+              {
+                "x": 82,
+                "y": 70
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 50,
+                    "y": 26
+                  },
+                  {
+                    "x": 82,
+                    "y": 70
+                  },
+                  {
+                    "x": 18,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 50,
+                    "y": 26
+                  },
+                  {
+                    "x": 82,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 62,
+                    "y": 26
+                  },
+                  {
+                    "x": 38,
+                    "y": 26
+                  },
+                  {
+                    "x": 82,
+                    "y": 70
+                  },
+                  {
+                    "x": 18,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 50,
+                    "y": 26
+                  },
+                  {
+                    "x": 50,
+                    "y": 70
+                  },
+                  {
+                    "x": 82,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 82,
+                    "y": 70
+                  },
+                  {
+                    "x": 18,
+                    "y": 70
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two punches but only three holes. The punch on the crease stays a single hole, because its mirror image lands in the same place. Only the punch away from the crease doubles. Choice c is the trap: it doubled both.",
+      "strategy": "Anything sitting exactly on a crease does not double. This is the one exception to layers times punches, and test writers love it."
+    },
+    {
+      "id": "cogat-pf-g4-1",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "The paper is folded, then punched. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded top to bottom, then three holes punched in a diagonal line on the bottom half.",
+        "steps": [
+          {
+            "fold": "top",
+            "label": "fold"
+          },
+          {
+            "fold": "top",
+            "punches": [
+              {
+                "x": 24,
+                "y": 60
+              },
+              {
+                "x": 50,
+                "y": 74
+              },
+              {
+                "x": 76,
+                "y": 88
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 24,
+                    "y": 60
+                  },
+                  {
+                    "x": 50,
+                    "y": 74
+                  },
+                  {
+                    "x": 76,
+                    "y": 88
+                  },
+                  {
+                    "x": 24,
+                    "y": 40
+                  },
+                  {
+                    "x": 50,
+                    "y": 26
+                  },
+                  {
+                    "x": 76,
+                    "y": 12
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 24,
+                    "y": 60
+                  },
+                  {
+                    "x": 50,
+                    "y": 74
+                  },
+                  {
+                    "x": 76,
+                    "y": 88
+                  },
+                  {
+                    "x": 24,
+                    "y": 12
+                  },
+                  {
+                    "x": 50,
+                    "y": 26
+                  },
+                  {
+                    "x": 76,
+                    "y": 40
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 24,
+                    "y": 60
+                  },
+                  {
+                    "x": 50,
+                    "y": 74
+                  },
+                  {
+                    "x": 76,
+                    "y": 88
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 24,
+                    "y": 60
+                  },
+                  {
+                    "x": 50,
+                    "y": 74
+                  },
+                  {
+                    "x": 76,
+                    "y": 88
+                  },
+                  {
+                    "x": 76,
+                    "y": 40
+                  },
+                  {
+                    "x": 50,
+                    "y": 26
+                  },
+                  {
+                    "x": 24,
+                    "y": 12
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 24,
+                    "y": 60
+                  },
+                  {
+                    "x": 24,
+                    "y": 40
+                  },
+                  {
+                    "x": 50,
+                    "y": 74
+                  },
+                  {
+                    "x": 50,
+                    "y": 26
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each hole flips straight up over the crease. It keeps its left-to-right position and its distance from the crease. The bottom line slopes down to the right, so the mirrored line slopes up to the right. Choices b and d slope the wrong way.",
+      "strategy": "Mirroring changes only the up-and-down position. A hole never slides sideways when the crease is horizontal."
+    },
+    {
+      "id": "cogat-pf-g4-2",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "The paper is folded twice, then punched. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded right to left, then top to bottom, then two holes punched in the bottom left quarter.",
+        "steps": [
+          {
+            "fold": "right",
+            "label": "fold 1"
+          },
+          {
+            "fold": "top",
+            "label": "fold 2"
+          },
+          {
+            "fold": "top",
+            "punches": [
+              {
+                "x": 16,
+                "y": 62
+              },
+              {
+                "x": 38,
+                "y": 86
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 16,
+                    "y": 62
+                  },
+                  {
+                    "x": 84,
+                    "y": 62
+                  },
+                  {
+                    "x": 16,
+                    "y": 38
+                  },
+                  {
+                    "x": 84,
+                    "y": 38
+                  },
+                  {
+                    "x": 38,
+                    "y": 86
+                  },
+                  {
+                    "x": 62,
+                    "y": 86
+                  },
+                  {
+                    "x": 38,
+                    "y": 14
+                  },
+                  {
+                    "x": 62,
+                    "y": 14
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 16,
+                    "y": 62
+                  },
+                  {
+                    "x": 84,
+                    "y": 62
+                  },
+                  {
+                    "x": 38,
+                    "y": 86
+                  },
+                  {
+                    "x": 62,
+                    "y": 86
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 16,
+                    "y": 62
+                  },
+                  {
+                    "x": 16,
+                    "y": 38
+                  },
+                  {
+                    "x": 38,
+                    "y": 86
+                  },
+                  {
+                    "x": 38,
+                    "y": 14
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 16,
+                    "y": 62
+                  },
+                  {
+                    "x": 38,
+                    "y": 86
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 16,
+                    "y": 62
+                  },
+                  {
+                    "x": 84,
+                    "y": 62
+                  },
+                  {
+                    "x": 16,
+                    "y": 38
+                  },
+                  {
+                    "x": 84,
+                    "y": 38
+                  },
+                  {
+                    "x": 38,
+                    "y": 86
+                  },
+                  {
+                    "x": 62,
+                    "y": 86
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four layers times two punches gives eight holes. The count alone settles it. Choices b and c show four, d shows two, e shows six.",
+      "strategy": "Work out the number of holes on your fingers first. On a timed test that alone often leaves one answer standing."
+    },
+    {
+      "id": "cogat-pf-g4-3",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "The paper is folded, then punched. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded left to right, then three holes punched: two on the right half and one exactly on the crease.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 78,
+                "y": 22
+              },
+              {
+                "x": 50,
+                "y": 52
+              },
+              {
+                "x": 68,
+                "y": 84
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 22
+                  },
+                  {
+                    "x": 22,
+                    "y": 22
+                  },
+                  {
+                    "x": 50,
+                    "y": 52
+                  },
+                  {
+                    "x": 68,
+                    "y": 84
+                  },
+                  {
+                    "x": 32,
+                    "y": 84
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 22
+                  },
+                  {
+                    "x": 22,
+                    "y": 22
+                  },
+                  {
+                    "x": 60,
+                    "y": 52
+                  },
+                  {
+                    "x": 40,
+                    "y": 52
+                  },
+                  {
+                    "x": 68,
+                    "y": 84
+                  },
+                  {
+                    "x": 32,
+                    "y": 84
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 22
+                  },
+                  {
+                    "x": 50,
+                    "y": 52
+                  },
+                  {
+                    "x": 68,
+                    "y": 84
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 22
+                  },
+                  {
+                    "x": 22,
+                    "y": 22
+                  },
+                  {
+                    "x": 68,
+                    "y": 84
+                  },
+                  {
+                    "x": 32,
+                    "y": 84
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 78,
+                    "y": 22
+                  },
+                  {
+                    "x": 22,
+                    "y": 84
+                  },
+                  {
+                    "x": 50,
+                    "y": 52
+                  },
+                  {
+                    "x": 68,
+                    "y": 84
+                  },
+                  {
+                    "x": 32,
+                    "y": 22
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three punches, but only five holes. The two punches away from the crease each double, giving four. The punch sitting on the crease stays single. Choice b doubled the crease punch as well and shows six. Choice d dropped it altogether.",
+      "strategy": "Sort the punches into two piles first: on the crease, and off the crease. Only the off-crease pile doubles."
+    },
+    {
+      "id": "cogat-pf-g4-4",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "The paper is folded three times, then punched once. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded left to right, then top to bottom, then left to right again, then one hole punched.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold 1"
+          },
+          {
+            "fold": "top",
+            "label": "fold 2"
+          },
+          {
+            "fold": "left",
+            "label": "fold 3"
+          },
+          {
+            "fold": "left",
+            "punches": [
+              {
+                "x": 82,
+                "y": 78
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 82,
+                    "y": 78
+                  },
+                  {
+                    "x": 68,
+                    "y": 78
+                  },
+                  {
+                    "x": 32,
+                    "y": 78
+                  },
+                  {
+                    "x": 18,
+                    "y": 78
+                  },
+                  {
+                    "x": 82,
+                    "y": 22
+                  },
+                  {
+                    "x": 68,
+                    "y": 22
+                  },
+                  {
+                    "x": 32,
+                    "y": 22
+                  },
+                  {
+                    "x": 18,
+                    "y": 22
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 82,
+                    "y": 78
+                  },
+                  {
+                    "x": 18,
+                    "y": 78
+                  },
+                  {
+                    "x": 82,
+                    "y": 22
+                  },
+                  {
+                    "x": 18,
+                    "y": 22
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 82,
+                    "y": 78
+                  },
+                  {
+                    "x": 18,
+                    "y": 78
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 82,
+                    "y": 78
+                  },
+                  {
+                    "x": 68,
+                    "y": 78
+                  },
+                  {
+                    "x": 32,
+                    "y": 78
+                  },
+                  {
+                    "x": 18,
+                    "y": 78
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 82,
+                    "y": 78
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three folds make eight layers, so one punch makes eight holes. They sit in two rows of four, mirrored top and bottom and mirrored left and right. Choice b unfolded only two of the three creases. Choice d unfolded the two side-to-side creases but not the top-to-bottom one.",
+      "strategy": "One fold is 2, two folds is 4, three folds is 8. Double it every time you add a fold."
+    },
+    {
+      "id": "cogat-pf-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "The paper is folded twice, then punched twice. One punch is on a crease. Which choice shows it unfolded?",
+      "figure": {
+        "kind": "paperfold",
+        "alt": "A square folded left to right, then top to bottom, then two holes punched: one in the middle of the bottom right quarter and one on the horizontal crease.",
+        "steps": [
+          {
+            "fold": "left",
+            "label": "fold 1"
+          },
+          {
+            "fold": "top",
+            "label": "fold 2"
+          },
+          {
+            "fold": "top",
+            "punches": [
+              {
+                "x": 76,
+                "y": 78
+              },
+              {
+                "x": 66,
+                "y": 50
+              }
+            ],
+            "label": "punch"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 76,
+                    "y": 78
+                  },
+                  {
+                    "x": 24,
+                    "y": 78
+                  },
+                  {
+                    "x": 76,
+                    "y": 22
+                  },
+                  {
+                    "x": 24,
+                    "y": 22
+                  },
+                  {
+                    "x": 66,
+                    "y": 50
+                  },
+                  {
+                    "x": 34,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 76,
+                    "y": 78
+                  },
+                  {
+                    "x": 24,
+                    "y": 78
+                  },
+                  {
+                    "x": 76,
+                    "y": 22
+                  },
+                  {
+                    "x": 24,
+                    "y": 22
+                  },
+                  {
+                    "x": 66,
+                    "y": 50
+                  },
+                  {
+                    "x": 34,
+                    "y": 50
+                  },
+                  {
+                    "x": 66,
+                    "y": 78
+                  },
+                  {
+                    "x": 34,
+                    "y": 22
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 76,
+                    "y": 78
+                  },
+                  {
+                    "x": 24,
+                    "y": 78
+                  },
+                  {
+                    "x": 76,
+                    "y": 22
+                  },
+                  {
+                    "x": 24,
+                    "y": 22
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 76,
+                    "y": 78
+                  },
+                  {
+                    "x": 66,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "kind": "paperfold",
+            "steps": [
+              {
+                "fold": "none",
+                "punches": [
+                  {
+                    "x": 76,
+                    "y": 78
+                  },
+                  {
+                    "x": 24,
+                    "y": 78
+                  },
+                  {
+                    "x": 66,
+                    "y": 50
+                  },
+                  {
+                    "x": 34,
+                    "y": 50
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two folds make four layers. The first punch is clear of both creases, so it becomes four holes. The second punch sits on the side-to-side crease, so it does not double downwards, only sideways, giving two holes. Four plus two is six. Choice b counted eight by doubling the crease punch both ways.",
+      "strategy": "A punch on a crease doubles across the OTHER crease but not its own. Count each punch separately, then add."
+    }
+  ]
+}

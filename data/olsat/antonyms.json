@@ -1,0 +1,323 @@
+{
+  "id": "olsat-antonyms",
+  "test": "olsat",
+  "battery": "verbal-comprehension",
+  "name": "Opposites",
+  "icon": "words",
+  "blurb": "Find the word that means the opposite.",
+  "childIntro": "Read the word. Then find the answer that means the opposite of it.",
+  "howItWorks": "The child reads a word and picks its opposite from five choices. It appears at OLSAT levels D through G, so grade 3 and up. The distractors are built to be near misses: usually several of them are synonyms of the stem word rather than opposites.",
+  "parentTip": "The classic hard version gives four synonyms and one true antonym. If your child picks a word that means the same thing, they have understood the word but not the question. Ask them first: am I looking for same or opposite? Saying it out loud fixes most of these errors.",
+  "questions": [
+    {
+      "id": "olsat-ant-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "The opposite of BRAVE is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "afraid"
+        },
+        {
+          "id": "b",
+          "text": "bold"
+        },
+        {
+          "id": "c",
+          "text": "strong"
+        },
+        {
+          "id": "d",
+          "text": "heroic"
+        },
+        {
+          "id": "e",
+          "text": "daring"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Brave means not afraid, so its opposite is afraid. Bold, heroic and daring all mean roughly the same as brave.",
+      "strategy": "Cross off every word that means the SAME as the first word. They are all traps."
+    },
+    {
+      "id": "olsat-ant-g3-2",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "The opposite of ANCIENT is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "modern"
+        },
+        {
+          "id": "b",
+          "text": "old"
+        },
+        {
+          "id": "c",
+          "text": "historic"
+        },
+        {
+          "id": "d",
+          "text": "ruined"
+        },
+        {
+          "id": "e",
+          "text": "dusty"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Ancient means very old, so its opposite is modern. Old and historic mean the same as ancient.",
+      "strategy": "Ancient and modern. Old and new. Learn opposite pairs together."
+    },
+    {
+      "id": "olsat-ant-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "The opposite of SHALLOW is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "deep"
+        },
+        {
+          "id": "b",
+          "text": "wide"
+        },
+        {
+          "id": "c",
+          "text": "narrow"
+        },
+        {
+          "id": "d",
+          "text": "empty"
+        },
+        {
+          "id": "e",
+          "text": "clear"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Shallow describes how far down something goes, so its opposite is deep. Wide and narrow are about how far across, which is a different measurement.",
+      "strategy": "Check which direction the word measures: down, across or along."
+    },
+    {
+      "id": "olsat-ant-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "The opposite of GENEROUS is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "selfish"
+        },
+        {
+          "id": "b",
+          "text": "kind"
+        },
+        {
+          "id": "c",
+          "text": "wealthy"
+        },
+        {
+          "id": "d",
+          "text": "giving"
+        },
+        {
+          "id": "e",
+          "text": "friendly"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Generous means willing to give, so its opposite is selfish. Kind, giving and friendly all point the same way as generous. Wealthy is about money, not about sharing.",
+      "strategy": "One word will be about a different idea altogether. That one is not the answer either."
+    },
+    {
+      "id": "olsat-ant-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "The opposite of TEMPORARY is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "permanent"
+        },
+        {
+          "id": "b",
+          "text": "brief"
+        },
+        {
+          "id": "c",
+          "text": "sudden"
+        },
+        {
+          "id": "d",
+          "text": "short"
+        },
+        {
+          "id": "e",
+          "text": "quick"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Temporary means lasting only a short time, so its opposite is permanent, which means lasting for ever. Brief, short and quick all mean the same as temporary.",
+      "strategy": "Four synonyms and one antonym is the hardest build. Find the odd one out and check it really is the opposite."
+    },
+    {
+      "id": "olsat-ant-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "The opposite of EXPAND is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "shrink"
+        },
+        {
+          "id": "b",
+          "text": "grow"
+        },
+        {
+          "id": "c",
+          "text": "stretch"
+        },
+        {
+          "id": "d",
+          "text": "widen"
+        },
+        {
+          "id": "e",
+          "text": "swell"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Expand means to get bigger, so its opposite is shrink. Grow, stretch, widen and swell all mean to get bigger.",
+      "strategy": "Verbs have opposites too. Ask which way the action goes."
+    },
+    {
+      "id": "olsat-ant-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "The opposite of SCARCE is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "plentiful"
+        },
+        {
+          "id": "b",
+          "text": "rare"
+        },
+        {
+          "id": "c",
+          "text": "small"
+        },
+        {
+          "id": "d",
+          "text": "valuable"
+        },
+        {
+          "id": "e",
+          "text": "hidden"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Scarce means there is very little of it, so its opposite is plentiful. Rare means the same as scarce. Valuable is often true of scarce things but it is not the opposite.",
+      "strategy": "Something that often goes WITH a word is not its opposite."
+    },
+    {
+      "id": "olsat-ant-g4-3",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "The opposite of ARRIVE is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "depart"
+        },
+        {
+          "id": "b",
+          "text": "reach"
+        },
+        {
+          "id": "c",
+          "text": "travel"
+        },
+        {
+          "id": "d",
+          "text": "enter"
+        },
+        {
+          "id": "e",
+          "text": "land"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Arrive means to get to a place, so its opposite is depart, which means to leave. Reach, enter and land all mean much the same as arrive.",
+      "strategy": "Coming and going. Many opposites are simply a change of direction."
+    },
+    {
+      "id": "olsat-ant-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "The opposite of TRANSPARENT is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "opaque"
+        },
+        {
+          "id": "b",
+          "text": "clear"
+        },
+        {
+          "id": "c",
+          "text": "fragile"
+        },
+        {
+          "id": "d",
+          "text": "glassy"
+        },
+        {
+          "id": "e",
+          "text": "shiny"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Transparent means you can see through it, so its opposite is opaque, which means you cannot. Clear and glassy mean the same as transparent. Fragile is about breaking, a different idea.",
+      "strategy": "If you do not know a word, still cross off the ones that mean the same as the first word."
+    },
+    {
+      "id": "olsat-ant-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "The opposite of CONCEAL is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "reveal"
+        },
+        {
+          "id": "b",
+          "text": "hide"
+        },
+        {
+          "id": "c",
+          "text": "cover"
+        },
+        {
+          "id": "d",
+          "text": "protect"
+        },
+        {
+          "id": "e",
+          "text": "bury"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Conceal means to hide something, so its opposite is reveal, which means to show it. Hide, cover and bury all mean the same as conceal.",
+      "strategy": "Con-ceal and re-veal. Some opposite pairs even rhyme, which makes them easier to remember."
+    }
+  ]
+}

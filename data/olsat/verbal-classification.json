@@ -1,0 +1,323 @@
+{
+  "id": "olsat-verbal-classification",
+  "test": "olsat",
+  "battery": "verbal-reasoning",
+  "name": "Word Odd One Out",
+  "icon": "sort",
+  "blurb": "Four words belong together. Find the one that does not.",
+  "childIntro": "Look at all five words. Four of them belong in one group. Find the one that does not fit.",
+  "howItWorks": "Five words are given and the child marks the one that does not belong. It runs at OLSAT levels D through G. The odd word is usually connected to the group in some other way, so a child who stops at the first plausible category gets it wrong.",
+  "parentTip": "The single most useful habit: make the category as narrow as possible. Chair, sofa, recliner, table, bench are all furniture, so furniture is not the rule. Furniture you sit on is. If more than one word fits your rule, the rule is too broad.",
+  "questions": [
+    {
+      "id": "olsat-vcl-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "table"
+        },
+        {
+          "id": "b",
+          "text": "chair"
+        },
+        {
+          "id": "c",
+          "text": "sofa"
+        },
+        {
+          "id": "d",
+          "text": "bench"
+        },
+        {
+          "id": "e",
+          "text": "stool"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A chair, a sofa, a bench and a stool are all furniture you sit on. A table is furniture, but you do not sit on it.",
+      "strategy": "Furniture is too broad. Furniture you sit on is the real rule."
+    },
+    {
+      "id": "olsat-vcl-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "medal"
+        },
+        {
+          "id": "b",
+          "text": "gold"
+        },
+        {
+          "id": "c",
+          "text": "silver"
+        },
+        {
+          "id": "d",
+          "text": "bronze"
+        },
+        {
+          "id": "e",
+          "text": "iron"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Gold, silver, bronze and iron are metals. A medal is made from metal but is not a metal itself. Olympic medals make you want to pick iron, which is the trap.",
+      "strategy": "Watch for a word that pulls you towards the wrong group by association."
+    },
+    {
+      "id": "olsat-vcl-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "listen"
+        },
+        {
+          "id": "b",
+          "text": "whisper"
+        },
+        {
+          "id": "c",
+          "text": "shout"
+        },
+        {
+          "id": "d",
+          "text": "mumble"
+        },
+        {
+          "id": "e",
+          "text": "yell"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Whisper, shout, mumble and yell are all ways of making sound with your voice. Listening is taking sound in, not putting it out.",
+      "strategy": "Ask which direction the action goes: in or out."
+    },
+    {
+      "id": "olsat-vcl-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "observe"
+        },
+        {
+          "id": "b",
+          "text": "predict"
+        },
+        {
+          "id": "c",
+          "text": "forecast"
+        },
+        {
+          "id": "d",
+          "text": "foresee"
+        },
+        {
+          "id": "e",
+          "text": "anticipate"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Predict, forecast, foresee and anticipate all mean to say what will happen in the future. Observe is about what is happening now.",
+      "strategy": "When words are close in meaning, check WHEN they point: past, present or future."
+    },
+    {
+      "id": "olsat-vcl-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "ocean"
+        },
+        {
+          "id": "b",
+          "text": "island"
+        },
+        {
+          "id": "c",
+          "text": "peninsula"
+        },
+        {
+          "id": "d",
+          "text": "cape"
+        },
+        {
+          "id": "e",
+          "text": "isthmus"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An island, a peninsula, a cape and an isthmus are all pieces of land in or beside water. An ocean is the water itself.",
+      "strategy": "Land and water are two different groups. Sort them before you choose."
+    },
+    {
+      "id": "olsat-vcl-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "hospital"
+        },
+        {
+          "id": "b",
+          "text": "nurse"
+        },
+        {
+          "id": "c",
+          "text": "pilot"
+        },
+        {
+          "id": "d",
+          "text": "plumber"
+        },
+        {
+          "id": "e",
+          "text": "electrician"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A nurse, a pilot, a plumber and an electrician are all jobs. A hospital is a place.",
+      "strategy": "Jobs, places and things are different kinds of word. Match kind to kind."
+    },
+    {
+      "id": "olsat-vcl-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "time"
+        },
+        {
+          "id": "b",
+          "text": "second"
+        },
+        {
+          "id": "c",
+          "text": "minute"
+        },
+        {
+          "id": "d",
+          "text": "hour"
+        },
+        {
+          "id": "e",
+          "text": "day"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A second, a minute, an hour and a day are all units used to measure time. Time is the thing being measured, not a unit of it.",
+      "strategy": "Never pick the name of the group. That is the most common wrong answer."
+    },
+    {
+      "id": "olsat-vcl-g4-3",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "spider"
+        },
+        {
+          "id": "b",
+          "text": "beetle"
+        },
+        {
+          "id": "c",
+          "text": "ant"
+        },
+        {
+          "id": "d",
+          "text": "bee"
+        },
+        {
+          "id": "e",
+          "text": "moth"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A beetle, an ant, a bee and a moth are insects with six legs. A spider has eight legs and is not an insect.",
+      "strategy": "Counting legs settles insect questions every time."
+    },
+    {
+      "id": "olsat-vcl-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "tree"
+        },
+        {
+          "id": "b",
+          "text": "trunk"
+        },
+        {
+          "id": "c",
+          "text": "branch"
+        },
+        {
+          "id": "d",
+          "text": "root"
+        },
+        {
+          "id": "e",
+          "text": "leaf"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A trunk, a branch, a root and a leaf are all parts of a tree. The tree is the whole thing, not a part.",
+      "strategy": "Part and whole groups have the same trap as category groups. Do not pick the whole."
+    },
+    {
+      "id": "olsat-vcl-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "rectangle"
+        },
+        {
+          "id": "b",
+          "text": "triangle"
+        },
+        {
+          "id": "c",
+          "text": "pentagon"
+        },
+        {
+          "id": "d",
+          "text": "heptagon"
+        },
+        {
+          "id": "e",
+          "text": "nonagon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the sides: a triangle has three, a pentagon five, a heptagon seven, a nonagon nine. All odd. A rectangle has four, which is even.",
+      "strategy": "When the words are all shapes, count the sides and look for odd and even."
+    }
+  ]
+}

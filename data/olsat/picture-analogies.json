@@ -1,0 +1,533 @@
+{
+  "id": "olsat-picture-analogies",
+  "test": "olsat",
+  "battery": "pictorial-reasoning",
+  "name": "Picture Analogies",
+  "icon": "analogy",
+  "blurb": "The first pair goes together. Make the second pair match.",
+  "childIntro": "The two pictures on top go together somehow. Find the picture that makes the bottom pair go together in exactly the same way.",
+  "howItWorks": "Pearson describes this as inferring the relationship between two pictures and selecting the picture related to the third in the same way. It runs at OLSAT levels A to C only, because from level D onwards the same reasoning is tested with words instead of pictures.",
+  "parentTip": "The distractor is almost always something merely associated with the third picture. A kettle goes WITH tea but it is not the opposite of hot tea. Get your child to state the relationship in a full sentence before looking at the answers.",
+  "questions": [
+    {
+      "id": "olsat-pa-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A cow goes with milk. A bee goes with what?",
+        "a": {
+          "text": "🐄"
+        },
+        "b": {
+          "text": "🥛"
+        },
+        "c": {
+          "text": "🐝"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍯"
+          },
+          "label": "honey"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌸"
+          },
+          "label": "a flower"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐛"
+          },
+          "label": "a caterpillar"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪺"
+          },
+          "label": "a nest"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cow gives us milk. A bee gives us honey. A flower is where the bee gets its nectar, not what it gives us.",
+      "strategy": "Say it as a sentence: a cow gives milk, a bee gives ___."
+    },
+    {
+      "id": "olsat-pa-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A shoe goes with a foot. A glove goes with what?",
+        "a": {
+          "text": "👟"
+        },
+        "b": {
+          "text": "🦶"
+        },
+        "c": {
+          "text": "🧤"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "✋"
+          },
+          "label": "a hand"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🧣"
+          },
+          "label": "a scarf"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🦶"
+          },
+          "label": "a foot"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧥"
+          },
+          "label": "a coat"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A shoe goes on a foot. A glove goes on a hand. A scarf and a coat are clothes but they are not body parts.",
+      "strategy": "Match the thing you wear to the part of the body it goes on."
+    },
+    {
+      "id": "olsat-pa-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "The sun goes with hot. Snow goes with what?",
+        "a": {
+          "text": "☀️"
+        },
+        "b": {
+          "text": "🔥"
+        },
+        "c": {
+          "text": "❄️"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧊"
+          },
+          "label": "ice"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⛄"
+          },
+          "label": "a snowman"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌧️"
+          },
+          "label": "rain"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧥"
+          },
+          "label": "a coat"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sun makes things hot. Snow means cold, and ice is the cold one. A snowman is made from snow and a coat is what you wear in it, but neither one is the feeling of cold.",
+      "strategy": "Hot and cold. Find the answer that shows the feeling, not the thing that goes with it."
+    },
+    {
+      "id": "olsat-pa-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A caterpillar goes with a butterfly. An egg goes with what?",
+        "a": {
+          "text": "🐛"
+        },
+        "b": {
+          "text": "🦋"
+        },
+        "c": {
+          "text": "🥚"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐤"
+          },
+          "label": "a chick"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐔"
+          },
+          "label": "a hen"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪹"
+          },
+          "label": "a nest"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍳"
+          },
+          "label": "a fried egg"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A caterpillar grows into a butterfly. An egg hatches into a chick. Choice b skips ahead to the fully grown bird, and the caterpillar to butterfly step is just one step.",
+      "strategy": "Growing up happens in steps. Move forward the same number of steps."
+    },
+    {
+      "id": "olsat-pa-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A book goes with an eye. Music goes with what?",
+        "a": {
+          "text": "📖"
+        },
+        "b": {
+          "text": "👁️"
+        },
+        "c": {
+          "text": "🎵"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "👂"
+          },
+          "label": "an ear"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "👄"
+          },
+          "label": "a mouth"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🎸"
+          },
+          "label": "a guitar"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎧"
+          },
+          "label": "headphones"
+        }
+      ],
+      "answer": "a",
+      "explanation": "You use your eyes for a book. You use your ears for music. A guitar makes music and headphones carry it, but neither is a body part.",
+      "strategy": "Match the thing to the sense you use for it: eyes, ears, nose, tongue, skin."
+    },
+    {
+      "id": "olsat-pa-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A key goes with a lock. A screwdriver goes with what?",
+        "a": {
+          "text": "🔑"
+        },
+        "b": {
+          "text": "🔒"
+        },
+        "c": {
+          "text": "🪛"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🔩"
+          },
+          "label": "a screw"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🔨"
+          },
+          "label": "a hammer"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪵"
+          },
+          "label": "wood"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "👷"
+          },
+          "label": "a builder"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A key fits a lock. A screwdriver fits a screw. A hammer is another tool, wood is the material, and a builder is the person.",
+      "strategy": "Tool and the exact thing it works on. Not the material and not the person."
+    },
+    {
+      "id": "olsat-pa-g2-2",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A fish goes with water. A camel goes with what?",
+        "a": {
+          "text": "🐟"
+        },
+        "b": {
+          "text": "🌊"
+        },
+        "c": {
+          "text": "🐪"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🏜️"
+          },
+          "label": "a desert"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "💧"
+          },
+          "label": "a drop of water"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐫"
+          },
+          "label": "another camel"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A fish lives in water. A camel lives in the desert. Choice c is a trap because camels and water are linked in stories, but the pair is about where each one lives.",
+      "strategy": "Where does it live? That is the whole relationship here."
+    },
+    {
+      "id": "olsat-pa-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Rain goes with an umbrella. Sunshine goes with what?",
+        "a": {
+          "text": "🌧️"
+        },
+        "b": {
+          "text": "☂️"
+        },
+        "c": {
+          "text": "☀️"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🕶️"
+          },
+          "label": "sunglasses"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍦"
+          },
+          "label": "an ice cream"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏖️"
+          },
+          "label": "a beach"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌂"
+          },
+          "label": "a closed umbrella"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An umbrella protects you from rain. Sunglasses protect you from bright sun. An ice cream and a beach go with sunshine but they do not protect you from it.",
+      "strategy": "Ask what protects you from it, not what you enjoy during it."
+    },
+    {
+      "id": "olsat-pa-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A tree goes with a leaf. A book goes with what?",
+        "a": {
+          "text": "🌳"
+        },
+        "b": {
+          "text": "🍃"
+        },
+        "c": {
+          "text": "📖"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "📄"
+          },
+          "label": "a page"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "📚"
+          },
+          "label": "a stack of books"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "✏️"
+          },
+          "label": "a pencil"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🏫"
+          },
+          "label": "a school"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A leaf is one part of a tree. A page is one part of a book. Choice b goes the wrong way, from one book to many.",
+      "strategy": "Whole to part. Make sure you go from the big thing down to the small piece, not up."
+    },
+    {
+      "id": "olsat-pa-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which picture completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A grown dog goes with a puppy. A grown cat goes with what?",
+        "a": {
+          "text": "🐕"
+        },
+        "b": {
+          "text": "🐶"
+        },
+        "c": {
+          "text": "🐈"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐱"
+          },
+          "label": "a kitten"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐭"
+          },
+          "label": "a mouse"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🥛"
+          },
+          "label": "milk"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐾"
+          },
+          "label": "a paw print"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A puppy is a baby dog. A kitten is a baby cat. Milk and mice are things cats are linked with, and a paw print is something a cat leaves behind.",
+      "strategy": "Grown up and baby. Every animal has its own baby name."
+    }
+  ]
+}

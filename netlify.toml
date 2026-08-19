@@ -1,0 +1,41 @@
+# Netlify configuration for GiftedPrep.
+#
+# There is no build step. The repository root IS the site: plain HTML, CSS,
+# ES modules and JSON. Netlify serves it as-is.
+
+[build]
+  publish = "."
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Long cache for fingerprint-free static assets is unsafe, so keep it modest and
+# let the JSON revalidate. The whole site is a few hundred kilobytes.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=600, must-revalidate"
+    Content-Type = "application/json; charset=utf-8"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+    # The app loads nothing from anywhere else, so lock it down completely.
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'"
+
+# The app is a single page with hash routing, so any deep path should still
+# serve index.html rather than a 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

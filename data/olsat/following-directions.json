@@ -1,0 +1,791 @@
+{
+  "id": "olsat-following-directions",
+  "test": "olsat",
+  "battery": "verbal-comprehension",
+  "name": "Following Directions",
+  "icon": "ear",
+  "blurb": "Listen carefully, then pick the picture that matches.",
+  "childIntro": "I will say something once. Listen right to the end. Then find the picture that matches everything I said.",
+  "howItWorks": "The teacher reads a description aloud, once, and the child marks the picture that fits. It appears only at OLSAT levels A, B and C, which are kindergarten through second grade, because it is a listening task that cannot exist once children read for themselves. The difficulty comes from position words like between, above and next to, and from having to satisfy every condition at once.",
+  "parentTip": "This is the question type you can practise anywhere, with no materials. In the car, say: point to something red that is smaller than your hand. Build up to two and then three conditions. The skill is holding all of them in mind while checking, which is exactly what the test measures. Remember the real test says it once with no repeats.",
+  "questions": [
+    {
+      "id": "olsat-fd-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Point to the picture with the cat in the middle.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌳🐈🌳"
+          },
+          "label": "tree, cat, tree"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐈🌳🌳"
+          },
+          "label": "cat, tree, tree"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌳🌳🐈"
+          },
+          "label": "tree, tree, cat"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐈🐈🌳"
+          },
+          "label": "cat, cat, tree"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In the middle means with one thing on each side. Only choice a has the cat between the two trees.",
+      "strategy": "Middle means one thing on the left and one on the right."
+    },
+    {
+      "id": "olsat-fd-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Find the picture with a star above a moon.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "A star with a moon underneath it",
+            "cells": [
+              {
+                "text": "⭐"
+              },
+              {
+                "text": "🌙"
+              }
+            ]
+          },
+          "label": "star on top, moon below"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "A moon with a star underneath it",
+            "cells": [
+              {
+                "text": "🌙"
+              },
+              {
+                "text": "⭐"
+              }
+            ]
+          },
+          "label": "moon on top, star below"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "Two stars",
+            "cells": [
+              {
+                "text": "⭐"
+              },
+              {
+                "text": "⭐"
+              }
+            ]
+          },
+          "label": "two stars"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "Two moons",
+            "cells": [
+              {
+                "text": "🌙"
+              },
+              {
+                "text": "🌙"
+              }
+            ]
+          },
+          "label": "two moons"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Above means higher up. The star has to be on top and the moon underneath. Choice b has them the wrong way round.",
+      "strategy": "Above means on top. Below means underneath. They are opposites."
+    },
+    {
+      "id": "olsat-fd-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Find the picture that shows three apples and one banana.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍎🍎🍎🍌"
+          },
+          "label": "three apples and one banana"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍎🍌🍌🍌"
+          },
+          "label": "one apple and three bananas"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍎🍎🍌🍌"
+          },
+          "label": "two apples and two bananas"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍎🍎🍎"
+          },
+          "label": "three apples only"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count both. Three apples and one banana. Choice b has the numbers swapped and choice d has no banana at all.",
+      "strategy": "When you hear two numbers, count both before you choose."
+    },
+    {
+      "id": "olsat-fd-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Find the picture with a dog that is NOT next to a ball.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐕🌳"
+          },
+          "label": "a dog beside a tree"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐕⚽"
+          },
+          "label": "a dog beside a ball"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⚽🐕"
+          },
+          "label": "a ball beside a dog"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⚽⚽"
+          },
+          "label": "two balls"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The word NOT flips it. You want the dog with no ball beside it. Choices b and c both put a ball right next to the dog. Choice d has no dog at all.",
+      "strategy": "The word NOT changes everything. Listen for it and then look for the opposite."
+    },
+    {
+      "id": "olsat-fd-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Find the picture with a small triangle to the right of a big square.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "A big blue square then a small green triangle",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "triangle",
+                    "c": "green",
+                    "z": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "big square, small triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "A small green triangle then a big blue square",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "triangle",
+                    "c": "green",
+                    "z": 0.5
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "small triangle, big square"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "A big blue square then a big green triangle",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "triangle",
+                    "c": "green"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "big square, big triangle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "A small blue square then a small green triangle",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue",
+                    "z": 0.5
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "triangle",
+                    "c": "green",
+                    "z": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "small square, small triangle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things had to be right: the square is big, the triangle is small, and the triangle is on the right. Choice b has it on the left, choice c has the triangle too big, choice d has the square too small.",
+      "strategy": "Three conditions means three checks. Go through them in order."
+    },
+    {
+      "id": "olsat-fd-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Find the picture with a heart inside a circle.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "heart",
+                "c": "red",
+                "z": 0.4
+              }
+            ]
+          },
+          "label": "a heart inside a circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.4
+              }
+            ]
+          },
+          "label": "a circle inside a heart"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "A circle and a heart side by side",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue",
+                    "f": "outline"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "heart",
+                    "c": "red"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "a circle beside a heart"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          },
+          "label": "a star inside a circle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Inside means one shape is drawn within the other. The heart has to be the one inside. Choice b has them swapped and choice c has them side by side.",
+      "strategy": "Inside, outside and beside are three different places. Picture it before you look."
+    },
+    {
+      "id": "olsat-fd-g2-2",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Find the picture with more cats than dogs.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐈🐈🐕"
+          },
+          "label": "two cats and one dog"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐕🐕🐈"
+          },
+          "label": "two dogs and one cat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐈🐕"
+          },
+          "label": "one cat and one dog"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐕🐕🐕"
+          },
+          "label": "three dogs"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count each animal. Choice a has two cats and one dog, so there really are more cats. Choice c has the same number of each, which is not more.",
+      "strategy": "More than means bigger. The same number does not count."
+    },
+    {
+      "id": "olsat-fd-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Find the picture with a bird that is neither in a tree nor in a nest.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐦☁️"
+          },
+          "label": "a bird in the sky"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐦🌳"
+          },
+          "label": "a bird in a tree"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐦🪹"
+          },
+          "label": "a bird in a nest"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌳🪹"
+          },
+          "label": "a tree and a nest, no bird"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Neither one nor the other means both are ruled out. Choice b is in a tree and choice c is in a nest, so both are out. Choice d has no bird. That leaves the bird in the sky.",
+      "strategy": "Neither and nor means say no to both. Cross them off, then see what is left."
+    },
+    {
+      "id": "olsat-fd-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Find the picture where the second shape is a star.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "circle, star, square",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "green"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "circle, star, square"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "star, circle, square",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "green"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "star, circle, square"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "circle, square, star",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "green"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "circle, square, star"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "star, star, circle",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "star, star, circle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Second means the one in position number two, counting from the left. Choice b has the star first and choice c has it third.",
+      "strategy": "First, second, third. Count from the left with your finger."
+    },
+    {
+      "id": "olsat-fd-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Find the picture with exactly two shapes that are the same colour, and one that is different.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "blue, blue, green",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "triangle",
+                    "c": "green"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "two blue and one green"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "all blue",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "triangle",
+                    "c": "blue"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "three blue"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "all different",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "green"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "triangle",
+                    "c": "yellow"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "three different colours"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "all green",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "green"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "green"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "triangle",
+                    "c": "green"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "three green"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two must match and one must not. Choice a has two blue and one green. Choices b and d are all the same, and choice c has no matching pair at all.",
+      "strategy": "Read the sentence twice in your head. Exactly two, and exactly one different."
+    }
+  ]
+}

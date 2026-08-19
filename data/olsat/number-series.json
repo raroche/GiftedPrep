@@ -1,0 +1,478 @@
+{
+  "id": "olsat-number-series",
+  "test": "olsat",
+  "battery": "quantitative-reasoning",
+  "name": "Number Series",
+  "icon": "series",
+  "blurb": "A row of numbers follows a rule. What comes next?",
+  "childIntro": "Look at the numbers going along the row. Work out what is happening, then say what comes next.",
+  "howItWorks": "A string of numbers ending in a blank. It appears only at OLSAT levels D through G, so grade 3 upwards, because Quantitative Reasoning does not exist at the lower levels. Note that the blank is not always at the end.",
+  "parentTip": "One habit solves nearly all of these: write the gap between every pair of numbers underneath. If the gaps are all the same, that is the rule. If the gaps themselves form a pattern, that is the rule. If neither, check whether the odd and even positions are two separate sequences woven together.",
+  "questions": [
+    {
+      "id": "olsat-nse-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: ten, fifteen, twenty, twenty-five, thirty, question mark.",
+        "rows": [
+          [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "35"
+        },
+        {
+          "id": "b",
+          "text": "40"
+        },
+        {
+          "id": "c",
+          "text": "32"
+        },
+        {
+          "id": "d",
+          "text": "45"
+        },
+        {
+          "id": "e",
+          "text": "31"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is five more than the one before. Thirty plus five is thirty-five.",
+      "strategy": "Find the gap between the first two, then check it stays the same."
+    },
+    {
+      "id": "olsat-nse-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number goes in the gap?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers with the third one missing.",
+        "rows": [
+          [
+            "10",
+            "15",
+            "?",
+            "25",
+            "30",
+            "35"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "20"
+        },
+        {
+          "id": "b",
+          "text": "18"
+        },
+        {
+          "id": "c",
+          "text": "22"
+        },
+        {
+          "id": "d",
+          "text": "21"
+        },
+        {
+          "id": "e",
+          "text": "17"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The step is five each time. Fifteen plus five is twenty, and twenty plus five is twenty-five, which matches.",
+      "strategy": "The blank is not always at the end. Use the numbers on both sides of it."
+    },
+    {
+      "id": "olsat-nse-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row where every other number is five.",
+        "rows": [
+          [
+            "5",
+            "0",
+            "5",
+            "1",
+            "5",
+            "2",
+            "5",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "5"
+        },
+        {
+          "id": "c",
+          "text": "4"
+        },
+        {
+          "id": "d",
+          "text": "0"
+        },
+        {
+          "id": "e",
+          "text": "6"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two sequences are woven together. The numbers in the odd positions are all five. The ones in between go zero, one, two, so three comes next.",
+      "strategy": "When one number keeps repeating, ignore it and read only the others."
+    },
+    {
+      "id": "olsat-nse-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: two, five, nine, fourteen, twenty, question mark.",
+        "rows": [
+          [
+            "2",
+            "5",
+            "9",
+            "14",
+            "20",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "27"
+        },
+        {
+          "id": "b",
+          "text": "26"
+        },
+        {
+          "id": "c",
+          "text": "25"
+        },
+        {
+          "id": "d",
+          "text": "28"
+        },
+        {
+          "id": "e",
+          "text": "24"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The gaps are three, four, five, six. Each gap is one bigger than the last, so the next gap is seven. Twenty plus seven is twenty-seven.",
+      "strategy": "Write the gaps underneath. A pattern in the gaps is still a pattern."
+    },
+    {
+      "id": "olsat-nse-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers that alternate between multiplying and dividing.",
+        "rows": [
+          [
+            "4",
+            "12",
+            "6",
+            "18",
+            "9",
+            "27",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "13.5"
+        },
+        {
+          "id": "b",
+          "text": "81"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "18"
+        },
+        {
+          "id": "e",
+          "text": "30"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The rule alternates: times three, then halve. Four times three is twelve. Twelve halved is six. Six times three is eighteen. Eighteen halved is nine. Nine times three is twenty-seven. Twenty-seven halved is thirteen point five.",
+      "strategy": "A decimal answer among the choices is a clue that halving or dividing is involved."
+    },
+    {
+      "id": "olsat-nse-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers falling by nine each time.",
+        "rows": [
+          [
+            "81",
+            "72",
+            "63",
+            "54",
+            "45",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "36"
+        },
+        {
+          "id": "b",
+          "text": "35"
+        },
+        {
+          "id": "c",
+          "text": "34"
+        },
+        {
+          "id": "d",
+          "text": "38"
+        },
+        {
+          "id": "e",
+          "text": "40"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is nine less than the one before. Forty-five minus nine is thirty-six. These are also the nine times table read backwards.",
+      "strategy": "Recognising a times table saves time. Nine, eighteen, twenty-seven, thirty-six."
+    },
+    {
+      "id": "olsat-nse-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers getting ten times smaller each step.",
+        "rows": [
+          [
+            "5",
+            "0.5",
+            "0.05",
+            "0.005",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "0.0005"
+        },
+        {
+          "id": "b",
+          "text": "0.05"
+        },
+        {
+          "id": "c",
+          "text": "0.0055"
+        },
+        {
+          "id": "d",
+          "text": "0.001"
+        },
+        {
+          "id": "e",
+          "text": "0"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is a tenth of the one before, so the decimal point shifts one place left each time.",
+      "strategy": "Dividing by ten moves the decimal point one place to the left."
+    },
+    {
+      "id": "olsat-nse-g4-3",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of square numbers.",
+        "rows": [
+          [
+            "1",
+            "4",
+            "9",
+            "16",
+            "25",
+            "36",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "49"
+        },
+        {
+          "id": "b",
+          "text": "45"
+        },
+        {
+          "id": "c",
+          "text": "48"
+        },
+        {
+          "id": "d",
+          "text": "42"
+        },
+        {
+          "id": "e",
+          "text": "64"
+        }
+      ],
+      "answer": "a",
+      "explanation": "These are the square numbers: one times one, two times two, three times three and so on. The next is seven times seven, which is forty-nine. The gaps also tell you: three, five, seven, nine, eleven, then thirteen.",
+      "strategy": "Learn the first ten square numbers. They appear again and again."
+    },
+    {
+      "id": "olsat-nse-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers that alternate between doubling and subtracting.",
+        "rows": [
+          [
+            "3",
+            "6",
+            "5",
+            "10",
+            "9",
+            "18",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "17"
+        },
+        {
+          "id": "b",
+          "text": "36"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        },
+        {
+          "id": "d",
+          "text": "19"
+        },
+        {
+          "id": "e",
+          "text": "16"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The rule alternates: double, then take away one. Three doubled is six. Six minus one is five. Five doubled is ten. Ten minus one is nine. Nine doubled is eighteen. Eighteen minus one is seventeen.",
+      "strategy": "Two rules taking turns. Check both directions: up then down."
+    },
+    {
+      "id": "olsat-nse-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row where each number is the sum of the two before it.",
+        "rows": [
+          [
+            "1",
+            "1",
+            "2",
+            "3",
+            "5",
+            "8",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "13"
+        },
+        {
+          "id": "b",
+          "text": "11"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        },
+        {
+          "id": "d",
+          "text": "12"
+        },
+        {
+          "id": "e",
+          "text": "10"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is made by adding the two before it. One and one is two. One and two is three. Two and three is five. Three and five is eight. Five and eight is thirteen.",
+      "strategy": "If the gaps do not help, try adding the two previous numbers together."
+    }
+  ]
+}

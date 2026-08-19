@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (only used by tools/validate.mjs, which needs no dependencies)
+node_modules/
+npm-debug.log*
+
+# Local build and deploy artefacts
+.netlify/
+dist/
+
+# Local dev server config for Claude Code
+.claude/

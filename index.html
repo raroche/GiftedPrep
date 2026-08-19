@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<title>GiftedPrep — Friendly practice for CogAT, NNAT &amp; OLSAT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A free, no-login practice site where children in grades 1-4 can get familiar with the kinds of questions used on gifted screening tests: CogAT, NNAT and OLSAT. Works offline, made for the iPad.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fdfbf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171a21" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="GiftedPrep">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="GiftedPrep — Friendly practice for CogAT, NNAT &amp; OLSAT">
+<meta property="og:description" content="Free, no-login familiarisation practice for gifted screening tests, grades 1-4.">
+<meta property="og:image" content="assets/img/og-card.png">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/design-system.css">
+</head>
+
+<body class="gp-app">
+
+<a class="gp-skip" href="#gp-main">Skip to the questions</a>
+
+<!-- ============================================================== -->
+<!-- Top bar                                                        -->
+<!-- ============================================================== -->
+<header class="gp-topbar" id="gp-topbar">
+  <div class="gp-topbar__left">
+    <button type="button" class="gp-btn gp-btn--icon gp-btn--ghost" id="gp-back" hidden aria-label="Go back">
+      <span data-icon="back"></span>
+    </button>
+    <a class="gp-brand" href="#/home" aria-label="GiftedPrep home">
+      <span class="gp-brand__mark" data-icon="sparkle" aria-hidden="true"></span>
+      <span class="gp-brand__name">GiftedPrep</span>
+    </a>
+  </div>
+
+  <div class="gp-topbar__right">
+    <span class="gp-chip gp-chip--score" id="gp-score-chip" hidden>
+      <span data-icon="check"></span><span id="gp-score-text">0 / 0</span>
+    </span>
+    <span class="gp-chip gp-chip--streak" id="gp-streak-chip" hidden>
+      <span data-icon="sparkle"></span><span id="gp-streak-text">0</span>
+    </span>
+    <button type="button" class="gp-btn gp-btn--icon gp-btn--ghost" id="gp-speak-toggle"
+            aria-pressed="true" aria-label="Turn read aloud off">
+      <span data-icon="speaker"></span>
+    </button>
+    <button type="button" class="gp-btn gp-btn--icon gp-btn--ghost" id="gp-theme-toggle" aria-label="Switch to dark mode">
+      <span data-icon="moon"></span>
+    </button>
+    <a class="gp-btn gp-btn--quiet" href="#/parents" id="gp-parents-link">
+      <span data-icon="parent"></span><span class="gp-btn__label">For parents</span>
+    </a>
+  </div>
+</header>
+
+<main id="gp-main" class="gp-main">
+
+  <!-- ============================================================ -->
+  <!-- Home                                                          -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-home" aria-labelledby="home-title">
+    <div class="gp-container gp-stack">
+      <div class="gp-home-top">
+      <div class="gp-hero">
+        <p class="gp-hero__eyebrow">Free practice &middot; no sign-up &middot; nothing to install</p>
+        <h1 class="gp-hero__title" id="home-title">Puzzles that look like the ones on test day</h1>
+        <p class="gp-hero__lede">
+          GiftedPrep shows your child the <em>kinds</em> of questions used on the
+          CogAT, NNAT and OLSAT &mdash; the screening tests Florida districts use for
+          gifted programs. The goal is familiarity, not cramming. Every question
+          explains itself afterwards.
+        </p>
+      </div>
+
+      <div class="gp-card gp-card--setup">
+        <h2 class="gp-card__title">Who is practising today?</h2>
+        <fieldset class="gp-fieldset">
+          <legend class="gp-fieldset__legend">Pick a grade</legend>
+          <div class="gp-row gp-row--wrap" id="gp-grade-picker" role="radiogroup" aria-label="Grade level"></div>
+        </fieldset>
+        <p class="gp-muted gp-grade-note" id="gp-grade-note"></p>
+      </div>
+      </div>
+
+      <div class="gp-grid gp-grid--start">
+        <button type="button" class="gp-card gp-card--action" data-action="quick-start">
+          <span class="gp-card__icon" data-icon="shuffle"></span>
+          <span class="gp-card__title">Quick practice</span>
+          <span class="gp-card__sub">12 mixed puzzles from all three tests. Best place to start.</span>
+        </button>
+        <a class="gp-card gp-card--action" href="#/tests">
+          <span class="gp-card__icon" data-icon="target"></span>
+          <span class="gp-card__title">Choose a test</span>
+          <span class="gp-card__sub">CogAT, NNAT or OLSAT &mdash; then pick one question type.</span>
+        </a>
+        <a class="gp-card gp-card--action" href="#/parents">
+          <span class="gp-card__icon" data-icon="parent"></span>
+          <span class="gp-card__title">Parent guide</span>
+          <span class="gp-card__sub">What the tests are, what the scores mean, and the week before.</span>
+        </a>
+      </div>
+
+      <div class="gp-card gp-card--stats" id="gp-home-stats" hidden>
+        <h2 class="gp-card__title">Your practice so far</h2>
+        <div id="gp-home-stats-body"></div>
+        <button type="button" class="gp-btn gp-btn--quiet" data-action="reset-progress">
+          <span data-icon="refresh"></span><span class="gp-btn__label">Start fresh</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Test picker                                                   -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-tests" aria-labelledby="tests-title">
+    <div class="gp-container gp-stack">
+      <h1 class="gp-page-title" id="tests-title">Which test?</h1>
+      <p class="gp-page-lede">
+        Not sure which one your district uses? That is normal &mdash; most Florida
+        districts do not announce it. <strong>Mix it up</strong> covers all three.
+      </p>
+      <div class="gp-grid gp-grid--tests" id="gp-test-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Category picker                                               -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-categories" aria-labelledby="categories-title">
+    <div class="gp-container gp-stack">
+      <h1 class="gp-page-title" id="categories-title">Pick a puzzle type</h1>
+      <p class="gp-page-lede" id="gp-category-lede"></p>
+      <div class="gp-row gp-row--wrap gp-row--tools">
+        <button type="button" class="gp-btn gp-btn--primary" data-action="start-all">
+          <span data-icon="shuffle"></span><span class="gp-btn__label">Practise all types</span>
+        </button>
+        <span class="gp-muted" id="gp-category-count"></span>
+      </div>
+      <div class="gp-grid gp-grid--categories" id="gp-category-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Question screen                                               -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-quiz" aria-labelledby="quiz-title">
+    <div class="gp-container gp-quiz">
+      <h1 class="gp-sr-only" id="quiz-title">Practice question</h1>
+
+      <div class="gp-progress">
+        <div class="gp-progress__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+             aria-valuenow="0" aria-label="Progress through this set" id="gp-progress-bar">
+          <div class="gp-progress__fill" id="gp-progress-fill"></div>
+        </div>
+        <p class="gp-progress__label" id="gp-progress-label">Question 1 of 12</p>
+      </div>
+
+      <article class="gp-question" id="gp-question">
+        <p class="gp-question__meta" id="gp-question-meta"></p>
+        <div class="gp-question__stemrow">
+          <h2 class="gp-question__stem" id="gp-question-stem"></h2>
+          <button type="button" class="gp-btn gp-btn--icon gp-btn--ghost" id="gp-replay"
+                  aria-label="Read the question out loud">
+            <span data-icon="speaker"></span>
+          </button>
+        </div>
+        <div class="gp-question__figure" id="gp-question-figure"></div>
+      </article>
+
+      <div class="gp-choices" id="gp-choices" role="group" aria-label="Answer choices"></div>
+
+      <div class="gp-feedback" id="gp-feedback" hidden aria-live="polite">
+        <div class="gp-feedback__head">
+          <span class="gp-feedback__icon" id="gp-feedback-icon"></span>
+          <p class="gp-feedback__title" id="gp-feedback-title"></p>
+        </div>
+        <p class="gp-feedback__body" id="gp-feedback-body"></p>
+        <p class="gp-feedback__strategy" id="gp-feedback-strategy" hidden></p>
+        <div class="gp-feedback__actions">
+          <button type="button" class="gp-btn gp-btn--primary gp-btn--lg" id="gp-next">
+            <span class="gp-btn__label">Next puzzle</span><span data-icon="arrowRight"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Results                                                       -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-results" aria-labelledby="results-title">
+    <div class="gp-container gp-stack gp-results">
+      <h1 class="gp-page-title" id="results-title">Nice work!</h1>
+      <p class="gp-page-lede" id="gp-results-message"></p>
+      <div class="gp-results__top" id="gp-results-ring"></div>
+      <div class="gp-card">
+        <h2 class="gp-card__title">How each puzzle type went</h2>
+        <div class="gp-bars" id="gp-results-bars"></div>
+      </div>
+      <div class="gp-row gp-row--wrap">
+        <button type="button" class="gp-btn gp-btn--primary gp-btn--lg" data-action="again">
+          <span data-icon="refresh"></span><span class="gp-btn__label">Another set</span>
+        </button>
+        <a class="gp-btn gp-btn--ghost gp-btn--lg" href="#/tests">
+          <span data-icon="target"></span><span class="gp-btn__label">Different puzzle type</span>
+        </a>
+        <a class="gp-btn gp-btn--quiet gp-btn--lg" href="#/home">
+          <span data-icon="home"></span><span class="gp-btn__label">Home</span>
+        </a>
+      </div>
+      <div class="gp-card gp-card--review" id="gp-review-card" hidden>
+        <h2 class="gp-card__title">Worth another look together</h2>
+        <div id="gp-review-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Parent guide (content injected from parents.js)               -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-parents" aria-labelledby="parents-title">
+    <div class="gp-container">
+      <h1 class="gp-page-title" id="parents-title">For parents</h1>
+      <div class="gp-prose" id="gp-parents-body"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Error / empty state                                           -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-error" aria-labelledby="error-title">
+    <div class="gp-container gp-stack gp-center">
+      <h1 class="gp-page-title" id="error-title">Something did not load</h1>
+      <p class="gp-page-lede" id="gp-error-message"></p>
+      <a class="gp-btn gp-btn--primary gp-btn--lg" href="#/home">
+        <span data-icon="home"></span><span class="gp-btn__label">Back to the start</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="gp-footer">
+  <p>
+    GiftedPrep is a free familiarisation tool made by a parent. It is not
+    affiliated with, endorsed by, or derived from Riverside Insights (CogAT),
+    Pearson (NNAT, OLSAT), or any school district. No real test items are
+    reproduced here.
+  </p>
+  <p class="gp-footer__links">
+    <a href="#/parents">Parent guide</a>
+    <a href="https://github.com/rolandaroche/GiftedPrep" rel="noopener">Source code</a>
+  </p>
+</footer>
+
+<script type="module" src="assets/js/app.js"></script>
+<noscript>
+  <div class="gp-container">
+    <p><strong>GiftedPrep needs JavaScript.</strong> Please turn it on in your
+    browser settings, then reload this page.</p>
+  </div>
+</noscript>
+
+</body>
+</html>

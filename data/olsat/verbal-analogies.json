@@ -1,0 +1,323 @@
+{
+  "id": "olsat-verbal-analogies",
+  "test": "olsat",
+  "battery": "verbal-reasoning",
+  "name": "Word Analogies",
+  "icon": "analogy",
+  "blurb": "The first two words go together. Make the next two match.",
+  "childIntro": "The first two words go together in some way. Find the word that makes the second pair go together the same way.",
+  "howItWorks": "A is to B as C is to what. It runs at OLSAT levels D through G. The relationships used are the same family as on CogAT: opposites, part and whole, tool and user, object and function.",
+  "parentTip": "A recurring OLSAT trick is a word with the right meaning but the wrong part of speech. Near is to far as light is to distance fails because distance is a noun where an adjective is needed. Ask your child whether the answer word is the same KIND of word as the one it replaces.",
+  "questions": [
+    {
+      "id": "olsat-vaa-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Scissors is to cut as straw is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "drink"
+        },
+        {
+          "id": "b",
+          "text": "plastic"
+        },
+        {
+          "id": "c",
+          "text": "water"
+        },
+        {
+          "id": "d",
+          "text": "paper"
+        },
+        {
+          "id": "e",
+          "text": "bend"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Scissors are for cutting. A straw is for drinking. Plastic is what a straw is made of and water is what goes through it, but neither is what it is FOR.",
+      "strategy": "Object and its job. Ask what it is for."
+    },
+    {
+      "id": "olsat-vaa-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Puppy is to dog as kitten is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "cat"
+        },
+        {
+          "id": "b",
+          "text": "fur"
+        },
+        {
+          "id": "c",
+          "text": "milk"
+        },
+        {
+          "id": "d",
+          "text": "mouse"
+        },
+        {
+          "id": "e",
+          "text": "pet"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A puppy grows into a dog. A kitten grows into a cat. Fur, milk and mice are all things linked to cats without being what a kitten becomes.",
+      "strategy": "Baby and grown up. Every animal has both names."
+    },
+    {
+      "id": "olsat-vaa-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Hot is to cold as day is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "night"
+        },
+        {
+          "id": "b",
+          "text": "morning"
+        },
+        {
+          "id": "c",
+          "text": "sun"
+        },
+        {
+          "id": "d",
+          "text": "week"
+        },
+        {
+          "id": "e",
+          "text": "light"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Hot and cold are opposites. So the answer must be the opposite of day, which is night. Morning is a part of a day and a week is a group of days.",
+      "strategy": "When the first pair are opposites, look only for opposites."
+    },
+    {
+      "id": "olsat-vaa-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Painter is to brush as writer is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "pen"
+        },
+        {
+          "id": "b",
+          "text": "book"
+        },
+        {
+          "id": "c",
+          "text": "story"
+        },
+        {
+          "id": "d",
+          "text": "reader"
+        },
+        {
+          "id": "e",
+          "text": "paper"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A painter works with a brush. A writer works with a pen. A book and a story are what a writer produces, not the tool.",
+      "strategy": "Worker and tool. Do not pick the finished product."
+    },
+    {
+      "id": "olsat-vaa-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Near is to far as narrow is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "wide"
+        },
+        {
+          "id": "b",
+          "text": "thin"
+        },
+        {
+          "id": "c",
+          "text": "width"
+        },
+        {
+          "id": "d",
+          "text": "long"
+        },
+        {
+          "id": "e",
+          "text": "distance"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Near and far are opposites. The opposite of narrow is wide. Choice c, width, means roughly the right thing but it is a naming word where a describing word is needed. Choice b, thin, means the same as narrow.",
+      "strategy": "Match the kind of word. If the first three are describing words, so is the answer."
+    },
+    {
+      "id": "olsat-vaa-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Bird is to feather as fish is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "scale"
+        },
+        {
+          "id": "b",
+          "text": "water"
+        },
+        {
+          "id": "c",
+          "text": "fin"
+        },
+        {
+          "id": "d",
+          "text": "gill"
+        },
+        {
+          "id": "e",
+          "text": "swim"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A feather is what covers a bird's body. A scale is what covers a fish's body. Fins and gills are parts of a fish but they are not the covering.",
+      "strategy": "Match the exact part, not just any part."
+    },
+    {
+      "id": "olsat-vaa-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Library is to books as museum is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "exhibits"
+        },
+        {
+          "id": "b",
+          "text": "visitors"
+        },
+        {
+          "id": "c",
+          "text": "building"
+        },
+        {
+          "id": "d",
+          "text": "tickets"
+        },
+        {
+          "id": "e",
+          "text": "history"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A library is a place that holds books. A museum is a place that holds exhibits. Visitors go there, tickets get you in, and history is the subject, but none of those is what the building holds.",
+      "strategy": "Place and what it stores. Ask what is on the shelves."
+    },
+    {
+      "id": "olsat-vaa-g4-3",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Herd is to cattle as swarm is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "bees"
+        },
+        {
+          "id": "b",
+          "text": "honey"
+        },
+        {
+          "id": "c",
+          "text": "hive"
+        },
+        {
+          "id": "d",
+          "text": "sting"
+        },
+        {
+          "id": "e",
+          "text": "flowers"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A herd is a group of cattle. A swarm is a group of bees. Honey, hives, stings and flowers are all connected to bees without being what the group is made of.",
+      "strategy": "Group words always point at the animal they gather: herd, flock, swarm, pack, school."
+    },
+    {
+      "id": "olsat-vaa-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Drought is to water as famine is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "food"
+        },
+        {
+          "id": "b",
+          "text": "hunger"
+        },
+        {
+          "id": "c",
+          "text": "desert"
+        },
+        {
+          "id": "d",
+          "text": "crops"
+        },
+        {
+          "id": "e",
+          "text": "rain"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A drought is a shortage of water. A famine is a shortage of food. Hunger is the result of a famine, and crops are one source of food, but the pair is about what is missing.",
+      "strategy": "Some pairs mean a shortage of something. Ask what is running out."
+    },
+    {
+      "id": "olsat-vaa-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Whisper is to shout as drizzle is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "downpour"
+        },
+        {
+          "id": "b",
+          "text": "rain"
+        },
+        {
+          "id": "c",
+          "text": "cloud"
+        },
+        {
+          "id": "d",
+          "text": "damp"
+        },
+        {
+          "id": "e",
+          "text": "storm"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A whisper is a small amount of sound and a shout is a large amount. A drizzle is a small amount of rain and a downpour is a large amount. Choice b, rain, is the general word, not the big end. Choice e, storm, adds wind and thunder, which the pair does not.",
+      "strategy": "Some pairs go from a little to a lot of the very same thing. Match the amount exactly."
+    }
+  ]
+}

@@ -1,0 +1,3075 @@
+{
+  "id": "nnat-serial-reasoning",
+  "test": "nnat",
+  "battery": "nonverbal",
+  "name": "Serial Reasoning",
+  "icon": "series",
+  "blurb": "A sequence runs across the rows and down the columns.",
+  "childIntro": "Look for a sequence of shapes that repeats. It runs across every row and down every column. What is missing?",
+  "howItWorks": "Pearson describes this as recognising a sequence of shapes, such as circle then square then triangle, and how the sequence changes across the rows and down the columns. It is usually a three by three grid. It is harder than an analogy because the child has to hold a repeating cycle in mind rather than a single change.",
+  "parentTip": "The hard version has two things cycling at once on different lengths, for example a shape cycle of three and a colour cycle of two. Then the pattern does not repeat cleanly row by row. If your child is stuck, get them to read the whole grid as one long line, left to right and top to bottom, instead of row by row.",
+  "questions": [
+    {
+      "id": "nnat-sr-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "What goes in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where every row goes circle, square, triangle. The last box is empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every row goes circle, square, triangle. The bottom row has a circle and a square already, so a triangle comes next.",
+      "strategy": "Read one full row out loud. Then read the row with the hole and stop where the hole is."
+    },
+    {
+      "id": "nnat-sr-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What goes in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of squares where the colours shift along one place in each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The three colours go round in the same order, yellow, blue, green, and each row starts one further along. The bottom row runs green, yellow, so blue comes next.",
+      "strategy": "The colours are on a loop. After green comes yellow, then blue, then green again."
+    },
+    {
+      "id": "nnat-sr-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What goes in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where each row counts one star, two stars, three stars.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each row counts one, two, three. The bottom row is at two, so three comes next.",
+      "strategy": "Count each row before you answer. The counting starts again on every row."
+    },
+    {
+      "id": "nnat-sr-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What goes in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of green triangles that turn a quarter turn each step.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each triangle turns a quarter turn clockwise as you move right, and the turning starts again on each row. The bottom row has done two steps, so the third is a half turn from upright.",
+      "strategy": "Follow the top point of the triangle. It goes up, right, down."
+    },
+    {
+      "id": "nnat-sr-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What goes in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of circles alternating blue and yellow.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Blue and yellow take turns all the way through, carrying on from one row to the next. The box before the hole is yellow, so the hole is blue.",
+      "strategy": "Just look at the box right before the hole and pick the other colour."
+    },
+    {
+      "id": "nnat-sr-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the shape sequence shifts along by one on each row, and each row has its own colour.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The shapes go round in the loop circle, square, triangle, and each row starts one step further on. The bottom row runs triangle, circle, so square comes next. The colour comes from the row, which is green.",
+      "strategy": "One loop for the shape, one rule for the colour. Solve them separately."
+    },
+    {
+      "id": "nnat-sr-g2-2",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of arrows turning a quarter turn to the right at each step across and down.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every step right turns the arrow a quarter turn clockwise, and so does every step down. After three quarters comes a full turn, which points right again just like the start.",
+      "strategy": "After three quarter turns you are back where you started. The loop has four positions."
+    },
+    {
+      "id": "nnat-sr-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of green hexagons alternating filled and empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Filled and empty take turns all the way through. The box before the hole is empty, so the hole is filled.",
+      "strategy": "Alternating means take turns. Look at the one just before."
+    },
+    {
+      "id": "nnat-sr-g2-4",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the number of dots grows across each row and each row starts one higher.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "yellow",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "yellow",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "dot",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count rises by one across each row, and each new row starts one higher than the row above. The bottom row runs three, four, so five comes next.",
+      "strategy": "Two counting rules: across and down. Both add one."
+    },
+    {
+      "id": "nnat-sr-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the shape alternates and the colour comes from the column.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The shape alternates square, circle, square, circle all the way through, and the colour is fixed by the column: yellow, blue, green. The hole is a square in the green column.",
+      "strategy": "Two rules of different kinds. One runs along the line, one runs down the column."
+    },
+    {
+      "id": "nnat-sr-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the shape comes from the column and the colour from the row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The column decides the shape and the row decides the colour. The hole is in the triangle column and the green row.",
+      "strategy": "Point at the column, name the shape. Point at the row, name the colour."
+    },
+    {
+      "id": "nnat-sr-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the star count goes one, three, five across each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count goes up by two across every row: one, three, five. The row sets the colour, green.",
+      "strategy": "The step is two, not one. Check the gap before you continue it."
+    },
+    {
+      "id": "nnat-sr-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where each shape turns by an eighth of a turn at every step.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 135
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 135
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 135
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 225
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each step, across or down, adds an eighth of a full turn. The bottom row runs a quarter turn, then three eighths, so the next is a half turn.",
+      "strategy": "Small even turns are easiest to track by counting steps, not degrees."
+    },
+    {
+      "id": "nnat-sr-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of blue squares where a small dot moves one place right along each row and one place down each column.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 26,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 50,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 74,
+                "y": 26
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 26,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 50,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 26,
+                "y": 74
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 50,
+                "y": 74
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 74,
+                "y": 74
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 26,
+                "y": 74
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 74,
+                "y": 26
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2,
+                "x": 50,
+                "y": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The dot's place inside the square copies the box's place in the whole grid. The hole is the bottom right box, so the dot goes in the bottom right corner.",
+      "strategy": "Sometimes the little picture is a map of the big grid. Check whether they match."
+    },
+    {
+      "id": "nnat-sr-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the count goes one, two, three across each row while the colour follows its own repeating pattern.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The count is easy: one, two, three across every row. The colour is the hard part. Reading the whole grid as one long line, the colours run yellow, yellow, green, green, yellow, yellow, yellow, green, and the pair pattern says green comes next.",
+      "strategy": "When two rules have different lengths, read the grid as one long line instead of row by row."
+    },
+    {
+      "id": "nnat-sr-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the shape loop shifts by one on each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The loop is triangle, square, pentagon, and each row starts one further along. The bottom row runs pentagon, triangle, so square is next. The colour comes from the row.",
+      "strategy": "Write the loop down once. Then just walk along it."
+    },
+    {
+      "id": "nnat-sr-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of stars where the size loop shifts along on each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 0.7
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.7
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "z": 0.7
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sizes loop small, medium, large and each row starts one step further on. The bottom row runs large, small, so medium is next.",
+      "strategy": "Size loops work exactly like colour loops. Small, medium, large, then back to small."
+    },
+    {
+      "id": "nnat-sr-g4-3",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid where the fill loops solid, empty, dotted and shifts along on each row.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The fill loops solid, empty, dotted and each row starts one further on. The bottom row runs dotted, solid, so empty is next. The colour is set by the row.",
+      "strategy": "A fill loop is just as valid as a shape loop. Write down the three fills in order."
+    },
+    {
+      "id": "nnat-sr-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid of arrows turning a quarter turn each step, with a small dot under every arrow in the middle column.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 90
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 86
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 180
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 86
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 270
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 86
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.16,
+                "x": 50,
+                "y": 86
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The arrow turns a quarter turn clockwise at each step, so after three quarters it is back to pointing right. The dot belongs only to the middle column, and the hole is in the last column, so there is no dot. Choice d adds a dot that does not belong.",
+      "strategy": "Notice which features belong to the whole grid and which belong to one column only."
+    },
+    {
+      "id": "nnat-sr-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the grid?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A grid with three things changing at once: shape, colour and count.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three rules run together. The count is one, two, three across each row. The shape loop is square, circle, triangle, shifting one step on each row, so the hole is a circle. The colour alternates green, yellow along the whole line, and the box before the hole is yellow, so the hole is green.",
+      "strategy": "Three rules at once is the hardest thing on this test. Solve one at a time and write each answer down before starting the next."
+    }
+  ]
+}

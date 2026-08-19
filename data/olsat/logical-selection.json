@@ -1,0 +1,323 @@
+{
+  "id": "olsat-logical-selection",
+  "test": "olsat",
+  "battery": "verbal-reasoning",
+  "name": "Must Have",
+  "icon": "target",
+  "blurb": "What does something ALWAYS need?",
+  "childIntro": "Think carefully. Which one does it always have to have, every single time?",
+  "howItWorks": "The sentence is usually all X must have blank, or X cannot happen without blank. It runs at OLSAT levels D through G. The distractors are things that are almost always present but not actually required, which is exactly the difference the question is testing.",
+  "parentTip": "The test here is necessary versus merely typical. Teach the counterexample habit: for each choice ask, can I think of one that does not have this? A meal without friends is still a meal. A meal without food is not. One counterexample kills a choice.",
+  "questions": [
+    {
+      "id": "olsat-lse-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "A meal cannot be eaten without —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "food"
+        },
+        {
+          "id": "b",
+          "text": "a fork"
+        },
+        {
+          "id": "c",
+          "text": "a table"
+        },
+        {
+          "id": "d",
+          "text": "friends"
+        },
+        {
+          "id": "e",
+          "text": "a plate"
+        }
+      ],
+      "answer": "a",
+      "explanation": "You can eat a meal with your hands, standing up, alone, straight from the pan. But you cannot eat a meal without food.",
+      "strategy": "For every choice, try to think of one example that does not have it. If you can, cross it off."
+    },
+    {
+      "id": "olsat-lse-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Every song must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "sound"
+        },
+        {
+          "id": "b",
+          "text": "words"
+        },
+        {
+          "id": "c",
+          "text": "a guitar"
+        },
+        {
+          "id": "d",
+          "text": "a singer"
+        },
+        {
+          "id": "e",
+          "text": "drums"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Plenty of songs have no words, no guitar and no drums. Some are played, not sung. But every song is made of sound.",
+      "strategy": "Start with the choice that seems too obvious. It is often the right one."
+    },
+    {
+      "id": "olsat-lse-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "A shadow cannot exist without —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "light"
+        },
+        {
+          "id": "b",
+          "text": "the sun"
+        },
+        {
+          "id": "c",
+          "text": "a wall"
+        },
+        {
+          "id": "d",
+          "text": "a person"
+        },
+        {
+          "id": "e",
+          "text": "darkness"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A lamp or a torch casts a shadow just as the sun does, so the sun is not required. A shadow can fall on the ground, not just a wall. But without any light there is no shadow at all.",
+      "strategy": "The most common answer is not always the necessary one. Sunlight is one kind of light."
+    },
+    {
+      "id": "olsat-lse-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Every book must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "pages"
+        },
+        {
+          "id": "b",
+          "text": "pictures"
+        },
+        {
+          "id": "c",
+          "text": "a cover"
+        },
+        {
+          "id": "d",
+          "text": "chapters"
+        },
+        {
+          "id": "e",
+          "text": "an index"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Many books have no pictures, no chapters and no index. Pages are the one thing a book cannot do without.",
+      "strategy": "Ask which choice would still leave you with a book if you removed it."
+    },
+    {
+      "id": "olsat-lse-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "A knot must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "something bendy"
+        },
+        {
+          "id": "b",
+          "text": "rope"
+        },
+        {
+          "id": "c",
+          "text": "a sailor"
+        },
+        {
+          "id": "d",
+          "text": "two ends"
+        },
+        {
+          "id": "e",
+          "text": "a purpose"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Knots can be tied in wire, in hair, in a shoelace or in a plastic bag, so rope is not required. But whatever you tie must be able to bend and cross over itself.",
+      "strategy": "Replace a specific thing with the general idea behind it. Rope becomes something bendy."
+    },
+    {
+      "id": "olsat-lse-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "A journey must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a starting point"
+        },
+        {
+          "id": "b",
+          "text": "a map"
+        },
+        {
+          "id": "c",
+          "text": "a car"
+        },
+        {
+          "id": "d",
+          "text": "a suitcase"
+        },
+        {
+          "id": "e",
+          "text": "a hotel"
+        }
+      ],
+      "answer": "a",
+      "explanation": "You can travel without a map, on foot, with nothing packed and never stay anywhere. But every journey starts somewhere.",
+      "strategy": "Necessary means it could not be otherwise. Typical means it usually is."
+    },
+    {
+      "id": "olsat-lse-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Rain cannot fall without —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "water"
+        },
+        {
+          "id": "b",
+          "text": "clouds forming"
+        },
+        {
+          "id": "c",
+          "text": "thunder"
+        },
+        {
+          "id": "d",
+          "text": "wind"
+        },
+        {
+          "id": "e",
+          "text": "cold air"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Rain often comes with clouds, and clouds are how rain usually forms, but the one thing rain absolutely is made of is water. Thunder, wind and cold are all sometimes absent.",
+      "strategy": "Ask what the thing is MADE of. That is almost always necessary."
+    },
+    {
+      "id": "olsat-lse-g4-3",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "An argument must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "disagreement"
+        },
+        {
+          "id": "b",
+          "text": "shouting"
+        },
+        {
+          "id": "c",
+          "text": "anger"
+        },
+        {
+          "id": "d",
+          "text": "two people"
+        },
+        {
+          "id": "e",
+          "text": "a winner"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Arguments can be calm and quiet, can end with nobody winning, and can happen among several people or inside one person's head. But without disagreement there is no argument.",
+      "strategy": "Strip away every feeling and detail. What is left is the definition."
+    },
+    {
+      "id": "olsat-lse-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "A promise must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a commitment about the future"
+        },
+        {
+          "id": "b",
+          "text": "a handshake"
+        },
+        {
+          "id": "c",
+          "text": "witnesses"
+        },
+        {
+          "id": "d",
+          "text": "writing"
+        },
+        {
+          "id": "e",
+          "text": "a reward"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Promises need no handshake, no witness, no paper and no reward. What they do need is somebody saying they will do something later.",
+      "strategy": "Abstract words still have a core. Ask what would make it stop being that thing."
+    },
+    {
+      "id": "olsat-lse-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "A measurement must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a unit"
+        },
+        {
+          "id": "b",
+          "text": "a ruler"
+        },
+        {
+          "id": "c",
+          "text": "a number that is exact"
+        },
+        {
+          "id": "d",
+          "text": "a scientist"
+        },
+        {
+          "id": "e",
+          "text": "metres"
+        }
+      ],
+      "answer": "a",
+      "explanation": "You can measure without a ruler, without being a scientist, and without using metres. Measurements are often approximate. But a measurement with no unit is meaningless: five what?",
+      "strategy": "If a choice names one particular example of something, look for the general word instead."
+    }
+  ]
+}

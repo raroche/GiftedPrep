@@ -1,0 +1,1023 @@
+{
+  "id": "olsat-figural-classification",
+  "test": "olsat",
+  "battery": "figural-reasoning",
+  "name": "Shape Odd One Out",
+  "icon": "shapes",
+  "blurb": "All but one of these shapes share something. Find the one that does not.",
+  "childIntro": "Look at all the shapes. Most of them are alike in one way. Which one is different?",
+  "howItWorks": "The child marks the figure that does not belong. On OLSAT this runs at levels A through D, so kindergarten to third grade, and then stops. The rule can be about shape, count, shading, orientation or an abstract property like the number of corners.",
+  "parentTip": "Have your child say what the others have in common before naming the odd one out. If they cannot finish the sentence they are all ___, they are guessing. This is also the quickest question type to practise with buttons or coins on a table.",
+  "questions": [
+    {
+      "id": "olsat-fcl-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a square"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a circle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red circle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green circle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three of them are circles. The square is the only one that is not round.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three squares"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two circles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two stars"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two triangles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every other box has exactly two shapes. This one has three.",
+      "strategy": "Count each box before you look at the shapes."
+    },
+    {
+      "id": "olsat-fcl-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a solid circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty square"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty triangle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty star"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three of the shapes are just outlines with nothing inside. The circle is filled in.",
+      "strategy": "Empty or filled in. Check the inside, not the edge."
+    },
+    {
+      "id": "olsat-fcl-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a triangle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a square"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a pentagon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The triangle, square and pentagon are all made of straight lines with corners. The circle has no corners at all.",
+      "strategy": "Trace the outline with your finger. If it never turns a corner, it is a curve."
+    },
+    {
+      "id": "olsat-fcl-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "a square"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "a triangle upright"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "r": 90
+              }
+            ]
+          },
+          "label": "a triangle on its side"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "r": 180
+              }
+            ]
+          },
+          "label": "a triangle upside down"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three of them are triangles turned different ways. A turned triangle is still a triangle. The square is the only different shape.",
+      "strategy": "Turning a shape does not change what it is. Count its corners to be sure."
+    },
+    {
+      "id": "olsat-fcl-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a square"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a diamond"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a parallelogram"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The square, the diamond and the parallelogram all have four sides. The circle has none.",
+      "strategy": "Count the sides of every shape, then look for the odd number."
+    },
+    {
+      "id": "olsat-fcl-g2-2",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a dotted hexagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "stripesd"
+              }
+            ]
+          },
+          "label": "a striped circle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "stripesd"
+              }
+            ]
+          },
+          "label": "a striped square"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "stripesd"
+              }
+            ]
+          },
+          "label": "a striped star"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three of them have slanted stripes inside. The hexagon has dots instead.",
+      "strategy": "Stripes and dots look similar from far away. Look closely."
+    },
+    {
+      "id": "olsat-fcl-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "square",
+                "c": "yellow",
+                "z": 0.35
+              }
+            ]
+          },
+          "label": "a square inside a circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "circle",
+                "c": "yellow",
+                "z": 0.35
+              }
+            ]
+          },
+          "label": "a circle inside a circle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "square",
+                "c": "yellow",
+                "z": 0.35
+              }
+            ]
+          },
+          "label": "a square inside a square"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.35
+              }
+            ]
+          },
+          "label": "a triangle inside a triangle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In three of the boxes the small shape inside matches the big shape outside. In choice a they are different.",
+      "strategy": "When shapes are nested, check whether the inside copies the outside."
+    },
+    {
+      "id": "olsat-fcl-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four circles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three stars"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five squares"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven triangles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three, five and seven are odd numbers. Four is even, so the circles are the odd one out. That is the joke: four is the only one that is not an odd number.",
+      "strategy": "When the counts are all different, check whether they are odd or even."
+    },
+    {
+      "id": "olsat-fcl-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which shape does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a parallelogram"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a triangle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a heart"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a kite"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fold the triangle, the heart and the kite down the middle from top to bottom and the two halves match. Fold the parallelogram the same way and they do not.",
+      "strategy": "Imagine folding each shape in half down the middle. Do the halves land on top of each other?"
+    },
+    {
+      "id": "olsat-fcl-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "outline"
+              },
+              {
+                "s": "dot",
+                "c": "ink",
+                "z": 0.2
+              }
+            ]
+          },
+          "label": "a square with a dot"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty circle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty triangle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty pentagon"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty hexagon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of the figures are plain empty outlines. Only one has something extra drawn inside it.",
+      "strategy": "Look for the figure with an extra part that the others do not have."
+    },
+    {
+      "id": "olsat-fcl-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "a circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "three corners"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "four corners"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "five corners"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "six corners"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every other figure has a number of corners you can count. The circle has none.",
+      "strategy": "Corners can be counted. Curves cannot. That is often the rule."
+    },
+    {
+      "id": "olsat-fcl-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three stars"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two circles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four squares"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six triangles"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "teal",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight diamonds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count each box: three, two, four, six, eight. Two, four, six and eight are all even numbers. Three is the only odd one.",
+      "strategy": "Count every box, write the numbers in a row, then sort them into odd and even."
+    },
+    {
+      "id": "olsat-fcl-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a right triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a square"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a diamond"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a hexagon"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "an octagon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The square, diamond, hexagon and octagon all have an even number of corners: four, four, six and eight. The right triangle has three, which is odd.",
+      "strategy": "Count corners and sort them into odd and even. It works surprisingly often."
+    },
+    {
+      "id": "olsat-fcl-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three circles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three triangles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four squares"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five pentagons"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six hexagons"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In four of the boxes the number of shapes matches the number of corners each shape has: three triangles, four squares, five pentagons, six hexagons. A circle has no corners, so three circles breaks the rule.",
+      "strategy": "Look for a link between the count and the shape itself. It is the hardest sorting rule and the most satisfying to spot."
+    }
+  ]
+}

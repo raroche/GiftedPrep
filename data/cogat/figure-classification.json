@@ -1,0 +1,2045 @@
+{
+  "id": "cogat-figure-classification",
+  "test": "cogat",
+  "battery": "nonverbal",
+  "name": "Figure Sorting",
+  "icon": "shapes",
+  "blurb": "Three shapes belong together. Find the fourth.",
+  "childIntro": "These three shapes are alike in some way. Which one of the answers belongs with them?",
+  "howItWorks": "Three figures are shown together. They share one hidden rule. The child works out the rule and picks the answer that follows it too. The rule is often not the obvious one: it can be a count, a part inside the shape, or a property like having straight edges.",
+  "parentTip": "The classic mistake is finding a rule that fits two of the three. Have your child say the rule out loud and then test it against all three shapes before looking at the answers. If a rule only fits two, it is the wrong rule.",
+  "questions": [
+    {
+      "id": "cogat-fc-g1-1",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "These three go together. Which one belongs with them?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes: a blue circle, a red circle and a green circle.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "All three are circles. The colours are all different, so colour is not the rule. The rule is round. Only choice a is a circle.",
+      "strategy": "If one thing changes in all three, that thing is not the rule. Look for what stays the same."
+    },
+    {
+      "id": "cogat-fc-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three groups: two purple squares, two orange triangles and two teal hearts.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every box has exactly two shapes. The shape and the colour change every time, so they are not the rule. The rule is: there are two of them.",
+      "strategy": "Count first. Sometimes the answer is about how many, not about what shape."
+    },
+    {
+      "id": "cogat-fc-g1-3",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes with stripes: a striped blue square, a striped green circle and a striped orange triangle.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "stripesd"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "stripesd"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "stripesd"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "stripesd"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every shape has slanted stripes inside. The shapes and colours are all different. The stripes are the rule.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
+      "id": "cogat-fc-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes, each with three points: a green triangle, a red triangle turned upside down, and a blue triangle turned sideways.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "r": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "r": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "All three are triangles. They are turned different ways and coloured differently, so turning and colour are not the rule. Three corners is the rule. Choice c has four corners.",
+      "strategy": "A shape turned around is still the same shape. Count its corners to be sure."
+    },
+    {
+      "id": "cogat-fc-g1-5",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three big shapes with a small shape drawn inside each one.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.35
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "f": "outline"
+              },
+              {
+                "s": "square",
+                "c": "red",
+                "z": 0.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.35
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each big shape has a small red dot inside it. The big shape changes every time, so it is not the rule. The rule is the little red dot inside. Choice c has a little square instead.",
+      "strategy": "When shapes have a small piece inside, check the small piece. That is often where the rule hides."
+    },
+    {
+      "id": "cogat-fc-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes made only of straight lines: a pentagon, a trapezoid and a hexagon.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every shape is made only of straight edges and corners. The circle, the oval and the crescent all have curves. Only the octagon is all straight lines.",
+      "strategy": "Straight or curved is one of the easiest rules to miss because it is so simple."
+    },
+    {
+      "id": "cogat-fc-g2-2",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes that are only outlines, not filled in.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple",
+                "f": "stripesh"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "All three are empty outlines with nothing inside. Choice b is filled in and choice d has stripes inside. Only choice a is empty.",
+      "strategy": "Empty, filled, striped and dotted are four different states. Name which one you see."
+    },
+    {
+      "id": "cogat-fc-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three groups, each holding four small shapes.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each group has exactly four shapes. Count carefully: choice b has five and choice c has three. Only choice a has four.",
+      "strategy": "When the answers differ by only one, count twice. Point at each shape as you count."
+    },
+    {
+      "id": "cogat-fc-g2-4",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three arrows pointing in different directions.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "red",
+                "r": 180
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "line",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "All three are arrows. They point different ways and are different colours, so neither direction nor colour is the rule. Being an arrow is the rule. Choice b is a chevron, which has no arrow head.",
+      "strategy": "Direction changing in every example is a signal that direction is NOT the rule."
+    },
+    {
+      "id": "cogat-fc-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes, each with an even number of points or corners.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners: the square has four, the hexagon has six, the octagon has eight. All even numbers. The diamond has four corners, which is even. The triangle has three and the pentagon has five, which are odd. The circle has none at all.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle. Try it whenever the shapes look unrelated."
+    },
+    {
+      "id": "cogat-fc-g3-1",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes, each split so that half is shaded.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "halfleft"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "f": "halfleft"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "f": "halfleft"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange",
+                "f": "halfleft"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange",
+                "f": "halftop"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "f": "halfleft"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every figure has its left half shaded and its right half empty. Choice c is shaded on the top half, which is a different split. Choice a matches.",
+      "strategy": "Half-shaded shapes have a direction. Check which side is filled, not just that a half is filled."
+    },
+    {
+      "id": "cogat-fc-g3-2",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three big outlined shapes, each with a small solid star inside.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "grey",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "grey",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "grey",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "grey",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "grey",
+                "f": "outline"
+              },
+              {
+                "s": "circle",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "grey"
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "grey",
+                "f": "outline"
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The rule has two parts: an outlined shape, and a small yellow star inside it. Choice b swapped the star for a circle. Choice c filled the outer shape in. Choice e changed the star's colour.",
+      "strategy": "Rules can have two parts joined by AND. Say the rule as a full sentence: an empty shape AND a yellow star inside."
+    },
+    {
+      "id": "cogat-fc-g3-3",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three groups of shapes, each with one large shape and two small ones of the same kind.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Here the rule has two parts that both hold in all three: exactly three shapes, and all of them blue. Choice b is the right count but the wrong colour. Choice c is the right colour but four shapes.",
+      "strategy": "When two things stay the same across all three, both are part of the rule."
+    },
+    {
+      "id": "cogat-fc-g3-4",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes that each have a line of symmetry down the middle.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fold each shape down the middle from top to bottom and the two halves match exactly. The heart, the triangle and the kite all do this. So does the house. The parallelogram, the right triangle, the crescent and the lightning bolt do not.",
+      "strategy": "Imagine folding the shape in half. If both halves land on top of each other, it is symmetrical."
+    },
+    {
+      "id": "cogat-fc-g3-5",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three groups where the number of shapes matches the number of corners on each shape.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The number of shapes equals the number of corners on each shape. Three triangles with three corners. Four squares with four corners. Five pentagons with five corners. So a hexagon has six corners, and there must be six of them.",
+      "strategy": "This is the hardest kind of sorting rule: the count and the shape are linked to each other. If nothing simple works, check whether one number matches another."
+    },
+    {
+      "id": "cogat-fc-g4-1",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes with dotted fill.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "teal",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "f": "dots"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "f": "stripesv"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every figure is filled with dots. The shape changes every time and the colour changes every time, so neither of those is the rule. Only choice a is dotted. Choice b has a grid, c is solid, d has stripes and e is solid.",
+      "strategy": "Fill patterns are easy to skim past. Zoom in mentally on what is inside the outline."
+    },
+    {
+      "id": "cogat-fc-g4-2",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes, each one turned a quarter turn from upright.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "r": 45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "red",
+                "r": 45
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "blue",
+                "r": 45
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple",
+                "r": 45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "r": 45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "All three shapes are tipped over by the same amount, halfway between upright and sideways. Only choice a is tipped by that same amount.",
+      "strategy": "When every figure is tilted the same way, the tilt itself is the rule."
+    },
+    {
+      "id": "cogat-fc-g4-3",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three groups where a large shape sits with a small shape of the same kind.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.9,
+                "x": 32,
+                "y": 50
+              },
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.35,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "z": 0.9,
+                "x": 32,
+                "y": 50
+              },
+              {
+                "s": "star",
+                "c": "orange",
+                "z": 0.35,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "z": 0.9,
+                "x": 32,
+                "y": 50
+              },
+              {
+                "s": "hexagon",
+                "c": "green",
+                "z": 0.35,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "z": 0.9,
+                "x": 32,
+                "y": 50
+              },
+              {
+                "s": "heart",
+                "c": "pink",
+                "z": 0.35,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "z": 0.35,
+                "x": 32,
+                "y": 50
+              },
+              {
+                "s": "heart",
+                "c": "pink",
+                "z": 0.9,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "z": 0.9,
+                "x": 32,
+                "y": 50
+              },
+              {
+                "s": "circle",
+                "c": "pink",
+                "z": 0.35,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "z": 0.9,
+                "x": 32,
+                "y": 50
+              },
+              {
+                "s": "heart",
+                "c": "blue",
+                "z": 0.35,
+                "x": 74,
+                "y": 50
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "z": 0.9,
+                "x": 50,
+                "y": 50
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each box holds the same shape twice, in the same colour: a big one on the left and a small one on the right. Choice b puts the small one first. Choice c changed the second shape. Choice d changed its colour. Choice e has only one shape.",
+      "strategy": "Position matters. Big-then-small is a different rule from small-then-big."
+    },
+    {
+      "id": "cogat-fc-g4-4",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three shapes that each have a curved edge somewhere.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "orange"
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every figure has at least one curved edge. The diamond, chevron, bowtie and four-pointed star are made only of straight lines. The leaf has curves.",
+      "strategy": "Ask a yes or no question about each answer: does it have a curve? Then eliminate every no."
+    },
+    {
+      "id": "cogat-fc-g4-5",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure belongs with the three on top?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three groups where the shapes total an odd number.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "n": 7
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "The counts are three, five and seven. Every one is an odd number, and each is two more than the one before. The next odd number after seven is nine. Every other answer is an even number.",
+      "strategy": "When all five answers are the same shape and colour, the rule is definitely about the number. Count and look for odd, even, or a step."
+    }
+  ]
+}
