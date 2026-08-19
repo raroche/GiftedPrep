@@ -56,6 +56,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **1,576 questions** | 31 categories across three tests, at least 17 per category per grade |
 | **Grades 1–4** | Content and answer-choice counts match the real test level for each grade |
 | **Read aloud** | Uses the device's built-in voice. Grades 1–2 are read aloud on the real tests too |
+| **Review answered puzzles** | Arrows step back and forward over questions already answered, restoring the tiles and the explanation. Revisiting never changes the score |
 | **Explanations** | Every question explains why the answer is right *and* why the tempting wrong one is wrong |
 | **Strategy tips** | Each question carries the habit that prevents that specific mistake |
 | **Pick a category** | Practice one puzzle type, one whole test, or a mix of all three |
@@ -65,8 +66,8 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
-Keyboard: press <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the
-next question.
+Keyboard: <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the next
+question, <kbd>←</kbd> and <kbd>→</kbd> to look back over answered ones.
 
 ## What is covered
 
@@ -247,13 +248,29 @@ Shape attributes: `s` shape, `c` color, `f` fill, `n` count 1–9, `r` rotation,
 After any edit:
 
 ```bash
-node tools/validate.mjs
+node tools/validate.mjs      # everything, or pass a filename fragment
+node tools/dupcheck.mjs      # two choices that draw the same picture
+node tools/rulecheck.mjs     # the key disobeying its own example
 ```
 
-It checks that every answer id matches a choice, that the choice count matches
-the real test for that grade, that NNAT items stay inside Pearson's palette,
-that every figure renders, and that grade-1 and grade-2 prompts stay short
-enough to be read aloud once.
+`validate.mjs` covers all three. It checks that every answer id matches a
+choice, that the choice count matches the real test for that grade, that NNAT
+items stay inside Pearson's palette, that every figure renders, that grade-1 and
+grade-2 prompts stay short enough to be read aloud once, and two things that are
+easy to get wrong and impossible to see in a diff:
+
+- **No two choices may draw the same picture.** Comparing the raw specs is not
+  enough — a plus turned 90° is a different spec but an identical image, because
+  a plus is four-fold symmetric. `tools/_symmetry.*` records the rotational
+  symmetry of every shape so the check compares what the child actually sees.
+- **The key must obey the rule its own example demonstrates.** If A becomes B by
+  one rule, C must become the answer by that same rule.
+
+After editing a generator, rebuild and re-verify with:
+
+```bash
+tools/build.sh
+```
 
 ## Accessibility
 

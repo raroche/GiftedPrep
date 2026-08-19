@@ -928,7 +928,34 @@ button, a, label, summary, [role="button"] {
   font-size: var(--gp-text-sm);
   color: var(--gp-ink-muted);
   font-weight: 700;
+  text-align: center;
+  flex: 1 1 auto;
 }
+
+/* Arrows either side of the counter, for stepping back over answered puzzles. */
+.gp-progress__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--gp-space-2);
+}
+.gp-progress__nav .gp-btn--icon { flex: none; }
+
+/* A puzzle being looked at again, rather than answered for the first time. */
+.gp-review-note {
+  display: flex;
+  align-items: center;
+  gap: var(--gp-space-2);
+  margin-top: var(--gp-space-3);
+  padding: var(--gp-space-2) var(--gp-space-4);
+  border-radius: var(--gp-radius-pill);
+  background: var(--gp-secondary-soft);
+  border: 1px solid var(--gp-secondary-line);
+  color: var(--gp-secondary);
+  font-size: var(--gp-text-sm);
+  font-weight: 700;
+  width: fit-content;
+}
+.gp-review-note svg { width: 17px; height: 17px; }
 
 .gp-question {
   background: var(--gp-surface);

@@ -167,7 +167,17 @@
              aria-valuenow="0" aria-label="Progress through this set" id="gp-progress-bar">
           <div class="gp-progress__fill" id="gp-progress-fill"></div>
         </div>
-        <p class="gp-progress__label" id="gp-progress-label">Question 1 of 12</p>
+        <div class="gp-progress__nav">
+          <button type="button" class="gp-btn gp-btn--icon gp-btn--ghost" id="gp-prev"
+                  aria-label="Look at the puzzle before this one" disabled>
+            <span data-icon="back"></span>
+          </button>
+          <p class="gp-progress__label" id="gp-progress-label">Question 1 of 12</p>
+          <button type="button" class="gp-btn gp-btn--icon gp-btn--ghost" id="gp-fwd"
+                  aria-label="Go forward again" disabled>
+            <span data-icon="arrowRight"></span>
+          </button>
+        </div>
       </div>
 
       <article class="gp-question" id="gp-question">

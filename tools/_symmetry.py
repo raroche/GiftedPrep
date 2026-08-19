@@ -37,6 +37,17 @@ def rotation_is_invisible(shape, deg):
     return deg % (360 // n) == 0
 
 
+def rotation_is_faithful(shape, deg):
+    """True when turning this shape by `deg` LOOKS like a turn of exactly `deg`.
+
+    A hexagon turned 90 degrees looks like it turned 30, because a hexagon
+    repeats every 60. Demonstrating a quarter turn on a cloud and then asking
+    for one on a hexagon shows the child two different amounts of turn. So a
+    rotation rule is only safe on a shape with no rotational symmetry at all.
+    """
+    return symmetry_of(shape) == 1
+
+
 def visible_rotations(shape, candidates):
     """Filter a list of angles down to the ones this shape can actually show."""
     return [d for d in candidates if not rotation_is_invisible(shape, d)]

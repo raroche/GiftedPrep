@@ -19,7 +19,7 @@ Rotation values follow Blum & Holling's measured difficulty ordering:
 Grades 1-2 use 90 clockwise only.
 """
 import random
-from _symmetry import canonical, rotation_is_invisible, visible_rotations
+from _symmetry import canonical, rotation_is_invisible, rotation_is_faithful, visible_rotations
 
 # ---------------------------------------------------------------- rules
 
@@ -235,7 +235,10 @@ def pick_rules(grade, count, base, rng, colors, also_visible_on=()):
         if canonical(r.apply(base)) == canonical(base):
             continue
         if r.key == 'r':
-            if any(rotation_is_invisible(t, r.value) for t in targets if t):
+            # The turn must look like the same amount of turn on every shape the
+            # rule touches. On a symmetric shape it does not: a hexagon turned 90
+            # degrees reads as 30. Only shapes with no rotational symmetry qualify.
+            if not all(rotation_is_faithful(t, r.value) for t in targets if t):
                 continue
         chosen.append(r)
         used_keys.add(r.key)

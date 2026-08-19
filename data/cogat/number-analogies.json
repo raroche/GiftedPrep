@@ -835,7 +835,7 @@
               {
                 "s": "triangle",
                 "c": "blue",
-                "n": 5
+                "n": 6
               }
             ]
           }
@@ -847,7 +847,7 @@
               {
                 "s": "triangle",
                 "c": "blue",
-                "n": 4
+                "n": 5
               }
             ]
           }
@@ -859,7 +859,7 @@
               {
                 "s": "triangle",
                 "c": "blue",
-                "n": 6
+                "n": 4
               }
             ]
           }
@@ -871,15 +871,15 @@
               {
                 "s": "triangle",
                 "c": "blue",
-                "n": 3
+                "n": 8
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Three becomes seven, so four were added. Two plus four is five. Choice b comes from doubling, but doubling three gives six, not seven.",
-      "strategy": "Test your rule on the pair you were given. If doubling does not give seven, doubling is not the rule."
+      "explanation": "Three becomes seven, so four were added. Two plus four is six. Choice c comes from doubling, but doubling three gives six, not seven.",
+      "strategy": "Test your rule on the pair you were given before you use it."
     },
     {
       "id": "cogat-na-g2-5",

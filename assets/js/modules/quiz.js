@@ -172,6 +172,45 @@ export class QuizSession {
     return null;
   }
 
+  /* ---------------- review navigation ----------------
+     A child can step back over questions already answered to see the
+     explanation again. Revisiting never changes the score: answers are keyed by
+     question id and `answerFor` simply reports what was recorded the first
+     time. */
+
+  /** The recorded answer for a question, or null if it is unanswered. */
+  answerFor(questionId) {
+    return this.answers.find((a) => a.questionId === questionId) || null;
+  }
+
+  /** True when the question at `index` has already been answered. */
+  isAnswered(index = this.index) {
+    const q = this.questions[index];
+    return Boolean(q && this.answerFor(q.id));
+  }
+
+  /** How far the child has actually got, as an index. */
+  get furthestIndex() {
+    return Math.min(this.answers.length, this.total - 1);
+  }
+
+  get canGoBack() { return this.index > 0; }
+
+  /** Forward is allowed onto any question already answered, plus the live one. */
+  get canGoForward() { return this.index < this.furthestIndex; }
+
+  /** Jump to an index. Refuses to skip past unanswered questions. */
+  goTo(index) {
+    if (index < 0 || index > this.furthestIndex || index >= this.total) return null;
+    this.index = index;
+    this.questionShownAt = Date.now();
+    return this.current;
+  }
+
+  back() { return this.canGoBack ? this.goTo(this.index - 1) : null; }
+
+  forward() { return this.canGoForward ? this.goTo(this.index + 1) : null; }
+
   /** Per-category tally for the results screen. */
   summary() {
     const byCategory = new Map();

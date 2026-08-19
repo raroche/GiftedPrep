@@ -13,7 +13,7 @@ docs/research/difficulty-model.md: 90 clockwise easiest, then 180, then 270.
 import sys, json, random
 sys.path.insert(0, 'tools')
 from _figural import *
-from _symmetry import canonical, rotation_is_invisible, visible_rotations
+from _symmetry import canonical, rotation_is_invisible, rotation_is_faithful, visible_rotations
 from _authoring import write
 
 ASYMMETRIC = ['righttriangle', 'trapezoid', 'parallelogram', 'kite', 'chevron',
@@ -31,8 +31,11 @@ def item(grade, rng, num, difficulty):
     if mode == 'rotate':
         # Both shapes must be able to show the turn. star4, plus and cross are
         # in the asymmetric-looking list but are four-fold symmetric.
-        angles = [d for d in rot_choices(grade)
-                  if not rotation_is_invisible(s1, d) and not rotation_is_invisible(s2, d)]
+        # Both shapes must show the turn at its true size, or the example and the
+        # answer display different amounts of rotation.
+        if not (rotation_is_faithful(s1, 90) and rotation_is_faithful(s2, 90)):
+            return None
+        angles = list(rot_choices(grade))
         if not angles:
             return None
         deg = rng.choice(angles)

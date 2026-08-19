@@ -357,7 +357,34 @@ function renderQuestion() {
   $('#gp-feedback').hidden = true;
   $('#gp-replay').hidden = !speech.isSupported();
 
-  if (state.settings.readAloud) speakQuestion();
+  /* Stepping back onto a question already answered restores what happened:
+     the same tiles marked, the same explanation. It never re-scores. */
+  const recorded = s.answerFor(q.id);
+  if (recorded) {
+    state.answered = true;
+    showResult(q, recorded.choiceId, recorded.correct, { speak: false, review: true });
+  } else if (state.settings.readAloud) {
+    speakQuestion();
+  }
+
+  updateNav();
+}
+
+/** Enable or disable the review arrows and label the Next button. */
+function updateNav() {
+  const s = state.session;
+  if (!s) return;
+  const prev = $('#gp-prev');
+  const fwd = $('#gp-fwd');
+  prev.disabled = !s.canGoBack;
+  fwd.disabled = !s.canGoForward;
+  prev.setAttribute('aria-disabled', String(prev.disabled));
+  fwd.setAttribute('aria-disabled', String(fwd.disabled));
+
+  const label = $('#gp-next').querySelector('.gp-btn__label');
+  if (s.canGoForward) label.textContent = 'Next puzzle';
+  else if (s.answers.length >= s.total) label.textContent = 'See how you did';
+  else label.textContent = 'Next puzzle';
 }
 
 function handleAnswer(choiceId) {
@@ -368,6 +395,24 @@ function handleAnswer(choiceId) {
   state.answered = true;
 
   storage.recordAnswer(q.categoryId, result.correct, q.id, result.streak);
+  showResult(q, choiceId, result.correct, { speak: state.settings.readAloud, review: false });
+  updateNav();
+}
+
+/**
+ * Paint the outcome of a question: mark the tiles, show the explanation.
+ * Used both when the child answers and when they step back to look again, so
+ * a revisited question looks exactly as it did the first time.
+ */
+function showResult(q, choiceId, correct, { speak = false, review = false } = {}) {
+  const s = state.session;
+  const result = {
+    correct,
+    correctChoiceId: q.answer,
+    explanation: relabel(q.explanation || '', q.letterOf),
+    strategy: relabel(q.strategy || '', q.letterOf),
+    streak: s.streak
+  };
 
   $$('.gp-choice').forEach((btn) => {
     const id = btn.dataset.choice;
@@ -390,9 +435,14 @@ function handleAnswer(choiceId) {
   fb.className = `gp-feedback ${result.correct ? 'is-positive' : 'is-retry'}`;
   fb.hidden = false;
   $('#gp-feedback-icon').innerHTML = icon(result.correct ? 'check' : 'sparkle', { size: 22 });
-  $('#gp-feedback-title').textContent = result.correct
-    ? (result.streak >= 3 ? `That is ${result.streak} in a row!` : 'That is right!')
-    : 'Not that one. Here is why.';
+  if (review) {
+    $('#gp-feedback-title').textContent = result.correct
+      ? 'You got this one right' : 'You picked this one before';
+  } else {
+    $('#gp-feedback-title').textContent = result.correct
+      ? (result.streak >= 3 ? `That is ${result.streak} in a row!` : 'That is right!')
+      : 'Not that one. Here is why.';
+  }
   $('#gp-feedback-body').textContent = result.explanation;
 
   const strat = $('#gp-feedback-strategy');
@@ -403,30 +453,43 @@ function handleAnswer(choiceId) {
     strat.hidden = true;
   }
 
-  const isLast = s.answers.length >= s.total;
-  $('#gp-next').querySelector('.gp-btn__label').textContent = isLast ? 'See how you did' : 'Next puzzle';
-
   $('#gp-score-text').textContent = `${s.correctCount} / ${s.answers.length}`;
   $('#gp-streak-text').textContent = String(s.streak);
-  $('#gp-streak-chip').hidden = s.streak < 2;
+  $('#gp-streak-chip').hidden = s.streak < 2 || review;
   $('#gp-progress-fill').style.width = `${Math.round((s.answers.length / s.total) * 100)}%`;
 
-  if (state.settings.readAloud) {
-    speech.speak([
-      result.correct ? 'That is right.' : 'Not that one.',
-      result.explanation
-    ]);
+  if (speak) {
+    speech.speak([result.correct ? 'That is right.' : 'Not that one.', result.explanation]);
   }
 
-  $('#gp-next').focus({ preventScroll: true });
-  fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (!review) {
+    $('#gp-next').focus({ preventScroll: true });
+    fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
 }
 
 function nextQuestion() {
   speech.cancel();
   const s = state.session;
+  /* When looking back over answered puzzles, Next walks forward through them
+     rather than skipping to the end of the set. */
+  if (s.canGoForward) { s.forward(); renderQuestion(); return; }
   if (s.answers.length >= s.total) { location.hash = '#/results'; renderResults(); return; }
   s.next();
+  renderQuestion();
+}
+
+function goPrev() {
+  if (!state.session || !state.session.canGoBack) return;
+  speech.cancel();
+  state.session.back();
+  renderQuestion();
+}
+
+function goForward() {
+  if (!state.session || !state.session.canGoForward) return;
+  speech.cancel();
+  state.session.forward();
   renderQuestion();
 }
 
@@ -617,6 +680,8 @@ function onKeydown(ev) {
     if (btn) { ev.preventDefault(); btn.click(); }
     return;
   }
+  if (ev.key === 'ArrowLeft') { ev.preventDefault(); goPrev(); return; }
+  if (ev.key === 'ArrowRight') { ev.preventDefault(); goForward(); return; }
   if (state.answered && (ev.key === 'Enter' || ev.key === ' ')) {
     ev.preventDefault();
     nextQuestion();
@@ -638,6 +703,8 @@ async function boot() {
 
   $('#gp-back').addEventListener('click', goBack);
   $('#gp-next').addEventListener('click', nextQuestion);
+  $('#gp-prev').addEventListener('click', goPrev);
+  $('#gp-fwd').addEventListener('click', goForward);
   $('#gp-replay').addEventListener('click', () => speech.speak(
     [state.session?.current?.promptSpeech || state.session?.current?.prompt,
      state.session?.current?.figure ? describeFigure(state.session.current.figure) : ''],

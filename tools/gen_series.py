@@ -8,7 +8,7 @@ another, so the answer has to satisfy both.
 import sys, json, random
 sys.path.insert(0, 'tools')
 from _figural import *
-from _symmetry import canonical, rotation_is_invisible
+from _symmetry import canonical, rotation_is_invisible, rotation_is_faithful
 from _authoring import write
 
 CHOICES = {('cogat', 1): 4, ('cogat', 2): 4, ('cogat', 3): 5, ('cogat', 4): 5,
@@ -28,7 +28,10 @@ def series_item(cat_id, test, grade, rng, colors, shapes, num, difficulty):
     # Only offer a rotating series when a quarter turn is actually visible on
     # this shape. On a plus or a square it is not, and every frame would look
     # identical.
-    if not rotation_is_invisible(shape, 90):
+    # A rotating series needs a constant APPARENT step. On a symmetric shape the
+    # apparent angle wanders (a triangle stepping 90 degrees reads 90, 60, 30),
+    # so only shapes with no rotational symmetry can carry one.
+    if rotation_is_faithful(shape, 90):
         modes.append('rotate')
     if grade >= 2:
         modes.append('fill')

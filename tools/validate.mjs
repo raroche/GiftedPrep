@@ -16,7 +16,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { SHAPE_NAMES, FILL_NAMES, renderFigure } from '../assets/js/modules/figures.js';
-import { canonicalFigure } from './_symmetry.mjs';
+import { canonicalFigure, canonical } from './_symmetry.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
@@ -167,6 +167,47 @@ for (const cat of manifest.categories) {
         if (fatal) err(where, msg); else warn(where, msg);
       } else drawn.set(key, c.id);
     });
+
+    /* The key must obey the rule the question demonstrates. In an analogy or a
+       2x2 matrix, A becomes B by the row rule, and C must become the key by the
+       same rule. The column may change the shape, and quantitative items may
+       change the colour too, so this compares the RULE rather than raw values.
+
+       This catches an item where the example shows one thing and the marked
+       answer does another -- for instance a 90 degree turn demonstrated on a
+       cloud but applied to a hexagon, where it only looks like 30 degrees. */
+    {
+      const f = q.figure || {};
+      let A, B, C;
+      if (f.kind === 'analogy') { A = f.a; B = f.b; C = f.c; }
+      else if (f.kind === 'matrix' && f.rows === 2 && f.cols === 2) { [A, B, C] = (f.cells || []).slice(0, 3); }
+      const one = (cell) => {
+        const sh = cell && cell.shapes;
+        return sh && sh.length === 1 ? canonical(sh[0]) : null;
+      };
+      const a = one(A), b = one(B), c = one(C);
+      const keyFig = (choices.find((x) => x.id === q.answer) || {}).figure;
+      const k = one(keyFig);
+      if (a && b && c && k) {
+        const v = (s, key) => (key in s ? s[key] : null);
+        ['f', 'r', 'z', 'c'].forEach((attr) => {
+          const changed = v(a, attr) !== v(b, attr);
+          if (!changed && v(c, attr) !== v(k, attr)) {
+            err(where, `the example leaves "${attr}" alone but the answer changes it`);
+          } else if (changed && v(k, attr) !== v(b, attr)) {
+            err(where, `the example sets "${attr}" to ${JSON.stringify(v(b, attr))} `
+              + `but the answer has ${JSON.stringify(v(k, attr))}`);
+          }
+        });
+        const cn = (s) => ('n' in s ? s.n : 1);
+        const [na, nb, nc, nk] = [cn(a), cn(b), cn(c), cn(k)];
+        if (na === nb) {
+          if (nc !== nk) err(where, `the example keeps the count at ${na} but the answer changes it`);
+        } else if (!(nk - nc === nb - na) && !(nc && na && nk / nc === nb / na)) {
+          err(where, `the example goes ${na} to ${nb} but the answer goes ${nc} to ${nk}`);
+        }
+      }
+    }
 
     /* A transformation the child cannot see makes the key indistinguishable
        from "nothing happened". Catches a rotation applied to a shape whose own
