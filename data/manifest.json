@@ -2,10 +2,58 @@
   "version": 1,
   "note": "Every question here was written from scratch for GiftedPrep. No real test items are reproduced. Formats follow the published descriptions cited in docs/research/.",
   "grades": [
-    { "n": 1, "label": "Grade 1", "cogat": "Level 7",  "nnat": "Level B", "olsat": "Level B", "reading": false, "choices": { "cogat": 4, "nnat": 5, "olsat": 4 } },
-    { "n": 2, "label": "Grade 2", "cogat": "Level 8",  "nnat": "Level C", "olsat": "Level C", "reading": false, "choices": { "cogat": 4, "nnat": 5, "olsat": 4 } },
-    { "n": 3, "label": "Grade 3", "cogat": "Level 9",  "nnat": "Level D", "olsat": "Level D", "reading": true,  "choices": { "cogat": 5, "nnat": 5, "olsat": 5 } },
-    { "n": 4, "label": "Grade 4", "cogat": "Level 10", "nnat": "Level D", "olsat": "Level E", "reading": true,  "choices": { "cogat": 5, "nnat": 5, "olsat": 5 } }
+    {
+      "n": 1,
+      "label": "Grade 1",
+      "cogat": "Level 7",
+      "nnat": "Level B",
+      "olsat": "Level B",
+      "reading": false,
+      "choices": {
+        "cogat": 4,
+        "nnat": 5,
+        "olsat": 4
+      }
+    },
+    {
+      "n": 2,
+      "label": "Grade 2",
+      "cogat": "Level 8",
+      "nnat": "Level C",
+      "olsat": "Level C",
+      "reading": false,
+      "choices": {
+        "cogat": 4,
+        "nnat": 5,
+        "olsat": 4
+      }
+    },
+    {
+      "n": 3,
+      "label": "Grade 3",
+      "cogat": "Level 9",
+      "nnat": "Level D",
+      "olsat": "Level D",
+      "reading": true,
+      "choices": {
+        "cogat": 5,
+        "nnat": 5,
+        "olsat": 5
+      }
+    },
+    {
+      "n": 4,
+      "label": "Grade 4",
+      "cogat": "Level 10",
+      "nnat": "Level D",
+      "olsat": "Level E",
+      "reading": true,
+      "choices": {
+        "cogat": 5,
+        "nnat": 5,
+        "olsat": 5
+      }
+    }
   ],
   "tests": [
     {
@@ -17,9 +65,21 @@
       "blurb": "Nine kinds of puzzle in three groups: words, numbers and shapes.",
       "detail": "The most widely used gifted screener in the United States. Grades K-2 see pictures only and nothing is timed. From grade 3 the words and numbers become text, and each of the nine parts gets exactly ten minutes.",
       "batteries": [
-        { "id": "verbal", "name": "Verbal", "blurb": "Reasoning with words and pictures of things." },
-        { "id": "quantitative", "name": "Quantitative", "blurb": "Reasoning with amounts and numbers." },
-        { "id": "nonverbal", "name": "Nonverbal", "blurb": "Reasoning with shapes. No words at all." }
+        {
+          "id": "verbal",
+          "name": "Verbal",
+          "blurb": "Reasoning with words and pictures of things."
+        },
+        {
+          "id": "quantitative",
+          "name": "Quantitative",
+          "blurb": "Reasoning with amounts and numbers."
+        },
+        {
+          "id": "nonverbal",
+          "name": "Nonverbal",
+          "blurb": "Reasoning with shapes. No words at all."
+        }
       ]
     },
     {
@@ -31,7 +91,11 @@
       "blurb": "Shape puzzles only. No words, no numbers, no reading.",
       "detail": "48 questions in 30 minutes, at every grade. Built to be fair to children who are still learning English, so it uses only geometric shapes in five colours: black, white, yellow, blue and green.",
       "batteries": [
-        { "id": "nonverbal", "name": "Nonverbal", "blurb": "Every NNAT question is a shape puzzle." }
+        {
+          "id": "nonverbal",
+          "name": "Nonverbal",
+          "blurb": "Every NNAT question is a shape puzzle."
+        }
       ]
     },
     {
@@ -43,47 +107,629 @@
       "blurb": "The widest mix: listening, words, pictures, shapes and numbers.",
       "detail": "In grades K-2 a teacher reads every question aloud, once, and children answer with pictures. From grade 3 the test changes almost completely: children read for themselves and number puzzles appear.",
       "batteries": [
-        { "id": "verbal-comprehension", "name": "Verbal Comprehension", "blurb": "Understanding what you hear or read." },
-        { "id": "verbal-reasoning", "name": "Verbal Reasoning", "blurb": "Working things out from what you are told." },
-        { "id": "pictorial-reasoning", "name": "Pictorial Reasoning", "blurb": "Reasoning with pictures of real things." },
-        { "id": "figural-reasoning", "name": "Figural Reasoning", "blurb": "Reasoning with abstract shapes." },
-        { "id": "quantitative-reasoning", "name": "Quantitative Reasoning", "blurb": "Finding patterns in numbers." }
+        {
+          "id": "verbal-comprehension",
+          "name": "Verbal Comprehension",
+          "blurb": "Understanding what you hear or read."
+        },
+        {
+          "id": "verbal-reasoning",
+          "name": "Verbal Reasoning",
+          "blurb": "Working things out from what you are told."
+        },
+        {
+          "id": "pictorial-reasoning",
+          "name": "Pictorial Reasoning",
+          "blurb": "Reasoning with pictures of real things."
+        },
+        {
+          "id": "figural-reasoning",
+          "name": "Figural Reasoning",
+          "blurb": "Reasoning with abstract shapes."
+        },
+        {
+          "id": "quantitative-reasoning",
+          "name": "Quantitative Reasoning",
+          "blurb": "Finding patterns in numbers."
+        }
       ]
     }
   ],
   "categories": [
-    { "id": "cogat-picture-analogies",     "test": "cogat", "battery": "verbal",       "file": "cogat/picture-analogies.json",     "name": "Picture & Word Analogies", "icon": "analogy",   "grades": [1, 2, 3, 4] },
-    { "id": "cogat-sentence-completion",   "test": "cogat", "battery": "verbal",       "file": "cogat/sentence-completion.json",   "name": "Sentence Completion",      "icon": "words",     "grades": [1, 2, 3, 4] },
-    { "id": "cogat-picture-classification","test": "cogat", "battery": "verbal",       "file": "cogat/picture-classification.json","name": "Picture & Word Sorting",   "icon": "sort",      "grades": [1, 2, 3, 4] },
-    { "id": "cogat-number-analogies",      "test": "cogat", "battery": "quantitative", "file": "cogat/number-analogies.json",      "name": "Number Analogies",         "icon": "numbers",   "grades": [1, 2, 3, 4] },
-    { "id": "cogat-number-puzzles",        "test": "cogat", "battery": "quantitative", "file": "cogat/number-puzzles.json",        "name": "Number Puzzles",           "icon": "calc",      "grades": [1, 2, 3, 4] },
-    { "id": "cogat-number-series",         "test": "cogat", "battery": "quantitative", "file": "cogat/number-series.json",         "name": "Number Series",            "icon": "series",    "grades": [1, 2, 3, 4] },
-    { "id": "cogat-figure-matrices",       "test": "cogat", "battery": "nonverbal",    "file": "cogat/figure-matrices.json",       "name": "Figure Matrices",          "icon": "grid",      "grades": [1, 2, 3, 4] },
-    { "id": "cogat-paper-folding",         "test": "cogat", "battery": "nonverbal",    "file": "cogat/paper-folding.json",         "name": "Paper Folding",            "icon": "fold",      "grades": [1, 2, 3, 4] },
-    { "id": "cogat-figure-classification", "test": "cogat", "battery": "nonverbal",    "file": "cogat/figure-classification.json", "name": "Figure Sorting",           "icon": "shapes",    "grades": [1, 2, 3, 4] },
-
-    { "id": "nnat-pattern-completion",     "test": "nnat", "battery": "nonverbal", "file": "nnat/pattern-completion.json",     "name": "Pattern Completion",   "icon": "puzzle",  "grades": [1, 2, 3, 4] },
-    { "id": "nnat-reasoning-by-analogy",   "test": "nnat", "battery": "nonverbal", "file": "nnat/reasoning-by-analogy.json",   "name": "Reasoning by Analogy", "icon": "grid",    "grades": [1, 2, 3, 4] },
-    { "id": "nnat-serial-reasoning",       "test": "nnat", "battery": "nonverbal", "file": "nnat/serial-reasoning.json",       "name": "Serial Reasoning",     "icon": "series",  "grades": [1, 2, 3, 4] },
-    { "id": "nnat-spatial-visualization",  "test": "nnat", "battery": "nonverbal", "file": "nnat/spatial-visualization.json",  "name": "Spatial Visualization","icon": "rotate",  "grades": [2, 3, 4] },
-
-    { "id": "olsat-following-directions",  "test": "olsat", "battery": "verbal-comprehension",  "file": "olsat/following-directions.json",  "name": "Following Directions",  "icon": "ear",       "grades": [1, 2] },
-    { "id": "olsat-aural-reasoning",       "test": "olsat", "battery": "verbal-reasoning",      "file": "olsat/aural-reasoning.json",       "name": "Listening Riddles",     "icon": "ear",       "grades": [1, 2] },
-    { "id": "olsat-arithmetic-reasoning",  "test": "olsat", "battery": "verbal-reasoning",      "file": "olsat/arithmetic-reasoning.json",  "name": "Story Problems",        "icon": "calc",      "grades": [1, 2, 3, 4] },
-    { "id": "olsat-picture-classification","test": "olsat", "battery": "pictorial-reasoning",   "file": "olsat/picture-classification.json","name": "Odd One Out",           "icon": "sort",      "grades": [1, 2] },
-    { "id": "olsat-picture-analogies",     "test": "olsat", "battery": "pictorial-reasoning",   "file": "olsat/picture-analogies.json",     "name": "Picture Analogies",     "icon": "analogy",   "grades": [1, 2] },
-    { "id": "olsat-figural-classification","test": "olsat", "battery": "figural-reasoning",     "file": "olsat/figural-classification.json","name": "Shape Odd One Out",     "icon": "shapes",    "grades": [1, 2, 3] },
-    { "id": "olsat-figural-analogies",     "test": "olsat", "battery": "figural-reasoning",     "file": "olsat/figural-analogies.json",     "name": "Shape Analogies",       "icon": "analogy",   "grades": [1, 2, 3, 4] },
-    { "id": "olsat-pattern-matrix",        "test": "olsat", "battery": "figural-reasoning",     "file": "olsat/pattern-matrix.json",        "name": "Pattern Matrix",        "icon": "grid",      "grades": [1, 2, 3, 4] },
-    { "id": "olsat-figural-series",        "test": "olsat", "battery": "figural-reasoning",     "file": "olsat/figural-series.json",        "name": "Shape Series",          "icon": "series",    "grades": [1, 2, 3, 4] },
-    { "id": "olsat-antonyms",              "test": "olsat", "battery": "verbal-comprehension",  "file": "olsat/antonyms.json",              "name": "Opposites",             "icon": "words",     "grades": [3, 4] },
-    { "id": "olsat-sentence-arrangement",  "test": "olsat", "battery": "verbal-comprehension",  "file": "olsat/sentence-arrangement.json",  "name": "Sentence Arrangement",  "icon": "listOrder", "grades": [3, 4] },
-    { "id": "olsat-verbal-analogies",      "test": "olsat", "battery": "verbal-reasoning",      "file": "olsat/verbal-analogies.json",      "name": "Word Analogies",        "icon": "analogy",   "grades": [3, 4] },
-    { "id": "olsat-verbal-classification", "test": "olsat", "battery": "verbal-reasoning",      "file": "olsat/verbal-classification.json", "name": "Word Odd One Out",      "icon": "sort",      "grades": [3, 4] },
-    { "id": "olsat-logical-selection",     "test": "olsat", "battery": "verbal-reasoning",      "file": "olsat/logical-selection.json",     "name": "Must Have",             "icon": "target",    "grades": [3, 4] },
-    { "id": "olsat-word-letter-matrix",    "test": "olsat", "battery": "verbal-reasoning",      "file": "olsat/word-letter-matrix.json",    "name": "Word Matrix",           "icon": "grid",      "grades": [3, 4] },
-    { "id": "olsat-number-series",         "test": "olsat", "battery": "quantitative-reasoning","file": "olsat/number-series.json",         "name": "Number Series",         "icon": "series",    "grades": [3, 4] },
-    { "id": "olsat-numeric-inference",     "test": "olsat", "battery": "quantitative-reasoning","file": "olsat/numeric-inference.json",     "name": "Numeric Inference",     "icon": "numbers",   "grades": [3, 4] },
-    { "id": "olsat-number-matrix",         "test": "olsat", "battery": "quantitative-reasoning","file": "olsat/number-matrix.json",         "name": "Number Matrix",         "icon": "grid",      "grades": [3, 4] }
+    {
+      "id": "cogat-picture-analogies",
+      "test": "cogat",
+      "battery": "verbal",
+      "file": "cogat/picture-analogies.json",
+      "name": "Picture & Word Analogies",
+      "icon": "analogy",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "The first two go together. Make the next two go together the same way.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "cogat-sentence-completion",
+      "test": "cogat",
+      "battery": "verbal",
+      "file": "cogat/sentence-completion.json",
+      "name": "Sentence Completion",
+      "icon": "words",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "Listen to the sentence. Pick the picture that fits.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "cogat-picture-classification",
+      "test": "cogat",
+      "battery": "verbal",
+      "file": "cogat/picture-classification.json",
+      "name": "Picture & Word Sorting",
+      "icon": "sort",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "Three things belong together. Find the fourth.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "cogat-number-analogies",
+      "test": "cogat",
+      "battery": "quantitative",
+      "file": "cogat/number-analogies.json",
+      "name": "Number Analogies",
+      "icon": "numbers",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "Find the rule, then use it on the last one.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "cogat-number-puzzles",
+      "test": "cogat",
+      "battery": "quantitative",
+      "file": "cogat/number-puzzles.json",
+      "name": "Number Puzzles",
+      "icon": "calc",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "Make both sides the same.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "cogat-number-series",
+      "test": "cogat",
+      "battery": "quantitative",
+      "file": "cogat/number-series.json",
+      "name": "Number Series",
+      "icon": "series",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "What comes next in the pattern?",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "cogat-figure-matrices",
+      "test": "cogat",
+      "battery": "nonverbal",
+      "file": "cogat/figure-matrices.json",
+      "name": "Figure Matrices",
+      "icon": "grid",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "Four boxes. One is empty. What goes there?",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "cogat-paper-folding",
+      "test": "cogat",
+      "battery": "nonverbal",
+      "file": "cogat/paper-folding.json",
+      "name": "Paper Folding",
+      "icon": "fold",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "Fold the paper, punch a hole, then open it up.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "cogat-figure-classification",
+      "test": "cogat",
+      "battery": "nonverbal",
+      "file": "cogat/figure-classification.json",
+      "name": "Figure Sorting",
+      "icon": "shapes",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "Three shapes belong together. Find the fourth.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "nnat-pattern-completion",
+      "test": "nnat",
+      "battery": "nonverbal",
+      "file": "nnat/pattern-completion.json",
+      "name": "Pattern Completion",
+      "icon": "puzzle",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "A piece is missing from the pattern. Which piece fits?",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "nnat-reasoning-by-analogy",
+      "test": "nnat",
+      "battery": "nonverbal",
+      "file": "nnat/reasoning-by-analogy.json",
+      "name": "Reasoning by Analogy",
+      "icon": "grid",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "Work out the change, then make it happen again.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "nnat-serial-reasoning",
+      "test": "nnat",
+      "battery": "nonverbal",
+      "file": "nnat/serial-reasoning.json",
+      "name": "Serial Reasoning",
+      "icon": "series",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "A sequence runs across the rows and down the columns.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "nnat-spatial-visualization",
+      "test": "nnat",
+      "battery": "nonverbal",
+      "file": "nnat/spatial-visualization.json",
+      "name": "Spatial Visualization",
+      "icon": "rotate",
+      "grades": [
+        2,
+        3,
+        4
+      ],
+      "blurb": "Picture the shapes moving, turning or joining up.",
+      "counts": {
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-following-directions",
+      "test": "olsat",
+      "battery": "verbal-comprehension",
+      "file": "olsat/following-directions.json",
+      "name": "Following Directions",
+      "icon": "ear",
+      "grades": [
+        1,
+        2
+      ],
+      "blurb": "Listen carefully, then pick the picture that matches.",
+      "counts": {
+        "1": 5,
+        "2": 5
+      }
+    },
+    {
+      "id": "olsat-aural-reasoning",
+      "test": "olsat",
+      "battery": "verbal-reasoning",
+      "file": "olsat/aural-reasoning.json",
+      "name": "Listening Riddles",
+      "icon": "ear",
+      "grades": [
+        1,
+        2
+      ],
+      "blurb": "Work out the answer from the clues you hear.",
+      "counts": {
+        "1": 5,
+        "2": 5
+      }
+    },
+    {
+      "id": "olsat-arithmetic-reasoning",
+      "test": "olsat",
+      "battery": "verbal-reasoning",
+      "file": "olsat/arithmetic-reasoning.json",
+      "name": "Story Problems",
+      "icon": "calc",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "A little story with numbers in it. Work out the answer.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-picture-classification",
+      "test": "olsat",
+      "battery": "pictorial-reasoning",
+      "file": "olsat/picture-classification.json",
+      "name": "Odd One Out",
+      "icon": "sort",
+      "grades": [
+        1,
+        2
+      ],
+      "blurb": "Four go together. One does not. Find it.",
+      "counts": {
+        "1": 5,
+        "2": 5
+      }
+    },
+    {
+      "id": "olsat-picture-analogies",
+      "test": "olsat",
+      "battery": "pictorial-reasoning",
+      "file": "olsat/picture-analogies.json",
+      "name": "Picture Analogies",
+      "icon": "analogy",
+      "grades": [
+        1,
+        2
+      ],
+      "blurb": "The first pair goes together. Make the second pair match.",
+      "counts": {
+        "1": 5,
+        "2": 5
+      }
+    },
+    {
+      "id": "olsat-figural-classification",
+      "test": "olsat",
+      "battery": "figural-reasoning",
+      "file": "olsat/figural-classification.json",
+      "name": "Shape Odd One Out",
+      "icon": "shapes",
+      "grades": [
+        1,
+        2,
+        3
+      ],
+      "blurb": "All but one of these shapes share something. Find the one that does not.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5
+      }
+    },
+    {
+      "id": "olsat-figural-analogies",
+      "test": "olsat",
+      "battery": "figural-reasoning",
+      "file": "olsat/figural-analogies.json",
+      "name": "Shape Analogies",
+      "icon": "analogy",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "The first two shapes change. Change the third one the same way.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-pattern-matrix",
+      "test": "olsat",
+      "battery": "figural-reasoning",
+      "file": "olsat/pattern-matrix.json",
+      "name": "Pattern Matrix",
+      "icon": "grid",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "A grid of shapes with one box empty. Fill it in.",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-figural-series",
+      "test": "olsat",
+      "battery": "figural-reasoning",
+      "file": "olsat/figural-series.json",
+      "name": "Shape Series",
+      "icon": "series",
+      "grades": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "blurb": "A row of shapes changes step by step. What comes next?",
+      "counts": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-antonyms",
+      "test": "olsat",
+      "battery": "verbal-comprehension",
+      "file": "olsat/antonyms.json",
+      "name": "Opposites",
+      "icon": "words",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "Find the word that means the opposite.",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-sentence-arrangement",
+      "test": "olsat",
+      "battery": "verbal-comprehension",
+      "file": "olsat/sentence-arrangement.json",
+      "name": "Sentence Arrangement",
+      "icon": "listOrder",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "Unscramble the words, then answer about the last word.",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-verbal-analogies",
+      "test": "olsat",
+      "battery": "verbal-reasoning",
+      "file": "olsat/verbal-analogies.json",
+      "name": "Word Analogies",
+      "icon": "analogy",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "The first two words go together. Make the next two match.",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-verbal-classification",
+      "test": "olsat",
+      "battery": "verbal-reasoning",
+      "file": "olsat/verbal-classification.json",
+      "name": "Word Odd One Out",
+      "icon": "sort",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "Four words belong together. Find the one that does not.",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-logical-selection",
+      "test": "olsat",
+      "battery": "verbal-reasoning",
+      "file": "olsat/logical-selection.json",
+      "name": "Must Have",
+      "icon": "target",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "What does something ALWAYS need?",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-word-letter-matrix",
+      "test": "olsat",
+      "battery": "verbal-reasoning",
+      "file": "olsat/word-letter-matrix.json",
+      "name": "Word Matrix",
+      "icon": "grid",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "A grid of words follows a rule. What is missing?",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-number-series",
+      "test": "olsat",
+      "battery": "quantitative-reasoning",
+      "file": "olsat/number-series.json",
+      "name": "Number Series",
+      "icon": "series",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "A row of numbers follows a rule. What comes next?",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-numeric-inference",
+      "test": "olsat",
+      "battery": "quantitative-reasoning",
+      "file": "olsat/numeric-inference.json",
+      "name": "Numeric Inference",
+      "icon": "numbers",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "Three groups follow the same hidden rule. Fill in the gap.",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    },
+    {
+      "id": "olsat-number-matrix",
+      "test": "olsat",
+      "battery": "quantitative-reasoning",
+      "file": "olsat/number-matrix.json",
+      "name": "Number Matrix",
+      "icon": "grid",
+      "grades": [
+        3,
+        4
+      ],
+      "blurb": "A grid of numbers with one box empty.",
+      "counts": {
+        "3": 5,
+        "4": 5
+      }
+    }
   ]
 }

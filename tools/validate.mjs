@@ -39,6 +39,13 @@ const NNAT_COLOURS = new Set(['blue', 'green', 'yellow', 'grey', 'ink', 'none'])
 
 const manifest = JSON.parse(readFileSync(join(DATA, 'manifest.json'), 'utf8'));
 
+/* Optional filter: `node tools/validate.mjs cogat/figure-matrices` checks only
+   the categories whose id or file contains that string. Useful when several
+   people (or agents) are editing different category files at the same time. */
+const filter = process.argv.slice(2).filter((a) => !a.startsWith('-'));
+const wanted = (cat) => !filter.length
+  || filter.some((f) => cat.id.includes(f) || cat.file.includes(f));
+
 /* ---------------------------------------------------------------- */
 /* Walk every figure spec and check its shapes, fills and colours     */
 /* ---------------------------------------------------------------- */
@@ -80,6 +87,7 @@ const perTest = {};
 const missingFiles = [];
 
 for (const cat of manifest.categories) {
+  if (!wanted(cat)) continue;
   const path = join(DATA, cat.file);
   if (!existsSync(path)) { missingFiles.push(cat.file); continue; }
 
@@ -160,6 +168,20 @@ for (const cat of manifest.categories) {
 
   cat.grades.forEach((g) => {
     if (!gradesSeen.has(g)) warn(cat.file, `manifest lists grade ${g} but no question has it`);
+  });
+
+  /* Near-duplicate detection: the same stem twice inside one category almost
+     always means a question was pasted rather than written. */
+  const byPrompt = new Map();
+  (data.questions || []).forEach((q) => {
+    /* Odd-one-out items legitimately share a stem ("Which one does not
+       belong?") because all the content lives in the choices, so the choices
+       have to be part of the key. */
+    const key = `${q.grade}|${String(q.prompt || '').toLowerCase().replace(/\s+/g, ' ').trim()}`
+      + `|${JSON.stringify(q.figure || '')}`
+      + `|${JSON.stringify((q.choices || []).map((c) => c.text ?? c.figure).sort((a, b) => JSON.stringify(a) < JSON.stringify(b) ? -1 : 1))}`;
+    if (byPrompt.has(key)) err(cat.file, `"${q.id}" duplicates "${byPrompt.get(key)}" (same grade, stem and figure)`);
+    else byPrompt.set(key, q.id);
   });
 
   perTest[cat.test] = (perTest[cat.test] || 0) + (data.questions || []).length;

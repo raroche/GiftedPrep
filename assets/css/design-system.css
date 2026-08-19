@@ -789,6 +789,15 @@ button, a, label, summary, [role="button"] {
   box-shadow: 0 0 0 3px var(--gp-accent-soft), var(--gp-shadow-2);
 }
 
+/* The category picker is a stack of groups. Each group has a heading and its
+   own grid; the outer element must NOT be a grid, or the headings land in the
+   same columns as the cards. */
+.gp-catgroups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gp-space-8);
+}
+
 /* Battery headings above a group of category cards. */
 .gp-battery-head {
   font-size: var(--gp-text-md);

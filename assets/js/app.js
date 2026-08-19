@@ -187,46 +187,85 @@ function renderTests() {
     </button>`;
 }
 
+/** One tappable category card. */
+function categoryCard(c, stats) {
+  const s = stats[c.id];
+  const n = (c.counts && c.counts[String(state.settings.grade)]) || 0;
+  const badge = s && s.seen
+    ? `<span class="gp-card__badge">${s.correct} of ${s.seen} right &middot; ${n} puzzles</span>`
+    : `<span class="gp-card__badge">${n} puzzles</span>`;
+  return `
+    <button type="button" class="gp-card gp-card--category" data-category="${c.id}">
+      <span class="gp-card__icon">${icon(c.icon, { size: 26 })}</span>
+      <span class="gp-card__title">${escapeHtml(c.name)}</span>
+      <span class="gp-card__sub">${escapeHtml(c.blurb || '')}</span>
+      ${badge}
+    </button>`;
+}
+
+/**
+ * The category picker. `testId` may be a test id, or 'all' to browse every
+ * puzzle type across all three tests in one place.
+ *
+ * Note the container is a plain stack, not a grid. Each group inside it gets
+ * its own grid. Making the outer element a grid too puts the group headings
+ * into the same columns as the cards, which is exactly the bug this replaced.
+ */
 function renderCategories(testId) {
-  const test = state.manifest.tests.find((t) => t.id === testId);
-  if (!test) { showError('That test does not exist.'); return; }
+  const all = testId === 'all';
+  const test = all ? null : state.manifest.tests.find((t) => t.id === testId);
+  if (!all && !test) { showError('That test does not exist.'); return; }
 
+  const grade = state.settings.grade;
   const cats = state.manifest.categories
-    .filter((c) => c.test === testId && c.grades.includes(state.settings.grade));
+    .filter((c) => (all || c.test === testId) && c.grades.includes(grade));
 
-  $('#screen-categories').dataset.test = testId;
-  $('#categories-title').textContent = `${test.name}: pick a puzzle type`;
-  $('#gp-category-lede').textContent = test.detail;
+  $('#screen-categories').dataset.test = all ? '' : testId;
+  $('#categories-title').textContent = all
+    ? 'Pick a puzzle type'
+    : `${test.name}: pick a puzzle type`;
+  $('#gp-category-lede').textContent = all
+    ? 'Every puzzle type in the app, grouped by test. Tap one to practise only that kind.'
+    : test.detail;
+
+  const totalQ = cats.reduce((n, c) => n + ((c.counts && c.counts[String(grade)]) || 0), 0);
   $('#gp-category-count').textContent =
-    `${cats.length} puzzle types for grade ${state.settings.grade}`;
+    `${cats.length} puzzle types · ${totalQ} puzzles for grade ${grade}`;
+
+  const startAll = $('[data-action="start-all"]');
+  if (startAll) {
+    startAll.querySelector('.gp-btn__label').textContent =
+      all ? 'Practise a mix of everything' : `Practise all ${test.name} types`;
+  }
 
   const stats = storage.getStats();
-  const byBattery = new Map();
+
+  /* Group by test when browsing everything, otherwise by battery. */
+  const groups = new Map();
   cats.forEach((c) => {
-    const b = c.battery || 'other';
-    if (!byBattery.has(b)) byBattery.set(b, []);
-    byBattery.get(b).push(c);
+    const key = all ? c.test : (c.battery || 'other');
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(c);
   });
 
-  $('#gp-category-grid').innerHTML = Array.from(byBattery.entries()).map(([bid, list]) => {
-    const bat = (test.batteries || []).find((b) => b.id === bid);
-    const head = bat
-      ? `<h2 class="gp-battery-head">${escapeHtml(bat.name)}<span class="gp-muted"> — ${escapeHtml(bat.blurb)}</span></h2>`
-      : '';
-    const items = list.map((c) => {
-      const s = stats[c.id];
-      const badge = s && s.seen
-        ? `<span class="gp-card__badge">${s.correct} of ${s.seen} right so far</span>`
-        : '';
-      return `
-        <button type="button" class="gp-card gp-card--category" data-category="${c.id}">
-          <span class="gp-card__icon">${icon(c.icon, { size: 26 })}</span>
-          <span class="gp-card__title">${escapeHtml(c.name)}</span>
-          <span class="gp-card__sub">${escapeHtml(c.blurb || '')}</span>
-          ${badge}
-        </button>`;
-    }).join('');
-    return `${head}<div class="gp-grid gp-grid--categories">${items}</div>`;
+  const box = $('#gp-category-grid');
+  box.className = 'gp-catgroups';
+  box.innerHTML = Array.from(groups.entries()).map(([key, list]) => {
+    let name = key;
+    let blurb = '';
+    if (all) {
+      const t = state.manifest.tests.find((x) => x.id === key);
+      if (t) { name = t.name; blurb = t.blurb; }
+    } else {
+      const bat = (test.batteries || []).find((b) => b.id === key);
+      if (bat) { name = bat.name; blurb = bat.blurb; }
+    }
+    const head = `<h2 class="gp-battery-head">${escapeHtml(name)}`
+      + (blurb ? `<span class="gp-muted"> &mdash; ${escapeHtml(blurb)}</span>` : '')
+      + `</h2>`;
+    return `<section>${head}<div class="gp-grid gp-grid--categories">`
+      + list.map((c) => categoryCard(c, stats)).join('')
+      + `</div></section>`;
   }).join('');
 }
 
@@ -236,10 +275,11 @@ function renderCategories(testId) {
 
 async function startSession({ testId = null, categoryId = null, limit = 12, label = '' }) {
   try {
+    const wantTest = testId && testId !== 'all' ? testId : null;
     const ids = categoryId
       ? [categoryId]
       : state.manifest.categories
-          .filter((c) => (!testId || c.test === testId) && c.grades.includes(state.settings.grade))
+          .filter((c) => (!wantTest || c.test === wantTest) && c.grades.includes(state.settings.grade))
           .map((c) => c.id);
 
     if (!ids.length) { showError('There are no puzzles for that grade yet.'); return; }
@@ -468,7 +508,8 @@ function route() {
 
 function goBack() {
   const hash = location.hash || '#/home';
-  if (hash.startsWith('#/categories')) location.hash = '#/tests';
+  if (hash === '#/categories/all') location.hash = '#/home';
+  else if (hash.startsWith('#/categories')) location.hash = '#/tests';
   else if (hash.startsWith('#/quiz')) {
     if (state.session && state.session.answers.length && !confirmLeave()) return;
     speech.cancel();
@@ -513,7 +554,7 @@ function onClick(ev) {
       startSession({ limit: 12 });
       break;
     case 'start-all': {
-      const testId = $('#screen-categories').dataset.test;
+      const testId = $('#screen-categories').dataset.test || null;
       startSession({ testId, limit: 12 });
       break;
     }
