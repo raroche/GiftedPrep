@@ -10,17 +10,21 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Long cache for fingerprint-free static assets is unsafe, so keep it modest and
-# let the JSON revalidate. The whole site is a few hundred kilobytes.
+# None of these filenames carry a content hash, so any max-age above zero lets a
+# browser pair a fresh index.html with stale CSS and JS. That shipped a real bug:
+# the Parent Guide's language button rendered from new HTML while the cached CSS
+# had no rule to place it and the cached JS had no handler to run it. The whole
+# site is a few hundred kilobytes, so always revalidate; a 304 is cheap and the
+# page can never be served half-updated.
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, no-cache, must-revalidate"
 
 [[headers]]
   for = "/data/*"
   [headers.values]
-    Cache-Control = "public, max-age=600, must-revalidate"
+    Cache-Control = "public, no-cache, must-revalidate"
     Content-Type = "application/json; charset=utf-8"
 
 [[headers]]

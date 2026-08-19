@@ -873,14 +873,16 @@ button, a, label, summary, [role="button"] {
 .gp-grade-note { margin-top: var(--gp-space-4); }
 
 /* A page heading with a control beside it — used by the Parent Guide's
-   language switch. Wraps rather than squeezing the title on a phone. */
+   language switch. The control sits at the right on a wide screen and stays
+   at the right when it wraps onto its own line on a phone, so it never reads
+   as a stray button hanging under the title. */
 .gp-page-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--gp-space-4);
+  gap: var(--gp-space-3) var(--gp-space-4);
   flex-wrap: wrap;
-  margin-bottom: var(--gp-space-2);
+  margin-bottom: var(--gp-space-6);
 }
 .gp-page-head .gp-page-title { margin: 0; }
 
@@ -891,7 +893,9 @@ button, a, label, summary, [role="button"] {
   font-size: 1.25em;
   line-height: 1;
 }
-#gp-lang-toggle { flex: none; }
+/* margin-left:auto keeps the switch hard right in both states: beside the
+   title, and on its own line once the pair no longer fits. */
+#gp-lang-toggle { flex: none; margin-left: auto; }
 @media (max-width: 560px) {
   /* The label stays here even though the top bar drops its labels: the flag
      alone is not an accessible name for a language switch. */
