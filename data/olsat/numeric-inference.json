@@ -530,6 +530,1053 @@
       "answer": "a",
       "explanation": "The third number is the first squared plus the second squared. Two times two is four, three times three is nine, and four plus nine is thirteen. Four times four is sixteen, five times five is twenty-five, and sixteen plus twenty-five is forty-one. Three times three is nine, six times six is thirty-six, and nine plus thirty-six is forty-five.",
       "strategy": "When the third number is much bigger than the other two, squaring is usually involved."
+    },
+    {
+      "id": "olsat-nin-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "2",
+            "5"
+          ],
+          [
+            "6",
+            "9"
+          ],
+          [
+            "10",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "13"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "14"
+        },
+        {
+          "id": "e",
+          "text": "30"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three more each time. Two becomes five, six becomes nine, so ten becomes thirteen. Choice b adds only two.",
+      "strategy": "Work out the step from the first group, then check it on the second."
+    },
+    {
+      "id": "olsat-nin-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "20",
+            "15"
+          ],
+          [
+            "32",
+            "27"
+          ],
+          [
+            "41",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "36"
+        },
+        {
+          "id": "b",
+          "text": "46"
+        },
+        {
+          "id": "c",
+          "text": "35"
+        },
+        {
+          "id": "d",
+          "text": "37"
+        },
+        {
+          "id": "e",
+          "text": "31"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five less each time. Forty-one minus five is thirty-six. Choice b adds five instead of subtracting.",
+      "strategy": "Check the direction first. Is the second number bigger or smaller?"
+    },
+    {
+      "id": "olsat-nin-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "4",
+            "16"
+          ],
+          [
+            "7",
+            "28"
+          ],
+          [
+            "9",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "36"
+        },
+        {
+          "id": "b",
+          "text": "32"
+        },
+        {
+          "id": "c",
+          "text": "45"
+        },
+        {
+          "id": "d",
+          "text": "21"
+        },
+        {
+          "id": "e",
+          "text": "81"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four times as much. Four becomes sixteen, seven becomes twenty-eight, so nine becomes thirty-six. Choice e is nine times nine, not nine times four.",
+      "strategy": "Divide the second number by the first to find the multiplier."
+    },
+    {
+      "id": "olsat-nin-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "18",
+            "6"
+          ],
+          [
+            "24",
+            "8"
+          ],
+          [
+            "33",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "11"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        },
+        {
+          "id": "d",
+          "text": "25"
+        },
+        {
+          "id": "e",
+          "text": "9"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Divide by three. Eighteen divided by three is six, twenty-four divided by three is eight, thirty-three divided by three is eleven. Choice d subtracts twenty-two, which does not work on the other groups.",
+      "strategy": "Test your rule on BOTH complete groups before using it on the third."
+    },
+    {
+      "id": "olsat-nin-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "2",
+            "7",
+            "5"
+          ],
+          [
+            "4",
+            "13",
+            "9"
+          ],
+          [
+            "6",
+            "19",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "13"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "11"
+        },
+        {
+          "id": "e",
+          "text": "25"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In each group the third number is the second minus the first. Seven minus two is five. Thirteen minus four is nine. Nineteen minus six is thirteen.",
+      "strategy": "When a group has three numbers, try combining the first two to make the third."
+    },
+    {
+      "id": "olsat-nin-g3-11",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "3",
+            "4",
+            "12"
+          ],
+          [
+            "5",
+            "6",
+            "30"
+          ],
+          [
+            "7",
+            "8",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "56"
+        },
+        {
+          "id": "b",
+          "text": "15"
+        },
+        {
+          "id": "c",
+          "text": "54"
+        },
+        {
+          "id": "d",
+          "text": "48"
+        },
+        {
+          "id": "e",
+          "text": "64"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The third number is the first two multiplied. Three times four is twelve. Five times six is thirty. Seven times eight is fifty-six. Choice b adds instead of multiplying.",
+      "strategy": "Try adding first. If the answer is far too small, try multiplying."
+    },
+    {
+      "id": "olsat-nin-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "5",
+            "11"
+          ],
+          [
+            "8",
+            "17"
+          ],
+          [
+            "10",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "21"
+        },
+        {
+          "id": "b",
+          "text": "20"
+        },
+        {
+          "id": "c",
+          "text": "19"
+        },
+        {
+          "id": "d",
+          "text": "22"
+        },
+        {
+          "id": "e",
+          "text": "23"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Double it, then add one. Five doubled plus one is eleven. Eight doubled plus one is seventeen. Ten doubled plus one is twenty-one. Choice b stops after doubling.",
+      "strategy": "If doubling is always one short, the rule has a second step."
+    },
+    {
+      "id": "olsat-nin-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "12",
+            "5"
+          ],
+          [
+            "20",
+            "9"
+          ],
+          [
+            "30",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "14"
+        },
+        {
+          "id": "b",
+          "text": "15"
+        },
+        {
+          "id": "c",
+          "text": "13"
+        },
+        {
+          "id": "d",
+          "text": "16"
+        },
+        {
+          "id": "e",
+          "text": "25"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Halve it, then take away one. Half of twelve is six, minus one is five. Half of twenty is ten, minus one is nine. Half of thirty is fifteen, minus one is fourteen. Choice b halves and stops.",
+      "strategy": "Halving-then-adjusting mirrors doubling-then-adjusting. Try both."
+    },
+    {
+      "id": "olsat-nin-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "9",
+            "3",
+            "6"
+          ],
+          [
+            "16",
+            "4",
+            "12"
+          ],
+          [
+            "25",
+            "5",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "20"
+        },
+        {
+          "id": "b",
+          "text": "30"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "21"
+        },
+        {
+          "id": "e",
+          "text": "10"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The second number times itself gives the first, and the third is the first minus the second. Five times five is twenty-five, and twenty-five minus five is twenty.",
+      "strategy": "Two rules in one group means you can check yourself twice."
+    },
+    {
+      "id": "olsat-nin-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "1",
+            "1",
+            "2"
+          ],
+          [
+            "3",
+            "2",
+            "5"
+          ],
+          [
+            "8",
+            "5",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "13"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "40"
+        },
+        {
+          "id": "d",
+          "text": "3"
+        },
+        {
+          "id": "e",
+          "text": "14"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The third number is the first two added together. One plus one is two. Three plus two is five. Eight plus five is thirteen. Choice c multiplies instead.",
+      "strategy": "Adding is the simplest rule. Always test it first."
+    },
+    {
+      "id": "olsat-nin-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "6",
+            "54"
+          ],
+          [
+            "4",
+            "36"
+          ],
+          [
+            "9",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "81"
+        },
+        {
+          "id": "b",
+          "text": "72"
+        },
+        {
+          "id": "c",
+          "text": "63"
+        },
+        {
+          "id": "d",
+          "text": "90"
+        },
+        {
+          "id": "e",
+          "text": "45"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Nine times as much. Six times nine is fifty-four, four times nine is thirty-six, nine times nine is eighty-one.",
+      "strategy": "Divide the second number by the first to find the multiplier, then check it."
+    },
+    {
+      "id": "olsat-nin-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "144",
+            "12"
+          ],
+          [
+            "81",
+            "9"
+          ],
+          [
+            "196",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "14"
+        },
+        {
+          "id": "b",
+          "text": "16"
+        },
+        {
+          "id": "c",
+          "text": "13"
+        },
+        {
+          "id": "d",
+          "text": "98"
+        },
+        {
+          "id": "e",
+          "text": "12"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The second number times itself gives the first. Twelve times twelve is one hundred and forty-four. Nine times nine is eighty-one. Fourteen times fourteen is one hundred and ninety-six. Choice d is half, which does not work on the other groups.",
+      "strategy": "When the second number is much smaller, look for the number that squares to make the first."
+    },
+    {
+      "id": "olsat-nin-g4-8",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "3.5",
+            "7"
+          ],
+          [
+            "6.2",
+            "12.4"
+          ],
+          [
+            "4.8",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "9.6"
+        },
+        {
+          "id": "b",
+          "text": "8.6"
+        },
+        {
+          "id": "c",
+          "text": "9.8"
+        },
+        {
+          "id": "d",
+          "text": "2.4"
+        },
+        {
+          "id": "e",
+          "text": "10.6"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each second number is double the first. Four point eight doubled is nine point six. Choice d halves instead of doubling.",
+      "strategy": "Double the whole part and the decimal part separately, then add them."
+    },
+    {
+      "id": "olsat-nin-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "4",
+            "2",
+            "10"
+          ],
+          [
+            "7",
+            "3",
+            "17"
+          ],
+          [
+            "5",
+            "6",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "16"
+        },
+        {
+          "id": "b",
+          "text": "11"
+        },
+        {
+          "id": "c",
+          "text": "30"
+        },
+        {
+          "id": "d",
+          "text": "17"
+        },
+        {
+          "id": "e",
+          "text": "22"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The third number is the first doubled plus the second. Four doubled is eight, plus two is ten. Seven doubled is fourteen, plus three is seventeen. Five doubled is ten, plus six is sixteen.",
+      "strategy": "When three numbers are linked, try doubling one of them before adding."
+    },
+    {
+      "id": "olsat-nin-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers, including negative numbers.",
+        "rows": [
+          [
+            "-3",
+            "-9"
+          ],
+          [
+            "5",
+            "15"
+          ],
+          [
+            "-7",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "-21"
+        },
+        {
+          "id": "b",
+          "text": "21"
+        },
+        {
+          "id": "c",
+          "text": "-14"
+        },
+        {
+          "id": "d",
+          "text": "-10"
+        },
+        {
+          "id": "e",
+          "text": "-4"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three times as much, keeping the sign. Minus three times three is minus nine. Five times three is fifteen. Minus seven times three is minus twenty-one. Choice b loses the minus sign.",
+      "strategy": "Work out the size first, then put the sign back on."
+    },
+    {
+      "id": "olsat-nin-g4-11",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "30",
+            "5",
+            "6"
+          ],
+          [
+            "48",
+            "6",
+            "8"
+          ],
+          [
+            "72",
+            "8",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "9"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "64"
+        },
+        {
+          "id": "d",
+          "text": "12"
+        },
+        {
+          "id": "e",
+          "text": "8"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The first number divided by the second gives the third. Thirty divided by five is six. Forty-eight divided by six is eight. Seventy-two divided by eight is nine.",
+      "strategy": "Check whether the three numbers make a division fact you already know."
+    },
+    {
+      "id": "olsat-nin-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of two numbers.",
+        "rows": [
+          [
+            "6",
+            "20"
+          ],
+          [
+            "9",
+            "29"
+          ],
+          [
+            "12",
+            "?"
+          ]
+        ],
+        "cellWidth": 95
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "38"
+        },
+        {
+          "id": "b",
+          "text": "36"
+        },
+        {
+          "id": "c",
+          "text": "40"
+        },
+        {
+          "id": "d",
+          "text": "35"
+        },
+        {
+          "id": "e",
+          "text": "39"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Times three, then plus two. Six times three is eighteen, plus two is twenty. Nine times three is twenty-seven, plus two is twenty-nine. Twelve times three is thirty-six, plus two is thirty-eight. Choice b stops after multiplying.",
+      "strategy": "Multiply first and see how far short you are. The same shortfall twice is the second step."
+    },
+    {
+      "id": "olsat-nin-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "10",
+            "1",
+            "100"
+          ],
+          [
+            "7",
+            "4",
+            "49"
+          ],
+          [
+            "6",
+            "9",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "36"
+        },
+        {
+          "id": "b",
+          "text": "54"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "81"
+        },
+        {
+          "id": "e",
+          "text": "45"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The third number is the first multiplied by itself. Ten times ten is one hundred. Seven times seven is forty-nine. Six times six is thirty-six. The middle number is a red herring that changes on its own.",
+      "strategy": "Not every number in a group is part of the rule. Test which ones actually matter."
+    },
+    {
+      "id": "olsat-nin-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "3",
+            "4",
+            "25"
+          ],
+          [
+            "6",
+            "8",
+            "100"
+          ],
+          [
+            "5",
+            "12",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "169"
+        },
+        {
+          "id": "b",
+          "text": "144"
+        },
+        {
+          "id": "c",
+          "text": "60"
+        },
+        {
+          "id": "d",
+          "text": "119"
+        },
+        {
+          "id": "e",
+          "text": "17"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The third number is the first squared plus the second squared. Nine plus sixteen is twenty-five. Thirty-six plus sixty-four is one hundred. Twenty-five plus one hundred and forty-four is one hundred and sixty-nine. Choice e just adds the first two.",
+      "strategy": "When the third number is far bigger than the other two, squaring is usually involved."
+    },
+    {
+      "id": "olsat-nin-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What number is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three groups of three numbers.",
+        "rows": [
+          [
+            "8",
+            "3",
+            "2"
+          ],
+          [
+            "15",
+            "4",
+            "3"
+          ],
+          [
+            "26",
+            "5",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "text": "5"
+        },
+        {
+          "id": "c",
+          "text": "6"
+        },
+        {
+          "id": "d",
+          "text": "2"
+        },
+        {
+          "id": "e",
+          "text": "4"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The first number divided by the second leaves the third as a remainder. Eight divided by three is two remainder two. Fifteen divided by four is three remainder three. Twenty-six divided by five is five remainder one.",
+      "strategy": "If nothing simple fits, check the remainder after dividing."
     }
   ]
 }

@@ -318,6 +318,626 @@
       "answer": "a",
       "explanation": "Count the sides: a triangle has three, a pentagon five, a heptagon seven, a nonagon nine. All odd. A rectangle has four, which is even.",
       "strategy": "When the words are all shapes, count the sides and look for odd and even."
+    },
+    {
+      "id": "olsat-vcl-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "apple"
+        },
+        {
+          "id": "b",
+          "text": "carrot"
+        },
+        {
+          "id": "c",
+          "text": "potato"
+        },
+        {
+          "id": "d",
+          "text": "onion"
+        },
+        {
+          "id": "e",
+          "text": "pea"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A carrot, a potato, an onion and a pea are vegetables. An apple is a fruit.",
+      "strategy": "Fruit and vegetables are different groups even though both are food."
+    },
+    {
+      "id": "olsat-vcl-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "shout"
+        },
+        {
+          "id": "b",
+          "text": "hear"
+        },
+        {
+          "id": "c",
+          "text": "listen"
+        },
+        {
+          "id": "d",
+          "text": "overhear"
+        },
+        {
+          "id": "e",
+          "text": "eavesdrop"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Hearing, listening, overhearing and eavesdropping are all ways of taking sound in. Shouting puts sound out.",
+      "strategy": "Ask which way the action goes: in or out."
+    },
+    {
+      "id": "olsat-vcl-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "nurse"
+        },
+        {
+          "id": "b",
+          "text": "hammer"
+        },
+        {
+          "id": "c",
+          "text": "saw"
+        },
+        {
+          "id": "d",
+          "text": "drill"
+        },
+        {
+          "id": "e",
+          "text": "wrench"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A hammer, a saw, a drill and a wrench are all tools. A nurse is a person.",
+      "strategy": "Sort the words by kind first: people, tools, places, things."
+    },
+    {
+      "id": "olsat-vcl-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "river"
+        },
+        {
+          "id": "b",
+          "text": "lake"
+        },
+        {
+          "id": "c",
+          "text": "pond"
+        },
+        {
+          "id": "d",
+          "text": "puddle"
+        },
+        {
+          "id": "e",
+          "text": "reservoir"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A lake, a pond, a puddle and a reservoir are all still water sitting in one place. A river flows from one place to another.",
+      "strategy": "Look for a smaller difference when everything shares the obvious feature."
+    },
+    {
+      "id": "olsat-vcl-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "library"
+        },
+        {
+          "id": "b",
+          "text": "kitchen"
+        },
+        {
+          "id": "c",
+          "text": "bedroom"
+        },
+        {
+          "id": "d",
+          "text": "bathroom"
+        },
+        {
+          "id": "e",
+          "text": "hallway"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A kitchen, a bedroom, a bathroom and a hallway are all rooms in a house. A library is a whole building.",
+      "strategy": "Check the scale. A room and a building are different sizes of thing."
+    },
+    {
+      "id": "olsat-vcl-g3-11",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "yesterday"
+        },
+        {
+          "id": "b",
+          "text": "tomorrow"
+        },
+        {
+          "id": "c",
+          "text": "later"
+        },
+        {
+          "id": "d",
+          "text": "soon"
+        },
+        {
+          "id": "e",
+          "text": "next week"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Tomorrow, later, soon and next week all point to the future. Yesterday points to the past.",
+      "strategy": "Time words split into past, present and future. Sort them first."
+    },
+    {
+      "id": "olsat-vcl-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "square"
+        },
+        {
+          "id": "b",
+          "text": "triangle"
+        },
+        {
+          "id": "c",
+          "text": "pentagon"
+        },
+        {
+          "id": "d",
+          "text": "heptagon"
+        },
+        {
+          "id": "e",
+          "text": "nonagon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the sides: a triangle has three, a pentagon five, a heptagon seven, a nonagon nine. All odd. A square has four, which is even.",
+      "strategy": "When all the words are shapes, count the sides and check odd or even."
+    },
+    {
+      "id": "olsat-vcl-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "cotton"
+        },
+        {
+          "id": "b",
+          "text": "silk"
+        },
+        {
+          "id": "c",
+          "text": "wool"
+        },
+        {
+          "id": "d",
+          "text": "leather"
+        },
+        {
+          "id": "e",
+          "text": "fur"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Silk, wool, leather and fur all come from animals. Cotton comes from a plant.",
+      "strategy": "Ask where each one comes from, not just what it is used for."
+    },
+    {
+      "id": "olsat-vcl-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "whale"
+        },
+        {
+          "id": "b",
+          "text": "shark"
+        },
+        {
+          "id": "c",
+          "text": "tuna"
+        },
+        {
+          "id": "d",
+          "text": "cod"
+        },
+        {
+          "id": "e",
+          "text": "salmon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A shark, a tuna, a cod and a salmon are fish, which breathe with gills. A whale is a mammal and breathes air.",
+      "strategy": "Living in the sea is not the same as being a fish."
+    },
+    {
+      "id": "olsat-vcl-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "minute"
+        },
+        {
+          "id": "b",
+          "text": "metre"
+        },
+        {
+          "id": "c",
+          "text": "litre"
+        },
+        {
+          "id": "d",
+          "text": "gram"
+        },
+        {
+          "id": "e",
+          "text": "degree"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A metre measures length, a litre volume, a gram weight and a degree temperature. All four measure something physical about an object. A minute measures time.",
+      "strategy": "Group units by what they measure, not by how big they are."
+    },
+    {
+      "id": "olsat-vcl-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "guitar"
+        },
+        {
+          "id": "b",
+          "text": "hammer"
+        },
+        {
+          "id": "c",
+          "text": "screwdriver"
+        },
+        {
+          "id": "d",
+          "text": "pliers"
+        },
+        {
+          "id": "e",
+          "text": "chisel"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A hammer, a screwdriver, pliers and a chisel are all tools for building. A guitar is a musical instrument.",
+      "strategy": "Name the group in words. Tools for building, not just things you hold."
+    },
+    {
+      "id": "olsat-vcl-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "copper"
+        },
+        {
+          "id": "b",
+          "text": "oxygen"
+        },
+        {
+          "id": "c",
+          "text": "nitrogen"
+        },
+        {
+          "id": "d",
+          "text": "hydrogen"
+        },
+        {
+          "id": "e",
+          "text": "helium"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Oxygen, nitrogen, hydrogen and helium are all gases. Copper is a solid metal.",
+      "strategy": "Solid, liquid and gas is a quick way to split a list."
+    },
+    {
+      "id": "olsat-vcl-g4-8",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "lake"
+        },
+        {
+          "id": "b",
+          "text": "Nile"
+        },
+        {
+          "id": "c",
+          "text": "Amazon"
+        },
+        {
+          "id": "d",
+          "text": "Danube"
+        },
+        {
+          "id": "e",
+          "text": "Thames"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The Nile, the Amazon, the Danube and the Thames are all named rivers. Lake is a general word, not the name of anything.",
+      "strategy": "A general word among four names is almost always the odd one out."
+    },
+    {
+      "id": "olsat-vcl-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "remember"
+        },
+        {
+          "id": "b",
+          "text": "predict"
+        },
+        {
+          "id": "c",
+          "text": "forecast"
+        },
+        {
+          "id": "d",
+          "text": "anticipate"
+        },
+        {
+          "id": "e",
+          "text": "expect"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Predicting, forecasting, anticipating and expecting all look forward. Remembering looks back.",
+      "strategy": "When words are close in meaning, check WHEN they point."
+    },
+    {
+      "id": "olsat-vcl-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "lightning"
+        },
+        {
+          "id": "b",
+          "text": "hail"
+        },
+        {
+          "id": "c",
+          "text": "sleet"
+        },
+        {
+          "id": "d",
+          "text": "snow"
+        },
+        {
+          "id": "e",
+          "text": "rain"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Hail, sleet, snow and rain are all water falling from the sky. Lightning is electricity.",
+      "strategy": "Ask what each one is made of, not just where it comes from."
+    },
+    {
+      "id": "olsat-vcl-g4-11",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "orchestra"
+        },
+        {
+          "id": "b",
+          "text": "violin"
+        },
+        {
+          "id": "c",
+          "text": "cello"
+        },
+        {
+          "id": "d",
+          "text": "viola"
+        },
+        {
+          "id": "e",
+          "text": "harp"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A violin, a cello, a viola and a harp are all instruments with strings. An orchestra is the group that plays them.",
+      "strategy": "Never pick the group. Pick a member of it, or spot the group as the odd one."
+    },
+    {
+      "id": "olsat-vcl-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "venom"
+        },
+        {
+          "id": "b",
+          "text": "antidote"
+        },
+        {
+          "id": "c",
+          "text": "medicine"
+        },
+        {
+          "id": "d",
+          "text": "cure"
+        },
+        {
+          "id": "e",
+          "text": "remedy"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An antidote, medicine, a cure and a remedy all make you better. Venom makes you ill.",
+      "strategy": "Look at the effect. Helping and harming are opposite groups."
+    },
+    {
+      "id": "olsat-vcl-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "circle"
+        },
+        {
+          "id": "b",
+          "text": "cube"
+        },
+        {
+          "id": "c",
+          "text": "sphere"
+        },
+        {
+          "id": "d",
+          "text": "pyramid"
+        },
+        {
+          "id": "e",
+          "text": "cylinder"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cube, a sphere, a pyramid and a cylinder are all solid shapes you could hold. A circle is flat.",
+      "strategy": "Flat and solid shapes are two different families."
+    },
+    {
+      "id": "olsat-vcl-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "pebble"
+        },
+        {
+          "id": "b",
+          "text": "granite"
+        },
+        {
+          "id": "c",
+          "text": "limestone"
+        },
+        {
+          "id": "d",
+          "text": "marble"
+        },
+        {
+          "id": "e",
+          "text": "sandstone"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Granite, limestone, marble and sandstone are all named kinds of rock. A pebble is a small piece of rock of any kind, so it describes the size, not the type.",
+      "strategy": "Check whether a word names a type or a size."
+    },
+    {
+      "id": "olsat-vcl-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which word does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "honest"
+        },
+        {
+          "id": "b",
+          "text": "honesty"
+        },
+        {
+          "id": "c",
+          "text": "kindness"
+        },
+        {
+          "id": "d",
+          "text": "bravery"
+        },
+        {
+          "id": "e",
+          "text": "patience"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Honesty, kindness, bravery and patience are all naming words for qualities. Honest is a describing word.",
+      "strategy": "Words can be sorted by their job in a sentence, not only by meaning."
     }
   ]
 }

@@ -318,6 +318,750 @@
       "answer": "a",
       "explanation": "Conceal means to hide something, so its opposite is reveal, which means to show it. Hide, cover and bury all mean the same as conceal.",
       "strategy": "Con-ceal and re-veal. Some opposite pairs even rhyme, which makes them easier to remember."
+    },
+    {
+      "id": "olsat-ant-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "The opposite of HEAVY is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "light"
+        },
+        {
+          "id": "b",
+          "text": "large"
+        },
+        {
+          "id": "c",
+          "text": "solid"
+        },
+        {
+          "id": "d",
+          "text": "full"
+        },
+        {
+          "id": "e",
+          "text": "thick"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Heavy means it weighs a lot, so its opposite is light. Large is about size, not weight, and a small thing can still be heavy.",
+      "strategy": "Check what the word measures: weight, size, length or amount."
+    },
+    {
+      "id": "olsat-ant-g3-7",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "The opposite of EARLY is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "late"
+        },
+        {
+          "id": "b",
+          "text": "quick"
+        },
+        {
+          "id": "c",
+          "text": "soon"
+        },
+        {
+          "id": "d",
+          "text": "morning"
+        },
+        {
+          "id": "e",
+          "text": "first"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Early means before the expected time, so its opposite is late. Soon and quick are about speed, not about being before or after.",
+      "strategy": "Time words come in pairs. Early and late, before and after."
+    },
+    {
+      "id": "olsat-ant-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "The opposite of GATHER is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "scatter"
+        },
+        {
+          "id": "b",
+          "text": "collect"
+        },
+        {
+          "id": "c",
+          "text": "pile"
+        },
+        {
+          "id": "d",
+          "text": "store"
+        },
+        {
+          "id": "e",
+          "text": "keep"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Gather means to bring things together, so its opposite is scatter, which spreads them apart. Collect and pile both mean the same as gather.",
+      "strategy": "Cross off every word that means the SAME as the first word."
+    },
+    {
+      "id": "olsat-ant-g3-9",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "The opposite of ROUGH is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "smooth"
+        },
+        {
+          "id": "b",
+          "text": "bumpy"
+        },
+        {
+          "id": "c",
+          "text": "coarse"
+        },
+        {
+          "id": "d",
+          "text": "hard"
+        },
+        {
+          "id": "e",
+          "text": "uneven"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Rough means the surface is not even, so its opposite is smooth. Bumpy, coarse and uneven all mean the same as rough.",
+      "strategy": "Four words meaning the same and one meaning the opposite is a common trap."
+    },
+    {
+      "id": "olsat-ant-g3-10",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "The opposite of ANCIENT is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "modern"
+        },
+        {
+          "id": "b",
+          "text": "aged"
+        },
+        {
+          "id": "c",
+          "text": "antique"
+        },
+        {
+          "id": "d",
+          "text": "historic"
+        },
+        {
+          "id": "e",
+          "text": "worn"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Ancient means very old, so its opposite is modern. Aged, antique and historic are all ways of saying old.",
+      "strategy": "If a word feels like a fancier version of the first word, it is not the opposite."
+    },
+    {
+      "id": "olsat-ant-g3-11",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "The opposite of SHRINK is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "expand"
+        },
+        {
+          "id": "b",
+          "text": "reduce"
+        },
+        {
+          "id": "c",
+          "text": "narrow"
+        },
+        {
+          "id": "d",
+          "text": "fade"
+        },
+        {
+          "id": "e",
+          "text": "melt"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Shrink means to get smaller, so its opposite is expand, which means to get bigger. Reduce and narrow both mean to get smaller.",
+      "strategy": "Verbs have direction. Ask which way the action goes: bigger or smaller."
+    },
+    {
+      "id": "olsat-ant-g3-12",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "The opposite of ACCEPT is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "refuse"
+        },
+        {
+          "id": "b",
+          "text": "receive"
+        },
+        {
+          "id": "c",
+          "text": "take"
+        },
+        {
+          "id": "d",
+          "text": "allow"
+        },
+        {
+          "id": "e",
+          "text": "agree"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Accept means to say yes to something, so its opposite is refuse. Receive, take and agree all point the same way as accept.",
+      "strategy": "Saying yes and saying no. Many opposite pairs are just that."
+    },
+    {
+      "id": "olsat-ant-g3-13",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "The opposite of ARTIFICIAL is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "natural"
+        },
+        {
+          "id": "b",
+          "text": "fake"
+        },
+        {
+          "id": "c",
+          "text": "man-made"
+        },
+        {
+          "id": "d",
+          "text": "plastic"
+        },
+        {
+          "id": "e",
+          "text": "copied"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Artificial means made by people rather than grown, so its opposite is natural. Fake, man-made and copied all mean the same as artificial.",
+      "strategy": "A long word still has a simple opposite. Say what it means in your own words first."
+    },
+    {
+      "id": "olsat-ant-g3-14",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "The opposite of SCATTER is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "collect"
+        },
+        {
+          "id": "b",
+          "text": "spread"
+        },
+        {
+          "id": "c",
+          "text": "toss"
+        },
+        {
+          "id": "d",
+          "text": "sprinkle"
+        },
+        {
+          "id": "e",
+          "text": "drop"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Scatter means to spread things apart, so its opposite is collect, which brings them together. Spread, toss and sprinkle all mean the same as scatter.",
+      "strategy": "This is the reverse of an earlier question. Opposite pairs work in both directions."
+    },
+    {
+      "id": "olsat-ant-g3-15",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "The opposite of PERMANENT is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "temporary"
+        },
+        {
+          "id": "b",
+          "text": "lasting"
+        },
+        {
+          "id": "c",
+          "text": "fixed"
+        },
+        {
+          "id": "d",
+          "text": "steady"
+        },
+        {
+          "id": "e",
+          "text": "solid"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Permanent means it lasts for ever, so its opposite is temporary, which lasts only a short time. Lasting, fixed and steady all mean the same as permanent.",
+      "strategy": "Learn opposite pairs together: permanent and temporary, always and never."
+    },
+    {
+      "id": "olsat-ant-g3-16",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "The opposite of CAUTIOUS is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "reckless"
+        },
+        {
+          "id": "b",
+          "text": "careful"
+        },
+        {
+          "id": "c",
+          "text": "wary"
+        },
+        {
+          "id": "d",
+          "text": "alert"
+        },
+        {
+          "id": "e",
+          "text": "nervous"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Cautious means being very careful, so its opposite is reckless, which means not careful at all. Careful, wary and alert all mean the same as cautious. Nervous is a feeling, not a way of acting.",
+      "strategy": "One distractor is usually about a different idea entirely. That one is not the answer either."
+    },
+    {
+      "id": "olsat-ant-g3-17",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "The opposite of ABUNDANT is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "scarce"
+        },
+        {
+          "id": "b",
+          "text": "plentiful"
+        },
+        {
+          "id": "c",
+          "text": "ample"
+        },
+        {
+          "id": "d",
+          "text": "rich"
+        },
+        {
+          "id": "e",
+          "text": "common"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Abundant means there is a great deal of it, so its opposite is scarce, which means there is very little. Plentiful, ample and rich all mean the same as abundant.",
+      "strategy": "When four words agree with each other, the fifth is your answer."
+    },
+    {
+      "id": "olsat-ant-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "The opposite of ASCEND is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "descend"
+        },
+        {
+          "id": "b",
+          "text": "climb"
+        },
+        {
+          "id": "c",
+          "text": "rise"
+        },
+        {
+          "id": "d",
+          "text": "lift"
+        },
+        {
+          "id": "e",
+          "text": "soar"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Ascend means to go up, so its opposite is descend, which means to go down. Climb, rise, lift and soar all go upwards.",
+      "strategy": "The beginnings of words help. Ascend goes up, descend goes down."
+    },
+    {
+      "id": "olsat-ant-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "The opposite of FRAGILE is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "sturdy"
+        },
+        {
+          "id": "b",
+          "text": "delicate"
+        },
+        {
+          "id": "c",
+          "text": "brittle"
+        },
+        {
+          "id": "d",
+          "text": "weak"
+        },
+        {
+          "id": "e",
+          "text": "thin"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fragile means it breaks easily, so its opposite is sturdy, which means strong and hard to break. Delicate, brittle and weak all mean the same as fragile.",
+      "strategy": "Cross off the synonyms first. Whatever is left is usually the answer."
+    },
+    {
+      "id": "olsat-ant-g4-8",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "The opposite of CONCEAL is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "reveal"
+        },
+        {
+          "id": "b",
+          "text": "hide"
+        },
+        {
+          "id": "c",
+          "text": "bury"
+        },
+        {
+          "id": "d",
+          "text": "cover"
+        },
+        {
+          "id": "e",
+          "text": "mask"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Conceal means to hide something, so its opposite is reveal, which means to show it. Hide, bury, cover and mask all mean the same as conceal.",
+      "strategy": "Con-ceal and re-veal even rhyme, which makes the pair easy to remember."
+    },
+    {
+      "id": "olsat-ant-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "The opposite of HUMBLE is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "arrogant"
+        },
+        {
+          "id": "b",
+          "text": "modest"
+        },
+        {
+          "id": "c",
+          "text": "quiet"
+        },
+        {
+          "id": "d",
+          "text": "simple"
+        },
+        {
+          "id": "e",
+          "text": "shy"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Humble means not boastful, so its opposite is arrogant, which means very boastful. Modest means the same as humble. Quiet and shy describe how loud or confident a person is, which is a different idea.",
+      "strategy": "Check that the word is about the same idea, not just about people in general."
+    },
+    {
+      "id": "olsat-ant-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "The opposite of DEPART is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "arrive"
+        },
+        {
+          "id": "b",
+          "text": "leave"
+        },
+        {
+          "id": "c",
+          "text": "exit"
+        },
+        {
+          "id": "d",
+          "text": "withdraw"
+        },
+        {
+          "id": "e",
+          "text": "travel"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Depart means to go away from a place, so its opposite is arrive, which means to reach it. Leave, exit and withdraw all mean the same as depart.",
+      "strategy": "Coming and going. Many opposites are simply a change of direction."
+    },
+    {
+      "id": "olsat-ant-g4-11",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "The opposite of OPAQUE is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "transparent"
+        },
+        {
+          "id": "b",
+          "text": "cloudy"
+        },
+        {
+          "id": "c",
+          "text": "solid"
+        },
+        {
+          "id": "d",
+          "text": "dense"
+        },
+        {
+          "id": "e",
+          "text": "murky"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Opaque means you cannot see through it, so its opposite is transparent, which means you can. Cloudy and murky both mean the same as opaque.",
+      "strategy": "Even for an unfamiliar word, crossing off the synonyms narrows it down fast."
+    },
+    {
+      "id": "olsat-ant-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "The opposite of GENEROUS is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "stingy"
+        },
+        {
+          "id": "b",
+          "text": "giving"
+        },
+        {
+          "id": "c",
+          "text": "kind"
+        },
+        {
+          "id": "d",
+          "text": "charitable"
+        },
+        {
+          "id": "e",
+          "text": "wealthy"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Generous means willing to give freely, so its opposite is stingy, which means unwilling to give. Giving, kind and charitable all mean the same as generous. Wealthy is about money, not about sharing it.",
+      "strategy": "Rich and generous are different ideas. Do not mix them up."
+    },
+    {
+      "id": "olsat-ant-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "The opposite of VICTORY is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "defeat"
+        },
+        {
+          "id": "b",
+          "text": "triumph"
+        },
+        {
+          "id": "c",
+          "text": "success"
+        },
+        {
+          "id": "d",
+          "text": "win"
+        },
+        {
+          "id": "e",
+          "text": "prize"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Victory means winning, so its opposite is defeat, which means losing. Triumph, success and win all mean the same as victory. A prize is what you get for one.",
+      "strategy": "The result of a thing is not its opposite."
+    },
+    {
+      "id": "olsat-ant-g4-14",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "The opposite of COMPLEX is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "simple"
+        },
+        {
+          "id": "b",
+          "text": "complicated"
+        },
+        {
+          "id": "c",
+          "text": "intricate"
+        },
+        {
+          "id": "d",
+          "text": "detailed"
+        },
+        {
+          "id": "e",
+          "text": "difficult"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Complex means made of many parts, so its opposite is simple. Complicated and intricate mean the same as complex. Difficult is close but means hard to do, which is not quite the same as having many parts.",
+      "strategy": "When two answers seem possible, pick the one that matches the exact meaning."
+    },
+    {
+      "id": "olsat-ant-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "The opposite of DILIGENT is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "lazy"
+        },
+        {
+          "id": "b",
+          "text": "hardworking"
+        },
+        {
+          "id": "c",
+          "text": "careful"
+        },
+        {
+          "id": "d",
+          "text": "thorough"
+        },
+        {
+          "id": "e",
+          "text": "busy"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Diligent means working hard and carefully, so its opposite is lazy. Hardworking, careful and thorough all mean the same as diligent. Busy is close but describes having a lot to do, not working hard at it.",
+      "strategy": "Busy and hardworking are not the same. Read the shade of meaning."
+    },
+    {
+      "id": "olsat-ant-g4-16",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "The opposite of AMPLIFY is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "muffle"
+        },
+        {
+          "id": "b",
+          "text": "increase"
+        },
+        {
+          "id": "c",
+          "text": "boost"
+        },
+        {
+          "id": "d",
+          "text": "magnify"
+        },
+        {
+          "id": "e",
+          "text": "strengthen"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Amplify means to make a sound louder, so its opposite is muffle, which makes it quieter. Increase, boost, magnify and strengthen all mean to make something greater.",
+      "strategy": "Match the exact thing being changed. Here it is loudness, not size."
+    },
+    {
+      "id": "olsat-ant-g4-17",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "The opposite of OPTIONAL is —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "required"
+        },
+        {
+          "id": "b",
+          "text": "voluntary"
+        },
+        {
+          "id": "c",
+          "text": "extra"
+        },
+        {
+          "id": "d",
+          "text": "chosen"
+        },
+        {
+          "id": "e",
+          "text": "spare"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Optional means you may choose whether to do it, so its opposite is required, which means you must. Voluntary and chosen both mean the same as optional.",
+      "strategy": "Must and may. Rules words come in that pair."
     }
   ]
 }

@@ -488,6 +488,964 @@
       "answer": "a",
       "explanation": "Cold, colder, coldest shows one thing, then more of it, then the most. Better and best are the more and most forms of good, even though they do not look like it.",
       "strategy": "Some words change shape completely: good, better, best. Learn the odd ones as a set."
+    },
+    {
+      "id": "olsat-wlm-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each row adds a letter to the front and then to the end.",
+        "rows": [
+          [
+            "in",
+            "pin",
+            "pins"
+          ],
+          [
+            "at",
+            "bat",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "bats"
+        },
+        {
+          "id": "b",
+          "text": "bath"
+        },
+        {
+          "id": "c",
+          "text": "bar"
+        },
+        {
+          "id": "d",
+          "text": "tab"
+        },
+        {
+          "id": "e",
+          "text": "bate"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Along the top row a letter is added to the front, then one is added to the end. Doing the same to bat gives bats.",
+      "strategy": "Say the change as an arrow: add to the front, then add to the end."
+    },
+    {
+      "id": "olsat-wlm-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each word gains the ending meaning more.",
+        "rows": [
+          [
+            "small",
+            "smaller"
+          ],
+          [
+            "fast",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "faster"
+        },
+        {
+          "id": "b",
+          "text": "fastest"
+        },
+        {
+          "id": "c",
+          "text": "fasten"
+        },
+        {
+          "id": "d",
+          "text": "quick"
+        },
+        {
+          "id": "e",
+          "text": "speed"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Small becomes smaller, which means more small. Fast becomes faster. Choice b, fastest, means the most of all, which is one step further.",
+      "strategy": "The -er ending means more. The -est ending means the most."
+    },
+    {
+      "id": "olsat-wlm-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each word gains a beginning meaning to undo it.",
+        "rows": [
+          [
+            "lock",
+            "unlock"
+          ],
+          [
+            "tie",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "untie"
+        },
+        {
+          "id": "b",
+          "text": "tied"
+        },
+        {
+          "id": "c",
+          "text": "tying"
+        },
+        {
+          "id": "d",
+          "text": "ties"
+        },
+        {
+          "id": "e",
+          "text": "knot"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Adding un to the front means to undo the action. Lock becomes unlock, tie becomes untie. Choice e means the same thing as a tie but does not follow the pattern.",
+      "strategy": "The pattern is about how the word is BUILT, not only what it means."
+    },
+    {
+      "id": "olsat-wlm-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where the first cell must be found by running the rule backwards.",
+        "rows": [
+          [
+            "?",
+            "cart",
+            "carts"
+          ],
+          [
+            "an",
+            "band",
+            "bands"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "art"
+        },
+        {
+          "id": "b",
+          "text": "car"
+        },
+        {
+          "id": "c",
+          "text": "cat"
+        },
+        {
+          "id": "d",
+          "text": "cars"
+        },
+        {
+          "id": "e",
+          "text": "tart"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In the bottom row, an becomes band by adding a letter to the front and one to the end. Working backwards from cart, take the front letter off and you get art.",
+      "strategy": "Running a rule backwards means undoing it. Take the letter off instead of adding it."
+    },
+    {
+      "id": "olsat-wlm-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each word becomes the word for how often.",
+        "rows": [
+          [
+            "day",
+            "daily"
+          ],
+          [
+            "hour",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "hourly"
+        },
+        {
+          "id": "b",
+          "text": "hours"
+        },
+        {
+          "id": "c",
+          "text": "hourglass"
+        },
+        {
+          "id": "d",
+          "text": "minute"
+        },
+        {
+          "id": "e",
+          "text": "time"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Day becomes daily, meaning every day. Hour becomes hourly, meaning every hour. Choice b is just more than one hour.",
+      "strategy": "The -ly ending here means how often, not how something is done."
+    },
+    {
+      "id": "olsat-wlm-g3-11",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid pairing counting words with position words.",
+        "rows": [
+          [
+            "one",
+            "two",
+            "three"
+          ],
+          [
+            "first",
+            "second",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "third"
+        },
+        {
+          "id": "b",
+          "text": "thirds"
+        },
+        {
+          "id": "c",
+          "text": "three"
+        },
+        {
+          "id": "d",
+          "text": "last"
+        },
+        {
+          "id": "e",
+          "text": "fourth"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The top row counts one, two, three. The bottom row gives the position word for each: first, second, third. Choice b is a fraction, not a position.",
+      "strategy": "Counting words and position words run in parallel. Line them up."
+    },
+    {
+      "id": "olsat-wlm-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid pairing each word with its opposite.",
+        "rows": [
+          [
+            "hot",
+            "cold"
+          ],
+          [
+            "up",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "down"
+        },
+        {
+          "id": "b",
+          "text": "upper"
+        },
+        {
+          "id": "c",
+          "text": "high"
+        },
+        {
+          "id": "d",
+          "text": "top"
+        },
+        {
+          "id": "e",
+          "text": "climb"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Hot and cold are opposites, so up pairs with down. Choice b and choice c both point the same way as up.",
+      "strategy": "When the top row is a pair of opposites, the bottom row must be too."
+    },
+    {
+      "id": "olsat-wlm-g3-13",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where the third word combines letters from the first two.",
+        "rows": [
+          [
+            "ca",
+            "cp",
+            "cape"
+          ],
+          [
+            "ta",
+            "tp",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "tape"
+        },
+        {
+          "id": "b",
+          "text": "tap"
+        },
+        {
+          "id": "c",
+          "text": "trap"
+        },
+        {
+          "id": "d",
+          "text": "pat"
+        },
+        {
+          "id": "e",
+          "text": "tapes"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In the top row, ca and cp combine into cape: the c stays, the a follows, then the p, then an e is added. Doing the same to ta and tp gives tape.",
+      "strategy": "When a rule uses TWO earlier cells, write out which letters come from where."
+    },
+    {
+      "id": "olsat-wlm-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid of letters where each row skips two letters of the alphabet.",
+        "rows": [
+          [
+            "A",
+            "D",
+            "G"
+          ],
+          [
+            "B",
+            "E",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "H"
+        },
+        {
+          "id": "b",
+          "text": "F"
+        },
+        {
+          "id": "c",
+          "text": "G"
+        },
+        {
+          "id": "d",
+          "text": "I"
+        },
+        {
+          "id": "e",
+          "text": "C"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The top row goes A, D, G, skipping two letters each time. The bottom row goes B, E, so skipping two more gives H.",
+      "strategy": "Write the alphabet along the edge of your paper. Then counting is easy."
+    },
+    {
+      "id": "olsat-wlm-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid pairing each verb with its past form.",
+        "rows": [
+          [
+            "run",
+            "ran"
+          ],
+          [
+            "swim",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "swam"
+        },
+        {
+          "id": "b",
+          "text": "swum"
+        },
+        {
+          "id": "c",
+          "text": "swimming"
+        },
+        {
+          "id": "d",
+          "text": "swims"
+        },
+        {
+          "id": "e",
+          "text": "swimmer"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Run becomes ran when it happened in the past. Swim becomes swam. Choice b is the form used after have, which is one step further along.",
+      "strategy": "Past-tense verbs sometimes change their middle letter instead of adding -ed."
+    },
+    {
+      "id": "olsat-wlm-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid showing three degrees of a describing word.",
+        "rows": [
+          [
+            "big",
+            "bigger",
+            "biggest"
+          ],
+          [
+            "tall",
+            "taller",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "tallest"
+        },
+        {
+          "id": "b",
+          "text": "taller"
+        },
+        {
+          "id": "c",
+          "text": "tall"
+        },
+        {
+          "id": "d",
+          "text": "height"
+        },
+        {
+          "id": "e",
+          "text": "high"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Big, bigger, biggest goes from the thing, to more of it, to the most. Tall, taller, tallest does the same.",
+      "strategy": "Three columns usually means three degrees: normal, more, most."
+    },
+    {
+      "id": "olsat-wlm-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid pairing a verb with the person who does it.",
+        "rows": [
+          [
+            "sing",
+            "singer"
+          ],
+          [
+            "bake",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "baker"
+        },
+        {
+          "id": "b",
+          "text": "bakery"
+        },
+        {
+          "id": "c",
+          "text": "baking"
+        },
+        {
+          "id": "d",
+          "text": "bread"
+        },
+        {
+          "id": "e",
+          "text": "bakes"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Sing becomes singer, the person who sings. Bake becomes baker. Choice b is the place and choice d is the product.",
+      "strategy": "The -er ending can mean the person who does it, or a tool that does it."
+    },
+    {
+      "id": "olsat-wlm-g4-8",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where each word gains a beginning meaning not.",
+        "rows": [
+          [
+            "happy",
+            "unhappy"
+          ],
+          [
+            "possible",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "impossible"
+        },
+        {
+          "id": "b",
+          "text": "unpossible"
+        },
+        {
+          "id": "c",
+          "text": "possibly"
+        },
+        {
+          "id": "d",
+          "text": "possibility"
+        },
+        {
+          "id": "e",
+          "text": "able"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Adding a beginning that means not turns the word into its opposite. But possible takes im, not un. Choice b uses the wrong beginning.",
+      "strategy": "Different words take different not-beginnings: un, im, in, dis, ir. Learn which goes with which."
+    },
+    {
+      "id": "olsat-wlm-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid pairing a shape with the word describing its edges.",
+        "rows": [
+          [
+            "circle",
+            "round"
+          ],
+          [
+            "square",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "straight"
+        },
+        {
+          "id": "b",
+          "text": "four"
+        },
+        {
+          "id": "c",
+          "text": "box"
+        },
+        {
+          "id": "d",
+          "text": "cube"
+        },
+        {
+          "id": "e",
+          "text": "corner"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A circle is round. A square is straight-edged. Choice b counts the sides and choice e names a part, but neither describes the edges the way round does.",
+      "strategy": "Match the same kind of description across both rows."
+    },
+    {
+      "id": "olsat-wlm-g4-10",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid of numbers where each row divides by its own number.",
+        "rows": [
+          [
+            "8",
+            "4",
+            "2"
+          ],
+          [
+            "27",
+            "9",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "3"
+        },
+        {
+          "id": "b",
+          "text": "1"
+        },
+        {
+          "id": "c",
+          "text": "6"
+        },
+        {
+          "id": "d",
+          "text": "18"
+        },
+        {
+          "id": "e",
+          "text": "81"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The top row halves: eight, four, two. The bottom row divides by three: twenty-seven, nine, three. Each row uses a different divider.",
+      "strategy": "In a number matrix the rule can change from row to row. Check each one."
+    },
+    {
+      "id": "olsat-wlm-g4-11",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid turning a describing word into a naming word.",
+        "rows": [
+          [
+            "kind",
+            "kindness"
+          ],
+          [
+            "dark",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "darkness"
+        },
+        {
+          "id": "b",
+          "text": "darker"
+        },
+        {
+          "id": "c",
+          "text": "darkly"
+        },
+        {
+          "id": "d",
+          "text": "darken"
+        },
+        {
+          "id": "e",
+          "text": "night"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Kind becomes kindness, the name of the quality. Dark becomes darkness. Choice d means to make dark, which is an action, and choice e is a different word entirely.",
+      "strategy": "The -ness ending turns how something is into the name of that quality."
+    },
+    {
+      "id": "olsat-wlm-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where the third word combines the first two and doubles a vowel.",
+        "rows": [
+          [
+            "se",
+            "sd",
+            "seed"
+          ],
+          [
+            "fe",
+            "fd",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "feed"
+        },
+        {
+          "id": "b",
+          "text": "fed"
+        },
+        {
+          "id": "c",
+          "text": "fee"
+        },
+        {
+          "id": "d",
+          "text": "deaf"
+        },
+        {
+          "id": "e",
+          "text": "feeds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In the top row, se and sd combine into seed: the s stays, the e is doubled, then the d follows. Doing the same to fe and fd gives feed.",
+      "strategy": "Write out exactly which letters come from which cell before you answer."
+    },
+    {
+      "id": "olsat-wlm-g4-13",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid of letters running backwards through the alphabet.",
+        "rows": [
+          [
+            "Z",
+            "W",
+            "T"
+          ],
+          [
+            "Y",
+            "V",
+            "?"
+          ]
+        ],
+        "cellWidth": 90
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "S"
+        },
+        {
+          "id": "b",
+          "text": "U"
+        },
+        {
+          "id": "c",
+          "text": "T"
+        },
+        {
+          "id": "d",
+          "text": "R"
+        },
+        {
+          "id": "e",
+          "text": "X"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The top row goes Z, W, T, moving back three letters each time. The bottom row goes Y, V, so three back from V is S.",
+      "strategy": "Patterns can run backwards through the alphabet as well as forwards."
+    },
+    {
+      "id": "olsat-wlm-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid turning a naming word into a describing word.",
+        "rows": [
+          [
+            "nation",
+            "national"
+          ],
+          [
+            "music",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "musical"
+        },
+        {
+          "id": "b",
+          "text": "musician"
+        },
+        {
+          "id": "c",
+          "text": "musically"
+        },
+        {
+          "id": "d",
+          "text": "music"
+        },
+        {
+          "id": "e",
+          "text": "song"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Nation becomes national, the describing form. Music becomes musical. Choice b is the person and choice c is how something is done.",
+      "strategy": "The -al ending makes a describing word. The -ian ending makes a person."
+    },
+    {
+      "id": "olsat-wlm-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What is missing?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A grid where the second word is the first spelled backwards.",
+        "rows": [
+          [
+            "war",
+            "raw"
+          ],
+          [
+            "pot",
+            "?"
+          ]
+        ],
+        "cellWidth": 110
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "top"
+        },
+        {
+          "id": "b",
+          "text": "pat"
+        },
+        {
+          "id": "c",
+          "text": "stop"
+        },
+        {
+          "id": "d",
+          "text": "opt"
+        },
+        {
+          "id": "e",
+          "text": "tap"
+        }
+      ],
+      "answer": "a",
+      "explanation": "War spelled backwards is raw. Pot spelled backwards is top. Choice e uses the same three letters but in a different order.",
+      "strategy": "When two words share all their letters, check whether one is the other reversed."
     }
   ]
 }

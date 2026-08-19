@@ -148,6 +148,15 @@ for (const cat of manifest.categories) {
 
     if (!ids.has(q.answer)) err(where, `answer "${q.answer}" matches no choice`);
 
+    /* Explanations name the tempting wrong answer by letter. If a choice is
+       later removed or renumbered, that reference silently points at nothing
+       and the explanation stops making sense to the child reading it. */
+    const named = `${q.explanation || ''} ${q.strategy || ''}`.match(/\b[Cc]hoice ([a-f])\b/g) || [];
+    named.forEach((m) => {
+      const letter = m.slice(-1);
+      if (!ids.has(letter)) err(where, `explanation refers to choice "${letter}", which does not exist`);
+    });
+
     checkShapes(q.figure, `${where} stem figure`, cat.test);
 
     /* A question a child cannot read is a question a child cannot answer.

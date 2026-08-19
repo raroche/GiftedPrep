@@ -257,6 +257,909 @@
       "answer": "a",
       "explanation": "Visiting three shops means the ingredient was hard to find. Unusual explains that. Expensive is the near miss: something costly is usually still easy to find in one shop, it just costs more.",
       "strategy": "When two words both sound sensible, pick the one that explains the exact detail given, here the three shops."
+    },
+
+    {
+      "id": "cogat-sc-g1-6", "grade": 1, "difficulty": 1,
+      "prompt": "Which animal makes a buzzing sound?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐝" }, "label": "a bee" },
+        { "id": "b", "figure": { "text": "🐢" }, "label": "a turtle" },
+        { "id": "c", "figure": { "text": "🐟" }, "label": "a fish" },
+        { "id": "d", "figure": { "text": "🐇" }, "label": "a rabbit" }
+      ],
+      "answer": "a",
+      "explanation": "A bee buzzes as it flies past your ear. A turtle, a fish and a rabbit make almost no sound at all.",
+      "strategy": "Make the sound in your head first. Then look for the animal that makes it."
+    },
+    {
+      "id": "cogat-sc-g1-7", "grade": 1, "difficulty": 1,
+      "prompt": "Which one do you use to cut paper?",
+      "choices": [
+        { "id": "a", "figure": { "text": "✂️" }, "label": "scissors" },
+        { "id": "b", "figure": { "text": "🥄" }, "label": "a spoon" },
+        { "id": "c", "figure": { "text": "🧦" }, "label": "a sock" },
+        { "id": "d", "figure": { "text": "🖍️" }, "label": "a crayon" }
+      ],
+      "answer": "a",
+      "explanation": "Scissors have two sharp blades made for cutting. A spoon, a sock and a crayon cannot cut anything.",
+      "strategy": "Listen for the job in the sentence. Then pick the tool made for that job."
+    },
+    {
+      "id": "cogat-sc-g1-8", "grade": 1, "difficulty": 1,
+      "prompt": "It is snowing outside. Which one keeps you warm?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🧥" }, "label": "a warm coat" },
+        { "id": "b", "figure": { "text": "🩳" }, "label": "shorts" },
+        { "id": "c", "figure": { "text": "🕶️" }, "label": "sunglasses" },
+        { "id": "d", "figure": { "text": "🩴" }, "label": "sandals" }
+      ],
+      "answer": "a",
+      "explanation": "A thick coat holds your warm air in and keeps the snow out. Shorts, sunglasses and sandals are all for hot sunny days.",
+      "strategy": "Say the weather to yourself first. Then pick the clothes that match that weather."
+    },
+    {
+      "id": "cogat-sc-g1-9", "grade": 1, "difficulty": 1,
+      "prompt": "Which animal is first in the row?",
+      "figure": { "kind": "series", "alt": "Three animals stand in a row: a cat, then a dog, then a rabbit.", "cells": [
+        { "text": "🐈" }, { "text": "🐕" }, { "text": "🐇" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🐈" }, "label": "the cat" },
+        { "id": "b", "figure": { "text": "🐕" }, "label": "the dog" },
+        { "id": "c", "figure": { "text": "🐇" }, "label": "the rabbit" },
+        { "id": "d", "figure": { "text": "🐦" }, "label": "a bird" }
+      ],
+      "answer": "a",
+      "explanation": "A row starts at the left, so the cat is first. The rabbit is at the end of the row, which makes it last, not first.",
+      "strategy": "Rows begin at the left. Put your finger on the first one before you answer."
+    },
+    {
+      "id": "cogat-sc-g1-10", "grade": 1, "difficulty": 2,
+      "prompt": "Which one belongs in a bathroom?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🛁" }, "label": "a bathtub" },
+        { "id": "b", "figure": { "text": "🛏️" }, "label": "a bed" },
+        { "id": "c", "figure": { "text": "🍳" }, "label": "a frying pan" },
+        { "id": "d", "figure": { "text": "📺" }, "label": "a television" }
+      ],
+      "answer": "a",
+      "explanation": "You wash in a bathtub, so it belongs in the bathroom. All four things live inside a house, but the bed, the pan and the television belong in other rooms.",
+      "strategy": "When every choice is indoors, the room is the clue. Walk around that room in your head."
+    },
+    {
+      "id": "cogat-sc-g1-11", "grade": 1, "difficulty": 2,
+      "prompt": "Which fruit is last in the row?",
+      "figure": { "kind": "series", "alt": "Three fruits in a row: an apple, then a banana, then some grapes.", "cells": [
+        { "text": "🍎" }, { "text": "🍌" }, { "text": "🍇" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🍇" }, "label": "the grapes" },
+        { "id": "b", "figure": { "text": "🍎" }, "label": "the apple" },
+        { "id": "c", "figure": { "text": "🍌" }, "label": "the banana" },
+        { "id": "d", "figure": { "text": "🍊" }, "label": "an orange" }
+      ],
+      "answer": "a",
+      "explanation": "The row ends at the right, and the grapes are at the end, so they are last. The apple is at the start, which makes it first.",
+      "strategy": "Last means at the end. Slide your finger along the row until it stops."
+    },
+    {
+      "id": "cogat-sc-g1-12", "grade": 1, "difficulty": 2,
+      "prompt": "Mia has fewer stars than Tom. Which picture shows Mia's stars?",
+      "figure": { "kind": "sets", "alt": "Tom has four stars.", "groups": [
+        { "label": "Tom", "cells": [{ "shapes": [{ "s": "star", "c": "yellow", "n": 4 }] }] }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "shapes": [{ "s": "star", "c": "yellow", "n": 2 }] }, "label": "two stars" },
+        { "id": "b", "figure": { "shapes": [{ "s": "star", "c": "yellow", "n": 4 }] }, "label": "four stars" },
+        { "id": "c", "figure": { "shapes": [{ "s": "star", "c": "yellow", "n": 5 }] }, "label": "five stars" },
+        { "id": "d", "figure": { "shapes": [{ "s": "star", "c": "yellow", "n": 6 }] }, "label": "six stars" }
+      ],
+      "answer": "a",
+      "explanation": "Tom has four stars, and fewer than four means a smaller number, so two is right. Four stars is the same as Tom, not fewer, and five and six are more.",
+      "strategy": "Fewer means a smaller number. The same number never counts as fewer."
+    },
+    {
+      "id": "cogat-sc-g1-13", "grade": 1, "difficulty": 2,
+      "prompt": "Which animal lives inside a shell?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐌" }, "label": "a snail" },
+        { "id": "b", "figure": { "text": "🦋" }, "label": "a butterfly" },
+        { "id": "c", "figure": { "text": "🐈" }, "label": "a cat" },
+        { "id": "d", "figure": { "text": "🐘" }, "label": "an elephant" }
+      ],
+      "answer": "a",
+      "explanation": "A snail carries its shell everywhere and can pull itself inside it. A butterfly, a cat and an elephant have no shell at all.",
+      "strategy": "Listen for the little word inside. It tells you where the animal has to be."
+    },
+    {
+      "id": "cogat-sc-g1-14", "grade": 1, "difficulty": 3,
+      "prompt": "Which one do you use to sweep the floor?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🧹" }, "label": "a broom" },
+        { "id": "b", "figure": { "text": "🪥" }, "label": "a toothbrush" },
+        { "id": "c", "figure": { "text": "🖌️" }, "label": "a paintbrush" },
+        { "id": "d", "figure": { "text": "🧽" }, "label": "a sponge" }
+      ],
+      "answer": "a",
+      "explanation": "A broom has a long handle and stiff bristles, so it sweeps a whole floor while you stand up. A toothbrush and a paintbrush have bristles too, but they are far too small for a floor.",
+      "strategy": "All four can look useful. Pick the one built for that exact job, not just a similar one."
+    },
+    {
+      "id": "cogat-sc-g1-15", "grade": 1, "difficulty": 3,
+      "prompt": "Which one is round and good to eat?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🍎" }, "label": "an apple" },
+        { "id": "b", "figure": { "text": "⚽" }, "label": "a football" },
+        { "id": "c", "figure": { "text": "🥕" }, "label": "a carrot" },
+        { "id": "d", "figure": { "text": "📕" }, "label": "a book" }
+      ],
+      "answer": "a",
+      "explanation": "An apple is round and you can eat it, so both parts are true. A football is round but you cannot eat it, and a carrot is food but it is long and pointy.",
+      "strategy": "When the sentence says AND, check both parts before you choose."
+    },
+    {
+      "id": "cogat-sc-g1-16", "grade": 1, "difficulty": 3,
+      "prompt": "Which animal can swim but is not a fish?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🦆" }, "label": "a duck" },
+        { "id": "b", "figure": { "text": "🐠" }, "label": "a fish" },
+        { "id": "c", "figure": { "text": "🐇" }, "label": "a rabbit" },
+        { "id": "d", "figure": { "text": "🦋" }, "label": "a butterfly" }
+      ],
+      "answer": "a",
+      "explanation": "A duck swims on the pond and it is a bird, so it passes both parts. The fish swims too, but the sentence said not a fish, so it is out.",
+      "strategy": "The word NOT crosses one answer out. Say the sentence again with NOT still in it."
+    },
+    {
+      "id": "cogat-sc-g1-17", "grade": 1, "difficulty": 3,
+      "prompt": "Which one is below the bird?",
+      "figure": { "kind": "matrix", "rows": 3, "cols": 1, "alt": "A tall picture. A star at the top, a bird in the middle, and a tree at the bottom.", "cells": [
+        { "text": "⭐" }, { "text": "🐦" }, { "text": "🌳" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🌳" }, "label": "the tree" },
+        { "id": "b", "figure": { "text": "⭐" }, "label": "the star" },
+        { "id": "c", "figure": { "text": "🐦" }, "label": "the bird" },
+        { "id": "d", "figure": { "text": "☁️" }, "label": "a cloud" }
+      ],
+      "answer": "a",
+      "explanation": "Below means underneath, and the tree is drawn under the bird. The star is higher than the bird, so the star is above it, not below.",
+      "strategy": "Above means higher and below means lower. Move your finger up or down before you pick."
+    },
+    {
+      "id": "cogat-sc-g1-18", "grade": 1, "difficulty": 4,
+      "prompt": "Which animal is between the two cats?",
+      "figure": { "kind": "series", "alt": "Four animals in a row: a bird, then a cat, then a dog, then another cat.", "cells": [
+        { "text": "🐦" }, { "text": "🐈" }, { "text": "🐕" }, { "text": "🐈" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🐕" }, "label": "the dog" },
+        { "id": "b", "figure": { "text": "🐦" }, "label": "the bird" },
+        { "id": "c", "figure": { "text": "🐈" }, "label": "a cat" },
+        { "id": "d", "figure": { "text": "🐇" }, "label": "a rabbit" }
+      ],
+      "answer": "a",
+      "explanation": "Between means in the middle with one thing on each side. The dog has a cat on its left and a cat on its right. The bird sits next to a cat, but it is not between the two cats.",
+      "strategy": "Find both named things first. Then look only at what sits in the middle of them."
+    },
+    {
+      "id": "cogat-sc-g1-19", "grade": 1, "difficulty": 4,
+      "prompt": "Which one is neither a fruit nor an animal?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🚗" }, "label": "a car" },
+        { "id": "b", "figure": { "text": "🍎" }, "label": "an apple" },
+        { "id": "c", "figure": { "text": "🐈" }, "label": "a cat" },
+        { "id": "d", "figure": { "text": "🍌" }, "label": "a banana" }
+      ],
+      "answer": "a",
+      "explanation": "Neither and nor mean you say no to both groups. A car is not a fruit and it is not an animal. The apple and the banana are fruit, and the cat is an animal.",
+      "strategy": "Neither ... nor means cross out both groups. Whatever is left is your answer."
+    },
+    {
+      "id": "cogat-sc-g1-20", "grade": 1, "difficulty": 4,
+      "prompt": "Which one has wheels and carries many people?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🚌" }, "label": "a bus" },
+        { "id": "b", "figure": { "text": "🚲" }, "label": "a bicycle" },
+        { "id": "c", "figure": { "text": "⛵" }, "label": "a sailboat" },
+        { "id": "d", "figure": { "text": "🐎" }, "label": "a horse" }
+      ],
+      "answer": "a",
+      "explanation": "A bus rolls on wheels and carries a lot of people at once, so both parts are true. A bicycle has wheels but carries only one rider, and a sailboat carries many people but has no wheels.",
+      "strategy": "Two parts means two checks. A near miss passes one check and fails the other."
+    },
+    {
+      "id": "cogat-sc-g1-21", "grade": 1, "difficulty": 5,
+      "prompt": "All of these can fly except one. Which one cannot?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐌" }, "label": "a snail" },
+        { "id": "b", "figure": { "text": "🦋" }, "label": "a butterfly" },
+        { "id": "c", "figure": { "text": "🐝" }, "label": "a bee" },
+        { "id": "d", "figure": { "text": "🐦" }, "label": "a bird" }
+      ],
+      "answer": "a",
+      "explanation": "A snail has no wings and crawls slowly on the ground, so it is the one that breaks the rule. The butterfly, the bee and the bird all fly, so they all fit the rule.",
+      "strategy": "EXCEPT means you are hunting for the one that fails, not the ones that pass."
+    },
+    {
+      "id": "cogat-sc-g1-22", "grade": 1, "difficulty": 5,
+      "prompt": "Which animal has four legs, lives in a house, and says meow?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐈" }, "label": "a cat" },
+        { "id": "b", "figure": { "text": "🐕" }, "label": "a dog" },
+        { "id": "c", "figure": { "text": "🐦" }, "label": "a bird" },
+        { "id": "d", "figure": { "text": "🐄" }, "label": "a cow" }
+      ],
+      "answer": "a",
+      "explanation": "A cat has four legs, lives in a house with people, and says meow, so all three parts are true. A dog is the tempting one because it passes the first two parts, but it barks instead of saying meow.",
+      "strategy": "Three parts means three checks. Keep only the choice that passes every single one."
+    },
+    {
+      "id": "cogat-sc-g1-23", "grade": 1, "difficulty": 5,
+      "prompt": "Sam has more than two apples but fewer than four. Which picture?",
+      "choices": [
+        { "id": "a", "figure": { "shapes": [{ "s": "apple", "c": "red", "n": 3 }] }, "label": "three apples" },
+        { "id": "b", "figure": { "shapes": [{ "s": "apple", "c": "red", "n": 2 }] }, "label": "two apples" },
+        { "id": "c", "figure": { "shapes": [{ "s": "apple", "c": "red", "n": 4 }] }, "label": "four apples" },
+        { "id": "d", "figure": { "shapes": [{ "s": "apple", "c": "red", "n": 5 }] }, "label": "five apples" }
+      ],
+      "answer": "a",
+      "explanation": "More than two means three or bigger, and fewer than four means three or smaller. Only three does both. Two is not more than two, and four is not fewer than four.",
+      "strategy": "Two number rules squeeze the answer from both sides. Count up from the small one and stop at the big one."
+    },
+
+    {
+      "id": "cogat-sc-g2-6", "grade": 2, "difficulty": 1,
+      "prompt": "Which animal makes a hissing sound?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐍" }, "label": "a snake" },
+        { "id": "b", "figure": { "text": "🐄" }, "label": "a cow" },
+        { "id": "c", "figure": { "text": "🐴" }, "label": "a horse" },
+        { "id": "d", "figure": { "text": "🐦" }, "label": "a bird" }
+      ],
+      "answer": "a",
+      "explanation": "A snake hisses by pushing air out through its mouth. A cow moos, a horse neighs and a bird tweets.",
+      "strategy": "Say the sound out loud in your head. Only one animal really makes it."
+    },
+    {
+      "id": "cogat-sc-g2-7", "grade": 2, "difficulty": 1,
+      "prompt": "Which one would you find in a garage?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🚗" }, "label": "a car" },
+        { "id": "b", "figure": { "text": "🛁" }, "label": "a bathtub" },
+        { "id": "c", "figure": { "text": "🛏️" }, "label": "a bed" },
+        { "id": "d", "figure": { "text": "🍽️" }, "label": "a plate" }
+      ],
+      "answer": "a",
+      "explanation": "A garage is the room where a car is parked. A bathtub, a bed and a plate all belong inside the house instead.",
+      "strategy": "Name the room first, then look around that room in your head."
+    },
+    {
+      "id": "cogat-sc-g2-8", "grade": 2, "difficulty": 1,
+      "prompt": "The ground is covered in deep snow. Which one do you wear?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🥾" }, "label": "warm boots" },
+        { "id": "b", "figure": { "text": "🩴" }, "label": "sandals" },
+        { "id": "c", "figure": { "text": "🩳" }, "label": "shorts" },
+        { "id": "d", "figure": { "text": "🧢" }, "label": "a cap" }
+      ],
+      "answer": "a",
+      "explanation": "Tall boots keep deep snow away from your feet and legs. Sandals and shorts leave your skin bare, and a cap does nothing about snow on the ground.",
+      "strategy": "Match the clothes to the weather, and to the part of you that needs covering."
+    },
+    {
+      "id": "cogat-sc-g2-9", "grade": 2, "difficulty": 1,
+      "prompt": "Which animal lives outside in a nest?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🐦" }, "label": "a bird" },
+        { "id": "b", "figure": { "text": "🐈" }, "label": "a cat" },
+        { "id": "c", "figure": { "text": "🐠" }, "label": "a fish" },
+        { "id": "d", "figure": { "text": "🐕" }, "label": "a dog" }
+      ],
+      "answer": "a",
+      "explanation": "A bird builds a nest of twigs outside, usually up in a tree. A cat and a dog live inside a house with people, and a fish lives in water, not a nest.",
+      "strategy": "This sentence has two clues, outside and nest. Use both."
+    },
+    {
+      "id": "cogat-sc-g2-10", "grade": 2, "difficulty": 2,
+      "prompt": "Which one is second in the row?",
+      "figure": { "kind": "series", "alt": "Four vehicles in a row: a car, then a bus, then a bicycle, then a truck.", "cells": [
+        { "text": "🚗" }, { "text": "🚌" }, { "text": "🚲" }, { "text": "🚚" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🚌" }, "label": "the bus" },
+        { "id": "b", "figure": { "text": "🚗" }, "label": "the car" },
+        { "id": "c", "figure": { "text": "🚲" }, "label": "the bicycle" },
+        { "id": "d", "figure": { "text": "🚚" }, "label": "the truck" }
+      ],
+      "answer": "a",
+      "explanation": "Start at the left and count: the car is first, so the bus is second. The car is the tempting answer because your eye lands on it first, but first and second are not the same word.",
+      "strategy": "Count along the row out loud, first, second, third, and stop on the word you heard."
+    },
+    {
+      "id": "cogat-sc-g2-11", "grade": 2, "difficulty": 2,
+      "prompt": "Which tool would you use to hammer a nail?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🔨" }, "label": "a hammer" },
+        { "id": "b", "figure": { "text": "🪛" }, "label": "a screwdriver" },
+        { "id": "c", "figure": { "text": "🔧" }, "label": "a wrench" },
+        { "id": "d", "figure": { "text": "🪚" }, "label": "a saw" }
+      ],
+      "answer": "a",
+      "explanation": "A hammer has a heavy flat head made for hitting a nail into wood. All four come from the same tool box, but a screwdriver turns screws, a wrench turns bolts and a saw cuts.",
+      "strategy": "When every choice is the same kind of thing, listen for the job, not the thing."
+    },
+    {
+      "id": "cogat-sc-g2-12", "grade": 2, "difficulty": 2,
+      "prompt": "The sun is bright and very hot. Which one do you wear?",
+      "choices": [
+        { "id": "a", "figure": { "text": "👒" }, "label": "a sun hat" },
+        { "id": "b", "figure": { "text": "🧤" }, "label": "gloves" },
+        { "id": "c", "figure": { "text": "🧣" }, "label": "a scarf" },
+        { "id": "d", "figure": { "text": "🧦" }, "label": "thick socks" }
+      ],
+      "answer": "a",
+      "explanation": "A sun hat has a wide brim that shades your face from bright sun. Gloves, a scarf and thick socks are clothes too, but every one of them is made to keep cold out.",
+      "strategy": "All four may be clothes. Ask which weather each one was made for."
+    },
+    {
+      "id": "cogat-sc-g2-13", "grade": 2, "difficulty": 2,
+      "prompt": "Which one is above the balloon?",
+      "figure": { "kind": "matrix", "rows": 3, "cols": 1, "alt": "A tall picture. The moon at the top, a balloon in the middle, and a house at the bottom.", "cells": [
+        { "text": "🌙" }, { "text": "🎈" }, { "text": "🏠" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🌙" }, "label": "the moon" },
+        { "id": "b", "figure": { "text": "🏠" }, "label": "the house" },
+        { "id": "c", "figure": { "text": "🎈" }, "label": "the balloon" },
+        { "id": "d", "figure": { "text": "🌳" }, "label": "a tree" }
+      ],
+      "answer": "a",
+      "explanation": "Above means higher up, and the moon is drawn over the balloon. The house sits under the balloon, so the house is below it, not above it.",
+      "strategy": "Above means higher, below means lower. Move your finger the right way before you answer."
+    },
+    {
+      "id": "cogat-sc-g2-14", "grade": 2, "difficulty": 3,
+      "prompt": "Which picture has the same number of stars as this one?",
+      "figure": { "shapes": [{ "s": "star", "c": "yellow", "n": 4 }], "alt": "Four yellow stars." },
+      "choices": [
+        { "id": "a", "figure": { "shapes": [{ "s": "star", "c": "blue", "n": 4 }] }, "label": "four blue stars" },
+        { "id": "b", "figure": { "shapes": [{ "s": "star", "c": "yellow", "n": 3 }] }, "label": "three yellow stars" },
+        { "id": "c", "figure": { "shapes": [{ "s": "star", "c": "yellow", "n": 5 }] }, "label": "five yellow stars" },
+        { "id": "d", "figure": { "shapes": [{ "s": "star", "c": "blue", "n": 6 }] }, "label": "six blue stars" }
+      ],
+      "answer": "a",
+      "explanation": "Count the stars at the top and you get four. Choice a also has four, even though they are a different colour. Choice b has three and choice c has five, so the number is not the same.",
+      "strategy": "The word NUMBER tells you to count. Colour does not matter unless the sentence says it does."
+    },
+    {
+      "id": "cogat-sc-g2-15", "grade": 2, "difficulty": 3,
+      "prompt": "All of these are hot except one. Which one is cold?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🧊" }, "label": "an ice cube" },
+        { "id": "b", "figure": { "text": "🔥" }, "label": "a fire" },
+        { "id": "c", "figure": { "text": "☀️" }, "label": "the sun" },
+        { "id": "d", "figure": { "text": "🍲" }, "label": "hot soup" }
+      ],
+      "answer": "a",
+      "explanation": "An ice cube is frozen, so it is the one that breaks the rule about being hot. The fire, the sun and the soup are all hot, so none of them is the odd one.",
+      "strategy": "EXCEPT means look for the one that breaks the rule, not the ones that keep it."
+    },
+    {
+      "id": "cogat-sc-g2-16", "grade": 2, "difficulty": 3,
+      "prompt": "Which one is yellow and you can eat it?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🍌" }, "label": "a banana" },
+        { "id": "b", "figure": { "text": "🌻" }, "label": "a sunflower" },
+        { "id": "c", "figure": { "text": "🍎" }, "label": "an apple" },
+        { "id": "d", "figure": { "text": "🚌" }, "label": "a school bus" }
+      ],
+      "answer": "a",
+      "explanation": "A banana is yellow and it is food, so both parts are true. A sunflower is yellow but you do not eat it, and an apple is food but it is red.",
+      "strategy": "AND means both parts must be true. Test the first part, then test the second."
+    },
+    {
+      "id": "cogat-sc-g2-17", "grade": 2, "difficulty": 3,
+      "prompt": "Which animal is taller than a horse?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🦒" }, "label": "a giraffe" },
+        { "id": "b", "figure": { "text": "🐄" }, "label": "a cow" },
+        { "id": "c", "figure": { "text": "🐖" }, "label": "a pig" },
+        { "id": "d", "figure": { "text": "🐑" }, "label": "a sheep" }
+      ],
+      "answer": "a",
+      "explanation": "A giraffe has a very long neck and stands well above a horse. A cow is close to a horse but still shorter, and a pig and a sheep are much shorter.",
+      "strategy": "Picture the two animals standing side by side before you choose."
+    },
+    {
+      "id": "cogat-sc-g2-18", "grade": 2, "difficulty": 4,
+      "prompt": "Which animal is next to the house and next to the tree?",
+      "figure": { "kind": "series", "alt": "A row: a dog, then a house, then a cat, then a tree.", "cells": [
+        { "text": "🐕" }, { "text": "🏠" }, { "text": "🐈" }, { "text": "🌳" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🐈" }, "label": "the cat" },
+        { "id": "b", "figure": { "text": "🐕" }, "label": "the dog" },
+        { "id": "c", "figure": { "text": "🌳" }, "label": "the tree" },
+        { "id": "d", "figure": { "text": "🐇" }, "label": "a rabbit" }
+      ],
+      "answer": "a",
+      "explanation": "The cat has the house on one side and the tree on the other, so both parts are true. The dog is next to the house, but the tree is far away from it, so the dog only passes one part.",
+      "strategy": "When a sentence gives two positions, the answer has to satisfy both at the same time."
+    },
+    {
+      "id": "cogat-sc-g2-19", "grade": 2, "difficulty": 4,
+      "prompt": "The dog is at the front. Which animal is behind the cat?",
+      "figure": { "kind": "series", "alt": "Three animals wait in a line: a dog, then a cat, then a rabbit.", "cells": [
+        { "text": "🐕" }, { "text": "🐈" }, { "text": "🐇" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🐇" }, "label": "the rabbit" },
+        { "id": "b", "figure": { "text": "🐕" }, "label": "the dog" },
+        { "id": "c", "figure": { "text": "🐈" }, "label": "the cat" },
+        { "id": "d", "figure": { "text": "🐦" }, "label": "a bird" }
+      ],
+      "answer": "a",
+      "explanation": "The dog is at the front, so the line goes dog, cat, rabbit. The rabbit comes after the cat, so the rabbit is behind it. The dog is in front of the cat, which is the opposite of behind.",
+      "strategy": "Find the front of the line first. Behind always means further away from the front."
+    },
+    {
+      "id": "cogat-sc-g2-20", "grade": 2, "difficulty": 4,
+      "prompt": "The car is nearest the light. Which vehicle is right in front of the truck?",
+      "figure": { "kind": "series", "alt": "Three vehicles wait at a traffic light in a line: a car, then a bus, then a truck.", "cells": [
+        { "text": "🚗" }, { "text": "🚌" }, { "text": "🚚" }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "text": "🚌" }, "label": "the bus" },
+        { "id": "b", "figure": { "text": "🚗" }, "label": "the car" },
+        { "id": "c", "figure": { "text": "🚚" }, "label": "the truck" },
+        { "id": "d", "figure": { "text": "🚲" }, "label": "a bicycle" }
+      ],
+      "answer": "a",
+      "explanation": "The car is nearest the light, so the line goes car, bus, truck. The bus is the one right in front of the truck. The car is further forward still, so it is in front of the bus, not the truck.",
+      "strategy": "Right in front of means the very next one forward. Check what is touching it."
+    },
+    {
+      "id": "cogat-sc-g2-21", "grade": 2, "difficulty": 5,
+      "prompt": "Which one flies, is not alive, and needs wind?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🪁" }, "label": "a kite" },
+        { "id": "b", "figure": { "text": "🦋" }, "label": "a butterfly" },
+        { "id": "c", "figure": { "text": "🐦" }, "label": "a bird" },
+        { "id": "d", "figure": { "text": "⚽" }, "label": "a football" }
+      ],
+      "answer": "a",
+      "explanation": "A kite flies, it is not alive, and it only stays up while the wind blows, so all three parts are true. A butterfly and a bird fly but they are alive, and a football is not alive but it cannot fly on the wind.",
+      "strategy": "Three parts means three checks. A choice that passes two of them still fails."
+    },
+    {
+      "id": "cogat-sc-g2-22", "grade": 2, "difficulty": 5,
+      "prompt": "Which one holds water and is light enough to carry?",
+      "choices": [
+        { "id": "a", "figure": { "text": "🪣" }, "label": "a bucket" },
+        { "id": "b", "figure": { "text": "🛁" }, "label": "a bathtub" },
+        { "id": "c", "figure": { "text": "🧺" }, "label": "a basket" },
+        { "id": "d", "figure": { "text": "🎒" }, "label": "a backpack" }
+      ],
+      "answer": "a",
+      "explanation": "A bucket holds water and has a handle, so you can lift it and both parts are true. A bathtub holds water but is far too heavy to carry, and a basket is easy to carry but water runs straight out through the gaps.",
+      "strategy": "Two parts joined together need a choice that passes both, not one that nearly passes."
+    },
+    {
+      "id": "cogat-sc-g2-23", "grade": 2, "difficulty": 5,
+      "prompt": "Kim has more marbles than Ann but fewer than Tom. Which picture shows Kim?",
+      "figure": { "kind": "sets", "alt": "Ann has two marbles. Tom has six marbles.", "groups": [
+        { "label": "Ann", "cells": [{ "shapes": [{ "s": "circle", "c": "blue", "n": 2 }] }] },
+        { "label": "Tom", "cells": [{ "shapes": [{ "s": "circle", "c": "blue", "n": 6 }] }] }
+      ]},
+      "choices": [
+        { "id": "a", "figure": { "shapes": [{ "s": "circle", "c": "blue", "n": 4 }] }, "label": "four marbles" },
+        { "id": "b", "figure": { "shapes": [{ "s": "circle", "c": "blue" }] }, "label": "one marble" },
+        { "id": "c", "figure": { "shapes": [{ "s": "circle", "c": "blue", "n": 7 }] }, "label": "seven marbles" },
+        { "id": "d", "figure": { "shapes": [{ "s": "circle", "c": "blue", "n": 2 }] }, "label": "two marbles" }
+      ],
+      "answer": "a",
+      "explanation": "Ann has two and Tom has six, so Kim must be three, four or five. Four fits both rules. Two is the same as Ann and not more, and seven is even more than Tom.",
+      "strategy": "Two number rules squeeze the answer from both sides. Work out the range before you look."
+    },
+
+    {
+      "id": "cogat-sc-g3-6", "grade": 3, "difficulty": 1,
+      "prompt": "Bats sleep during the day, but they hunt at ______.",
+      "choices": [
+        { "id": "a", "text": "night" }, { "id": "b", "text": "daytime" },
+        { "id": "c", "text": "noon" }, { "id": "d", "text": "summer" }, { "id": "e", "text": "home" }
+      ],
+      "answer": "a",
+      "explanation": "The word but means the two halves have to disagree. Bats sleep in the day, so the other time is night. Daytime is the trap, because it copies the word day sitting right next to the blank.",
+      "strategy": "Find the joining word first. But always means the second half disagrees with the first."
+    },
+    {
+      "id": "cogat-sc-g3-7", "grade": 3, "difficulty": 1,
+      "prompt": "Since the ice cream sat in the hot sun, it began to ______.",
+      "choices": [
+        { "id": "a", "text": "melt" }, { "id": "b", "text": "freeze" },
+        { "id": "c", "text": "harden" }, { "id": "d", "text": "grow" }, { "id": "e", "text": "float" }
+      ],
+      "answer": "a",
+      "explanation": "Since works just like because, so the blank must be the result of the heat. Heat turns ice cream soft and runny, which is melting. Freeze and harden are what cold does, so they point the wrong way.",
+      "strategy": "Since and because both mean the first half causes the second. Follow the arrow forwards."
+    },
+    {
+      "id": "cogat-sc-g3-8", "grade": 3, "difficulty": 1,
+      "prompt": "The gate was left open, so the puppy ______ into the garden.",
+      "choices": [
+        { "id": "a", "text": "escaped" }, { "id": "b", "text": "stayed" },
+        { "id": "c", "text": "slept" }, { "id": "d", "text": "waited" }, { "id": "e", "text": "barked" }
+      ],
+      "answer": "a",
+      "explanation": "So tells you the second half is the result of the first, and an open gate lets a puppy get out. Barked is the trap: puppies really do bark, but barking is not something an open gate causes.",
+      "strategy": "After so, ask what the first half made happen. Only a result belongs in the blank."
+    },
+    {
+      "id": "cogat-sc-g3-9", "grade": 3, "difficulty": 1,
+      "prompt": "If it rains all morning, then the football field will be ______.",
+      "choices": [
+        { "id": "a", "text": "wet" }, { "id": "b", "text": "dry" },
+        { "id": "c", "text": "dusty" }, { "id": "d", "text": "empty" }, { "id": "e", "text": "green" }
+      ],
+      "answer": "a",
+      "explanation": "If ... then means the first part causes the second, and rain leaves a field soaked. Green is the trap, because football fields really are green, but rain is not what makes them green.",
+      "strategy": "In an if ... then sentence, predict the result yourself before you read the choices."
+    },
+    {
+      "id": "cogat-sc-g3-10", "grade": 3, "difficulty": 2,
+      "prompt": "Leo pulled on his boots because the field was ______.",
+      "choices": [
+        { "id": "a", "text": "muddy" }, { "id": "b", "text": "green" },
+        { "id": "c", "text": "wide" }, { "id": "d", "text": "empty" }, { "id": "e", "text": "flat" }
+      ],
+      "answer": "a",
+      "explanation": "Because means the blank must give a reason for the boots, and mud is exactly that. Green is the trap: fields are green, but nobody puts boots on because of the colour.",
+      "strategy": "After because, test every word with one question: is that really a reason?"
+    },
+    {
+      "id": "cogat-sc-g3-11", "grade": 3, "difficulty": 2,
+      "prompt": "The soup was so ______ that Ana had to blow on every spoonful.",
+      "choices": [
+        { "id": "a", "text": "hot" }, { "id": "b", "text": "tasty" },
+        { "id": "c", "text": "thick" }, { "id": "d", "text": "salty" }, { "id": "e", "text": "orange" }
+      ],
+      "answer": "a",
+      "explanation": "So ______ that means the blank has to explain the ending, and you blow on food to cool it down. Tasty is the trap, because soup often is tasty, but nobody blows on soup for being tasty.",
+      "strategy": "In a so ... that sentence, read the ending first and let it choose the word for you."
+    },
+    {
+      "id": "cogat-sc-g3-12", "grade": 3, "difficulty": 2,
+      "prompt": "My brother eats his breakfast slowly, whereas I finish mine ______.",
+      "choices": [
+        { "id": "a", "text": "quickly" }, { "id": "b", "text": "slowly" },
+        { "id": "c", "text": "later" }, { "id": "d", "text": "quietly" }, { "id": "e", "text": "alone" }
+      ],
+      "answer": "a",
+      "explanation": "Whereas sets the two halves against each other, so if he is slow I must be the opposite. Slowly is the trap for anyone who copies the nearest word instead of noticing whereas.",
+      "strategy": "Whereas means a contrast. If your word repeats the other half, it cannot be right."
+    },
+    {
+      "id": "cogat-sc-g3-13", "grade": 3, "difficulty": 2,
+      "prompt": "The bus broke down halfway; therefore the class arrived ______.",
+      "choices": [
+        { "id": "a", "text": "late" }, { "id": "b", "text": "early" },
+        { "id": "c", "text": "happily" }, { "id": "d", "text": "quietly" }, { "id": "e", "text": "together" }
+      ],
+      "answer": "a",
+      "explanation": "Therefore points forwards to a result, and a broken bus costs the class time. Early is the opposite of what a breakdown causes, so it breaks the link.",
+      "strategy": "Therefore means the same as so. Ask what the first half forces to happen next."
+    },
+    {
+      "id": "cogat-sc-g3-14", "grade": 3, "difficulty": 3,
+      "prompt": "Unlike the ______ desert, the rainforest gets rain almost every day.",
+      "choices": [
+        { "id": "a", "text": "dry" }, { "id": "b", "text": "rainy" },
+        { "id": "c", "text": "hot" }, { "id": "d", "text": "sandy" }, { "id": "e", "text": "wide" }
+      ],
+      "answer": "a",
+      "explanation": "Unlike means the desert has to be the opposite of the rainforest. The rainforest gets rain, so the desert must be dry. Rainy is the trap, because it matches the rain in the sentence and ignores the word unlike.",
+      "strategy": "Unlike, although, but and however all flip the sentence. Circle that word before you read the choices."
+    },
+    {
+      "id": "cogat-sc-g3-15", "grade": 3, "difficulty": 3,
+      "prompt": "Although the box looked ______, Nadia could barely lift it off the floor.",
+      "choices": [
+        { "id": "a", "text": "light" }, { "id": "b", "text": "heavy" },
+        { "id": "c", "text": "square" }, { "id": "d", "text": "old" }, { "id": "e", "text": "brown" }
+      ],
+      "answer": "a",
+      "explanation": "Although sets up a surprise, and barely lifting the box is the surprise. That only works if the box looked light. Heavy is the trap: a box you can barely lift really is heavy, but then nothing would be surprising.",
+      "strategy": "Although means the two halves must clash. Check that your word makes the ending unexpected."
+    },
+    {
+      "id": "cogat-sc-g3-16", "grade": 3, "difficulty": 3,
+      "prompt": "Ravi studied every night for the spelling test; however, his score was ______.",
+      "choices": [
+        { "id": "a", "text": "low" }, { "id": "b", "text": "high" },
+        { "id": "c", "text": "perfect" }, { "id": "d", "text": "correct" }, { "id": "e", "text": "careful" }
+      ],
+      "answer": "a",
+      "explanation": "However turns the sentence around, so the ending must go against all that studying. High and perfect are the traps, because they are what studying usually leads to, and however tells you it did not.",
+      "strategy": "However always means the news changes. Expect the opposite of what the first half promised."
+    },
+    {
+      "id": "cogat-sc-g3-17", "grade": 3, "difficulty": 3,
+      "prompt": "The wind was so ______ that it pushed the garden gate wide open.",
+      "choices": [
+        { "id": "a", "text": "strong" }, { "id": "b", "text": "tall" },
+        { "id": "c", "text": "loud" }, { "id": "d", "text": "heavy" }, { "id": "e", "text": "bright" }
+      ],
+      "answer": "a",
+      "explanation": "Only strength can push a gate open, so strong is the word the ending needs. Loud is the trap, because wind really can be loud, but noise cannot move a gate. A wind cannot be tall or bright at all.",
+      "strategy": "Check two things: can the word describe that noun, and does it cause the ending?"
+    },
+    {
+      "id": "cogat-sc-g3-18", "grade": 3, "difficulty": 4,
+      "prompt": "Despite the ______ line outside the cinema, we were in our seats by seven.",
+      "choices": [
+        { "id": "a", "text": "long" }, { "id": "b", "text": "short" },
+        { "id": "c", "text": "straight" }, { "id": "d", "text": "quiet" }, { "id": "e", "text": "new" }
+      ],
+      "answer": "a",
+      "explanation": "Despite names a problem that was beaten anyway, and a long line is exactly the problem that should have slowed us down. Short is the trap: a short line is no problem, so there would be nothing worth saying.",
+      "strategy": "Despite and in spite of always introduce a problem. Look for the word that would normally stop you."
+    },
+    {
+      "id": "cogat-sc-g3-19", "grade": 3, "difficulty": 4,
+      "prompt": "Nina was ______ when she lost her pencil, but she soon found another one.",
+      "choices": [
+        { "id": "a", "text": "annoyed" }, { "id": "b", "text": "heartbroken" },
+        { "id": "c", "text": "delighted" }, { "id": "d", "text": "furious" }, { "id": "e", "text": "puzzled" }
+      ],
+      "answer": "a",
+      "explanation": "Losing a pencil is a small problem and she replaced it quickly, so annoyed is the right size of feeling. Heartbroken and furious have the right unhappy feeling but are far too strong for one pencil.",
+      "strategy": "Match the size of the feeling to the size of the event, not just the kind of feeling."
+    },
+    {
+      "id": "cogat-sc-g3-20", "grade": 3, "difficulty": 4,
+      "prompt": "Because the tunnel was ______, the workers carried ______ to see the way ahead.",
+      "choices": [
+        { "id": "a", "text": "dark ... lanterns" }, { "id": "b", "text": "bright ... lanterns" },
+        { "id": "c", "text": "dark ... shovels" }, { "id": "d", "text": "narrow ... maps" }, { "id": "e", "text": "long ... hats" }
+      ],
+      "answer": "a",
+      "explanation": "Because links a problem to what people did about it. Darkness is the problem and lanterns are the cure, so both words fit. Choice c gets the first word right, but a shovel gives nobody any light.",
+      "strategy": "Two blanks means two tests. Check the second word even when the first one looks right."
+    },
+    {
+      "id": "cogat-sc-g3-21", "grade": 3, "difficulty": 5,
+      "prompt": "Even though Priya was the ______ runner on the team, she finished last on Saturday.",
+      "choices": [
+        { "id": "a", "text": "fastest" }, { "id": "b", "text": "slowest" },
+        { "id": "c", "text": "newest" }, { "id": "d", "text": "tallest" }, { "id": "e", "text": "quietest" }
+      ],
+      "answer": "a",
+      "explanation": "Even though means the ending has to be a surprise, and finishing last is only surprising for the fastest runner. Slowest is the trap, because a slow runner finishing last would surprise nobody.",
+      "strategy": "Work backwards from the ending. Ask what would make that ending unexpected."
+    },
+    {
+      "id": "cogat-sc-g3-22", "grade": 3, "difficulty": 5,
+      "prompt": "Although the morning was ______, the afternoon turned ______ enough to eat outside.",
+      "choices": [
+        { "id": "a", "text": "chilly ... warm" }, { "id": "b", "text": "warm ... chilly" },
+        { "id": "c", "text": "sunny ... bright" }, { "id": "d", "text": "cold ... freezing" }, { "id": "e", "text": "rainy ... wet" }
+      ],
+      "answer": "a",
+      "explanation": "Eating outside tells you the afternoon was warm, and although means the morning must be the opposite, so chilly fits. Choice b uses the same two words the other way round, which makes eating outside impossible.",
+      "strategy": "With two blanks and a contrast word, fill the half the sentence explains first, then flip it for the other."
+    },
+    {
+      "id": "cogat-sc-g3-23", "grade": 3, "difficulty": 5,
+      "prompt": "Since the shelf was too ______, Dad had to ______ on a stool to reach the jar.",
+      "choices": [
+        { "id": "a", "text": "high ... stand" }, { "id": "b", "text": "low ... stand" },
+        { "id": "c", "text": "high ... sit" }, { "id": "d", "text": "wide ... climb" }, { "id": "e", "text": "heavy ... lean" }
+      ],
+      "answer": "a",
+      "explanation": "Since gives the reason, and a shelf you cannot reach is too high. Standing on a stool makes you taller, so both words work together. Choice c has the right reason, but sitting on a stool would not gain Dad any height.",
+      "strategy": "Read both of your words back into the whole sentence and check it still makes sense."
+    },
+
+    {
+      "id": "cogat-sc-g4-6", "grade": 4, "difficulty": 1,
+      "prompt": "Since the motorway was closed, every driver had to search for another ______.",
+      "choices": [
+        { "id": "a", "text": "route" }, { "id": "b", "text": "vehicle" },
+        { "id": "c", "text": "passenger" }, { "id": "d", "text": "garage" }, { "id": "e", "text": "speed" }
+      ],
+      "answer": "a",
+      "explanation": "Since gives the reason, and a closed road takes away the way through, so drivers need a different route. Vehicle is the trap: the drivers still have their cars, and it is the way, not the car, that has to change.",
+      "strategy": "Since works like because. Name exactly what the first half took away, then replace that."
+    },
+    {
+      "id": "cogat-sc-g4-7", "grade": 4, "difficulty": 1,
+      "prompt": "Owls hunt at night, but most hawks hunt during the ______.",
+      "choices": [
+        { "id": "a", "text": "day" }, { "id": "b", "text": "dark" },
+        { "id": "c", "text": "night" }, { "id": "d", "text": "winter" }, { "id": "e", "text": "nest" }
+      ],
+      "answer": "a",
+      "explanation": "But means the two halves must differ, so if owls hunt at night, hawks hunt at the other time. Night is the trap because it is the word closest to the blank, and dark means the same thing as night.",
+      "strategy": "When you see but, expect the opposite. Never copy the word nearest the blank."
+    },
+    {
+      "id": "cogat-sc-g4-8", "grade": 4, "difficulty": 1,
+      "prompt": "The tent pegs were not pushed in properly, so the tent ______ in the night.",
+      "choices": [
+        { "id": "a", "text": "collapsed" }, { "id": "b", "text": "dried" },
+        { "id": "c", "text": "warmed" }, { "id": "d", "text": "stood" }, { "id": "e", "text": "folded" }
+      ],
+      "answer": "a",
+      "explanation": "So introduces a result, and loose pegs cannot hold a tent up, so it fell in. Stood is the opposite of what loose pegs cause, and folded is something people do on purpose.",
+      "strategy": "After so, ask what the first half causes, and reject anything that is merely nearby."
+    },
+    {
+      "id": "cogat-sc-g4-9", "grade": 4, "difficulty": 1,
+      "prompt": "If a plant is kept in a dark cupboard, then its leaves will turn ______.",
+      "choices": [
+        { "id": "a", "text": "pale" }, { "id": "b", "text": "greener" },
+        { "id": "c", "text": "thicker" }, { "id": "d", "text": "wider" }, { "id": "e", "text": "sweeter" }
+      ],
+      "answer": "a",
+      "explanation": "If ... then means the first half causes the second, and leaves need light to stay green, so without it they go pale. Greener is the trap because it matches the word leaves, but darkness does the opposite.",
+      "strategy": "In an if ... then sentence, work out the result yourself before you look at the choices."
+    },
+    {
+      "id": "cogat-sc-g4-10", "grade": 4, "difficulty": 2,
+      "prompt": "The museum was so ______ that two days were not enough to see everything.",
+      "choices": [
+        { "id": "a", "text": "enormous" }, { "id": "b", "text": "ancient" },
+        { "id": "c", "text": "famous" }, { "id": "d", "text": "quiet" }, { "id": "e", "text": "popular" }
+      ],
+      "answer": "a",
+      "explanation": "So ______ that means the blank has to explain the ending, and needing two days is about size. Famous and popular are true of many museums, but neither one makes a building take longer to walk around.",
+      "strategy": "In a so ... that sentence, read the ending first and let it pick the word."
+    },
+    {
+      "id": "cogat-sc-g4-11", "grade": 4, "difficulty": 2,
+      "prompt": "The choir rehearsed every evening for a month; therefore their singing became far more ______.",
+      "choices": [
+        { "id": "a", "text": "confident" }, { "id": "b", "text": "uncertain" },
+        { "id": "c", "text": "expensive" }, { "id": "d", "text": "rare" }, { "id": "e", "text": "brief" }
+      ],
+      "answer": "a",
+      "explanation": "Therefore points to the result of all that practice, and practice builds confidence. Uncertain is the exact opposite of what rehearsing produces, so it breaks the link.",
+      "strategy": "Therefore means so. Follow the cause forwards, and throw out its opposite straight away."
+    },
+    {
+      "id": "cogat-sc-g4-12", "grade": 4, "difficulty": 2,
+      "prompt": "We could not read the notice because the letters had ______ in the rain.",
+      "choices": [
+        { "id": "a", "text": "faded" }, { "id": "b", "text": "darkened" },
+        { "id": "c", "text": "grown" }, { "id": "d", "text": "printed" }, { "id": "e", "text": "straightened" }
+      ],
+      "answer": "a",
+      "explanation": "Because must give the reason the notice could not be read, and rain washes ink until it fades away. Darkened is the trap: darker letters would be easier to read, not harder.",
+      "strategy": "After because, check the direction. Does your word make the ending more likely, or less?"
+    },
+    {
+      "id": "cogat-sc-g4-13", "grade": 4, "difficulty": 2,
+      "prompt": "Camels can travel for days without drinking, whereas horses must drink ______.",
+      "choices": [
+        { "id": "a", "text": "frequently" }, { "id": "b", "text": "rarely" },
+        { "id": "c", "text": "slowly" }, { "id": "d", "text": "quietly" }, { "id": "e", "text": "later" }
+      ],
+      "answer": "a",
+      "explanation": "Whereas sets up a difference between the two animals. Camels go days without water, so horses must be the opposite and drink often. Rarely says the same thing as the camel half, which wipes out the contrast.",
+      "strategy": "Whereas demands two different halves. If both halves agree, your word is wrong."
+    },
+    {
+      "id": "cogat-sc-g4-14", "grade": 4, "difficulty": 3,
+      "prompt": "Unlike her ______ neighbour, Mrs Patel greets every single person on the street.",
+      "choices": [
+        { "id": "a", "text": "unfriendly" }, { "id": "b", "text": "friendly" },
+        { "id": "c", "text": "cheerful" }, { "id": "d", "text": "elderly" }, { "id": "e", "text": "talkative" }
+      ],
+      "answer": "a",
+      "explanation": "Unlike means the neighbour must be the opposite of Mrs Patel, and she greets everybody, so he does not. Friendly is the trap for anyone who skips the word unlike, and cheerful and talkative fall into the same trap.",
+      "strategy": "The prefix un- flips a word over. Decide whether the sentence needs the flip before you choose."
+    },
+    {
+      "id": "cogat-sc-g4-15", "grade": 4, "difficulty": 3,
+      "prompt": "Although the assembly instructions were ______, Owen built the shelf without a single mistake.",
+      "choices": [
+        { "id": "a", "text": "confusing" }, { "id": "b", "text": "clear" },
+        { "id": "c", "text": "printed" }, { "id": "d", "text": "short" }, { "id": "e", "text": "helpful" }
+      ],
+      "answer": "a",
+      "explanation": "Although means the ending must be a surprise, and building it perfectly is only surprising when the instructions were confusing. Clear and helpful are the traps, because clear instructions make success completely ordinary.",
+      "strategy": "Although means the halves must clash. If your word makes the ending expected, it is wrong."
+    },
+    {
+      "id": "cogat-sc-g4-16", "grade": 4, "difficulty": 3,
+      "prompt": "The recipe looked simple; however, the finished dish was surprisingly ______.",
+      "choices": [
+        { "id": "a", "text": "complicated" }, { "id": "b", "text": "simple" },
+        { "id": "c", "text": "tasty" }, { "id": "d", "text": "warm" }, { "id": "e", "text": "cheap" }
+      ],
+      "answer": "a",
+      "explanation": "However warns you the second half turns against the first, so simple at the start means complicated at the end. Tasty is the trap, because it is the word we naturally attach to a dish, and it creates no contrast at all.",
+      "strategy": "However flips the sentence. Say what the first half promised, then choose its opposite."
+    },
+    {
+      "id": "cogat-sc-g4-17", "grade": 4, "difficulty": 3,
+      "prompt": "The mountain air was so ______ that we could see the next valley clearly.",
+      "choices": [
+        { "id": "a", "text": "clear" }, { "id": "b", "text": "fresh" },
+        { "id": "c", "text": "loud" }, { "id": "d", "text": "thick" }, { "id": "e", "text": "chilly" }
+      ],
+      "answer": "a",
+      "explanation": "Seeing a long way is caused by clear air, so clear is the word the ending needs. Fresh is the trap: it sits beside mountain air perfectly, but freshness has nothing to do with how far you can see. Air cannot be loud.",
+      "strategy": "A word that sounds natural beside the noun is not always the word the ending needs."
+    },
+    {
+      "id": "cogat-sc-g4-18", "grade": 4, "difficulty": 4,
+      "prompt": "In spite of the ______ forecast, the school picnic went ahead as planned.",
+      "choices": [
+        { "id": "a", "text": "gloomy" }, { "id": "b", "text": "promising" },
+        { "id": "c", "text": "brief" }, { "id": "d", "text": "local" }, { "id": "e", "text": "accurate" }
+      ],
+      "answer": "a",
+      "explanation": "In spite of names an obstacle that was overcome, and a gloomy forecast is a reason to cancel a picnic. Promising is the trap, because a good forecast is no obstacle, so going ahead would not be worth reporting.",
+      "strategy": "Despite and in spite of always introduce a problem. Hunt for the word that would normally stop things."
+    },
+    {
+      "id": "cogat-sc-g4-19", "grade": 4, "difficulty": 4,
+      "prompt": "Losing a single point was ______, but the team still won the match easily.",
+      "choices": [
+        { "id": "a", "text": "disappointing" }, { "id": "b", "text": "devastating" },
+        { "id": "c", "text": "thrilling" }, { "id": "d", "text": "tragic" }, { "id": "e", "text": "unfair" }
+      ],
+      "answer": "a",
+      "explanation": "But tells you the lost point was small next to an easy win, so disappointing is the right weight. Devastating and tragic carry the same unhappy feeling but are far too strong for one point in a match the team won.",
+      "strategy": "Feelings come in sizes. Weigh the event first, then pick a word of matching weight."
+    },
+    {
+      "id": "cogat-sc-g4-20", "grade": 4, "difficulty": 4,
+      "prompt": "Because the cave was completely ______, the explorers relied on their ______ to find the way out.",
+      "choices": [
+        { "id": "a", "text": "dark ... torches" }, { "id": "b", "text": "narrow ... torches" },
+        { "id": "c", "text": "dark ... shovels" }, { "id": "d", "text": "damp ... maps" }, { "id": "e", "text": "long ... voices" }
+      ],
+      "answer": "a",
+      "explanation": "Because links a problem to the thing that solves it. Darkness is the problem and torches are the cure, so both halves match. Choice c names the right problem, but a shovel gives no light at all.",
+      "strategy": "Two blanks means two tests. A choice that passes the first and fails the second is still wrong."
+    },
+    {
+      "id": "cogat-sc-g4-21", "grade": 4, "difficulty": 5,
+      "prompt": "Even though Theo's sled was the ______ one on the hill, he reached the bottom last.",
+      "choices": [
+        { "id": "a", "text": "fastest" }, { "id": "b", "text": "slowest" },
+        { "id": "c", "text": "heaviest" }, { "id": "d", "text": "oldest" }, { "id": "e", "text": "smallest" }
+      ],
+      "answer": "a",
+      "explanation": "Even though means the ending has to be unexpected, and coming last is only unexpected on the fastest sled. Slowest is the trap because it explains the ending instead of surprising us, which is exactly what even though forbids.",
+      "strategy": "Start at the ending and ask what would make it unexpected. That is what the blank must say."
+    },
+    {
+      "id": "cogat-sc-g4-22", "grade": 4, "difficulty": 5,
+      "prompt": "The opening act was ______, yet the second half was so ______ that the audience cheered.",
+      "choices": [
+        { "id": "a", "text": "dull ... lively" }, { "id": "b", "text": "lively ... dull" },
+        { "id": "c", "text": "loud ... noisy" }, { "id": "d", "text": "short ... brief" }, { "id": "e", "text": "clever ... witty" }
+      ],
+      "answer": "a",
+      "explanation": "Yet demands a contrast, and cheering tells you the second half was lively, so the opening act must be its opposite. Choice b puts the two words the wrong way round, which makes the cheering impossible, and choices c, d and e pair two words that mean nearly the same thing.",
+      "strategy": "With two blanks and a contrast word, fix the half the sentence already explains, then flip it for the other."
+    },
+    {
+      "id": "cogat-sc-g4-23", "grade": 4, "difficulty": 5,
+      "prompt": "Since the museum charged ______ for pupils, the trip cost ______ than the class had feared.",
+      "choices": [
+        { "id": "a", "text": "nothing ... less" }, { "id": "b", "text": "nothing ... more" },
+        { "id": "c", "text": "double ... less" }, { "id": "d", "text": "extra ... more" }, { "id": "e", "text": "more ... less" }
+      ],
+      "answer": "a",
+      "explanation": "Since gives the reason and the ending has to follow from it. Free entry for pupils makes the trip cost less than the class feared. Choice c is the trap: paying double is a reason to cost more, so its two words fight each other.",
+      "strategy": "In a two-blank cause sentence, the second word must be the result of the first. Always read them as a pair."
     }
   ]
 }

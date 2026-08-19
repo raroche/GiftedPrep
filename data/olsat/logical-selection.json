@@ -318,6 +318,626 @@
       "answer": "a",
       "explanation": "You can measure without a ruler, without being a scientist, and without using metres. Measurements are often approximate. But a measurement with no unit is meaningless: five what?",
       "strategy": "If a choice names one particular example of something, look for the general word instead."
+    },
+    {
+      "id": "olsat-lse-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "A tree must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "roots"
+        },
+        {
+          "id": "b",
+          "text": "fruit"
+        },
+        {
+          "id": "c",
+          "text": "leaves"
+        },
+        {
+          "id": "d",
+          "text": "birds"
+        },
+        {
+          "id": "e",
+          "text": "shade"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Many trees have no fruit, and a tree in winter has no leaves at all. Birds and shade come and go. But every tree draws water through roots.",
+      "strategy": "For each choice, try to think of one that does not have it. If you can, cross it off."
+    },
+    {
+      "id": "olsat-lse-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "A game cannot be played without —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "rules"
+        },
+        {
+          "id": "b",
+          "text": "a board"
+        },
+        {
+          "id": "c",
+          "text": "teams"
+        },
+        {
+          "id": "d",
+          "text": "a winner"
+        },
+        {
+          "id": "e",
+          "text": "a ball"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Games can be played alone, with no board, no ball, and can end in a draw with no winner. But without rules there is nothing to play.",
+      "strategy": "Start with the choice that sounds too obvious. It is often the necessary one."
+    },
+    {
+      "id": "olsat-lse-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Every letter must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a shape"
+        },
+        {
+          "id": "b",
+          "text": "ink"
+        },
+        {
+          "id": "c",
+          "text": "a page"
+        },
+        {
+          "id": "d",
+          "text": "a sound"
+        },
+        {
+          "id": "e",
+          "text": "meaning"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Letters can be carved, typed on a screen, or shaped in sand, so ink and paper are not needed. A single letter carries no meaning on its own. But a letter you cannot see the shape of is not a letter.",
+      "strategy": "Ask what would make the thing stop being that thing."
+    },
+    {
+      "id": "olsat-lse-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "A shadow must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "something blocking light"
+        },
+        {
+          "id": "b",
+          "text": "the sun"
+        },
+        {
+          "id": "c",
+          "text": "a wall"
+        },
+        {
+          "id": "d",
+          "text": "darkness"
+        },
+        {
+          "id": "e",
+          "text": "a person"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A lamp casts shadows as well as the sun, and a shadow can fall on the ground, not just a wall. But something has to get in the way of the light.",
+      "strategy": "Replace a specific thing with the general idea behind it. Sun becomes light."
+    },
+    {
+      "id": "olsat-lse-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Every river must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "water"
+        },
+        {
+          "id": "b",
+          "text": "fish"
+        },
+        {
+          "id": "c",
+          "text": "a bridge"
+        },
+        {
+          "id": "d",
+          "text": "banks that curve"
+        },
+        {
+          "id": "e",
+          "text": "boats"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Rivers can be empty of fish, have no bridges or boats, and run dead straight. But a river with no water is a dry bed, not a river.",
+      "strategy": "What the thing is MADE of is almost always necessary."
+    },
+    {
+      "id": "olsat-lse-g3-11",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "A conversation must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "more than one person"
+        },
+        {
+          "id": "b",
+          "text": "words"
+        },
+        {
+          "id": "c",
+          "text": "agreement"
+        },
+        {
+          "id": "d",
+          "text": "a topic"
+        },
+        {
+          "id": "e",
+          "text": "politeness"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Conversations can be rude, can wander with no clear topic, and can end in disagreement. They can even happen in sign language with no spoken words. But one person alone is not having a conversation.",
+      "strategy": "Some things need two of something. Check the number as well as the parts."
+    },
+    {
+      "id": "olsat-lse-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Every question must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "something unknown"
+        },
+        {
+          "id": "b",
+          "text": "an answer"
+        },
+        {
+          "id": "c",
+          "text": "a question mark"
+        },
+        {
+          "id": "d",
+          "text": "a person asking"
+        },
+        {
+          "id": "e",
+          "text": "words"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Plenty of questions have no answer anyone knows. A spoken question has no question mark. But if nothing is unknown, it is not really a question.",
+      "strategy": "Strip away the writing and the speaking. What idea is left?"
+    },
+    {
+      "id": "olsat-lse-g3-13",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "A map must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a smaller scale than the place"
+        },
+        {
+          "id": "b",
+          "text": "colours"
+        },
+        {
+          "id": "c",
+          "text": "roads"
+        },
+        {
+          "id": "d",
+          "text": "a compass"
+        },
+        {
+          "id": "e",
+          "text": "names"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Maps come without colour, without roads, without a compass and without labels. What makes something a map is that it shows a place shrunk down.",
+      "strategy": "The definition is usually the thing you would never think to say out loud."
+    },
+    {
+      "id": "olsat-lse-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "A reflection cannot exist without —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a surface"
+        },
+        {
+          "id": "b",
+          "text": "a mirror"
+        },
+        {
+          "id": "c",
+          "text": "water"
+        },
+        {
+          "id": "d",
+          "text": "light"
+        },
+        {
+          "id": "e",
+          "text": "a face"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A mirror is only one kind of reflecting surface; polished metal and still water work too. A reflection needs light, but light alone is not enough. Something has to bounce it back.",
+      "strategy": "When one choice names a specific example, look for the general word instead."
+    },
+    {
+      "id": "olsat-lse-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Every plan must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a future action"
+        },
+        {
+          "id": "b",
+          "text": "writing"
+        },
+        {
+          "id": "c",
+          "text": "a deadline"
+        },
+        {
+          "id": "d",
+          "text": "other people"
+        },
+        {
+          "id": "e",
+          "text": "a goal"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Plans can live entirely in your head, have no deadline and involve nobody else. What every plan has is something you intend to do later.",
+      "strategy": "Look for the choice that is true even in the simplest possible example."
+    },
+    {
+      "id": "olsat-lse-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "A book must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "words or pictures"
+        },
+        {
+          "id": "b",
+          "text": "a cover"
+        },
+        {
+          "id": "c",
+          "text": "chapters"
+        },
+        {
+          "id": "d",
+          "text": "an author's name"
+        },
+        {
+          "id": "e",
+          "text": "an index"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Books exist without covers, chapters, indexes and even without a named author. But an object with nothing on the pages at all is a notebook, not a book.",
+      "strategy": "Remove each choice in turn. Which removal stops it being a book?"
+    },
+    {
+      "id": "olsat-lse-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "A song cannot exist without —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "sound"
+        },
+        {
+          "id": "b",
+          "text": "words"
+        },
+        {
+          "id": "c",
+          "text": "a singer"
+        },
+        {
+          "id": "d",
+          "text": "instruments"
+        },
+        {
+          "id": "e",
+          "text": "a chorus"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Many songs have no words, no chorus and no instruments, and can be played rather than sung. But a song is made of sound.",
+      "strategy": "What the thing is made of is almost always the necessary part."
+    },
+    {
+      "id": "olsat-lse-g4-8",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Every choice must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "more than one option"
+        },
+        {
+          "id": "b",
+          "text": "a right answer"
+        },
+        {
+          "id": "c",
+          "text": "time to think"
+        },
+        {
+          "id": "d",
+          "text": "consequences"
+        },
+        {
+          "id": "e",
+          "text": "a reason"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Choices can be made in a split second, for no reason, with no clearly right answer. But with only one option there is nothing to choose.",
+      "strategy": "Ask what makes the word mean anything at all."
+    },
+    {
+      "id": "olsat-lse-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "A measurement must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a unit"
+        },
+        {
+          "id": "b",
+          "text": "a ruler"
+        },
+        {
+          "id": "c",
+          "text": "an exact number"
+        },
+        {
+          "id": "d",
+          "text": "a scientist"
+        },
+        {
+          "id": "e",
+          "text": "a metric system"
+        }
+      ],
+      "answer": "a",
+      "explanation": "You can measure without a ruler and without being a scientist. Measurements are often approximate, and inches work as well as metres. But five, on its own, means nothing. Five what?",
+      "strategy": "If a choice names one particular example, look for the general word instead."
+    },
+    {
+      "id": "olsat-lse-g4-10",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Every recipe must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "ingredients"
+        },
+        {
+          "id": "b",
+          "text": "an oven"
+        },
+        {
+          "id": "c",
+          "text": "exact weights"
+        },
+        {
+          "id": "d",
+          "text": "a photograph"
+        },
+        {
+          "id": "e",
+          "text": "a chef"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Plenty of recipes need no oven, give amounts as a handful or a pinch, carry no picture, and are cooked by anyone at home. But a recipe with nothing to cook is not a recipe.",
+      "strategy": "Cross off anything that is only usually true. Necessary means always."
+    },
+    {
+      "id": "olsat-lse-g4-11",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Every shadow puppet show must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a light source"
+        },
+        {
+          "id": "b",
+          "text": "a screen"
+        },
+        {
+          "id": "c",
+          "text": "hands"
+        },
+        {
+          "id": "d",
+          "text": "a story"
+        },
+        {
+          "id": "e",
+          "text": "an audience"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Puppets can be cut from card rather than made with hands, the story can be improvised, and a show can be rehearsed with nobody watching. But with no light there is no shadow.",
+      "strategy": "Trace the chain of causes back. What has to come first?"
+    },
+    {
+      "id": "olsat-lse-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "An echo cannot happen without —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "a surface to bounce off"
+        },
+        {
+          "id": "b",
+          "text": "a cave"
+        },
+        {
+          "id": "c",
+          "text": "a loud noise"
+        },
+        {
+          "id": "d",
+          "text": "silence"
+        },
+        {
+          "id": "e",
+          "text": "a valley"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Caves and valleys are only two of the places echoes happen. A quiet sound echoes too. But the sound must reflect off something.",
+      "strategy": "Two of the choices are specific places. Neither can be necessary if the other also works."
+    },
+    {
+      "id": "olsat-lse-g4-13",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "A debate must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "opposing positions"
+        },
+        {
+          "id": "b",
+          "text": "an audience"
+        },
+        {
+          "id": "c",
+          "text": "shouting"
+        },
+        {
+          "id": "d",
+          "text": "a judge"
+        },
+        {
+          "id": "e",
+          "text": "microphones"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Debates can be calm, private, unjudged and unamplified. But if everyone agrees, there is nothing to debate.",
+      "strategy": "Strip away every feeling and every prop. The definition is what remains."
+    },
+    {
+      "id": "olsat-lse-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Every translation must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "two languages"
+        },
+        {
+          "id": "b",
+          "text": "a dictionary"
+        },
+        {
+          "id": "c",
+          "text": "a translator who is fluent"
+        },
+        {
+          "id": "d",
+          "text": "words"
+        },
+        {
+          "id": "e",
+          "text": "accuracy"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Translations can be done from memory, can be inaccurate, and can be of signs or symbols rather than words. But something has to move from one language into another.",
+      "strategy": "Count the parts. Some things need exactly two of something."
+    },
+    {
+      "id": "olsat-lse-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "A fossil must have —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "great age"
+        },
+        {
+          "id": "b",
+          "text": "bones"
+        },
+        {
+          "id": "c",
+          "text": "stone"
+        },
+        {
+          "id": "d",
+          "text": "a museum"
+        },
+        {
+          "id": "e",
+          "text": "a complete skeleton"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fossils can be footprints or leaf prints rather than bones, can be preserved in amber or tar rather than stone, and are usually incomplete. Most sit in the ground, not a museum. What makes something a fossil is that it is very old.",
+      "strategy": "When four choices are examples or places, the fifth is usually the definition."
     }
   ]
 }

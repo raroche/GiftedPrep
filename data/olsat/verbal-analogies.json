@@ -318,6 +318,626 @@
       "answer": "a",
       "explanation": "A whisper is a small amount of sound and a shout is a large amount. A drizzle is a small amount of rain and a downpour is a large amount. Choice b, rain, is the general word, not the big end. Choice e, storm, adds wind and thunder, which the pair does not.",
       "strategy": "Some pairs go from a little to a lot of the very same thing. Match the amount exactly."
+    },
+    {
+      "id": "olsat-vaa-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Pen is to write as knife is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "cut"
+        },
+        {
+          "id": "b",
+          "text": "kitchen"
+        },
+        {
+          "id": "c",
+          "text": "sharp"
+        },
+        {
+          "id": "d",
+          "text": "metal"
+        },
+        {
+          "id": "e",
+          "text": "food"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A pen is for writing. A knife is for cutting. Sharp describes a knife and metal is what it is made of, but neither is its job.",
+      "strategy": "Object and its job. Ask what it is FOR."
+    },
+    {
+      "id": "olsat-vaa-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Foot is to sock as hand is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "glove"
+        },
+        {
+          "id": "b",
+          "text": "finger"
+        },
+        {
+          "id": "c",
+          "text": "wave"
+        },
+        {
+          "id": "d",
+          "text": "arm"
+        },
+        {
+          "id": "e",
+          "text": "ring"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A sock goes on a foot. A glove goes on a hand. A finger is part of a hand and a ring goes on a finger, but the glove covers the whole hand just as the sock covers the whole foot.",
+      "strategy": "Match the covering to the body part it covers."
+    },
+    {
+      "id": "olsat-vaa-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Loud is to quiet as heavy is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "light"
+        },
+        {
+          "id": "b",
+          "text": "strong"
+        },
+        {
+          "id": "c",
+          "text": "big"
+        },
+        {
+          "id": "d",
+          "text": "solid"
+        },
+        {
+          "id": "e",
+          "text": "hard"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Loud and quiet are opposites, so the answer must be the opposite of heavy, which is light. Strong and solid are not about weight.",
+      "strategy": "When the first pair are opposites, look only for opposites."
+    },
+    {
+      "id": "olsat-vaa-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Bee is to hive as rabbit is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "burrow"
+        },
+        {
+          "id": "b",
+          "text": "carrot"
+        },
+        {
+          "id": "c",
+          "text": "hop"
+        },
+        {
+          "id": "d",
+          "text": "field"
+        },
+        {
+          "id": "e",
+          "text": "fur"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A bee lives in a hive. A rabbit lives in a burrow. A carrot is what it eats, hopping is what it does, and a field is where it might be found, but the burrow is its home.",
+      "strategy": "Home, food and action are three different relationships."
+    },
+    {
+      "id": "olsat-vaa-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Baker is to bread as farmer is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "crops"
+        },
+        {
+          "id": "b",
+          "text": "tractor"
+        },
+        {
+          "id": "c",
+          "text": "barn"
+        },
+        {
+          "id": "d",
+          "text": "field"
+        },
+        {
+          "id": "e",
+          "text": "cow"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A baker makes bread. A farmer grows crops. A tractor is a tool, a barn is a building and a field is a place. Only crops are what the farmer produces.",
+      "strategy": "Worker and what they produce. Not the tool and not the place."
+    },
+    {
+      "id": "olsat-vaa-g3-11",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Petal is to flower as page is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "book"
+        },
+        {
+          "id": "b",
+          "text": "read"
+        },
+        {
+          "id": "c",
+          "text": "paper"
+        },
+        {
+          "id": "d",
+          "text": "story"
+        },
+        {
+          "id": "e",
+          "text": "library"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A petal is one part of a flower. A page is one part of a book. Paper is what a page is made of and a library is where books live.",
+      "strategy": "Part and whole. Go from the small piece up to the thing it belongs to."
+    },
+    {
+      "id": "olsat-vaa-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Chick is to hen as calf is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "cow"
+        },
+        {
+          "id": "b",
+          "text": "milk"
+        },
+        {
+          "id": "c",
+          "text": "farm"
+        },
+        {
+          "id": "d",
+          "text": "grass"
+        },
+        {
+          "id": "e",
+          "text": "bull"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A chick grows into a hen. A calf grows into a cow. Milk comes from a cow and grass is what it eats. A bull is the male, not what the calf grows into.",
+      "strategy": "Baby to grown-up. Make sure you match the same one, male or female."
+    },
+    {
+      "id": "olsat-vaa-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Second is to minute as inch is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "foot"
+        },
+        {
+          "id": "b",
+          "text": "ruler"
+        },
+        {
+          "id": "c",
+          "text": "length"
+        },
+        {
+          "id": "d",
+          "text": "measure"
+        },
+        {
+          "id": "e",
+          "text": "short"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Sixty seconds make a minute. Twelve inches make a foot. A ruler measures inches and length is the general idea, but only a foot is the next unit up.",
+      "strategy": "Units of measurement stack. Find the next size up."
+    },
+    {
+      "id": "olsat-vaa-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Smile is to happy as frown is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "sad"
+        },
+        {
+          "id": "b",
+          "text": "face"
+        },
+        {
+          "id": "c",
+          "text": "mouth"
+        },
+        {
+          "id": "d",
+          "text": "angry"
+        },
+        {
+          "id": "e",
+          "text": "cry"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A smile shows you are happy. A frown shows you are sad. Crying is another thing a sad person does, but a frown is a face, and the pair matches a face to the feeling behind it.",
+      "strategy": "Match the sign to the feeling it shows."
+    },
+    {
+      "id": "olsat-vaa-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Sip is to gulp as tap is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "pound"
+        },
+        {
+          "id": "b",
+          "text": "water"
+        },
+        {
+          "id": "c",
+          "text": "finger"
+        },
+        {
+          "id": "d",
+          "text": "door"
+        },
+        {
+          "id": "e",
+          "text": "knock"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A sip is a small drink and a gulp is a big one. A tap is a small hit and a pound is a big one. Both pairs go from a little to a lot of the same thing. Knocking is closer to tapping in size.",
+      "strategy": "Some pairs are about strength. Find the small and the large version."
+    },
+    {
+      "id": "olsat-vaa-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Author is to novel as sculptor is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "statue"
+        },
+        {
+          "id": "b",
+          "text": "marble"
+        },
+        {
+          "id": "c",
+          "text": "chisel"
+        },
+        {
+          "id": "d",
+          "text": "gallery"
+        },
+        {
+          "id": "e",
+          "text": "art"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An author makes a novel. A sculptor makes a statue. Marble is the material, a chisel is the tool and a gallery is where it is shown.",
+      "strategy": "Maker and the thing made. Not the tool and not the material."
+    },
+    {
+      "id": "olsat-vaa-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Thermometer is to temperature as scale is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "weight"
+        },
+        {
+          "id": "b",
+          "text": "kilogram"
+        },
+        {
+          "id": "c",
+          "text": "balance"
+        },
+        {
+          "id": "d",
+          "text": "heavy"
+        },
+        {
+          "id": "e",
+          "text": "measure"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A thermometer measures temperature. A scale measures weight. A kilogram is a unit of weight, so it is one step too specific, and measure is the general idea.",
+      "strategy": "Match the general thing measured, not a unit of it."
+    },
+    {
+      "id": "olsat-vaa-g4-8",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Cub is to bear as fawn is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "deer"
+        },
+        {
+          "id": "b",
+          "text": "forest"
+        },
+        {
+          "id": "c",
+          "text": "antler"
+        },
+        {
+          "id": "d",
+          "text": "spotted"
+        },
+        {
+          "id": "e",
+          "text": "doe"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cub is a young bear. A fawn is a young deer. A doe is an adult female deer, so it is close, but deer is the animal itself.",
+      "strategy": "Baby animals have their own names. Learn them in pairs."
+    },
+    {
+      "id": "olsat-vaa-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Island is to ocean as oasis is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "desert"
+        },
+        {
+          "id": "b",
+          "text": "water"
+        },
+        {
+          "id": "c",
+          "text": "palm"
+        },
+        {
+          "id": "d",
+          "text": "sand"
+        },
+        {
+          "id": "e",
+          "text": "camel"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An island is a patch of land surrounded by ocean. An oasis is a patch of water surrounded by desert. Sand is what a desert is made of and a camel lives there.",
+      "strategy": "Look for the pattern of one thing surrounded by another, even when they swap places."
+    },
+    {
+      "id": "olsat-vaa-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Famine is to food as drought is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "water"
+        },
+        {
+          "id": "b",
+          "text": "desert"
+        },
+        {
+          "id": "c",
+          "text": "crops"
+        },
+        {
+          "id": "d",
+          "text": "heat"
+        },
+        {
+          "id": "e",
+          "text": "thirst"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A famine is a shortage of food. A drought is a shortage of water. Heat causes a drought and thirst is the result of one.",
+      "strategy": "Shortage pairs. Ask what is running out."
+    },
+    {
+      "id": "olsat-vaa-g4-11",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Chapter is to book as movement is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "symphony"
+        },
+        {
+          "id": "b",
+          "text": "dance"
+        },
+        {
+          "id": "c",
+          "text": "music"
+        },
+        {
+          "id": "d",
+          "text": "motion"
+        },
+        {
+          "id": "e",
+          "text": "orchestra"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A chapter is a named section of a book. A movement is a named section of a symphony. An orchestra plays it and music is the general idea.",
+      "strategy": "Part and whole works for time-based things too, not just objects."
+    },
+    {
+      "id": "olsat-vaa-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Whisper is to shout as glimpse is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "stare"
+        },
+        {
+          "id": "b",
+          "text": "look"
+        },
+        {
+          "id": "c",
+          "text": "eye"
+        },
+        {
+          "id": "d",
+          "text": "glance"
+        },
+        {
+          "id": "e",
+          "text": "blink"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A whisper is a small amount of sound and a shout is a large amount. A glimpse is a very short look and a stare is a long one. Glance means the same as glimpse.",
+      "strategy": "Match the amount as well as the meaning. Small to large."
+    },
+    {
+      "id": "olsat-vaa-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Cartographer is to map as architect is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "building"
+        },
+        {
+          "id": "b",
+          "text": "blueprint"
+        },
+        {
+          "id": "c",
+          "text": "city"
+        },
+        {
+          "id": "d",
+          "text": "brick"
+        },
+        {
+          "id": "e",
+          "text": "design"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cartographer makes maps. An architect designs buildings. A blueprint is the drawing they work from, and a brick is a material.",
+      "strategy": "When one word is unfamiliar, use the second half of the pair to work out the relationship."
+    },
+    {
+      "id": "olsat-vaa-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Optimist is to hopeful as pessimist is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "gloomy"
+        },
+        {
+          "id": "b",
+          "text": "realistic"
+        },
+        {
+          "id": "c",
+          "text": "angry"
+        },
+        {
+          "id": "d",
+          "text": "quiet"
+        },
+        {
+          "id": "e",
+          "text": "wrong"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An optimist is a person who is hopeful. A pessimist is a person who is gloomy. The pair matches a kind of person to the feeling that describes them. Realistic is a different attitude altogether.",
+      "strategy": "Match a person to the word that describes their outlook."
+    },
+    {
+      "id": "olsat-vaa-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Trickle is to torrent as spark is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "blaze"
+        },
+        {
+          "id": "b",
+          "text": "match"
+        },
+        {
+          "id": "c",
+          "text": "smoke"
+        },
+        {
+          "id": "d",
+          "text": "light"
+        },
+        {
+          "id": "e",
+          "text": "flame"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A trickle is a tiny flow of water and a torrent is a huge one. A spark is a tiny fire and a blaze is a huge one. A flame sits in between, and smoke is a by-product.",
+      "strategy": "Both pairs go from the smallest version to the largest. Match the extreme."
     }
   ]
 }

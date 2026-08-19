@@ -1118,6 +1118,2242 @@
       "answer": "a",
       "explanation": "Nine times four is thirty-six. Four times four is sixteen. Thirty-six minus sixteen is twenty. Choices b and c are the two halves on their own, before you subtract.",
       "strategy": "Work out each bracket completely before combining them. Write both numbers down so you do not lose one."
+    },
+    {
+      "id": "cogat-np-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Three red triangles on the left. One red triangle on the right.",
+        "left": [
+          {
+            "s": "triangle",
+            "c": "red",
+            "n": 3
+          }
+        ],
+        "right": [
+          {
+            "s": "triangle",
+            "c": "red"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two triangles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "one triangle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three triangles"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four triangles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The left side has three triangles. The right side has one. One and two more makes three. Choice c puts three more on top of the one already there, which is too many.",
+      "strategy": "Count the side that is already finished first. Then count on from what the other side has."
+    },
+    {
+      "id": "cogat-np-g1-7",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Six orange flags on the left. Three orange flags on the right.",
+        "left": [
+          {
+            "s": "flag",
+            "c": "orange",
+            "n": 6
+          }
+        ],
+        "right": [
+          {
+            "s": "flag",
+            "c": "orange",
+            "n": 3
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three flags"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six flags"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two flags"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four flags"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six on the left, three on the right. Three and three more makes six. Choice b, six, is the whole left side, not the part that is missing.",
+      "strategy": "The answer is how many are missing, not how many there are altogether."
+    },
+    {
+      "id": "cogat-np-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Seven teal fish on the left. Two teal fish on the right.",
+        "left": [
+          {
+            "s": "fish",
+            "c": "teal",
+            "n": 7
+          }
+        ],
+        "right": [
+          {
+            "s": "fish",
+            "c": "teal",
+            "n": 2
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "fish",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five fish"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "fish",
+                "c": "teal",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven fish"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "fish",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four fish"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "fish",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six fish"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Seven on the left, two on the right. Count up from two to seven: three, four, five, six, seven. That is five fish. Choice b, seven, is the whole left side.",
+      "strategy": "Count up from the smaller side. The number of steps you count is the answer."
+    },
+    {
+      "id": "cogat-np-g1-9",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Eight pink stars on the left. Five pink stars on the right.",
+        "left": [
+          {
+            "s": "star6",
+            "c": "pink",
+            "n": 8
+          }
+        ],
+        "right": [
+          {
+            "s": "star6",
+            "c": "pink",
+            "n": 5
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three stars"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "pink",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight stars"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two stars"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "pink",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five stars"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eight on the left, five on the right. Five and three more makes eight. Choice d, five, just copies what the right side already has.",
+      "strategy": "Ask what this side needs to catch up. Do not ask how many are there."
+    },
+    {
+      "id": "cogat-np-g1-10",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Four green apples and three more green apples on the left. Two green apples on the right.",
+        "left": [
+          {
+            "s": "apple",
+            "c": "green",
+            "n": 4
+          },
+          {
+            "s": "apple",
+            "c": "green",
+            "n": 3
+          }
+        ],
+        "right": [
+          {
+            "s": "apple",
+            "c": "green",
+            "n": 2
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "apple",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five apples"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "apple",
+                "c": "green",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven apples"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "apple",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three apples"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "apple",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four apples"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Put the two groups on the left together first: four and three makes seven. The right side has two, and two and five more makes seven. Choice b, seven, is the whole left side, not the missing part.",
+      "strategy": "When one side has two groups, add them into one number before you compare."
+    },
+    {
+      "id": "cogat-np-g1-11",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Five orange diamonds and two more orange diamonds on the left. Four orange diamonds on the right.",
+        "left": [
+          {
+            "s": "diamond",
+            "c": "orange",
+            "n": 5
+          },
+          {
+            "s": "diamond",
+            "c": "orange",
+            "n": 2
+          }
+        ],
+        "right": [
+          {
+            "s": "diamond",
+            "c": "orange",
+            "n": 4
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three diamonds"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "orange",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven diamonds"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five diamonds"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two diamonds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five and two makes seven on the left. The right side has four, and four and three more makes seven. Choice c, five, is only one of the groups on the left.",
+      "strategy": "Turn each side into one number first. Then find the gap between the two numbers."
+    },
+    {
+      "id": "cogat-np-g1-12",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "How many more go on the left side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Two blue clouds on the left. Seven blue clouds on the right.",
+        "left": [
+          {
+            "s": "cloud",
+            "c": "blue",
+            "n": 2
+          }
+        ],
+        "right": [
+          {
+            "s": "cloud",
+            "c": "blue",
+            "n": 7
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five clouds"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "blue",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven clouds"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four clouds"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two clouds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "This time the right side is the bigger one. Seven on the right, two on the left, and two and five more makes seven. Choice b, seven, is the whole right side, not the missing part.",
+      "strategy": "Check which side is bigger before you start. The missing pieces go on the smaller side."
+    },
+    {
+      "id": "cogat-np-g1-13",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "How many more go on the left side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Three teal hexagons on the left. Nine teal hexagons on the right.",
+        "left": [
+          {
+            "s": "hexagon",
+            "c": "teal",
+            "n": 3
+          }
+        ],
+        "right": [
+          {
+            "s": "hexagon",
+            "c": "teal",
+            "n": 9
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six hexagons"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine hexagons"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five hexagons"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three hexagons"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Nine on the right, three on the left. Count up from three to nine: four, five, six, seven, eight, nine. That is six hexagons. Choice c, five, stops one step too soon.",
+      "strategy": "Count up out loud and lift one finger for each step. The fingers give you the answer."
+    },
+    {
+      "id": "cogat-np-g1-14",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Four purple kites and five more purple kites on the left. Three purple kites and two more purple kites on the right.",
+        "left": [
+          {
+            "s": "kite",
+            "c": "purple",
+            "n": 4
+          },
+          {
+            "s": "kite",
+            "c": "purple",
+            "n": 5
+          }
+        ],
+        "right": [
+          {
+            "s": "kite",
+            "c": "purple",
+            "n": 3
+          },
+          {
+            "s": "kite",
+            "c": "purple",
+            "n": 2
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four kites"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine kites"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five kites"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three kites"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The left side is four and five, which is nine. The right side is three and two, which is five. Five and four more makes nine. Choice b, nine, is the left side total, not the missing part.",
+      "strategy": "Add up each side on its own first. Two small sums are easier than one big muddle."
+    },
+    {
+      "id": "cogat-np-g1-15",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "How many more go on the left side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Two red houses and three more red houses on the left. Nine red houses on the right.",
+        "left": [
+          {
+            "s": "house",
+            "c": "red",
+            "n": 2
+          },
+          {
+            "s": "house",
+            "c": "red",
+            "n": 3
+          }
+        ],
+        "right": [
+          {
+            "s": "house",
+            "c": "red",
+            "n": 9
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four houses"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five houses"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "red",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine houses"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six houses"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The left side is two and three, which is five. The right side is nine, and five and four more makes nine. Choice b, five, is what the left side already has.",
+      "strategy": "Make each side into one number, then ask which side is short and by how much."
+    },
+    {
+      "id": "cogat-np-g2-6",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Six blue squares on the left. Two blue squares on the right.",
+        "left": [
+          {
+            "s": "square",
+            "c": "blue",
+            "n": 6
+          }
+        ],
+        "right": [
+          {
+            "s": "square",
+            "c": "blue",
+            "n": 2
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four squares"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six squares"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three squares"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight squares"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six on the left, two on the right. Two and four more makes six. Choice b, six, is the whole left side, not the missing part.",
+      "strategy": "Take the smaller side away from the bigger side to find the gap."
+    },
+    {
+      "id": "cogat-np-g2-7",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Seven plus what number equals twelve?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Seven plus question mark equals twelve.",
+        "rows": [
+          [
+            "7 + ?",
+            "=",
+            "12"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "5"
+        },
+        {
+          "id": "b",
+          "text": "19"
+        },
+        {
+          "id": "c",
+          "text": "6"
+        },
+        {
+          "id": "d",
+          "text": "4"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Seven and something makes twelve. Twelve take away seven is five. Choice b, nineteen, is seven plus twelve, which is adding when you should be taking away.",
+      "strategy": "Put your answer back into the puzzle and check it: seven plus five is twelve."
+    },
+    {
+      "id": "cogat-np-g2-8",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "How many more go on the right side?",
+      "figure": {
+        "kind": "balance",
+        "alt": "Five orange leaves and four more orange leaves on the left. Three orange leaves on the right.",
+        "left": [
+          {
+            "s": "leaf",
+            "c": "orange",
+            "n": 5
+          },
+          {
+            "s": "leaf",
+            "c": "orange",
+            "n": 4
+          }
+        ],
+        "right": [
+          {
+            "s": "leaf",
+            "c": "orange",
+            "n": 3
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six leaves"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "orange",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine leaves"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five leaves"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "orange",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven leaves"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five and four makes nine on the left. The right side has three, and three and six more makes nine. Choice b, nine, is the left side total, not the part that is missing.",
+      "strategy": "Add the two groups on one side together before you compare the sides."
+    },
+    {
+      "id": "cogat-np-g2-9",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Fourteen equals what number plus six?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Fourteen equals question mark plus six.",
+        "rows": [
+          [
+            "14",
+            "=",
+            "? + 6"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "20"
+        },
+        {
+          "id": "c",
+          "text": "7"
+        },
+        {
+          "id": "d",
+          "text": "9"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Something plus six makes fourteen. Fourteen take away six is eight. Choice b, twenty, is fourteen plus six, the trap you fall into by adding just because you see a plus sign.",
+      "strategy": "The finished side tells you the target. Then work backwards on the side with the box."
+    },
+    {
+      "id": "cogat-np-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What number goes in the box?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Question mark minus four equals nine.",
+        "rows": [
+          [
+            "? − 4",
+            "=",
+            "9"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "13"
+        },
+        {
+          "id": "b",
+          "text": "5"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        },
+        {
+          "id": "d",
+          "text": "14"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Something take away four leaves nine. Put the four back on: nine and four more is thirteen. Choice b, five, takes four away from nine, which is the wrong way round.",
+      "strategy": "If something was taken away, add it back on to find where you started."
+    },
+    {
+      "id": "cogat-np-g2-11",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Six plus seven equals what number plus four?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Six plus seven equals question mark plus four.",
+        "rows": [
+          [
+            "6 + 7",
+            "=",
+            "? + 4"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "9"
+        },
+        {
+          "id": "b",
+          "text": "13"
+        },
+        {
+          "id": "c",
+          "text": "10"
+        },
+        {
+          "id": "d",
+          "text": "17"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six plus seven is thirteen, so both sides must make thirteen. Nine plus four is thirteen. Choice b, thirteen, is the total each side is worth, not the missing part.",
+      "strategy": "Finish the side you can work out. Then make the other side match that number."
+    },
+    {
+      "id": "cogat-np-g2-12",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Eighteen minus five equals twenty minus what number?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Eighteen minus five equals twenty minus question mark.",
+        "rows": [
+          [
+            "18 − 5",
+            "=",
+            "20 − ?"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "13"
+        },
+        {
+          "id": "c",
+          "text": "8"
+        },
+        {
+          "id": "d",
+          "text": "15"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eighteen take away five is thirteen. Twenty take away seven is thirteen too, so the sides match. Choice b, thirteen, is what each side is worth, not the number in the box.",
+      "strategy": "Two take aways can still give the same answer. Work each side out fully before you decide."
+    },
+    {
+      "id": "cogat-np-g2-13",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Five plus five plus five equals what number plus seven?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Five plus five plus five equals question mark plus seven.",
+        "rows": [
+          [
+            "5 + 5 + 5",
+            "=",
+            "? + 7"
+          ]
+        ],
+        "cellWidth": 141
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "15"
+        },
+        {
+          "id": "c",
+          "text": "22"
+        },
+        {
+          "id": "d",
+          "text": "7"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three fives make fifteen. Eight plus seven is fifteen as well. Choice b, fifteen, is the left side total, and choice c adds the seven on instead of taking it off.",
+      "strategy": "Count equal groups by skip counting: five, ten, fifteen."
+    },
+    {
+      "id": "cogat-np-g2-14",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "What number minus seven equals twelve plus six?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Question mark minus seven equals twelve plus six.",
+        "rows": [
+          [
+            "? − 7",
+            "=",
+            "12 + 6"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "25"
+        },
+        {
+          "id": "b",
+          "text": "18"
+        },
+        {
+          "id": "c",
+          "text": "11"
+        },
+        {
+          "id": "d",
+          "text": "31"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twelve plus six is eighteen, so the other side must be eighteen too. Something take away seven leaves eighteen, and eighteen and seven more is twenty-five. Choice b, eighteen, stops halfway.",
+      "strategy": "Two steps every time. Make one side a single number, then undo what was done to the box."
+    },
+    {
+      "id": "cogat-np-g2-15",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Eight plus what number equals thirty minus six?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Eight plus question mark equals thirty minus six.",
+        "rows": [
+          [
+            "8 + ?",
+            "=",
+            "30 − 6"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "16"
+        },
+        {
+          "id": "b",
+          "text": "24"
+        },
+        {
+          "id": "c",
+          "text": "32"
+        },
+        {
+          "id": "d",
+          "text": "22"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Thirty take away six is twenty-four. Eight and sixteen more makes twenty-four. Choice b, twenty-four, is what each side is worth, not the missing piece.",
+      "strategy": "Simplify the finished side first, then take away what the other side already has."
+    },
+    {
+      "id": "cogat-np-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "What number plus twelve equals thirty?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Question mark plus twelve equals thirty.",
+        "rows": [
+          [
+            "? + 12",
+            "=",
+            "30"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "18"
+        },
+        {
+          "id": "b",
+          "text": "42"
+        },
+        {
+          "id": "c",
+          "text": "22"
+        },
+        {
+          "id": "d",
+          "text": "17"
+        },
+        {
+          "id": "e",
+          "text": "16"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Something plus twelve makes thirty, so the box is thirty minus twelve, which is eighteen. Choice b, forty-two, is thirty plus twelve, which is what you get by adding just because you see a plus sign.",
+      "strategy": "Check by substituting your answer back in: eighteen plus twelve is thirty."
+    },
+    {
+      "id": "cogat-np-g3-7",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "What number times five equals forty?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Question mark times five equals forty.",
+        "rows": [
+          [
+            "? × 5",
+            "=",
+            "40"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "200"
+        },
+        {
+          "id": "c",
+          "text": "7"
+        },
+        {
+          "id": "d",
+          "text": "45"
+        },
+        {
+          "id": "e",
+          "text": "9"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five groups of eight make forty, so the box is eight. Choice b, two hundred, multiplies forty by five instead of dividing, and choice c, seven, gives only thirty-five.",
+      "strategy": "A missing factor is a division in disguise: forty divided by five is eight."
+    },
+    {
+      "id": "cogat-np-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Fifty minus what number equals thirty-two?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Fifty minus question mark equals thirty-two.",
+        "rows": [
+          [
+            "50 − ?",
+            "=",
+            "32"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "18"
+        },
+        {
+          "id": "b",
+          "text": "82"
+        },
+        {
+          "id": "c",
+          "text": "22"
+        },
+        {
+          "id": "d",
+          "text": "17"
+        },
+        {
+          "id": "e",
+          "text": "28"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fifty take away something leaves thirty-two, so the box is fifty minus thirty-two, which is eighteen. Choice b, eighty-two, adds the two numbers you can see instead of subtracting them.",
+      "strategy": "To find what was taken away, subtract the answer from the starting number."
+    },
+    {
+      "id": "cogat-np-g3-9",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Nine equals sixty-three divided by what number?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Nine equals sixty-three divided by question mark.",
+        "rows": [
+          [
+            "9",
+            "=",
+            "63 ÷ ?"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "72"
+        },
+        {
+          "id": "c",
+          "text": "8"
+        },
+        {
+          "id": "d",
+          "text": "54"
+        },
+        {
+          "id": "e",
+          "text": "6"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Sixty-three split into groups of nine gives seven groups, and nine times seven is sixty-three. Choice d, fifty-four, is sixty-three minus nine, and choice b adds the two numbers instead.",
+      "strategy": "Every division has a matching multiplication. Use it to check your answer."
+    },
+    {
+      "id": "cogat-np-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Eight times six equals what number plus eighteen?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Eight times six equals question mark plus eighteen.",
+        "rows": [
+          [
+            "8 × 6",
+            "=",
+            "? + 18"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "30"
+        },
+        {
+          "id": "b",
+          "text": "48"
+        },
+        {
+          "id": "c",
+          "text": "66"
+        },
+        {
+          "id": "d",
+          "text": "26"
+        },
+        {
+          "id": "e",
+          "text": "24"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eight times six is forty-eight. Something plus eighteen must be forty-eight, so the box is thirty. Choice b, forty-eight, is the product itself, and choice c adds eighteen instead of subtracting it.",
+      "strategy": "Reduce the completed side to a single number before you touch the side with the box."
+    },
+    {
+      "id": "cogat-np-g3-11",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "One hundred minus thirty-five equals what number plus twenty-five?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "One hundred minus thirty-five equals question mark plus twenty-five.",
+        "rows": [
+          [
+            "100 − 35",
+            "=",
+            "? + 25"
+          ]
+        ],
+        "cellWidth": 140
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "40"
+        },
+        {
+          "id": "b",
+          "text": "65"
+        },
+        {
+          "id": "c",
+          "text": "90"
+        },
+        {
+          "id": "d",
+          "text": "35"
+        },
+        {
+          "id": "e",
+          "text": "45"
+        }
+      ],
+      "answer": "a",
+      "explanation": "One hundred minus thirty-five is sixty-five, and forty plus twenty-five is sixty-five as well. Choice b, sixty-five, is the value of each side, not the number in the box.",
+      "strategy": "Write the single number each side is worth above it. Then only one small step is left."
+    },
+    {
+      "id": "cogat-np-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "The diamond is worth 4. What number goes in the box?",
+      "promptSpeech": "A diamond is worth four. Diamond times what number equals thirty-two?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Diamond equals four. Diamond times question mark equals thirty-two.",
+        "rows": [
+          [
+            "◆ = 4"
+          ],
+          [
+            "◆ × ? = 32"
+          ]
+        ],
+        "cellWidth": 155,
+        "cellHeight": 64
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "128"
+        },
+        {
+          "id": "c",
+          "text": "28"
+        },
+        {
+          "id": "d",
+          "text": "36"
+        },
+        {
+          "id": "e",
+          "text": "6"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Swap the diamond for four: four times something is thirty-two, so the box is eight. Choice b, one hundred and twenty-eight, multiplies thirty-two by four instead of dividing.",
+      "strategy": "Replace every symbol with its number before you do any arithmetic."
+    },
+    {
+      "id": "cogat-np-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "The star is worth 6 and the circle is worth 2. What number goes in the box?",
+      "promptSpeech": "A star is worth six. A circle is worth two. Star times circle, plus what number, equals twenty?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Star equals six. Circle equals two. Star times circle, plus question mark, equals twenty.",
+        "rows": [
+          [
+            "★ = 6    ● = 2"
+          ],
+          [
+            "(★ × ●) + ? = 20"
+          ]
+        ],
+        "cellWidth": 227,
+        "cellHeight": 64
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "32"
+        },
+        {
+          "id": "d",
+          "text": "14"
+        },
+        {
+          "id": "e",
+          "text": "4"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six times two is twelve, and twelve plus eight is twenty, so the box is eight. Choice b, twelve, is the number you meet on the way, and choice d comes from adding six and two instead of multiplying them.",
+      "strategy": "Do the work inside the brackets first, then deal with the box."
+    },
+    {
+      "id": "cogat-np-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "What number divided by four equals three times five?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Question mark divided by four equals three times five.",
+        "rows": [
+          [
+            "? ÷ 4",
+            "=",
+            "3 × 5"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "60"
+        },
+        {
+          "id": "b",
+          "text": "15"
+        },
+        {
+          "id": "c",
+          "text": "19"
+        },
+        {
+          "id": "d",
+          "text": "11"
+        },
+        {
+          "id": "e",
+          "text": "45"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three times five is fifteen, so the other side must be fifteen too. Something divided by four is fifteen, and fifteen times four is sixty. Choice b, fifteen, stops halfway through the puzzle.",
+      "strategy": "Undo a division by multiplying. Whatever the box was divided by, multiply it back on."
+    },
+    {
+      "id": "cogat-np-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "The triangle is worth 5 and the square is worth 20. What number goes in the box?",
+      "promptSpeech": "A triangle is worth five. A square is worth twenty. Square divided by triangle, plus what number, equals twelve?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Triangle equals five. Square equals twenty. Square divided by triangle, plus question mark, equals twelve.",
+        "rows": [
+          [
+            "△ = 5    □ = 20"
+          ],
+          [
+            "(□ ÷ △) + ? = 12"
+          ]
+        ],
+        "cellWidth": 227,
+        "cellHeight": 64
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "4"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        },
+        {
+          "id": "d",
+          "text": "100"
+        },
+        {
+          "id": "e",
+          "text": "7"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twenty divided by five is four, and four plus eight is twelve, so the box is eight. Choice b, four, is the division answer rather than the missing number, and choice d multiplies the two symbols instead of dividing them.",
+      "strategy": "Substitute first, then work through the operations in order, writing down each step."
+    },
+    {
+      "id": "cogat-np-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "What number minus forty-five equals one hundred and twenty?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Question mark minus forty-five equals one hundred and twenty.",
+        "rows": [
+          [
+            "? − 45",
+            "=",
+            "120"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "165"
+        },
+        {
+          "id": "b",
+          "text": "75"
+        },
+        {
+          "id": "c",
+          "text": "155"
+        },
+        {
+          "id": "d",
+          "text": "175"
+        },
+        {
+          "id": "e",
+          "text": "85"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Something take away forty-five leaves one hundred and twenty, so add the forty-five back: one hundred and twenty plus forty-five is one hundred and sixty-five. Choice b, seventy-five, subtracts when it should add.",
+      "strategy": "The box is the starting amount, so undo the subtraction by adding."
+    },
+    {
+      "id": "cogat-np-g4-7",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "What number times twelve equals one hundred and forty-four?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Question mark times twelve equals one hundred and forty-four.",
+        "rows": [
+          [
+            "? × 12",
+            "=",
+            "144"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "132"
+        },
+        {
+          "id": "c",
+          "text": "156"
+        },
+        {
+          "id": "d",
+          "text": "11"
+        },
+        {
+          "id": "e",
+          "text": "24"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twelve twelves make one hundred and forty-four, so the box is twelve. Choice b subtracts twelve from the total and choice c adds it on, when the puzzle needs a division.",
+      "strategy": "A missing factor means divide: one hundred and forty-four divided by twelve."
+    },
+    {
+      "id": "cogat-np-g4-8",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Four hundred and eighty divided by what number equals sixty?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Four hundred and eighty divided by question mark equals sixty.",
+        "rows": [
+          [
+            "480 ÷ ?",
+            "=",
+            "60"
+          ]
+        ],
+        "cellWidth": 126
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "6"
+        },
+        {
+          "id": "c",
+          "text": "540"
+        },
+        {
+          "id": "d",
+          "text": "420"
+        },
+        {
+          "id": "e",
+          "text": "9"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four hundred and eighty split into groups of sixty gives eight groups, and sixty times eight is four hundred and eighty. Choice c, five hundred and forty, adds the two numbers you can see.",
+      "strategy": "When the divisor is missing, divide the big number by the answer, then multiply back to check."
+    },
+    {
+      "id": "cogat-np-g4-9",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "One thousand equals what number plus two hundred and fifty?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "One thousand equals question mark plus two hundred and fifty.",
+        "rows": [
+          [
+            "1000",
+            "=",
+            "? + 250"
+          ]
+        ],
+        "cellWidth": 126
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "750"
+        },
+        {
+          "id": "b",
+          "text": "1250"
+        },
+        {
+          "id": "c",
+          "text": "850"
+        },
+        {
+          "id": "d",
+          "text": "700"
+        },
+        {
+          "id": "e",
+          "text": "650"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Something plus two hundred and fifty makes one thousand, so the box is one thousand minus two hundred and fifty, which is seven hundred and fifty. Choice b adds the two numbers because of the plus sign.",
+      "strategy": "Ignore the operator you can see and ask what the finished side is worth."
+    },
+    {
+      "id": "cogat-np-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Twenty-five times eight equals what number minus forty-five?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Twenty-five times eight equals question mark minus forty-five.",
+        "rows": [
+          [
+            "25 × 8",
+            "=",
+            "? − 45"
+          ]
+        ],
+        "cellWidth": 120
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "245"
+        },
+        {
+          "id": "b",
+          "text": "155"
+        },
+        {
+          "id": "c",
+          "text": "200"
+        },
+        {
+          "id": "d",
+          "text": "235"
+        },
+        {
+          "id": "e",
+          "text": "255"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twenty-five times eight is two hundred. The box minus forty-five must equal two hundred, so the box is two hundred plus forty-five, which is two hundred and forty-five. Choice b subtracts the forty-five instead of adding it.",
+      "strategy": "Simplify the finished side, then undo the operation that is attached to the box."
+    },
+    {
+      "id": "cogat-np-g4-11",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "Three thousand six hundred divided by six equals one hundred times what number?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three thousand six hundred divided by six equals one hundred times question mark.",
+        "rows": [
+          [
+            "3600 ÷ 6",
+            "=",
+            "100 × ?"
+          ]
+        ],
+        "cellWidth": 140
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "6"
+        },
+        {
+          "id": "b",
+          "text": "600"
+        },
+        {
+          "id": "c",
+          "text": "60"
+        },
+        {
+          "id": "d",
+          "text": "36"
+        },
+        {
+          "id": "e",
+          "text": "500"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three thousand six hundred divided by six is six hundred, and one hundred times six is six hundred. Choice b, six hundred, is the value of each side rather than the missing factor.",
+      "strategy": "After simplifying, ask what is being done to the box. Here it is multiplied by one hundred."
+    },
+    {
+      "id": "cogat-np-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "The triangle is worth 15. What number goes in the box?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Triangle equals fifteen. Triangle times question mark, minus twenty, equals one hundred.",
+        "rows": [
+          [
+            "▲ = 15"
+          ],
+          [
+            "▲ × ? − 20 = 100"
+          ]
+        ],
+        "cellWidth": 227,
+        "cellHeight": 64
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "120"
+        },
+        {
+          "id": "c",
+          "text": "9"
+        },
+        {
+          "id": "d",
+          "text": "6"
+        },
+        {
+          "id": "e",
+          "text": "20"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fifteen times something, minus twenty, is one hundred. Put the twenty back first: fifteen times something is one hundred and twenty, so the box is eight. Choice c, nine, gives one hundred and fifteen, which is close but wrong.",
+      "strategy": "Undo the operations in reverse order. The subtraction happened last, so undo it first."
+    },
+    {
+      "id": "cogat-np-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "The diamond is worth 12 and the circle is worth 40. What number goes in the box?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Diamond equals twelve. Circle equals forty. Circle times four, minus diamond times six, equals question mark.",
+        "rows": [
+          [
+            "◆ = 12    ● = 40"
+          ],
+          [
+            "(● × 4) − (◆ × 6) = ?"
+          ]
+        ],
+        "cellWidth": 285,
+        "cellHeight": 64
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "88"
+        },
+        {
+          "id": "b",
+          "text": "160"
+        },
+        {
+          "id": "c",
+          "text": "72"
+        },
+        {
+          "id": "d",
+          "text": "232"
+        },
+        {
+          "id": "e",
+          "text": "28"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Forty times four is one hundred and sixty. Twelve times six is seventy-two. One hundred and sixty minus seventy-two is eighty-eight. Choices b and c are the two brackets on their own, before you subtract.",
+      "strategy": "Finish each bracket and write both numbers down before you combine them."
+    },
+    {
+      "id": "cogat-np-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What number goes in the box?",
+      "promptSpeech": "What number divided by eight equals twenty-four plus twenty-six?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Question mark divided by eight equals twenty-four plus twenty-six.",
+        "rows": [
+          [
+            "? ÷ 8",
+            "=",
+            "24 + 26"
+          ]
+        ],
+        "cellWidth": 126
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "400"
+        },
+        {
+          "id": "b",
+          "text": "50"
+        },
+        {
+          "id": "c",
+          "text": "42"
+        },
+        {
+          "id": "d",
+          "text": "58"
+        },
+        {
+          "id": "e",
+          "text": "320"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twenty-four plus twenty-six is fifty. Something divided by eight is fifty, and fifty times eight is four hundred. Choice b, fifty, is what each side is worth, not the number in the box.",
+      "strategy": "Two undos in a row: simplify the finished side, then multiply back on the side with the box."
+    },
+    {
+      "id": "cogat-np-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "The square is worth 9 and the circle is worth 3. What number goes in the box?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Square equals nine. Circle equals three. Square times square, divided by circle, plus question mark, equals forty.",
+        "rows": [
+          [
+            "■ = 9    ○ = 3"
+          ],
+          [
+            "(■ × ■) ÷ ○ + ? = 40"
+          ]
+        ],
+        "cellWidth": 271,
+        "cellHeight": 64
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "13"
+        },
+        {
+          "id": "b",
+          "text": "27"
+        },
+        {
+          "id": "c",
+          "text": "67"
+        },
+        {
+          "id": "d",
+          "text": "31"
+        },
+        {
+          "id": "e",
+          "text": "12"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Nine times nine is eighty-one. Eighty-one divided by three is twenty-seven. Twenty-seven plus thirteen is forty, so the box is thirteen. Choice b, twenty-seven, is the number you reach on the way.",
+      "strategy": "Brackets first, then divide, then the box. Keep the order and write each step down."
     }
   ]
 }

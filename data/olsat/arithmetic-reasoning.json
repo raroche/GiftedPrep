@@ -768,6 +768,1526 @@
       "answer": "a",
       "explanation": "Work backwards. After lunch she has eight, which is two thirds of what she had after the book. So after the book she had twelve. That was half her money, so she started with twenty-four.",
       "strategy": "When the question gives you the END amount, work backwards and undo each step."
+    },
+    {
+      "id": "olsat-are-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "There are 2 cats. 3 more come. How many cats now?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two cats and three more makes five.",
+      "strategy": "Start with the first number and count on."
+    },
+    {
+      "id": "olsat-are-g1-7",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Mia had 7 grapes. She ate 3. How many are left?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Seven take away three is four. Choice b is how many she ate, not how many are left.",
+      "strategy": "Read the last line again. It asked what is LEFT."
+    },
+    {
+      "id": "olsat-are-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "There are 5 red blocks and 2 blue blocks. How many blocks in all?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five and two more makes seven. In all means put them together.",
+      "strategy": "In total, altogether and in all all mean add them up."
+    },
+    {
+      "id": "olsat-are-g1-9",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Three children each have 2 apples. How many apples?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "apple",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "apple",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "apple",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "apple",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each child has two, and there are three children. Two and two and two makes six. Choice c counts the children instead.",
+      "strategy": "The word EACH means every one of them has that many."
+    },
+    {
+      "id": "olsat-are-g1-10",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Ben had 9 stickers. He gave 4 away, then got 2 more.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Nine take away four is five. Then two more makes seven. Choice b stops after the first step.",
+      "strategy": "Two steps. Say the number out loud after each one so you do not lose it."
+    },
+    {
+      "id": "olsat-are-g1-11",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "There were 4 birds. 2 flew away. Then 3 landed.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four take away two is two. Then three more makes five. Choice b stops halfway.",
+      "strategy": "Do the first step, say the answer, then do the second step."
+    },
+    {
+      "id": "olsat-are-g1-12",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Two boxes each hold 4 crayons. How many crayons?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "line",
+                "c": "green",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "line",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "line",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "line",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each box holds four, and there are two boxes. Four and four makes eight. Choice b adds two instead of doubling.",
+      "strategy": "Two groups of the same size means double it."
+    },
+    {
+      "id": "olsat-are-g1-13",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Sara has 6 shells. Tom has 2 fewer. How many does Tom have?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fewer means less. Six take away two is four. Choice b adds instead of taking away.",
+      "strategy": "Fewer and less mean go down. More means go up."
+    },
+    {
+      "id": "olsat-are-g1-14",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "There are 3 plates. Each plate has 3 buns.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three plates with three buns each is three and three and three, which is nine. Choice b counts only two plates.",
+      "strategy": "Count the groups first, then count how many are in each group."
+    },
+    {
+      "id": "olsat-are-g1-15",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Leo picked 8 flowers. He gave half to Mum.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Half means split into two equal groups. Half of eight is four. Choice c is a quarter, which is half of a half.",
+      "strategy": "Half means share it fairly between two."
+    },
+    {
+      "id": "olsat-are-g2-6",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "There are 20 sweets. 8 are eaten. How many are left?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "28"
+        },
+        {
+          "id": "c",
+          "text": "13"
+        },
+        {
+          "id": "d",
+          "text": "11"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twenty take away eight is twelve. Choice b adds when it should take away.",
+      "strategy": "Eaten means gone. That is taking away."
+    },
+    {
+      "id": "olsat-are-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "A packet holds 6 pens. How many pens are in 4 packets?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "24"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        },
+        {
+          "id": "d",
+          "text": "18"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four packets of six is six added four times, which is twenty-four. Choice b adds the two numbers instead of multiplying.",
+      "strategy": "Groups of the same size means multiply, not add."
+    },
+    {
+      "id": "olsat-are-g2-8",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Amy has 34 stickers. Ben has 18. How many more does Amy have?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "16"
+        },
+        {
+          "id": "b",
+          "text": "52"
+        },
+        {
+          "id": "c",
+          "text": "14"
+        },
+        {
+          "id": "d",
+          "text": "26"
+        }
+      ],
+      "answer": "a",
+      "explanation": "How many more means find the difference. Thirty-four take away eighteen is sixteen. Choice b adds them together.",
+      "strategy": "How many more always means subtract."
+    },
+    {
+      "id": "olsat-are-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Four friends share 20 grapes equally. How many does each get?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "5"
+        },
+        {
+          "id": "b",
+          "text": "4"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        },
+        {
+          "id": "d",
+          "text": "24"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twenty shared between four people is five each. Choice b is the number of people, not the number of grapes.",
+      "strategy": "Equally means split into that many equal groups."
+    },
+    {
+      "id": "olsat-are-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Tom and Ana each read 3 books. Sam read 4. How many altogether?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "10"
+        },
+        {
+          "id": "b",
+          "text": "7"
+        },
+        {
+          "id": "c",
+          "text": "9"
+        },
+        {
+          "id": "d",
+          "text": "12"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Tom and Ana EACH read three, so that is six. Then Sam read four, making ten. Choice b treats they each read three as only three.",
+      "strategy": "Each is a trap word. Two people reading three each is six, not three."
+    },
+    {
+      "id": "olsat-are-g2-11",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "A bus holds 30 people. 12 get off and 7 get on. How many now?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "25"
+        },
+        {
+          "id": "b",
+          "text": "18"
+        },
+        {
+          "id": "c",
+          "text": "49"
+        },
+        {
+          "id": "d",
+          "text": "23"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Thirty take away twelve is eighteen. Then seven more get on, making twenty-five. Choice b stops after the first step.",
+      "strategy": "Two steps in a row. Finish the first before starting the second."
+    },
+    {
+      "id": "olsat-are-g2-12",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "A film is 45 minutes long. It has played 20 minutes. How much is left?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "25 minutes"
+        },
+        {
+          "id": "b",
+          "text": "65 minutes"
+        },
+        {
+          "id": "c",
+          "text": "30 minutes"
+        },
+        {
+          "id": "d",
+          "text": "15 minutes"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Forty-five take away twenty is twenty-five. Choice b adds instead of subtracting.",
+      "strategy": "How much is left always means subtract."
+    },
+    {
+      "id": "olsat-are-g2-13",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "There are 8 rows of chairs with 5 chairs in each row. How many chairs?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "40"
+        },
+        {
+          "id": "b",
+          "text": "13"
+        },
+        {
+          "id": "c",
+          "text": "35"
+        },
+        {
+          "id": "d",
+          "text": "45"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eight rows of five is five added eight times, which is forty. Choice b adds the two numbers.",
+      "strategy": "Rows and columns means multiply. Count the rows, then the chairs in one row."
+    },
+    {
+      "id": "olsat-are-g2-14",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Half of the 16 children wear hats. How many wear hats?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "16"
+        },
+        {
+          "id": "c",
+          "text": "4"
+        },
+        {
+          "id": "d",
+          "text": "32"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Half of sixteen is eight. Choice c is a quarter, which is half of a half.",
+      "strategy": "Half means split into two equal groups and take one."
+    },
+    {
+      "id": "olsat-are-g2-15",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Jo saved 5 pence each day for a week. How much did she save?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "35 pence"
+        },
+        {
+          "id": "b",
+          "text": "12 pence"
+        },
+        {
+          "id": "c",
+          "text": "30 pence"
+        },
+        {
+          "id": "d",
+          "text": "25 pence"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A week is seven days. Seven lots of five pence is thirty-five pence. Choice c counts only six days.",
+      "strategy": "When a question says a week, turn it into the number seven first."
+    },
+    {
+      "id": "olsat-are-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "A shelf holds 24 books. There are 5 shelves. How many books?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "120"
+        },
+        {
+          "id": "b",
+          "text": "29"
+        },
+        {
+          "id": "c",
+          "text": "100"
+        },
+        {
+          "id": "d",
+          "text": "125"
+        },
+        {
+          "id": "e",
+          "text": "19"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five shelves of twenty-four is one hundred and twenty. Twenty times five is one hundred, plus four times five is twenty.",
+      "strategy": "Split a multiplication into tens and units, then add the two parts."
+    },
+    {
+      "id": "olsat-are-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What is 6 less than 5 times 8?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "34"
+        },
+        {
+          "id": "b",
+          "text": "22"
+        },
+        {
+          "id": "c",
+          "text": "46"
+        },
+        {
+          "id": "d",
+          "text": "2"
+        },
+        {
+          "id": "e",
+          "text": "54"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Do the multiplying first: five times eight is forty. Then six less is thirty-four. Choice b comes from working left to right.",
+      "strategy": "Find the multiplying first, then do the adding or subtracting."
+    },
+    {
+      "id": "olsat-are-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "A rope is 96 cm long. It is cut into 8 equal pieces. How long is each?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "12 cm"
+        },
+        {
+          "id": "b",
+          "text": "88 cm"
+        },
+        {
+          "id": "c",
+          "text": "10 cm"
+        },
+        {
+          "id": "d",
+          "text": "16 cm"
+        },
+        {
+          "id": "e",
+          "text": "768 cm"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Ninety-six divided by eight is twelve. Choice b subtracts instead of dividing.",
+      "strategy": "Equal pieces means divide."
+    },
+    {
+      "id": "olsat-are-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "A class of 28 goes on a trip. Each car holds 4. How many cars are needed?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "24"
+        },
+        {
+          "id": "c",
+          "text": "6"
+        },
+        {
+          "id": "d",
+          "text": "8"
+        },
+        {
+          "id": "e",
+          "text": "32"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twenty-eight divided by four is seven. Choice b subtracts. Choice c leaves four children with no car.",
+      "strategy": "For how many are needed, check that nobody is left over."
+    },
+    {
+      "id": "olsat-are-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "A shop sells apples at 4 for 80 pence. How much do 7 apples cost?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "140 pence"
+        },
+        {
+          "id": "b",
+          "text": "560 pence"
+        },
+        {
+          "id": "c",
+          "text": "320 pence"
+        },
+        {
+          "id": "d",
+          "text": "20 pence"
+        },
+        {
+          "id": "e",
+          "text": "112 pence"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four apples cost eighty pence, so one costs twenty. Seven apples cost seven times twenty, which is one hundred and forty pence.",
+      "strategy": "Work out the price of ONE first. That single step solves most price questions."
+    },
+    {
+      "id": "olsat-are-g3-11",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Lily is 4 years older than Sam. Sam is half Ravi's age. Ravi is 12. How old is Lily?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "10"
+        },
+        {
+          "id": "b",
+          "text": "6"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        },
+        {
+          "id": "d",
+          "text": "8"
+        },
+        {
+          "id": "e",
+          "text": "20"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Start with the age you know. Ravi is twelve, so Sam is six. Lily is four more than Sam, which is ten. Choice b stops at Sam.",
+      "strategy": "Start with the person whose age is given, then work outwards one step at a time."
+    },
+    {
+      "id": "olsat-are-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "A train leaves at 9:40 and takes 75 minutes. When does it arrive?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "10:55"
+        },
+        {
+          "id": "b",
+          "text": "10:15"
+        },
+        {
+          "id": "c",
+          "text": "11:15"
+        },
+        {
+          "id": "d",
+          "text": "10:45"
+        },
+        {
+          "id": "e",
+          "text": "11:55"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Seventy-five minutes is one hour and fifteen minutes. From nine forty, one hour takes you to ten forty, and fifteen more minutes is ten fifty-five.",
+      "strategy": "Turn the minutes into hours and minutes first. Seventy-five is one hour and fifteen."
+    },
+    {
+      "id": "olsat-are-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "There are 5 bags with 9 marbles each. 12 marbles are lost. How many are left?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "33"
+        },
+        {
+          "id": "b",
+          "text": "45"
+        },
+        {
+          "id": "c",
+          "text": "57"
+        },
+        {
+          "id": "d",
+          "text": "26"
+        },
+        {
+          "id": "e",
+          "text": "36"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five bags of nine is forty-five. Take away twelve leaves thirty-three. Choice b stops after multiplying.",
+      "strategy": "Multiply, then subtract. Two steps, in that order."
+    },
+    {
+      "id": "olsat-are-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "A third of the 27 pupils walk to school. How many do NOT walk?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "18"
+        },
+        {
+          "id": "b",
+          "text": "9"
+        },
+        {
+          "id": "c",
+          "text": "27"
+        },
+        {
+          "id": "d",
+          "text": "3"
+        },
+        {
+          "id": "e",
+          "text": "12"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A third of twenty-seven is nine, so nine walk. The rest, eighteen, do not. Choice b is the number who DO walk.",
+      "strategy": "Fraction questions often ask for the part you did not calculate. Read the last line again."
+    },
+    {
+      "id": "olsat-are-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Ann spent half her money on a book and had 14 left. How much did she start with?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "28"
+        },
+        {
+          "id": "b",
+          "text": "7"
+        },
+        {
+          "id": "c",
+          "text": "21"
+        },
+        {
+          "id": "d",
+          "text": "42"
+        },
+        {
+          "id": "e",
+          "text": "14"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The fourteen she has left is the other half, so both halves together make twenty-eight. Choice b halves again instead of doubling.",
+      "strategy": "When the question gives you what is LEFT, work backwards and undo the step."
+    },
+    {
+      "id": "olsat-are-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "A hall has 24 rows with 36 seats in each row. How many seats?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "864"
+        },
+        {
+          "id": "b",
+          "text": "60"
+        },
+        {
+          "id": "c",
+          "text": "854"
+        },
+        {
+          "id": "d",
+          "text": "744"
+        },
+        {
+          "id": "e",
+          "text": "900"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twenty-four times thirty-six. Twenty-four times thirty is seven hundred and twenty, and twenty-four times six is one hundred and forty-four. Together that is eight hundred and sixty-four.",
+      "strategy": "Split a big multiplication into tens and units, then add the two answers."
+    },
+    {
+      "id": "olsat-are-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "A printer prints 18 pages a minute. How long to print 216 pages?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "12 minutes"
+        },
+        {
+          "id": "b",
+          "text": "198 minutes"
+        },
+        {
+          "id": "c",
+          "text": "10 minutes"
+        },
+        {
+          "id": "d",
+          "text": "14 minutes"
+        },
+        {
+          "id": "e",
+          "text": "234 minutes"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two hundred and sixteen divided by eighteen is twelve. Choice b subtracts instead of dividing.",
+      "strategy": "A rate question is a division question. Divide the total by the rate."
+    },
+    {
+      "id": "olsat-are-g4-8",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Three quarters of 48 students play an instrument. How many do?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "36"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        },
+        {
+          "id": "d",
+          "text": "24"
+        },
+        {
+          "id": "e",
+          "text": "64"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A quarter of forty-eight is twelve, so three quarters is thirty-six. Choice b is one quarter, the part that does NOT play.",
+      "strategy": "Find one part first, then multiply by how many parts you need."
+    },
+    {
+      "id": "olsat-are-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "A tank holds 250 litres. It is 40% full. How many litres are in it?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "100 litres"
+        },
+        {
+          "id": "b",
+          "text": "150 litres"
+        },
+        {
+          "id": "c",
+          "text": "210 litres"
+        },
+        {
+          "id": "d",
+          "text": "40 litres"
+        },
+        {
+          "id": "e",
+          "text": "125 litres"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Ten percent of two hundred and fifty is twenty-five, so forty percent is four times that, which is one hundred. Choice b is the amount still empty.",
+      "strategy": "Find ten percent first, then scale it up. It is the fastest route."
+    },
+    {
+      "id": "olsat-are-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "A shirt costs 40 pounds. In a sale it is reduced by a quarter. What is the sale price?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "30 pounds"
+        },
+        {
+          "id": "b",
+          "text": "10 pounds"
+        },
+        {
+          "id": "c",
+          "text": "35 pounds"
+        },
+        {
+          "id": "d",
+          "text": "20 pounds"
+        },
+        {
+          "id": "e",
+          "text": "50 pounds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A quarter of forty is ten, so the price drops by ten to thirty pounds. Choice b is the discount, not the price you pay.",
+      "strategy": "Reduced BY is not the same as reduced TO. Take the discount off the original."
+    },
+    {
+      "id": "olsat-are-g4-11",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "A recipe for 4 people uses 300 g of flour. How much for 10 people?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "750 g"
+        },
+        {
+          "id": "b",
+          "text": "3000 g"
+        },
+        {
+          "id": "c",
+          "text": "600 g"
+        },
+        {
+          "id": "d",
+          "text": "500 g"
+        },
+        {
+          "id": "e",
+          "text": "1200 g"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three hundred grams for four people is seventy-five grams each. Ten people need ten times seventy-five, which is seven hundred and fifty grams.",
+      "strategy": "Work out the amount for ONE first, then scale to the number you need."
+    },
+    {
+      "id": "olsat-are-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "A car travels 60 km in 45 minutes. How far in 1 hour at the same speed?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "80 km"
+        },
+        {
+          "id": "b",
+          "text": "75 km"
+        },
+        {
+          "id": "c",
+          "text": "90 km"
+        },
+        {
+          "id": "d",
+          "text": "45 km"
+        },
+        {
+          "id": "e",
+          "text": "120 km"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Sixty kilometres in forty-five minutes means twenty kilometres every fifteen minutes. An hour is four lots of fifteen minutes, so eighty kilometres.",
+      "strategy": "Break the time into a convenient chunk first, then count how many chunks fit."
+    },
+    {
+      "id": "olsat-are-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "A box of 12 pens costs 9 pounds. What do 30 pens cost?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "22.50 pounds"
+        },
+        {
+          "id": "b",
+          "text": "27 pounds"
+        },
+        {
+          "id": "c",
+          "text": "18 pounds"
+        },
+        {
+          "id": "d",
+          "text": "21 pounds"
+        },
+        {
+          "id": "e",
+          "text": "25 pounds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twelve pens cost nine pounds, so one pen costs seventy-five pence. Thirty pens cost thirty times seventy-five pence, which is twenty-two pounds fifty.",
+      "strategy": "Price for one, then multiply. Even when the answer has pence in it."
+    },
+    {
+      "id": "olsat-are-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Sam read a third of a book on Monday and a quarter on Tuesday. What fraction is left?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "5/12"
+        },
+        {
+          "id": "b",
+          "text": "7/12"
+        },
+        {
+          "id": "c",
+          "text": "1/2"
+        },
+        {
+          "id": "d",
+          "text": "1/7"
+        },
+        {
+          "id": "e",
+          "text": "2/3"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A third is four twelfths and a quarter is three twelfths, so seven twelfths are read. Twelve twelfths take away seven twelfths leaves five twelfths. Choice b is the part already read.",
+      "strategy": "Turn both fractions into twelfths so they can be added, then take the total from a whole."
+    },
+    {
+      "id": "olsat-are-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Kim spent a third of her money, then half of what was left, and has 12 pounds. How much did she start with?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "36 pounds"
+        },
+        {
+          "id": "b",
+          "text": "24 pounds"
+        },
+        {
+          "id": "c",
+          "text": "48 pounds"
+        },
+        {
+          "id": "d",
+          "text": "18 pounds"
+        },
+        {
+          "id": "e",
+          "text": "72 pounds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Work backwards. Twelve pounds is what is left after spending half, so before that she had twenty-four. That twenty-four was the two thirds left after the first spend, so a third is twelve and the whole is thirty-six.",
+      "strategy": "When the question gives you the END amount, undo each step in reverse order."
     }
   ]
 }
