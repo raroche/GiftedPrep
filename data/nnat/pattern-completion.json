@@ -6858,8 +6858,24 @@
             "shapes": [
               {
                 "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
                 "c": "green",
-                "r": 0
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
               }
             ]
           },
@@ -6877,15 +6893,6 @@
               {
                 "s": "trapezoid",
                 "c": "green",
-                "r": 0
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "green",
                 "r": 180
               }
             ]
@@ -6894,17 +6901,7 @@
             "shapes": [
               {
                 "s": "trapezoid",
-                "c": "green",
-                "r": 180
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "green",
-                "r": 0
+                "c": "green"
               }
             ]
           },
@@ -6915,8 +6912,15 @@
             "shapes": [
               {
                 "s": "trapezoid",
-                "c": "green",
-                "r": 0
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
               }
             ]
           },
@@ -6925,7 +6929,15 @@
               {
                 "s": "trapezoid",
                 "c": "green",
-                "r": 0
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
               }
             ]
           },
@@ -6943,7 +6955,15 @@
               {
                 "s": "trapezoid",
                 "c": "green",
-                "r": 0
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
               }
             ]
           },
@@ -6960,35 +6980,7 @@
             "shapes": [
               {
                 "s": "trapezoid",
-                "c": "green",
-                "r": 180
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "green",
-                "r": 0
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "green",
-                "r": 180
-              }
-            ]
-          },
-          {
-            "shapes": [
-              {
-                "s": "trapezoid",
-                "c": "green",
-                "r": 0
+                "c": "green"
               }
             ]
           }
@@ -7079,8 +7071,7 @@
             "shapes": [
               {
                 "s": "righttriangle",
-                "c": "blue",
-                "r": 0
+                "c": "blue"
               }
             ]
           },
@@ -8630,8 +8621,7 @@
             "shapes": [
               {
                 "s": "arrow",
-                "c": "blue",
-                "r": 0
+                "c": "blue"
               }
             ]
           },
@@ -8666,8 +8656,7 @@
             "shapes": [
               {
                 "s": "arrow",
-                "c": "blue",
-                "r": 0
+                "c": "blue"
               }
             ]
           },
@@ -8696,8 +8685,7 @@
             "shapes": [
               {
                 "s": "arrow",
-                "c": "blue",
-                "r": 0
+                "c": "blue"
               }
             ]
           },
@@ -9055,8 +9043,7 @@
             "shapes": [
               {
                 "s": "arrow",
-                "c": "blue",
-                "r": 0
+                "c": "blue"
               }
             ]
           },
@@ -9823,7 +9810,6 @@
               {
                 "s": "trapezoid",
                 "c": "blue",
-                "r": 0,
                 "z": 1.0
               }
             ]
@@ -9853,7 +9839,6 @@
               {
                 "s": "trapezoid",
                 "c": "green",
-                "r": 0,
                 "z": 0.75
               }
             ]
@@ -9883,7 +9868,6 @@
               {
                 "s": "trapezoid",
                 "c": "yellow",
-                "r": 0,
                 "z": 0.5
               }
             ]

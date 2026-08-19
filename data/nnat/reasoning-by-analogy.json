@@ -5322,12 +5322,12 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: one small empty green hexagon, then three smaller filled green hexagons turned upside down. Bottom row: one small empty blue trapezoid, then an empty box.",
+        "alt": "Top row: one small empty green trapezoid, then three smaller filled green trapezoids turned upside down. Bottom row: one small empty blue kite, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
-                "s": "hexagon",
+                "s": "trapezoid",
                 "c": "green",
                 "f": "outline",
                 "z": 0.6
@@ -5337,7 +5337,7 @@
           {
             "shapes": [
               {
-                "s": "hexagon",
+                "s": "trapezoid",
                 "c": "green",
                 "n": 3,
                 "z": 0.45,
@@ -5348,7 +5348,7 @@
           {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "kite",
                 "c": "blue",
                 "f": "outline",
                 "z": 0.6
@@ -5366,7 +5366,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "kite",
                 "c": "blue",
                 "n": 3,
                 "z": 0.45,
@@ -5380,7 +5380,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "kite",
                 "c": "blue",
                 "n": 3,
                 "z": 0.45
@@ -5393,7 +5393,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "kite",
                 "c": "blue",
                 "f": "outline",
                 "n": 3,
@@ -5408,7 +5408,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "trapezoid",
+                "s": "kite",
                 "c": "blue",
                 "n": 2,
                 "z": 0.45,
@@ -5422,7 +5422,7 @@
           "figure": {
             "shapes": [
               {
-                "s": "hexagon",
+                "s": "trapezoid",
                 "c": "blue",
                 "n": 3,
                 "z": 0.45,
@@ -5433,8 +5433,8 @@
         }
       ],
       "answer": "a",
-      "explanation": "Three rules at once: the count goes from one to three, the shape fills in, and it turns upside down. Each wrong answer drops exactly one of the three.",
-      "strategy": "With three rules, list them on your fingers and check the answer against every finger."
+      "explanation": "Three rules at once: one becomes three, the shape fills in, and it turns upside down. Choice b did not turn, choice c never filled in, and choice d made only two.",
+      "strategy": "With three rules, list them on your fingers and check every finger."
     },
     {
       "id": "nnat-rba-g3-10",

@@ -6844,7 +6844,7 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: three small pink rings, then one big pink ring with dots turned a half turn. Bottom row: three small teal cloud shapes, then an empty box.",
+        "alt": "Top row: three small pink rings, then one big pink ring with dots inside. Bottom row: three small teal cloud shapes, then an empty box.",
         "cells": [
           {
             "shapes": [
@@ -6861,8 +6861,7 @@
                 "s": "ring",
                 "c": "pink",
                 "f": "dots",
-                "z": 1.25,
-                "r": 180
+                "z": 1.25
               }
             ]
           },
@@ -6889,8 +6888,7 @@
                 "s": "cloud",
                 "c": "teal",
                 "f": "dots",
-                "z": 1.25,
-                "r": 180
+                "z": 1.25
               }
             ]
           }
@@ -6902,8 +6900,7 @@
               {
                 "s": "cloud",
                 "c": "teal",
-                "z": 1.25,
-                "r": 180
+                "z": 1.25
               }
             ]
           }
@@ -6915,8 +6912,7 @@
               {
                 "s": "cloud",
                 "c": "teal",
-                "f": "dots",
-                "z": 1.25
+                "f": "dots"
               }
             ]
           }
@@ -6929,8 +6925,7 @@
                 "s": "cloud",
                 "c": "teal",
                 "f": "dots",
-                "n": 3,
-                "r": 180
+                "n": 3
               }
             ]
           }
@@ -6943,16 +6938,15 @@
                 "s": "ring",
                 "c": "teal",
                 "f": "dots",
-                "z": 1.25,
-                "r": 180
+                "z": 1.25
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Four things change across the top row: three become one, the shape grows, it gains dots, and it turns upside down. Colour and shape stay with the bottom row. Only choice a does every one of the four.",
-      "strategy": "This is as busy as CogAT gets. Slow down, list every change, then eliminate. There is no shortcut, and guessing well beats leaving it blank."
+      "explanation": "Three things change across the top row: three become one, the shape grows, and it gains dots. Choice b lost the dots, choice c did not grow, and choice d kept all three shapes.",
+      "strategy": "List every change before you look, then check the answer against each one."
     },
     {
       "id": "cogat-fm-g4-10",
