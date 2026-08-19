@@ -17,3 +17,7 @@ dist/
 
 # Local dev server config for Claude Code
 .claude/
+
+# Python bytecode from the authoring helpers
+__pycache__/
+*.pyc

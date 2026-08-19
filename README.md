@@ -32,7 +32,7 @@ evidence-based plan for the week before test day.
 The repository root **is** the site. There is no build step and no dependencies.
 
 ```bash
-git clone https://github.com/rolandaroche/GiftedPrep.git
+git clone https://github.com/raroche/GiftedPrep.git
 cd GiftedPrep
 python3 -m http.server 8765
 ```
