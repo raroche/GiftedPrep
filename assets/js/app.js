@@ -462,6 +462,45 @@ function renderResults() {
 }
 
 /* ------------------------------------------------------------------ */
+/* Parent guide                                                        */
+/* ------------------------------------------------------------------ */
+
+const GUIDE_TITLE = { en: 'For parents', es: 'Para padres' };
+/* The button offers the language you are NOT reading, so it shows that flag. */
+const LANG_SWITCH = {
+  en: { flag: '🇪🇸', label: 'Español', aria: 'Ver esta guía en español', lang: 'es' },
+  es: { flag: '🇺🇸', label: 'English', aria: 'Read this guide in English', lang: 'en' }
+};
+
+function renderParents() {
+  const lang = state.settings.guideLang === 'es' ? 'es' : 'en';
+  const body = $('#gp-parents-body');
+  if (body.dataset.lang !== lang) {
+    body.innerHTML = renderParentGuide(state.manifest, lang);
+    body.dataset.lang = lang;
+    body.setAttribute('lang', lang);
+  }
+  $('#parents-title').textContent = GUIDE_TITLE[lang];
+  document.getElementById('screen-parents').setAttribute('lang', lang);
+
+  const sw = LANG_SWITCH[lang];
+  const btn = $('#gp-lang-toggle');
+  btn.querySelector('.gp-flag').textContent = sw.flag;
+  btn.querySelector('.gp-btn__label').textContent = sw.label;
+  btn.setAttribute('aria-label', sw.aria);
+  btn.setAttribute('lang', sw.lang);
+}
+
+function toggleGuideLanguage() {
+  const next = state.settings.guideLang === 'es' ? 'en' : 'es';
+  state.settings.guideLang = next;
+  storage.setSetting('guideLang', next);
+  renderParents();
+  $('#parents-title').focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: 'auto' });
+}
+
+/* ------------------------------------------------------------------ */
 /* Router                                                              */
 /* ------------------------------------------------------------------ */
 
@@ -495,10 +534,7 @@ function route() {
       showScreen('results');
       break;
     case 'parents':
-      if (!$('#gp-parents-body').dataset.rendered) {
-        $('#gp-parents-body').innerHTML = renderParentGuide(state.manifest);
-        $('#gp-parents-body').dataset.rendered = '1';
-      }
+      renderParents();
       showScreen('parents');
       break;
     default:
@@ -608,6 +644,7 @@ async function boot() {
     { force: true }
   ));
   $('#gp-theme-toggle').addEventListener('click', toggleTheme);
+  $('#gp-lang-toggle').addEventListener('click', toggleGuideLanguage);
   $('#gp-speak-toggle').addEventListener('click', () => {
     state.settings.readAloud = !state.settings.readAloud;
     storage.setSetting('readAloud', state.settings.readAloud);

@@ -40,7 +40,9 @@ const DEFAULTS = {
     readAloud: true,
     speechRate: 0.85,
     lastTest: null,
-    lastCategory: null
+    lastCategory: null,
+    /* Language of the Parent Guide only. The child-facing screens are English. */
+    guideLang: 'en'
   },
   /* stats[categoryId] = { seen, correct, streakBest, lastSeenIso } */
   stats: {},

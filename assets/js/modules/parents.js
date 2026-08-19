@@ -13,6 +13,7 @@
  */
 
 import { escapeHtml } from './charts.js';
+import { renderParentGuideEs } from './parents.es.js';
 
 const callout = (kind, title, body) => `
   <div class="gp-callout gp-callout--${kind}">
@@ -35,7 +36,18 @@ const acc = (q, a) => `
     <div class="gp-accordion__panel">${a}</div>
   </details>`;
 
-export function renderParentGuide(manifest) {
+/**
+ * @param {object} manifest
+ * @param {'en'|'es'} [lang] Spanish is a full translation, not a summary — a
+ *        large share of Florida families read Spanish first, and the CogAT
+ *        itself is read aloud in Spanish at grades 1 and 2.
+ */
+export function renderParentGuide(manifest, lang = 'en') {
+  if (lang === 'es') return renderParentGuideEs(manifest);
+  return renderParentGuideEn(manifest);
+}
+
+function renderParentGuideEn(manifest) {
   /* Counted from the manifest rather than typed, so it cannot drift. */
   const total = (manifest?.categories || [])
     .reduce((n, c) => n + Object.values(c.counts || {}).reduce((a, b) => a + b, 0), 0);

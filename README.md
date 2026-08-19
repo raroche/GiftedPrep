@@ -62,6 +62,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **iPad first** | Designed for a 1024×768 landscape iPad, works from 375 px up |
 | **Light and dark** | Follows the system theme, with a manual override |
 | **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
+| **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
 Keyboard: press <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the
