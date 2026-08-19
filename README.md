@@ -146,7 +146,8 @@ other.
 
 | Document | Covers |
 |---|---|
-| [`florida-gifted.md`](docs/research/florida-gifted.md) | Rule 6A-6.03019, Plan A vs Plan B, which instrument each district uses |
+| [`florida-gifted.md`](docs/research/florida-gifted.md) | Rule 6A-6.03019, Plan A vs Plan B, and what the district survey shows |
+| [`florida-districts.md`](docs/research/florida-districts.md) | Screener, screening grade, cut score and Plan B criteria for the **20 largest Florida districts** |
 | [`cogat.md`](docs/research/cogat.md) | Nine subtests, level-to-grade mapping, item counts, timing, SAS scoring, ability profiles |
 | [`nnat-olsat.md`](docs/research/nnat-olsat.md) | NNAT3 item types and palette rules, OLSAT-8 scope and sequence, NAI and SAI scoring |
 | [`difficulty-model.md`](docs/research/difficulty-model.md) | How grade and difficulty are assigned, and the distractor recipe |
@@ -161,6 +162,8 @@ A few corrections to claims that circulate widely and are wrong:
 - The CogAT E-profile threshold is **24** SAS points, not 12.
 - NNAT and OLSAT level-to-grade tables **diverge from Level D**. A shared lookup
   table will be wrong for one of them.
+- Florida screening cut scores range from **107 (Duval) to 122 (Manatee)** — a
+  full standard deviation. There is no single Florida threshold.
 - Florida has **no decimal benchmark at all in grade 3**, and multiplication
   facts are memorised in **grade 4**, not grade 3.
 - An **anticlockwise quarter turn is harder than a half turn** for a child.

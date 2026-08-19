@@ -81,25 +81,51 @@ not address familiarization with a **group screener's format**, which the CogAT
 publisher itself recommends schools provide to every child (see
 [`parent-science.md`](parent-science.md)).
 
-## Which districts are verified, and which are not
+## Which districts use which screener
 
-**Only Collier and Monroe are verified**, from their FLDOE-accepted 2025-26
-filings. A second research pass covering Miami-Dade, Broward, Palm Beach,
-Hillsborough, Orange, Duval, Pinellas, Polk, Lee, Brevard and nine more was
-started but did not finish, so **nothing in this file should be assumed to apply
-to any other district**.
+**All twenty of the largest Florida districts are now documented**, from their
+own FLDOE filings, in [`florida-districts.md`](florida-districts.md). The
+headlines:
 
-If you need your own district's answer, there are two reliable routes and one
-unreliable one:
+- **The NNAT is the dominant instrument.** Nine of the twenty use a Naglieri
+  test as their primary group screener. Lee has already moved to the newer
+  **NGAT**, and Miami-Dade names the **NGAT-NV** alongside the NNAT3, so the
+  Naglieri General Ability Test appears to be replacing the NNAT3 in Florida.
+- **Grade 2 is the screening year** in eleven districts. Miami-Dade screens in
+  **grade 1**; Pinellas screens grade 1 but only for targeted students.
+- **Cut scores vary by a full standard deviation**, from Duval's **107** to
+  Manatee's **122**. A child referred for evaluation in Duval or Broward would
+  be turned away in Manatee or Palm Beach. These are comparable standard scores,
+  so that is a real difference in access, not a scale artifact.
+- **Five districts publish no group screener at all.** Hillsborough screens from
+  existing data by design, Marion uses a teacher rating scale, Manatee uses
+  individually administered brief IQ screeners, Sarasota screens only on
+  referral, and Pasco publishes nothing.
+- **Plan B is not universal.** Pasco explicitly declines to operate one, so
+  Pasco families have no reduced-IQ pathway at all.
+- **Plan B thresholds cluster at 115**, but the outliers matter: Broward and
+  Palm Beach set **112**; Marion sets **116** and forbids confidence intervals;
+  Sarasota requires **120**; Manatee requires about **122**.
+- **The fine print decides borderline cases.** Duval permits the standard error
+  of measurement, Brevard explicitly forbids it, Marion allows it for Plan A but
+  not Plan B. For a child scoring 113 or 114 that clause is the whole decision.
 
-1. **Ask the school.** The gifted or ESE coordinator can tell you which screener
-   they use and what the cut score is. Some districts publish it; many do not.
-2. **Read the state filing.** Open
-   <https://beessgsw.org/#/spp/institution/public/>, find your district, and read
-   Part III and Appendix C. That is the same source used for the two districts
-   above.
-3. **Do not trust commercial test-prep sites** on district specifics. They are
-   frequently out of date and often simply wrong.
+### The four districts that limit how often a child may be tested
+
+This is the most practically important finding for a parent, and it is the only
+kind of rule any district publishes about testing:
+
+| District | Rule |
+|---|---|
+| **St. Johns** | CogAT and KBIT-2R may each be taken **only once in a K-12 career** |
+| **Sarasota** | Same instrument not within 12 months; more than three screenings across a school career discouraged |
+| **Manatee** | Screening with the RIST bars the RIAS for eligibility; screening with the WASI-II bars all Wechsler scales |
+| **Osceola** | Referral for evaluation at most once per year |
+
+**No district in the set publishes any statement about test preparation.** None
+endorses it, discourages it or prohibits it. The attempt limits above are the
+only published constraints, and they work by limiting tries rather than by
+addressing preparation at all.
 
 ## Caveats recorded honestly
 

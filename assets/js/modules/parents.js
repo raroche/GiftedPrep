@@ -118,6 +118,52 @@ ${callout('caution', 'The grade 2 to grade 3 cliff',
   learners. Both Collier and Monroe counties have an approved Plan B.
 </p>
 
+<h3>What the twenty largest Florida districts actually use</h3>
+
+<p>
+  Every district's rules are filed with the state, and all twenty of the largest
+  have now been read. The pattern:
+</p>
+
+<ul>
+  <li><strong>The NNAT is the most common screener by far</strong> — nine of the
+      twenty use a Naglieri test. Lee has moved to the newer <strong>NGAT</strong>
+      and Miami-Dade names the <strong>NGAT-NV</strong>, so the Naglieri General
+      Ability Test looks to be replacing the NNAT3 in Florida.</li>
+  <li><strong>Grade 2 is the screening year</strong> in eleven districts.
+      Miami-Dade screens in <strong>grade 1</strong>.</li>
+  <li><strong>The cut score to move on varies by a full standard deviation</strong>,
+      from Duval's <strong>107</strong> to Manatee's <strong>122</strong>. A child
+      referred for full evaluation in Duval would be turned away in Manatee.</li>
+  <li><strong>Five districts publish no group screener at all.</strong>
+      Hillsborough screens from existing data, Marion uses a teacher rating scale,
+      Sarasota screens only on referral, and Pasco publishes nothing.</li>
+  <li><strong>Pasco operates no Plan B</strong>, so families there have no
+      reduced-threshold pathway.</li>
+</ul>
+
+${callout('caution', 'Four districts limit how many times a child may be tested',
+  `<p>This is the one rule that can catch a family out, and it is the only kind
+   of testing rule any Florida district publishes.</p>
+   <ul>
+     <li><strong>St. Johns</strong> — the CogAT and the KBIT-2R may each be taken
+         <strong>only once in a child's whole K-12 career</strong>.</li>
+     <li><strong>Sarasota</strong> — not the same instrument within 12 months, and
+         more than three screenings across a school career is discouraged.</li>
+     <li><strong>Manatee</strong> — being screened with one test can bar a related
+         test from being used for eligibility later.</li>
+     <li><strong>Osceola</strong> — referral for evaluation at most once a year.</li>
+   </ul>
+   <p>If you are in one of these districts, it is worth knowing before you ask for
+   a re-screen. Everywhere else, no attempt limit is published.</p>`)}
+
+<p>
+  <strong>No Florida district in the survey publishes any statement about test
+  preparation at all.</strong> None endorses it, discourages it or forbids it.
+  The attempt limits above are the only published constraints, and they work by
+  limiting tries rather than by addressing preparation.
+</p>
+
 ${callout('tip', 'Find out what your own district does',
   `<p>Every district's rules are public. Search the Florida Department of
    Education's policies repository at
