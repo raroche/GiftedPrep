@@ -118,7 +118,7 @@ full reference; the short version:
 **Kinds:** `single` `series` `matrix` `sets` `analogy` `paperfold` `barchart`
 `pictograph` `balance` `numberline` `table`
 
-**Shape:** `{ "s": shape, "c": colour, "f": fill, "n": count, "r": rotation, "z": scale, "x": 0-100, "y": 0-100 }`
+**Shape:** `{ "s": shape, "c": color, "f": fill, "n": count, "r": rotation, "z": scale, "x": 0-100, "y": 0-100 }`
 
 - `s` — one of the 40 names in `SHAPE_NAMES`. Run
   `node --input-type=module -e "const m=await import('./assets/js/modules/figures.js'); console.log(m.SHAPE_NAMES.join(' '))"`
@@ -135,10 +135,10 @@ enough to answer the question by ear where the question allows it.
 
 NNAT items may use **only** `blue`, `green`, `yellow`, `grey` and `ink` (grey and
 ink stand in for white and black). Pearson validated exactly those five for
-colour-blind accessibility. The validator enforces this.
+color-blind accessibility. The validator enforces this.
 
-**No question, on any test, may be answerable by colour alone.** Always pair
-colour with shape, count, position or orientation.
+**No question, on any test, may be answerable by color alone.** Always pair
+color with shape, count, position or orientation.
 
 ### Picture items for grades 1 and 2
 
@@ -170,7 +170,7 @@ d['questions'] += new
 write(d, 'data/cogat/figure-matrices.json')
 ```
 
-`sh()` takes the shape and colour, then alternating key/value pairs:
+`sh()` takes the shape and color, then alternating key/value pairs:
 `sh("circle", "blue", "f", "outline", "z", 0.5)`.
 
 ## Always finish by validating

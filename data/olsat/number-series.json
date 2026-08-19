@@ -219,28 +219,28 @@
       "choices": [
         {
           "id": "a",
-          "text": "13.5"
-        },
-        {
-          "id": "b",
           "text": "81"
         },
         {
+          "id": "b",
+          "text": "54"
+        },
+        {
           "id": "c",
-          "text": "15"
+          "text": "30"
         },
         {
           "id": "d",
-          "text": "18"
+          "text": "36"
         },
         {
           "id": "e",
-          "text": "30"
+          "text": "13"
         }
       ],
       "answer": "a",
-      "explanation": "The rule alternates: times three, then halve. Four times three is twelve. Twelve halved is six. Six times three is eighteen. Eighteen halved is nine. Nine times three is twenty-seven. Twenty-seven halved is thirteen point five.",
-      "strategy": "A decimal answer among the choices is a clue that halving or dividing is involved."
+      "explanation": "The rule alternates: times three, then halve. Four times three is twelve. Twelve halved is six. Six times three is eighteen. Eighteen halved is nine. Nine times three is twenty-seven. Twenty-seven times three is eighty-one, because it is the multiplying step's turn again. Choice b halves instead.",
+      "strategy": "Two rules taking turns. Work out whose turn it is before you answer."
     },
     {
       "id": "olsat-nse-g4-1",
@@ -286,7 +286,7 @@
       ],
       "answer": "a",
       "explanation": "Each number is nine less than the one before. Forty-five minus nine is thirty-six. These are also the nine times table read backwards.",
-      "strategy": "Recognising a times table saves time. Nine, eighteen, twenty-seven, thirty-six."
+      "strategy": "Recognizing a times table saves time. Nine, eighteen, twenty-seven, thirty-six."
     },
     {
       "id": "olsat-nse-g4-2",
@@ -805,12 +805,13 @@
       "figure": {
         "kind": "table",
         "header": false,
-        "alt": "A row of numbers ending in a question mark.",
+        "alt": "A row of numbers: 800, 400, 200, 100, question mark.",
         "rows": [
           [
+            "800",
+            "400",
+            "200",
             "100",
-            "50",
-            "25",
             "?"
           ]
         ]
@@ -818,19 +819,19 @@
       "choices": [
         {
           "id": "a",
-          "text": "12.5"
+          "text": "50"
         },
         {
           "id": "b",
-          "text": "12"
+          "text": "25"
         },
         {
           "id": "c",
-          "text": "20"
+          "text": "90"
         },
         {
           "id": "d",
-          "text": "5"
+          "text": "20"
         },
         {
           "id": "e",
@@ -838,8 +839,8 @@
         }
       ],
       "answer": "a",
-      "explanation": "Each number is half the one before. Half of twenty-five is twelve and a half. Choice b rounds down and loses the half.",
-      "strategy": "Halving an odd number gives a half. Do not throw it away."
+      "explanation": "Each number is half the one before. Half of one hundred is fifty. Choice b halves twice instead of once.",
+      "strategy": "Halving repeatedly gets small fast. Halve once per step, not twice."
     },
     {
       "id": "olsat-nse-g3-14",
@@ -979,7 +980,7 @@
       ],
       "answer": "a",
       "explanation": "This is the nine times table. Nine more each time, so forty-five plus nine is fifty-four.",
-      "strategy": "Recognising a times table is faster than counting the gap."
+      "strategy": "Recognizing a times table is faster than counting the gap."
     },
     {
       "id": "olsat-nse-g4-7",

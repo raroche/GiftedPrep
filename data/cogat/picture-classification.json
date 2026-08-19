@@ -7,292 +7,2966 @@
   "blurb": "Three things belong together. Find the fourth.",
   "childIntro": "These three go together somehow. Which answer belongs in the same group?",
   "howItWorks": "Three pictures in grades 1 and 2, three words from grade 3. The child works out what the three have in common and picks the one that joins the group. The rule is often two things at once, like winter AND clothing.",
-  "parentTip": "Two classic traps. First, the category name itself: shown green, blue and red, many children pick colour instead of yellow. Second, matching on only half the rule: shown a scarf, a hat and mittens, they pick a swimsuit because it is also clothing. Ask your child to name the group in words, then check the answer against every part of that name.",
+  "parentTip": "Two classic traps. First, the category name itself: shown green, blue and red, many children pick color instead of yellow. Second, matching on only half the rule: shown a scarf, a hat and mittens, they pick a swimsuit because it is also clothing. Ask your child to name the group in words, then check the answer against every part of that name.",
   "questions": [
     {
-      "id": "cogat-pc-g1-1", "grade": 1, "difficulty": 1,
+      "id": "cogat-pc-g1-1",
+      "grade": 1,
+      "difficulty": 1,
       "prompt": "These three go together. Which one belongs with them?",
-      "figure": { "kind": "series", "alt": "An apple, a banana and a strawberry.", "cells": [
-        { "text": "🍎" }, { "text": "🍌" }, { "text": "🍓" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "An apple, a banana and a strawberry.",
+        "cells": [
+          {
+            "text": "🍎"
+          },
+          {
+            "text": "🍌"
+          },
+          {
+            "text": "🍓"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "🍇" }, "label": "grapes" },
-        { "id": "b", "figure": { "text": "🥕" }, "label": "a carrot" },
-        { "id": "c", "figure": { "text": "🍞" }, "label": "bread" },
-        { "id": "d", "figure": { "text": "🐟" }, "label": "a fish" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍇"
+          },
+          "label": "grapes"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🥕"
+          },
+          "label": "a carrot"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍞"
+          },
+          "label": "bread"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        }
       ],
       "answer": "a",
       "explanation": "An apple, a banana and a strawberry are all fruit. Grapes are fruit too. A carrot is a vegetable.",
       "strategy": "Say the group name out loud: these are all fruit. Then ask each answer, is this fruit?"
     },
     {
-      "id": "cogat-pc-g1-2", "grade": 1, "difficulty": 2,
+      "id": "cogat-pc-g1-6",
+      "grade": 1,
+      "difficulty": 1,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "A car, a bus and a bicycle.", "cells": [
-        { "text": "🚗" }, { "text": "🚌" }, { "text": "🚲" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "A fish, a dolphin and a shark.",
+        "cells": [
+          {
+            "text": "🐟"
+          },
+          {
+            "text": "🐬"
+          },
+          {
+            "text": "🦈"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "🚂" }, "label": "a train" },
-        { "id": "b", "figure": { "text": "🛣️" }, "label": "a road" },
-        { "id": "c", "figure": { "text": "⛽" }, "label": "a petrol pump" },
-        { "id": "d", "figure": { "text": "🏠" }, "label": "a house" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐙"
+          },
+          "label": "an octopus"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐦"
+          },
+          "label": "a bird"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🚗"
+          },
+          "label": "a car"
+        }
       ],
       "answer": "a",
-      "explanation": "A car, a bus and a bicycle all carry you from place to place. A train does too. A road is where they go, and a petrol pump is what fills them up, but neither one carries you.",
+      "explanation": "A fish, a dolphin and a shark all live in the sea. An octopus does too.",
+      "strategy": "Say the group name out loud: these all live in the sea."
+    },
+    {
+      "id": "cogat-pc-g1-7",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A shoe, a sock and a glove.",
+        "cells": [
+          {
+            "text": "👟"
+          },
+          {
+            "text": "🧦"
+          },
+          {
+            "text": "🧤"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧢"
+          },
+          "label": "a cap"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🪑"
+          },
+          "label": "a chair"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍎"
+          },
+          "label": "an apple"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "📖"
+          },
+          "label": "a book"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A shoe, a sock and a glove are all things you wear. A cap is too.",
+      "strategy": "Ask if you can wear it."
+    },
+    {
+      "id": "cogat-pc-g1-2",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A car, a bus and a bicycle.",
+        "cells": [
+          {
+            "text": "🚗"
+          },
+          {
+            "text": "🚌"
+          },
+          {
+            "text": "🚲"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🚂"
+          },
+          "label": "a train"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🛣️"
+          },
+          "label": "a road"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⛽"
+          },
+          "label": "a gas pump"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🏠"
+          },
+          "label": "a house"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A car, a bus and a bicycle all carry you from place to place. A train does too. A road is where they go, and a gas pump is what fills them up, but neither one carries you.",
       "strategy": "Things that go WITH a group are not always IN the group."
     },
     {
-      "id": "cogat-pc-g1-3", "grade": 1, "difficulty": 2,
+      "id": "cogat-pc-g1-3",
+      "grade": 1,
+      "difficulty": 2,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "A dog, a cat and a rabbit.", "cells": [
-        { "text": "🐕" }, { "text": "🐈" }, { "text": "🐇" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "A dog, a cat and a rabbit.",
+        "cells": [
+          {
+            "text": "🐕"
+          },
+          {
+            "text": "🐈"
+          },
+          {
+            "text": "🐇"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "🐹" }, "label": "a hamster" },
-        { "id": "b", "figure": { "text": "🦁" }, "label": "a lion" },
-        { "id": "c", "figure": { "text": "🦴" }, "label": "a bone" },
-        { "id": "d", "figure": { "text": "🐍" }, "label": "a snake" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐹"
+          },
+          "label": "a hamster"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦁"
+          },
+          "label": "a lion"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🦴"
+          },
+          "label": "a bone"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐍"
+          },
+          "label": "a snake"
+        }
       ],
       "answer": "a",
       "explanation": "A dog, a cat and a rabbit are all animals people keep as pets at home. A hamster is a pet too. A lion is an animal but it lives in the wild.",
       "strategy": "The group has two parts here: an animal AND a pet. Check both."
     },
     {
-      "id": "cogat-pc-g1-4", "grade": 1, "difficulty": 3,
+      "id": "cogat-pc-g1-8",
+      "grade": 1,
+      "difficulty": 2,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "A scarf, a woolly hat and a pair of mittens.", "cells": [
-        { "text": "🧣" }, { "text": "🧢" }, { "text": "🧤" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "An apple, a banana and grapes.",
+        "cells": [
+          {
+            "text": "🍎"
+          },
+          {
+            "text": "🍌"
+          },
+          {
+            "text": "🍇"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "🧥" }, "label": "a warm coat" },
-        { "id": "b", "figure": { "text": "🩳" }, "label": "shorts" },
-        { "id": "c", "figure": { "text": "☂️" }, "label": "an umbrella" },
-        { "id": "d", "figure": { "text": "⛄" }, "label": "a snowman" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍓"
+          },
+          "label": "a strawberry"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🥕"
+          },
+          "label": "a carrot"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🥔"
+          },
+          "label": "a potato"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍞"
+          },
+          "label": "bread"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An apple, a banana and grapes are fruit. A strawberry is fruit too. A carrot and a potato are vegetables.",
+      "strategy": "Fruit and vegetables are two different groups."
+    },
+    {
+      "id": "cogat-pc-g1-9",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "The sun, the moon and a star.",
+        "cells": [
+          {
+            "text": "☀️"
+          },
+          {
+            "text": "🌙"
+          },
+          {
+            "text": "⭐"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "☁️"
+          },
+          "label": "a cloud"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌊"
+          },
+          "label": "the sea"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪨"
+          },
+          "label": "a rock"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sun, the moon and a star are all things you see up in the sky. A cloud is in the sky too. The sea, a tree and a rock are all down on the ground.",
+      "strategy": "Ask where you would look to see it: up or down."
+    },
+    {
+      "id": "cogat-pc-g1-10",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "The sun, a light bulb and a candle.",
+        "cells": [
+          {
+            "text": "☀️"
+          },
+          {
+            "text": "💡"
+          },
+          {
+            "text": "🕯️"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🔦"
+          },
+          "label": "a flashlight"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌙"
+          },
+          "label": "the moon"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🕶️"
+          },
+          "label": "sunglasses"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪟"
+          },
+          "label": "a window"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sun, a light bulb and a candle all make light. A flashlight does too. A window only lets light through.",
+      "strategy": "Ask which ones MAKE the light."
+    },
+    {
+      "id": "cogat-pc-g1-4",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A scarf, a woolly hat and a pair of mittens.",
+        "cells": [
+          {
+            "text": "🧣"
+          },
+          {
+            "text": "🧢"
+          },
+          {
+            "text": "🧤"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧥"
+          },
+          "label": "a warm coat"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🩳"
+          },
+          "label": "shorts"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "☂️"
+          },
+          "label": "an umbrella"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⛄"
+          },
+          "label": "a snowman"
+        }
       ],
       "answer": "a",
       "explanation": "A scarf, a hat and mittens are all things you wear to keep warm. A coat is too. Shorts are clothes but they are for hot days. An umbrella is for cold wet days but you do not wear it.",
       "strategy": "Two answers each match half the rule. Only one matches both halves."
     },
     {
-      "id": "cogat-pc-g1-5", "grade": 1, "difficulty": 3,
+      "id": "cogat-pc-g1-5",
+      "grade": 1,
+      "difficulty": 3,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "A hammer, a saw and a screwdriver.", "cells": [
-        { "text": "🔨" }, { "text": "🪚" }, { "text": "🪛" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "A hammer, a saw and a screwdriver.",
+        "cells": [
+          {
+            "text": "🔨"
+          },
+          {
+            "text": "🪚"
+          },
+          {
+            "text": "🪛"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "🔧" }, "label": "a spanner" },
-        { "id": "b", "figure": { "text": "🪵" }, "label": "a log of wood" },
-        { "id": "c", "figure": { "text": "🏠" }, "label": "a house" },
-        { "id": "d", "figure": { "text": "👷" }, "label": "a builder" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🔧"
+          },
+          "label": "a wrench"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🪵"
+          },
+          "label": "a log of wood"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏠"
+          },
+          "label": "a house"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "👷"
+          },
+          "label": "a builder"
+        }
       ],
       "answer": "a",
-      "explanation": "A hammer, a saw and a screwdriver are all tools you hold in your hand to build things. A spanner is a tool too. Wood is what you build with, a house is what you build, and a builder is who uses the tools.",
+      "explanation": "A hammer, a saw and a screwdriver are all tools you hold in your hand to build things. A wrench is a tool too. Wood is what you build with, a house is what you build, and a builder is who uses the tools.",
       "strategy": "Sort out the tool, the material, the maker and the finished thing. Only one of those is the group."
     },
-
     {
-      "id": "cogat-pc-g2-1", "grade": 2, "difficulty": 2,
+      "id": "cogat-pc-g1-11",
+      "grade": 1,
+      "difficulty": 3,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "A guitar, a drum and a trumpet.", "cells": [
-        { "text": "🎸" }, { "text": "🥁" }, { "text": "🎺" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "A cow, a pig and a sheep.",
+        "cells": [
+          {
+            "text": "🐄"
+          },
+          {
+            "text": "🐖"
+          },
+          {
+            "text": "🐑"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "🎻" }, "label": "a violin" },
-        { "id": "b", "figure": { "text": "🎧" }, "label": "headphones" },
-        { "id": "c", "figure": { "text": "🎤" }, "label": "a microphone" },
-        { "id": "d", "figure": { "text": "🎵" }, "label": "a music note" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐔"
+          },
+          "label": "a chicken"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦁"
+          },
+          "label": "a lion"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐊"
+          },
+          "label": "a crocodile"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐧"
+          },
+          "label": "a penguin"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cow, a pig and a sheep all live on a farm. A chicken does too. A lion lives in the wild.",
+      "strategy": "The group is not just animals. It is farm animals."
+    },
+    {
+      "id": "cogat-pc-g1-12",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A spoon, a fork and a knife.",
+        "cells": [
+          {
+            "text": "🥄"
+          },
+          {
+            "text": "🍴"
+          },
+          {
+            "text": "🔪"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🥢"
+          },
+          "label": "chopsticks"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍲"
+          },
+          "label": "soup"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🧂"
+          },
+          "label": "salt"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪑"
+          },
+          "label": "a chair"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A spoon, a fork and a knife are all things you eat with. Chopsticks are too. Soup is the food, not the tool.",
+      "strategy": "Sort the tool from the food."
+    },
+    {
+      "id": "cogat-pc-g1-13",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Rain, snow and a storm.",
+        "cells": [
+          {
+            "text": "🌧️"
+          },
+          {
+            "text": "❄️"
+          },
+          {
+            "text": "⛈️"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌫️"
+          },
+          "label": "fog"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌻"
+          },
+          "label": "a sunflower"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🧥"
+          },
+          "label": "a coat"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "☂️"
+          },
+          "label": "an umbrella"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Rain, snow and a storm are all weather. Fog is weather too. A coat and an umbrella are things you use in bad weather.",
+      "strategy": "Weather itself, not the things you use in it."
+    },
+    {
+      "id": "cogat-pc-g1-14",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A butterfly, a bee and an ant.",
+        "cells": [
+          {
+            "text": "🦋"
+          },
+          {
+            "text": "🐝"
+          },
+          {
+            "text": "🐜"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐞"
+          },
+          "label": "a ladybug"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🕷️"
+          },
+          "label": "a spider"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐌"
+          },
+          "label": "a snail"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐛"
+          },
+          "label": "a caterpillar"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A butterfly, a bee and an ant are insects with six legs. A ladybug has six legs too. A spider has eight legs and is not an insect.",
+      "strategy": "Count the legs. Six means insect."
+    },
+    {
+      "id": "cogat-pc-g1-15",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "An eye, an ear and a nose.",
+        "cells": [
+          {
+            "text": "👁️"
+          },
+          {
+            "text": "👂"
+          },
+          {
+            "text": "👃"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "👅"
+          },
+          "label": "a tongue"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦶"
+          },
+          "label": "a foot"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👓"
+          },
+          "label": "glasses"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧠"
+          },
+          "label": "a brain"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An eye sees, an ear hears and a nose smells. A tongue tastes. All four are the parts you use to sense the world. A foot is a body part but it is not for sensing.",
+      "strategy": "Ask what each one DOES, not just what it is."
+    },
+    {
+      "id": "cogat-pc-g1-16",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A chair, a bed and a sofa.",
+        "cells": [
+          {
+            "text": "🪑"
+          },
+          {
+            "text": "🛏️"
+          },
+          {
+            "text": "🛋️"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🪞"
+          },
+          "label": "a mirror"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🏠"
+          },
+          "label": "a house"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🚪"
+          },
+          "label": "a door"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A chair, a bed and a sofa are all furniture you put in a room. A mirror is furniture for a room too. A door and a house are parts of the building itself.",
+      "strategy": "Furniture goes IN a room. A door is part of the room."
+    },
+    {
+      "id": "cogat-pc-g1-17",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A penguin, a duck and a swan.",
+        "cells": [
+          {
+            "text": "🐧"
+          },
+          {
+            "text": "🦆"
+          },
+          {
+            "text": "🦢"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐦"
+          },
+          "label": "a bird"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🦭"
+          },
+          "label": "a seal"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐢"
+          },
+          "label": "a turtle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A penguin, a duck and a swan are all birds. So is a bird. A fish, a seal and a turtle all swim like these birds do, but none of them is a bird.",
+      "strategy": "They all swim, so swimming is not the rule. Look for what they ARE."
+    },
+    {
+      "id": "cogat-pc-g2-1",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A guitar, a drum and a trumpet.",
+        "cells": [
+          {
+            "text": "🎸"
+          },
+          {
+            "text": "🥁"
+          },
+          {
+            "text": "🎺"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🎻"
+          },
+          "label": "a violin"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🎧"
+          },
+          "label": "headphones"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🎤"
+          },
+          "label": "a microphone"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎵"
+          },
+          "label": "a music note"
+        }
       ],
       "answer": "a",
       "explanation": "A guitar, a drum and a trumpet are all instruments you play to make music. A violin is one too. Headphones are for listening, a microphone makes sound louder, and a note is written music.",
       "strategy": "Everything here is about music. The rule is narrower: things you PLAY."
     },
     {
-      "id": "cogat-pc-g2-2", "grade": 2, "difficulty": 2,
+      "id": "cogat-pc-g2-2",
+      "grade": 2,
+      "difficulty": 2,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "A shark, a dolphin and an octopus.", "cells": [
-        { "text": "🦈" }, { "text": "🐬" }, { "text": "🐙" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "A shark, a dolphin and an octopus.",
+        "cells": [
+          {
+            "text": "🦈"
+          },
+          {
+            "text": "🐬"
+          },
+          {
+            "text": "🐙"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "🐠" }, "label": "a tropical fish" },
-        { "id": "b", "figure": { "text": "🦅" }, "label": "an eagle" },
-        { "id": "c", "figure": { "text": "⚓" }, "label": "an anchor" },
-        { "id": "d", "figure": { "text": "🏖️" }, "label": "a beach" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐠"
+          },
+          "label": "a tropical fish"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦅"
+          },
+          "label": "an eagle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⚓"
+          },
+          "label": "an anchor"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🏖️"
+          },
+          "label": "a beach"
+        }
       ],
       "answer": "a",
       "explanation": "A shark, a dolphin and an octopus all live in the sea. So does a tropical fish. An anchor goes in the sea but it is not alive, and a beach is next to the sea.",
       "strategy": "Alive or not alive is a quick way to cut down the choices."
     },
     {
-      "id": "cogat-pc-g2-3", "grade": 2, "difficulty": 3,
+      "id": "cogat-pc-g2-6",
+      "grade": 2,
+      "difficulty": 2,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "An eye, an ear and a nose.", "cells": [
-        { "text": "👁️" }, { "text": "👂" }, { "text": "👃" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "A piano, a violin and a drum.",
+        "cells": [
+          {
+            "text": "🎹"
+          },
+          {
+            "text": "🎻"
+          },
+          {
+            "text": "🥁"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "👅" }, "label": "a tongue" },
-        { "id": "b", "figure": { "text": "🦶" }, "label": "a foot" },
-        { "id": "c", "figure": { "text": "👓" }, "label": "glasses" },
-        { "id": "d", "figure": { "text": "🧠" }, "label": "a brain" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🎺"
+          },
+          "label": "a trumpet"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🎧"
+          },
+          "label": "headphones"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🎤"
+          },
+          "label": "a microphone"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎵"
+          },
+          "label": "a music note"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A piano, a violin and a drum are all instruments you play. A trumpet is too. Headphones are for listening.",
+      "strategy": "Everything here is about music. The rule is narrower: things you PLAY."
+    },
+    {
+      "id": "cogat-pc-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A brick, wood and a rock.",
+        "cells": [
+          {
+            "text": "🧱"
+          },
+          {
+            "text": "🪵"
+          },
+          {
+            "text": "🪨"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🪟"
+          },
+          "label": "glass"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🏠"
+          },
+          "label": "a house"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👷"
+          },
+          "label": "a builder"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🔨"
+          },
+          "label": "a hammer"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A brick, wood and a rock are all materials you build with. Glass is too. A house is what you build and a builder is who builds it.",
+      "strategy": "Sort the material, the maker and the finished thing."
+    },
+    {
+      "id": "cogat-pc-g2-8",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A sunrise, a mountain sunrise and a sunset.",
+        "cells": [
+          {
+            "text": "🌅"
+          },
+          {
+            "text": "🌄"
+          },
+          {
+            "text": "🌇"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌆"
+          },
+          "label": "dusk in a city"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌙"
+          },
+          "label": "the moon"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⭐"
+          },
+          "label": "a star"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🕐"
+          },
+          "label": "a clock"
+        }
+      ],
+      "answer": "a",
+      "explanation": "All of these show a time of day when the sky changes colour. Dusk does too. The moon and a star are things in the sky, not times of day.",
+      "strategy": "Times of day, not things in the sky."
+    },
+    {
+      "id": "cogat-pc-g2-3",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "An eye, an ear and a nose.",
+        "cells": [
+          {
+            "text": "👁️"
+          },
+          {
+            "text": "👂"
+          },
+          {
+            "text": "👃"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "👅"
+          },
+          "label": "a tongue"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦶"
+          },
+          "label": "a foot"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👓"
+          },
+          "label": "glasses"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧠"
+          },
+          "label": "a brain"
+        }
       ],
       "answer": "a",
       "explanation": "An eye sees, an ear hears and a nose smells. They are the parts you use to sense the world. A tongue tastes, so it belongs. A foot is a body part but it is not for sensing in that way.",
       "strategy": "Ask what each one DOES, not just what it is."
     },
     {
-      "id": "cogat-pc-g2-4", "grade": 2, "difficulty": 3,
+      "id": "cogat-pc-g2-4",
+      "grade": 2,
+      "difficulty": 3,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "A triangle, a square and a hexagon drawn as shapes.", "cells": [
-        { "shapes": [{ "s": "triangle", "c": "blue" }] },
-        { "shapes": [{ "s": "square", "c": "red" }] },
-        { "shapes": [{ "s": "hexagon", "c": "green" }] }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "A triangle, a square and a hexagon drawn as shapes.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "shapes": [{ "s": "pentagon", "c": "orange" }] }, "label": "a pentagon" },
-        { "id": "b", "figure": { "shapes": [{ "s": "circle", "c": "orange" }] }, "label": "a circle" },
-        { "id": "c", "figure": { "shapes": [{ "s": "oval", "c": "orange" }] }, "label": "an oval" },
-        { "id": "d", "figure": { "shapes": [{ "s": "crescent", "c": "orange" }] }, "label": "a crescent moon" }
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "a pentagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "a circle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an oval"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "a crescent moon"
+        }
       ],
       "answer": "a",
       "explanation": "All three shapes are made from straight sides. A pentagon is too. A circle, an oval and a crescent are all curved.",
       "strategy": "Trace the outline with your finger. If it bends, it is curved."
     },
     {
-      "id": "cogat-pc-g2-5", "grade": 2, "difficulty": 4,
+      "id": "cogat-pc-g2-9",
+      "grade": 2,
+      "difficulty": 3,
       "prompt": "Which one belongs with these three?",
-      "figure": { "kind": "series", "alt": "A bee, a butterfly and an ant.", "cells": [
-        { "text": "🐝" }, { "text": "🦋" }, { "text": "🐜" }
-      ]},
+      "figure": {
+        "kind": "series",
+        "alt": "Honey, milk and an egg.",
+        "cells": [
+          {
+            "text": "🍯"
+          },
+          {
+            "text": "🥛"
+          },
+          {
+            "text": "🥚"
+          }
+        ]
+      },
       "choices": [
-        { "id": "a", "figure": { "text": "🐞" }, "label": "a ladybird" },
-        { "id": "b", "figure": { "text": "🕷️" }, "label": "a spider" },
-        { "id": "c", "figure": { "text": "🐛" }, "label": "a caterpillar" },
-        { "id": "d", "figure": { "text": "🌸" }, "label": "a flower" }
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧀"
+          },
+          "label": "cheese"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌾"
+          },
+          "label": "wheat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍎"
+          },
+          "label": "an apple"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🥕"
+          },
+          "label": "a carrot"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Honey, milk and an egg all come from animals. Cheese does too. Wheat, apples and carrots all come from plants.",
+      "strategy": "Ask where each food comes from: an animal or a plant."
+    },
+    {
+      "id": "cogat-pc-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A pencil, a pen and a crayon.",
+        "cells": [
+          {
+            "text": "✏️"
+          },
+          {
+            "text": "🖊️"
+          },
+          {
+            "text": "🖍️"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🖌️"
+          },
+          "label": "a paintbrush"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "📄"
+          },
+          "label": "paper"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "📚"
+          },
+          "label": "books"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎒"
+          },
+          "label": "a backpack"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A pencil, a pen and a crayon all make marks on paper. So does a paintbrush. Paper is what you mark on, not what makes the mark.",
+      "strategy": "Tool and surface are different groups."
+    },
+    {
+      "id": "cogat-pc-g2-11",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A clock, a calendar and an hourglass.",
+        "cells": [
+          {
+            "text": "🕐"
+          },
+          {
+            "text": "📅"
+          },
+          {
+            "text": "⏳"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "⌚"
+          },
+          "label": "a watch"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "📏"
+          },
+          "label": "a ruler"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⚖️"
+          },
+          "label": "scales"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌡️"
+          },
+          "label": "a thermometer"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A clock, a calendar and an hourglass all measure time. A watch does too. A ruler measures length and scales measure weight.",
+      "strategy": "They all measure. Check WHAT each one measures."
+    },
+    {
+      "id": "cogat-pc-g2-12",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A cactus, a palm tree and a pine tree.",
+        "cells": [
+          {
+            "text": "🌵"
+          },
+          {
+            "text": "🌴"
+          },
+          {
+            "text": "🌲"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a leafy tree"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐍"
+          },
+          "label": "a snake"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏜️"
+          },
+          "label": "a desert"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪨"
+          },
+          "label": "a rock"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cactus, a palm tree and a pine tree are all plants. A leafy tree is too. A desert is a place where a cactus grows.",
+      "strategy": "Living or not living is a quick way to split a group."
+    },
+    {
+      "id": "cogat-pc-g2-5",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A bee, a butterfly and an ant.",
+        "cells": [
+          {
+            "text": "🐝"
+          },
+          {
+            "text": "🦋"
+          },
+          {
+            "text": "🐜"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐞"
+          },
+          "label": "a ladybird"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🕷️"
+          },
+          "label": "a spider"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐛"
+          },
+          "label": "a caterpillar"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌸"
+          },
+          "label": "a flower"
+        }
       ],
       "answer": "a",
       "explanation": "A bee, a butterfly and an ant are insects with six legs. A ladybird has six legs too. A spider is the trap: it looks like an insect but it has eight legs and is not one.",
       "strategy": "Counting legs sorts insects from spiders. Six means insect."
     },
-
     {
-      "id": "cogat-pc-g3-1", "grade": 3, "difficulty": 2,
+      "id": "cogat-pc-g2-13",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A bee, a butterfly and a bird.",
+        "cells": [
+          {
+            "text": "🐝"
+          },
+          {
+            "text": "🦋"
+          },
+          {
+            "text": "🐦"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🦇"
+          },
+          "label": "a bat"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐜"
+          },
+          "label": "an ant"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐛"
+          },
+          "label": "a caterpillar"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🕷️"
+          },
+          "label": "a spider"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A bee, a butterfly and a bird can all fly. A bat can too. An ant and a caterpillar are small like a bee, but they cannot fly.",
+      "strategy": "Not all insects fly. Check what each one can DO."
+    },
+    {
+      "id": "cogat-pc-g2-14",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "Three flags.",
+        "cells": [
+          {
+            "text": "🇺🇸"
+          },
+          {
+            "text": "🚩"
+          },
+          {
+            "text": "🎌"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🏳️"
+          },
+          "label": "a plain flag"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🧵"
+          },
+          "label": "thread"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪁"
+          },
+          "label": "a kite"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧣"
+          },
+          "label": "a scarf"
+        }
+      ],
+      "answer": "a",
+      "explanation": "All three are flags, and so is the fourth. A kite and a scarf are also made of cloth and fly in the wind, but they are not flags.",
+      "strategy": "When several answers share a feature, ask what the group actually IS."
+    },
+    {
+      "id": "cogat-pc-g2-15",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "An ice cream, an ice cube and a snowflake.",
+        "cells": [
+          {
+            "text": "🍦"
+          },
+          {
+            "text": "🧊"
+          },
+          {
+            "text": "❄️"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "⛄"
+          },
+          "label": "a snowman"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "☕"
+          },
+          "label": "hot coffee"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🔥"
+          },
+          "label": "fire"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌞"
+          },
+          "label": "the sun"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An ice cream, an ice cube and a snowflake are all cold. A snowman is too. Coffee, fire and the sun are all hot.",
+      "strategy": "Hot and cold split the answers in half straight away."
+    },
+    {
+      "id": "cogat-pc-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A bone, a tooth and a muscle.",
+        "cells": [
+          {
+            "text": "🦴"
+          },
+          {
+            "text": "🦷"
+          },
+          {
+            "text": "💪"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🫀"
+          },
+          "label": "a heart"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🧥"
+          },
+          "label": "a coat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪑"
+          },
+          "label": "a chair"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍎"
+          },
+          "label": "an apple"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A bone, a tooth and a muscle are all parts inside a body. A heart is too. The other answers are things outside the body.",
+      "strategy": "Inside the body or outside it."
+    },
+    {
+      "id": "cogat-pc-g2-17",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which one belongs with these three?",
+      "figure": {
+        "kind": "series",
+        "alt": "A gold medal, a trophy and a ribbon medal.",
+        "cells": [
+          {
+            "text": "🥇"
+          },
+          {
+            "text": "🏆"
+          },
+          {
+            "text": "🎖️"
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🏅"
+          },
+          "label": "another medal"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🏃"
+          },
+          "label": "a runner"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏟️"
+          },
+          "label": "a stadium"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⏱️"
+          },
+          "label": "a stopwatch"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A gold medal, a trophy and a ribbon are all prizes you win. Another medal is a prize too. A runner is the person, a stadium is the place and a stopwatch is the tool.",
+      "strategy": "Prize, person, place and tool are four different groups."
+    },
+    {
+      "id": "cogat-pc-g3-1",
+      "grade": 3,
+      "difficulty": 2,
       "prompt": "Shirt, jacket, socks",
       "promptSpeech": "Which word belongs with shirt, jacket and socks?",
       "choices": [
-        { "id": "a", "text": "trousers" }, { "id": "b", "text": "pockets" },
-        { "id": "c", "text": "laundry" }, { "id": "d", "text": "closet" }, { "id": "e", "text": "style" }
+        {
+          "id": "a",
+          "text": "trousers"
+        },
+        {
+          "id": "b",
+          "text": "pockets"
+        },
+        {
+          "id": "c",
+          "text": "laundry"
+        },
+        {
+          "id": "d",
+          "text": "closet"
+        },
+        {
+          "id": "e",
+          "text": "style"
+        }
       ],
       "answer": "a",
       "explanation": "A shirt, a jacket and socks are all clothes you wear. Trousers are too. Every other choice is connected to clothes without being clothes: pockets are part of them, laundry is what you do to them, a closet is where they live, and style is an idea about them.",
       "strategy": "Say the group name: these are clothes. Then ask each answer, is it a piece of clothing?"
     },
     {
-      "id": "cogat-pc-g3-2", "grade": 3, "difficulty": 3,
+      "id": "cogat-pc-g3-6",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Robin, sparrow, eagle",
+      "promptSpeech": "Which word belongs with Robin, sparrow, eagle?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "owl"
+        },
+        {
+          "id": "b",
+          "text": "nest"
+        },
+        {
+          "id": "c",
+          "text": "feather"
+        },
+        {
+          "id": "d",
+          "text": "flying"
+        },
+        {
+          "id": "e",
+          "text": "wing"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A robin, a sparrow and an eagle are all birds. An owl is a bird too. A nest, a feather and a wing are all connected to birds without being birds.",
+      "strategy": "Say the group name: these are birds. Then test each answer against it."
+    },
+    {
+      "id": "cogat-pc-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Hammer, saw, drill",
+      "promptSpeech": "Which word belongs with Hammer, saw, drill?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "wrench"
+        },
+        {
+          "id": "b",
+          "text": "nail"
+        },
+        {
+          "id": "c",
+          "text": "wood"
+        },
+        {
+          "id": "d",
+          "text": "builder"
+        },
+        {
+          "id": "e",
+          "text": "toolbox"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A hammer, a saw and a drill are all tools. A wrench is a tool too. A nail is what you hammer, wood is the material and a builder is the person.",
+      "strategy": "Tool, material, maker and product are four different groups."
+    },
+    {
+      "id": "cogat-pc-g3-2",
+      "grade": 3,
+      "difficulty": 3,
       "prompt": "Green, blue, red",
       "promptSpeech": "Which word belongs with green, blue and red?",
       "choices": [
-        { "id": "a", "text": "yellow" }, { "id": "b", "text": "colour" },
-        { "id": "c", "text": "crayon" }, { "id": "d", "text": "paint" }, { "id": "e", "text": "rainbow" }
+        {
+          "id": "a",
+          "text": "yellow"
+        },
+        {
+          "id": "b",
+          "text": "color"
+        },
+        {
+          "id": "c",
+          "text": "crayon"
+        },
+        {
+          "id": "d",
+          "text": "paint"
+        },
+        {
+          "id": "e",
+          "text": "rainbow"
+        }
       ],
       "answer": "a",
-      "explanation": "Green, blue and red are colours, so the answer must be another colour. Choice b, colour, is the classic trap: it is the name of the group, not a member of it.",
-      "strategy": "Never pick the name of the group. A colour is not a colour in the same way that green is."
+      "explanation": "Green, blue and red are colors, so the answer must be another color. Choice b, color, is the classic trap: it is the name of the group, not a member of it.",
+      "strategy": "Never pick the name of the group. A color is not a color in the same way that green is."
     },
     {
-      "id": "cogat-pc-g3-3", "grade": 3, "difficulty": 3,
+      "id": "cogat-pc-g3-3",
+      "grade": 3,
+      "difficulty": 3,
       "prompt": "Trunk, branch, root",
       "promptSpeech": "Which word belongs with trunk, branch and root?",
       "choices": [
-        { "id": "a", "text": "leaf" }, { "id": "b", "text": "tree" },
-        { "id": "c", "text": "forest" }, { "id": "d", "text": "wood" }, { "id": "e", "text": "shade" }
+        {
+          "id": "a",
+          "text": "leaf"
+        },
+        {
+          "id": "b",
+          "text": "tree"
+        },
+        {
+          "id": "c",
+          "text": "forest"
+        },
+        {
+          "id": "d",
+          "text": "wood"
+        },
+        {
+          "id": "e",
+          "text": "shade"
+        }
       ],
       "answer": "a",
       "explanation": "A trunk, a branch and a root are all parts of a tree. A leaf is a part too. Choice b, tree, is the whole thing rather than a part, and choice c is a group of trees.",
       "strategy": "Part-of groups have the same trap as category groups: do not pick the whole."
     },
     {
-      "id": "cogat-pc-g3-4", "grade": 3, "difficulty": 4,
+      "id": "cogat-pc-g3-8",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Copper, silver, iron",
+      "promptSpeech": "Which word belongs with Copper, silver, iron?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "gold"
+        },
+        {
+          "id": "b",
+          "text": "metal"
+        },
+        {
+          "id": "c",
+          "text": "coin"
+        },
+        {
+          "id": "d",
+          "text": "shiny"
+        },
+        {
+          "id": "e",
+          "text": "medal"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Copper, silver and iron are metals. Gold is a metal too. Choice b names the group rather than joining it.",
+      "strategy": "Never pick the name of the group."
+    },
+    {
+      "id": "cogat-pc-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Petal, stem, root",
+      "promptSpeech": "Which word belongs with Petal, stem, root?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "leaf"
+        },
+        {
+          "id": "b",
+          "text": "flower"
+        },
+        {
+          "id": "c",
+          "text": "garden"
+        },
+        {
+          "id": "d",
+          "text": "soil"
+        },
+        {
+          "id": "e",
+          "text": "bloom"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A petal, a stem and a root are all parts of a plant. A leaf is a part too. A flower is the whole thing and a garden is where it grows.",
+      "strategy": "Part-of groups have the same trap as category groups. Do not pick the whole."
+    },
+    {
+      "id": "cogat-pc-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Boil, freeze, melt",
+      "promptSpeech": "Which word belongs with Boil, freeze, melt?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "evaporate"
+        },
+        {
+          "id": "b",
+          "text": "water"
+        },
+        {
+          "id": "c",
+          "text": "kettle"
+        },
+        {
+          "id": "d",
+          "text": "liquid"
+        },
+        {
+          "id": "e",
+          "text": "cold"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Boiling, freezing and melting are all things that happen when the temperature changes. Evaporating is too. Water is what it happens to.",
+      "strategy": "Actions and things are different kinds of word."
+    },
+    {
+      "id": "cogat-pc-g3-4",
+      "grade": 3,
+      "difficulty": 4,
       "prompt": "Chair, sofa, bench",
       "promptSpeech": "Which word belongs with chair, sofa and bench?",
       "choices": [
-        { "id": "a", "text": "stool" }, { "id": "b", "text": "table" },
-        { "id": "c", "text": "lamp" }, { "id": "d", "text": "cushion" }, { "id": "e", "text": "furniture" }
+        {
+          "id": "a",
+          "text": "stool"
+        },
+        {
+          "id": "b",
+          "text": "table"
+        },
+        {
+          "id": "c",
+          "text": "lamp"
+        },
+        {
+          "id": "d",
+          "text": "cushion"
+        },
+        {
+          "id": "e",
+          "text": "furniture"
+        }
       ],
       "answer": "a",
       "explanation": "All four are furniture, but that is too wide. Look closer: a chair, a sofa and a bench are furniture you sit on. A stool is too. A table is furniture but you do not sit on it. Choice e names the group.",
       "strategy": "If more than one answer fits your rule, your rule is too broad. Make it more exact."
     },
     {
-      "id": "cogat-pc-g3-5", "grade": 3, "difficulty": 5,
+      "id": "cogat-pc-g3-11",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Sparrow, bat, bee",
+      "promptSpeech": "Which word belongs with Sparrow, bat, bee?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "butterfly"
+        },
+        {
+          "id": "b",
+          "text": "squirrel"
+        },
+        {
+          "id": "c",
+          "text": "spider"
+        },
+        {
+          "id": "d",
+          "text": "snake"
+        },
+        {
+          "id": "e",
+          "text": "frog"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A sparrow, a bat and a bee can all fly. So can a butterfly. A squirrel and a spider are small animals like the bee, but they cannot fly.",
+      "strategy": "The group is not birds and not insects. It is things that fly."
+    },
+    {
+      "id": "cogat-pc-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "January, March, July",
+      "promptSpeech": "Which word belongs with January, March, July?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "October"
+        },
+        {
+          "id": "b",
+          "text": "month"
+        },
+        {
+          "id": "c",
+          "text": "week"
+        },
+        {
+          "id": "d",
+          "text": "winter"
+        },
+        {
+          "id": "e",
+          "text": "calendar"
+        }
+      ],
+      "answer": "a",
+      "explanation": "January, March and July are all months. October is a month too. Choice b names the group and choice c is a season.",
+      "strategy": "Members of a group, not the name of the group."
+    },
+    {
+      "id": "cogat-pc-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Shout, murmur, mumble",
+      "promptSpeech": "Which word belongs with Shout, murmur, mumble?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "whisper"
+        },
+        {
+          "id": "b",
+          "text": "listen"
+        },
+        {
+          "id": "c",
+          "text": "silence"
+        },
+        {
+          "id": "d",
+          "text": "ear"
+        },
+        {
+          "id": "e",
+          "text": "sound"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Shouting, murmuring and mumbling are all ways of using your voice. Whispering is too. Listening is the opposite side of talking.",
+      "strategy": "Ask which way the action goes: out of you, or into you."
+    },
+    {
+      "id": "cogat-pc-g3-5",
+      "grade": 3,
+      "difficulty": 5,
       "prompt": "Whisper, shout, mumble",
       "promptSpeech": "Which word belongs with whisper, shout and mumble?",
       "choices": [
-        { "id": "a", "text": "yell" }, { "id": "b", "text": "listen" },
-        { "id": "c", "text": "quiet" }, { "id": "d", "text": "ear" }, { "id": "e", "text": "sound" }
+        {
+          "id": "a",
+          "text": "yell"
+        },
+        {
+          "id": "b",
+          "text": "listen"
+        },
+        {
+          "id": "c",
+          "text": "quiet"
+        },
+        {
+          "id": "d",
+          "text": "ear"
+        },
+        {
+          "id": "e",
+          "text": "sound"
+        }
       ],
       "answer": "a",
       "explanation": "Whisper, shout and mumble are all ways of speaking. Yell is another way of speaking. Listen is the opposite side of talking, quiet describes a whisper only, and an ear is a body part.",
       "strategy": "Group words that are all actions with another action, not with a describing word or a thing."
     },
-
     {
-      "id": "cogat-pc-g4-1", "grade": 4, "difficulty": 2,
+      "id": "cogat-pc-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Triangle, pentagon, heptagon",
+      "promptSpeech": "Which word belongs with Triangle, pentagon, heptagon?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "nonagon"
+        },
+        {
+          "id": "b",
+          "text": "square"
+        },
+        {
+          "id": "c",
+          "text": "hexagon"
+        },
+        {
+          "id": "d",
+          "text": "octagon"
+        },
+        {
+          "id": "e",
+          "text": "circle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the sides. A triangle has three, a pentagon five, a heptagon seven. All odd numbers. A nonagon has nine, which is also odd. Every other answer has an even number of sides, and a circle has none.",
+      "strategy": "Count the sides and sort them into odd and even."
+    },
+    {
+      "id": "cogat-pc-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Kitten, cub, foal",
+      "promptSpeech": "Which word belongs with Kitten, cub, foal?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "calf"
+        },
+        {
+          "id": "b",
+          "text": "cat"
+        },
+        {
+          "id": "c",
+          "text": "litter"
+        },
+        {
+          "id": "d",
+          "text": "farm"
+        },
+        {
+          "id": "e",
+          "text": "pet"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A kitten, a cub and a foal are all young animals. A calf is a young cow. A cat is a grown animal and a litter is a group of young ones.",
+      "strategy": "Baby-animal words form their own group."
+    },
+    {
+      "id": "cogat-pc-g3-16",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Sail, paddle, row",
+      "promptSpeech": "Which word belongs with Sail, paddle, row?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "steer"
+        },
+        {
+          "id": "b",
+          "text": "boat"
+        },
+        {
+          "id": "c",
+          "text": "water"
+        },
+        {
+          "id": "d",
+          "text": "harbour"
+        },
+        {
+          "id": "e",
+          "text": "anchor"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Sailing, paddling and rowing are all ways of moving a boat, and steering is what you do to a moving boat. All four are actions you perform on a boat. A boat, water and an anchor are things.",
+      "strategy": "When every option relates to the same scene, sort actions from things."
+    },
+    {
+      "id": "cogat-pc-g3-17",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Island, peninsula, cape",
+      "promptSpeech": "Which word belongs with Island, peninsula, cape?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "isthmus"
+        },
+        {
+          "id": "b",
+          "text": "ocean"
+        },
+        {
+          "id": "c",
+          "text": "bay"
+        },
+        {
+          "id": "d",
+          "text": "tide"
+        },
+        {
+          "id": "e",
+          "text": "harbour"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An island, a peninsula and a cape are all pieces of land surrounded or nearly surrounded by water. An isthmus is a narrow strip of land, so it belongs. An ocean and a bay are water.",
+      "strategy": "Land features and water features are two different groups."
+    },
+    {
+      "id": "cogat-pc-g4-1",
+      "grade": 4,
+      "difficulty": 2,
       "prompt": "Copper, silver, iron",
       "promptSpeech": "Which word belongs with copper, silver and iron?",
       "choices": [
-        { "id": "a", "text": "gold" }, { "id": "b", "text": "medal" },
-        { "id": "c", "text": "metal" }, { "id": "d", "text": "coin" }, { "id": "e", "text": "shiny" }
+        {
+          "id": "a",
+          "text": "gold"
+        },
+        {
+          "id": "b",
+          "text": "medal"
+        },
+        {
+          "id": "c",
+          "text": "metal"
+        },
+        {
+          "id": "d",
+          "text": "coin"
+        },
+        {
+          "id": "e",
+          "text": "shiny"
+        }
       ],
       "answer": "a",
       "explanation": "Copper, silver and iron are metals. Gold is a metal too. Choice c names the group. Medals and coins are made from metal, and shiny describes it.",
       "strategy": "When a word feels like the heading of a list rather than an item on it, it is the wrong answer."
     },
     {
-      "id": "cogat-pc-g4-2", "grade": 4, "difficulty": 3,
+      "id": "cogat-pc-g4-6",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Oxygen, nitrogen, helium",
+      "promptSpeech": "Which word belongs with Oxygen, nitrogen, helium?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "hydrogen"
+        },
+        {
+          "id": "b",
+          "text": "copper"
+        },
+        {
+          "id": "c",
+          "text": "water"
+        },
+        {
+          "id": "d",
+          "text": "ice"
+        },
+        {
+          "id": "e",
+          "text": "gas"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Oxygen, nitrogen and helium are all gases. Hydrogen is a gas too. Copper is a solid, water is a liquid and choice e names the group.",
+      "strategy": "Solid, liquid and gas is a quick way to split a list."
+    },
+    {
+      "id": "cogat-pc-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Novel, poem, play",
+      "promptSpeech": "Which word belongs with Novel, poem, play?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "essay"
+        },
+        {
+          "id": "b",
+          "text": "author"
+        },
+        {
+          "id": "c",
+          "text": "library"
+        },
+        {
+          "id": "d",
+          "text": "page"
+        },
+        {
+          "id": "e",
+          "text": "reading"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A novel, a poem and a play are all kinds of writing. An essay is too. An author writes them and a library keeps them.",
+      "strategy": "Kinds of a thing, not people or places connected to it."
+    },
+    {
+      "id": "cogat-pc-g4-2",
+      "grade": 4,
+      "difficulty": 3,
       "prompt": "Predict, forecast, foresee",
       "promptSpeech": "Which word belongs with predict, forecast and foresee?",
       "choices": [
-        { "id": "a", "text": "anticipate" }, { "id": "b", "text": "observe" },
-        { "id": "c", "text": "remember" }, { "id": "d", "text": "record" }, { "id": "e", "text": "weather" }
+        {
+          "id": "a",
+          "text": "anticipate"
+        },
+        {
+          "id": "b",
+          "text": "observe"
+        },
+        {
+          "id": "c",
+          "text": "remember"
+        },
+        {
+          "id": "d",
+          "text": "record"
+        },
+        {
+          "id": "e",
+          "text": "weather"
+        }
       ],
       "answer": "a",
       "explanation": "Predict, forecast and foresee all mean saying what will happen in the future. Anticipate means the same. Observe and record are about now, and remember is about the past.",
       "strategy": "When words are close in meaning, check WHEN they point: past, present or future."
     },
     {
-      "id": "cogat-pc-g4-3", "grade": 4, "difficulty": 3,
+      "id": "cogat-pc-g4-3",
+      "grade": 4,
+      "difficulty": 3,
       "prompt": "Peninsula, island, cape",
       "promptSpeech": "Which word belongs with peninsula, island and cape?",
       "choices": [
-        { "id": "a", "text": "isthmus" }, { "id": "b", "text": "ocean" },
-        { "id": "c", "text": "lake" }, { "id": "d", "text": "map" }, { "id": "e", "text": "sailor" }
+        {
+          "id": "a",
+          "text": "isthmus"
+        },
+        {
+          "id": "b",
+          "text": "ocean"
+        },
+        {
+          "id": "c",
+          "text": "lake"
+        },
+        {
+          "id": "d",
+          "text": "map"
+        },
+        {
+          "id": "e",
+          "text": "sailor"
+        }
       ],
       "answer": "a",
       "explanation": "A peninsula, an island and a cape are all pieces of land surrounded or nearly surrounded by water. An isthmus is a narrow strip of land, so it belongs. An ocean and a lake are water, not land.",
       "strategy": "Land features and water features are two different groups. Sort them first."
     },
     {
-      "id": "cogat-pc-g4-4", "grade": 4, "difficulty": 4,
+      "id": "cogat-pc-g4-8",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Erupt, quake, flood",
+      "promptSpeech": "Which word belongs with Erupt, quake, flood?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "drought"
+        },
+        {
+          "id": "b",
+          "text": "volcano"
+        },
+        {
+          "id": "c",
+          "text": "damage"
+        },
+        {
+          "id": "d",
+          "text": "rescue"
+        },
+        {
+          "id": "e",
+          "text": "weather"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Erupting, quaking and flooding are all natural events that happen to the earth. A drought is too. A volcano is the place an eruption happens.",
+      "strategy": "Events and the places they happen are different groups."
+    },
+    {
+      "id": "cogat-pc-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Astronomer, geologist, botanist",
+      "promptSpeech": "Which word belongs with Astronomer, geologist, botanist?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "chemist"
+        },
+        {
+          "id": "b",
+          "text": "telescope"
+        },
+        {
+          "id": "c",
+          "text": "laboratory"
+        },
+        {
+          "id": "d",
+          "text": "research"
+        },
+        {
+          "id": "e",
+          "text": "science"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An astronomer, a geologist and a botanist are all scientists. A chemist is too. A telescope is a tool and a laboratory is a place.",
+      "strategy": "The -ist ending often marks a person who studies something."
+    },
+    {
+      "id": "cogat-pc-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Cotton, linen, silk",
+      "promptSpeech": "Which word belongs with Cotton, linen, silk?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "wool"
+        },
+        {
+          "id": "b",
+          "text": "shirt"
+        },
+        {
+          "id": "c",
+          "text": "weave"
+        },
+        {
+          "id": "d",
+          "text": "factory"
+        },
+        {
+          "id": "e",
+          "text": "fabric"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Cotton, linen and silk are all natural fibres cloth is made from. Wool is too. A shirt is the finished thing and choice e names the group.",
+      "strategy": "Material, process, place and product are four different groups."
+    },
+    {
+      "id": "cogat-pc-g4-4",
+      "grade": 4,
+      "difficulty": 4,
       "prompt": "Nurse, pilot, plumber",
       "promptSpeech": "Which word belongs with nurse, pilot and plumber?",
       "choices": [
-        { "id": "a", "text": "electrician" }, { "id": "b", "text": "hospital" },
-        { "id": "c", "text": "uniform" }, { "id": "d", "text": "salary" }, { "id": "e", "text": "training" }
+        {
+          "id": "a",
+          "text": "electrician"
+        },
+        {
+          "id": "b",
+          "text": "hospital"
+        },
+        {
+          "id": "c",
+          "text": "uniform"
+        },
+        {
+          "id": "d",
+          "text": "salary"
+        },
+        {
+          "id": "e",
+          "text": "training"
+        }
       ],
       "answer": "a",
       "explanation": "A nurse, a pilot and a plumber are all jobs people do. An electrician is a job too. A hospital is a place, a uniform is what some of them wear, a salary is what they earn, and training is how they learn.",
       "strategy": "Jobs, places, things and ideas are different kinds of word. Match kind to kind."
     },
     {
-      "id": "cogat-pc-g4-5", "grade": 4, "difficulty": 5,
+      "id": "cogat-pc-g4-11",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Sonnet, haiku, limerick",
+      "promptSpeech": "Which word belongs with Sonnet, haiku, limerick?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "ballad"
+        },
+        {
+          "id": "b",
+          "text": "poem"
+        },
+        {
+          "id": "c",
+          "text": "rhyme"
+        },
+        {
+          "id": "d",
+          "text": "verse"
+        },
+        {
+          "id": "e",
+          "text": "stanza"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A sonnet, a haiku and a limerick are all named forms of poem. A ballad is another one. Choice b names the group and a stanza is a part of one.",
+      "strategy": "Named types of a thing, not the thing itself and not its parts."
+    },
+    {
+      "id": "cogat-pc-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Migrate, hibernate, moult",
+      "promptSpeech": "Which word belongs with Migrate, hibernate, moult?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "nest"
+        },
+        {
+          "id": "b",
+          "text": "bird"
+        },
+        {
+          "id": "c",
+          "text": "winter"
+        },
+        {
+          "id": "d",
+          "text": "survive"
+        },
+        {
+          "id": "e",
+          "text": "instinct"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Migrating, hibernating, moulting and nesting are all things animals DO at certain times of year. A bird is an animal and winter is a season.",
+      "strategy": "Verbs group with verbs. Nouns group with nouns."
+    },
+    {
+      "id": "cogat-pc-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Delta, estuary, tributary",
+      "promptSpeech": "Which word belongs with Delta, estuary, tributary?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "source"
+        },
+        {
+          "id": "b",
+          "text": "river"
+        },
+        {
+          "id": "c",
+          "text": "water"
+        },
+        {
+          "id": "d",
+          "text": "bank"
+        },
+        {
+          "id": "e",
+          "text": "flow"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A delta, an estuary and a tributary are all named parts of a river system. So is the source. A river is the whole thing.",
+      "strategy": "Parts of a whole. Do not pick the whole itself."
+    },
+    {
+      "id": "cogat-pc-g4-5",
+      "grade": 4,
+      "difficulty": 5,
       "prompt": "Second, minute, hour",
       "promptSpeech": "Which word belongs with second, minute and hour?",
       "choices": [
-        { "id": "a", "text": "day" }, { "id": "b", "text": "clock" },
-        { "id": "c", "text": "time" }, { "id": "d", "text": "morning" }, { "id": "e", "text": "watch" }
+        {
+          "id": "a",
+          "text": "day"
+        },
+        {
+          "id": "b",
+          "text": "clock"
+        },
+        {
+          "id": "c",
+          "text": "time"
+        },
+        {
+          "id": "d",
+          "text": "morning"
+        },
+        {
+          "id": "e",
+          "text": "watch"
+        }
       ],
       "answer": "a",
       "explanation": "A second, a minute and an hour are units used to measure time, each bigger than the last. A day is the next unit up. Choice c names the group. Choice d, morning, is a part of a day but it is not a fixed unit of measurement.",
       "strategy": "Units of measurement come in a ladder. Find where the ladder goes next."
+    },
+    {
+      "id": "cogat-pc-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Cube, prism, cylinder",
+      "promptSpeech": "Which word belongs with Cube, prism, cylinder?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "pyramid"
+        },
+        {
+          "id": "b",
+          "text": "square"
+        },
+        {
+          "id": "c",
+          "text": "circle"
+        },
+        {
+          "id": "d",
+          "text": "triangle"
+        },
+        {
+          "id": "e",
+          "text": "area"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cube, a prism and a cylinder are all solid shapes you could hold. A pyramid is solid too. A square, a circle and a triangle are flat.",
+      "strategy": "Flat shapes and solid shapes are two different families."
+    },
+    {
+      "id": "cogat-pc-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Century, decade, millennium",
+      "promptSpeech": "Which word belongs with Century, decade, millennium?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "year"
+        },
+        {
+          "id": "b",
+          "text": "history"
+        },
+        {
+          "id": "c",
+          "text": "calendar"
+        },
+        {
+          "id": "d",
+          "text": "time"
+        },
+        {
+          "id": "e",
+          "text": "past"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A century, a decade and a millennium are all units of time made of many years. A year is a unit of time too. Choice d names the group.",
+      "strategy": "Units of measurement come in a ladder. All the members are rungs on it."
+    },
+    {
+      "id": "cogat-pc-g4-16",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Antidote, vaccine, remedy",
+      "promptSpeech": "Which word belongs with Antidote, vaccine, remedy?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "cure"
+        },
+        {
+          "id": "b",
+          "text": "venom"
+        },
+        {
+          "id": "c",
+          "text": "illness"
+        },
+        {
+          "id": "d",
+          "text": "doctor"
+        },
+        {
+          "id": "e",
+          "text": "hospital"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An antidote, a vaccine and a remedy all make you better or protect you. A cure does too. Venom and illness do the opposite.",
+      "strategy": "Sort the helping words from the harming words."
+    },
+    {
+      "id": "cogat-pc-g4-17",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Peninsula, plateau, canyon",
+      "promptSpeech": "Which word belongs with Peninsula, plateau, canyon?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "valley"
+        },
+        {
+          "id": "b",
+          "text": "river"
+        },
+        {
+          "id": "c",
+          "text": "erosion"
+        },
+        {
+          "id": "d",
+          "text": "map"
+        },
+        {
+          "id": "e",
+          "text": "altitude"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A peninsula, a plateau and a canyon are all landforms. A valley is one too. A river carves a canyon and erosion is the process that makes them.",
+      "strategy": "The thing itself, not the process that shaped it."
     }
   ]
 }

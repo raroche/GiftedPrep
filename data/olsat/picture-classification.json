@@ -49,6 +49,45 @@
       "strategy": "Name the group first: things you play. Then the odd one is obvious."
     },
     {
+      "id": "olsat-pcl-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🪑"
+          },
+          "label": "a chair"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍎"
+          },
+          "label": "an apple"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍌"
+          },
+          "label": "a banana"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍇"
+          },
+          "label": "grapes"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An apple, a banana and grapes are all fruit you can eat. A chair is furniture.",
+      "strategy": "Name the group first: these are fruit."
+    },
+    {
       "id": "olsat-pcl-g1-2",
       "grade": 1,
       "difficulty": 2,
@@ -125,6 +164,84 @@
       "answer": "a",
       "explanation": "A dog, a cat and a rabbit are all animals people keep as pets. A lion lives in the wild.",
       "strategy": "The group is not just animals. It is pets. Make the group name as exact as you can."
+    },
+    {
+      "id": "olsat-pcl-g1-7",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🚗"
+          },
+          "label": "a car"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🚌"
+          },
+          "label": "a bus"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🚲"
+          },
+          "label": "a bicycle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A car, a bus and a bicycle all carry you from place to place. A tree stays where it is.",
+      "strategy": "Ask which ones move you about."
+    },
+    {
+      "id": "olsat-pcl-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "👟"
+          },
+          "label": "a shoe"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "👁️"
+          },
+          "label": "an eye"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👂"
+          },
+          "label": "an ear"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "👃"
+          },
+          "label": "a nose"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An eye, an ear and a nose are all parts of your face. A shoe is something you wear.",
+      "strategy": "Body part or clothing. Two different groups."
     },
     {
       "id": "olsat-pcl-g1-4",
@@ -205,6 +322,357 @@
       "strategy": "Things that go WITH a group are not always IN the group."
     },
     {
+      "id": "olsat-pcl-g1-9",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐦"
+          },
+          "label": "a bird"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🦅"
+          },
+          "label": "an eagle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🦆"
+          },
+          "label": "a duck"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A bird, an eagle and a duck are all birds with feathers. A fish has scales and lives in water.",
+      "strategy": "Look for the one that lives somewhere different."
+    },
+    {
+      "id": "olsat-pcl-g1-10",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "☀️"
+          },
+          "label": "the sun"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌧️"
+          },
+          "label": "rain"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "❄️"
+          },
+          "label": "snow"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⛈️"
+          },
+          "label": "a storm"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Rain, snow and a storm are all wet weather. The sun is not wet.",
+      "strategy": "Wet weather and dry weather are two groups."
+    },
+    {
+      "id": "olsat-pcl-g1-11",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌻"
+          },
+          "label": "a sunflower"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐈"
+          },
+          "label": "a cat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐕"
+          },
+          "label": "a dog"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐇"
+          },
+          "label": "a rabbit"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cat, a dog and a rabbit are all animals people keep as pets. A sunflower is a plant.",
+      "strategy": "Animal or plant. Check what is alive and moves."
+    },
+    {
+      "id": "olsat-pcl-g1-12",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧦"
+          },
+          "label": "a sock"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍽️"
+          },
+          "label": "a plate"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🥄"
+          },
+          "label": "a spoon"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍴"
+          },
+          "label": "a fork"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A plate, a spoon and a fork are all things you use at a meal. A sock is something you wear.",
+      "strategy": "Ask where you would find each one: on the table or in a drawer of clothes."
+    },
+    {
+      "id": "olsat-pcl-g1-13",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🥕"
+          },
+          "label": "a carrot"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍎"
+          },
+          "label": "an apple"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍓"
+          },
+          "label": "a strawberry"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍇"
+          },
+          "label": "grapes"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An apple, a strawberry and grapes are fruit. A carrot is a vegetable.",
+      "strategy": "Fruit and vegetables are different groups."
+    },
+    {
+      "id": "olsat-pcl-g1-14",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "⛰️"
+          },
+          "label": "a mountain"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐬"
+          },
+          "label": "a dolphin"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐙"
+          },
+          "label": "an octopus"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A dolphin, a fish and an octopus all live in the sea and are alive. A mountain is not alive.",
+      "strategy": "Alive or not alive is a fast way to split a group."
+    },
+    {
+      "id": "olsat-pcl-g1-15",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🎧"
+          },
+          "label": "headphones"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🥁"
+          },
+          "label": "a drum"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🎺"
+          },
+          "label": "a trumpet"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎻"
+          },
+          "label": "a violin"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A drum, a trumpet and a violin are all instruments you play. Headphones are for listening.",
+      "strategy": "Everything here is about music. The rule is narrower: things you PLAY."
+    },
+    {
+      "id": "olsat-pcl-g1-16",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🥚"
+          },
+          "label": "an egg"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐤"
+          },
+          "label": "a chick"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐔"
+          },
+          "label": "a hen"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐓"
+          },
+          "label": "a rooster"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A chick, a hen and a rooster are all living birds. An egg has not hatched yet.",
+      "strategy": "Look for the one at a different stage of life."
+    },
+    {
+      "id": "olsat-pcl-g1-17",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌵"
+          },
+          "label": "a cactus"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌊"
+          },
+          "label": "the sea"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏊"
+          },
+          "label": "a swimming pool"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "💧"
+          },
+          "label": "a water drop"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sea, a pool and a drop are all water. A cactus is a plant that grows where there is almost no water.",
+      "strategy": "When most answers share one thing, find the one that does not."
+    },
+    {
       "id": "olsat-pcl-g2-1",
       "grade": 2,
       "difficulty": 2,
@@ -242,6 +710,84 @@
       "answer": "a",
       "explanation": "A shark, a dolphin and an octopus all live in the sea and are alive. An anchor goes in the sea but it is not alive.",
       "strategy": "Alive or not alive is a quick way to split a group."
+    },
+    {
+      "id": "olsat-pcl-g2-6",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🪨"
+          },
+          "label": "a rock"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌻"
+          },
+          "label": "a sunflower"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌵"
+          },
+          "label": "a cactus"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A sunflower, a tree and a cactus are all plants that grow. A rock does not grow.",
+      "strategy": "Living and not living."
+    },
+    {
+      "id": "olsat-pcl-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐧"
+          },
+          "label": "a penguin"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦅"
+          },
+          "label": "an eagle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🦆"
+          },
+          "label": "a duck"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🦉"
+          },
+          "label": "an owl"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An eagle, a duck and an owl can all fly. A penguin is a bird but it cannot fly.",
+      "strategy": "When every answer fits, make the group narrower."
     },
     {
       "id": "olsat-pcl-g2-2",
@@ -361,6 +907,162 @@
       "strategy": "Look for the one that is at a different stage of life."
     },
     {
+      "id": "olsat-pcl-g2-8",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧊"
+          },
+          "label": "an ice cube"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🔥"
+          },
+          "label": "fire"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "☀️"
+          },
+          "label": "the sun"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🕯️"
+          },
+          "label": "a candle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fire, the sun and a candle are all hot and give off heat. An ice cube is cold.",
+      "strategy": "Hot and cold splits the list straight away."
+    },
+    {
+      "id": "olsat-pcl-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐄"
+          },
+          "label": "a cow"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦁"
+          },
+          "label": "a lion"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐅"
+          },
+          "label": "a tiger"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐆"
+          },
+          "label": "a leopard"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A lion, a tiger and a leopard are all big wild cats. A cow is a farm animal.",
+      "strategy": "Wild and tame are two different groups."
+    },
+    {
+      "id": "olsat-pcl-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "📄"
+          },
+          "label": "paper"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "✏️"
+          },
+          "label": "a pencil"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🖊️"
+          },
+          "label": "a pen"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🖍️"
+          },
+          "label": "a crayon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A pencil, a pen and a crayon all make marks. Paper is what you mark on.",
+      "strategy": "Tool and surface are different groups."
+    },
+    {
+      "id": "olsat-pcl-g2-11",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧀"
+          },
+          "label": "cheese"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍎"
+          },
+          "label": "an apple"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍌"
+          },
+          "label": "a banana"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍇"
+          },
+          "label": "grapes"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An apple, a banana and grapes all grow on plants. Cheese comes from an animal.",
+      "strategy": "Ask where each food comes from."
+    },
+    {
       "id": "olsat-pcl-g2-5",
       "grade": 2,
       "difficulty": 4,
@@ -369,35 +1071,269 @@
         {
           "id": "a",
           "figure": {
-            "text": "🐧"
+            "text": "🚂"
           },
-          "label": "a penguin"
+          "label": "a train"
         },
         {
           "id": "b",
+          "figure": {
+            "text": "✈️"
+          },
+          "label": "a plane"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🚁"
+          },
+          "label": "a helicopter"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🚀"
+          },
+          "label": "a rocket"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A plane, a helicopter and a rocket all travel through the air. A train runs along the ground on rails.",
+      "strategy": "Air, land and water are three different places to travel."
+    },
+    {
+      "id": "olsat-pcl-g2-12",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🚗"
+          },
+          "label": "a car"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⛵"
+          },
+          "label": "a sailboat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🚤"
+          },
+          "label": "a speedboat"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🛶"
+          },
+          "label": "a canoe"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A sailboat, a speedboat and a canoe all travel on water. A car travels on roads.",
+      "strategy": "Where does it travel: water, road or air?"
+    },
+    {
+      "id": "olsat-pcl-g2-13",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌙"
+          },
+          "label": "the moon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌻"
+          },
+          "label": "a flower"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌵"
+          },
+          "label": "a cactus"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A tree, a flower and a cactus are all plants that grow in the ground. The moon is in the sky.",
+      "strategy": "Ask where you would find each one."
+    },
+    {
+      "id": "olsat-pcl-g2-14",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🎨"
+          },
+          "label": "a paint palette"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⚽"
+          },
+          "label": "a soccer ball"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏀"
+          },
+          "label": "a basketball"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎾"
+          },
+          "label": "a tennis ball"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A soccer ball, a basketball and a tennis ball are all balls used in sport. A paint palette is for making art.",
+      "strategy": "Sport and art are two different groups."
+    },
+    {
+      "id": "olsat-pcl-g2-15",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🦇"
+          },
+          "label": "a bat"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐦"
+          },
+          "label": "a bird"
+        },
+        {
+          "id": "c",
           "figure": {
             "text": "🦅"
           },
           "label": "an eagle"
         },
         {
+          "id": "d",
+          "figure": {
+            "text": "🦜"
+          },
+          "label": "a parrot"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A bird, an eagle and a parrot all have feathers. A bat flies too, but it has fur and is not a bird.",
+      "strategy": "Flying is not the rule here. Feathers are."
+    },
+    {
+      "id": "olsat-pcl-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🥄"
+          },
+          "label": "a spoon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🔨"
+          },
+          "label": "a hammer"
+        },
+        {
           "id": "c",
           "figure": {
-            "text": "🦉"
+            "text": "🪚"
           },
-          "label": "an owl"
+          "label": "a saw"
         },
         {
           "id": "d",
           "figure": {
-            "text": "🦆"
+            "text": "🪛"
           },
-          "label": "a duck"
+          "label": "a screwdriver"
         }
       ],
       "answer": "a",
-      "explanation": "All four are birds. But an eagle, an owl and a duck can all fly. A penguin cannot. The group is birds that fly.",
-      "strategy": "When every answer fits your group, make the group narrower until only one is left out."
+      "explanation": "A hammer, a saw and a screwdriver are all tools for building. A spoon is for eating.",
+      "strategy": "Building tools and kitchen tools are different groups."
+    },
+    {
+      "id": "olsat-pcl-g2-17",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐢"
+          },
+          "label": "a turtle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🦈"
+          },
+          "label": "a shark"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐠"
+          },
+          "label": "a tropical fish"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A fish, a shark and a tropical fish are all fish that breathe underwater with gills. A turtle lives in water too, but it comes up to breathe air.",
+      "strategy": "Living in water is not the same as being a fish."
     }
   ]
 }

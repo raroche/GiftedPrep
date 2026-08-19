@@ -345,7 +345,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "The sentence is: The match was cancelled because of the storm. The last word is storm, beginning with s.",
+      "explanation": "The sentence is: The match was canceled because of the storm. The last word is storm, beginning with s.",
       "strategy": "Because of always introduces the reason, and the reason usually comes last."
     },
     {
@@ -817,7 +817,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "The sentence is: The game was cancelled because of the rain. The last word is rain, beginning with r.",
+      "explanation": "The sentence is: The game was canceled because of the rain. The last word is rain, beginning with r.",
       "strategy": "Because of always introduces the reason, and the reason usually comes last."
     },
     {

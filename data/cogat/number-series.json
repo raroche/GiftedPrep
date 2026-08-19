@@ -959,7 +959,7 @@
       ],
       "answer": "a",
       "explanation": "These are the seven times table. Each number is seven more than the last. Thirty-five plus seven is forty-two.",
-      "strategy": "Recognising a times table saves time. Seven, fourteen, twenty-one, twenty-eight, thirty-five, forty-two."
+      "strategy": "Recognizing a times table saves time. Seven, fourteen, twenty-one, twenty-eight, thirty-five, forty-two."
     },
     {
       "id": "cogat-ns-g4-2",
@@ -1145,6 +1145,2163 @@
       "answer": "a",
       "explanation": "These are the prime numbers: numbers that can only be divided by one and by themselves. After thirteen comes seventeen, because fourteen, fifteen and sixteen can all be split into equal groups. Choice b, fifteen, is three groups of five.",
       "strategy": "When the gaps look random, check whether the numbers themselves are special: primes, squares, or a times table with gaps."
+    },
+    {
+      "id": "cogat-ns-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which row of beads comes next?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Three rows of pink beads: four beads, five beads, six beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "pink",
+            "n": 4
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "pink",
+            "n": 5
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "pink",
+            "n": 6
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "pink",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven beads"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "pink",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine beads"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "pink",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six beads"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "pink",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four beads"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four, five, six. Each row has one more bead than the row above. Six and one more is seven. Choice c, six, just copies the row above it.",
+      "strategy": "Say the number of beads out loud as you go down the rows."
+    },
+    {
+      "id": "cogat-ns-g1-7",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which row of beads comes next?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Three rows of red beads: six beads, five beads, four beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "red",
+            "n": 6
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "red",
+            "n": 5
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "red",
+            "n": 4
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three beads"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five beads"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two beads"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six beads"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six, five, four. One bead goes away each row. Four take away one is three. Choice c, two, takes away two beads instead of one.",
+      "strategy": "If the rows are getting shorter, work out how many beads disappear each time."
+    },
+    {
+      "id": "cogat-ns-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "numberline",
+        "alt": "A number line showing two, four, six, eight and a missing number.",
+        "min": 0,
+        "max": 10,
+        "step": 2,
+        "marks": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "missingAt": 5
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "10"
+        },
+        {
+          "id": "b",
+          "text": "9"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        },
+        {
+          "id": "d",
+          "text": "11"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The marked numbers jump by two: two, four, six, eight. Eight and two more is ten. Choice b, nine, is one step past eight, not a whole jump.",
+      "strategy": "Measure one jump on the number line, then make exactly the same jump again."
+    },
+    {
+      "id": "cogat-ns-g1-9",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "How many beads are in the next row?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Three rows of green beads: two beads, five beads, eight beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "green",
+            "n": 2
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "green",
+            "n": 5
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "green",
+            "n": 8
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "11"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        },
+        {
+          "id": "d",
+          "text": "9"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two, five, eight. Three beads are added each row. Eight and three more is eleven. Choice b, ten, only added two.",
+      "strategy": "Count the jump from row one to row two, then check the same jump works to row three."
+    },
+    {
+      "id": "cogat-ns-g1-10",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "How many beads are in the next row?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Three rows of yellow beads: one bead, five beads, nine beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "yellow",
+            "n": 1
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "yellow",
+            "n": 5
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "yellow",
+            "n": 9
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "13"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "14"
+        },
+        {
+          "id": "d",
+          "text": "10"
+        }
+      ],
+      "answer": "a",
+      "explanation": "One, five, nine. Four beads are added each row. Nine and four more is thirteen. Choice d, ten, adds only one bead.",
+      "strategy": "A big jump is still a jump. Work out its size once and keep using it."
+    },
+    {
+      "id": "cogat-ns-g1-11",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which row of beads comes next?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Three rows of orange beads: eight beads, six beads, four beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "orange",
+            "n": 8
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "orange",
+            "n": 6
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "orange",
+            "n": 4
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two beads"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three beads"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "orange",
+                "n": 1
+              }
+            ]
+          },
+          "label": "one bead"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six beads"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eight, six, four. Two beads are taken away each row. Four take away two is two. Choice b, three, takes away only one.",
+      "strategy": "Check the gap twice before you answer. Eight to six is two, and six to four is two."
+    },
+    {
+      "id": "cogat-ns-g1-12",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which row of beads comes next?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Five rows of purple beads: two beads, five beads, four beads, seven beads, six beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "purple",
+            "n": 2
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "purple",
+            "n": 5
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "purple",
+            "n": 4
+          },
+          {
+            "label": "row 4",
+            "s": "circle",
+            "c": "purple",
+            "n": 7
+          },
+          {
+            "label": "row 5",
+            "s": "circle",
+            "c": "purple",
+            "n": 6
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "purple",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine beads"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five beads"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "purple",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight beads"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three beads"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The rows do two things by turns: add three, then take away one. Two, five, four, seven, six. A take away has just happened, so an add comes next, and six and three more is nine. Choice b, five, takes one away again.",
+      "strategy": "When the rows go up and down, two rules are taking turns. Find both of them."
+    },
+    {
+      "id": "cogat-ns-g1-13",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which row of beads comes next?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Six rows of teal beads: one bead, six beads, two beads, six beads, three beads, six beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "teal",
+            "n": 1
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "teal",
+            "n": 6
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "teal",
+            "n": 2
+          },
+          {
+            "label": "row 4",
+            "s": "circle",
+            "c": "teal",
+            "n": 6
+          },
+          {
+            "label": "row 5",
+            "s": "circle",
+            "c": "teal",
+            "n": 3
+          },
+          {
+            "label": "row 6",
+            "s": "circle",
+            "c": "teal",
+            "n": 6
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four beads"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six beads"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "teal",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven beads"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five beads"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Every other row has six beads and never changes. The rows in between go one, two, three, so the next one has four. Choice b, six, copies the row just above.",
+      "strategy": "When one row keeps repeating, read only the rows in between. Two patterns hide in one picture."
+    },
+    {
+      "id": "cogat-ns-g1-14",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "How many beads are in the next row?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Three rows of blue beads: one bead, three beads, six beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "blue",
+            "n": 1
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "blue",
+            "n": 3
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "blue",
+            "n": 6
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "10"
+        },
+        {
+          "id": "b",
+          "text": "9"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        },
+        {
+          "id": "d",
+          "text": "8"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The jumps get bigger by one each time: two beads are added, then three. The next jump is four, so six and four more is ten. Choice b, nine, adds three again.",
+      "strategy": "If the jumps keep growing, work out the jumps first and find the pattern in them."
+    },
+    {
+      "id": "cogat-ns-g1-15",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which row of beads comes next?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Six rows of green beads: one bead, nine beads, two beads, eight beads, three beads, seven beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "green",
+            "n": 1
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "green",
+            "n": 9
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "green",
+            "n": 2
+          },
+          {
+            "label": "row 4",
+            "s": "circle",
+            "c": "green",
+            "n": 8
+          },
+          {
+            "label": "row 5",
+            "s": "circle",
+            "c": "green",
+            "n": 3
+          },
+          {
+            "label": "row 6",
+            "s": "circle",
+            "c": "green",
+            "n": 7
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four beads"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six beads"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five beads"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "pictograph",
+            "rows": [
+              {
+                "label": "",
+                "s": "circle",
+                "c": "green",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight beads"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two patterns take turns. One goes one, two, three and grows by one. The other goes nine, eight, seven and shrinks by one. It is the growing pattern's turn, so four comes next. Choice b, six, carries on the shrinking rows instead.",
+      "strategy": "Read the odd rows as one list and the even rows as another, then work out whose turn it is."
+    },
+    {
+      "id": "cogat-ns-g2-6",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "How many beads are in the next row?",
+      "figure": {
+        "kind": "pictograph",
+        "alt": "Four rows of orange beads: two beads, four beads, six beads, eight beads.",
+        "rows": [
+          {
+            "label": "row 1",
+            "s": "circle",
+            "c": "orange",
+            "n": 2
+          },
+          {
+            "label": "row 2",
+            "s": "circle",
+            "c": "orange",
+            "n": 4
+          },
+          {
+            "label": "row 3",
+            "s": "circle",
+            "c": "orange",
+            "n": 6
+          },
+          {
+            "label": "row 4",
+            "s": "circle",
+            "c": "orange",
+            "n": 8
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "10"
+        },
+        {
+          "id": "b",
+          "text": "9"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        },
+        {
+          "id": "d",
+          "text": "11"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two, four, six, eight. Two beads are added each row. Eight and two more is ten. Choice b, nine, adds only one.",
+      "strategy": "Counting by twos: two, four, six, eight, ten."
+    },
+    {
+      "id": "cogat-ns-g2-7",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 12, 22, 32, 42, question mark.",
+        "rows": [
+          [
+            "12",
+            "22",
+            "32",
+            "42",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "52"
+        },
+        {
+          "id": "b",
+          "text": "62"
+        },
+        {
+          "id": "c",
+          "text": "50"
+        },
+        {
+          "id": "d",
+          "text": "43"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is ten more than the one before. Forty-two and ten more is fifty-two. Choice b, sixty-two, jumps twenty instead of ten.",
+      "strategy": "Check the gap between every pair, not just the first pair."
+    },
+    {
+      "id": "cogat-ns-g2-8",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "numberline",
+        "alt": "A number line showing four, eight, twelve, sixteen, twenty and a missing number.",
+        "min": 0,
+        "max": 24,
+        "step": 4,
+        "marks": [
+          4,
+          8,
+          12,
+          16,
+          20
+        ],
+        "missingAt": 6
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "24"
+        },
+        {
+          "id": "b",
+          "text": "22"
+        },
+        {
+          "id": "c",
+          "text": "26"
+        },
+        {
+          "id": "d",
+          "text": "25"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The marked numbers go four, eight, twelve, sixteen, twenty, so each jump is four. Twenty and four more is twenty-four. Choice b, twenty-two, is only half a jump.",
+      "strategy": "Measure one jump on the number line and make the same jump again."
+    },
+    {
+      "id": "cogat-ns-g2-9",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 48, 43, 38, 33, question mark.",
+        "rows": [
+          [
+            "48",
+            "43",
+            "38",
+            "33",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "28"
+        },
+        {
+          "id": "b",
+          "text": "27"
+        },
+        {
+          "id": "c",
+          "text": "29"
+        },
+        {
+          "id": "d",
+          "text": "23"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is five less than the one before. Thirty-three take away five is twenty-eight. Choice d, twenty-three, takes away ten instead of five.",
+      "strategy": "Write the gap under each pair. If every gap is the same, use it once more."
+    },
+    {
+      "id": "cogat-ns-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 4, 8, 16, 32, question mark.",
+        "rows": [
+          [
+            "4",
+            "8",
+            "16",
+            "32",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "64"
+        },
+        {
+          "id": "b",
+          "text": "48"
+        },
+        {
+          "id": "c",
+          "text": "40"
+        },
+        {
+          "id": "d",
+          "text": "36"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is double the one before. Thirty-two doubled is sixty-four. Choice b, forty-eight, adds sixteen again, but the jumps are growing, not staying the same.",
+      "strategy": "If the gaps get bigger every time, try doubling instead of adding."
+    },
+    {
+      "id": "cogat-ns-g2-11",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 80, 40, 20, 10, question mark.",
+        "rows": [
+          [
+            "80",
+            "40",
+            "20",
+            "10",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "5"
+        },
+        {
+          "id": "b",
+          "text": "0"
+        },
+        {
+          "id": "c",
+          "text": "8"
+        },
+        {
+          "id": "d",
+          "text": "15"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is half of the one before. Half of ten is five. Choice b, zero, takes ten away again, but the jumps are shrinking, not staying the same.",
+      "strategy": "Say the halves out loud to check: eighty, forty, twenty, ten, five."
+    },
+    {
+      "id": "cogat-ns-g2-12",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 3, 9, 7, 13, 11, question mark.",
+        "rows": [
+          [
+            "3",
+            "9",
+            "7",
+            "13",
+            "11",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "17"
+        },
+        {
+          "id": "b",
+          "text": "9"
+        },
+        {
+          "id": "c",
+          "text": "15"
+        },
+        {
+          "id": "d",
+          "text": "19"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two rules take turns: add six, then take away two. Eleven came from a take away, so it is the adding turn now, and eleven and six is seventeen. Choice b, nine, takes two away again.",
+      "strategy": "Up, down, up, down means two rules. Work out both, then check whose turn it is."
+    },
+    {
+      "id": "cogat-ns-g2-13",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 1, 3, 9, 27, question mark.",
+        "rows": [
+          [
+            "1",
+            "3",
+            "9",
+            "27",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "81"
+        },
+        {
+          "id": "b",
+          "text": "54"
+        },
+        {
+          "id": "c",
+          "text": "45"
+        },
+        {
+          "id": "d",
+          "text": "36"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is three times the one before: one, three, nine, twenty-seven. Twenty-seven times three is eighty-one. Choice b, fifty-four, doubles instead of tripling.",
+      "strategy": "When the gaps go two, six, then eighteen, the rule is multiplying, not adding."
+    },
+    {
+      "id": "cogat-ns-g2-14",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 5, 10, 6, 20, 7, 30, question mark.",
+        "rows": [
+          [
+            "5",
+            "10",
+            "6",
+            "20",
+            "7",
+            "30",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "40"
+        },
+        {
+          "id": "c",
+          "text": "9"
+        },
+        {
+          "id": "d",
+          "text": "35"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two lists are woven together. The first, third and fifth numbers are five, six, seven. The second, fourth and sixth are ten, twenty, thirty. It is the first list's turn, so eight comes next. Choice b, forty, carries on the other list.",
+      "strategy": "Circle every other number and read them on their own. Then do the same with the ones you skipped."
+    },
+    {
+      "id": "cogat-ns-g2-15",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What number comes next?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 2, 4, 5, 10, 11, 22, question mark.",
+        "rows": [
+          [
+            "2",
+            "4",
+            "5",
+            "10",
+            "11",
+            "22",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "23"
+        },
+        {
+          "id": "b",
+          "text": "44"
+        },
+        {
+          "id": "c",
+          "text": "24"
+        },
+        {
+          "id": "d",
+          "text": "21"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The rule takes turns: double, then add one. Two doubled is four, four and one is five, five doubled is ten, ten and one is eleven, eleven doubled is twenty-two. Now it is the add one turn, so the answer is twenty-three. Choice b, forty-four, doubles when it should add.",
+      "strategy": "Write the operation above each gap. If they alternate, keep track of which one comes next."
+    },
+    {
+      "id": "cogat-ns-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 9, 18, 27, 36, 45, question mark.",
+        "rows": [
+          [
+            "9",
+            "18",
+            "27",
+            "36",
+            "45",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "54"
+        },
+        {
+          "id": "b",
+          "text": "55"
+        },
+        {
+          "id": "c",
+          "text": "63"
+        },
+        {
+          "id": "d",
+          "text": "53"
+        },
+        {
+          "id": "e",
+          "text": "50"
+        }
+      ],
+      "answer": "a",
+      "explanation": "These are the nine times table, so each number is nine more than the one before. Forty-five plus nine is fifty-four. Choice c, sixty-three, skips a step and lands on nine times seven.",
+      "strategy": "Recognizing a times table is faster than working out every gap."
+    },
+    {
+      "id": "cogat-ns-g3-7",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 70, 63, 56, 49, question mark.",
+        "rows": [
+          [
+            "70",
+            "63",
+            "56",
+            "49",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "42"
+        },
+        {
+          "id": "b",
+          "text": "41"
+        },
+        {
+          "id": "c",
+          "text": "43"
+        },
+        {
+          "id": "d",
+          "text": "35"
+        },
+        {
+          "id": "e",
+          "text": "44"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is seven less than the one before. Forty-nine minus seven is forty-two. Choice d, thirty-five, takes seven away twice.",
+      "strategy": "Find the step from the first pair, then check it holds for every other pair."
+    },
+    {
+      "id": "cogat-ns-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 2, 6, 18, 54, question mark.",
+        "rows": [
+          [
+            "2",
+            "6",
+            "18",
+            "54",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "162"
+        },
+        {
+          "id": "b",
+          "text": "108"
+        },
+        {
+          "id": "c",
+          "text": "72"
+        },
+        {
+          "id": "d",
+          "text": "216"
+        },
+        {
+          "id": "e",
+          "text": "90"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is three times the one before. Fifty-four times three is one hundred and sixty-two. Choice d, two hundred and sixteen, multiplies by four, and choice b only doubles.",
+      "strategy": "Divide each number by the one before it. A constant answer means the rule is multiplying."
+    },
+    {
+      "id": "cogat-ns-g3-9",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 320, 160, 80, 40, question mark.",
+        "rows": [
+          [
+            "320",
+            "160",
+            "80",
+            "40",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "20"
+        },
+        {
+          "id": "b",
+          "text": "10"
+        },
+        {
+          "id": "c",
+          "text": "30"
+        },
+        {
+          "id": "d",
+          "text": "25"
+        },
+        {
+          "id": "e",
+          "text": "35"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is half of the one before. Half of forty is twenty. Choice c, thirty, subtracts ten, but the steps are shrinking, not staying the same.",
+      "strategy": "Shrinking gaps mean dividing. Check by doubling your answer back up the series."
+    },
+    {
+      "id": "cogat-ns-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 10, 30, 25, 45, 40, question mark.",
+        "rows": [
+          [
+            "10",
+            "30",
+            "25",
+            "45",
+            "40",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "60"
+        },
+        {
+          "id": "b",
+          "text": "35"
+        },
+        {
+          "id": "c",
+          "text": "55"
+        },
+        {
+          "id": "d",
+          "text": "20"
+        },
+        {
+          "id": "e",
+          "text": "65"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two rules alternate: add twenty, then subtract five. Forty came from a subtraction, so an addition is next, and forty plus twenty is sixty. Choice b, thirty-five, subtracts five again.",
+      "strategy": "When numbers rise then fall, write the operation over each gap and look for a repeating pair."
+    },
+    {
+      "id": "cogat-ns-g3-11",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 1, 5, 25, 125, question mark.",
+        "rows": [
+          [
+            "1",
+            "5",
+            "25",
+            "125",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "625"
+        },
+        {
+          "id": "b",
+          "text": "525"
+        },
+        {
+          "id": "c",
+          "text": "250"
+        },
+        {
+          "id": "d",
+          "text": "150"
+        },
+        {
+          "id": "e",
+          "text": "130"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is five times the one before. One hundred and twenty-five times five is six hundred and twenty-five. Choice c, two hundred and fifty, only doubles.",
+      "strategy": "If a series grows very fast, test multiplying before you test adding."
+    },
+    {
+      "id": "cogat-ns-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 1, 3, 6, 10, 15, 21, question mark.",
+        "rows": [
+          [
+            "1",
+            "3",
+            "6",
+            "10",
+            "15",
+            "21",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "28"
+        },
+        {
+          "id": "b",
+          "text": "27"
+        },
+        {
+          "id": "c",
+          "text": "26"
+        },
+        {
+          "id": "d",
+          "text": "30"
+        },
+        {
+          "id": "e",
+          "text": "25"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The gaps are two, three, four, five, six, growing by one each time, so the next gap is seven and twenty-one plus seven is twenty-eight. Choice c, twenty-six, uses a gap of five again. These are the triangular numbers, the totals you get from stacking rows of one, two, three and so on.",
+      "strategy": "Write the gaps underneath the numbers. A pattern in the gaps is still a pattern."
+    },
+    {
+      "id": "cogat-ns-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 8, 3, 16, 6, 24, 9, question mark.",
+        "rows": [
+          [
+            "8",
+            "3",
+            "16",
+            "6",
+            "24",
+            "9",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "32"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "40"
+        },
+        {
+          "id": "d",
+          "text": "30"
+        },
+        {
+          "id": "e",
+          "text": "27"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two series are interleaved. The first, third and fifth numbers are eight, sixteen, twenty-four, going up in eights. The second, fourth and sixth are three, six, nine, going up in threes. It is the eights' turn, so thirty-two comes next. Choice b, twelve, carries on the threes.",
+      "strategy": "If the numbers jump about, split them into odd positions and even positions first."
+    },
+    {
+      "id": "cogat-ns-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 3, 7, 15, 31, question mark.",
+        "rows": [
+          [
+            "3",
+            "7",
+            "15",
+            "31",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "63"
+        },
+        {
+          "id": "b",
+          "text": "62"
+        },
+        {
+          "id": "c",
+          "text": "47"
+        },
+        {
+          "id": "d",
+          "text": "64"
+        },
+        {
+          "id": "e",
+          "text": "39"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is double the one before plus one. Thirty-one doubled is sixty-two, plus one is sixty-three. Choice b, sixty-two, doubles but forgets the extra one, and choice c adds sixteen again.",
+      "strategy": "When doubling is nearly right but always off by the same amount, the rule has two parts."
+    },
+    {
+      "id": "cogat-ns-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 3, 4, 6, 10, 18, question mark.",
+        "rows": [
+          [
+            "3",
+            "4",
+            "6",
+            "10",
+            "18",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "34"
+        },
+        {
+          "id": "b",
+          "text": "26"
+        },
+        {
+          "id": "c",
+          "text": "30"
+        },
+        {
+          "id": "d",
+          "text": "36"
+        },
+        {
+          "id": "e",
+          "text": "22"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The gaps are one, two, four, eight, and each gap is double the one before. The next gap is sixteen, so eighteen plus sixteen is thirty-four. Choice b, twenty-six, adds eight again.",
+      "strategy": "If the gaps are not equal, look for a rule inside the gaps themselves."
+    },
+    {
+      "id": "cogat-ns-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 125, 175, 225, 275, question mark.",
+        "rows": [
+          [
+            "125",
+            "175",
+            "225",
+            "275",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "325"
+        },
+        {
+          "id": "b",
+          "text": "315"
+        },
+        {
+          "id": "c",
+          "text": "375"
+        },
+        {
+          "id": "d",
+          "text": "300"
+        },
+        {
+          "id": "e",
+          "text": "350"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is fifty more than the one before. Two hundred and seventy-five plus fifty is three hundred and twenty-five. Choice c, three hundred and seventy-five, adds a hundred instead.",
+      "strategy": "With round steps, check the tens digit as well: it follows its own small pattern."
+    },
+    {
+      "id": "cogat-ns-g4-7",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 12, 24, 36, 48, 60, question mark.",
+        "rows": [
+          [
+            "12",
+            "24",
+            "36",
+            "48",
+            "60",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "72"
+        },
+        {
+          "id": "b",
+          "text": "70"
+        },
+        {
+          "id": "c",
+          "text": "84"
+        },
+        {
+          "id": "d",
+          "text": "66"
+        },
+        {
+          "id": "e",
+          "text": "74"
+        }
+      ],
+      "answer": "a",
+      "explanation": "These are the twelve times table, going up by twelve each time. Sixty plus twelve is seventy-two. Choice c, eighty-four, skips ahead to twelve times seven.",
+      "strategy": "Learn the twelve times table. It turns up in series questions and in clock problems."
+    },
+    {
+      "id": "cogat-ns-g4-8",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 4000, 400, 40, 4, question mark.",
+        "rows": [
+          [
+            "4000",
+            "400",
+            "40",
+            "4",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "0.4"
+        },
+        {
+          "id": "b",
+          "text": "0.04"
+        },
+        {
+          "id": "c",
+          "text": "0.44"
+        },
+        {
+          "id": "d",
+          "text": "1"
+        },
+        {
+          "id": "e",
+          "text": "0.1"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is divided by ten, which moves every digit one place to the right. Four divided by ten is zero point four. Choice b, zero point zero four, divides by a hundred.",
+      "strategy": "Dividing by ten shifts the digits one place right. The decimal point stays where it is."
+    },
+    {
+      "id": "cogat-ns-g4-9",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 5, 20, 80, 320, question mark.",
+        "rows": [
+          [
+            "5",
+            "20",
+            "80",
+            "320",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "1280"
+        },
+        {
+          "id": "b",
+          "text": "960"
+        },
+        {
+          "id": "c",
+          "text": "1240"
+        },
+        {
+          "id": "d",
+          "text": "640"
+        },
+        {
+          "id": "e",
+          "text": "1600"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is four times the one before. Three hundred and twenty times four is one thousand two hundred and eighty. Choice d, six hundred and forty, only doubles.",
+      "strategy": "Divide each number by the one before it. A constant answer means a constant multiplier."
+    },
+    {
+      "id": "cogat-ns-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 24, 12, 6, 3, question mark.",
+        "rows": [
+          [
+            "24",
+            "12",
+            "6",
+            "3",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "1.5"
+        },
+        {
+          "id": "b",
+          "text": "1"
+        },
+        {
+          "id": "c",
+          "text": "0"
+        },
+        {
+          "id": "d",
+          "text": "2"
+        },
+        {
+          "id": "e",
+          "text": "1.25"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is half the one before. Half of three is one and a half, written one point five. Choice b, one, comes from taking away two instead of halving.",
+      "strategy": "Halving does not stop at whole numbers. Half of an odd number always ends in point five."
+    },
+    {
+      "id": "cogat-ns-g4-11",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 5, 15, 35, 65, 105, question mark.",
+        "rows": [
+          [
+            "5",
+            "15",
+            "35",
+            "65",
+            "105",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "155"
+        },
+        {
+          "id": "b",
+          "text": "145"
+        },
+        {
+          "id": "c",
+          "text": "165"
+        },
+        {
+          "id": "d",
+          "text": "135"
+        },
+        {
+          "id": "e",
+          "text": "175"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The gaps are ten, twenty, thirty, forty, growing by ten each time. The next gap is fifty, so one hundred and five plus fifty is one hundred and fifty-five. Choice b, one hundred and forty-five, uses a gap of forty again.",
+      "strategy": "Write the gaps in a line underneath. Here the gaps have a simple rule of their own."
+    },
+    {
+      "id": "cogat-ns-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 2, 20, 15, 150, 145, question mark.",
+        "rows": [
+          [
+            "2",
+            "20",
+            "15",
+            "150",
+            "145",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "1450"
+        },
+        {
+          "id": "b",
+          "text": "1400"
+        },
+        {
+          "id": "c",
+          "text": "1445"
+        },
+        {
+          "id": "d",
+          "text": "140"
+        },
+        {
+          "id": "e",
+          "text": "1455"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two rules alternate: times ten, then take away five. One hundred and forty-five came from a subtraction, so a multiplication is next, and one hundred and forty-five times ten is one thousand four hundred and fifty. Choice c, one thousand four hundred and forty-five, applies both rules at once.",
+      "strategy": "With two rules on turns, always check which rule was used last before applying the next."
+    },
+    {
+      "id": "cogat-ns-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 1000, 3, 500, 9, 250, 27, question mark.",
+        "rows": [
+          [
+            "1000",
+            "3",
+            "500",
+            "9",
+            "250",
+            "27",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "125"
+        },
+        {
+          "id": "b",
+          "text": "81"
+        },
+        {
+          "id": "c",
+          "text": "130"
+        },
+        {
+          "id": "d",
+          "text": "100"
+        },
+        {
+          "id": "e",
+          "text": "62.5"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two series are woven together. The first, third and fifth numbers are one thousand, five hundred, two hundred and fifty, halving each time. The second, fourth and sixth are three, nine, twenty-seven, tripling each time. It is the halving series' turn, so the answer is one hundred and twenty-five. Choice b, eighty-one, carries on the tripling series.",
+      "strategy": "Split the row into odd and even positions before you look for any rule."
+    },
+    {
+      "id": "cogat-ns-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 1, 2, 6, 15, 31, question mark.",
+        "rows": [
+          [
+            "1",
+            "2",
+            "6",
+            "15",
+            "31",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "56"
+        },
+        {
+          "id": "b",
+          "text": "55"
+        },
+        {
+          "id": "c",
+          "text": "62"
+        },
+        {
+          "id": "d",
+          "text": "47"
+        },
+        {
+          "id": "e",
+          "text": "67"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The gaps are one, four, nine, sixteen, which are the square numbers. The next gap is twenty-five, so thirty-one plus twenty-five is fifty-six. Choice d, forty-seven, adds sixteen again.",
+      "strategy": "If the gaps look random, ask whether the gaps themselves are a famous list, such as the squares."
+    },
+    {
+      "id": "cogat-ns-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What number comes next in the series?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "A row of numbers: 0.5, 1.5, 4.5, 13.5, question mark.",
+        "rows": [
+          [
+            "0.5",
+            "1.5",
+            "4.5",
+            "13.5",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "40.5"
+        },
+        {
+          "id": "b",
+          "text": "27"
+        },
+        {
+          "id": "c",
+          "text": "39.5"
+        },
+        {
+          "id": "d",
+          "text": "16.5"
+        },
+        {
+          "id": "e",
+          "text": "45"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Each number is three times the one before. Thirteen point five times three is forty point five. Choice b, twenty-seven, doubles instead of tripling, and choice c, thirty-nine point five, gets the whole part right but loses the extra half.",
+      "strategy": "Multiply the whole part and the decimal part separately: thirteen times three is thirty-nine, and point five times three is one point five."
     }
   ]
 }

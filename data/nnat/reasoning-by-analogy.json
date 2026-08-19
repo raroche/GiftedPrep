@@ -114,6 +114,343 @@
       "strategy": "Name the change in three words: it fills in. Then do exactly that."
     },
     {
+      "id": "nnat-rba-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty grey tall rectangle, then a small empty grey tall rectangle. Bottom row: a small empty grey kite, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.85
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.43
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape gets smaller. Choice b did not get smaller.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
+      "id": "nnat-rba-g1-11",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a blue slanted rectangle, then a blue slanted rectangle, turned a quarter turn. Bottom row: a blue tall rectangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape turns a quarter turn. Choice b did not turn.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
+      "id": "nnat-rba-g1-16",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty yellow kite, then an empty yellow kite, turned a quarter turn. Bottom row: an empty yellow circle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "f": "outline",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "f": "outline",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "f": "outline",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape turns a quarter turn. Choice b did not turn.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
       "id": "nnat-rba-g1-2",
       "grade": 1,
       "difficulty": 2,
@@ -319,6 +656,331 @@
       "answer": "a",
       "explanation": "The shape gets bigger going across and nothing else changes. So the small hexagon becomes a big hexagon.",
       "strategy": "When only the size changes, check the colour and shape have stayed exactly the same."
+    },
+    {
+      "id": "nnat-rba-g1-7",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty green plus sign, then a green plus sign. Bottom row: an empty green trapezoid, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "grey"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.78
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape fills in. Choice b never filled in.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g1-12",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty yellow ring, then a big empty yellow ring. Bottom row: a small empty yellow slanted rectangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.72
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.49
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape gets bigger. Choice b did not get bigger.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g1-17",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a green octagon, then a grey octagon. Bottom row: a green arrow, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "grey"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey",
+                "z": 0.47
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey",
+                "z": 0.42
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the color turns grey. Choice b kept the old color.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
       "id": "nnat-rba-g1-4",
@@ -536,6 +1198,1016 @@
       "strategy": "Count both boxes on the top row before you look at the answers."
     },
     {
+      "id": "nnat-rba-g1-8",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a blue wide rectangle, then an empty green wide rectangle. Bottom row: a blue upside-down triangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "f": "outline",
+                "z": 0.43
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the color turns green, and the shape empties out. Choice b kept the old color. Choice c stayed filled in.",
+      "strategy": "Two changes means two checks. Go through them one at a time."
+    },
+    {
+      "id": "nnat-rba-g1-13",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a yellow wide rectangle, then a big empty yellow wide rectangle. Bottom row: a yellow hexagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "z": 0.72,
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape gets bigger, and the shape empties out. Choice b did not get bigger. Choice c stayed filled in.",
+      "strategy": "Two changes means two checks. Go through them one at a time."
+    },
+    {
+      "id": "nnat-rba-g1-9",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty green six-pointed star, then a big green six-pointed star. Bottom row: a small empty green circle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "green",
+                "z": 1.2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "green",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "z": 0.72
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape gets bigger, and the shape fills in. Choice b did not get bigger. Choice c never filled in.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g1-14",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty grey oval, then a small empty grey oval, turned a quarter turn. Bottom row: a small empty grey ring, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5,
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape turns a quarter turn, and the shape gets smaller. Choice b did not turn. Choice c did not get smaller.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g1-10",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a yellow chevron, then a big empty yellow chevron. Bottom row: a yellow octagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 0.72,
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape gets bigger, and the shape empties out. Choice b did not get bigger. Choice c stayed filled in.",
+      "strategy": "List every change on your fingers, then test the answer against every finger."
+    },
+    {
+      "id": "nnat-rba-g1-15",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty blue circle, then a big empty grey circle. Bottom row: an empty blue cross, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.72
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape gets bigger, and the color turns grey. Choice b did not get bigger. Choice c kept the old color.",
+      "strategy": "List every change on your fingers, then test the answer against every finger."
+    },
+    {
+      "id": "nnat-rba-g2-6",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a yellow chevron, then a green chevron. Bottom row: a yellow square, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 0.57
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "grey"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the color turns green. Choice b kept the old color.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
+      "id": "nnat-rba-g2-11",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty grey oval, then an empty grey oval, turned upside down. Bottom row: an empty grey half circle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "grey",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "grey",
+                "f": "outline",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "f": "outline",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "grey",
+                "f": "outline",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "f": "outline",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "f": "outline",
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape turns upside down. Choice b did not turn.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
+      "id": "nnat-rba-g2-16",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty yellow kite, then a small empty grey kite. Bottom row: a small empty yellow trapezoid, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.15
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the color turns grey. Choice b kept the old color.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
       "id": "nnat-rba-g2-1",
       "grade": 2,
       "difficulty": 2,
@@ -745,6 +2417,338 @@
       "answer": "a",
       "explanation": "Three become one going across. So three squares become one square. The colour and shape come from the bottom row.",
       "strategy": "Patterns can shrink. Check which way the count is moving."
+    },
+    {
+      "id": "nnat-rba-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty blue cross, then a big empty blue cross. Bottom row: an empty blue kite, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.72
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape gets bigger. Choice b did not get bigger.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g2-12",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a yellow chevron, then two yellow chevrons. Bottom row: a yellow oval, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, there are 2 of them instead. Choice b kept the old number.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g2-17",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty grey pentagon, then a small grey pentagon. Bottom row: a small empty grey slanted rectangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "grey",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "grey",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "grey",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "grey",
+                "z": 1.01
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape fills in. Choice b never filled in.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
       "id": "nnat-rba-g2-3",
@@ -964,6 +2968,226 @@
       "strategy": "Turning the wrong way is the commonest slip. Settle the direction first."
     },
     {
+      "id": "nnat-rba-g2-8",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty green right triangle, then a green right triangle, turned a quarter turn. Bottom row: an empty green bow tie, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "green",
+                "f": "outline",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape turns a quarter turn, and the shape fills in. Choice b did not turn. Choice c never filled in.",
+      "strategy": "Two changes means two checks. Go through them one at a time."
+    },
+    {
+      "id": "nnat-rba-g2-13",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a green slanted rectangle, then a small green slanted rectangle, with a criss cross pattern inside. Bottom row: a green trapezoid, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.5,
+                "f": "grid"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.5,
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.5,
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.85,
+                "f": "grid"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape gets smaller, and the inside becomes a criss cross pattern. Choice b did not get smaller. Choice c did not become a criss cross pattern.",
+      "strategy": "Two changes means two checks. Go through them one at a time."
+    },
+    {
       "id": "nnat-rba-g2-5",
       "grade": 2,
       "difficulty": 4,
@@ -1081,6 +3305,804 @@
       "strategy": "More shapes usually means smaller shapes. Watch for the trade."
     },
     {
+      "id": "nnat-rba-g2-9",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small yellow slanted rectangle, then a small yellow slanted rectangle, with flat stripes inside and turned upside down. Bottom row: a small yellow oval, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "z": 0.6,
+                "r": 180,
+                "f": "stripesh"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.6,
+                "r": 180,
+                "f": "stripesh"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.6,
+                "f": "stripesh"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.6,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "z": 0.6,
+                "r": 180,
+                "f": "stripesh"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.6,
+                "r": 270,
+                "f": "stripesh"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape turns upside down, and the inside becomes flat stripes. Choice b did not turn. Choice c did not become flat stripes.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g2-14",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty grey hexagon, then a big empty grey hexagon, turned upside down. Bottom row: an empty grey bow tie, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "grey",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "grey",
+                "f": "outline",
+                "r": 180,
+                "z": 1.2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "outline",
+                "r": 180,
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "outline",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "grey",
+                "f": "outline",
+                "r": 180,
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "outline",
+                "r": 90,
+                "z": 1.2
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape turns upside down, and the shape gets bigger. Choice b did not turn. Choice c did not get bigger.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g2-10",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small green trapezoid, then a small green trapezoid, turned a quarter turn. Bottom row: a small green pentagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.5,
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "z": 0.5,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "z": 0.6,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.5,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "z": 0.85,
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape gets smaller, and the shape turns a quarter turn. Choice b did not get smaller. Choice c did not turn.",
+      "strategy": "List every change on your fingers, then test the answer against every finger."
+    },
+    {
+      "id": "nnat-rba-g2-15",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Finish the bottom row the same way.",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a green oval, then a blue oval, turned a quarter turn. Bottom row: a green upside-down triangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the color turns blue, and the shape turns a quarter turn. Choice b kept the old color. Choice c did not turn.",
+      "strategy": "List every change on your fingers, then test the answer against every finger."
+    },
+    {
+      "id": "nnat-rba-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty blue six-pointed star, then three empty blue six-pointed stars. Bottom row: an empty blue star, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue",
+                "f": "outline",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue",
+                "f": "outline",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline",
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, there are 3 of them instead. Choice b kept the old number.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
+      "id": "nnat-rba-g3-11",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty blue slanted rectangle, then a small empty blue slanted rectangle, turned upside down. Bottom row: a small empty blue wide rectangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6,
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6,
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape turns upside down. Choice b did not turn.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
+      "id": "nnat-rba-g3-16",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty yellow hexagon, then a yellow hexagon. Bottom row: an empty yellow half circle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the shape fills in. Choice b never filled in.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
       "id": "nnat-rba-g3-1",
       "grade": 3,
       "difficulty": 2,
@@ -1184,6 +4206,356 @@
       "answer": "a",
       "explanation": "The stripes become a solid fill. Nothing else changes. Choice d emptied the shape instead of filling it.",
       "strategy": "Solid, empty, striped and dotted are four different fills. Name the one you see."
+    },
+    {
+      "id": "nnat-rba-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty green arrow, then a big empty blue arrow. Bottom row: a small empty green octagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.72
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape gets bigger, and the color turns blue. Choice b did not get bigger. Choice c kept the old color.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g3-12",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty grey triangle, then two small grey triangles, with a criss cross pattern inside. Bottom row: a small empty grey bow tie, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "grey",
+                "f": "grid",
+                "z": 0.6,
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "grid",
+                "z": 0.6,
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "grid",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6,
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "grey",
+                "f": "grid",
+                "z": 0.6,
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "grey",
+                "f": "grid",
+                "z": 0.6,
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: there are 2 of them instead, and the inside becomes a criss cross pattern. Choice b kept the old number. Choice c did not become a criss cross pattern.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g3-17",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a grey six-pointed star, then a small empty grey six-pointed star. Bottom row: a grey cross, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.85
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the shape empties out, and the shape gets smaller. Choice b stayed filled in. Choice c did not get smaller.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
       "id": "nnat-rba-g3-2",
@@ -1445,6 +4817,226 @@
       "strategy": "Follow the small detail. The big shape is often just a container."
     },
     {
+      "id": "nnat-rba-g3-8",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty green slanted rectangle, then a green slanted rectangle, with stripes inside and turned upside down. Bottom row: an empty green hexagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "f": "stripesd",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "stripesd",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "outline",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "stripesd"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "f": "stripesd",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green",
+                "f": "stripesd",
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the inside becomes stripes, and the shape turns upside down. Choice b did not become stripes. Choice c did not turn.",
+      "strategy": "Two changes means two checks. Go through them one at a time."
+    },
+    {
+      "id": "nnat-rba-g3-13",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a yellow right triangle, then an empty blue right triangle. Bottom row: a yellow star, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the color turns blue, and the shape empties out. Choice b kept the old color. Choice c stayed filled in.",
+      "strategy": "Two changes means two checks. Go through them one at a time."
+    },
+    {
       "id": "nnat-rba-g3-4",
       "grade": 3,
       "difficulty": 4,
@@ -1560,6 +5152,231 @@
       "answer": "a",
       "explanation": "Halve the count and enlarge what is left. Choice b halved but stayed small. Choice c grew but kept four.",
       "strategy": "Two rules that move in opposite directions: fewer and bigger."
+    },
+    {
+      "id": "nnat-rba-g3-9",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a grey upside-down triangle, then a small empty green upside-down triangle. Bottom row: a grey four-pointed star, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "z": 0.5,
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "z": 0.5,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "grey",
+                "z": 0.5,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "z": 0.5,
+                "f": "outline"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the shape gets smaller, the shape empties out, and the color turns green. Choice b did not get smaller. Choice c stayed filled in.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g3-14",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty yellow six-pointed star, then a small grey six-pointed star, with a criss cross pattern inside. Bottom row: an empty yellow hexagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "grey",
+                "f": "grid",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "grey",
+                "f": "grid",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "f": "grid",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "grey",
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "grey",
+                "f": "grid",
+                "z": 0.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the color turns grey, the shape gets smaller, and the inside becomes a criss cross pattern. Choice b kept the old color. Choice c did not get smaller.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
     },
     {
       "id": "nnat-rba-g3-5",
@@ -1685,6 +5502,564 @@
       "strategy": "With three rules, list them on your fingers and check the answer against every finger."
     },
     {
+      "id": "nnat-rba-g3-10",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small blue kite, then four small blue kites, with a criss cross pattern inside. Bottom row: a small blue octagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "z": 0.5,
+                "n": 4,
+                "f": "grid"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "z": 0.5,
+                "n": 4,
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "z": 0.5,
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "z": 0.6,
+                "n": 4,
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "z": 0.5,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "z": 0.5,
+                "n": 4,
+                "f": "grid"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: there are 4 of them instead, the shape gets smaller, and the inside becomes a criss cross pattern. Choice b kept the old number. Choice c did not get smaller.",
+      "strategy": "List every change on your fingers, then test the answer against every finger."
+    },
+    {
+      "id": "nnat-rba-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a blue wide rectangle, then four small green wide rectangles. Bottom row: a blue half circle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "green",
+                "z": 0.5,
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "z": 0.5,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "blue",
+                "z": 0.5,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "green",
+                "z": 0.5,
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the shape gets smaller, the color turns green, and there are 4 of them instead. Choice b did not get smaller. Choice c kept the old color.",
+      "strategy": "List every change on your fingers, then test the answer against every finger."
+    },
+    {
+      "id": "nnat-rba-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small grey right triangle, then a small blue right triangle. Bottom row: a small grey ring, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "grey",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "grey",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "grey",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "green",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue",
+                "z": 0.67
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the color turns blue. Choice b kept the old color.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
+      "id": "nnat-rba-g4-11",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty blue tall rectangle, then a small blue tall rectangle, with stripes inside. Bottom row: a small empty blue pentagon, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "f": "stripesd",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "stripesd",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue",
+                "f": "stripesd",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "f": "stripesd",
+                "z": 0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "grey",
+                "f": "stripesd",
+                "z": 0.6
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the inside becomes stripes. Choice b did not become stripes.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
+      "id": "nnat-rba-g4-16",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a grey chevron, then a yellow chevron. Bottom row: a grey half circle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "grey"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "grey"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Going across, the color turns yellow. Choice b kept the old color.",
+      "strategy": "Say the change out loud, then do exactly that to the shape below."
+    },
+    {
       "id": "nnat-rba-g4-1",
       "grade": 4,
       "difficulty": 2,
@@ -1791,6 +6166,340 @@
       "strategy": "Zoom in on the fill. Grid, dots and stripes look similar at a glance and are not the same."
     },
     {
+      "id": "nnat-rba-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small yellow right triangle, then a big yellow right triangle, with flat stripes inside. Bottom row: a small yellow trapezoid, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "stripesh"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "stripesh"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "z": 1.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "z": 0.6,
+                "f": "stripesh"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "yellow",
+                "z": 1.2,
+                "f": "stripesh"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "z": 0.72,
+                "f": "stripesh"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the inside becomes flat stripes, and the shape gets bigger. Choice b did not become flat stripes. Choice c did not get bigger.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g4-12",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: an empty blue triangle, then three blue triangles. Bottom row: an empty blue wide rectangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "f": "outline",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: there are 3 of them instead, and the shape fills in. Choice b kept the old number. Choice c never filled in.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
+      "id": "nnat-rba-g4-17",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a green trapezoid, then a green trapezoid, with a criss cross pattern inside and turned three quarters of the way round. Bottom row: a green arrow, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "f": "grid",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": "grid",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": "grid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "f": "grid",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": "grid",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things change: the inside becomes a criss cross pattern, and the shape turns three quarters of the way round. Choice b did not become a criss cross pattern. Choice c did not turn.",
+      "strategy": "Check what changed AND what stayed the same. Both are clues."
+    },
+    {
       "id": "nnat-rba-g4-2",
       "grade": 4,
       "difficulty": 3,
@@ -1895,6 +6604,252 @@
       "answer": "a",
       "explanation": "The shape turns three quarters of the way clockwise, which is the same as one quarter anticlockwise. Choice b turned only one quarter clockwise, the opposite way.",
       "strategy": "Three quarters clockwise and one quarter anticlockwise land in the same place. Pick whichever is easier to picture."
+    },
+    {
+      "id": "nnat-rba-g4-8",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small blue hexagon, then four small blue hexagons, turned upside down. Bottom row: a small blue arrow, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.5,
+                "r": 180,
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.5,
+                "r": 180,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.6,
+                "r": 180,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.5,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.5,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.5,
+                "r": 180,
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the shape gets smaller, the shape turns upside down, and there are 4 of them instead. Choice b did not get smaller. Choice c did not turn.",
+      "strategy": "Two changes means two checks. Go through them one at a time."
+    },
+    {
+      "id": "nnat-rba-g4-13",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty green kite, then four small green kites, with stripes inside and turned a quarter turn. Bottom row: a small empty green half circle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "stripesd",
+                "z": 0.6,
+                "r": 90,
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "f": "stripesd",
+                "z": 0.6,
+                "r": 90,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "f": "stripesd",
+                "z": 0.6,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "f": "stripesd",
+                "z": 0.6,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "f": "outline",
+                "z": 0.6,
+                "r": 90,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "stripesd",
+                "z": 0.6,
+                "r": 90,
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the shape turns a quarter turn, there are 4 of them instead, and the inside becomes stripes. Choice b did not turn. Choice c kept the old number.",
+      "strategy": "Two changes means two checks. Go through them one at a time."
     },
     {
       "id": "nnat-rba-g4-3",
@@ -2163,6 +7118,247 @@
       "strategy": "Halving six gives three, not two. Do the arithmetic before you look."
     },
     {
+      "id": "nnat-rba-g4-9",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small yellow hexagon, then two big yellow hexagons, turned upside down. Bottom row: a small yellow oval, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "z": 1.2,
+                "n": 2,
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 1.2,
+                "n": 2,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 1.2,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 1.2,
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.6,
+                "n": 2,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "z": 1.2,
+                "n": 2,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: there are 2 of them instead, the shape turns upside down, and the shape gets bigger. Choice b kept the old number. Choice c did not turn.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
+      "id": "nnat-rba-g4-14",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a small empty yellow square, then three small empty grey squares. Bottom row: a small empty yellow cross, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.6,
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow",
+                "f": "outline",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "grey",
+                "f": "outline",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the shape gets smaller, there are 3 of them instead, and the color turns grey. Choice b did not get smaller. Choice c kept the old number.",
+      "strategy": "Each wrong answer follows all the rules but one. Find the one that breaks none."
+    },
+    {
       "id": "nnat-rba-g4-5",
       "grade": 4,
       "difficulty": 5,
@@ -2283,6 +7479,238 @@
       "answer": "a",
       "explanation": "Four rules at once: the count doubles, the colour turns green, the stripes fill in solid, and the shape turns a quarter turn. Each wrong answer keeps three rules and breaks one.",
       "strategy": "This is as hard as the NNAT gets. Write the four changes down, then test each answer against all four."
+    },
+    {
+      "id": "nnat-rba-g4-10",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a blue ring, then four empty blue rings, turned three quarters of the way round. Bottom row: a blue square, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue",
+                "r": 270,
+                "f": "outline",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "r": 270,
+                "f": "outline",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "f": "outline",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "r": 270,
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "r": 270,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue",
+                "r": 270,
+                "f": "outline",
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the shape turns three quarters of the way round, the shape empties out, and there are 4 of them instead. Choice b did not turn. Choice c stayed filled in.",
+      "strategy": "List every change on your fingers, then test the answer against every finger."
+    },
+    {
+      "id": "nnat-rba-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: a green diamond, then a small empty green diamond, turned upside down. Bottom row: a green tall rectangle, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green",
+                "r": 180,
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "r": 180,
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "r": 180,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "r": 180,
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green",
+                "r": 180,
+                "f": "outline",
+                "z": 0.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things change: the shape turns upside down, the shape empties out, and the shape gets smaller. Choice b did not turn. Choice c stayed filled in.",
+      "strategy": "List every change on your fingers, then test the answer against every finger."
     }
   ]
 }

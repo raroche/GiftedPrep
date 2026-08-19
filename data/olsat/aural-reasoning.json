@@ -49,6 +49,45 @@
       "strategy": "Think about what the word means, then check each animal one by one."
     },
     {
+      "id": "olsat-ar-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "I am thinking of something you wear on your head.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🎩"
+          },
+          "label": "a hat"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "👟"
+          },
+          "label": "a shoe"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🧤"
+          },
+          "label": "a glove"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧦"
+          },
+          "label": "a sock"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A hat goes on your head. A shoe and a sock go on your feet, and a glove goes on your hand.",
+      "strategy": "Match the clothing to the body part."
+    },
+    {
       "id": "olsat-ar-g1-2",
       "grade": 1,
       "difficulty": 2,
@@ -125,6 +164,84 @@
       "answer": "a",
       "explanation": "Frogs and turtles live in water but they have legs. A cat has legs and does not live in water. A fish lives in water and has no legs.",
       "strategy": "Cross off after each clue. Water rules out the cat. No legs rules out the frog and the turtle."
+    },
+    {
+      "id": "olsat-ar-g1-7",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "I am thinking of an animal that has feathers and lays eggs.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐔"
+          },
+          "label": "a hen"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐄"
+          },
+          "label": "a cow"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐕"
+          },
+          "label": "a dog"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A hen has feathers and lays eggs. A cow and a dog have fur and do not lay eggs. A fish lays eggs but has scales, not feathers.",
+      "strategy": "Two clues means both must be true. Check each one."
+    },
+    {
+      "id": "olsat-ar-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one would you use to eat soup?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🥄"
+          },
+          "label": "a spoon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍴"
+          },
+          "label": "a fork"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🔪"
+          },
+          "label": "a knife"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🥢"
+          },
+          "label": "chopsticks"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A spoon holds liquid. A fork, a knife and chopsticks all let soup run straight off.",
+      "strategy": "Think about what the tool has to do, then pick the one that can do it."
     },
     {
       "id": "olsat-ar-g1-4",
@@ -253,6 +370,357 @@
       "strategy": "Twice as many means the same amount again. Two and two makes four."
     },
     {
+      "id": "olsat-ar-g1-9",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Ben has a pet that lives in water and has no legs.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐸"
+          },
+          "label": "a frog"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐢"
+          },
+          "label": "a turtle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐈"
+          },
+          "label": "a cat"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A frog and a turtle live near water but they have legs. A cat has legs and does not live in water. A fish lives in water and has no legs.",
+      "strategy": "Cross off after each clue. Water rules out the cat, no legs rules out the frog and the turtle."
+    },
+    {
+      "id": "olsat-ar-g1-10",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "I am thinking of something round that you can bounce.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "⚽"
+          },
+          "label": "a ball"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "📦"
+          },
+          "label": "a box"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "📖"
+          },
+          "label": "a book"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪁"
+          },
+          "label": "a kite"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A ball is round and bounces. A box and a book are not round. A kite flies but does not bounce.",
+      "strategy": "Two clues: round AND bouncy. Both have to be true."
+    },
+    {
+      "id": "olsat-ar-g1-11",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Amy is good at a sport that does not use a ball.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🏊"
+          },
+          "label": "swimming"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⚽"
+          },
+          "label": "soccer"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏀"
+          },
+          "label": "basketball"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎾"
+          },
+          "label": "tennis"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Soccer, basketball and tennis all use a ball. Swimming does not. The clue tells you what to rule out.",
+      "strategy": "When a clue says does NOT, cross things off instead of choosing."
+    },
+    {
+      "id": "olsat-ar-g1-12",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Mia picked 3 flowers. Sam picked twice as many.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌸🌸🌸🌸🌸🌸"
+          },
+          "label": "six flowers"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌸🌸🌸"
+          },
+          "label": "three flowers"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌸🌸🌸🌸"
+          },
+          "label": "four flowers"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌸🌸🌸🌸🌸"
+          },
+          "label": "five flowers"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twice as many means double. Mia picked three, so Sam picked three and three more, which is six.",
+      "strategy": "Twice as many means the same amount again."
+    },
+    {
+      "id": "olsat-ar-g1-13",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "I am thinking of a bird that swims and cannot fly.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐧"
+          },
+          "label": "a penguin"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦆"
+          },
+          "label": "a duck"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🦅"
+          },
+          "label": "an eagle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A duck swims but it can also fly. An eagle flies. A fish swims but is not a bird. A penguin is a bird that swims and cannot fly.",
+      "strategy": "Three clues here: bird, swims, cannot fly. All three must be true."
+    },
+    {
+      "id": "olsat-ar-g1-14",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "There were 6 birds. 3 flew away. Then 2 came back.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐦🐦🐦🐦🐦"
+          },
+          "label": "five birds"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐦🐦🐦"
+          },
+          "label": "three birds"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐦🐦🐦🐦"
+          },
+          "label": "four birds"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐦"
+          },
+          "label": "one bird"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six take away three is three. Then two more makes five. Choice b stops after the first step.",
+      "strategy": "Two steps. Say the number out loud after each one."
+    },
+    {
+      "id": "olsat-ar-g1-15",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Tom is taller than Ana. Ana is taller than Joe. Who is tallest?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧑"
+          },
+          "label": "Tom"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "👧"
+          },
+          "label": "Ana"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🧒"
+          },
+          "label": "Joe"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "❓"
+          },
+          "label": "you cannot tell"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Line them up. Tom is above Ana, and Ana is above Joe. So Tom is at the top.",
+      "strategy": "Draw a ladder in your head with the tallest at the top."
+    },
+    {
+      "id": "olsat-ar-g1-16",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "I am thinking of something you find in a kitchen that gets hot.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍳"
+          },
+          "label": "a frying pan"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🛏️"
+          },
+          "label": "a bed"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🧊"
+          },
+          "label": "an ice cube"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪑"
+          },
+          "label": "a chair"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A frying pan is in a kitchen and it gets hot. An ice cube is in a kitchen but it is cold. A bed and a chair are not kitchen things.",
+      "strategy": "Two clues: the place AND what it does."
+    },
+    {
+      "id": "olsat-ar-g1-17",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Leo has 2 red pens and 3 blue pens. He loses all the red ones.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🖊️🖊️🖊️"
+          },
+          "label": "three pens"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🖊️🖊️"
+          },
+          "label": "two pens"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🖊️🖊️🖊️🖊️🖊️"
+          },
+          "label": "five pens"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🖊️"
+          },
+          "label": "one pen"
+        }
+      ],
+      "answer": "a",
+      "explanation": "He had five pens altogether. He lost the two red ones, so the three blue ones are left. Choice b is how many he lost.",
+      "strategy": "Watch for questions that ask what is LEFT."
+    },
+    {
       "id": "olsat-ar-g2-1",
       "grade": 2,
       "difficulty": 2,
@@ -263,7 +731,7 @@
           "figure": {
             "text": "🔦"
           },
-          "label": "a torch"
+          "label": "a flashlight"
         },
         {
           "id": "b",
@@ -288,7 +756,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "A torch gives light and fits in your hand. A candle gives light too, but a torch is the one you carry about safely and switch on. The sun cannot be carried and a window only lets light through.",
+      "explanation": "A flashlight gives light and fits in your hand. A candle gives light too, but a flashlight is the one you carry about safely and switch on. The sun cannot be carried and a window only lets light through.",
       "strategy": "When two answers nearly fit, go back to the exact words of the clue."
     },
     {
@@ -329,6 +797,84 @@
       "answer": "a",
       "explanation": "It can fly, which rules out the cat and the fish. It is not a bird, which rules out the bird. A bat can fly and is not a bird.",
       "strategy": "Take the clues one at a time and cross off after each one."
+    },
+    {
+      "id": "olsat-ar-g2-6",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "I am thinking of something that flies but is not alive.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🪁"
+          },
+          "label": "a kite"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦅"
+          },
+          "label": "an eagle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐝"
+          },
+          "label": "a bee"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🦋"
+          },
+          "label": "a butterfly"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An eagle, a bee and a butterfly all fly, but all three are alive. A kite flies and is not alive.",
+      "strategy": "Alive or not alive splits the answers in half."
+    },
+    {
+      "id": "olsat-ar-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "I am thinking of something that holds water and you can carry it.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🪣"
+          },
+          "label": "a bucket"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌊"
+          },
+          "label": "the sea"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏊"
+          },
+          "label": "a swimming pool"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "💧"
+          },
+          "label": "a drop"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A bucket holds water and you can pick it up. The sea and a pool hold water but you cannot carry them.",
+      "strategy": "Two clues: holds water AND you can carry it."
     },
     {
       "id": "olsat-ar-g2-3",
@@ -457,6 +1003,123 @@
       "strategy": "Draw a ladder in your head with the tallest at the top."
     },
     {
+      "id": "olsat-ar-g2-8",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Sara's pet is not a bird and it can fly.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🦇"
+          },
+          "label": "a bat"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐦"
+          },
+          "label": "a bird"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐈"
+          },
+          "label": "a cat"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐟"
+          },
+          "label": "a fish"
+        }
+      ],
+      "answer": "a",
+      "explanation": "It can fly, which rules out the cat and the fish. It is not a bird, which rules out the bird. A bat flies and is not a bird.",
+      "strategy": "Take the clues one at a time and cross off after each."
+    },
+    {
+      "id": "olsat-ar-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "There are 4 plates. Each plate has 2 buns.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍞🍞🍞🍞🍞🍞🍞🍞"
+          },
+          "label": "eight buns"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍞🍞🍞🍞"
+          },
+          "label": "four buns"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍞🍞"
+          },
+          "label": "two buns"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍞🍞🍞🍞🍞🍞"
+          },
+          "label": "six buns"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four plates with two buns each is two, four, six, eight. Choice b counts the plates instead of the buns.",
+      "strategy": "Count the groups, then count how many are in each group."
+    },
+    {
+      "id": "olsat-ar-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "I am thinking of a shape with three sides.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🔺"
+          },
+          "label": "a triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⬛"
+          },
+          "label": "a square"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⚫"
+          },
+          "label": "a circle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⬟"
+          },
+          "label": "a pentagon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A triangle has three sides. A square has four, a pentagon has five and a circle has none.",
+      "strategy": "Count the sides of each shape before you choose."
+    },
+    {
       "id": "olsat-ar-g2-5",
       "grade": 2,
       "difficulty": 4,
@@ -542,6 +1205,279 @@
       "answer": "a",
       "explanation": "He started with five pens altogether. He gave away the two blue ones, so the three red ones are left. Choice c is how many he gave away, not how many he kept.",
       "strategy": "Watch for questions that ask what is LEFT rather than what was given away."
+    },
+    {
+      "id": "olsat-ar-g2-11",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Ravi read 5 books. Kim read 2 fewer than Ravi.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "📕📕📕"
+          },
+          "label": "three books"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "📕📕📕📕📕📕📕"
+          },
+          "label": "seven books"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "📕📕"
+          },
+          "label": "two books"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "📕📕📕📕"
+          },
+          "label": "four books"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fewer means less. Five take away two is three. Choice b adds instead of taking away.",
+      "strategy": "Fewer and less mean go down. More means go up."
+    },
+    {
+      "id": "olsat-ar-g2-12",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "I am thinking of something that gives light and fits in your hand.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🔦"
+          },
+          "label": "a flashlight"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "☀️"
+          },
+          "label": "the sun"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "💡"
+          },
+          "label": "a ceiling light"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪟"
+          },
+          "label": "a window"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A flashlight gives light and you can hold it. The sun cannot be held and a window only lets light through.",
+      "strategy": "When two answers nearly fit, go back to the exact words of the clue."
+    },
+    {
+      "id": "olsat-ar-g2-13",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Ana is younger than Ben. Ben is younger than Cal. Who is oldest?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧑"
+          },
+          "label": "Cal"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "👦"
+          },
+          "label": "Ben"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👧"
+          },
+          "label": "Ana"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "❓"
+          },
+          "label": "you cannot tell"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Ana is below Ben and Ben is below Cal. So Cal is at the top. Choice b is in the middle.",
+      "strategy": "Write the order down in your head, smallest to biggest."
+    },
+    {
+      "id": "olsat-ar-g2-14",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "I am thinking of an animal with eight legs.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🕷️"
+          },
+          "label": "a spider"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐜"
+          },
+          "label": "an ant"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐝"
+          },
+          "label": "a bee"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🦋"
+          },
+          "label": "a butterfly"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A spider has eight legs. An ant, a bee and a butterfly are insects and each has six.",
+      "strategy": "Counting legs sorts spiders from insects."
+    },
+    {
+      "id": "olsat-ar-g2-15",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "A box holds 3 apples. There are 3 boxes and 2 loose apples.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎"
+          },
+          "label": "eleven apples"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍎🍎🍎🍎🍎🍎🍎🍎🍎"
+          },
+          "label": "nine apples"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍎🍎🍎🍎🍎"
+          },
+          "label": "five apples"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍎🍎🍎🍎🍎🍎🍎🍎"
+          },
+          "label": "eight apples"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three boxes of three is nine. Then two loose ones makes eleven. Choice b forgets the loose apples.",
+      "strategy": "Do the groups first, then add the leftovers."
+    },
+    {
+      "id": "olsat-ar-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "I am thinking of something you write with that has no ink.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "✏️"
+          },
+          "label": "a pencil"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🖊️"
+          },
+          "label": "a pen"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🖍️"
+          },
+          "label": "a crayon"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🖌️"
+          },
+          "label": "a paintbrush"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A pencil writes with graphite, not ink. A pen uses ink. A crayon uses wax and a paintbrush uses paint, so neither of those is really writing.",
+      "strategy": "Two clues: you write with it AND it has no ink."
+    },
+    {
+      "id": "olsat-ar-g2-17",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Jo saved 4 cents each day for 3 days, then spent 5 cents.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🪙🪙🪙🪙🪙🪙🪙"
+          },
+          "label": "seven cents"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🪙🪙🪙🪙🪙🪙🪙🪙🪙🪙🪙🪙"
+          },
+          "label": "twelve cents"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪙🪙🪙🪙"
+          },
+          "label": "four cents"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪙🪙🪙🪙🪙🪙🪙🪙🪙"
+          },
+          "label": "nine cents"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four cents for three days is twelve cents. Then five cents goes out, leaving seven. Choice b stops after the saving.",
+      "strategy": "Two steps: work out the total first, then take away."
     }
   ]
 }

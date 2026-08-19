@@ -382,7 +382,7 @@
       "id": "olsat-are-g2-3",
       "grade": 2,
       "difficulty": 3,
-      "prompt": "Jack and Rosa share 12 sweets equally. How many does each get?",
+      "prompt": "Jack and Rosa share 12 candies equally. How many does each get?",
       "choices": [
         {
           "id": "a",
@@ -402,7 +402,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Twelve shared between two people is six each. Choice c is the number of people, not the number of sweets.",
+      "explanation": "Twelve shared between two people is six each. Choice c is the number of people, not the number of candies.",
       "strategy": "Equally means the same amount for everyone. Split it into that many groups."
     },
     {
@@ -711,7 +711,7 @@
       "id": "olsat-are-g4-4",
       "grade": 4,
       "difficulty": 4,
-      "prompt": "A tap fills a 60 litre tank in 12 minutes. How long to fill a 45 litre tank?",
+      "prompt": "A tap fills a 60 liter tank in 12 minutes. How long to fill a 45 liter tank?",
       "choices": [
         {
           "id": "a",
@@ -735,7 +735,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Sixty litres in twelve minutes means five litres each minute. Forty-five divided by five is nine minutes.",
+      "explanation": "Sixty liters in twelve minutes means five liters each minute. Forty-five divided by five is nine minutes.",
       "strategy": "Find the rate for one minute first. Then divide."
     },
     {
@@ -1403,7 +1403,7 @@
       "id": "olsat-are-g2-6",
       "grade": 2,
       "difficulty": 1,
-      "prompt": "There are 20 sweets. 8 are eaten. How many are left?",
+      "prompt": "There are 20 candies. 8 are eaten. How many are left?",
       "choices": [
         {
           "id": "a",
@@ -1646,27 +1646,27 @@
       "id": "olsat-are-g2-15",
       "grade": 2,
       "difficulty": 5,
-      "prompt": "Jo saved 5 pence each day for a week. How much did she save?",
+      "prompt": "Jo saved 5 cents each day for a week. How much did she save?",
       "choices": [
         {
           "id": "a",
-          "text": "35 pence"
+          "text": "35 cents"
         },
         {
           "id": "b",
-          "text": "12 pence"
+          "text": "12 cents"
         },
         {
           "id": "c",
-          "text": "30 pence"
+          "text": "30 cents"
         },
         {
           "id": "d",
-          "text": "25 pence"
+          "text": "25 cents"
         }
       ],
       "answer": "a",
-      "explanation": "A week is seven days. Seven lots of five pence is thirty-five pence. Choice c counts only six days.",
+      "explanation": "A week is seven days. Seven lots of five cents is thirty-five cents. Choice c counts only six days.",
       "strategy": "When a question says a week, turn it into the number seven first."
     },
     {
@@ -1797,31 +1797,31 @@
       "id": "olsat-are-g3-10",
       "grade": 3,
       "difficulty": 3,
-      "prompt": "A shop sells apples at 4 for 80 pence. How much do 7 apples cost?",
+      "prompt": "A shop sells apples at 4 for 80 cents. How much do 7 apples cost?",
       "choices": [
         {
           "id": "a",
-          "text": "140 pence"
+          "text": "140 cents"
         },
         {
           "id": "b",
-          "text": "560 pence"
+          "text": "560 cents"
         },
         {
           "id": "c",
-          "text": "320 pence"
+          "text": "320 cents"
         },
         {
           "id": "d",
-          "text": "20 pence"
+          "text": "20 cents"
         },
         {
           "id": "e",
-          "text": "112 pence"
+          "text": "112 cents"
         }
       ],
       "answer": "a",
-      "explanation": "Four apples cost eighty pence, so one costs twenty. Seven apples cost seven times twenty, which is one hundred and forty pence.",
+      "explanation": "Four apples cost eighty cents, so one costs twenty. Seven apples cost seven times twenty, which is one hundred and forty cents.",
       "strategy": "Work out the price of ONE first. That single step solves most price questions."
     },
     {
@@ -2076,27 +2076,27 @@
       "id": "olsat-are-g4-9",
       "grade": 4,
       "difficulty": 3,
-      "prompt": "A tank holds 250 litres. It is 40% full. How many litres are in it?",
+      "prompt": "A tank holds 250 liters. It is 40% full. How many liters are in it?",
       "choices": [
         {
           "id": "a",
-          "text": "100 litres"
+          "text": "100 liters"
         },
         {
           "id": "b",
-          "text": "150 litres"
+          "text": "150 liters"
         },
         {
           "id": "c",
-          "text": "210 litres"
+          "text": "210 liters"
         },
         {
           "id": "d",
-          "text": "40 litres"
+          "text": "40 liters"
         },
         {
           "id": "e",
-          "text": "125 litres"
+          "text": "125 liters"
         }
       ],
       "answer": "a",
@@ -2107,27 +2107,27 @@
       "id": "olsat-are-g4-10",
       "grade": 4,
       "difficulty": 3,
-      "prompt": "A shirt costs 40 pounds. In a sale it is reduced by a quarter. What is the sale price?",
+      "prompt": "A shirt costs 40 dollars. In a sale it is reduced by a quarter. What is the sale price?",
       "choices": [
         {
           "id": "a",
-          "text": "30 pounds"
+          "text": "30 dollars"
         },
         {
           "id": "b",
-          "text": "10 pounds"
+          "text": "10 dollars"
         },
         {
           "id": "c",
-          "text": "35 pounds"
+          "text": "35 dollars"
         },
         {
           "id": "d",
-          "text": "20 pounds"
+          "text": "20 dollars"
         },
         {
           "id": "e",
-          "text": "50 pounds"
+          "text": "50 dollars"
         }
       ],
       "answer": "a",
@@ -2200,32 +2200,32 @@
       "id": "olsat-are-g4-13",
       "grade": 4,
       "difficulty": 4,
-      "prompt": "A box of 12 pens costs 9 pounds. What do 30 pens cost?",
+      "prompt": "A box of 12 pens costs 9 dollars. What do 30 pens cost?",
       "choices": [
         {
           "id": "a",
-          "text": "22.50 pounds"
+          "text": "22.50 dollars"
         },
         {
           "id": "b",
-          "text": "27 pounds"
+          "text": "27 dollars"
         },
         {
           "id": "c",
-          "text": "18 pounds"
+          "text": "18 dollars"
         },
         {
           "id": "d",
-          "text": "21 pounds"
+          "text": "21 dollars"
         },
         {
           "id": "e",
-          "text": "25 pounds"
+          "text": "25 dollars"
         }
       ],
       "answer": "a",
-      "explanation": "Twelve pens cost nine pounds, so one pen costs seventy-five pence. Thirty pens cost thirty times seventy-five pence, which is twenty-two pounds fifty.",
-      "strategy": "Price for one, then multiply. Even when the answer has pence in it."
+      "explanation": "Twelve pens cost nine pounds, so one pen costs seventy-five cents. Thirty pens cost thirty times seventy-five cents, which is twenty-two pounds fifty.",
+      "strategy": "Price for one, then multiply. Even when the answer has cents in it."
     },
     {
       "id": "olsat-are-g4-14",
@@ -2262,27 +2262,27 @@
       "id": "olsat-are-g4-15",
       "grade": 4,
       "difficulty": 5,
-      "prompt": "Kim spent a third of her money, then half of what was left, and has 12 pounds. How much did she start with?",
+      "prompt": "Kim spent a third of her money, then half of what was left, and has 12 dollars. How much did she start with?",
       "choices": [
         {
           "id": "a",
-          "text": "36 pounds"
+          "text": "36 dollars"
         },
         {
           "id": "b",
-          "text": "24 pounds"
+          "text": "24 dollars"
         },
         {
           "id": "c",
-          "text": "48 pounds"
+          "text": "48 dollars"
         },
         {
           "id": "d",
-          "text": "18 pounds"
+          "text": "18 dollars"
         },
         {
           "id": "e",
-          "text": "72 pounds"
+          "text": "72 dollars"
         }
       ],
       "answer": "a",

@@ -69,7 +69,7 @@
       ],
       "answer": "a",
       "explanation": "Gold, silver, bronze and iron are metals. A medal is made from metal but is not a metal itself. Olympic medals make you want to pick iron, which is the trap.",
-      "strategy": "Watch for a word that pulls you towards the wrong group by association."
+      "strategy": "Watch for a word that pulls you toward the wrong group by association."
     },
     {
       "id": "olsat-vcl-g3-3",
@@ -610,11 +610,11 @@
         },
         {
           "id": "b",
-          "text": "metre"
+          "text": "meter"
         },
         {
           "id": "c",
-          "text": "litre"
+          "text": "liter"
         },
         {
           "id": "d",
@@ -626,7 +626,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "A metre measures length, a litre volume, a gram weight and a degree temperature. All four measure something physical about an object. A minute measures time.",
+      "explanation": "A meter measures length, a liter volume, a gram weight and a degree temperature. All four measure something physical about an object. A minute measures time.",
       "strategy": "Group units by what they measure, not by how big they are."
     },
     {

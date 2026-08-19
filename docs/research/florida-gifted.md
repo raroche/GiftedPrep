@@ -35,7 +35,7 @@ for the district in question.
       -> Educational Plan (EP)
 
 **The group test is only a gate.** It is not the test that decides eligibility.
-That is why familiarisation with the group screener is worth so little, and why
+That is why familiarization with the group screener is worth so little, and why
 a child who screens out one year can be referred again.
 
 ## Which group screener a district uses varies — a lot
@@ -77,9 +77,29 @@ brochure, and it is the only such statement either district makes:
 
 That statement is about the **individual IQ evaluation**, and it is correct:
 nobody should have those items in advance, and this app contains none. It does
-not address familiarisation with a **group screener's format**, which the CogAT
+not address familiarization with a **group screener's format**, which the CogAT
 publisher itself recommends schools provide to every child (see
 [`parent-science.md`](parent-science.md)).
+
+## Which districts are verified, and which are not
+
+**Only Collier and Monroe are verified**, from their FLDOE-accepted 2025-26
+filings. A second research pass covering Miami-Dade, Broward, Palm Beach,
+Hillsborough, Orange, Duval, Pinellas, Polk, Lee, Brevard and nine more was
+started but did not finish, so **nothing in this file should be assumed to apply
+to any other district**.
+
+If you need your own district's answer, there are two reliable routes and one
+unreliable one:
+
+1. **Ask the school.** The gifted or ESE coordinator can tell you which screener
+   they use and what the cut score is. Some districts publish it; many do not.
+2. **Read the state filing.** Open
+   <https://beessgsw.org/#/spp/institution/public/>, find your district, and read
+   Part III and Appendix C. That is the same source used for the two districts
+   above.
+3. **Do not trust commercial test-prep sites** on district specifics. They are
+   frequently out of date and often simply wrong.
 
 ## Caveats recorded honestly
 

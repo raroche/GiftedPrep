@@ -36,7 +36,9 @@ const acc = (q, a) => `
   </details>`;
 
 export function renderParentGuide(manifest) {
-  const total = 480;
+  /* Counted from the manifest rather than typed, so it cannot drift. */
+  const total = (manifest?.categories || [])
+    .reduce((n, c) => n + Object.values(c.counts || {}).reduce((a, b) => a + b, 0), 0);
   const gradeRows = (manifest?.grades || []).map((g) => `
     <tr>
       <td><strong>${escapeHtml(g.label)}</strong></td>
@@ -74,7 +76,7 @@ ${callout('info', 'The short version',
   There is no single Florida test. Districts choose their own instrument, and
   most do not tell parents which one. The three most common across the country
   are the <strong>CogAT</strong>, the <strong>NNAT</strong> and the
-  <strong>OLSAT</strong>, and this site covers all three, ${total} questions in
+  <strong>OLSAT</strong>, and this site covers all three, ${total.toLocaleString()} questions in
   all. Some Florida districts use something else entirely: Monroe County, for
   example, screens every second grader with Raven's 2.
 </p>
@@ -124,7 +126,7 @@ ${callout('tip', 'Find out what your own district does',
    gifted or ESE coordinator at your child's school which screener they use and
    what the cut score is. Some districts publish it and some do not.</p>`)}
 
-<h2>Does practising actually help?</h2>
+<h2>Does practicing actually help?</h2>
 
 <p>
   Yes, a little, and much less than the internet suggests. The honest numbers:
@@ -173,10 +175,10 @@ ${callout('info', 'What the CogAT publisher says',
   <thead><tr><th>Familiarising — fine, low yield</th><th>Cramming — where the problems start</th></tr></thead>
   <tbody>
     <tr><td>Seeing each question type once so nothing is new</td><td>Drilling many items of each type repeatedly</td></tr>
-    <tr><td>Practising how to answer: tapping, not skipping</td><td>Teaching rule-sets for solving matrix puzzles</td></tr>
-    <tr><td>Practising listening to spoken directions</td><td>Memorising item types or leaked questions</td></tr>
+    <tr><td>Practicing how to answer: tapping, not skipping</td><td>Teaching rule-sets for solving matrix puzzles</td></tr>
+    <tr><td>Practicing listening to spoken directions</td><td>Memorising item types or leaked questions</td></tr>
     <tr><td>One short session, then stop</td><td>A multi-week prep course</td></tr>
-    <tr><td>Explaining that some questions will be too hard</td><td>Training towards a target score</td></tr>
+    <tr><td>Explaining that some questions will be too hard</td><td>Training toward a target score</td></tr>
   </tbody>
 </table>
 </div>
@@ -190,13 +192,13 @@ ${callout('info', 'What the CogAT publisher says',
 
 ${callout('caution', 'An anxious parent plus frequent drilling is the harmful combination',
   `<p>Maloney and colleagues (2015, <em>Psychological Science</em>) studied 438
-   first and second graders. Children of maths-anxious parents learned
+   first and second graders. Children of math-anxious parents learned
    <strong>significantly less</strong> across the school year and ended with more
    anxiety of their own — <strong>but only when those parents helped frequently
    with homework</strong>. When anxious parents helped less often, there was no
    effect at all.</p>
    <p>The transmission was emotional, not informational: it survived controls for
-   how much maths the parents actually knew. If you feel wound up about this
+   how much math the parents actually knew. If you feel wound up about this
    test, the evidence says the most useful thing you can do is <em>less</em>, not
    more.</p>`)}
 
@@ -228,13 +230,13 @@ ${callout('caution', 'An anxious parent plus frequent drilling is the harmful co
           reduce your involvement, not increase it.</li>
     </ul>`)}
 
-  ${day(6, 'One familiarisation session. Only one.', `
+  ${day(6, 'One familiarization session. Only one.', `
     <ul>
       <li>Do one short set on this site, or with your district's official
           practice material. Fifteen minutes is plenty.</li>
       <li>Tell your child explicitly that <strong>some questions will be too
           hard on purpose</strong>, because the test covers several ages at once.</li>
-      <li>Practise the mechanics: tapping an answer, not leaving blanks, moving
+      <li>Practice the mechanics: tapping an answer, not leaving blanks, moving
           on when stuck.</li>
     </ul>`)}
 
@@ -341,7 +343,7 @@ ${callout('tip', 'The one sentence',
     <tr><td>"This is really important."</td><td>"It's a morning of puzzles. Then we'll get lunch."</td></tr>
     <tr><td>"Don't mess this up."</td><td>"Take your time and look carefully."</td></tr>
     <tr><td>"I know you'll get in."</td><td>"However it goes, we're good."</td></tr>
-    <tr><td>"Remember everything we practised!"</td><td>"You already know what it looks like. Nothing will surprise you."</td></tr>
+    <tr><td>"Remember everything we practiced!"</td><td>"You already know what it looks like. Nothing will surprise you."</td></tr>
     <tr><td>"Your cousin got in at your age."</td><td><em>(say nothing — do not introduce a comparison)</em></td></tr>
   </tbody>
 </table>
@@ -453,7 +455,7 @@ ${acc('What cut score will my district use?', `
   <li><strong>"A high-protein low-GI breakfast improves scores."</strong> Reviews
       state that firm conclusions about breakfast composition cannot be drawn.</li>
   <li><strong>"Sugar will make your child hyper."</strong> A <em>JAMA</em>
-      meta-analysis of 23 studies found no effect on behaviour or cognition. The
+      meta-analysis of 23 studies found no effect on behavior or cognition. The
       documented effect was on <em>parents</em>: mothers told their child had
       eaten sugar — when the child had received a placebo — rated them as more
       hyperactive.</li>
@@ -476,7 +478,7 @@ ${acc('What cut score will my district use?', `
   <li><a href="https://www.pearsonassessments.com/content/dam/school/global/clinical/us/assets/nnat3/nnat3-manual-levels-a-d.pdf" rel="noopener">NNAT3 Manual, Levels A–D</a> (Pearson)</li>
   <li><a href="https://www.pearsonassessments.com/content/dam/school/global/clinical/us/assets/olsat8/olsat8-overview-brochure.pdf" rel="noopener">OLSAT 8 Scope and Sequence</a> (Pearson)</li>
   <li><a href="https://files.eric.ed.gov/fulltext/EJ746292.pdf" rel="noopener">Lohman &amp; Korb (2006), "Gifted Today but Not Tomorrow?"</a></li>
-  <li><a href="https://journals.sagepub.com/doi/abs/10.1177/0956797615592630" rel="noopener">Maloney et al. (2015), intergenerational effects of parents' maths anxiety</a></li>
+  <li><a href="https://journals.sagepub.com/doi/abs/10.1177/0956797615592630" rel="noopener">Maloney et al. (2015), intergenerational effects of parents' math anxiety</a></li>
   <li><a href="https://jcsm.aasm.org/doi/10.5664/jcsm.5866" rel="noopener">AASM sleep duration consensus, endorsed by the AAP</a></li>
   <li><a href="https://www.nagc.org/identification" rel="noopener">NAGC on identification</a></li>
   <li><a href="https://beessgsw.org/#/spp/institution/public/" rel="noopener">Florida DOE district policies repository</a></li>

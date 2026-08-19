@@ -10,7 +10,7 @@
 import * as data from './modules/data.js';
 import * as storage from './modules/storage.js';
 import * as speech from './modules/speech.js';
-import { QuizSession, encouragement } from './modules/quiz.js';
+import { QuizSession, encouragement, relabel } from './modules/quiz.js';
 import { renderFigure, describeFigure } from './modules/figures.js';
 import { icon } from './modules/icons.js';
 import { ring, bars, escapeHtml } from './modules/charts.js';
@@ -455,8 +455,8 @@ function renderResults() {
       <summary class="gp-accordion__trigger">${escapeHtml(q.prompt)}</summary>
       <div class="gp-accordion__panel">
         ${q.figure ? `<div class="gp-question__figure">${renderFigure(q.figure)}</div>` : ''}
-        <p>${escapeHtml(q.explanation)}</p>
-        ${q.strategy ? `<p class="gp-muted"><strong>Tip:</strong> ${escapeHtml(q.strategy)}</p>` : ''}
+        <p>${escapeHtml(relabel(q.explanation, q.letterOf))}</p>
+        ${q.strategy ? `<p class="gp-muted"><strong>Tip:</strong> ${escapeHtml(relabel(q.strategy, q.letterOf))}</p>` : ''}
       </div>
     </details>`).join('');
 }

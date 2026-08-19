@@ -89,7 +89,7 @@
       "publisher": "Pearson",
       "icon": "shapes",
       "blurb": "Shape puzzles only. No words, no numbers, no reading.",
-      "detail": "48 questions in 30 minutes, at every grade. Built to be fair to children who are still learning English, so it uses only geometric shapes in five colours: black, white, yellow, blue and green.",
+      "detail": "48 questions in 30 minutes, at every grade. Built to be fair to children who are still learning English, so it uses only geometric shapes in five colors: black, white, yellow, blue and green.",
       "batteries": [
         {
           "id": "nonverbal",
@@ -151,10 +151,10 @@
       ],
       "blurb": "The first two go together. Make the next two go together the same way.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -172,10 +172,10 @@
       ],
       "blurb": "Listen to the sentence. Pick the picture that fits.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 23,
+        "2": 23,
+        "3": 23,
+        "4": 23
       }
     },
     {
@@ -193,10 +193,10 @@
       ],
       "blurb": "Three things belong together. Find the fourth.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -214,10 +214,10 @@
       ],
       "blurb": "Find the rule, then use it on the last one.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -235,10 +235,10 @@
       ],
       "blurb": "Make both sides the same.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -256,10 +256,10 @@
       ],
       "blurb": "What comes next in the pattern?",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -277,10 +277,10 @@
       ],
       "blurb": "Four boxes. One is empty. What goes there?",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -298,10 +298,10 @@
       ],
       "blurb": "Fold the paper, punch a hole, then open it up.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -319,10 +319,10 @@
       ],
       "blurb": "Three shapes belong together. Find the fourth.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -340,10 +340,10 @@
       ],
       "blurb": "A piece is missing from the pattern. Which piece fits?",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -361,10 +361,10 @@
       ],
       "blurb": "Work out the change, then make it happen again.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -382,10 +382,10 @@
       ],
       "blurb": "A sequence runs across the rows and down the columns.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -402,9 +402,9 @@
       ],
       "blurb": "Picture the shapes moving, turning or joining up.",
       "counts": {
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -420,8 +420,8 @@
       ],
       "blurb": "Listen carefully, then pick the picture that matches.",
       "counts": {
-        "1": 5,
-        "2": 5
+        "1": 17,
+        "2": 17
       }
     },
     {
@@ -437,8 +437,8 @@
       ],
       "blurb": "Work out the answer from the clues you hear.",
       "counts": {
-        "1": 5,
-        "2": 5
+        "1": 17,
+        "2": 17
       }
     },
     {
@@ -456,10 +456,10 @@
       ],
       "blurb": "A little story with numbers in it. Work out the answer.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -475,8 +475,8 @@
       ],
       "blurb": "Four go together. One does not. Find it.",
       "counts": {
-        "1": 5,
-        "2": 5
+        "1": 17,
+        "2": 17
       }
     },
     {
@@ -492,8 +492,8 @@
       ],
       "blurb": "The first pair goes together. Make the second pair match.",
       "counts": {
-        "1": 5,
-        "2": 5
+        "1": 17,
+        "2": 17
       }
     },
     {
@@ -510,9 +510,9 @@
       ],
       "blurb": "All but one of these shapes share something. Find the one that does not.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5
+        "1": 17,
+        "2": 17,
+        "3": 17
       }
     },
     {
@@ -530,10 +530,10 @@
       ],
       "blurb": "The first two shapes change. Change the third one the same way.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -551,10 +551,10 @@
       ],
       "blurb": "A grid of shapes with one box empty. Fill it in.",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -572,10 +572,10 @@
       ],
       "blurb": "A row of shapes changes step by step. What comes next?",
       "counts": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5
+        "1": 17,
+        "2": 17,
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -591,8 +591,8 @@
       ],
       "blurb": "Find the word that means the opposite.",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 17,
+        "4": 17
       }
     },
     {
@@ -608,8 +608,8 @@
       ],
       "blurb": "Unscramble the words, then answer about the last word.",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -625,8 +625,8 @@
       ],
       "blurb": "The first two words go together. Make the next two match.",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -642,8 +642,8 @@
       ],
       "blurb": "Four words belong together. Find the one that does not.",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -659,8 +659,8 @@
       ],
       "blurb": "What does something ALWAYS need?",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -676,8 +676,8 @@
       ],
       "blurb": "A grid of words follows a rule. What is missing?",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -693,8 +693,8 @@
       ],
       "blurb": "A row of numbers follows a rule. What comes next?",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -710,8 +710,8 @@
       ],
       "blurb": "Three groups follow the same hidden rule. Fill in the gap.",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 15,
+        "4": 15
       }
     },
     {
@@ -727,8 +727,8 @@
       ],
       "blurb": "A grid of numbers with one box empty.",
       "counts": {
-        "3": 5,
-        "4": 5
+        "3": 15,
+        "4": 15
       }
     }
   ]

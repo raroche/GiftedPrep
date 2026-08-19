@@ -99,7 +99,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "A lamp or a torch casts a shadow just as the sun does, so the sun is not required. A shadow can fall on the ground, not just a wall. But without any light there is no shadow at all.",
+      "explanation": "A lamp or a flashlight casts a shadow just as the sun does, so the sun is not required. A shadow can fall on the ground, not just a wall. But without any light there is no shadow at all.",
       "strategy": "The most common answer is not always the necessary one. Sunlight is one kind of light."
     },
     {
@@ -312,11 +312,11 @@
         },
         {
           "id": "e",
-          "text": "metres"
+          "text": "meters"
         }
       ],
       "answer": "a",
-      "explanation": "You can measure without a ruler, without being a scientist, and without using metres. Measurements are often approximate. But a measurement with no unit is meaningless: five what?",
+      "explanation": "You can measure without a ruler, without being a scientist, and without using meters. Measurements are often approximate. But a measurement with no unit is meaningless: five what?",
       "strategy": "If a choice names one particular example of something, look for the general word instead."
     },
     {
@@ -548,7 +548,7 @@
         },
         {
           "id": "b",
-          "text": "colours"
+          "text": "colors"
         },
         {
           "id": "c",
@@ -564,7 +564,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Maps come without colour, without roads, without a compass and without labels. What makes something a map is that it shows a place shrunk down.",
+      "explanation": "Maps come without color, without roads, without a compass and without labels. What makes something a map is that it shows a place shrunk down.",
       "strategy": "The definition is usually the thing you would never think to say out loud."
     },
     {
@@ -750,7 +750,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "You can measure without a ruler and without being a scientist. Measurements are often approximate, and inches work as well as metres. But five, on its own, means nothing. Five what?",
+      "explanation": "You can measure without a ruler and without being a scientist. Measurements are often approximate, and inches work as well as meters. But five, on its own, means nothing. Five what?",
       "strategy": "If a choice names one particular example, look for the general word instead."
     },
     {

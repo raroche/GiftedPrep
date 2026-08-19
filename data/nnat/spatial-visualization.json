@@ -6,7 +6,7 @@
   "icon": "rotate",
   "blurb": "Picture the shapes moving, turning or joining up.",
   "childIntro": "The first pair shows something happening to a shape. Make the same thing happen to the third shape in your head.",
-  "howItWorks": "Pearson describes this as recognising how two or more designs would look if they were combined, which may involve rotations or overlapping. It is the only NNAT type that needs imagined movement rather than a static rule, so it does not appear until second grade.",
+  "howItWorks": "Pearson describes this as recognizing how two or more designs would look if they were combined, which may involve rotations or overlapping. It is the only NNAT type that needs imagined movement rather than a static rule, so it does not appear until second grade.",
   "parentTip": "The distractor that catches most children is a mirror image where a rotation was needed. Turning a shape and flipping it look the same for symmetrical shapes but completely different for others. Cut a shape out of paper and let your child physically turn it, then physically flip it, so the difference becomes obvious.",
   "questions": [
     {
@@ -206,6 +206,411 @@
       "answer": "a",
       "explanation": "The shape turns halfway round, so it ends up upside down. Choices b and d only turned a quarter of the way.",
       "strategy": "Half a turn means upside down. A quarter turn means lying on its side."
+    },
+    {
+      "id": "nnat-sv-g2-6",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty blue chevron becomes a small green plus sign. Now do the same to an empty blue upside-down triangle.",
+        "a": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "plus",
+              "c": "green",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "triangledown",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "plus",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "bowtie",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "plus",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "plus",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty blue cross becomes a small green ring. Now do the same to an empty blue flag.",
+        "a": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "ring",
+              "c": "green",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "ring",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "kite",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "ring",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "ring",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-13",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty blue right triangle becomes a small yellow circle. Now do the same to an empty blue arrow.",
+        "a": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "circle",
+              "c": "yellow",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "circle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "square",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "circle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
     },
     {
       "id": "nnat-sv-g2-3",
@@ -424,6 +829,546 @@
       "strategy": "Two changes, two checks. Size first, then turn."
     },
     {
+      "id": "nnat-sv-g2-8",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow four-pointed star becomes a small green oval. Now do the same to an empty yellow kite.",
+        "a": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "oval",
+              "c": "green",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "kite",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "oval",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star4",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "oval",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "oval",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow half circle becomes a small green triangle. Now do the same to an empty yellow trapezoid.",
+        "a": {
+          "shapes": [
+            {
+              "s": "semicircle",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "semicircle",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "triangle",
+              "c": "green",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star4",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-14",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty blue trapezoid becomes a small grey four-pointed star. Now do the same to an empty blue upside-down triangle.",
+        "a": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "star4",
+              "c": "grey",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "triangledown",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star4",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "chevron",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "star4",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star4",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-17",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow cross becomes a small grey half circle. Now do the same to an empty yellow flag.",
+        "a": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "semicircle",
+              "c": "grey",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "diamond",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "semicircle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
       "id": "nnat-sv-g2-5",
       "grade": 2,
       "difficulty": 4,
@@ -562,8 +1507,683 @@
         }
       ],
       "answer": "a",
-      "explanation": "The inside shape and the outside shape swap places. Each keeps its own colour. The outer shape is always empty and the inner one filled.",
-      "strategy": "After a swap, check that each shape kept its own colour."
+      "explanation": "The inside shape and the outside shape swap places. Each keeps its own color. The outer shape is always empty and the inner one filled.",
+      "strategy": "After a swap, check that each shape kept its own color."
+    },
+    {
+      "id": "nnat-sv-g2-10",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty grey right triangle becomes a small yellow half circle. Now do the same to an empty grey plus sign.",
+        "a": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "semicircle",
+              "c": "yellow",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "plus",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "semicircle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "diamond",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "semicircle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-11",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow arrow becomes a small grey slanted rectangle. Now do the same to an empty yellow flag.",
+        "a": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "parallelogram",
+              "c": "grey",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "parallelogram",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "pentagon",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "parallelogram",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "parallelogram",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-15",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty green trapezoid becomes a small blue chevron. Now do the same to an empty green arrow.",
+        "a": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "chevron",
+              "c": "blue",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "chevron",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "chevron",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "chevron",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-12",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty grey flag becomes a small blue trapezoid. Now do the same to an empty grey arrow.",
+        "a": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "trapezoid",
+              "c": "blue",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "trapezoid",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "trapezoid",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "trapezoid",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Make the same change to the last shape.",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow cross becomes a small grey circle. Now do the same to an empty yellow chevron.",
+        "a": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "circle",
+              "c": "grey",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "circle",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "diamond",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "circle",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "circle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
     },
     {
       "id": "nnat-sv-g3-1",
@@ -665,6 +2285,355 @@
       "strategy": "Clockwise means the way a clock's hands go. Say it out loud before you choose."
     },
     {
+      "id": "nnat-sv-g3-6",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty grey four-pointed star becomes a small yellow pentagon. Now do the same to an empty grey kite.",
+        "a": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "pentagon",
+              "c": "yellow",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "kite",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "pentagon",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "pentagon",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "pentagon",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A yellow trapezoid becomes three small yellow trapezoids. Now do the same to a yellow chevron.",
+        "a": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "yellow",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "yellow",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "yellow",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g3-13",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A grey half circle becomes three small grey half circles. Now do the same to a grey trapezoid.",
+        "a": {
+          "shapes": [
+            {
+              "s": "semicircle",
+              "c": "grey",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "semicircle",
+              "c": "grey",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "grey",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "grey",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "grey",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "grey",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "grey",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
       "id": "nnat-sv-g3-2",
       "grade": 3,
       "difficulty": 3,
@@ -761,7 +2730,7 @@
       ],
       "answer": "a",
       "explanation": "The shape is turned halfway round. Choices b and c stopped at a quarter turn.",
-      "strategy": "Half a turn moves every point to the opposite side of the centre."
+      "strategy": "Half a turn moves every point to the opposite side of the center."
     },
     {
       "id": "nnat-sv-g3-3",
@@ -898,6 +2867,490 @@
       "strategy": "Ask exactly what was added, and check nothing else moved."
     },
     {
+      "id": "nnat-sv-g3-8",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow slanted rectangle becomes a small green triangle. Now do the same to an empty yellow arrow.",
+        "a": {
+          "shapes": [
+            {
+              "s": "parallelogram",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "parallelogram",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "triangle",
+              "c": "green",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "oval",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A grey arrow becomes four small grey arrows. Now do the same to a grey upside-down triangle.",
+        "a": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "grey",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "grey",
+              "n": 4,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "triangledown",
+              "c": "grey",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "grey",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "grey",
+                "n": 4,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "grey",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "grey",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into four small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g3-14",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow flag becomes a small blue triangle. Now do the same to an empty yellow chevron.",
+        "a": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "triangle",
+              "c": "blue",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g3-17",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A green trapezoid becomes four small green trapezoids. Now do the same to a green chevron.",
+        "a": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "green",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "green",
+              "n": 4,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "green",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "n": 4,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into four small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
       "id": "nnat-sv-g3-4",
       "grade": 3,
       "difficulty": 4,
@@ -1003,6 +3456,355 @@
       "answer": "a",
       "explanation": "Grow, and turn a quarter turn clockwise. Choice b turned the wrong way, choice c did not grow, choice d did not turn.",
       "strategy": "Three of the five choices differ only in the turn. Settle the turn first and the rest is quick."
+    },
+    {
+      "id": "nnat-sv-g3-10",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A blue cross becomes three small blue crosses. Now do the same to a blue trapezoid.",
+        "a": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "blue",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "blue",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "blue",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "blue",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "blue",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "blue",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g3-11",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A green four-pointed star becomes three small green four-pointed stars. Now do the same to a green right triangle.",
+        "a": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "green",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "green",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "green",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "green",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "green",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "green",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g3-15",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty green cross becomes a small blue star. Now do the same to an empty green kite.",
+        "a": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "star",
+              "c": "blue",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "kite",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "star",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
     },
     {
       "id": "nnat-sv-g3-5",
@@ -1120,6 +3922,248 @@
       "strategy": "Count, size, turn. Check all three every time."
     },
     {
+      "id": "nnat-sv-g3-12",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A yellow arrow becomes three small yellow arrows. Now do the same to a yellow chevron.",
+        "a": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "yellow",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "yellow",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "yellow",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g3-16",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty green arrow becomes a small yellow octagon. Now do the same to an empty green four-pointed star.",
+        "a": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "octagon",
+              "c": "yellow",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "green",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "plus",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "octagon",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
       "id": "nnat-sv-g4-1",
       "grade": 4,
       "difficulty": 2,
@@ -1217,6 +4261,355 @@
       "answer": "a",
       "explanation": "Three quarters of a turn clockwise, which is the same as a quarter turn the other way. Choice b turned only a quarter clockwise.",
       "strategy": "Three quarters clockwise equals one quarter anticlockwise. Use whichever is easier to picture."
+    },
+    {
+      "id": "nnat-sv-g4-6",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A green flag becomes three small green flags. Now do the same to a green arrow.",
+        "a": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "green",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "green",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "green",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "green",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A grey slanted rectangle becomes three small grey slanted rectangles. Now do the same to a grey chevron.",
+        "a": {
+          "shapes": [
+            {
+              "s": "parallelogram",
+              "c": "grey",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "parallelogram",
+              "c": "grey",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "grey",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "grey",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "grey",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "grey",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "grey",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g4-13",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow chevron becomes a small grey right triangle. Now do the same to an empty yellow upside-down triangle.",
+        "a": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "righttriangle",
+              "c": "grey",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "triangledown",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "righttriangle",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "chevron",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "righttriangle",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "righttriangle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
     },
     {
       "id": "nnat-sv-g4-2",
@@ -1385,6 +4778,490 @@
       "strategy": "Diagonal movement changes both the across and the down position. Check both."
     },
     {
+      "id": "nnat-sv-g4-8",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty yellow right triangle becomes a small grey diamond. Now do the same to an empty yellow chevron.",
+        "a": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "righttriangle",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "diamond",
+              "c": "grey",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "chevron",
+              "c": "yellow",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "diamond",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "hexagon",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "diamond",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "diamond",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A grey trapezoid becomes four small grey trapezoids. Now do the same to a grey plus sign.",
+        "a": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "grey",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "trapezoid",
+              "c": "grey",
+              "n": 4,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "plus",
+              "c": "grey",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "n": 4,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "grey",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into four small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g4-14",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty grey cross becomes a small green wide rectangle. Now do the same to an empty grey plus sign.",
+        "a": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "rectwide",
+              "c": "green",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "plus",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "rectwide",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "hexagon",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "rectwide",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "rectwide",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
+    },
+    {
+      "id": "nnat-sv-g4-17",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A blue four-pointed star becomes four small blue four-pointed stars. Now do the same to a blue plus sign.",
+        "a": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "blue",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "blue",
+              "n": 4,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "plus",
+              "c": "blue",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue",
+                "n": 4,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "blue",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into four small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
       "id": "nnat-sv-g4-3",
       "grade": 4,
       "difficulty": 4,
@@ -1483,7 +5360,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Three rules: the colour turns green, the stripes fill in solid, and the shape turns a quarter turn. Choice b kept the stripes, c did not turn, d stayed blue.",
+      "explanation": "Three rules: the color turns green, the stripes fill in solid, and the shape turns a quarter turn. Choice b kept the stripes, c did not turn, d stayed blue.",
       "strategy": "With three rules, four of the five answers each break exactly one. Find the one that breaks none."
     },
     {
@@ -1592,8 +5469,357 @@
         }
       ],
       "answer": "a",
-      "explanation": "One large shape becomes four small ones of the same kind and colour. Choice b kept them large, c made only two, and d added a turn that never happened.",
+      "explanation": "One large shape becomes four small ones of the same kind and color. Choice b kept them large, c made only two, and d added a turn that never happened.",
       "strategy": "When a shape splits, check both the new count and the new size."
+    },
+    {
+      "id": "nnat-sv-g4-10",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A blue arrow becomes three small blue arrows. Now do the same to a blue flag.",
+        "a": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "blue",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "arrow",
+              "c": "blue",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "blue",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g4-11",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A yellow half circle becomes three small yellow half circles. Now do the same to a yellow four-pointed star.",
+        "a": {
+          "shapes": [
+            {
+              "s": "semicircle",
+              "c": "yellow",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "semicircle",
+              "c": "yellow",
+              "n": 3,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "yellow",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "yellow",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "yellow",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "yellow",
+                "n": 2,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "yellow",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into three small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g4-15",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty grey flag becomes a small blue triangle. Now do the same to an empty grey kite.",
+        "a": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "flag",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "triangle",
+              "c": "blue",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "kite",
+              "c": "grey",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "grey",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "grey",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
     },
     {
       "id": "nnat-sv-g4-5",
@@ -1762,8 +5988,250 @@
         }
       ],
       "answer": "a",
-      "explanation": "The two shapes swap places, each keeps its own colour, the outer one is empty and the inner one is filled, and the inner one is turned upside down. Choice b forgot the turn and choice c forgot the swap.",
-      "strategy": "Break a busy question into a list. Swap, colours, fills, turn. Then tick each one off."
+      "explanation": "The two shapes swap places, each keeps its own color, the outer one is empty and the inner one is filled, and the inner one is turned upside down. Choice b forgot the turn and choice c forgot the swap.",
+      "strategy": "Break a busy question into a list. Swap, colors, fills, turn. Then tick each one off."
+    },
+    {
+      "id": "nnat-sv-g4-12",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A green four-pointed star becomes four small green four-pointed stars. Now do the same to a green cross.",
+        "a": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "green",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "green",
+              "n": 4,
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "green",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green",
+                "n": 4,
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green",
+                "n": 3,
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "n": 4,
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "One big shape splits into four small ones of the same kind and color. The wrong answers keep them big, or make the wrong number.",
+      "strategy": "When a shape splits, check both the new number and the new size."
+    },
+    {
+      "id": "nnat-sv-g4-16",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An empty blue four-pointed star becomes a small yellow hexagon. Now do the same to an empty blue cross.",
+        "a": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        },
+        "b": {
+          "shapes": [
+            {
+              "s": "star4",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            },
+            {
+              "s": "hexagon",
+              "c": "yellow",
+              "z": 0.45
+            }
+          ]
+        },
+        "c": {
+          "shapes": [
+            {
+              "s": "cross",
+              "c": "blue",
+              "f": "outline",
+              "z": 1.1
+            }
+          ]
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": null,
+                "z": 1.1
+              },
+              {
+                "s": "hexagon",
+                "c": "yellow",
+                "z": 0.45
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.1
+              },
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "A small shape is added in the middle, and nothing else changes. The wrong answers add the wrong shape, or change the outer one.",
+      "strategy": "Ask exactly what was added, then check nothing else moved."
     }
   ]
 }

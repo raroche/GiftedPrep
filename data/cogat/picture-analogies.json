@@ -114,6 +114,110 @@
       "strategy": "Look for what you wear or use on that part of the body."
     },
     {
+      "id": "cogat-pa-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A bee goes with honey. A sheep goes with what?",
+        "a": {
+          "text": "🐝"
+        },
+        "b": {
+          "text": "🍯"
+        },
+        "c": {
+          "text": "🐑"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧶"
+          },
+          "label": "wool"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌿"
+          },
+          "label": "grass"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐄"
+          },
+          "label": "a cow"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🏠"
+          },
+          "label": "a barn"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A bee gives us honey. A sheep gives us wool. Grass is what a sheep eats, not what it gives us.",
+      "strategy": "Ask what the animal gives us, not what it eats."
+    },
+    {
+      "id": "cogat-pa-g1-7",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A foot goes with a shoe. A hand goes with what?",
+        "a": {
+          "text": "🦶"
+        },
+        "b": {
+          "text": "👟"
+        },
+        "c": {
+          "text": "✋"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧤"
+          },
+          "label": "a glove"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🧦"
+          },
+          "label": "a sock"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👂"
+          },
+          "label": "an ear"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🎩"
+          },
+          "label": "a hat"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A shoe goes on a foot. A glove goes on a hand. A sock also goes on a foot, so it belongs with the first pair, not the second.",
+      "strategy": "Match the thing you wear to the body part it covers."
+    },
+    {
       "id": "cogat-pa-g1-3",
       "grade": 1,
       "difficulty": 2,
@@ -218,6 +322,162 @@
       "strategy": "Think about the order things happen. Which one comes first?"
     },
     {
+      "id": "cogat-pa-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A chick goes with a hen. A puppy goes with what?",
+        "a": {
+          "text": "🐤"
+        },
+        "b": {
+          "text": "🐔"
+        },
+        "c": {
+          "text": "🐕"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐩"
+          },
+          "label": "a grown dog"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🦴"
+          },
+          "label": "a bone"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐈"
+          },
+          "label": "a cat"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🏠"
+          },
+          "label": "a dog house"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A chick grows up into a hen. A puppy grows up into a grown dog. A bone is something a dog likes.",
+      "strategy": "Baby and grown up. Move forward in time, not sideways."
+    },
+    {
+      "id": "cogat-pa-g1-9",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Snow goes with a scarf. Sunshine goes with what?",
+        "a": {
+          "text": "❄️"
+        },
+        "b": {
+          "text": "🧣"
+        },
+        "c": {
+          "text": "☀️"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🕶️"
+          },
+          "label": "sunglasses"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⛄"
+          },
+          "label": "a snowman"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🧤"
+          },
+          "label": "gloves"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "☔"
+          },
+          "label": "an umbrella"
+        }
+      ],
+      "answer": "a",
+      "explanation": "You wear a scarf when it snows. You wear sunglasses when the sun is bright. Gloves are for cold weather like the scarf.",
+      "strategy": "Match the weather to what you wear in it."
+    },
+    {
+      "id": "cogat-pa-g1-10",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A seed goes with a tree. An egg goes with what?",
+        "a": {
+          "text": "🌱"
+        },
+        "b": {
+          "text": "🌳"
+        },
+        "c": {
+          "text": "🥚"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐤"
+          },
+          "label": "a chick"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🪹"
+          },
+          "label": "a nest"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍳"
+          },
+          "label": "a fried egg"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐔"
+          },
+          "label": "a hen"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A seed grows into a tree. An egg hatches into a chick. A nest is where the egg sits, not what it becomes.",
+      "strategy": "Growing up goes one way. Follow the same direction."
+    },
+    {
       "id": "cogat-pa-g1-5",
       "grade": 1,
       "difficulty": 3,
@@ -268,6 +528,370 @@
       "answer": "a",
       "explanation": "A fish moves through water. A bird moves through the sky. The nest is where a bird sleeps, not where it flies.",
       "strategy": "When two answers both seem to fit, look again at the first pair for the exact idea."
+    },
+    {
+      "id": "cogat-pa-g1-11",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Scissors go with paper. A crayon goes with what?",
+        "a": {
+          "text": "✂️"
+        },
+        "b": {
+          "text": "📄"
+        },
+        "c": {
+          "text": "🖍️"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🎨"
+          },
+          "label": "coloring"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "📦"
+          },
+          "label": "a box"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "✏️"
+          },
+          "label": "a pencil"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧒"
+          },
+          "label": "a child"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Scissors are for cutting paper. A crayon is for coloring. A pencil is another thing you write with, not what a crayon is for.",
+      "strategy": "Ask what the tool is FOR, not what it looks like."
+    },
+    {
+      "id": "cogat-pa-g1-12",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A fish goes with water. A camel goes with what?",
+        "a": {
+          "text": "🐟"
+        },
+        "b": {
+          "text": "🌊"
+        },
+        "c": {
+          "text": "🐫"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🏜️"
+          },
+          "label": "a desert"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "💧"
+          },
+          "label": "a drop of water"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌴"
+          },
+          "label": "a palm tree"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐴"
+          },
+          "label": "a horse"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A fish lives in water. A camel lives in the desert. A palm tree grows in the desert too, but it is not where the camel lives.",
+      "strategy": "Where does it live? That is the whole question here."
+    },
+    {
+      "id": "cogat-pa-g1-13",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A car goes with a wheel. A bird goes with what?",
+        "a": {
+          "text": "🚗"
+        },
+        "b": {
+          "text": "🛞"
+        },
+        "c": {
+          "text": "🐦"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🪶"
+          },
+          "label": "a feather"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🪹"
+          },
+          "label": "a nest"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐛"
+          },
+          "label": "a worm"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A wheel is a part of a car. A feather is a part of a bird. A nest is where a bird lives, not a part of it.",
+      "strategy": "Whole and part. Pick the piece that belongs to it."
+    },
+    {
+      "id": "cogat-pa-g1-14",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Fire goes with ice. A happy face goes with what?",
+        "a": {
+          "text": "🔥"
+        },
+        "b": {
+          "text": "🧊"
+        },
+        "c": {
+          "text": "😀"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "😢"
+          },
+          "label": "a sad face"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "😄"
+          },
+          "label": "a laughing face"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🙂"
+          },
+          "label": "a small smile"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🔥"
+          },
+          "label": "fire"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fire and ice are opposites, hot and cold. So the answer is the opposite of happy, which is sad. A laughing face is even happier, not the opposite.",
+      "strategy": "When the first pair are opposites, look only for opposites."
+    },
+    {
+      "id": "cogat-pa-g1-15",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Rain goes with a rainbow. An acorn goes with what?",
+        "a": {
+          "text": "🌧️"
+        },
+        "b": {
+          "text": "🌈"
+        },
+        "c": {
+          "text": "🌰"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌳"
+          },
+          "label": "a tree"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐿️"
+          },
+          "label": "a squirrel"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍂"
+          },
+          "label": "a leaf"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌰"
+          },
+          "label": "another acorn"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Rain comes first and a rainbow comes after. An acorn comes first and a tree comes after. A squirrel eats acorns, but it is not what comes after.",
+      "strategy": "First and next. Ask what comes afterwards."
+    },
+    {
+      "id": "cogat-pa-g1-16",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "An eye goes with glasses. An ear goes with what?",
+        "a": {
+          "text": "👁️"
+        },
+        "b": {
+          "text": "👓"
+        },
+        "c": {
+          "text": "👂"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🎧"
+          },
+          "label": "headphones"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "👃"
+          },
+          "label": "a nose"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🗣️"
+          },
+          "label": "a mouth talking"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🔔"
+          },
+          "label": "a bell"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Glasses help your eyes. Headphones go on your ears. A bell makes a sound your ear hears, but you do not wear it.",
+      "strategy": "Match the body part to the thing you wear on it."
+    },
+    {
+      "id": "cogat-pa-g1-17",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Milk goes with a cow. Honey goes with what?",
+        "a": {
+          "text": "🥛"
+        },
+        "b": {
+          "text": "🐄"
+        },
+        "c": {
+          "text": "🍯"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐝"
+          },
+          "label": "a bee"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌻"
+          },
+          "label": "a flower"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍞"
+          },
+          "label": "bread"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🧸"
+          },
+          "label": "a bear"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Milk comes from a cow. Honey comes from a bee. A flower is where the bee gets nectar, and bread is what you spread honey on. Notice this pair runs backwards, from the thing to the animal.",
+      "strategy": "Check which way the pair goes. Sometimes it starts with the thing, not the animal."
     },
     {
       "id": "cogat-pa-g2-1",
@@ -374,6 +998,162 @@
       "strategy": "Ask what helps you do it. That is the relationship here."
     },
     {
+      "id": "cogat-pa-g2-6",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A hot thermometer goes with feeling hot. Ice goes with what?",
+        "a": {
+          "text": "🌡️"
+        },
+        "b": {
+          "text": "🥵"
+        },
+        "c": {
+          "text": "🧊"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🥶"
+          },
+          "label": "feeling cold"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "💧"
+          },
+          "label": "water"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🧊"
+          },
+          "label": "more ice"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "❄️"
+          },
+          "label": "a snowflake"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A hot thermometer makes you feel hot. Ice makes you feel cold. A snowflake is another cold thing, but it is not the feeling.",
+      "strategy": "Match the thing to the feeling it gives you."
+    },
+    {
+      "id": "cogat-pa-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "Wood goes with a chair. Wool goes with what?",
+        "a": {
+          "text": "🪵"
+        },
+        "b": {
+          "text": "🪑"
+        },
+        "c": {
+          "text": "🧶"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🧥"
+          },
+          "label": "a sweater"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐑"
+          },
+          "label": "a sheep"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🧵"
+          },
+          "label": "thread"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪡"
+          },
+          "label": "a needle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A chair is made from wood. A sweater is made from wool. A sheep is where wool comes from, not what it is made into.",
+      "strategy": "Material and the thing made from it. Look forwards, not back."
+    },
+    {
+      "id": "cogat-pa-g2-8",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A cook goes with a meal. A farmer goes with what?",
+        "a": {
+          "text": "👨‍🍳"
+        },
+        "b": {
+          "text": "🍲"
+        },
+        "c": {
+          "text": "👩‍🌾"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌾"
+          },
+          "label": "a crop"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🚜"
+          },
+          "label": "a tractor"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🏡"
+          },
+          "label": "a farmhouse"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐄"
+          },
+          "label": "a cow"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cook makes a meal. A farmer grows a crop. A tractor is a tool the farmer uses, not what the farmer produces.",
+      "strategy": "Worker and what they make. Not the tool and not the place."
+    },
+    {
       "id": "cogat-pa-g2-3",
       "grade": 2,
       "difficulty": 3,
@@ -478,6 +1258,214 @@
       "strategy": "A hard analogy often has a matching word that is close but not quite the relationship. Read the first pair again."
     },
     {
+      "id": "cogat-pa-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "One book goes with many books. One tree goes with what?",
+        "a": {
+          "text": "📖"
+        },
+        "b": {
+          "text": "📚"
+        },
+        "c": {
+          "text": "🌳"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌲🌲🌲"
+          },
+          "label": "a forest of trees"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍃"
+          },
+          "label": "a leaf"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪵"
+          },
+          "label": "wood"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌱"
+          },
+          "label": "a seed"
+        }
+      ],
+      "answer": "a",
+      "explanation": "One book becomes many books. One tree becomes many trees. A leaf is a part of one tree, not a group of them.",
+      "strategy": "One and many. Check whether the pair gets bigger in number."
+    },
+    {
+      "id": "cogat-pa-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A candle goes with a flame. A flashlight goes with what?",
+        "a": {
+          "text": "🕯️"
+        },
+        "b": {
+          "text": "🔥"
+        },
+        "c": {
+          "text": "🔦"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "💡"
+          },
+          "label": "a light"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🔋"
+          },
+          "label": "a battery"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌙"
+          },
+          "label": "the moon"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🕶️"
+          },
+          "label": "sunglasses"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A candle makes a flame. A flashlight makes a light. A battery makes a flashlight work, but it is not what the flashlight makes.",
+      "strategy": "Ask what the thing produces."
+    },
+    {
+      "id": "cogat-pa-g2-11",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A pen goes with paper. A brush goes with what?",
+        "a": {
+          "text": "🖊️"
+        },
+        "b": {
+          "text": "📄"
+        },
+        "c": {
+          "text": "🖌️"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🖼️"
+          },
+          "label": "a canvas picture"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🎨"
+          },
+          "label": "a paint palette"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "✏️"
+          },
+          "label": "a pencil"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "👩‍🎨"
+          },
+          "label": "an artist"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A pen writes on paper. A brush paints on a canvas. The palette holds the paint and the artist holds the brush, but neither is the surface it works on.",
+      "strategy": "Tool and the surface it works on."
+    },
+    {
+      "id": "cogat-pa-g2-12",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A lock goes with a key. A door goes with what?",
+        "a": {
+          "text": "🔒"
+        },
+        "b": {
+          "text": "🔑"
+        },
+        "c": {
+          "text": "🚪"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🚪"
+          },
+          "label": "a door handle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🏠"
+          },
+          "label": "a house"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪟"
+          },
+          "label": "a window"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🔨"
+          },
+          "label": "a hammer"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A key is what opens a lock. A handle is what opens a door. A house is where the door is, not what opens it.",
+      "strategy": "Ask what opens it or makes it work."
+    },
+    {
       "id": "cogat-pa-g2-5",
       "grade": 2,
       "difficulty": 4,
@@ -528,6 +1516,266 @@
       "answer": "a",
       "explanation": "An umbrella keeps the rain off you. Sunglasses keep the bright sun out of your eyes. Both are the thing that protects you from that weather. An ice cream goes WITH sunshine, but it does not protect you from it.",
       "strategy": "Ask what protects you from it, not what you enjoy during it."
+    },
+    {
+      "id": "cogat-pa-g2-13",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "The sea goes with a fish. A tree goes with what?",
+        "a": {
+          "text": "🌊"
+        },
+        "b": {
+          "text": "🐟"
+        },
+        "c": {
+          "text": "🌳"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐦"
+          },
+          "label": "a bird"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍃"
+          },
+          "label": "a leaf"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🪵"
+          },
+          "label": "wood"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🌰"
+          },
+          "label": "an acorn"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A fish lives in the sea. A bird lives in a tree. A leaf and an acorn are parts of the tree, not creatures that live in it.",
+      "strategy": "Place and the animal that lives there."
+    },
+    {
+      "id": "cogat-pa-g2-14",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A footprint goes with walking. A wheel goes with what?",
+        "a": {
+          "text": "👣"
+        },
+        "b": {
+          "text": "🚶"
+        },
+        "c": {
+          "text": "🛞"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🚗"
+          },
+          "label": "driving"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🛣️"
+          },
+          "label": "a road"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🔧"
+          },
+          "label": "a wrench"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⛽"
+          },
+          "label": "a gas pump"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A footprint is what walking leaves behind, and walking is how a foot moves. A wheel is how a car moves. A road is where it goes, not how.",
+      "strategy": "Ask how the thing moves."
+    },
+    {
+      "id": "cogat-pa-g2-15",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A new moon goes with a full moon. A tiny thing goes with what?",
+        "a": {
+          "text": "🌑"
+        },
+        "b": {
+          "text": "🌕"
+        },
+        "c": {
+          "text": "🤏"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐘"
+          },
+          "label": "a huge thing"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐁"
+          },
+          "label": "a mouse"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🤏"
+          },
+          "label": "another tiny thing"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "👀"
+          },
+          "label": "eyes"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A new moon is the smallest and a full moon is the biggest. So a tiny thing pairs with a huge thing. A mouse is small, like the first one.",
+      "strategy": "Smallest and biggest. Find the far end."
+    },
+    {
+      "id": "cogat-pa-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "One puzzle piece goes with the finished picture. One brick goes with what?",
+        "a": {
+          "text": "🧩"
+        },
+        "b": {
+          "text": "🖼️"
+        },
+        "c": {
+          "text": "🧱"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🏠"
+          },
+          "label": "a finished house"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🧱"
+          },
+          "label": "another brick"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "👷"
+          },
+          "label": "a builder"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🔨"
+          },
+          "label": "a hammer"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Many puzzle pieces make a picture. Many bricks make a house. A builder puts them together and a hammer is a tool, but neither is the finished thing.",
+      "strategy": "Piece and finished thing. Ask what all the pieces build."
+    },
+    {
+      "id": "cogat-pa-g2-17",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which picture finishes the second pair?",
+      "figure": {
+        "kind": "analogy",
+        "alt": "A loud speaker goes with an ear. A light goes with what?",
+        "a": {
+          "text": "🔊"
+        },
+        "b": {
+          "text": "👂"
+        },
+        "c": {
+          "text": "💡"
+        }
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "👁️"
+          },
+          "label": "an eye"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🔦"
+          },
+          "label": "a flashlight"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌞"
+          },
+          "label": "the sun"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🕶️"
+          },
+          "label": "sunglasses"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A speaker makes sound and your ear takes it in. A light makes brightness and your eye takes it in. Sunglasses block light rather than take it in.",
+      "strategy": "Match what something gives out to the sense that receives it."
     },
     {
       "id": "cogat-pa-g3-1",
@@ -592,6 +1840,68 @@
       "strategy": "When the first pair are opposites, throw out every answer that means the same as the third word."
     },
     {
+      "id": "cogat-pa-g3-6",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Bird is to feather as fish is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "scale"
+        },
+        {
+          "id": "b",
+          "text": "fin"
+        },
+        {
+          "id": "c",
+          "text": "water"
+        },
+        {
+          "id": "d",
+          "text": "gill"
+        },
+        {
+          "id": "e",
+          "text": "swim"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A feather covers a bird's body. A scale covers a fish's body. A fin and a gill are parts of a fish, but they are not the covering.",
+      "strategy": "Match the exact part, not just any part."
+    },
+    {
+      "id": "cogat-pa-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Cold is to freeze as heat is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "melt"
+        },
+        {
+          "id": "b",
+          "text": "burn"
+        },
+        {
+          "id": "c",
+          "text": "warm"
+        },
+        {
+          "id": "d",
+          "text": "fire"
+        },
+        {
+          "id": "e",
+          "text": "summer"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Cold makes water freeze. Heat makes ice melt. Burning is what heat does to wood, but melting is the exact opposite of freezing.",
+      "strategy": "When one pair names an effect, find the matching opposite effect."
+    },
+    {
       "id": "cogat-pa-g3-3",
       "grade": 3,
       "difficulty": 3,
@@ -621,6 +1931,99 @@
       "answer": "a",
       "explanation": "A finger is part of a hand. A toe is part of a foot. Leg is the trap: a toe is on a leg in a loose way, but the part it belongs to directly is the foot, just as a finger belongs directly to a hand.",
       "strategy": "For part-and-whole questions, pick the closest whole, not the biggest one."
+    },
+    {
+      "id": "cogat-pa-g3-8",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Shepherd is to sheep as beekeeper is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "bees"
+        },
+        {
+          "id": "b",
+          "text": "honey"
+        },
+        {
+          "id": "c",
+          "text": "hive"
+        },
+        {
+          "id": "d",
+          "text": "sting"
+        },
+        {
+          "id": "e",
+          "text": "flowers"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A shepherd looks after sheep. A beekeeper looks after bees. Honey is what the bees make and a hive is where they live.",
+      "strategy": "Person and the animal they care for."
+    },
+    {
+      "id": "cogat-pa-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Sentence is to word as word is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "letter"
+        },
+        {
+          "id": "b",
+          "text": "book"
+        },
+        {
+          "id": "c",
+          "text": "page"
+        },
+        {
+          "id": "d",
+          "text": "sound"
+        },
+        {
+          "id": "e",
+          "text": "meaning"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A sentence is made of words. A word is made of letters. A book and a page are bigger than a sentence, so they go the wrong way.",
+      "strategy": "Whole to part. Then take one more step down."
+    },
+    {
+      "id": "cogat-pa-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Cup is to drink as plate is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "eat"
+        },
+        {
+          "id": "b",
+          "text": "food"
+        },
+        {
+          "id": "c",
+          "text": "table"
+        },
+        {
+          "id": "d",
+          "text": "round"
+        },
+        {
+          "id": "e",
+          "text": "wash"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A cup is what you drink from. A plate is what you eat from. Food is what goes on the plate, not what you do with it.",
+      "strategy": "Object and its job. Ask what you do with it."
     },
     {
       "id": "cogat-pa-g3-4",
@@ -654,6 +2057,99 @@
       "strategy": "Maker and thing made is a very common pair. Ask what the person actually produces."
     },
     {
+      "id": "cogat-pa-g3-11",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Sculptor is to clay as weaver is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "thread"
+        },
+        {
+          "id": "b",
+          "text": "cloth"
+        },
+        {
+          "id": "c",
+          "text": "loom"
+        },
+        {
+          "id": "d",
+          "text": "pattern"
+        },
+        {
+          "id": "e",
+          "text": "artist"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A sculptor works with clay. A weaver works with thread. Cloth is the finished thing and a loom is the tool.",
+      "strategy": "Maker and raw material. Not the tool and not the result."
+    },
+    {
+      "id": "cogat-pa-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Hive is to bees as den is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "foxes"
+        },
+        {
+          "id": "b",
+          "text": "honey"
+        },
+        {
+          "id": "c",
+          "text": "cave"
+        },
+        {
+          "id": "d",
+          "text": "forest"
+        },
+        {
+          "id": "e",
+          "text": "sleep"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A hive is the home of bees. A den is the home of foxes. A cave and a forest are places, but the pair asks whose home it is.",
+      "strategy": "Home and the animal that lives in it."
+    },
+    {
+      "id": "cogat-pa-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Question is to answer as problem is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "solution"
+        },
+        {
+          "id": "b",
+          "text": "hard"
+        },
+        {
+          "id": "c",
+          "text": "maths"
+        },
+        {
+          "id": "d",
+          "text": "teacher"
+        },
+        {
+          "id": "e",
+          "text": "mistake"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An answer is what a question needs. A solution is what a problem needs. A mistake is the opposite of a solution.",
+      "strategy": "Ask what completes the thing or puts it right."
+    },
+    {
       "id": "cogat-pa-g3-5",
       "grade": 3,
       "difficulty": 5,
@@ -685,6 +2181,130 @@
       "strategy": "Some pairs are about strength: a little version and a big version of the same thing."
     },
     {
+      "id": "cogat-pa-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Puddle is to lake as breeze is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "gale"
+        },
+        {
+          "id": "b",
+          "text": "wind"
+        },
+        {
+          "id": "c",
+          "text": "air"
+        },
+        {
+          "id": "d",
+          "text": "cool"
+        },
+        {
+          "id": "e",
+          "text": "weather"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A puddle is a tiny amount of water and a lake is a huge amount. A breeze is a tiny amount of wind and a gale is a huge amount. Wind is the general word, not the big end.",
+      "strategy": "Small version and big version of the same thing."
+    },
+    {
+      "id": "cogat-pa-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Clock is to time as ruler is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "length"
+        },
+        {
+          "id": "b",
+          "text": "inches"
+        },
+        {
+          "id": "c",
+          "text": "straight"
+        },
+        {
+          "id": "d",
+          "text": "measure"
+        },
+        {
+          "id": "e",
+          "text": "wood"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A clock measures time. A ruler measures length. Inches are units of length, so that answer is one step too specific.",
+      "strategy": "Match the general thing measured, not a unit of it."
+    },
+    {
+      "id": "cogat-pa-g3-16",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Feather is to light as anvil is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "heavy"
+        },
+        {
+          "id": "b",
+          "text": "iron"
+        },
+        {
+          "id": "c",
+          "text": "blacksmith"
+        },
+        {
+          "id": "d",
+          "text": "hammer"
+        },
+        {
+          "id": "e",
+          "text": "hard"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A feather is famous for being light. An anvil is famous for being heavy. Iron is what it is made of, and hard is a different property from heavy.",
+      "strategy": "Object and the quality it is known for."
+    },
+    {
+      "id": "cogat-pa-g3-17",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Bicycle is to pedal as boat is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "oar"
+        },
+        {
+          "id": "b",
+          "text": "water"
+        },
+        {
+          "id": "c",
+          "text": "sail"
+        },
+        {
+          "id": "d",
+          "text": "float"
+        },
+        {
+          "id": "e",
+          "text": "river"
+        }
+      ],
+      "answer": "a",
+      "explanation": "You push a pedal to move a bicycle. You pull an oar to move a boat. Water is where the boat goes, not what moves it.",
+      "strategy": "Ask which part you actually push or pull to make it go."
+    },
+    {
       "id": "cogat-pa-g4-1",
       "grade": 4,
       "difficulty": 2,
@@ -714,6 +2334,68 @@
       "answer": "a",
       "explanation": "An ocean is made of water. A desert is made of sand. Hot and dry describe a desert but are not what it is made of. A camel and a cactus live there.",
       "strategy": "Made-of is different from lives-in and different from describes."
+    },
+    {
+      "id": "cogat-pa-g4-6",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Bee is to hive as ant is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "colony"
+        },
+        {
+          "id": "b",
+          "text": "tunnel"
+        },
+        {
+          "id": "c",
+          "text": "sugar"
+        },
+        {
+          "id": "d",
+          "text": "insect"
+        },
+        {
+          "id": "e",
+          "text": "queen"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Bees live together in a hive. Ants live together in a colony. A tunnel is part of a colony and a queen is one ant in it.",
+      "strategy": "Group home and the animal that lives there."
+    },
+    {
+      "id": "cogat-pa-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Novel is to chapter as symphony is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "movement"
+        },
+        {
+          "id": "b",
+          "text": "orchestra"
+        },
+        {
+          "id": "c",
+          "text": "music"
+        },
+        {
+          "id": "d",
+          "text": "note"
+        },
+        {
+          "id": "e",
+          "text": "composer"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A novel is divided into chapters. A symphony is divided into movements. An orchestra plays it and a note is far smaller than a section.",
+      "strategy": "Whole to named section. Match the size of the piece."
     },
     {
       "id": "cogat-pa-g4-2",
@@ -778,6 +2460,99 @@
       "strategy": "Group words like herd, flock, swarm and pack always point at the animal they gather."
     },
     {
+      "id": "cogat-pa-g4-8",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Microscope is to small as telescope is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "distant"
+        },
+        {
+          "id": "b",
+          "text": "stars"
+        },
+        {
+          "id": "c",
+          "text": "large"
+        },
+        {
+          "id": "d",
+          "text": "glass"
+        },
+        {
+          "id": "e",
+          "text": "science"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A microscope lets you see things that are too small. A telescope lets you see things that are too far away. Stars are one thing you look at, not the reason you need it.",
+      "strategy": "Instrument and the problem it solves."
+    },
+    {
+      "id": "cogat-pa-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Doctor is to illness as mechanic is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "breakdown"
+        },
+        {
+          "id": "b",
+          "text": "car"
+        },
+        {
+          "id": "c",
+          "text": "engine"
+        },
+        {
+          "id": "d",
+          "text": "garage"
+        },
+        {
+          "id": "e",
+          "text": "tools"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A doctor fixes an illness. A mechanic fixes a breakdown. A car is what has the breakdown, and a garage is the place.",
+      "strategy": "Person and the problem they repair."
+    },
+    {
+      "id": "cogat-pa-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Seed is to plant as egg is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "bird"
+        },
+        {
+          "id": "b",
+          "text": "nest"
+        },
+        {
+          "id": "c",
+          "text": "shell"
+        },
+        {
+          "id": "d",
+          "text": "yolk"
+        },
+        {
+          "id": "e",
+          "text": "hatch"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A seed grows into a plant. An egg grows into a bird. A shell and a yolk are parts of an egg, and hatching is the action.",
+      "strategy": "Beginning and grown thing."
+    },
+    {
       "id": "cogat-pa-g4-4",
       "grade": 4,
       "difficulty": 4,
@@ -809,6 +2584,99 @@
       "strategy": "Instrument and what it measures. Match the level: general thing to general thing, not general to a unit."
     },
     {
+      "id": "cogat-pa-g4-11",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Drought is to rain as famine is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "food"
+        },
+        {
+          "id": "b",
+          "text": "hunger"
+        },
+        {
+          "id": "c",
+          "text": "crops"
+        },
+        {
+          "id": "d",
+          "text": "desert"
+        },
+        {
+          "id": "e",
+          "text": "water"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A drought is a shortage of rain. A famine is a shortage of food. Hunger is what a famine causes, not what is missing.",
+      "strategy": "Shortage pairs. Ask what has run out."
+    },
+    {
+      "id": "cogat-pa-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Compass is to direction as barometer is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "pressure"
+        },
+        {
+          "id": "b",
+          "text": "weather"
+        },
+        {
+          "id": "c",
+          "text": "needle"
+        },
+        {
+          "id": "d",
+          "text": "storm"
+        },
+        {
+          "id": "e",
+          "text": "sailor"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A compass shows direction. A barometer shows air pressure. Weather is what you predict from the pressure, not what the instrument reads.",
+      "strategy": "Instrument and exactly what it reads."
+    },
+    {
+      "id": "cogat-pa-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Diligent is to lazy as generous is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "stingy"
+        },
+        {
+          "id": "b",
+          "text": "kind"
+        },
+        {
+          "id": "c",
+          "text": "wealthy"
+        },
+        {
+          "id": "d",
+          "text": "giving"
+        },
+        {
+          "id": "e",
+          "text": "helpful"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Diligent and lazy are opposites. So the answer is the opposite of generous, which is stingy. Kind and giving mean much the same as generous.",
+      "strategy": "When the first pair are opposites, throw out every synonym."
+    },
+    {
       "id": "cogat-pa-g4-5",
       "grade": 4,
       "difficulty": 5,
@@ -838,6 +2706,130 @@
       "answer": "a",
       "explanation": "A sculpture is made out of marble. A poem is made out of words. Paper is the trap: it is what a poem is written on, not what it is made of. Rhyme is a feature some poems have, and a poet is the maker.",
       "strategy": "Made-of means the raw material. Ask what would be left if you took it away."
+    },
+    {
+      "id": "cogat-pa-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Chisel is to sculptor as scalpel is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "surgeon"
+        },
+        {
+          "id": "b",
+          "text": "hospital"
+        },
+        {
+          "id": "c",
+          "text": "cut"
+        },
+        {
+          "id": "d",
+          "text": "blade"
+        },
+        {
+          "id": "e",
+          "text": "patient"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A chisel is the fine tool a sculptor uses. A scalpel is the fine tool a surgeon uses. A patient is who it is used on, and a hospital is the place.",
+      "strategy": "Tool and the expert who wields it."
+    },
+    {
+      "id": "cogat-pa-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Whisper is to bellow as flicker is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "blaze"
+        },
+        {
+          "id": "b",
+          "text": "candle"
+        },
+        {
+          "id": "c",
+          "text": "dim"
+        },
+        {
+          "id": "d",
+          "text": "spark"
+        },
+        {
+          "id": "e",
+          "text": "glow"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A whisper is the quietest sound and a bellow is the loudest. A flicker is the smallest flame and a blaze is the biggest. A spark and a glow sit at the small end with flicker.",
+      "strategy": "Both pairs run from the smallest version to the largest."
+    },
+    {
+      "id": "cogat-pa-g4-16",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Archipelago is to islands as constellation is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "stars"
+        },
+        {
+          "id": "b",
+          "text": "sky"
+        },
+        {
+          "id": "c",
+          "text": "night"
+        },
+        {
+          "id": "d",
+          "text": "telescope"
+        },
+        {
+          "id": "e",
+          "text": "planet"
+        }
+      ],
+      "answer": "a",
+      "explanation": "An archipelago is a group of islands. A constellation is a group of stars. The sky is where they are, and a telescope is how you look at them.",
+      "strategy": "Group word and the things it gathers."
+    },
+    {
+      "id": "cogat-pa-g4-17",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Prologue is to story as overture is to —",
+      "choices": [
+        {
+          "id": "a",
+          "text": "opera"
+        },
+        {
+          "id": "b",
+          "text": "music"
+        },
+        {
+          "id": "c",
+          "text": "orchestra"
+        },
+        {
+          "id": "d",
+          "text": "ending"
+        },
+        {
+          "id": "e",
+          "text": "song"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A prologue is the part that comes before a story begins. An overture is the music that comes before an opera begins. An orchestra performs it and an ending is the opposite end.",
+      "strategy": "Opening piece and the work it opens."
     }
   ]
 }

@@ -7,7 +7,7 @@
   "blurb": "Listen carefully, then pick the picture that matches.",
   "childIntro": "I will say something once. Listen right to the end. Then find the picture that matches everything I said.",
   "howItWorks": "The teacher reads a description aloud, once, and the child marks the picture that fits. It appears only at OLSAT levels A, B and C, which are kindergarten through second grade, because it is a listening task that cannot exist once children read for themselves. The difficulty comes from position words like between, above and next to, and from having to satisfy every condition at once.",
-  "parentTip": "This is the question type you can practise anywhere, with no materials. In the car, say: point to something red that is smaller than your hand. Build up to two and then three conditions. The skill is holding all of them in mind while checking, which is exactly what the test measures. Remember the real test says it once with no repeats.",
+  "parentTip": "This is the question type you can practice anywhere, with no materials. In the car, say: point to something red that is smaller than your hand. Build up to two and then three conditions. The skill is holding all of them in mind while checking, which is exactly what the test measures. Remember the real test says it once with no repeats.",
   "questions": [
     {
       "id": "olsat-fd-g1-1",
@@ -47,6 +47,89 @@
       "answer": "a",
       "explanation": "In the middle means with one thing on each side. Only choice a has the cat between the two trees.",
       "strategy": "Middle means one thing on the left and one on the right."
+    },
+    {
+      "id": "olsat-fd-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Find the picture with a bird above a flower.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "matrix",
+            "rows": 2,
+            "cols": 1,
+            "alt": "A stack of pictures, top to bottom.",
+            "cells": [
+              {
+                "text": "🐦"
+              },
+              {
+                "text": "🌸"
+              }
+            ]
+          },
+          "label": "bird on top, flower below"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "matrix",
+            "rows": 2,
+            "cols": 1,
+            "alt": "A stack of pictures, top to bottom.",
+            "cells": [
+              {
+                "text": "🌸"
+              },
+              {
+                "text": "🐦"
+              }
+            ]
+          },
+          "label": "flower on top, bird below"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "matrix",
+            "rows": 2,
+            "cols": 1,
+            "alt": "A stack of pictures, top to bottom.",
+            "cells": [
+              {
+                "text": "🌸"
+              },
+              {
+                "text": "🌸"
+              }
+            ]
+          },
+          "label": "two flowers"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "matrix",
+            "rows": 2,
+            "cols": 1,
+            "alt": "A stack of pictures, top to bottom.",
+            "cells": [
+              {
+                "text": "🐦"
+              },
+              {
+                "text": "🐦"
+              }
+            ]
+          },
+          "label": "two birds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Above means higher up. The bird has to be on top and the flower underneath. Choice b has them the wrong way round.",
+      "strategy": "Above means on top. Below means underneath."
     },
     {
       "id": "olsat-fd-g1-2",
@@ -161,6 +244,84 @@
       "answer": "a",
       "explanation": "Count both. Three apples and one banana. Choice b has the numbers swapped and choice d has no banana at all.",
       "strategy": "When you hear two numbers, count both before you choose."
+    },
+    {
+      "id": "olsat-fd-g1-7",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Find the picture with two cats and one dog.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐈🐈🐕"
+          },
+          "label": "two cats and one dog"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐕🐕🐈"
+          },
+          "label": "two dogs and one cat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐈🐕"
+          },
+          "label": "one cat and one dog"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐈🐈🐈"
+          },
+          "label": "three cats"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count both. Two cats and one dog. Choice b has the numbers swapped and choice d has no dog at all.",
+      "strategy": "When you hear two numbers, count both before you choose."
+    },
+    {
+      "id": "olsat-fd-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Find the picture where the star is last.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌙☀️⭐"
+          },
+          "label": "moon, sun, star"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⭐🌙☀️"
+          },
+          "label": "star, moon, sun"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌙⭐☀️"
+          },
+          "label": "moon, star, sun"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⭐⭐🌙"
+          },
+          "label": "star, star, moon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Last means at the end, on the right. Only choice a has the star at the end.",
+      "strategy": "First, second, last. Count from the left with your finger."
     },
     {
       "id": "olsat-fd-g1-4",
@@ -321,6 +482,488 @@
       "strategy": "Three conditions means three checks. Go through them in order."
     },
     {
+      "id": "olsat-fd-g1-9",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Find the picture with a fish that is NOT next to a boat.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐟🌊"
+          },
+          "label": "a fish beside water"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐟⛵"
+          },
+          "label": "a fish beside a boat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⛵🐟"
+          },
+          "label": "a boat beside a fish"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⛵⛵"
+          },
+          "label": "two boats"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The word NOT flips it. You want the fish with no boat beside it. Choices b and c both put a boat next to the fish.",
+      "strategy": "The word NOT changes everything. Listen for it."
+    },
+    {
+      "id": "olsat-fd-g1-10",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Find the picture with more apples than bananas.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍎🍎🍌"
+          },
+          "label": "two apples and one banana"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍌🍌🍎"
+          },
+          "label": "two bananas and one apple"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍎🍌"
+          },
+          "label": "one of each"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍌🍌🍌"
+          },
+          "label": "three bananas"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count each fruit. Choice a has two apples and one banana, so there really are more apples. Choice c has the same number of each, which is not more.",
+      "strategy": "More than means bigger. The same number does not count."
+    },
+    {
+      "id": "olsat-fd-g1-11",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Find the picture with a sun between two clouds.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "☁️☀️☁️"
+          },
+          "label": "cloud, sun, cloud"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "☀️☁️☁️"
+          },
+          "label": "sun, cloud, cloud"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "☁️☁️☀️"
+          },
+          "label": "cloud, cloud, sun"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "☀️☁️☀️"
+          },
+          "label": "sun, cloud, sun"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Between means in the middle with one thing on each side, and both sides must be clouds. Choice d has suns on the outside.",
+      "strategy": "Check the middle first, then check both sides match."
+    },
+    {
+      "id": "olsat-fd-g1-12",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Find the picture with a small circle to the right of a big square.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "A big blue square then a small red circle",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red",
+                    "z": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "big square then small circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "A small red circle then a big blue square",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red",
+                    "z": 0.5
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "small circle then big square"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "A big blue square then a big red circle",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "big square then big circle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "A small blue square then a small red circle",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue",
+                    "z": 0.5
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red",
+                    "z": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "small square then small circle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things had to be right: the square is big, the circle is small, and the circle is on the right. Choice b puts it on the left and choice c makes it too big.",
+      "strategy": "Three conditions means three checks. Go through them in order."
+    },
+    {
+      "id": "olsat-fd-g1-13",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Find the picture with three trees and no houses.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌳🌳🌳"
+          },
+          "label": "three trees"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🌳🌳🏠"
+          },
+          "label": "two trees and a house"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌳🌳"
+          },
+          "label": "two trees"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🏠🏠🏠"
+          },
+          "label": "three houses"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things had to be true: three trees AND no houses. Choice b has a house in it and choice c has only two trees.",
+      "strategy": "When the sentence says AND, both parts must be true."
+    },
+    {
+      "id": "olsat-fd-g1-14",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Find the picture with a cat first and a bird last.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐈🐕🐦"
+          },
+          "label": "cat, dog, bird"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐦🐕🐈"
+          },
+          "label": "bird, dog, cat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐈🐦🐕"
+          },
+          "label": "cat, bird, dog"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐕🐈🐦"
+          },
+          "label": "dog, cat, bird"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The cat must be at the front AND the bird at the end. Choice c has the cat first but the bird in the middle. Choice d has the bird last but a dog first.",
+      "strategy": "Two positions to check. Look at the front and the back."
+    },
+    {
+      "id": "olsat-fd-g1-15",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Find the picture with neither a car nor a bus.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🚲🚲"
+          },
+          "label": "two bicycles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🚗🚲"
+          },
+          "label": "a car and a bicycle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🚌🚲"
+          },
+          "label": "a bus and a bicycle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🚗🚌"
+          },
+          "label": "a car and a bus"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Neither one nor the other means both are ruled out. Choice b has a car and choice c has a bus. That leaves the bicycles.",
+      "strategy": "Neither and nor means say no to both. Cross them off."
+    },
+    {
+      "id": "olsat-fd-g1-16",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Find the picture with the same number of stars as moons.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "⭐⭐🌙🌙"
+          },
+          "label": "two stars and two moons"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⭐⭐⭐🌙"
+          },
+          "label": "three stars and one moon"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⭐🌙🌙"
+          },
+          "label": "one star and two moons"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⭐⭐⭐"
+          },
+          "label": "three stars"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The same number means an equal count of each. Choice a has two of each. Every other choice has more of one than the other.",
+      "strategy": "Count each kind separately, then compare the two numbers."
+    },
+    {
+      "id": "olsat-fd-g1-17",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Find the picture with a small shape inside a big circle.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          },
+          "label": "a star inside a circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "f": "outline",
+                "z": 1.15
+              },
+              {
+                "s": "circle",
+                "c": "blue",
+                "z": 0.4
+              }
+            ]
+          },
+          "label": "a circle inside a star"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "A circle and a star side by side",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "blue",
+                    "f": "outline"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "star",
+                    "c": "yellow"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "a circle beside a star"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "f": "outline",
+                "z": 1.15
+              }
+            ]
+          },
+          "label": "an empty circle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Inside means one shape drawn within the other, and the big one must be the circle. Choice b has them swapped and choice c has them side by side.",
+      "strategy": "Inside, outside and beside are three different places. Picture it first."
+    },
+    {
       "id": "olsat-fd-g2-1",
       "grade": 2,
       "difficulty": 2,
@@ -453,6 +1096,45 @@
       "answer": "a",
       "explanation": "Count each animal. Choice a has two cats and one dog, so there really are more cats. Choice c has the same number of each, which is not more.",
       "strategy": "More than means bigger. The same number does not count."
+    },
+    {
+      "id": "olsat-fd-g2-6",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Find the picture with more books than pencils.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "📕📕📕✏️"
+          },
+          "label": "three books and one pencil"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "✏️✏️📕"
+          },
+          "label": "two pencils and one book"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "📕✏️"
+          },
+          "label": "one book and one pencil"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "✏️✏️✏️"
+          },
+          "label": "three pencils"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count each thing. Choice a has three books and one pencil, so there are more books. Choice c has the same number of each.",
+      "strategy": "More than means bigger. Equal does not count."
     },
     {
       "id": "olsat-fd-g2-3",
@@ -641,10 +1323,127 @@
       "strategy": "First, second, third. Count from the left with your finger."
     },
     {
+      "id": "olsat-fd-g2-7",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Find the picture where the second thing is a key.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🔨🔑🪚"
+          },
+          "label": "hammer, key, saw"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🔑🔨🪚"
+          },
+          "label": "key, hammer, saw"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🔨🪚🔑"
+          },
+          "label": "hammer, saw, key"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🔑🔑🔨"
+          },
+          "label": "key, key, hammer"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Second means position number two, counting from the left. Choice b has the key first and choice c has it third.",
+      "strategy": "First, second, third. Count from the left."
+    },
+    {
+      "id": "olsat-fd-g2-8",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Find the picture with exactly two things that are the same.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍎🍎🍌"
+          },
+          "label": "two apples and a banana"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍎🍎🍎"
+          },
+          "label": "three apples"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍎🍌🍇"
+          },
+          "label": "an apple, a banana and grapes"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍌🍌🍌"
+          },
+          "label": "three bananas"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Exactly two must match and the third must be different. Choices b and d are all the same, and choice c has no matching pair.",
+      "strategy": "Read the sentence twice. Exactly two, and one different."
+    },
+    {
+      "id": "olsat-fd-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Find the picture with a cup that is neither on a table nor in a sink.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "☕🧺"
+          },
+          "label": "a cup in a basket"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "☕🪑"
+          },
+          "label": "a cup on a table"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "☕🚰"
+          },
+          "label": "a cup in a sink"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🪑🚰"
+          },
+          "label": "a table and a sink, no cup"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Neither one nor the other rules out both. Choice b is on a table, choice c is in a sink, and choice d has no cup at all. That leaves the basket.",
+      "strategy": "Cross off both named places, then see what is left."
+    },
+    {
       "id": "olsat-fd-g2-5",
       "grade": 2,
       "difficulty": 4,
-      "prompt": "Find the picture with exactly two shapes that are the same colour, and one that is different.",
+      "prompt": "Find the picture with exactly two shapes that are the same color, and one that is different.",
       "choices": [
         {
           "id": "a",
@@ -746,7 +1545,7 @@
               }
             ]
           },
-          "label": "three different colours"
+          "label": "three different colors"
         },
         {
           "id": "d",
@@ -786,6 +1585,482 @@
       "answer": "a",
       "explanation": "Two must match and one must not. Choice a has two blue and one green. Choices b and d are all the same, and choice c has no matching pair at all.",
       "strategy": "Read the sentence twice in your head. Exactly two, and exactly one different."
+    },
+    {
+      "id": "olsat-fd-g2-10",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Find the picture with one more cat than dogs.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐈🐈🐕"
+          },
+          "label": "two cats and one dog"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐈🐕🐕"
+          },
+          "label": "one cat and two dogs"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐈🐈🐕🐕"
+          },
+          "label": "two cats and two dogs"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐈🐈🐈"
+          },
+          "label": "three cats"
+        }
+      ],
+      "answer": "a",
+      "explanation": "One more means the cats beat the dogs by exactly one. Choice c has the same number of each and choice d has no dogs at all.",
+      "strategy": "One more is an exact amount, not just any bigger number."
+    },
+    {
+      "id": "olsat-fd-g2-11",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Find the picture with a star on top, a moon in the middle and a sun at the bottom.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "matrix",
+            "rows": 3,
+            "cols": 1,
+            "alt": "A stack of pictures, top to bottom.",
+            "cells": [
+              {
+                "text": "⭐"
+              },
+              {
+                "text": "🌙"
+              },
+              {
+                "text": "☀️"
+              }
+            ]
+          },
+          "label": "star, moon, sun"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "matrix",
+            "rows": 3,
+            "cols": 1,
+            "alt": "A stack of pictures, top to bottom.",
+            "cells": [
+              {
+                "text": "☀️"
+              },
+              {
+                "text": "🌙"
+              },
+              {
+                "text": "⭐"
+              }
+            ]
+          },
+          "label": "sun, moon, star"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "matrix",
+            "rows": 3,
+            "cols": 1,
+            "alt": "A stack of pictures, top to bottom.",
+            "cells": [
+              {
+                "text": "🌙"
+              },
+              {
+                "text": "⭐"
+              },
+              {
+                "text": "☀️"
+              }
+            ]
+          },
+          "label": "moon, star, sun"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "matrix",
+            "rows": 3,
+            "cols": 1,
+            "alt": "A stack of pictures, top to bottom.",
+            "cells": [
+              {
+                "text": "⭐"
+              },
+              {
+                "text": "☀️"
+              },
+              {
+                "text": "🌙"
+              }
+            ]
+          },
+          "label": "star, sun, moon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three positions had to be right. Every other choice has at least one in the wrong place.",
+      "strategy": "Build the stack in your head from the top down."
+    },
+    {
+      "id": "olsat-fd-g2-12",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Find the picture with fewer fish than boats.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐟⛵⛵"
+          },
+          "label": "one fish and two boats"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐟🐟⛵"
+          },
+          "label": "two fish and one boat"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐟⛵"
+          },
+          "label": "one fish and one boat"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐟🐟🐟"
+          },
+          "label": "three fish"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Fewer means a smaller number. Choice a has one fish and two boats. Choice c has the same number of each.",
+      "strategy": "Fewer means less. Check which side is smaller."
+    },
+    {
+      "id": "olsat-fd-g2-13",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Find the picture with a red shape between two blue shapes.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "kind": "series",
+            "alt": "blue, red, blue",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "blue, red, blue"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "kind": "series",
+            "alt": "red, blue, blue",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "red, blue, blue"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "kind": "series",
+            "alt": "blue, blue, red",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "blue, blue, red"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "kind": "series",
+            "alt": "red, blue, red",
+            "cells": [
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "square",
+                    "c": "blue"
+                  }
+                ]
+              },
+              {
+                "shapes": [
+                  {
+                    "s": "circle",
+                    "c": "red"
+                  }
+                ]
+              }
+            ]
+          },
+          "label": "red, blue, red"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Between means in the middle with one on each side, and both outer shapes must be blue. Choice d has the colors the wrong way round.",
+      "strategy": "Check the middle first, then check both sides match."
+    },
+    {
+      "id": "olsat-fd-g2-14",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Find the picture with three things that are all different.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🍎🍌🍇"
+          },
+          "label": "an apple, a banana and grapes"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🍎🍎🍌"
+          },
+          "label": "two apples and a banana"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🍎🍎🍎"
+          },
+          "label": "three apples"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🍎🍌"
+          },
+          "label": "an apple and a banana"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three things AND all different. Choice b has two the same, choice c has all three the same, and choice d has only two things.",
+      "strategy": "Two conditions: the right number, and all different."
+    },
+    {
+      "id": "olsat-fd-g2-15",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Find the picture with a cat that is not first and not last.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🐕🐈🐦"
+          },
+          "label": "dog, cat, bird"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🐈🐕🐦"
+          },
+          "label": "cat, dog, bird"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🐕🐦🐈"
+          },
+          "label": "dog, bird, cat"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🐈🐈🐕"
+          },
+          "label": "cat, cat, dog"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Not first and not last leaves only the middle. Choice b has the cat first and choice c has it last.",
+      "strategy": "When two positions are ruled out, only one is left."
+    },
+    {
+      "id": "olsat-fd-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Find the picture with twice as many stars as moons.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "⭐⭐⭐⭐🌙🌙"
+          },
+          "label": "four stars and two moons"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "⭐⭐⭐🌙"
+          },
+          "label": "three stars and one moon"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "⭐⭐🌙🌙"
+          },
+          "label": "two stars and two moons"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "⭐🌙🌙🌙"
+          },
+          "label": "one star and three moons"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twice as many means double. Four stars is double two moons. Choice b has three and one, which is three times as many, not twice.",
+      "strategy": "Twice as many means count the small group, then double it."
+    },
+    {
+      "id": "olsat-fd-g2-17",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Find the picture with a tree behind a house.",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "text": "🌳🏠"
+          },
+          "label": "a tree with a house in front"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "text": "🏠🌳"
+          },
+          "label": "a house with a tree in front"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "text": "🌳🌳"
+          },
+          "label": "two trees"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "text": "🏠🏠"
+          },
+          "label": "two houses"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Behind means the tree is further back, so the house is the one you see in front. Choice b has them the other way round.",
+      "strategy": "Behind and in front are opposites. Work out which one is nearer."
     }
   ]
 }

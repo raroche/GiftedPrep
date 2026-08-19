@@ -6,7 +6,7 @@
   "icon": "fold",
   "blurb": "Fold the paper, punch a hole, then open it up.",
   "childIntro": "Watch the paper get folded. Then a hole is punched through it. What does the paper look like when you open it out flat?",
-  "howItWorks": "A square of paper is folded, then a hole is punched through every layer. The child pictures the paper opened flat again. In CogAT this is the purest imagination task on the whole test, and the one that responds best to practising with real paper. Grades K-2 see cuts at the edge; from grade 3 the holes are punched anywhere.",
+  "howItWorks": "A square of paper is folded, then a hole is punched through every layer. The child pictures the paper opened flat again. In CogAT this is the purest imagination task on the whole test, and the one that responds best to practicing with real paper. Grades K-2 see cuts at the edge; from grade 3 the holes are punched anywhere.",
   "parentTip": "Do this one with real paper at the kitchen table. Fold a sheet exactly as the picture shows, punch it with a hole punch or push a pencil through, then let your child open it before they answer. Two or three real folds teach more than twenty questions on a screen. The rule to learn: number of layers times number of punches equals number of holes.",
   "questions": [
     {
@@ -6639,7 +6639,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Four layers and one punch gives four holes, one in the matching spot in each quarter. Two of the choices unfolded only one crease and show two holes; another adds a hole in the centre that nothing punched.",
+      "explanation": "Four layers and one punch gives four holes, one in the matching spot in each quarter. Two of the choices unfolded only one crease and show two holes; another adds a hole in the center that nothing punched.",
       "strategy": "Layers times punches sets the count. Anything with the wrong count is out straight away."
     },
     {
@@ -8526,7 +8526,7 @@
         }
       ],
       "answer": "a",
-      "explanation": "Two creases, four layers, one punch, four holes, one in the same position in each quarter. Two choices opened only one crease, and one adds a fifth hole in the centre that no punch could have made.",
+      "explanation": "Two creases, four layers, one punch, four holes, one in the same position in each quarter. Two choices opened only one crease, and one adds a fifth hole in the center that no punch could have made.",
       "strategy": "Four holes from four layers must sit in four different quarters. Check the quarters, not just the number."
     },
     {

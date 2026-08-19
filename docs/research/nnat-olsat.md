@@ -36,9 +36,9 @@ items structurally instead. Pearson's canonical NNAT2 wording:
 2. **Reasoning by Analogy** — reason about the logical relationship between
    geometric shapes changing in one or more dimensions, across rows and down
    columns.
-3. **Serial Reasoning** — recognise a sequence of shapes and how the sequence
+3. **Serial Reasoning** — recognize a sequence of shapes and how the sequence
    changes across rows and down columns.
-4. **Spatial Visualization** — recognise how two or more designs would look if
+4. **Spatial Visualization** — recognize how two or more designs would look if
    combined; may involve rotations or intersections.
 
 ## Universal item mechanics
@@ -48,7 +48,7 @@ items structurally instead. Pearson's canonical NNAT2 wording:
 | Answer options | **Exactly 5**, numbered 1-5, at every level |
 | Missing cell | `?` inside a **dashed** border |
 | Palette | **black, white, yellow, blue, green** only |
-| Colour-blind validated | monochromacy, protanopia/deuteranopia, tritanopia |
+| Color-blind validated | monochromacy, protanopia/deuteranopia, tritanopia |
 | Verbal content | **none**; directions are pictorial |
 | Item order | approximate order of difficulty |
 
@@ -122,7 +122,7 @@ settled:
 
 - Naglieri & Ford (2003) reported similar identification rates across groups.
 - [Lohman (2005), *Gifted Child Quarterly*](https://journals.sagepub.com/doi/10.1177/001698620504900103) attacked the sampling: only 5.6% of the sample came from urban districts.
-- [Lee et al. (2021) meta-analysis](https://journals.sagepub.com/doi/abs/10.1177/0016986221997800), 29 studies: NNAT correlates r = .68 with achievement, r = .31 with other intelligence measures, r = .20 with teacher ratings. It identifies proportionally more students of colour than other nonverbal tests but still falls short of its equity objective. Studies where Naglieri was an author showed notably higher correlations.
+- [Lee et al. (2021) meta-analysis](https://journals.sagepub.com/doi/abs/10.1177/0016986221997800), 29 studies: NNAT correlates r = .68 with achievement, r = .31 with other intelligence measures, r = .20 with teacher ratings. It identifies proportionally more students of color than other nonverbal tests but still falls short of its equity objective. Studies where Naglieri was an author showed notably higher correlations.
 
 **Convergent validity with OLSAT-8** (NNAT3 manual, N = 366): NAI correlates
 .55-.58 with OLSAT Total, .55-.66 with OLSAT Nonverbal, but only .25-.48 with

@@ -104,6 +104,211 @@
       "strategy": "Count each box out loud as you go along the row."
     },
     {
+      "id": "olsat-fse-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "pink",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "pink",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "pink",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "pink",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "pink",
+                "z": 1.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "pink",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "pink",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "pink",
+                "z": 1.35
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big pink lightning bolt. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-17",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a purple circle. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
       "id": "olsat-fse-g1-2",
       "grade": 1,
       "difficulty": 2,
@@ -285,6 +490,212 @@
       "answer": "a",
       "explanation": "Green and red take turns. The last one was green, so the next one is red.",
       "strategy": "Take turns means look at the one just before and pick the other."
+    },
+    {
+      "id": "olsat-fse-g1-7",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 1.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "z": 1.35
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big green trapezoid. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-13",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "pink",
+                "n": 1
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a teal leaf. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
       "id": "olsat-fse-g1-4",
@@ -475,6 +886,1043 @@
       "strategy": "Work out the jump between the first two, then check it again between the next two."
     },
     {
+      "id": "olsat-fse-g1-8",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink",
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a pink moon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-9",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue",
+                "n": 5,
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get five blue stars. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-14",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six orange plus signs. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-10",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "pink",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "pink",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "pink",
+                "n": 7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "pink",
+                "n": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "pink",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "yellow",
+                "n": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "pink",
+                "n": 9,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine pink rings. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-11",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 1
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a green square. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-15",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a red octagon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-12",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get five teal rings. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g1-16",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "pink",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "pink",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "pink",
+                "n": 7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "pink",
+                "n": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "pink",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "pink",
+                "n": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "red",
+                "n": 8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine pink clouds. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-6",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 1.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue",
+                "z": 1.35,
+                "n": 2
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big blue hexagon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-17",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow",
+                "n": 5,
+                "z": 0.55
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get five purple arrows. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
       "id": "olsat-fse-g2-1",
       "grade": 2,
       "difficulty": 2,
@@ -660,6 +2108,213 @@
       "answer": "a",
       "explanation": "Filled and empty take turns. The last one was filled, so the next is empty.",
       "strategy": "Say it out loud: filled, empty, filled, empty."
+    },
+    {
+      "id": "olsat-fse-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get an orange circle. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-13",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 1.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 1.35,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big yellow star. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
       "id": "olsat-fse-g2-3",
@@ -858,6 +2513,317 @@
       "strategy": "Count the steps rather than the angle. Each box is one step."
     },
     {
+      "id": "olsat-fse-g2-8",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue",
+                "r": 90,
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a blue bow tie. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 1.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 0.74
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big teal octagon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-14",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "n": 6
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six blue kites. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
       "id": "olsat-fse-g2-5",
       "grade": 2,
       "difficulty": 4,
@@ -949,6 +2915,768 @@
       "answer": "a",
       "explanation": "The fill goes empty, dotted, solid, and then the loop starts again at empty. Three steps and back to the beginning.",
       "strategy": "When a pattern has three steps, check whether it loops back to the start."
+    },
+    {
+      "id": "olsat-fse-g2-10",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small red bow tie. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-11",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 1,
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 2,
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 3,
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 4,
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 5,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal",
+                "n": 5,
+                "z": 0.5,
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step, and at the same time the shape gets smaller. Carry that on one more step and you get five small teal hearts. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-15",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "orange",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "orange",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "orange",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "orange",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "orange",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "orange",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "orange",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "orange",
+                "z": 0.3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small orange ring. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-12",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal",
+                "r": 90,
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal",
+                "r": 180,
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal",
+                "r": 270,
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal",
+                "z": 0.5,
+                "r": 180,
+                "n": 1
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small teal bow tie. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What comes next?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "orange",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small orange lightning bolt. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a green star. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g3-17",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "z": 1.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "z": 1.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "z": 0.74
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big red pentagon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
       "id": "olsat-fse-g3-1",
@@ -1056,6 +3784,240 @@
       "answer": "a",
       "explanation": "Two more each step: two, four, six, eight.",
       "strategy": "Find the step size first, then just add it on."
+    },
+    {
+      "id": "olsat-fse-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 6,
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six pink squares. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g3-13",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 6,
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six purple triangles. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
       "id": "olsat-fse-g3-2",
@@ -1280,6 +4242,355 @@
       "strategy": "If the gaps keep growing, try doubling instead of adding."
     },
     {
+      "id": "olsat-fse-g3-8",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple",
+                "n": 3,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple",
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a purple pentagon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "n": 6,
+                "z": 1.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step. Carry that on one more step and you get six purple squares. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g3-14",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "n": 7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "n": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "n": 9,
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "green",
+                "n": 9
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange",
+                "n": 9
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by two each step. Carry that on one more step and you get nine yellow bow ties. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
       "id": "olsat-fse-g3-4",
       "grade": 3,
       "difficulty": 4,
@@ -1393,6 +4704,359 @@
       "answer": "a",
       "explanation": "Two rules moving in opposite directions: the count falls by one and the size grows. Choice b shrank the count but kept them small, and choice d dropped the count by two.",
       "strategy": "Two rules going opposite ways is a favourite trick. Check each separately."
+    },
+    {
+      "id": "olsat-fse-g3-10",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "z": 0.5,
+                "n": 1,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small red six-pointed star. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g3-11",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "teal",
+                "z": 0.5,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "yellow",
+                "z": 0.5,
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small teal kite. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g3-15",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "yellow",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small yellow triangle. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
       "id": "olsat-fse-g3-5",
@@ -1514,6 +5178,476 @@
       "strategy": "One rule can change every step while another changes every other step. Track them apart."
     },
     {
+      "id": "olsat-fse-g3-12",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink",
+                "f": "outline",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink",
+                "f": "dots",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink",
+                "f": "outline",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "pink",
+                "z": 0.5,
+                "r": 180,
+                "n": 1
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small pink pentagon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g3-16",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink",
+                "f": "outline",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink",
+                "f": "dots",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink",
+                "f": "outline",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink",
+                "z": 0.3,
+                "n": 1
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small pink octagon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink",
+                "z": 0.55,
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink",
+                "n": 1
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a pink triangle. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g4-17",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green",
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a green slanted rectangle. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
       "id": "olsat-fse-g4-1",
       "grade": 4,
       "difficulty": 2,
@@ -1579,6 +5713,238 @@
       "answer": "a",
       "explanation": "Three more each step: three, six, nine, twelve. Choice d is doubling, which would give three, six, twelve.",
       "strategy": "Once the count goes past nine it is easier to answer with a number than a picture."
+    },
+    {
+      "id": "olsat-fse-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "z": 1.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange",
+                "z": 1.35,
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "z": 1.35,
+                "n": 2
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big orange trapezoid. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g4-13",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "red",
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a red cross. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
       "id": "olsat-fse-g4-2",
@@ -1692,6 +6058,352 @@
       "answer": "a",
       "explanation": "Four quarter turns make a full turn, so the fifth box looks exactly like the first.",
       "strategy": "After a full turn a shape is back where it started. The pattern loops."
+    },
+    {
+      "id": "olsat-fse-g4-8",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple",
+                "r": 90
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple",
+                "r": 270
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple",
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "purple",
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple",
+                "r": 90,
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape turns a quarter turn clockwise each step. Carry that on one more step and you get a purple four-pointed star. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "r": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "r": 180
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again. Carry that on one more step and you get a blue pentagon. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g4-14",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 0.4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 0.6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 0.85
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 1.35
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 0.74
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "z": 0.74,
+                "r": 90
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step. Carry that on one more step and you get a big red kite. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     },
     {
       "id": "olsat-fse-g4-3",
@@ -1891,6 +6603,360 @@
       "strategy": "A four step loop returns to the start on the fifth box."
     },
     {
+      "id": "olsat-fse-g4-10",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "outline",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "dots",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "outline",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green",
+                "z": 0.8,
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the inside goes empty, solid, dotted, and then starts again, and at the same time the shape gets smaller. Carry that on one more step and you get a small green four-pointed star. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g4-11",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "yellow",
+                "z": 0.5,
+                "r": 180
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small green crescent. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g4-15",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "pink",
+                "z": 0.5,
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small green slanted rectangle. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
       "id": "olsat-fse-g4-5",
       "grade": 4,
       "difficulty": 5,
@@ -2040,6 +7106,247 @@
       "answer": "a",
       "explanation": "The count rises by one every box. The dot appears on boxes one, three and five, which are the odd numbered boxes. The next box is the fifth, so it has five stars and a dot.",
       "strategy": "Number the boxes one to five. Then ask which box numbers get the extra detail."
+    },
+    {
+      "id": "olsat-fse-g4-12",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "n": 2,
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "n": 3,
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "n": 4,
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "n": 5,
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "n": 6,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "n": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "red",
+                "n": 8,
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "n": 6,
+                "z": 0.5,
+                "r": 270
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the number goes up by one each step, and at the same time the shape gets smaller. Carry that on one more step and you get six small red six-pointed stars. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
+    },
+    {
+      "id": "olsat-fse-g4-16",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "What comes next in the series?",
+      "figure": {
+        "kind": "series",
+        "alt": "A row of shapes that change step by step, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 1.3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 1.1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 0.9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 0.7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "yellow",
+                "z": 0.4
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "green",
+                "z": 0.5,
+                "r": 270
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "orange",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Look along the row: the shape gets a little bigger each step, and at the same time the shape gets smaller. Carry that on one more step and you get a small yellow wide rectangle. Choice b stopped one step early.",
+      "strategy": "Work out what changes between the first two boxes, then check the same change happens again to the third."
     }
   ]
 }

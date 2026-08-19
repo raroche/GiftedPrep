@@ -1507,6 +1507,3080 @@
       "answer": "a",
       "explanation": "Multiply the number by itself, then subtract one. Three times three is nine, minus one is eight. Five times five is twenty-five, minus one is twenty-four. Seven times seven is forty-nine, minus one is forty-eight. Choice b forgets the last step.",
       "strategy": "If the answers are all near a square number, try the number times itself, then look for a small adjustment."
+    },
+    {
+      "id": "cogat-na-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: three blue triangles, then five blue triangles. Bottom row: four red circles, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six red circles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight red circles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five red circles"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four red circles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three triangles become five triangles. Two more were added. So four circles and two more makes six circles. The box with eight circles is double, and doubling three does not give five.",
+      "strategy": "Count the top row twice: how many at the start, how many at the end. The gap is the rule."
+    },
+    {
+      "id": "cogat-na-g1-7",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: seven yellow stars, then six yellow stars. Bottom row: four green squares, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three green squares"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four green squares"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five green squares"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two green squares"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Seven stars become six stars. One was taken away. So four squares with one taken away is three squares. The box with four squares forgot to take any away.",
+      "strategy": "Ask first whether the number grew or shrank. Then work out by how much."
+    },
+    {
+      "id": "cogat-na-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: two pink hearts, then five pink hearts. Bottom row: five purple diamonds, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight purple diamonds"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six purple diamonds"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven purple diamonds"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four purple diamonds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two hearts become five hearts, so three were added. Five diamonds and three more makes eight. The shape and the color stay the same all along the row; only the number changes. The box with six diamonds only added one.",
+      "strategy": "Notice what stays the same as well as what changes. Only the number is allowed to move."
+    },
+    {
+      "id": "cogat-na-g1-9",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: nine orange squares, then six orange squares. Bottom row: five teal triangles, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two teal triangles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three teal triangles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "one teal triangle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five teal triangles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Nine squares become six squares, so three were taken away. Five triangles take away three leaves two. The color and the shape never change, so do not let them distract you. The box with five triangles took nothing away at all.",
+      "strategy": "Take away the same amount, not down to the same number."
+    },
+    {
+      "id": "cogat-na-g1-10",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: two green circles, then four green circles. Bottom row: four yellow stars, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight yellow stars"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven yellow stars"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine yellow stars"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four yellow stars"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two circles become four circles. That is twice as many. Twice as many as four stars is eight stars. The box with four stars is the number you started with, not the number you get after doubling.",
+      "strategy": "Doubling means the same amount again. Four and four more is eight."
+    },
+    {
+      "id": "cogat-na-g1-11",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: eight blue squares, then four blue squares. Bottom row: six red hearts, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three red hearts"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four red hearts"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six red hearts"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five red hearts"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eight squares become four squares. That is half of them. Half of six hearts is three hearts. The box with four hearts copies the answer from the top row instead of using the rule.",
+      "strategy": "Half means splitting into two equal piles. Half of six is three because three and three makes six."
+    },
+    {
+      "id": "cogat-na-g1-12",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: two teal diamonds, then six teal diamonds. Bottom row: five orange circles, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine orange circles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight orange circles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven orange circles"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six orange circles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two diamonds become six diamonds, so four were added. Five circles and four more makes nine circles. The box with eight circles is very close but one short, so count the top row carefully before you choose.",
+      "strategy": "When two answers are one apart, count the top row again before you decide."
+    },
+    {
+      "id": "cogat-na-g1-13",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: nine purple stars, then five purple stars. Bottom row: six pink squares, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "purple",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two pink squares"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three pink squares"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "one pink square"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four pink squares"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Nine stars become five stars, so four were taken away. Six squares take away four leaves two squares. The box with three squares only took three away, which would turn nine into six, not five.",
+      "strategy": "Test your rule on the top row before you use it. If it does not fit there, it is wrong."
+    },
+    {
+      "id": "cogat-na-g1-14",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: three blue circles, then seven blue circles. Bottom row: an empty box, then nine green triangles.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 7
+              }
+            ]
+          },
+          {
+            "missing": true
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 9
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five green triangles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four green triangles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six green triangles"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine green triangles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "This time the empty box is at the start. Three circles become seven, so the rule adds four. To land on nine triangles you must start with five, because five and four more makes nine. The box with nine triangles just copies the number next to it.",
+      "strategy": "When the gap is at the start, work backwards: take the rule away instead of doing it."
+    },
+    {
+      "id": "cogat-na-g1-15",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "How many go in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: four orange stars, then an empty box. Bottom row: five blue circles, then eight blue circles.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 8
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven orange stars"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six orange stars"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight orange stars"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five orange stars"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The bottom row is the one that tells you the rule: five circles become eight circles, so three are added. Doing that to four stars gives seven stars. The box with eight stars copies the bottom row's answer instead of using its rule.",
+      "strategy": "You can learn the rule from either row. Find the row that is complete and start there."
+    },
+    {
+      "id": "cogat-na-g2-6",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: two teal squares, then seven teal squares. Bottom row: four pink stars, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "n": 7
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine pink stars"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight pink stars"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven pink stars"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five pink stars"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two squares become seven squares, so five were added. Four stars and five more makes nine stars. The box with seven stars copies the number from the top row instead of adding five.",
+      "strategy": "Work out the size of the jump first, then make the same jump from the new number."
+    },
+    {
+      "id": "cogat-na-g2-7",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: eight purple circles, then six purple circles. Bottom row: five green diamonds, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "n": 8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three green diamonds"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four green diamonds"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two green diamonds"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five green diamonds"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eight circles become six circles, so two were taken away. Five diamonds take away two leaves three diamonds. The box with four diamonds only took one away.",
+      "strategy": "Say the rule as a sentence: two fewer. Then say it again with the new number."
+    },
+    {
+      "id": "cogat-na-g2-8",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: three orange triangles, then nine orange triangles. Bottom row: two blue hearts, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "blue",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six blue hearts"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four blue hearts"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five blue hearts"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "blue",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine blue hearts"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three triangles become nine triangles. That is three equal groups of three, so the rule is three times as many. Two hearts three times over is six hearts. The box with four hearts is only double.",
+      "strategy": "Three times as many means the group repeats three times. Say it out loud: two, two and two."
+    },
+    {
+      "id": "cogat-na-g2-9",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: eight yellow stars, then two yellow stars. Bottom row: four red squares, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "one red square"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two red squares"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three red squares"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four red squares"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eight stars become two stars. Eight shares into four equal groups of two, so the rule takes a quarter. A quarter of four squares is one square. The box with two squares is half, not a quarter.",
+      "strategy": "A quarter is half of a half. Halve it, then halve it again."
+    },
+    {
+      "id": "cogat-na-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: six pink hearts, then two pink hearts. Bottom row: nine teal circles, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three teal circles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four teal circles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two teal circles"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "teal",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six teal circles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six hearts share into three equal groups of two, so the rule is share into three. Nine circles share into three groups of three. The box with two circles copies the top row's answer rather than sharing nine.",
+      "strategy": "Sharing into three groups undoes making three groups. Check by counting the groups back up."
+    },
+    {
+      "id": "cogat-na-g2-11",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: one blue diamond, then four blue diamonds. Bottom row: two green squares, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight green squares"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four green squares"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          },
+          "label": "six green squares"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine green squares"
+        }
+      ],
+      "answer": "a",
+      "explanation": "One diamond becomes four diamonds, so the rule is four times as many. Two squares four times over is eight squares. The box with four squares is only double, and doubling one gives two, not four.",
+      "strategy": "Check your rule against the top row before you use it on the bottom."
+    },
+    {
+      "id": "cogat-na-g2-12",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: two orange stars, then eight orange stars. Bottom row: three purple triangles, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange",
+                "n": 8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine purple triangles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 8
+              }
+            ]
+          },
+          "label": "eight purple triangles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 7
+              }
+            ]
+          },
+          "label": "seven purple triangles"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five purple triangles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two stars become eight stars, so six were added. Three triangles and six more makes nine triangles. The box with eight triangles is only one out, which is why you should count the top row twice before choosing.",
+      "strategy": "Near misses are put there on purpose. Recount before you commit."
+    },
+    {
+      "id": "cogat-na-g2-13",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: nine red circles, then four red circles. Bottom row: seven teal hexagons, then an empty box.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal",
+                "n": 7
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two teal hexagons"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three teal hexagons"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "one teal hexagon"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four teal hexagons"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Nine circles become four circles, so five were taken away. Seven hexagons take away five leaves two hexagons. The box with three hexagons is one too many, and taking four away from nine would leave five, not four.",
+      "strategy": "Prove the rule on the row you can see. Only then use it on the row you cannot."
+    },
+    {
+      "id": "cogat-na-g2-14",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: three yellow squares, then nine yellow squares. Bottom row: an empty box, then six purple hearts.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "n": 9
+              }
+            ]
+          },
+          {
+            "missing": true
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 6
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two purple hearts"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three purple hearts"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "one purple heart"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four purple hearts"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The empty box comes first, so you have to work backwards. Three squares become nine, which could be six more or three times as many. Six more cannot be the rule here, because taking six away from six hearts would leave nothing at all. So the rule is three times as many, and two hearts three times over is six.",
+      "strategy": "When working backwards, try each rule and throw out the ones that give an impossible answer."
+    },
+    {
+      "id": "cogat-na-g2-15",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "How many belong in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 2,
+        "cols": 2,
+        "alt": "Top row: six green squares, then an empty box. Bottom row: eight blue circles, then five blue circles.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 6
+              }
+            ]
+          },
+          {
+            "missing": true
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three green squares"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four green squares"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two green squares"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "n": 9
+              }
+            ]
+          },
+          "label": "nine green squares"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The complete row here is the bottom one: eight circles become five circles, so three are taken away. Six squares take away three leaves three squares. The box with nine squares added three instead of taking three away.",
+      "strategy": "Find the row with both boxes filled. That is the row that teaches you the rule."
+    },
+    {
+      "id": "cogat-na-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Five becomes twelve. Nine becomes sixteen. Twenty becomes question mark.",
+        "rows": [
+          [
+            "5",
+            "→",
+            "12"
+          ],
+          [
+            "9",
+            "→",
+            "16"
+          ],
+          [
+            "20",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "27"
+        },
+        {
+          "id": "b",
+          "text": "26"
+        },
+        {
+          "id": "c",
+          "text": "28"
+        },
+        {
+          "id": "d",
+          "text": "140"
+        },
+        {
+          "id": "e",
+          "text": "13"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five to twelve is seven more, and nine to sixteen is seven more as well. So the rule is add seven, and twenty plus seven is twenty-seven. The choice of one hundred and forty is twenty times seven, which is what you get if you read the rule as multiplying.",
+      "strategy": "Find the gap between the two numbers in the first pair, then check the gap in the second."
+    },
+    {
+      "id": "cogat-na-g3-7",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Six becomes twelve. Nine becomes eighteen. Fifteen becomes question mark.",
+        "rows": [
+          [
+            "6",
+            "→",
+            "12"
+          ],
+          [
+            "9",
+            "→",
+            "18"
+          ],
+          [
+            "15",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "30"
+        },
+        {
+          "id": "b",
+          "text": "21"
+        },
+        {
+          "id": "c",
+          "text": "25"
+        },
+        {
+          "id": "d",
+          "text": "33"
+        },
+        {
+          "id": "e",
+          "text": "60"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six to twelve could be doubling or adding six. The second pair decides it: nine to eighteen is doubling, because nine plus six is fifteen. So fifteen doubled is thirty. The choice of twenty-one is the adding rule that the second pair ruled out.",
+      "strategy": "Guess from pair one, prove it on pair two, and only then use it on pair three."
+    },
+    {
+      "id": "cogat-na-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Twenty becomes eleven. Thirty-four becomes twenty-five. Fifty becomes question mark.",
+        "rows": [
+          [
+            "20",
+            "→",
+            "11"
+          ],
+          [
+            "34",
+            "→",
+            "25"
+          ],
+          [
+            "50",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "41"
+        },
+        {
+          "id": "b",
+          "text": "59"
+        },
+        {
+          "id": "c",
+          "text": "45"
+        },
+        {
+          "id": "d",
+          "text": "40"
+        },
+        {
+          "id": "e",
+          "text": "39"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twenty to eleven is nine less, and thirty-four to twenty-five is nine less too. Fifty minus nine is forty-one. The choice of fifty-nine adds nine instead of subtracting it, so check which way the numbers are moving before you work.",
+      "strategy": "Write the direction down first: bigger or smaller. Half the wrong answers go straight away."
+    },
+    {
+      "id": "cogat-na-g3-9",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Twelve becomes four. Twenty-seven becomes nine. Twenty-one becomes question mark.",
+        "rows": [
+          [
+            "12",
+            "→",
+            "4"
+          ],
+          [
+            "27",
+            "→",
+            "9"
+          ],
+          [
+            "21",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "13"
+        },
+        {
+          "id": "c",
+          "text": "18"
+        },
+        {
+          "id": "d",
+          "text": "63"
+        },
+        {
+          "id": "e",
+          "text": "6"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Twelve to four could be dividing by three or taking away eight. Twenty-seven to nine settles it, because twenty-seven take away eight is nineteen, not nine. So the rule is divide by three, and twenty-one divided by three is seven. The choice of thirteen is the take-away-eight rule.",
+      "strategy": "When the second number is much smaller, test division before subtraction."
+    },
+    {
+      "id": "cogat-na-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Three becomes twelve. Seven becomes twenty-eight. Nine becomes question mark.",
+        "rows": [
+          [
+            "3",
+            "→",
+            "12"
+          ],
+          [
+            "7",
+            "→",
+            "28"
+          ],
+          [
+            "9",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "36"
+        },
+        {
+          "id": "b",
+          "text": "18"
+        },
+        {
+          "id": "c",
+          "text": "45"
+        },
+        {
+          "id": "d",
+          "text": "32"
+        },
+        {
+          "id": "e",
+          "text": "13"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Three to twelve could be times four or plus nine. Seven to twenty-eight is times four, since seven plus nine is only sixteen. Nine times four is thirty-six. The choice of eighteen is nine plus nine, the rule the second pair threw out.",
+      "strategy": "A rule that fits pair one and fails pair two is not the rule. Try the next one."
+    },
+    {
+      "id": "cogat-na-g3-11",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Eighteen becomes nine. Twenty-four becomes twelve. Forty-six becomes question mark.",
+        "rows": [
+          [
+            "18",
+            "→",
+            "9"
+          ],
+          [
+            "24",
+            "→",
+            "12"
+          ],
+          [
+            "46",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "23"
+        },
+        {
+          "id": "b",
+          "text": "37"
+        },
+        {
+          "id": "c",
+          "text": "24"
+        },
+        {
+          "id": "d",
+          "text": "92"
+        },
+        {
+          "id": "e",
+          "text": "22"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Eighteen to nine could be halving or taking away nine. Twenty-four to twelve is halving, because twenty-four take away nine is fifteen. Half of forty-six is twenty-three. The choice of thirty-seven is forty-six take away nine.",
+      "strategy": "Halving and subtracting look identical in the first pair. The second pair is what tells them apart."
+    },
+    {
+      "id": "cogat-na-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Four becomes ten. Six becomes sixteen. Nine becomes question mark.",
+        "rows": [
+          [
+            "4",
+            "→",
+            "10"
+          ],
+          [
+            "6",
+            "→",
+            "16"
+          ],
+          [
+            "9",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "25"
+        },
+        {
+          "id": "b",
+          "text": "27"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        },
+        {
+          "id": "d",
+          "text": "15"
+        },
+        {
+          "id": "e",
+          "text": "29"
+        }
+      ],
+      "answer": "a",
+      "explanation": "This rule has two steps: times three, then take away two. Four times three is twelve, take two is ten. Six times three is eighteen, take two is sixteen. Nine times three is twenty-seven, take two is twenty-five. The choice of twenty-seven stops after the first step.",
+      "strategy": "Multiply first and see how far off you land. If you are the same amount out both times, that gap is the second step."
+    },
+    {
+      "id": "cogat-na-g3-13",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Thirty-six becomes nine. Sixty becomes fifteen. Eighty-eight becomes question mark.",
+        "rows": [
+          [
+            "36",
+            "→",
+            "9"
+          ],
+          [
+            "60",
+            "→",
+            "15"
+          ],
+          [
+            "88",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "22"
+        },
+        {
+          "id": "b",
+          "text": "44"
+        },
+        {
+          "id": "c",
+          "text": "21"
+        },
+        {
+          "id": "d",
+          "text": "61"
+        },
+        {
+          "id": "e",
+          "text": "11"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Thirty-six to nine could be divide by four or take away twenty-seven. Sixty to fifteen is divide by four, because sixty take away twenty-seven is thirty-three. Eighty-eight divided by four is twenty-two. The choice of sixty-one is the take-away rule.",
+      "strategy": "Dividing by four is halving twice. Half of eighty-eight is forty-four, and half of that is twenty-two."
+    },
+    {
+      "id": "cogat-na-g3-14",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Five becomes thirteen. Eight becomes nineteen. Twelve becomes question mark.",
+        "rows": [
+          [
+            "5",
+            "→",
+            "13"
+          ],
+          [
+            "8",
+            "→",
+            "19"
+          ],
+          [
+            "12",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "27"
+        },
+        {
+          "id": "b",
+          "text": "24"
+        },
+        {
+          "id": "c",
+          "text": "20"
+        },
+        {
+          "id": "d",
+          "text": "34"
+        },
+        {
+          "id": "e",
+          "text": "30"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Five to thirteen has three tempting readings: plus eight, double and add three, or times three take two. The second pair kills two of them, because eight plus eight is sixteen and eight times three take two is twenty-two, but eight doubled and three more is nineteen. Twelve doubled and three more is twenty-seven. The choice of twenty-four doubles and forgets the three.",
+      "strategy": "List every rule that fits pair one, then cross out the ones pair two disproves."
+    },
+    {
+      "id": "cogat-na-g3-15",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Two pairs follow the same rule. What number starts the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Four becomes eleven. Six becomes seventeen. Question mark becomes twenty-six.",
+        "rows": [
+          [
+            "4",
+            "→",
+            "11"
+          ],
+          [
+            "6",
+            "→",
+            "17"
+          ],
+          [
+            "?",
+            "→",
+            "26"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "9"
+        },
+        {
+          "id": "b",
+          "text": "27"
+        },
+        {
+          "id": "c",
+          "text": "77"
+        },
+        {
+          "id": "d",
+          "text": "8"
+        },
+        {
+          "id": "e",
+          "text": "25"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The rule is times three, then take away one: four gives eleven and six gives seventeen. This time the missing number is at the start, so run the rule backwards. Add the one back to twenty-six to get twenty-seven, then divide by three to get nine. The choice of seventy-seven is what you get if you run the rule forwards by mistake.",
+      "strategy": "To undo a rule, undo each step in the opposite order: add back first, then divide."
+    },
+    {
+      "id": "cogat-na-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Four becomes twenty-four. Seven becomes forty-two. Nine becomes question mark.",
+        "rows": [
+          [
+            "4",
+            "→",
+            "24"
+          ],
+          [
+            "7",
+            "→",
+            "42"
+          ],
+          [
+            "9",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "54"
+        },
+        {
+          "id": "b",
+          "text": "29"
+        },
+        {
+          "id": "c",
+          "text": "63"
+        },
+        {
+          "id": "d",
+          "text": "45"
+        },
+        {
+          "id": "e",
+          "text": "36"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four to twenty-four could be times six or plus twenty. Seven to forty-two is times six, because seven plus twenty is only twenty-seven. Nine times six is fifty-four. The choice of twenty-nine is the plus-twenty rule the second pair ruled out.",
+      "strategy": "When the second number is several times bigger, reach for multiplication first."
+    },
+    {
+      "id": "cogat-na-g4-7",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Ninety becomes fifty. Seventy-six becomes thirty-six. One hundred forty becomes question mark.",
+        "rows": [
+          [
+            "90",
+            "→",
+            "50"
+          ],
+          [
+            "76",
+            "→",
+            "36"
+          ],
+          [
+            "140",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "100"
+        },
+        {
+          "id": "b",
+          "text": "180"
+        },
+        {
+          "id": "c",
+          "text": "96"
+        },
+        {
+          "id": "d",
+          "text": "104"
+        },
+        {
+          "id": "e",
+          "text": "110"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Ninety to fifty is forty less, and seventy-six to thirty-six is forty less as well. One hundred and forty minus forty is one hundred. The choice of one hundred and eighty adds forty instead of subtracting it.",
+      "strategy": "Check the direction on both pairs before you touch the third."
+    },
+    {
+      "id": "cogat-na-g4-8",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Forty-five becomes fifteen. Seventy-two becomes twenty-four. Ninety-six becomes question mark.",
+        "rows": [
+          [
+            "45",
+            "→",
+            "15"
+          ],
+          [
+            "72",
+            "→",
+            "24"
+          ],
+          [
+            "96",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "32"
+        },
+        {
+          "id": "b",
+          "text": "66"
+        },
+        {
+          "id": "c",
+          "text": "24"
+        },
+        {
+          "id": "d",
+          "text": "48"
+        },
+        {
+          "id": "e",
+          "text": "31"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Forty-five to fifteen could be divide by three or take away thirty. Seventy-two to twenty-four is divide by three, because seventy-two take away thirty is forty-two. Ninety-six divided by three is thirty-two. The choice of sixty-six is the take-away rule.",
+      "strategy": "Subtracting and dividing can both fit one pair. Only one of them will fit two."
+    },
+    {
+      "id": "cogat-na-g4-9",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Sixty-three becomes nine. Ninety-one becomes thirteen. Eighty-four becomes question mark.",
+        "rows": [
+          [
+            "63",
+            "→",
+            "9"
+          ],
+          [
+            "91",
+            "→",
+            "13"
+          ],
+          [
+            "84",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "30"
+        },
+        {
+          "id": "c",
+          "text": "14"
+        },
+        {
+          "id": "d",
+          "text": "11"
+        },
+        {
+          "id": "e",
+          "text": "77"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Sixty-three to nine could be divide by seven or take away fifty-four. Ninety-one to thirteen is divide by seven, since ninety-one take away fifty-four is thirty-seven. Eighty-four divided by seven is twelve. The choice of thirty is the take-away rule.",
+      "strategy": "Know your sevens. A big number shrinking to a small one is almost always division."
+    },
+    {
+      "id": "cogat-na-g4-10",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Four becomes one hundred. Six becomes one hundred fifty. Twelve becomes question mark.",
+        "rows": [
+          [
+            "4",
+            "→",
+            "100"
+          ],
+          [
+            "6",
+            "→",
+            "150"
+          ],
+          [
+            "12",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "300"
+        },
+        {
+          "id": "b",
+          "text": "108"
+        },
+        {
+          "id": "c",
+          "text": "250"
+        },
+        {
+          "id": "d",
+          "text": "288"
+        },
+        {
+          "id": "e",
+          "text": "275"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four to one hundred could be times twenty-five or plus ninety-six. Six to one hundred and fifty is times twenty-five, because six plus ninety-six is one hundred and two. Twelve times twenty-five is three hundred. The choice of one hundred and eight is the adding rule.",
+      "strategy": "Twenty-five is a quarter of a hundred, so times twenty-five is the same as times a hundred then divided by four."
+    },
+    {
+      "id": "cogat-na-g4-11",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Forty-six becomes twenty-three. Eighty-four becomes forty-two. One hundred thirty-eight becomes question mark.",
+        "rows": [
+          [
+            "46",
+            "→",
+            "23"
+          ],
+          [
+            "84",
+            "→",
+            "42"
+          ],
+          [
+            "138",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "69"
+        },
+        {
+          "id": "b",
+          "text": "115"
+        },
+        {
+          "id": "c",
+          "text": "68"
+        },
+        {
+          "id": "d",
+          "text": "276"
+        },
+        {
+          "id": "e",
+          "text": "70"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Forty-six to twenty-three could be halving or taking away twenty-three. Eighty-four to forty-two is halving, because eighty-four take away twenty-three is sixty-one. Half of one hundred and thirty-eight is sixty-nine. The choice of one hundred and fifteen is the take-away rule.",
+      "strategy": "Halve big numbers in parts: half of one hundred is fifty, half of thirty-eight is nineteen, and fifty plus nineteen is sixty-nine."
+    },
+    {
+      "id": "cogat-na-g4-12",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Six becomes thirty-six. Nine becomes eighty-one. Twelve becomes question mark.",
+        "rows": [
+          [
+            "6",
+            "→",
+            "36"
+          ],
+          [
+            "9",
+            "→",
+            "81"
+          ],
+          [
+            "12",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "144"
+        },
+        {
+          "id": "b",
+          "text": "72"
+        },
+        {
+          "id": "c",
+          "text": "121"
+        },
+        {
+          "id": "d",
+          "text": "108"
+        },
+        {
+          "id": "e",
+          "text": "169"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Six to thirty-six could be times six or the number multiplied by itself. Nine to eighty-one decides it, because nine times six is fifty-four but nine times nine is eighty-one. Twelve times twelve is one hundred and forty-four. The choice of seventy-two is twelve times six, the rule the second pair ruled out.",
+      "strategy": "When the jump gets bigger as the number gets bigger, suspect a number times itself."
+    },
+    {
+      "id": "cogat-na-g4-13",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Six becomes thirteen. Ten becomes twenty-five. Fourteen becomes question mark.",
+        "rows": [
+          [
+            "6",
+            "→",
+            "13"
+          ],
+          [
+            "10",
+            "→",
+            "25"
+          ],
+          [
+            "14",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "37"
+        },
+        {
+          "id": "b",
+          "text": "42"
+        },
+        {
+          "id": "c",
+          "text": "29"
+        },
+        {
+          "id": "d",
+          "text": "21"
+        },
+        {
+          "id": "e",
+          "text": "39"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The rule is times three, then take away five. Six times three is eighteen, less five is thirteen. Ten times three is thirty, less five is twenty-five. Fourteen times three is forty-two, less five is thirty-seven. The choice of forty-two stops after multiplying, and twenty-nine comes from doubling and adding one, which fails on the second pair.",
+      "strategy": "Do the multiplying first for both pairs. If you overshoot by the same amount twice, that amount is step two."
+    },
+    {
+      "id": "cogat-na-g4-14",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Two pairs follow the same rule. What number completes the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Forty becomes twenty. Sixty becomes twenty-five. Eighty-eight becomes question mark.",
+        "rows": [
+          [
+            "40",
+            "→",
+            "20"
+          ],
+          [
+            "60",
+            "→",
+            "25"
+          ],
+          [
+            "88",
+            "→",
+            "?"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "32"
+        },
+        {
+          "id": "b",
+          "text": "44"
+        },
+        {
+          "id": "c",
+          "text": "22"
+        },
+        {
+          "id": "d",
+          "text": "68"
+        },
+        {
+          "id": "e",
+          "text": "34"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Halving fits the first pair but fails the second, because half of sixty is thirty, not twenty-five. The rule that fits both is divide by four, then add ten: forty gives ten plus ten, and sixty gives fifteen plus ten. Eighty-eight divided by four is twenty-two, plus ten is thirty-two. The choice of forty-four is halving and the choice of twenty-two forgets the second step.",
+      "strategy": "A one-step rule that fits the first pair and misses the second is usually that step plus one more."
+    },
+    {
+      "id": "cogat-na-g4-15",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Two pairs follow the same rule. What number starts the third pair?",
+      "figure": {
+        "kind": "table",
+        "header": false,
+        "alt": "Three rows. Nine becomes seventy-four. Twelve becomes ninety-eight. Question mark becomes fifty-eight.",
+        "rows": [
+          [
+            "9",
+            "→",
+            "74"
+          ],
+          [
+            "12",
+            "→",
+            "98"
+          ],
+          [
+            "?",
+            "→",
+            "58"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "56"
+        },
+        {
+          "id": "c",
+          "text": "60"
+        },
+        {
+          "id": "d",
+          "text": "8"
+        },
+        {
+          "id": "e",
+          "text": "6"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The rule is times eight, then add two: nine gives seventy-four and twelve gives ninety-eight. The missing number is at the start, so undo the rule in the opposite order. Take the two off fifty-eight to get fifty-six, then divide by eight to get seven. The choice of fifty-six is what you get if you stop after the first undo.",
+      "strategy": "Undoing a two-step rule means two steps backwards, in reverse order."
     }
   ]
 }

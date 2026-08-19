@@ -7,7 +7,7 @@
   "blurb": "All but one of these shapes share something. Find the one that does not.",
   "childIntro": "Look at all the shapes. Most of them are alike in one way. Which one is different?",
   "howItWorks": "The child marks the figure that does not belong. On OLSAT this runs at levels A through D, so kindergarten to third grade, and then stops. The rule can be about shape, count, shading, orientation or an abstract property like the number of corners.",
-  "parentTip": "Have your child say what the others have in common before naming the odd one out. If they cannot finish the sentence they are all ___, they are guessing. This is also the quickest question type to practise with buttons or coins on a table.",
+  "parentTip": "Have your child say what the others have in common before naming the odd one out. If they cannot finish the sentence they are all ___, they are guessing. This is also the quickest question type to practice with buttons or coins on a table.",
   "questions": [
     {
       "id": "olsat-fcl-g1-1",
@@ -66,6 +66,65 @@
       ],
       "answer": "a",
       "explanation": "Three of them are circles. The square is the only one that is not round.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple hexagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple trapezoid"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green trapezoid"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow trapezoid"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a purple hexagon.",
       "strategy": "Look at the outline shape first. It is usually the simplest rule."
     },
     {
@@ -194,6 +253,187 @@
       "strategy": "Empty or filled in. Check the inside, not the edge."
     },
     {
+      "id": "olsat-fcl-g1-7",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal crescent"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink tall rectangle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal tall rectangle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal tall rectangle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal crescent.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g1-8",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five blue squares"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four purple four-pointed stars"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four blue crescents"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four red circles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is five blue squares.",
+      "strategy": "Count every box before you look at the shapes."
+    },
+    {
+      "id": "olsat-fcl-g1-14",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal diamond"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink diamond"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink diamond"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a pink circle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
       "id": "olsat-fcl-g1-4",
       "grade": 1,
       "difficulty": 3,
@@ -314,6 +554,565 @@
       "strategy": "Turning a shape does not change what it is. Count its corners to be sure."
     },
     {
+      "id": "olsat-fcl-g1-9",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "red",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a red diamond, with dots inside"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "teal",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a teal square, with a criss cross pattern inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "red",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a red chevron, with a criss cross pattern inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "red",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a red slanted rectangle, with a criss cross pattern inside"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a red diamond, with dots inside.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
+      "id": "olsat-fcl-g1-10",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four orange pentagons"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two teal wide rectangles"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two purple clouds"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two orange triangles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is four orange pentagons.",
+      "strategy": "Count every box before you look at the shapes."
+    },
+    {
+      "id": "olsat-fcl-g1-15",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red kite"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange plus sign"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green plus sign"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple plus sign"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a red kite.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g1-11",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "red",
+                "f": "stripesd"
+              }
+            ]
+          },
+          "label": "a red slanted rectangle, with stripes inside"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a purple cross, with dots inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a yellow octagon, with dots inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a pink cloud, with dots inside"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a red slanted rectangle, with stripes inside.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
+      "id": "olsat-fcl-g1-12",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          "label": "two purple plus signs"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four green clouds"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four teal rings"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "green",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four green bow ties"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is two purple plus signs.",
+      "strategy": "Count every box before you look at the shapes."
+    },
+    {
+      "id": "olsat-fcl-g1-16",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "orange",
+                "n": 5
+              }
+            ]
+          },
+          "label": "five orange circles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four purple plus signs"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four blue six-pointed stars"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four red octagons"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is five orange circles.",
+      "strategy": "Count every box before you look at the shapes."
+    },
+    {
+      "id": "olsat-fcl-g1-13",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple ring"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple cloud"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple cloud"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange cloud"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a purple ring.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g1-17",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "pink",
+                "n": 4
+              }
+            ]
+          },
+          "label": "four pink triangles"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three blue four-pointed stars"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three orange hearts"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          "label": "three red circles"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count them. Four boxes hold the same number of shapes and one holds a different number. The odd one out is four pink triangles.",
+      "strategy": "Count every box before you look at the shapes."
+    },
+    {
+      "id": "olsat-fcl-g2-6",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "f": "stripesd"
+              }
+            ]
+          },
+          "label": "a yellow circle, with stripes inside"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "pink",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a pink star, with a criss cross pattern inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "red",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a red chevron, with a criss cross pattern inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "red",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a red kite, with a criss cross pattern inside"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a yellow circle, with stripes inside.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
       "id": "olsat-fcl-g2-1",
       "grade": 2,
       "difficulty": 2,
@@ -371,6 +1170,183 @@
       "answer": "a",
       "explanation": "The square, the diamond and the parallelogram all have four sides. The circle has none.",
       "strategy": "Count the sides of every shape, then look for the odd number."
+    },
+    {
+      "id": "olsat-fcl-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange kite"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink octagon"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink four-pointed star"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a blue triangle.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
+      "id": "olsat-fcl-g2-8",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal right triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple tall rectangle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow chevron"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink hexagon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a teal right triangle.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
+      "id": "olsat-fcl-g2-14",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red wide rectangle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue kite"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink hexagon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a blue triangle.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
     },
     {
       "id": "olsat-fcl-g2-2",
@@ -586,6 +1562,187 @@
       "strategy": "When the counts are all different, check whether they are odd or even."
     },
     {
+      "id": "olsat-fcl-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red trapezoid"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple bow tie"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red bow tie"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue bow tie"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a red trapezoid.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g2-10",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple leaf"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal six-pointed star"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue plus sign"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange trapezoid"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is a purple leaf.",
+      "strategy": "Trace the outline with your finger. If it bends, it is curved."
+    },
+    {
+      "id": "olsat-fcl-g2-15",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "yellow",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty yellow moon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "red",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a red cloud, with a criss cross pattern inside"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "purple",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a purple bow tie, with a criss cross pattern inside"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow",
+                "f": "grid"
+              }
+            ]
+          },
+          "label": "a yellow star, with a criss cross pattern inside"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an empty yellow moon.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
       "id": "olsat-fcl-g2-5",
       "grade": 2,
       "difficulty": 4,
@@ -643,6 +1800,376 @@
       "answer": "a",
       "explanation": "Fold the triangle, the heart and the kite down the middle from top to bottom and the two halves match. Fold the parallelogram the same way and they do not.",
       "strategy": "Imagine folding each shape in half down the middle. Do the halves land on top of each other?"
+    },
+    {
+      "id": "olsat-fcl-g2-11",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green tall rectangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal bow tie"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal bow tie"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange bow tie"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a green tall rectangle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g2-12",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue crescent"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow cloud"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal cloud"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow cloud"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a blue crescent.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g2-16",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue pentagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple chevron"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green hexagon"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal cross"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a blue pentagon.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
+      "id": "olsat-fcl-g2-13",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue four-pointed star"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue crescent"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple crescent"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange crescent"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a blue four-pointed star.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g2-17",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "Which one does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "yellow",
+                "f": "dots"
+              }
+            ]
+          },
+          "label": "a yellow circle, with dots inside"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty purple oval"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty green upside-down triangle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty red square"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is a yellow circle, with dots inside.",
+      "strategy": "Look inside the shape, not only at its outline."
+    },
+    {
+      "id": "olsat-fcl-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal half circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink plus sign"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple plus sign"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue plus sign"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green plus sign"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a teal half circle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
     },
     {
       "id": "olsat-fcl-g3-1",
@@ -724,6 +2251,223 @@
       "answer": "a",
       "explanation": "Four of the figures are plain empty outlines. Only one has something extra drawn inside it.",
       "strategy": "Look for the figure with an extra part that the others do not have."
+    },
+    {
+      "id": "olsat-fcl-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange four-pointed star"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow moon"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink moon"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal moon"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue moon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is an orange four-pointed star.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g3-8",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal half circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green pentagon"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink diamond"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple square"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple six-pointed star"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is a teal half circle.",
+      "strategy": "Trace the outline with your finger. If it bends, it is curved."
+    },
+    {
+      "id": "olsat-fcl-g3-14",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange wide rectangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty red six-pointed star"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty red half circle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty red plus sign"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "red",
+                "f": "outline"
+              }
+            ]
+          },
+          "label": "an empty red square"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them have the same thing inside. One is different. The odd one out is an orange wide rectangle.",
+      "strategy": "Look inside the shape, not only at its outline."
     },
     {
       "id": "olsat-fcl-g3-2",
@@ -873,6 +2617,219 @@
       "strategy": "Count every box, write the numbers in a row, then sort them into odd and even."
     },
     {
+      "id": "olsat-fcl-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink octagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow leaf"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange leaf"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink leaf"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange leaf"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a pink octagon.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g3-10",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue hexagon"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple crescent"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink crescent"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange crescent"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green crescent"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a blue hexagon.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g3-15",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red heart"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green four-pointed star"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue star"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange wide rectangle"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal six-pointed star"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is a red heart.",
+      "strategy": "Trace the outline with your finger. If it bends, it is curved."
+    },
+    {
       "id": "olsat-fcl-g3-4",
       "grade": 3,
       "difficulty": 4,
@@ -942,6 +2899,219 @@
       "answer": "a",
       "explanation": "The square, diamond, hexagon and octagon all have an even number of corners: four, four, six and eight. The right triangle has three, which is odd.",
       "strategy": "Count corners and sort them into odd and even. It works surprisingly often."
+    },
+    {
+      "id": "olsat-fcl-g3-11",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red upside-down triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple octagon"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple plus sign"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink bow tie"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green trapezoid"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Count the corners on each one. Four of them have an even number of corners. One has an odd number. The odd one out is a red upside-down triangle.",
+      "strategy": "Counting corners turns a shape puzzle into a number puzzle."
+    },
+    {
+      "id": "olsat-fcl-g3-12",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "pink"
+              }
+            ]
+          },
+          "label": "a pink upside-down triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green half circle"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow half circle"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange half circle"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue half circle"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a pink upside-down triangle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
+    },
+    {
+      "id": "olsat-fcl-g3-16",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple right triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple ring"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple ring"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue ring"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "teal"
+              }
+            ]
+          },
+          "label": "a teal ring"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is a purple right triangle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
     },
     {
       "id": "olsat-fcl-g3-5",
@@ -1018,6 +3188,148 @@
       "answer": "a",
       "explanation": "In four of the boxes the number of shapes matches the number of corners each shape has: three triangles, four squares, five pentagons, six hexagons. A circle has no corners, so three circles breaks the rule.",
       "strategy": "Look for a link between the count and the shape itself. It is the hardest sorting rule and the most satisfying to spot."
+    },
+    {
+      "id": "olsat-fcl-g3-13",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          "label": "a blue circle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green star"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple four-pointed star"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green"
+              }
+            ]
+          },
+          "label": "a green octagon"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red"
+              }
+            ]
+          },
+          "label": "a red bow tie"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are made only of straight edges and corners. One has a curve. The odd one out is a blue circle.",
+      "strategy": "Trace the outline with your finger. If it bends, it is curved."
+    },
+    {
+      "id": "olsat-fcl-g3-17",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure does not belong?",
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange upside-down triangle"
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "yellow"
+              }
+            ]
+          },
+          "label": "a yellow moon"
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple moon"
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "orange"
+              }
+            ]
+          },
+          "label": "an orange moon"
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple"
+              }
+            ]
+          },
+          "label": "a purple moon"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Four of them are the same shape. Only one is not. The odd one out is an orange upside-down triangle.",
+      "strategy": "Look at the outline shape first. It is usually the simplest rule."
     }
   ]
 }

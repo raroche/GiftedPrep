@@ -140,6 +140,278 @@
       "strategy": "Row for the shape. Column for the colour. Then put them together."
     },
     {
+      "id": "olsat-pm-g1-6",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big yellow square. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-17",
+      "grade": 1,
+      "difficulty": 1,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "yellow"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a green four-pointed star. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g1-2",
       "grade": 1,
       "difficulty": 2,
@@ -424,6 +696,278 @@
       "strategy": "Size is a pattern too. Small, medium, large."
     },
     {
+      "id": "olsat-pm-g1-7",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a yellow heart. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-13",
+      "grade": 1,
+      "difficulty": 2,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "teal",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "teal",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "teal",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "teal",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "teal",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "teal",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "teal",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big teal half circle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g1-4",
       "grade": 1,
       "difficulty": 3,
@@ -696,6 +1240,1358 @@
       "strategy": "Follow the arrow tip. Right, down, left."
     },
     {
+      "id": "olsat-pm-g1-8",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "yellow"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a red diamond. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-9",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a yellow pentagon. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-14",
+      "grade": 1,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "semicircle",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big green tall rectangle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-10",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "yellow",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "yellow",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "yellow",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big yellow moon. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-11",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "purple"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a blue tall rectangle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-15",
+      "grade": 1,
+      "difficulty": 4,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "pink"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a red arrow. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-12",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "teal",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "teal",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "teal",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "teal",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "teal",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "teal",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "teal",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "teal",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "teal",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big teal house. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g1-16",
+      "grade": 1,
+      "difficulty": 5,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a pink house. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-6",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is a blue slanted rectangle, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-17",
+      "grade": 2,
+      "difficulty": 1,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "pink"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is a pink diamond, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g2-1",
       "grade": 2,
       "difficulty": 2,
@@ -824,6 +2720,274 @@
       "answer": "a",
       "explanation": "The column is circles and the row is green. So the answer is a green circle.",
       "strategy": "Point along the row, then down the column. Two facts, one answer."
+    },
+    {
+      "id": "olsat-pm-g2-7",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a red slanted rectangle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-13",
+      "grade": 2,
+      "difficulty": 2,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is a green cross, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
     },
     {
       "id": "olsat-pm-g2-2",
@@ -1325,6 +3489,404 @@
       "strategy": "Write the three fills down in order, then find where the hole falls."
     },
     {
+      "id": "olsat-pm-g2-8",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cloud",
+                "c": "red"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is an orange cloud. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-9",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "green",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "green",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is a green leaf, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-14",
+      "grade": 2,
+      "difficulty": 3,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a green plus sign. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g2-5",
       "grade": 2,
       "difficulty": 4,
@@ -1479,6 +4041,962 @@
       "strategy": "Doubling: one, two, four, eight. Not one, two, three."
     },
     {
+      "id": "olsat-pm-g2-10",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a purple cross. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-11",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "orange"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a teal right triangle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-15",
+      "grade": 2,
+      "difficulty": 4,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "blue",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big blue pentagon. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-12",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "recttall",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "pink"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a yellow trapezoid. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g2-16",
+      "grade": 2,
+      "difficulty": 5,
+      "prompt": "What belongs in the empty box?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big red triangle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g3-6",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "orange"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is an orange chevron. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g3-17",
+      "grade": 3,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a blue oval. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g3-1",
       "grade": 3,
       "difficulty": 2,
@@ -1618,6 +5136,297 @@
       "answer": "a",
       "explanation": "The number of sides goes three, four, five across each row. The row sets the colour, green. So the answer is a green pentagon.",
       "strategy": "Count sides rather than naming shapes. Three, four, five is a clearer pattern."
+    },
+    {
+      "id": "olsat-pm-g3-7",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a green crescent. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g3-13",
+      "grade": 3,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "pink",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "pink",
+                "f": "dots"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is a pink house, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
     },
     {
       "id": "olsat-pm-g3-2",
@@ -1927,6 +5736,447 @@
       "strategy": "Count steps rather than degrees. Each box is one step."
     },
     {
+      "id": "olsat-pm-g3-8",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "plus",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a blue flag. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g3-9",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "teal",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "teal",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "teal",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "teal",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "teal",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "teal",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "teal",
+                "f": "dots"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is a teal chevron, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g3-14",
+      "grade": 3,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "flag",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is an orange flag, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g3-4",
       "grade": 3,
       "difficulty": 4,
@@ -2146,6 +6396,468 @@
       "strategy": "When shapes are nested, treat the outside and the inside as two separate patterns."
     },
     {
+      "id": "olsat-pm-g3-10",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row down has one more shape. The empty box is in the last column and the bottom row, so it is three blue right triangles. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g3-11",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row down has one more shape. The empty box is in the last column and the bottom row, so it is three purple trapezoids. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g3-15",
+      "grade": 3,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "green",
+                "z": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "green",
+                "z": 1.15
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big green slanted rectangle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g3-5",
       "grade": 3,
       "difficulty": 5,
@@ -2298,6 +7010,609 @@
       "answer": "a",
       "explanation": "The count goes one, two, three across every row. The shape loop is star, circle, triangle, shifting one step at the start of each row, so the bottom row runs triangle, star, circle. Each shape keeps its own colour.",
       "strategy": "Solve the count first because it is easy. Then work out the shape loop."
+    },
+    {
+      "id": "olsat-pm-g3-12",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "purple",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "parallelogram",
+                "c": "purple",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "purple",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row down has one more shape. The empty box is in the last column and the bottom row, so it is three purple slanted rectangles. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g3-16",
+      "grade": 3,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "blue",
+                "z": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangledown",
+                "c": "blue",
+                "z": 1.15
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big blue right triangle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g4-6",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "blue"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "green"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "blue"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a blue diamond. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g4-17",
+      "grade": 4,
+      "difficulty": 1,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "yellow",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star6",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "yellow",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "yellow",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row down has one more shape. The empty box is in the last column and the bottom row, so it is three yellow leaves. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
     },
     {
       "id": "olsat-pm-g4-1",
@@ -2454,6 +7769,310 @@
       "strategy": "Size sequences behave exactly like colour or count sequences."
     },
     {
+      "id": "olsat-pm-g4-7",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "orange",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "house",
+                "c": "orange",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "cross",
+                "c": "orange",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row down has one more shape. The empty box is in the last column and the bottom row, so it is three orange houses. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g4-13",
+      "grade": 4,
+      "difficulty": 2,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "moon",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "arrow",
+                "c": "purple",
+                "f": "dots"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is a purple octagon, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g4-2",
       "grade": 4,
       "difficulty": 3,
@@ -2606,6 +8225,442 @@
       "answer": "a",
       "explanation": "The count falls by three across every row: nine, six, three. The row sets the shape and colour.",
       "strategy": "Falling by three. Say it backwards to check: nine, six, three."
+    },
+    {
+      "id": "olsat-pm-g4-8",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "red"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "teal"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "red"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "rectwide",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "teal"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "righttriangle",
+                "c": "purple"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a purple crescent. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g4-9",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "circle",
+                "c": "red",
+                "z": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "ring",
+                "c": "red",
+                "z": 1.15
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big red circle. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g4-14",
+      "grade": 4,
+      "difficulty": 3,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "pink"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "pink"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "bowtie",
+                "c": "purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "oval",
+                "c": "yellow"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "chevron",
+                "c": "purple"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own color. The empty box is in the last column and the bottom row, so it is a purple oval. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
     },
     {
       "id": "olsat-pm-g4-3",
@@ -2997,6 +9052,464 @@
       "strategy": "Trace the dot's journey with your finger along a completed row first."
     },
     {
+      "id": "olsat-pm-g4-10",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "blue",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "blue",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row down has one more shape. The empty box is in the last column and the bottom row, so it is three blue crescents. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g4-11",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange",
+                "f": "outline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "crescent",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "orange"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "pentagon",
+                "c": "orange",
+                "f": "dots"
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row has its own inside pattern: empty, solid, then dotted. The empty box is in the last column and the bottom row, so it is an orange hexagon, with dots inside. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g4-15",
+      "grade": 4,
+      "difficulty": 4,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "z": 0.5
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "z": 0.8
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "z": 1.15
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "z": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "kite",
+                "c": "purple",
+                "z": 1.15
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "purple",
+                "z": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "heart",
+                "c": "purple",
+                "z": 1.15
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and the shapes get bigger as you go down. The empty box is in the last column and the bottom row, so it is a big purple octagon. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
       "id": "olsat-pm-g4-5",
       "grade": 4,
       "difficulty": 5,
@@ -3157,6 +9670,314 @@
       "answer": "a",
       "explanation": "Three rules. The count is one, two, three across every row. The shape loop is square, circle, triangle shifting one step each row, so the bottom row runs triangle, square, circle, and each shape keeps its own colour. The fill alternates empty, solid all the way along the line, and the box before the hole is solid, so the hole is empty.",
       "strategy": "Three rules at once. Solve the easy one first, write the answer down, then start the next."
+    },
+    {
+      "id": "olsat-pm-g4-12",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "teal",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "teal",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "leaf",
+                "c": "teal",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "star4",
+                "c": "teal",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row down has one more shape. The empty box is in the last column and the bottom row, so it is three teal leaves. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
+    },
+    {
+      "id": "olsat-pm-g4-16",
+      "grade": 4,
+      "difficulty": 5,
+      "prompt": "Which figure completes the matrix?",
+      "figure": {
+        "kind": "matrix",
+        "rows": 3,
+        "cols": 3,
+        "alt": "A three by three grid of shapes with the bottom right box empty.",
+        "cells": [
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "red",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "red",
+                "n": 1
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          },
+          {
+            "missing": true
+          }
+        ]
+      },
+      "choices": [
+        {
+          "id": "a",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "b",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "red",
+                "n": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "c",
+          "figure": {
+            "shapes": [
+              {
+                "s": "octagon",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "d",
+          "figure": {
+            "shapes": [
+              {
+                "s": "diamond",
+                "c": "red",
+                "n": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e",
+          "figure": {
+            "shapes": [
+              {
+                "s": "lightning",
+                "c": "red",
+                "n": 3
+              }
+            ]
+          }
+        }
+      ],
+      "answer": "a",
+      "explanation": "Two things decide the answer. Each column keeps the same shape, and each row down has one more shape. The empty box is in the last column and the bottom row, so it is three red diamonds. Choice b takes its look from the wrong row.",
+      "strategy": "Point along the row and say what changes. Then point down the column and do the same."
     }
   ]
 }

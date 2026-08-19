@@ -99,13 +99,13 @@ This is **reasoning from converging evidence, not a single study**. I found no
 study that tracked coached-in gifted placements to later outcomes. That specific
 claim should not be asserted as demonstrated.
 
-### The familiarisation / coaching line
+### The familiarization / coaching line
 
-| Familiarisation — defensible, low yield | Coaching — large effects, the real problem |
+| Familiarization — defensible, low yield | Coaching — large effects, the real problem |
 |---|---|
 | Seeing each format once so nothing is novel | Repeated drilling of many items per format |
-| Practising *how to respond* — clicking, not skipping | Teaching rule-sets for solving matrix items |
-| Practising listening to spoken directions | Memorising item types or leaked items |
+| Practicing *how to respond* — clicking, not skipping | Teaching rule-sets for solving matrix items |
+| Practicing listening to spoken directions | Memorising item types or leaked items |
 | One short session with official materials | Multi-week commercial prep courses |
 | Explaining that some questions will be too hard | Training the child to a target score |
 
@@ -183,7 +183,7 @@ anxiety, and **self-esteem was the strongest predictor**. PMID 29156362
 ### How parent anxiety transmits — the single best study
 
 **[STRONG] Maloney, Ramirez, Gunderson, Levine & Beilock (2015), *Psychological
-Science* 26(9)** — first and second graders, 438 analysed:
+Science* 26(9)** — first and second graders, 438 analyzed:
 
 - When parents were more math anxious, children learned **significantly less
   math** across the year and ended with more math anxiety — **but only when those
@@ -216,7 +216,7 @@ dental procedures**, not testing rooms.
 | **Progressive muscle relaxation** | **[MODERATE]** | RCT ages 7-11, p < 0.001 (Tanna et al. 2025, PMID 40169513); ages 8-17, d = 1.12 (Bucur et al. 2025, PMID 40428834). |
 | **Power posing** | **[CONTESTED] — do not present as evidence-based** | Hormonal and performance claims **do not replicate** (Ranehill 2015; Barel 2024 PMID 39633430; Metzler & Grèzes 2019 PMID 31245173; Mikkelsen 2025 PMID 40534239). A preparatory pose did **not** improve oral exam performance (PMID 37377508). Only weak self-report effects survive. |
 | **Arousal reappraisal** ("I feel excited") | **[MODERATE] in adults, [WEAK] in children** | Jamieson et al. 2010 (PMID 20161454); Brooks 2014 (PMID 24364682). **No trial in 6-10 year olds.** Cheap and benign; bill as promising, not proven. |
-| **Expressive writing before a test** | **[CONTESTED] — do not recommend here** | Ramirez & Beilock (2011, *Science*) **failed a preregistered high-powered replication** (Camerer et al. 2018, *Nature Human Behaviour*). It was also tested on 9th graders and college students. |
+| **Expressive writing before a test** | **[CONTESTED] — do not recommend here** | Ramirez & Beilock (2011, *Science*) **failed a preregistered high-powered replication** (Camerer et al. 2018, *Nature Human Behavior*). It was also tested on 9th graders and college students. |
 | **Branded mindfulness programs** | **[CONTESTED] for young children** | Meta-analysis found no significant effect (PMID 40407584). The INSPIRE cluster RCT found **relaxation reduced depression in primary schools while mindfulness *increased* depressive symptoms** there (PMID 42584489). Prefer simple relaxation. |
 | **Exercise** | **[MODERATE], but note the dose** | 20 min aerobic, 2-3x per week, for **at least 4 weeks** reduced test anxiety. **Single 10-15 min sessions showed no significant reduction** (Zhang et al. 2022, PMID 35682293). Belongs in the week plan, not the morning checklist. |
 
@@ -288,7 +288,7 @@ PMID 34886115
 **[STRONG] Sugar — the finding is the opposite of the folk belief.**
 Wolraich, Wilson & White (1995), *JAMA*, meta-analysis of 23 studies: the 95%
 confidence interval for **all 14** measured constructs **included zero**. Sugar
-does not affect children's behaviour or cognitive performance. PMID 7474248
+does not affect children's behavior or cognitive performance. PMID 7474248
 
 And Hoover & Milich (1994): **all children received placebo**; mothers *told*
 their child had eaten sugar rated them significantly **more hyperactive** and

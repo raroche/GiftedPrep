@@ -7,7 +7,7 @@
 **Friendly practice for the CogAT, NNAT and OLSAT — the group tests Florida
 districts use to screen children for gifted programs.**
 
-480 questions · grades 1–4 · no login · no tracking · works offline
+1,576 questions · grades 1–4 · no login · no tracking · works offline
 
 </div>
 
@@ -19,7 +19,7 @@ A free, single-page web app where a child in grades 1 to 4 can meet the *kinds*
 of questions used on gifted screening tests before they meet them for real.
 Every question explains itself afterwards, in words a six-year-old can follow.
 
-It is built for **familiarisation, not coaching** — a distinction the research
+It is built for **familiarization, not coaching** — a distinction the research
 takes seriously, and so does this project. See
 [the honest bit](#the-honest-bit-about-test-prep) below.
 
@@ -53,16 +53,16 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 
 | | |
 |---|---|
-| **480 questions** | 31 categories across three tests, five per category per grade |
+| **1,576 questions** | 31 categories across three tests, at least 17 per category per grade |
 | **Grades 1–4** | Content and answer-choice counts match the real test level for each grade |
 | **Read aloud** | Uses the device's built-in voice. Grades 1–2 are read aloud on the real tests too |
 | **Explanations** | Every question explains why the answer is right *and* why the tempting wrong one is wrong |
 | **Strategy tips** | Each question carries the habit that prevents that specific mistake |
-| **Pick a category** | Practise one puzzle type, one whole test, or a mix of all three |
+| **Pick a category** | Practice one puzzle type, one whole test, or a mix of all three |
 | **iPad first** | Designed for a 1024×768 landscape iPad, works from 375 px up |
 | **Light and dark** | Follows the system theme, with a manual override |
 | **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
-| **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by colour alone |
+| **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
 Keyboard: press <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the
 next question.
@@ -70,7 +70,7 @@ next question.
 ## What is covered
 
 <details>
-<summary><strong>CogAT</strong> — 9 subtests, 180 questions</summary>
+<summary><strong>CogAT</strong> — 9 subtests, 604 questions</summary>
 
 | Battery | Categories |
 |---|---|
@@ -83,17 +83,17 @@ Grades 3–4 use Levels 9 and 10: text and numerals, five choices, timed.
 </details>
 
 <details>
-<summary><strong>NNAT</strong> — 4 item types, 75 questions</summary>
+<summary><strong>NNAT</strong> — 4 item types, 247 questions</summary>
 
 Pattern Completion · Reasoning by Analogy · Serial Reasoning ·
 Spatial Visualization (grade 2 and up, matching the real level structure).
 
 Five answer choices at every level, and only Pearson's five validated
-colour-blind-safe colours: black, white, yellow, blue and green.
+color-blind-safe colors: black, white, yellow, blue and green.
 </details>
 
 <details>
-<summary><strong>OLSAT</strong> — 18 item types, 225 questions</summary>
+<summary><strong>OLSAT</strong> — 18 item types, 725 questions</summary>
 
 | Cluster | Categories |
 |---|---|
@@ -113,7 +113,7 @@ and Level D.
 
 This project takes a position, and it is worth stating plainly.
 
-- **Familiarisation gains are real but small and front-loaded.** A meta-analysis
+- **Familiarization gains are real but small and front-loaded.** A meta-analysis
   of 122 studies puts the first-exposure effect at about **0.27 SD** — roughly
   four IQ points — dropping to 0.15 and then 0.10 on later retests.
 - **Brief format orientation is the *smallest* coaching effect.** Extended
@@ -126,12 +126,13 @@ This project takes a position, and it is worth stating plainly.
   diversity in gifted programmes, and recommends schools give the free official
   materials to *every* child.
 - **The clearest documented harm is an anxious parent drilling a child.** In 438
-  first and second graders, children of maths-anxious parents learned
+  first and second graders, children of math-anxious parents learned
   significantly less across the year — but **only when those parents helped
   frequently with homework**. Anxious and hands-off showed no effect at all.
 
-So this app gives five questions per type per grade. That is enough to meet every
-format once. It is deliberately not enough to drill.
+So the app is built for one short session, not a course. It holds enough
+variety that a random set never repeats itself, and the Parent Guide says plainly
+that the useful dose is one sitting, then stop.
 
 **No real test items appear anywhere in this project.** Every question was
 written from scratch to match formats described in published manuals and
@@ -160,6 +161,12 @@ A few corrections to claims that circulate widely and are wrong:
 - The CogAT E-profile threshold is **24** SAS points, not 12.
 - NNAT and OLSAT level-to-grade tables **diverge from Level D**. A shared lookup
   table will be wrong for one of them.
+- Florida has **no decimal benchmark at all in grade 3**, and multiplication
+  facts are memorised in **grade 4**, not grade 3.
+- An **anticlockwise quarter turn is harder than a half turn** for a child.
+  Direction beats magnitude.
+- A six-year-old reliably holds about **two** items in working memory, not three.
+  That caps grade 1-2 items at two simultaneous rules.
 
 ## Project layout
 
@@ -230,7 +237,7 @@ fix corrects every question at once:
 
 Figure kinds: `single` `series` `matrix` `sets` `analogy` `paperfold`
 `barchart` `pictograph` `balance` `numberline` `table`.
-Shape attributes: `s` shape, `c` colour, `f` fill, `n` count 1–9, `r` rotation,
+Shape attributes: `s` shape, `c` color, `f` fill, `n` count 1–9, `r` rotation,
 `z` scale, `x`/`y` position.
 
 After any edit:
@@ -249,7 +256,7 @@ enough to be read aloud once.
 - WCAG AA contrast for every text pair, in both themes, with the measured ratios
   written next to the palette in the stylesheet.
 - Correct and incorrect are signalled by **icon, text label, border weight and
-  border style** as well as colour.
+  border style** as well as color.
 - Every interactive element has a visible focus ring and a touch target of at
   least 64 px.
 - `prefers-reduced-motion` neutralises all animation.

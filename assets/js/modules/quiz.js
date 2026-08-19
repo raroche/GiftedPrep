@@ -59,6 +59,16 @@ export function orderPool(pool, { seenIds = new Set(), random = Math.random, lim
     .map((x) => x.q);
 }
 
+/**
+ * Rewrite "Choice b" in authored text to the letter that choice was actually
+ * shown as, after shuffling. Leaves the text alone if the id is unknown.
+ */
+export function relabel(text, letterOf) {
+  if (!text || !letterOf) return text;
+  return text.replace(/\b([Cc])hoice ([a-f])\b/g,
+    (whole, c, id) => (letterOf[id] ? `${c}hoice ${letterOf[id]}` : whole));
+}
+
 export class QuizSession {
   /**
    * @param {object[]} pool questions from data.selectQuestions
@@ -86,12 +96,23 @@ export class QuizSession {
     this.finished = this.questions.length === 0;
   }
 
-  /** Attach a shuffled choice order without mutating the source question. */
+  /**
+   * Attach a shuffled choice order without mutating the source question.
+   *
+   * Explanations are authored against the ids in the file ("Choice b is the
+   * trap"), but the child sees letters assigned by position AFTER the shuffle.
+   * So we also return a map from choice id to the letter it actually landed on,
+   * and the UI rewrites the explanation through it. Without this the feedback
+   * text points at the wrong tile on almost every question.
+   */
   _prepare(q) {
     const choices = q.lockChoiceOrder
       ? (q.choices || []).slice()
       : shuffle(q.choices || [], this.random);
-    return { ...q, choices };
+    const letters = 'ABCDEF';
+    const letterOf = {};
+    choices.forEach((c, i) => { letterOf[c.id] = letters[i]; });
+    return { ...q, choices, letterOf };
   }
 
   get total() { return this.questions.length; }
@@ -134,8 +155,8 @@ export class QuizSession {
     return {
       correct,
       correctChoiceId: q.answer,
-      explanation: q.explanation || '',
-      strategy: q.strategy || '',
+      explanation: relabel(q.explanation || '', q.letterOf),
+      strategy: relabel(q.strategy || '', q.letterOf),
       streak: this.streak
     };
   }
