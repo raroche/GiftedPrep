@@ -243,6 +243,20 @@ const esc = (s) => String(s == null ? '' : s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;');
 
+/* Split on what reads as one character. An emoji is often several code points
+   -- a sun carries a variation selector, a flag is two regional letters -- so
+   spreading the string would tear those apart and count them twice. */
+const graphemes = (str) => {
+  if (typeof Intl !== 'undefined' && Intl.Segmenter) {
+    return [...new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(str)]
+      .map((seg) => seg.segment);
+  }
+  return [...str];
+};
+
+/* Usable width inside a 100-unit cell once the frame is allowed for. */
+const BOX = 88;
+
 function drawCell(cell, defs, opts = {}) {
   const c = cell || {};
   const framed = opts.framed !== false;
@@ -259,14 +273,38 @@ function drawCell(cell, defs, opts = {}) {
        bird, not the word "bird". Emoji ship with every device, need no network
        and scale cleanly, so they beat bundling clip art. They are drawn larger
        than text and without the bold weight, which colour glyphs ignore. */
-    const isPictorial = !/[A-Za-z0-9]/.test(raw) && [...raw].length <= 3;
-    const glyphs = [...raw].length;
+    const isPictorial = !/[A-Za-z0-9]/.test(raw);
+    const chars = graphemes(raw);
+    const glyphs = chars.length;
+    const EMOJI = '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif';
+
+    /* Counting items show a handful of the same emoji and a child has to be
+       able to count them, but past four on one line the row is wider than the
+       cell and the ones at each end are cut in half. Wrap those into the
+       squarest grid that fits, reading left to right and top to bottom.
+       Four or fewer stay on one line: some items ask which picture has the
+       star LAST or the sun BETWEEN two clouds, and a grid would muddle that. */
+    if (isPictorial && glyphs > 4) {
+      const cols = Math.ceil(Math.sqrt(glyphs));
+      const rows = Math.ceil(glyphs / cols);
+      const step = Math.min(BOX / cols, BOX / rows);
+      const size = step * 0.86;
+      const x0 = 50 - ((cols - 1) * step) / 2;
+      const y0 = 50 - ((rows - 1) * step) / 2;
+      const marks = chars.map((ch, i) => {
+        const cx = x0 + (i % cols) * step;
+        const cy = y0 + Math.floor(i / cols) * step;
+        return `<text x="${cx.toFixed(1)}" y="${cy.toFixed(1)}" text-anchor="middle" `
+          + `dominant-baseline="central" font-size="${size.toFixed(1)}" `
+          + `fill="${STROKE}" font-family='${EMOJI}'>${esc(ch)}</text>`;
+      }).join('');
+      return `${frame}${marks}`;
+    }
+
     const size = isPictorial
-      ? (glyphs === 1 ? 58 : glyphs === 2 ? 40 : 30)
+      ? (glyphs === 1 ? 58 : glyphs === 2 ? 40 : glyphs === 3 ? 30 : 20)
       : (raw.length <= 2 ? 42 : raw.length <= 4 ? 32 : raw.length <= 7 ? 22 : 16);
-    const family = isPictorial
-      ? '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif'
-      : 'system-ui, sans-serif';
+    const family = isPictorial ? EMOJI : 'system-ui, sans-serif';
     return `${frame}<text x="50" y="50" text-anchor="middle" dominant-baseline="central" `
       + `font-size="${size}" font-weight="${isPictorial ? 400 : 700}" fill="${STROKE}" `
       + `font-family='${family}'>${esc(raw)}</text>`;
@@ -344,8 +382,16 @@ const RENDERERS = {
     const size = 82;
     const gap = 10;
     const groupGap = 40;
-    const labelH = spec.groups && spec.groups.some((g) => g.label) ? 26 : 0;
-    let x = 0;
+    /* The label baseline sits at labelH - 16, so labelH has to leave room for
+       the glyph ascender above it or the name is clipped by the top of the
+       figure. At font-size 19 the ascender runs about 15 units. */
+    const labelH = spec.groups && spec.groups.some((g) => g.label) ? 32 : 0;
+    /* Each group is ringed by a dashed box drawn 10 units outside its cells,
+       so the drawing starts inset by that much and the reported width adds it
+       back. Without the inset the ring fell outside the figure and the left
+       edge of the first group was cropped. */
+    const pad = 12;
+    let x = pad;
     const parts = [];
     (spec.groups || []).forEach((g, gi) => {
       const cells = g.cells || [];
@@ -359,7 +405,7 @@ const RENDERERS = {
       });
       x += gw + groupGap + (gi < 0 ? 0 : 0);
     });
-    return { w: Math.max(1, x - groupGap), h: size + labelH + 12, body: parts.join('') };
+    return { w: Math.max(1, x - groupGap + pad), h: size + labelH + 12, body: parts.join('') };
   },
 
   paperfold(spec, defs) {

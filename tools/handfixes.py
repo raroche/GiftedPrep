@@ -273,4 +273,89 @@ def fix_rba_g3_16(q):
             c['figure'] = {"shapes": [{"s": "cross", "c": "grey", "f": "outline", "z": 0.6}]}
 patch(RBA, 'nnat-rba-g3-16', fix_rba_g3_16)
 
+# --- figures drawn outside their own tile --------------------------------
+#
+# A shape is laid out in a 100 unit cell and scaled about its centre, so a
+# scale above 1 pushes it past the edge and the tile crops it. A 45 degree
+# turn does the same without any scale at all, because a square turned 45
+# needs about 1.41 times the width. Twenty six items were cropped, including
+# grade 1 series where the answer shape lost a corner.
+#
+# Each is scaled down as a whole rather than shape by shape, so every size
+# relationship inside the item survives untouched and no new difference is
+# introduced between one choice and another. The factors were measured by
+# rendering each item and shrinking until nothing crossed its frame.
+#
+# Absolute values, not a multiplier, so re-running this file is harmless.
+
+FIT = {
+    'cogat-fm-g3-12': ('data/cogat/figure-matrices.json', [0.54, 0.54, 0.54, 0.54, 0.54, 0.54, 0.54, 1.188]),
+    'cogat-fc-g1-4': ('data/cogat/figure-classification.json', [0.94, 0.94, 0.94, 0.94, 0.94, 0.94, 0.94]),
+    'cogat-fc-g4-2': ('data/cogat/figure-classification.json', [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]),
+    'nnat-pcm-g4-5': ('data/nnat/pattern-completion.json', [0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98]),
+    'nnat-pcm-g3-11': ('data/nnat/pattern-completion.json', [0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98]),
+    'nnat-pcm-g4-7': ('data/nnat/pattern-completion.json', [0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98, 0.98]),
+    'nnat-pcm-g4-11': ('data/nnat/pattern-completion.json', [0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96]),
+    'nnat-pcm-g4-15': ('data/nnat/pattern-completion.json', [0.98, 0.98, 0.98, 0.735, 0.735, 0.735, 0.49, 0.49, 0.49, 0.49, 0.735, 0.49, 0.49]),
+    'olsat-fan-g4-5': ('data/olsat/figural-analogies.json', [0.484, 0.88, 0.484, 0.88, 0.88, 0.88, 0.88, 0.88]),
+    'olsat-fse-g1-6': ('data/olsat/figural-series.json', [0.352, 0.528, 0.748, 0.968, 1.188, 0.968, 0.352, 1.188]),
+    'olsat-fse-g1-7': ('data/olsat/figural-series.json', [0.352, 0.528, 0.748, 0.968, 1.188, 0.968, 0.352, 1.188]),
+    'olsat-fse-g1-13': ('data/olsat/figural-series.json', [0.352, 0.528, 0.748, 0.968, 1.188, 0.968, 0.352, 1.188]),
+    'olsat-fse-g1-15': ('data/olsat/figural-series.json', [0.392, 0.588, 0.833, 1.078, 1.323, 1.078, 0.392, 1.323]),
+    'olsat-fse-g2-14': ('data/olsat/figural-series.json', [0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 1.2]),
+    'olsat-fse-g2-11': ('data/olsat/figural-series.json', [1.222, 1.034, 0.846, 0.658, 0.47, 0.94, 0.94, 0.47]),
+    'olsat-fse-g2-15': ('data/olsat/figural-series.json', [1.222, 1.034, 0.846, 0.658, 0.47, 1.034, 0.376, 0.47]),
+    'olsat-fse-g3-17': ('data/olsat/figural-series.json', [0.352, 0.528, 0.748, 0.968, 1.188, 0.968, 0.352, 1.188, 1.188]),
+    'olsat-fse-g3-2': ('data/olsat/figural-series.json', [0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96, 0.96]),
+    'olsat-fse-g3-14': ('data/olsat/figural-series.json', [0.352, 0.528, 0.748, 0.968, 1.188, 0.968, 0.352, 0.651, 0.651]),
+    'olsat-fse-g3-10': ('data/olsat/figural-series.json', [1.222, 1.034, 0.846, 0.658, 0.47, 1.034, 0.376, 0.47, 0.47]),
+    'olsat-fse-g3-15': ('data/olsat/figural-series.json', [1.222, 1.034, 0.846, 0.658, 0.47, 0.94, 0.94, 0.752, 0.47]),
+    'olsat-fse-g3-12': ('data/olsat/figural-series.json', [1.222, 1.034, 0.846, 0.658, 0.47, 1.034, 0.376, 0.282, 0.47]),
+    'olsat-fse-g4-6': ('data/olsat/figural-series.json', [0.352, 0.528, 0.748, 0.968, 1.188, 0.968, 0.352, 1.188, 1.188]),
+    'olsat-fse-g4-13': ('data/olsat/figural-series.json', [0.352, 0.528, 0.748, 0.968, 1.188, 0.968, 0.352, 1.188, 1.188]),
+    'olsat-fse-g4-9': ('data/olsat/figural-series.json', [0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.44, 1.2]),
+    'olsat-fse-g4-10': ('data/olsat/figural-series.json', [1.222, 1.034, 0.846, 0.658, 0.47, 1.034, 0.376, 0.47, 0.282]),
+}
+
+
+def _shapes_in(node, inside=False, out=None):
+    out = [] if out is None else out
+    if isinstance(node, list):
+        for v in node:
+            _shapes_in(v, inside, out)
+        return out
+    if isinstance(node, dict):
+        for k, v in node.items():
+            _shapes_in(v, k == 'shapes', out)
+        if inside and 's' in node:
+            out.append(node)
+    return out
+
+
+def apply_fit():
+    from collections import defaultdict
+    byfile = defaultdict(list)
+    for qid, (path, zs) in FIT.items():
+        byfile[path].append((qid, zs))
+    for path, entries in byfile.items():
+        d = json.load(open(path))
+        for qid, zs in entries:
+            q = next((x for x in d['questions'] if x['id'] == qid), None)
+            if q is None:
+                print(f'  ! {qid} not found in {path}')
+                continue
+            seq = []
+            for src in [q.get('figure')] + [c.get('figure') for c in q.get('choices', [])]:
+                seq.extend(_shapes_in(src))
+            if len(seq) != len(zs):
+                print(f'  ! {qid} has {len(seq)} shapes, expected {len(zs)} - skipped')
+                continue
+            for sh, z in zip(seq, zs):
+                sh['z'] = z
+        json.dump(d, open(path, 'w'), indent=2, ensure_ascii=False)
+        open(path, 'a').write('\n')
+
+
+apply_fit()
+
 print('hand fixes applied')
