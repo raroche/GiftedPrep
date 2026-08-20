@@ -65,8 +65,29 @@ def _seen(items):
     return [canonical(it[1]) for it in items]
 
 
+# A child cannot see a small change of scale, so a "wrong size" distractor has
+# to be wrongly sized by an obvious amount. Below about 15% the two pictures
+# read as the same picture, which hands the item two correct answers.
+MIN_SIZE_GAP = 0.85
+
+
+def size_is_visibly_different(a, b):
+    za, zb = a or 1, b or 1
+    if za == zb:
+        return False
+    return min(za, zb) / max(za, zb) <= MIN_SIZE_GAP
+
+
 def _is_new(cand, items):
-    return canonical(cand) not in _seen(items)
+    if canonical(cand) in _seen(items):
+        return False
+    # Same picture at a size nobody can tell apart is not a new picture.
+    for _, other, _ in items:
+        rest_a = {k: v for k, v in cand.items() if k != 'z'}
+        rest_b = {k: v for k, v in other.items() if k != 'z'}
+        if rest_a == rest_b and not size_is_visibly_different(cand.get('z'), other.get('z')):
+            return False
+    return True
 
 
 def build_choices(base, rules, invariant_breaker, n_choices, rng, colors=None):

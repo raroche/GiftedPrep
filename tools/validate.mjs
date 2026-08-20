@@ -51,6 +51,31 @@ const wanted = (cat) => !filter.length
 /* Walk every figure spec and check its shapes, fills and colours     */
 /* ---------------------------------------------------------------- */
 
+/* Every shape spec inside a figure, in document order. */
+function shapesOf(node, out = []) {
+  if (Array.isArray(node)) { node.forEach((v) => shapesOf(v, out)); return out; }
+  if (node && typeof node === 'object') {
+    if (node.s) out.push(node);
+    Object.values(node).forEach((v) => shapesOf(v, out));
+  }
+  return out;
+}
+
+/* The same figure with every scale removed, so two specs can be compared on
+   everything except how big they are drawn. */
+function stripScale(node) {
+  if (Array.isArray(node)) return node.map(stripScale);
+  if (node && typeof node === 'object') {
+    const out = {};
+    for (const [k, v] of Object.entries(node)) {
+      if (k === 'z') continue;
+      out[k] = stripScale(v);
+    }
+    return out;
+  }
+  return node;
+}
+
 function checkShapes(node, where, testId) {
   if (!node || typeof node !== 'object') return;
 
@@ -167,6 +192,39 @@ for (const cat of manifest.categories) {
         if (fatal) err(where, msg); else warn(where, msg);
       } else drawn.set(key, c.id);
     });
+
+    /* A "wrong size" distractor only works if the size is visibly wrong. Two
+       choices alike in every way but scale, at a ratio a child cannot see,
+       give the question two right answers just as surely as an exact twin.
+       15% is the floor; below that the pictures read as the same picture. */
+    const MIN_SIZE_GAP = 0.85;
+    const sized = choices.filter((c) => c.figure).map((c) => ({
+      id: c.id,
+      shapes: shapesOf(c.figure),
+      bare: JSON.stringify(canonicalFigure(stripScale(c.figure)))
+    }));
+    for (let i = 0; i < sized.length; i += 1) {
+      for (let j = i + 1; j < sized.length; j += 1) {
+        const a = sized[i];
+        const b = sized[j];
+        if (a.bare !== b.bare) continue;
+        if (a.shapes.length !== b.shapes.length) continue;
+        let worst = 1;
+        for (let k = 0; k < a.shapes.length; k += 1) {
+          const za = a.shapes[k].z ?? 1;
+          const zb = b.shapes[k].z ?? 1;
+          if (za !== zb) worst = Math.min(worst, Math.min(za, zb) / Math.max(za, zb));
+        }
+        if (worst > MIN_SIZE_GAP) {
+          const pct = Math.round((1 - worst) * 100);
+          const fatal = a.id === q.answer || b.id === q.answer;
+          const msg = `choices "${a.id}" and "${b.id}" differ only in size, by ${pct}%`
+            + ' — too small to see'
+            + (fatal ? ' — the question has two correct answers' : '');
+          if (fatal) err(where, msg); else warn(where, msg);
+        }
+      }
+    }
 
     /* The key must obey the rule the question demonstrates. In an analogy or a
        2x2 matrix, A becomes B by the row rule, and C must become the key by the

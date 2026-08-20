@@ -195,4 +195,82 @@ def fix_na24(q):
     q['strategy'] = "Test your rule on the pair you were given before you use it."
 patch(NA, 'cogat-na-g2-4', fix_na24)
 
+# --- size differences too small for a child to see ------------------------
+#
+# A "wrong size" distractor only works if the size is visibly wrong. The filler
+# branch in build_choices picked a random scale without checking it differed
+# from the key, so it sometimes produced a twin: nnat-rba-g3-6 offered the key
+# at scale 1.0 and the same picture at 1.01. A child who picks the twin is
+# marked wrong on a one percent difference nobody can see.
+#
+# The same applies to the rule being demonstrated. Growing a shape by 15% and
+# then saying a choice "stayed small" asks the child to see something the page
+# does not really show, so those two items now grow by half again.
+#
+# _figural.py refuses to build either shape now. These five already shipped.
+
+def fix_rba_g2_3(q):
+    """Demonstrated growth was 1.0 -> 1.15, too small to read as growth.
+
+    Grow the gap by starting small rather than ending big: above 1.2 a shape
+    runs outside its tile and gets clipped, so the small end moves down to 0.6
+    and the big end stays at the normal size.
+    """
+    q['figure']['cells'][0]['shapes'][0]['z'] = 0.6
+    q['figure']['cells'][1]['shapes'][0].pop('z', None)
+    q['figure']['cells'][2]['shapes'][0]['z'] = 0.6
+    q['figure']['alt'] = ('Top row: a small filled blue square, then a much bigger empty blue '
+                          'square. Bottom row: a small filled green star, then an empty box.')
+    q['choices'] = [
+        {"id": "a", "figure": {"shapes": [{"s": "star", "c": "green", "f": "outline"}]}},
+        {"id": "b", "figure": {"shapes": [{"s": "star", "c": "green", "f": "outline", "z": 0.6}]}},
+        {"id": "c", "figure": {"shapes": [{"s": "star", "c": "green"}]}},
+        {"id": "d", "figure": {"shapes": [{"s": "square", "c": "green", "f": "outline"}]}},
+        {"id": "e", "figure": {"shapes": [{"s": "star", "c": "yellow", "f": "outline"}]}}]
+    q['answer'] = "a"
+patch(RBA, 'nnat-rba-g2-3', fix_rba_g2_3)
+
+
+def fix_rba_g2_11(q):
+    """Choice e was the key at 1.05: the same picture, five percent bigger."""
+    for c in q['choices']:
+        if c['id'] == 'e':
+            c['figure'] = {"shapes": [{"s": "square", "c": "grey", "z": 0.6}]}
+patch(RBA, 'nnat-rba-g2-11', fix_rba_g2_11)
+
+
+def fix_rba_g2_12(q):
+    """Growth was 1.0 -> 1.2, and choice e sat at 1.32, a tenth off the key."""
+    q['figure']['cells'][0]['shapes'][0]['z'] = 0.6
+    q['figure']['cells'][1]['shapes'][0].pop('z', None)
+    q['figure']['cells'][2]['shapes'][0]['z'] = 0.6
+    q['figure']['alt'] = ('Top row: a small empty green slanted rectangle, then a much bigger one. '
+                          'Bottom row: a small empty green bow tie, then an empty box.')
+    q['choices'] = [
+        {"id": "a", "figure": {"shapes": [{"s": "bowtie", "c": "green", "f": "outline"}]}},
+        {"id": "b", "figure": {"shapes": [{"s": "bowtie", "c": "green", "f": "outline", "z": 0.6}]}},
+        {"id": "c", "figure": {"shapes": [{"s": "parallelogram", "c": "green", "f": "outline"}]}},
+        {"id": "d", "figure": {"shapes": [{"s": "bowtie", "c": "green", "f": "outline", "z": 0.4}]}},
+        {"id": "e", "figure": {"shapes": [{"s": "bowtie", "c": "blue", "f": "outline"}]}}]
+    q['answer'] = "a"
+    q['explanation'] = ("Going across, the shape gets bigger. Choice b did not get bigger, and "
+                        "choice e changed colour when nothing else did.")
+patch(RBA, 'nnat-rba-g2-12', fix_rba_g2_12)
+
+
+def fix_rba_g3_6(q):
+    """Choice d was the key at 1.01. Anything above 1.2 clips, so go smaller."""
+    for c in q['choices']:
+        if c['id'] == 'd':
+            c['figure'] = {"shapes": [{"s": "semicircle", "c": "green", "f": "dots", "z": 0.5}]}
+patch(RBA, 'nnat-rba-g3-6', fix_rba_g3_6)
+
+
+def fix_rba_g3_16(q):
+    """Choice d was the key at 0.99."""
+    for c in q['choices']:
+        if c['id'] == 'd':
+            c['figure'] = {"shapes": [{"s": "cross", "c": "grey", "f": "outline", "z": 0.6}]}
+patch(RBA, 'nnat-rba-g3-16', fix_rba_g3_16)
+
 print('hand fixes applied')

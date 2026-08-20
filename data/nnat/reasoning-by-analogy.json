@@ -2063,7 +2063,7 @@
               {
                 "s": "square",
                 "c": "grey",
-                "z": 1.05
+                "z": 0.6
               }
             ]
           }
@@ -2512,14 +2512,15 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: an empty green slanted rectangle, then a big empty green slanted rectangle. Bottom row: an empty green bow tie, then an empty box.",
+        "alt": "Top row: a small empty green slanted rectangle, then a much bigger one. Bottom row: a small empty green bow tie, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
                 "s": "parallelogram",
                 "c": "green",
-                "f": "outline"
+                "f": "outline",
+                "z": 0.6
               }
             ]
           },
@@ -2528,8 +2529,7 @@
               {
                 "s": "parallelogram",
                 "c": "green",
-                "f": "outline",
-                "z": 1.2
+                "f": "outline"
               }
             ]
           },
@@ -2538,7 +2538,8 @@
               {
                 "s": "bowtie",
                 "c": "green",
-                "f": "outline"
+                "f": "outline",
+                "z": 0.6
               }
             ]
           },
@@ -2555,8 +2556,7 @@
               {
                 "s": "bowtie",
                 "c": "green",
-                "f": "outline",
-                "z": 1.2
+                "f": "outline"
               }
             ]
           }
@@ -2568,7 +2568,8 @@
               {
                 "s": "bowtie",
                 "c": "green",
-                "f": "outline"
+                "f": "outline",
+                "z": 0.6
               }
             ]
           }
@@ -2580,8 +2581,7 @@
               {
                 "s": "parallelogram",
                 "c": "green",
-                "f": "outline",
-                "z": 1.2
+                "f": "outline"
               }
             ]
           }
@@ -2594,7 +2594,7 @@
                 "s": "bowtie",
                 "c": "green",
                 "f": "outline",
-                "z": 0.72
+                "z": 0.4
               }
             ]
           }
@@ -2605,16 +2605,15 @@
             "shapes": [
               {
                 "s": "bowtie",
-                "c": "green",
-                "f": "outline",
-                "z": 1.32
+                "c": "blue",
+                "f": "outline"
               }
             ]
           }
         }
       ],
       "answer": "a",
-      "explanation": "Going across, the shape gets bigger. Choice b did not get bigger.",
+      "explanation": "Going across, the shape gets bigger. Choice b did not get bigger, and choice e changed colour when nothing else did.",
       "strategy": "Check what changed AND what stayed the same. Both are clues."
     },
     {
@@ -2732,13 +2731,14 @@
         "kind": "matrix",
         "rows": 2,
         "cols": 2,
-        "alt": "Top row: a filled blue square, then a bigger empty blue square. Bottom row: a filled green star, then an empty box.",
+        "alt": "Top row: a small filled blue square, then a much bigger empty blue square. Bottom row: a small filled green star, then an empty box.",
         "cells": [
           {
             "shapes": [
               {
                 "s": "square",
-                "c": "blue"
+                "c": "blue",
+                "z": 0.6
               }
             ]
           },
@@ -2747,8 +2747,7 @@
               {
                 "s": "square",
                 "c": "blue",
-                "f": "outline",
-                "z": 1.15
+                "f": "outline"
               }
             ]
           },
@@ -2756,7 +2755,8 @@
             "shapes": [
               {
                 "s": "star",
-                "c": "green"
+                "c": "green",
+                "z": 0.6
               }
             ]
           },
@@ -2773,8 +2773,7 @@
               {
                 "s": "star",
                 "c": "green",
-                "f": "outline",
-                "z": 1.15
+                "f": "outline"
               }
             ]
           }
@@ -2786,7 +2785,8 @@
               {
                 "s": "star",
                 "c": "green",
-                "f": "outline"
+                "f": "outline",
+                "z": 0.6
               }
             ]
           }
@@ -2797,8 +2797,7 @@
             "shapes": [
               {
                 "s": "star",
-                "c": "green",
-                "z": 1.15
+                "c": "green"
               }
             ]
           }
@@ -2810,8 +2809,7 @@
               {
                 "s": "square",
                 "c": "green",
-                "f": "outline",
-                "z": 1.15
+                "f": "outline"
               }
             ]
           }
@@ -2823,8 +2821,7 @@
               {
                 "s": "star",
                 "c": "yellow",
-                "f": "outline",
-                "z": 1.15
+                "f": "outline"
               }
             ]
           }
@@ -3816,7 +3813,7 @@
                 "s": "semicircle",
                 "c": "green",
                 "f": "dots",
-                "z": 1.01
+                "z": 0.5
               }
             ]
           }
@@ -4030,7 +4027,7 @@
                 "s": "cross",
                 "c": "grey",
                 "f": "outline",
-                "z": 0.99
+                "z": 0.6
               }
             ]
           }
