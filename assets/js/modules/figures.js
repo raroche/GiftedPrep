@@ -319,7 +319,13 @@ function drawCell(cell, defs, opts = {}) {
 
 function svgWrap(width, height, body, defs, label) {
   const d = defs.length ? `<defs>${defs.join('')}</defs>` : '';
+  /* Shrink to fit a narrow screen, but never blow up past the size the figure
+     was drawn at. Without the cap a one-cell picture stretched to fill its
+     column, so a single square arrived the size of a dinner plate.
+     data-style rather than style: the site's CSP drops style attributes, and
+     applyStyles() turns these into real styles once the markup is placed. */
   return `<svg class="gp-fig" viewBox="0 0 ${width} ${height}" width="100%" `
+    + `data-style="max-width:${Math.round(width)}px" `
     + `preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" `
     + `role="img" aria-label="${esc(label || 'figure')}" focusable="false">${d}${body}</svg>`;
 }
@@ -835,6 +841,53 @@ const RENDERERS = {
     return { w, h, body: out.join('') };
   },
 
+  /* Filled squares on a grid: cube nets, garden plots, staircases. A cell of
+     0 is empty, anything else is a square. Different numbers take different
+     colours, which is how the L-shells of a square number are shown. */
+  polyomino(spec) {
+    const grid = spec.cells || [[1]];
+    const rows = grid.length;
+    const cols = grid[0].length;
+    const cell = spec.cell || 38;
+    const pad = 10;
+    const w = cols * cell + pad * 2;
+    const h = rows * cell + pad * 2;
+    const tones = spec.tones || ['blue', 'green', 'yellow', 'orange', 'red', 'teal', 'purple'];
+    const out = [`<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`];
+    for (let y = 0; y < rows; y += 1) {
+      for (let x = 0; x < cols; x += 1) {
+        const v = grid[y][x];
+        if (!v) continue;
+        const fill = colour(spec.c || tones[(Number(v) - 1) % tones.length]);
+        out.push(`<rect x="${pad + x * cell}" y="${pad + y * cell}" width="${cell}" height="${cell}" fill="${fill}" stroke="${STROKE}" stroke-width="3" />`);
+      }
+    }
+    return { w, h, body: out.join('') };
+  },
+
+  /* A run of numbers joined by arrows. Used for the 3n+1 chain and for
+     Fibonacci, where seeing the step matters more than the numbers. */
+  chain(spec, defs) {
+    const items = (spec.items || []).map(String);
+    const boxW = spec.boxW || 62;
+    const gap = 30;
+    const h = 74;
+    const w = items.length * boxW + (items.length - 1) * gap + 16;
+    /* The arrow marker is defined by whichever renderer needs it first. */
+    defs.push(`<marker id="gparrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="${MUTED}" /></marker>`);
+    const out = [`<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`];
+    items.forEach((v, i) => {
+      const x = 8 + i * (boxW + gap);
+      const missing = v === '?';
+      out.push(`<rect x="${x}" y="14" width="${boxW}" height="${h - 28}" rx="9" fill="${missing ? 'none' : colour(spec.c || 'blue')}" stroke="${STROKE}" stroke-width="3"${missing ? ' stroke-dasharray="6 5"' : ''} />`);
+      out.push(`<text x="${x + boxW / 2}" y="${h / 2}" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="${STROKE}" font-family="system-ui, sans-serif">${esc(v)}</text>`);
+      if (i < items.length - 1) {
+        out.push(`<path d="M${x + boxW + 5} ${h / 2} h${gap - 12}" stroke="${MUTED}" stroke-width="4" stroke-linecap="round" marker-end="url(#gparrow)" />`);
+      }
+    });
+    return { w, h, body: out.join('') };
+  },
+
   numberline(spec) {
     const min = spec.min == null ? 0 : spec.min;
     const max = spec.max == null ? 10 : spec.max;
@@ -940,6 +993,8 @@ export function describeFigure(spec) {
     case 'barchart': return `A bar graph titled ${spec.title || 'untitled'}.`;
     case 'pictograph': return 'A picture graph.';
     case 'balance':  return 'A balance scale with shapes on both sides.';
+    case 'polyomino': return 'Squares joined edge to edge on a grid.';
+    case 'chain': return `A chain of numbers: ${(spec.items || []).join(', ')}.`;
     case 'graph': return `${(spec.nodes || []).length} dots joined by ${(spec.edges || []).length} lines.`;
     case 'tiling': return `A floor tiled with ${spec.shape || 'hexagon'}s.`;
     case 'map': return 'A map divided into countries.';

@@ -31,7 +31,7 @@ const state = {
   answered: false,
   audioUnlocked: false,
   /** Math Lab: the topic being worked through and where we are in it. */
-  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null }
+  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0 }
 };
 
 /* Runtime styles cannot ride in a style attribute: the site's CSP drops those.
@@ -391,6 +391,7 @@ function renderQuestion() {
         <span class="gp-choice__mark" aria-hidden="true"></span>
       </button>`;
   }).join('');
+  paint();
 
   $('#gp-feedback').hidden = true;
   $('#gp-replay').hidden = !speech.isSupported();
@@ -694,6 +695,7 @@ function showExercise() {
   state.math.painted = {};
   state.math.settled = false;
   state.math.hanoi = null;
+  state.math.builtTotal = 0;
   const total = topic.exercises.length;
 
   if (index >= total) {
@@ -761,7 +763,8 @@ function checkMath() {
   const ex = topic.exercises[index];
 
   if (ex.type === 'build') {
-    settleExercise(mathlab.check(ex, state.math.built.size));
+    const got = ex.mode === 'binary' ? (state.math.builtTotal || 0) : state.math.built.size;
+    settleExercise(mathlab.check(ex, got));
     return;
   }
 
@@ -903,7 +906,16 @@ function toggleBuildCell(cell) {
   const on = cell.classList.toggle('is-on');
   if (on) state.math.built.add(i); else state.math.built.delete(i);
   const count = $('#gp-exercise [data-build-count]');
-  if (count) count.textContent = state.math.built.size;
+  if (!count) return;
+  /* Doubling chips add up to a number; every other build just counts taps. */
+  if (cell.dataset.value != null) {
+    let total = 0;
+    $$('#gp-exercise .gp-dchip.is-on').forEach((c) => { total += Number(c.dataset.value); });
+    count.textContent = total;
+    state.math.builtTotal = total;
+  } else {
+    count.textContent = state.math.built.size;
+  }
 }
 
 function stepExercise(delta) {

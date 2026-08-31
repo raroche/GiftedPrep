@@ -1,0 +1,1728 @@
+{
+  "grade": 2,
+  "title": "Grade 2 Math Lab",
+  "blurb": "14 topics. Each one is a short lesson you can see, then puzzles to try.",
+  "tracks": [
+    {
+      "id": "wonders",
+      "name": "Big ideas",
+      "blurb": "Real mathematics. A proof you can see, a question nobody has answered, and the numbers hiding inside a flower."
+    },
+    {
+      "id": "skills",
+      "name": "Number skills",
+      "blurb": "Getting quick and sure with hundreds, arrays and equal parts."
+    }
+  ],
+  "topics": [
+    {
+      "id": "staircase-squares",
+      "track": "wonders",
+      "name": "The Staircase",
+      "emoji": "📐",
+      "big": "Add up odd numbers and you always get a square.",
+      "parentNote": "A proof without words. 1+3+5+7 = 16 because each odd number is the L-shaped shell that grows one square into the next. The child does not take this on trust, they see why it must be true.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Start with 1 dot. That is a 1 by 1 square."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1
+              ]
+            ]
+          },
+          "cap": "1. A square."
+        },
+        {
+          "t": "say",
+          "text": "Wrap 3 more around it. Now it is 2 by 2."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "cap": "1 + 3 = 4. Still a square."
+        },
+        {
+          "t": "say",
+          "text": "Wrap 5 more. Now 3 by 3."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                2,
+                3
+              ],
+              [
+                2,
+                2,
+                3
+              ],
+              [
+                3,
+                3,
+                3
+              ]
+            ]
+          },
+          "cap": "1 + 3 + 5 = 9. A square again."
+        },
+        {
+          "t": "tip",
+          "text": "Every odd number is an L that grows the square by one. That is why it always works."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "1 + 3 = ?",
+          "answer": 4,
+          "why": "4, and 4 is 2 times 2. The 3 wraps around the 1 to make a 2 by 2 square."
+        },
+        {
+          "type": "number",
+          "ask": "1 + 3 + 5 = ?",
+          "answer": 9,
+          "why": "9, which is 3 times 3. Each new odd number is the next L-shaped shell."
+        },
+        {
+          "type": "number",
+          "ask": "1 + 3 + 5 + 7 = ?",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                2,
+                3,
+                4
+              ],
+              [
+                2,
+                2,
+                3,
+                4
+              ],
+              [
+                3,
+                3,
+                3,
+                4
+              ],
+              [
+                4,
+                4,
+                4,
+                4
+              ]
+            ]
+          },
+          "answer": 16,
+          "why": "16, which is 4 times 4. Count the colours: four shells, four odd numbers, a 4 by 4 square."
+        },
+        {
+          "type": "number",
+          "ask": "How many odd numbers do you add to reach 25?",
+          "answer": 5,
+          "why": "Five, because 25 is 5 times 5. 1 + 3 + 5 + 7 + 9 = 25. The count of odds is the side of the square."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Adding the first 6 odd numbers gives 36.",
+          "answer": true,
+          "why": "True. 6 odd numbers make a 6 by 6 square, and 6 times 6 is 36."
+        },
+        {
+          "type": "paper",
+          "ask": "Draw dots to make a 5 by 5 square. Colour each L shell a new colour. How many shells?",
+          "answer": 5,
+          "hint": "Start with one corner dot, then wrap an L around it, then a bigger L.",
+          "why": "Five shells, holding 1, 3, 5, 7 and 9 dots. They add to 25, and every shell is an odd number."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            1,
+            4,
+            9,
+            16,
+            25,
+            36,
+            49,
+            64
+          ],
+          "need": 4,
+          "ask": "Type a square number.",
+          "why": "1, 4, 9, 16, 25, 36, 49, 64. Each one is a running total of the odd numbers, which is why the gaps between them are 3, 5, 7, 9."
+        }
+      ]
+    },
+    {
+      "id": "nobody-knows",
+      "track": "wonders",
+      "name": "Nobody Knows",
+      "emoji": "❓",
+      "big": "A puzzle you can do that no one can solve.",
+      "parentNote": "The Collatz conjecture, posed in 1937. Two rules a seven-year-old can follow, and no mathematician on Earth can prove it always ends at 1. MathPickle uses it with young children. The point is to meet a real open question.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Pick a number. Two rules."
+        },
+        {
+          "t": "say",
+          "text": "If it is even, halve it. If it is odd, times 3 and add 1."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              6,
+              3,
+              10,
+              5,
+              16,
+              8,
+              4,
+              2,
+              1
+            ]
+          },
+          "cap": "Start at 6. It always ends at 1."
+        },
+        {
+          "t": "say",
+          "text": "Every number anyone has ever tried ends at 1."
+        },
+        {
+          "t": "tip",
+          "text": "Nobody has ever proved it always does. This is a real unsolved problem, and you can play with it today."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "Start at 4. Halve it. What next?",
+          "answer": 2,
+          "why": "4 is even, so halve it to get 2. Then 2 halves to 1 and the chain stops."
+        },
+        {
+          "type": "number",
+          "ask": "5 is odd. Times 3, add 1. What do you get?",
+          "answer": 16,
+          "why": "5 times 3 is 15, and 1 more is 16. Odd numbers jump up before they come back down."
+        },
+        {
+          "type": "number",
+          "ask": "Start at 3. How many steps to reach 1?",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              3,
+              10,
+              5,
+              16,
+              8,
+              4,
+              2,
+              1
+            ]
+          },
+          "answer": 7,
+          "why": "Seven steps: 3, 10, 5, 16, 8, 4, 2, 1. Count the arrows, not the numbers."
+        },
+        {
+          "type": "number",
+          "ask": "Start at 8. How many steps to reach 1?",
+          "answer": 3,
+          "why": "Three: 8, 4, 2, 1. Powers of two fall straight down because they just keep halving."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Somebody has proved every number reaches 1.",
+          "answer": false,
+          "why": "False, and that is the amazing part. It has been checked on computers for enormous numbers and it always works, but nobody has proved it must."
+        },
+        {
+          "type": "paper",
+          "ask": "Start at 7 and follow the rules on paper. How many steps to reach 1?",
+          "answer": 16,
+          "hint": "7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1. Count the arrows.",
+          "why": "Sixteen steps, and it climbs all the way to 52 first. Small numbers can take a long and wild trip."
+        },
+        {
+          "type": "number",
+          "ask": "Start at 16. How many steps to reach 1?",
+          "answer": 4,
+          "why": "Four: 16, 8, 4, 2, 1. Doubling numbers make the shortest chains of all."
+        }
+      ]
+    },
+    {
+      "id": "secret-codes",
+      "track": "wonders",
+      "name": "Secret Codes",
+      "emoji": "🔐",
+      "big": "Every number is a sum of doubles, one way only.",
+      "parentNote": "Binary, reached through doubling rather than through base arithmetic. Zvonkin ran a code-breaking session with his circle. This is how every computer stores a number.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "These are the doubling numbers: 1, 2, 4, 8, 16."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              1,
+              2,
+              4,
+              8,
+              16
+            ],
+            "c": "teal"
+          },
+          "cap": "Each one is double the one before."
+        },
+        {
+          "t": "say",
+          "text": "Pick some of them to make 11. You need 8 and 2 and 1."
+        },
+        {
+          "t": "say",
+          "text": "There is only ONE way to make any number. Never two ways."
+        },
+        {
+          "t": "tip",
+          "text": "A computer stores every number exactly like this. On, off, on, off."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "build",
+          "mode": "binary",
+          "chips": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "target": 11,
+          "ask": "Make 11 from the doubling numbers.",
+          "answer": 11,
+          "why": "8 and 2 and 1. There is no other set that works, which is what makes it a code."
+        },
+        {
+          "type": "build",
+          "mode": "binary",
+          "chips": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "target": 21,
+          "ask": "Now make 21.",
+          "answer": 21,
+          "why": "16 and 4 and 1. Always take the biggest one that fits, then keep going with what is left."
+        },
+        {
+          "type": "number",
+          "ask": "What is the next doubling number after 16?",
+          "answer": 32,
+          "why": "32. The chain is 1, 2, 4, 8, 16, 32, 64. Each one is double the last."
+        },
+        {
+          "type": "build",
+          "mode": "binary",
+          "chips": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "target": 31,
+          "ask": "Make 31.",
+          "answer": 31,
+          "why": "All of them: 16 + 8 + 4 + 2 + 1. That is why 31 comes just before the next doubling number, 32."
+        },
+        {
+          "type": "truefalse",
+          "ask": "There are two different ways to make 13 from the doubling numbers.",
+          "answer": false,
+          "why": "False. Only 8 + 4 + 1 works. Every number has exactly one way, which is the whole point of the code."
+        },
+        {
+          "type": "number",
+          "ask": "8 + 4 + 2 + 1 = ?",
+          "answer": 15,
+          "why": "15. Take every doubling number up to 8 and you land one short of 16, every single time."
+        },
+        {
+          "type": "paper",
+          "ask": "Write a secret message using ON and OFF for the numbers 16, 8, 4, 2, 1. What is ON OFF ON OFF ON?",
+          "answer": 21,
+          "hint": "ON means use that number. 16 is on, 8 is off, 4 is on, 2 is off, 1 is on.",
+          "why": "16 + 4 + 1 = 21. That is binary, and it is exactly how a computer holds the number 21."
+        }
+      ]
+    },
+    {
+      "id": "fence-puzzle",
+      "track": "wonders",
+      "name": "The Fence Puzzle",
+      "emoji": "🚧",
+      "big": "Same amount of fence. Very different garden.",
+      "parentNote": "Perimeter and area are independent, which almost every child, and many adults, get wrong. Grade 2 meets perimeter formally (MA.2.GR.2.1). The square-holds-most result is the isoperimetric problem in miniature.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Perimeter is the fence around. Area is the grass inside."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "c": "green"
+          },
+          "cap": "6 squares in a line. Area 6, fence 14."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            "c": "green"
+          },
+          "cap": "The same 6 squares. Area still 6, but the fence is only 10."
+        },
+        {
+          "t": "say",
+          "text": "Same grass. Less fence. The fatter shape needs less fence."
+        },
+        {
+          "t": "tip",
+          "text": "The closer to a square, the less fence you need. That is why fields and pens are usually squarish."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "What is the perimeter of a 3 by 3 square?",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            "c": "green"
+          },
+          "answer": 12,
+          "why": "12. Three along each of the four sides. The area is 9 but the fence is 12, and they are different things."
+        },
+        {
+          "type": "number",
+          "ask": "What is the area of that same 3 by 3 square?",
+          "answer": 9,
+          "why": "9 squares of grass. Area counts the inside, perimeter counts the edge."
+        },
+        {
+          "type": "number",
+          "ask": "A line of 4 squares. What is the perimeter?",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "c": "blue"
+          },
+          "answer": 10,
+          "why": "10. Four along the top, four along the bottom, and one at each end."
+        },
+        {
+          "type": "number",
+          "ask": "A 2 by 2 square. What is the perimeter?",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "c": "blue"
+          },
+          "answer": 8,
+          "why": "8. Same area as the line of 4, but only 8 of fence instead of 10. Fatter shapes cost less fence."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Two shapes with the same area always have the same perimeter.",
+          "answer": false,
+          "why": "False. The line of 4 and the 2 by 2 both have area 4, but perimeters of 10 and 8. This one catches out grown-ups."
+        },
+        {
+          "type": "paper",
+          "ask": "You have 12 of fence. Make the biggest garden you can. What is its area?",
+          "answer": 9,
+          "hint": "Try 1 by 5, then 2 by 4, then 3 by 3. Work out the grass each time.",
+          "why": "9, from a 3 by 3. 1 by 5 gives 5 and 2 by 4 gives 8. The squarest shape always holds the most."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ],
+          "need": 3,
+          "ask": "Type a perimeter a rectangle can have.",
+          "why": "Every rectangle has an even perimeter, because each side is counted twice. You can never make an odd one."
+        }
+      ]
+    },
+    {
+      "id": "natures-numbers",
+      "track": "wonders",
+      "name": "Nature's Numbers",
+      "emoji": "🌻",
+      "big": "The same numbers keep showing up in flowers.",
+      "parentNote": "Fibonacci. Add the last two to get the next. Petal counts and pinecone spirals really do land on these numbers, so this topic is checkable outdoors, which is rare and worth using.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Start with 1 and 1. Add the last two to get the next."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              1,
+              1,
+              2,
+              3,
+              5,
+              8
+            ],
+            "c": "green"
+          },
+          "cap": "1 and 1 make 2. 1 and 2 make 3. 2 and 3 make 5."
+        },
+        {
+          "t": "say",
+          "text": "Now go and count petals. Lilies have 3. Buttercups have 5."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "text": "🌼🌸🌻"
+          },
+          "cap": "Most flowers have a Fibonacci number of petals."
+        },
+        {
+          "t": "tip",
+          "text": "Pinecone spirals come in 8s, 13s and 21s. All Fibonacci numbers. Nature keeps landing on them."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "1, 1, 2, 3, 5, ?",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              1,
+              1,
+              2,
+              3,
+              5,
+              "?"
+            ],
+            "c": "green"
+          },
+          "answer": 8,
+          "why": "8, because 3 and 5 make 8. Always add the two before it."
+        },
+        {
+          "type": "number",
+          "ask": "5, 8, ?",
+          "answer": 13,
+          "why": "13. Five and eight make thirteen. Asters usually have 13 or 21 petals."
+        },
+        {
+          "type": "number",
+          "ask": "8, 13, ?",
+          "answer": 21,
+          "why": "21. The numbers grow faster and faster, because each one carries the whole history with it."
+        },
+        {
+          "type": "truefalse",
+          "ask": "4 is a Fibonacci number.",
+          "answer": false,
+          "why": "False. The list goes 1, 1, 2, 3, 5, 8, and it skips straight past 4. That is why almost no flower has 4 petals."
+        },
+        {
+          "type": "number",
+          "ask": "13, 21, ?",
+          "answer": 34,
+          "why": "34. A field daisy often has exactly 34 petals, which is not a coincidence."
+        },
+        {
+          "type": "paper",
+          "ask": "Find a real flower or a picture of one. Count the petals. Type what you counted.",
+          "answer": 5,
+          "hint": "Try a buttercup, a wild rose or a daisy. Many have 5. Type 5 if you are not sure.",
+          "why": "Most people find 3, 5, 8, 13 or 34. It comes from how a plant packs new petals in as it grows, always leaving the least wasted space."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            21,
+            34,
+            55
+          ],
+          "need": 5,
+          "ask": "Type a Fibonacci number.",
+          "why": "1, 1, 2, 3, 5, 8, 13, 21, 34, 55. Notice what is missing: 4, 6, 7, 9, 10. Those are the petal counts you almost never see."
+        }
+      ]
+    },
+    {
+      "id": "turn-it-round",
+      "track": "wonders",
+      "name": "Turn It Round",
+      "emoji": "🔄",
+      "big": "Some shapes look the same after you spin them.",
+      "parentNote": "Rotational symmetry, the natural next step after lines of symmetry (MA.2.GR.1.3). A shape can have rotational symmetry with no mirror lines at all, which is the surprise.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Turn a square a quarter turn. It looks exactly the same."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          "cap": "A square matches itself 4 times as you spin it round."
+        },
+        {
+          "t": "say",
+          "text": "A triangle with equal sides matches 3 times."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          "cap": "3 matches in a full turn."
+        },
+        {
+          "t": "tip",
+          "text": "The letter S matches when turned upside down, but has no mirror line. Turning is not mirroring."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many times does a square match itself in one full turn?",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "blue"
+              }
+            ]
+          },
+          "answer": 4,
+          "why": "4. A quarter turn, a half turn, three quarters, and back to the start. One match per side."
+        },
+        {
+          "type": "number",
+          "ask": "A triangle with equal sides?",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          "answer": 3,
+          "why": "3, one for each side. A shape with equal sides always matches once per side."
+        },
+        {
+          "type": "number",
+          "ask": "A hexagon?",
+          "figure": {
+            "shapes": [
+              {
+                "s": "hexagon",
+                "c": "yellow"
+              }
+            ]
+          },
+          "answer": 6,
+          "why": "6, one per side. This is also why a honeycomb looks the same however you turn it."
+        },
+        {
+          "type": "choice",
+          "ask": "Which letter looks the same upside down?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "S"
+            },
+            {
+              "id": "b",
+              "label": "T"
+            },
+            {
+              "id": "c",
+              "label": "F"
+            },
+            {
+              "id": "d",
+              "label": "R"
+            }
+          ],
+          "answer": "a",
+          "why": "S. Turn it upside down and it is unchanged, even though it has no mirror line. T has a mirror line but does not survive turning."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A shape can look the same when turned but have no mirror line.",
+          "answer": true,
+          "why": "True. The letter S and a pinwheel both do it. Turning symmetry and mirror symmetry are two different things."
+        },
+        {
+          "type": "paper",
+          "ask": "Turn the page upside down and look at the number 8. How many matches in a full turn?",
+          "answer": 2,
+          "hint": "An 8 matches at the start, and again halfway round.",
+          "why": "2. Upright and upside down. Playing cards are printed this way on purpose so they read correctly whichever way you pick them up."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12
+          ],
+          "need": 4,
+          "ask": "Type how many matches a shape can have in a full turn.",
+          "why": "A shape with equal sides matches once per side, so any of these is possible. A shape with no symmetry at all matches only once, when it gets back to the start."
+        }
+      ]
+    },
+    {
+      "id": "how-many-ways",
+      "track": "wonders",
+      "name": "How Many Ways?",
+      "emoji": "👕",
+      "big": "Multiply instead of listing them all.",
+      "parentNote": "The multiplication principle. It builds straight on grade 2 arrays (MA.2.AR.3.2) and is the foundation of all counting mathematics.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "You have 3 shirts and 2 pairs of trousers."
+        },
+        {
+          "t": "say",
+          "text": "Every shirt can go with every pair of trousers."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "array",
+            "rows": 3,
+            "cols": 2,
+            "c": "teal"
+          },
+          "cap": "One dot for every outfit. 3 rows, 2 columns, 6 outfits."
+        },
+        {
+          "t": "say",
+          "text": "So the answer is 3 times 2. You never had to list them."
+        },
+        {
+          "t": "tip",
+          "text": "This is why an array and a choice puzzle are the same picture."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2 shirts and 4 trousers. How many outfits?",
+          "figure": {
+            "kind": "array",
+            "rows": 2,
+            "cols": 4,
+            "c": "teal"
+          },
+          "answer": 8,
+          "why": "8. Two rows of four, so 4 and 4. Every shirt pairs with every pair of trousers."
+        },
+        {
+          "type": "number",
+          "ask": "3 ice cream flavours and 2 kinds of cone. How many?",
+          "answer": 6,
+          "why": "6. Three flavours each with two cones, so 3 twos, which is 6."
+        },
+        {
+          "type": "number",
+          "ask": "5 hats and 3 scarves. How many pairs?",
+          "answer": 15,
+          "why": "15. Five rows of three. Listing them all would take a while; multiplying takes a second."
+        },
+        {
+          "type": "truefalse",
+          "ask": "4 shirts and 3 trousers gives the same count as 3 shirts and 4 trousers.",
+          "answer": true,
+          "why": "True. Both give 12. It is the same array turned sideways, which is why the order does not matter."
+        },
+        {
+          "type": "build",
+          "mode": "array",
+          "rows": 3,
+          "cols": 4,
+          "ask": "Build the array for 3 shirts and 4 trousers.",
+          "answer": 12,
+          "why": "3 rows of 4 is 12 outfits. Every dot is one outfit you could wear."
+        },
+        {
+          "type": "paper",
+          "ask": "A lunch has 2 breads, 3 fillings and 2 drinks. How many different lunches?",
+          "answer": 12,
+          "hint": "Do the bread and filling first, then multiply by the drinks.",
+          "why": "12. 2 times 3 is 6 sandwiches, and each one goes with 2 drinks, so 12. You can keep multiplying for as many choices as you like."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            12,
+            24
+          ],
+          "need": 4,
+          "ask": "24 outfits. Type a number of shirts that could work.",
+          "why": "Any number that divides 24: 1, 2, 3, 4, 6, 8, 12 or 24. 5 does not work, because 24 will not split into 5 equal groups."
+        }
+      ]
+    },
+    {
+      "id": "fold-a-box",
+      "track": "wonders",
+      "name": "Fold It Into a Box",
+      "emoji": "📦",
+      "big": "Some flat shapes fold into a cube. Some do not.",
+      "parentNote": "Cube nets. There are exactly 11, a real classification result. This one wants scissors: predicting from the flat picture and then testing by folding is the whole exercise.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A cube has 6 faces. So a net needs exactly 6 squares."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ]
+            ],
+            "c": "blue"
+          },
+          "cap": "This one folds into a cube. The long row wraps round and the two flaps become the lid and base."
+        },
+        {
+          "t": "say",
+          "text": "But 6 squares is not enough on its own."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                0
+              ]
+            ],
+            "c": "red"
+          },
+          "cap": "6 squares, but this one cannot fold. Two faces would land on top of each other."
+        },
+        {
+          "t": "tip",
+          "text": "There are exactly 11 shapes that fold into a cube. Not 10, not 12. Somebody proved it."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many faces does a cube have?",
+          "answer": 6,
+          "why": "6. Top, bottom, and four sides. So every net has exactly 6 squares."
+        },
+        {
+          "type": "number",
+          "ask": "How many edges does a cube have?",
+          "answer": 12,
+          "why": "12. Four around the top, four around the bottom, and four upright posts joining them."
+        },
+        {
+          "type": "number",
+          "ask": "How many corners does a cube have?",
+          "answer": 8,
+          "why": "8. Four on the top face and four on the bottom."
+        },
+        {
+          "type": "choice",
+          "ask": "Which one will NOT fold into a cube?",
+          "choices": [
+            {
+              "id": "a",
+              "figure": {
+                "kind": "polyomino",
+                "cells": [
+                  [
+                    0,
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  [
+                    0,
+                    1,
+                    0,
+                    0
+                  ]
+                ],
+                "c": "blue"
+              }
+            },
+            {
+              "id": "b",
+              "figure": {
+                "kind": "polyomino",
+                "cells": [
+                  [
+                    1,
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    1,
+                    1,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    1,
+                    1
+                  ]
+                ],
+                "c": "green"
+              }
+            },
+            {
+              "id": "c",
+              "figure": {
+                "kind": "polyomino",
+                "cells": [
+                  [
+                    1,
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    0
+                  ]
+                ],
+                "c": "red"
+              }
+            }
+          ],
+          "answer": "c",
+          "why": "Choice c. A 2 by 3 block cannot wrap: two of the squares would end up on the same face. The other two are real nets."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Any 6 squares joined edge to edge will fold into a cube.",
+          "answer": false,
+          "why": "False. There are 35 ways to join 6 squares, and only 11 of them fold into a cube. Most do not."
+        },
+        {
+          "type": "number",
+          "ask": "How many different nets fold into a cube?",
+          "answer": 11,
+          "why": "Exactly 11. Turning or flipping one does not count as new. This is a real result somebody had to prove."
+        },
+        {
+          "type": "paper",
+          "ask": "Cut 6 squares joined in a cross shape and fold it. Did it make a cube? Type 1 for yes, 0 for no.",
+          "answer": 1,
+          "hint": "A row of 4 with one square above and one below the second square.",
+          "why": "Yes. The cross is the most familiar of the 11 nets, and it is the one most boxes are cut from."
+        }
+      ]
+    },
+    {
+      "id": "hundreds",
+      "track": "skills",
+      "name": "Hundreds",
+      "emoji": "💯",
+      "big": "Numbers to a thousand are bundles of hundreds.",
+      "parentNote": "MA.2.NSO.1.1 to 1.3. Place value to 1,000 in standard, word and expanded form.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "346 means 3 hundreds, 4 tens and 6 ones."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              300,
+              40,
+              6
+            ],
+            "c": "teal"
+          },
+          "cap": "300 + 40 + 6. That is expanded form."
+        },
+        {
+          "t": "say",
+          "text": "The place a digit sits in decides how much it is worth."
+        },
+        {
+          "t": "tip",
+          "text": "The 3 in 346 is worth 300. The 3 in 435 is worth 30. Same digit, different job."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "3 hundreds and 4 tens and 6 ones is what number?",
+          "answer": 346,
+          "why": "346. Hundreds first, then tens, then ones, and each one keeps its own place."
+        },
+        {
+          "type": "number",
+          "ask": "300 + 40 + 6 = ?",
+          "answer": 346,
+          "why": "346. Expanded form just writes out what each digit is worth."
+        },
+        {
+          "type": "number",
+          "ask": "What is the 7 worth in 472?",
+          "answer": 70,
+          "why": "70. It sits in the tens place, so it means 7 tens, not 7."
+        },
+        {
+          "type": "number",
+          "ask": "What is the 5 worth in 508?",
+          "answer": 500,
+          "why": "500. It is in the hundreds place. The 0 is holding the tens place open so the 5 stays where it belongs."
+        },
+        {
+          "type": "truefalse",
+          "ask": "624 is bigger than 462.",
+          "answer": true,
+          "why": "True. 624 has 6 hundreds and 462 has only 4. Compare the biggest place first."
+        },
+        {
+          "type": "paper",
+          "ask": "Write 807 in expanded form on paper. What is the biggest part?",
+          "answer": 800,
+          "hint": "800 + 0 + 7. There are no tens.",
+          "why": "800. The 0 means no tens at all, but it still has to be written or the 8 slides into the wrong place."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            500,
+            501,
+            502,
+            503,
+            504,
+            505,
+            506,
+            507,
+            508,
+            509
+          ],
+          "need": 4,
+          "ask": "Type a number with exactly 5 hundreds and 0 tens.",
+          "why": "500 to 509. The hundreds digit is 5 and the tens digit is 0, so only the ones can change."
+        }
+      ]
+    },
+    {
+      "id": "more-and-less",
+      "track": "skills",
+      "name": "10 and 100 More",
+      "emoji": "⬆️",
+      "big": "Jump by tens and hundreds without counting.",
+      "parentNote": "MA.2.NSO.2.2. Seeing that only one digit moves is what makes mental arithmetic possible later.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Add 10 and only the tens digit moves."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              247,
+              257,
+              267
+            ],
+            "c": "blue"
+          },
+          "cap": "247, 257, 267. The 2 and the 7 never change."
+        },
+        {
+          "t": "say",
+          "text": "Add 100 and only the hundreds digit moves."
+        },
+        {
+          "t": "tip",
+          "text": "Unless it fills up. 10 more than 195 is 205, because 9 tens plus 1 ten makes a whole hundred."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "10 more than 247.",
+          "answer": 257,
+          "why": "257. The 4 tens become 5 tens. Nothing else moves."
+        },
+        {
+          "type": "number",
+          "ask": "100 more than 362.",
+          "answer": 462,
+          "why": "462. Only the hundreds digit changes, from 3 to 4."
+        },
+        {
+          "type": "number",
+          "ask": "10 less than 405.",
+          "answer": 395,
+          "why": "395. There are no tens to take from, so a hundred is broken open into 10 tens first."
+        },
+        {
+          "type": "number",
+          "ask": "10 more than 195.",
+          "answer": 205,
+          "why": "205. Nine tens plus one ten is ten tens, which is a whole hundred, so the hundreds digit moves too."
+        },
+        {
+          "type": "number",
+          "ask": "100 less than 728.",
+          "answer": 628,
+          "why": "628. Seven hundreds drop to six. The 28 stays exactly as it was."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Adding 100 never changes the tens digit.",
+          "answer": true,
+          "why": "True, as long as you stay under a thousand. Hundreds and tens live in different places and do not disturb each other."
+        },
+        {
+          "type": "paper",
+          "ask": "Start at 156 and add 10 four times. Where do you land?",
+          "answer": 196,
+          "hint": "156, 166, 176 ... keep going.",
+          "why": "196. Four jumps of ten is 40, and 156 plus 40 is 196."
+        }
+      ]
+    },
+    {
+      "id": "adding-big",
+      "track": "skills",
+      "name": "Adding Big Numbers",
+      "emoji": "➕",
+      "big": "Split them up, add the easy bits.",
+      "parentNote": "MA.2.NSO.2.3 and 2.4. Strategy before algorithm: splitting into place value is what makes regrouping make sense.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "To add 47 and 35, split them into tens and ones."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              40,
+              7,
+              30,
+              5
+            ],
+            "c": "green"
+          },
+          "cap": "40 and 30 make 70. 7 and 5 make 12."
+        },
+        {
+          "t": "say",
+          "text": "70 and 12 is 82."
+        },
+        {
+          "t": "tip",
+          "text": "The ones can spill over ten. That is fine, you just carry the extra ten across."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "40 + 30 = ?",
+          "answer": 70,
+          "why": "70. Four tens and three tens make seven tens."
+        },
+        {
+          "type": "number",
+          "ask": "47 + 35 = ?",
+          "answer": 82,
+          "why": "82. The tens make 70, the ones make 12, and 70 plus 12 is 82."
+        },
+        {
+          "type": "number",
+          "ask": "58 + 26 = ?",
+          "answer": 84,
+          "why": "84. 50 and 20 is 70, then 8 and 6 is 14, and 70 plus 14 is 84."
+        },
+        {
+          "type": "number",
+          "ask": "90 - 40 = ?",
+          "answer": 50,
+          "why": "50. Nine tens take away four tens leaves five tens."
+        },
+        {
+          "type": "number",
+          "ask": "63 - 28 = ?",
+          "answer": 35,
+          "why": "35. Count up from 28: two more reaches 30, then 33 more reaches 63. 2 and 33 is 35."
+        },
+        {
+          "type": "truefalse",
+          "ask": "29 + 41 is the same as 30 + 40.",
+          "answer": true,
+          "why": "True. Move one from the 41 to the 29 and nothing is lost. Both make 70. Shifting like this makes hard sums easy."
+        },
+        {
+          "type": "paper",
+          "ask": "126 + 45 on paper.",
+          "answer": 171,
+          "hint": "Add the hundreds, then the tens, then the ones.",
+          "why": "171. 100, then 20 and 40 is 60, then 6 and 5 is 11. 100 plus 60 plus 11 is 171."
+        }
+      ]
+    },
+    {
+      "id": "rounding",
+      "track": "skills",
+      "name": "Rounding",
+      "emoji": "🎯",
+      "big": "Which ten is it closest to?",
+      "parentNote": "MA.2.NSO.1.4. Rounding to the nearest 10, taught as distance on a number line rather than a digit rule.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "47 sits between 40 and 50. Which is it nearer?"
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numberline",
+            "min": 40,
+            "max": 50,
+            "step": 1,
+            "marks": [
+              47
+            ]
+          },
+          "cap": "47 is much closer to 50."
+        },
+        {
+          "t": "say",
+          "text": "So 47 rounds to 50."
+        },
+        {
+          "t": "tip",
+          "text": "A number ending in 5 sits exactly in the middle. The rule is to go up."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "Round 47 to the nearest ten.",
+          "answer": 50,
+          "why": "50. 47 is 3 away from 50 and 7 away from 40, so 50 wins."
+        },
+        {
+          "type": "number",
+          "ask": "Round 32 to the nearest ten.",
+          "answer": 30,
+          "why": "30. Only 2 away from 30, but 8 away from 40."
+        },
+        {
+          "type": "number",
+          "ask": "Round 65 to the nearest ten.",
+          "answer": 70,
+          "why": "70. It sits exactly halfway, so the rule says go up. Everyone agreeing on the same rule is what matters."
+        },
+        {
+          "type": "number",
+          "ask": "Round 98 to the nearest ten.",
+          "answer": 100,
+          "why": "100. The nearest tens are 90 and 100, and 98 is much closer to 100."
+        },
+        {
+          "type": "truefalse",
+          "ask": "84 rounds to 90.",
+          "answer": false,
+          "why": "False. 84 is only 4 from 80 but 6 from 90, so it rounds down to 80."
+        },
+        {
+          "type": "paper",
+          "ask": "About how much are 38 and 51 together? Round each first.",
+          "answer": 90,
+          "hint": "Round 38, round 51, then add.",
+          "why": "About 90. 38 rounds to 40 and 51 rounds to 50. The real answer is 89, so rounding got very close very fast."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54
+          ],
+          "need": 4,
+          "ask": "Type a number that rounds to 50.",
+          "why": "45 to 54. Anything from halfway below to just under halfway above lands on 50."
+        }
+      ]
+    },
+    {
+      "id": "equal-parts",
+      "track": "skills",
+      "name": "Equal Parts",
+      "emoji": "🍕",
+      "big": "Halves, thirds, fourths, and when they match.",
+      "parentNote": "MA.2.FR.1.1 and 1.2, including that two fourths and one half are the same amount even though the cuts differ.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Cut into 2 equal parts and each one is a half."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 2,
+            "shaded": 1,
+            "c": "red"
+          },
+          "cap": "One half."
+        },
+        {
+          "t": "say",
+          "text": "Cut into 4 and each is a fourth. Two fourths make a half."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 4,
+            "shaded": 2,
+            "c": "blue"
+          },
+          "cap": "Two fourths. The same amount as one half."
+        },
+        {
+          "t": "tip",
+          "text": "The parts have to be equal. Four unequal pieces are not fourths."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many fourths make a whole?",
+          "answer": 4,
+          "why": "4. Fourths means four equal parts, so all four together make the whole thing."
+        },
+        {
+          "type": "number",
+          "ask": "How many thirds make a whole?",
+          "answer": 3,
+          "why": "3. The bottom number always tells you how many parts make one whole."
+        },
+        {
+          "type": "number",
+          "ask": "How many fourths are the same as one half?",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 4,
+            "shaded": 2,
+            "c": "blue"
+          },
+          "answer": 2,
+          "why": "2. Two of the four parts is exactly half the circle, which is why two fourths and one half are the same amount."
+        },
+        {
+          "type": "choice",
+          "ask": "Which shows thirds?",
+          "choices": [
+            {
+              "id": "a",
+              "figure": {
+                "kind": "fraction",
+                "shape": "circle",
+                "parts": 2,
+                "shaded": 1,
+                "c": "red"
+              }
+            },
+            {
+              "id": "b",
+              "figure": {
+                "kind": "fraction",
+                "shape": "circle",
+                "parts": 3,
+                "shaded": 1,
+                "c": "green"
+              }
+            },
+            {
+              "id": "c",
+              "figure": {
+                "kind": "fraction",
+                "shape": "circle",
+                "parts": 4,
+                "shaded": 1,
+                "c": "blue"
+              }
+            }
+          ],
+          "answer": "b",
+          "why": "Choice b. Thirds means three equal parts. Choice a is halves and choice c is fourths."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A third is bigger than a fourth.",
+          "answer": true,
+          "why": "True, and it surprises people. Cutting into fewer parts leaves each part bigger, so a third beats a fourth."
+        },
+        {
+          "type": "paper",
+          "ask": "Fold paper into fourths two different ways. How many fourths make the whole?",
+          "answer": 4,
+          "hint": "Try two straight cuts, then try a cross. Both give fourths.",
+          "why": "4 either way. A rectangle can be cut into fourths in several shapes, and the pieces are still worth the same."
+        },
+        {
+          "type": "number",
+          "ask": "How many halves make a whole?",
+          "answer": 2,
+          "why": "2. Two equal parts, and together they are the whole thing again."
+        }
+      ]
+    },
+    {
+      "id": "reading-graphs",
+      "track": "skills",
+      "name": "Reading a Graph",
+      "emoji": "📊",
+      "big": "A picture that answers questions.",
+      "parentNote": "MA.2.DP.1.1 and 1.2. Reading a bar graph and doing arithmetic with what it says.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A bar graph shows how many, using height."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "barchart",
+            "labels": [
+              "Cats",
+              "Dogs",
+              "Fish"
+            ],
+            "values": [
+              6,
+              4,
+              3
+            ],
+            "title": "Class pets"
+          },
+          "cap": "Cats 6, dogs 4, fish 3."
+        },
+        {
+          "t": "say",
+          "text": "Taller bar means more. You can read it without counting anything."
+        },
+        {
+          "t": "tip",
+          "text": "Always check the numbers up the side. A short bar can still mean a big number."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many cats?",
+          "figure": {
+            "kind": "barchart",
+            "labels": [
+              "Cats",
+              "Dogs",
+              "Fish"
+            ],
+            "values": [
+              6,
+              4,
+              3
+            ],
+            "title": "Class pets"
+          },
+          "answer": 6,
+          "why": "6. Read across from the top of the cats bar to the numbers at the side."
+        },
+        {
+          "type": "number",
+          "ask": "How many more cats than dogs?",
+          "figure": {
+            "kind": "barchart",
+            "labels": [
+              "Cats",
+              "Dogs",
+              "Fish"
+            ],
+            "values": [
+              6,
+              4,
+              3
+            ],
+            "title": "Class pets"
+          },
+          "answer": 2,
+          "why": "2. Six cats take away four dogs. A graph question is usually a subtraction question in disguise."
+        },
+        {
+          "type": "number",
+          "ask": "How many pets altogether?",
+          "figure": {
+            "kind": "barchart",
+            "labels": [
+              "Cats",
+              "Dogs",
+              "Fish"
+            ],
+            "values": [
+              6,
+              4,
+              3
+            ],
+            "title": "Class pets"
+          },
+          "answer": 13,
+          "why": "13. Add all three bars: 6 and 4 and 3."
+        },
+        {
+          "type": "number",
+          "ask": "How many fewer fish than cats?",
+          "figure": {
+            "kind": "barchart",
+            "labels": [
+              "Cats",
+              "Dogs",
+              "Fish"
+            ],
+            "values": [
+              6,
+              4,
+              3
+            ],
+            "title": "Class pets"
+          },
+          "answer": 3,
+          "why": "3. Six take away three. Fewer means the same subtraction as more, just asked the other way round."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The tallest bar always means the most.",
+          "answer": true,
+          "why": "True, as long as every bar is measured against the same numbers up the side. That is why the scale matters."
+        },
+        {
+          "type": "paper",
+          "ask": "Ask 5 people their favourite fruit. Draw a bar graph. How many people did you ask?",
+          "answer": 5,
+          "hint": "One tally mark per person, then draw a bar for each fruit.",
+          "why": "5. All the bars added together must come back to the number of people you asked, which is a good way to check you did not miss anyone."
+        }
+      ]
+    }
+  ]
+}

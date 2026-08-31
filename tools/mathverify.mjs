@@ -20,7 +20,9 @@ const bad = (id, m) => problems.push(`${id}: ${m}`);
 const ok = (id, m) => checked.push(`${id}: ${m}`);
 
 const data = JSON.parse(fs.readFileSync('data/math/grade1.json', 'utf8'));
-const topic = (id) => data.topics.find((t) => t.id === id);
+const g2 = JSON.parse(fs.readFileSync('data/math/grade2.json', 'utf8'));
+const topic = (id) => data.topics.find((t) => t.id === id)
+  || g2.topics.find((t) => t.id === id);
 const ex = (id, i) => topic(id).exercises[i];
 const asked = (id, needle) =>
   topic(id).exercises.find((e) => e.ask.toLowerCase().includes(needle.toLowerCase()));
@@ -81,7 +83,7 @@ topic('handshakes').exercises.forEach((e, i) => {
   else ok(id, `${m[1]} people = ${want}`);
 });
 {
-  const c = asked('handshakes', 'handshake number');
+  const c = topic('handshakes').exercises.find((e) => e.type === 'collect');
   const want = [2, 3, 4, 5, 6, 7, 8].map(handshakes);
   const missing = want.filter((v) => !c.valid.includes(v));
   const extra = c.valid.filter((v) => !want.includes(v));
@@ -114,7 +116,7 @@ topic('socks').exercises.forEach((e, i) => {
 /* ---- Bees: which regular shapes tile --------------------------------- */
 
 {
-  const c = asked('bees-hexagons', 'tiles with no gaps');
+  const c = topic('bees-hexagons').exercises.find((e) => e.type === 'collect');
   const want = [3, 4, 5, 6, 7, 8, 9, 10, 12].filter(tilesAlone);
   const missing = want.filter((v) => !c.valid.includes(v));
   const extra = c.valid.filter((v) => !want.includes(v));
@@ -136,7 +138,7 @@ topic('socks').exercises.forEach((e, i) => {
   const tri = asked('snowflakes', 'equal sides');
   if (tri.answer !== mirrorLines(3)) bad('snowflakes[triangle]', `it has ${mirrorLines(3)}`);
   else ok('snowflakes[triangle]', 'equilateral triangle = 3');
-  const c = asked('snowflakes', 'mirror lines a shape can have');
+  const c = topic('snowflakes').exercises.find((e) => e.type === 'collect');
   /* Any whole number from 1 up is achievable: an isosceles triangle has 1, a
      rectangle has 2, a regular n-gon has n. Rejecting 1 or 2 marks a correct
      answer wrong. */
@@ -209,7 +211,7 @@ function arithmetic(ask) {
   return null;
 }
 
-data.topics.filter((t) => t.track === 'skills').forEach((t) => {
+[...data.topics, ...g2.topics].filter((t) => t.track === 'skills').forEach((t) => {
   t.exercises.forEach((e, i) => {
     if (e.type !== 'number' && e.type !== 'paper') return;
     const want = arithmetic(e.ask);
@@ -229,7 +231,7 @@ const bondSound = (f) => {
   return parts.reduce((a, b) => a + b, 0) === f.whole;
 };
 
-data.topics.forEach((t) => {
+[...data.topics, ...g2.topics].forEach((t) => {
   t.exercises.forEach((e, i) => {
     const id = `${t.id}[${i + 1}]`;
     const findBroken = /broken|wrong|does not work|not right/i.test(e.ask);
@@ -254,6 +256,179 @@ data.topics.forEach((t) => {
     }
   });
 });
+
+/* ---- Grade 2 --------------------------------------------------------- */
+
+/** Collatz: halve if even, 3n+1 if odd. Returns the chain from n down to 1. */
+function collatz(n) {
+  const seq = [n];
+  let guard = 0;
+  while (n !== 1 && guard++ < 1000) {
+    n = n % 2 === 0 ? n / 2 : 3 * n + 1;
+    seq.push(n);
+  }
+  return seq;
+}
+const fib = (k) => { let a = 1; let b = 1; for (let i = 2; i < k; i += 1) { [a, b] = [b, a + b]; } return b; };
+/** Perimeter of a polyomino: edges not shared with another filled cell. */
+function perimeter(cells) {
+  let p = 0;
+  for (let y = 0; y < cells.length; y += 1) {
+    for (let x = 0; x < cells[y].length; x += 1) {
+      if (!cells[y][x]) continue;
+      const up = y > 0 && cells[y - 1][x];
+      const down = cells[y + 1] && cells[y + 1][x];
+      const left = x > 0 && cells[y][x - 1];
+      const right = cells[y][x + 1];
+      p += [up, down, left, right].filter((n) => !n).length;
+    }
+  }
+  return p;
+}
+const area = (cells) => cells.flat().filter(Boolean).length;
+
+/* Collatz chains */
+topic('nobody-knows').exercises.forEach((e, i) => {
+  const id = `nobody-knows[${i + 1}]`;
+  const m = e.ask.match(/Start at (\d+)\. How many steps/i);
+  if (m) {
+    const want = collatz(Number(m[1])).length - 1;
+    if (e.answer !== want) bad(id, `${m[1]} takes ${want} steps, data says ${e.answer}`);
+    else ok(id, `${m[1]} reaches 1 in ${want} steps`);
+  }
+  if (e.figure && e.figure.kind === 'chain') {
+    const items = e.figure.items.filter((v) => v !== '?').map(Number);
+    const want = collatz(items[0]);
+    if (JSON.stringify(items) !== JSON.stringify(want)) {
+      bad(id, `chain shown is ${items.join(',')}, the real one is ${want.join(',')}`);
+    } else ok(id, `chain from ${items[0]} is correct`);
+  }
+});
+{
+  const e = asked('nobody-knows', '5 is odd');
+  if (e.answer !== 3 * 5 + 1) bad('nobody-knows[3n+1]', `3*5+1 is ${3 * 5 + 1}`);
+  else ok('nobody-knows[3n+1]', '3 times 5 plus 1 = 16');
+}
+
+/* Squares from odd numbers */
+topic('staircase-squares').exercises.forEach((e, i) => {
+  const id = `staircase[${i + 1}]`;
+  const m = e.ask.match(/^([\d\s+]+)=\s*\?$/);
+  if (m) {
+    const nums = m[1].split('+').map((x) => Number(x.trim()));
+    const want = nums.reduce((a, b) => a + b, 0);
+    const k = nums.length;
+    if (want !== k * k) bad(id, `${nums.join('+')} should be ${k}x${k}=${k * k}`);
+    if (e.answer !== want) bad(id, `${nums.join('+')} is ${want}, data says ${e.answer}`);
+    else ok(id, `${nums.join('+')} = ${want} = ${k}x${k}`);
+  }
+});
+{
+  const c = topic('staircase-squares').exercises.find((e) => e.type === 'collect');
+  const wrong = c.valid.filter((v) => Math.sqrt(v) % 1 !== 0);
+  if (wrong.length) bad('staircase[collect]', `${wrong.join(', ')} are not square numbers`);
+  else ok('staircase[collect]', `all ${c.valid.length} listed values are perfect squares`);
+}
+
+/* Fibonacci */
+topic('natures-numbers').exercises.forEach((e, i) => {
+  const id = `fibonacci[${i + 1}]`;
+  const m = e.ask.match(/^([\d,\s]+),\s*\?$/);
+  if (!m) return;
+  const seq = m[1].split(',').map((x) => Number(x.trim()));
+  const want = seq[seq.length - 1] + seq[seq.length - 2];
+  if (e.answer !== want) bad(id, `${seq.join(',')} continues ${want}, data says ${e.answer}`);
+  else ok(id, `${seq.join(',')} -> ${want}`);
+});
+{
+  const c = topic('natures-numbers').exercises.find((e) => e.type === 'collect');
+  const real = new Set();
+  let a = 1; let b = 1;
+  for (let i = 0; i < 12; i += 1) { real.add(a); [a, b] = [b, a + b]; }
+  const wrong = c.valid.filter((v) => !real.has(v));
+  if (wrong.length) bad('fibonacci[collect]', `${wrong.join(', ')} are not Fibonacci numbers`);
+  else ok('fibonacci[collect]', 'every listed value is a Fibonacci number');
+}
+
+/* Perimeter and area, read straight off the pictures */
+topic('fence-puzzle').exercises.forEach((e, i) => {
+  const id = `fence[${i + 1}]`;
+  if (!e.figure || e.figure.kind !== 'polyomino') return;
+  const cells = e.figure.cells;
+  if (/perimeter/i.test(e.ask)) {
+    const want = perimeter(cells);
+    if (e.answer !== want) bad(id, `that shape has perimeter ${want}, data says ${e.answer}`);
+    else ok(id, `perimeter ${want}`);
+  } else if (/area/i.test(e.ask)) {
+    const want = area(cells);
+    if (e.answer !== want) bad(id, `that shape has area ${want}, data says ${e.answer}`);
+    else ok(id, `area ${want}`);
+  }
+});
+{
+  /* The teaching claim: 6 in a line has more fence than 3x2, same area. */
+  const line = [[1, 1, 1, 1, 1, 1]];
+  const fat = [[1, 1, 1], [1, 1, 1]];
+  if (area(line) !== area(fat)) bad('fence[lesson]', 'the two shapes do not have equal area');
+  else if (!(perimeter(line) > perimeter(fat))) bad('fence[lesson]', 'the line does not have more fence');
+  else ok('fence[lesson]', `same area ${area(line)}, fence ${perimeter(line)} vs ${perimeter(fat)}`);
+  /* 12 of fence: the best area really is the 3x3. */
+  let best = 0;
+  for (let w = 1; w <= 5; w += 1) { const h = 6 - w; if (h > 0) best = Math.max(best, w * h); }
+  const p = asked('fence-puzzle', '12 of fence');
+  if (p.answer !== best) bad('fence[12]', `best area with perimeter 12 is ${best}, data says ${p.answer}`);
+  else ok('fence[12]', `perimeter 12 gives at most area ${best}`);
+}
+
+/* Binary: every target must be makeable exactly one way */
+topic('secret-codes').exercises.forEach((e, i) => {
+  if (e.type !== 'build' || e.mode !== 'binary') return;
+  const id = `codes[${i + 1}]`;
+  const chips = e.chips;
+  let ways = 0;
+  let found = null;
+  for (let mask = 0; mask < (1 << chips.length); mask += 1) {
+    let sum = 0; const used = [];
+    chips.forEach((c, k) => { if (mask & (1 << k)) { sum += c; used.push(c); } });
+    if (sum === e.target) { ways += 1; found = used; }
+  }
+  if (ways !== 1) bad(id, `${e.target} can be made ${ways} ways`);
+  else ok(id, `${e.target} = ${found.join(' + ')}, uniquely`);
+});
+
+/* Cube: 6 faces, 12 edges, 8 corners, and exactly 11 nets. */
+{
+  const t = topic('fold-a-box');
+  const want = { 'faces does a cube have': 6, 'edges does a cube have': 12, 'corners does a cube have': 8, 'nets fold into a cube': 11 };
+  Object.entries(want).forEach(([needle, v]) => {
+    const e = t.exercises.find((x) => x.ask.toLowerCase().includes(needle));
+    if (!e) { bad('cube', `no question about "${needle}"`); return; }
+    if (e.answer !== v) bad('cube', `"${needle}" should be ${v}, data says ${e.answer}`);
+    else ok('cube', `${needle} = ${v}`);
+  });
+}
+
+/* Multiplication principle */
+topic('how-many-ways').exercises.forEach((e, i) => {
+  const id = `ways[${i + 1}]`;
+  const m = e.ask.match(/(\d+) \w+ and (\d+) \w+/);
+  if (!m || (e.type !== 'number')) return;
+  const want = Number(m[1]) * Number(m[2]);
+  if (e.answer !== want) bad(id, `${m[1]} x ${m[2]} is ${want}, data says ${e.answer}`);
+  else ok(id, `${m[1]} x ${m[2]} = ${want}`);
+});
+
+/* Rotational symmetry: a regular n-gon matches n times in a full turn. */
+{
+  const t = topic('turn-it-round');
+  const want = { 'a square match itself': 4, 'triangle with equal sides': 3, 'a hexagon': 6 };
+  Object.entries(want).forEach(([needle, v]) => {
+    const e = t.exercises.find((x) => x.ask.toLowerCase().includes(needle.toLowerCase()));
+    if (!e) return;
+    if (e.answer !== v) bad('turn', `"${needle}" should be ${v}, data says ${e.answer}`);
+    else ok('turn', `${needle} = ${v}`);
+  });
+}
 
 /* ---- Report ---------------------------------------------------------- */
 

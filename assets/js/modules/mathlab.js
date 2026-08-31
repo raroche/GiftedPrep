@@ -41,7 +41,7 @@ export async function loadGrade(grade) {
 }
 
 /** Grades that have a page written. The rest are shown as not ready yet. */
-export const READY_GRADES = [1];
+export const READY_GRADES = [1, 2];
 
 /* ------------------------------------------------------------------ */
 /* Grade index                                                         */
@@ -198,7 +198,9 @@ export function renderExercise(ex, index, total) {
       <div class="gp-build" data-mode="${ex.mode}" data-rows="${ex.rows || 2}" data-cols="${ex.cols || 5}">
         ${buildGrid(ex)}
       </div>
-      <p class="gp-build__now">Tapped: <strong data-build-count>0</strong></p>
+      <p class="gp-build__now">${ex.mode === 'binary'
+        ? `Your total: <strong data-build-count>0</strong> &middot; aiming for ${ex.target}`
+        : 'Tapped: <strong data-build-count>0</strong>'}</p>
       <button type="button" class="gp-btn gp-btn--primary" data-check>Check it</button>`;
   } else if (ex.type === 'hanoi') {
     const n = ex.discs || 3;
@@ -246,6 +248,14 @@ function numberBox(label, action = 'Check') {
 }
 
 function buildGrid(ex) {
+  /* Doubling chips. Tapping them on and off is the whole lesson: a number is
+     one particular set of doubles and no other. */
+  if (ex.mode === 'binary') {
+    return `<div class="gp-dchips">${
+      (ex.chips || [1, 2, 4, 8, 16]).map((v, i) =>
+        `<button type="button" class="gp-dchip" data-cell="${i}" data-value="${v}">${v}</button>`).join('')
+    }</div>`;
+  }
   if (ex.mode === 'tenframe') {
     const cells = Array.from({ length: 10 }, (_, i) =>
       `<button type="button" class="gp-bcell" data-cell="${i}" aria-label="Square ${i + 1}"></button>`).join('');

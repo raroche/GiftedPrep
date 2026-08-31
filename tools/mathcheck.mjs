@@ -166,10 +166,24 @@ for (const file of files) {
         const best = Math.pow(2, n) - 1;
         if (e.answer !== best) err(w, `${n} discs takes ${best} moves, not ${e.answer}`);
       } else if (e.type === 'build') {
-        if (!['tenframe', 'array'].includes(e.mode)) err(w, `unknown build mode "${e.mode}"`);
+        if (!['tenframe', 'array', 'binary'].includes(e.mode)) err(w, `unknown build mode "${e.mode}"`);
         if (typeof e.answer !== 'number') err(w, 'answer must be a number');
-        const cap = e.mode === 'tenframe' ? 10 : (e.rows || 2) * (e.cols || 5);
-        if (e.answer > cap) err(w, `answer ${e.answer} does not fit in ${cap} cells`);
+        if (e.mode === 'binary') {
+          const chips = e.chips || [1, 2, 4, 8, 16];
+          if (e.target !== e.answer) err(w, `target ${e.target} and answer ${e.answer} disagree`);
+          /* The target has to be reachable, and reachable exactly one way. */
+          let ways = 0;
+          for (let mask = 0; mask < (1 << chips.length); mask += 1) {
+            let sum = 0;
+            chips.forEach((c, k) => { if (mask & (1 << k)) sum += c; });
+            if (sum === e.target) ways += 1;
+          }
+          if (ways === 0) err(w, `${e.target} cannot be made from ${chips.join(', ')}`);
+          else if (ways > 1) err(w, `${e.target} can be made ${ways} ways, so it is not a code`);
+        } else {
+          const cap = e.mode === 'tenframe' ? 10 : (e.rows || 2) * (e.cols || 5);
+          if (e.answer > cap) err(w, `answer ${e.answer} does not fit in ${cap} cells`);
+        }
       } else if (typeof e.answer !== 'number') {
         err(w, 'answer must be a number');
       }

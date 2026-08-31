@@ -1919,3 +1919,21 @@ button, a, label, summary, [role="button"] {
 .gp-disc[data-tone="teal"]   { background: var(--gp-fig-teal, #3f9aa6); }
 .gp-hanoi__count { margin: 0 0 var(--gp-space-2); font-weight: 700; }
 .gp-hanoi__say { margin: 0; min-height: 1.5em; color: var(--gp-ink-soft); font-weight: 600; }
+
+/* Doubling chips: tap to switch a number on or off. Named gp-dchip because
+   gp-chip already belongs to the score and streak chips in the top bar. */
+.gp-dchips { display: flex; flex-wrap: wrap; gap: var(--gp-space-3); }
+.gp-dchip {
+  min-width: 68px;
+  min-height: 68px;
+  padding: var(--gp-space-3);
+  border: 3px solid var(--gp-line-strong);
+  border-radius: var(--gp-radius-md);
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  font-size: var(--gp-text-xl);
+  font-weight: 800;
+  cursor: pointer;
+}
+.gp-dchip.is-on { background: var(--gp-accent); border-color: var(--gp-ink); color: var(--gp-on-accent); }
+.gp-dchip.is-on::after { content: " ✓"; font-size: var(--gp-text-sm); }
