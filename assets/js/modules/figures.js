@@ -706,7 +706,10 @@ const RENDERERS = {
   graph(spec) {
     const nodes = spec.nodes || [];
     const edges = spec.edges || [];
-    const pad = 26;
+    /* Labels sit outside the ring, so they need room on every side, not just
+       the top. Without it a label on a lower dot lands on the lines. */
+    const labelled = nodes.some((n) => n.label != null);
+    const pad = labelled ? 34 : 26;
     const w = (spec.w || 240) + pad * 2;
     const h = (spec.h || 200) + pad * 2;
     const px = (n) => pad + (n.x / 100) * (w - pad * 2);
@@ -722,7 +725,11 @@ const RENDERERS = {
       const odd = spec.markOdd && edges.filter(([a, b]) => nodes[a] === n || nodes[b] === n).length % 2 === 1;
       out.push(`<circle cx="${px(n).toFixed(1)}" cy="${py(n).toFixed(1)}" r="13" fill="${colour(odd ? 'orange' : (spec.c || 'blue'))}" stroke="${STROKE}" stroke-width="3.5" />`);
       if (n.label != null) {
-        out.push(`<text x="${px(n).toFixed(1)}" y="${(py(n) - 24).toFixed(1)}" text-anchor="middle" font-size="19" font-weight="700" fill="${STROKE}" font-family="system-ui, sans-serif">${esc(String(n.label))}</text>`);
+        /* Push the name away from the middle of the figure, so it never lands
+           on top of the lines joining the dots. */
+        const below = n.y > 55;
+        const ly = py(n) + (below ? 32 : -22);
+        out.push(`<text x="${px(n).toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" font-size="19" font-weight="700" fill="${STROKE}" font-family="system-ui, sans-serif">${esc(String(n.label))}</text>`);
       }
     });
     return { w, h, body: out.join('') };

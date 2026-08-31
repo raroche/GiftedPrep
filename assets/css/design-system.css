@@ -1849,3 +1849,73 @@ button, a, label, summary, [role="button"] {
 .gp-track { margin-top: var(--gp-space-8); }
 .gp-track__head { font-size: var(--gp-text-xl); font-weight: 800; margin: 0 0 var(--gp-space-1); }
 .gp-track__sub { color: var(--gp-ink-soft); margin: 0 0 var(--gp-space-4); }
+
+/* ---- Tower of Hanoi ---- */
+
+.gp-hanoi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gp-space-3);
+  margin-bottom: var(--gp-space-4);
+}
+/* A whole tower is one big target. A six-year-old should not have to hit a
+   disc, only the pile it belongs to. */
+.gp-peg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 190px;
+  padding: var(--gp-space-2) var(--gp-space-1) 0;
+  border: 3px solid var(--gp-line-strong);
+  border-radius: var(--gp-radius-md);
+  background: var(--gp-fig-canvas, #fdfbf7);
+  cursor: pointer;
+}
+.gp-peg.is-picked { border-color: var(--gp-accent); box-shadow: 0 0 0 4px var(--gp-accent-line); }
+.gp-peg__post {
+  position: absolute;
+  bottom: 16px;
+  width: 9px;
+  height: 150px;
+  border-radius: 5px;
+  background: var(--gp-fig-grey, #8b93a1);
+}
+.gp-peg__base {
+  position: absolute;
+  bottom: 8px;
+  left: 8px; right: 8px;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--gp-fig-ink, #2f3542);
+}
+.gp-peg__discs {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.gp-disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  border-radius: 6px;
+  border: 2.5px solid var(--gp-fig-ink, #2f3542);
+  color: var(--gp-fig-ink, #2f3542);
+  font-weight: 800;
+  font-size: var(--gp-text-sm);
+}
+.gp-disc[data-tone="blue"]   { background: var(--gp-fig-blue, #3b82c4); }
+.gp-disc[data-tone="green"]  { background: var(--gp-fig-green, #4f9d69); }
+.gp-disc[data-tone="yellow"] { background: var(--gp-fig-yellow, #e0a83c); }
+.gp-disc[data-tone="orange"] { background: var(--gp-fig-orange, #dd8341); }
+.gp-disc[data-tone="red"]    { background: var(--gp-fig-red, #d9614f); }
+.gp-disc[data-tone="teal"]   { background: var(--gp-fig-teal, #3f9aa6); }
+.gp-hanoi__count { margin: 0 0 var(--gp-space-2); font-weight: 700; }
+.gp-hanoi__say { margin: 0; min-height: 1.5em; color: var(--gp-ink-soft); font-weight: 600; }

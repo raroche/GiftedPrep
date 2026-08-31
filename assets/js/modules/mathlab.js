@@ -151,7 +151,8 @@ const TYPE_BADGE = {
   build: { label: 'Build it', icon: '🧱' },
   paper: { label: 'Pencil job', icon: '✏️' },
   collect: { label: 'Find them all', icon: '🔎' },
-  colormap: { label: 'Colour it in', icon: '🎨' }
+  colormap: { label: 'Colour it in', icon: '🎨' },
+  hanoi: { label: 'Play it', icon: '🕹️' }
 };
 
 function badge(type) {
@@ -199,6 +200,22 @@ export function renderExercise(ex, index, total) {
       </div>
       <p class="gp-build__now">Tapped: <strong data-build-count>0</strong></p>
       <button type="button" class="gp-btn gp-btn--primary" data-check>Check it</button>`;
+  } else if (ex.type === 'hanoi') {
+    const n = ex.discs || 3;
+    body = `
+      <p class="gp-cm__rule">Tap a tower to pick up its top disc, then tap where it goes.
+      A bigger disc may never sit on a smaller one.</p>
+      <div class="gp-hanoi" data-hanoi data-discs="${n}" data-goal="${ex.goal == null ? 2 : ex.goal}">
+        ${[0, 1, 2].map((peg) => `
+          <button type="button" class="gp-peg" data-peg="${peg}" aria-label="Tower ${peg + 1}">
+            <span class="gp-peg__discs"></span>
+            <span class="gp-peg__post" aria-hidden="true"></span>
+            <span class="gp-peg__base" aria-hidden="true"></span>
+          </button>`).join('')}
+      </div>
+      <p class="gp-hanoi__count">Moves: <strong data-hanoi-moves>0</strong>
+        &middot; best possible: ${Math.pow(2, n) - 1}</p>
+      <p class="gp-hanoi__say" data-hanoi-say></p>`;
   } else if (ex.type === 'colormap') {
     body = `
       <p class="gp-cm__rule">Tap a country to change its colour. Two countries that
@@ -239,6 +256,38 @@ function buildGrid(ex) {
   const cells = Array.from({ length: rows * cols }, (_, i) =>
     `<button type="button" class="gp-bcell" data-cell="${i}" aria-label="Dot ${i + 1}"></button>`).join('');
   return `<div class="gp-barray" data-style="grid-template-columns:repeat(${cols}, 1fr)">${cells}</div>`;
+}
+
+/* ------------------------------------------------------------------ */
+/* Tower of Hanoi                                                      */
+/* ------------------------------------------------------------------ */
+
+/** Fresh state: every disc on peg 0, biggest (n) at the bottom. */
+export function hanoiStart(n) {
+  return { pegs: [Array.from({ length: n }, (_, i) => n - i), [], []], moves: 0, picked: null };
+}
+
+/** Is moving the top of `from` onto `to` allowed? */
+export function hanoiLegal(state, from, to) {
+  const src = state.pegs[from];
+  const dst = state.pegs[to];
+  if (!src || !src.length) return false;
+  if (from === to) return false;
+  const disc = src[src.length - 1];
+  const top = dst[dst.length - 1];
+  return top === undefined || disc < top;
+}
+
+/** Apply a move. Returns a new state, or null if the move is not allowed. */
+export function hanoiMove(state, from, to) {
+  if (!hanoiLegal(state, from, to)) return null;
+  const pegs = state.pegs.map((p) => p.slice());
+  pegs[to].push(pegs[from].pop());
+  return { pegs, moves: state.moves + 1, picked: null };
+}
+
+export function hanoiWon(state, goal, n) {
+  return state.pegs[goal].length === n;
 }
 
 /* The palette a child colours with. Four is the whole point of the topic, so
@@ -354,5 +403,6 @@ export function feedbackHtml(ok, ex, seed = 0) {
 export default {
   loadGrade, renderGradeIndex, renderTopicIndex, renderTeach,
   renderExercise, check, collectHit, feedbackHtml, READY_GRADES,
-  checkMap, adjacency, regionsOf, MAP_COLOURS
+  checkMap, adjacency, regionsOf, MAP_COLOURS,
+  hanoiStart, hanoiLegal, hanoiMove, hanoiWon
 };

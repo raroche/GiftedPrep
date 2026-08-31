@@ -2149,22 +2149,34 @@
       ],
       "exercises": [
         {
-          "type": "number",
-          "ask": "1 disc takes 1 move. How many for 2 discs?",
+          "type": "hanoi",
+          "discs": 2,
+          "goal": 2,
+          "ask": "Move both discs to the last tower.",
           "answer": 3,
-          "why": "Three. Small one off, big one across, small one back on top. There is no shorter way."
+          "why": "Three moves: small one out of the way, big one across, small one back on top. There is no shorter way."
         },
         {
-          "type": "number",
-          "ask": "How many moves for 3 discs?",
+          "type": "hanoi",
+          "discs": 3,
+          "goal": 2,
+          "ask": "Now three discs. Move them all to the last tower.",
           "answer": 7,
-          "why": "Seven. Move the top two across, which takes 3, move the big one, which takes 1, then move the two back, another 3. So 3 and 1 and 3."
+          "why": "Seven is the best possible. Move the top two across, which takes 3, move the big one, then bring the two back, another 3."
         },
         {
           "type": "number",
           "ask": "4 discs?",
           "answer": 15,
           "why": "Fifteen. Double 7 and add 1. The pattern is 1, 3, 7, 15, and every step doubles and adds one."
+        },
+        {
+          "type": "hanoi",
+          "discs": 4,
+          "goal": 2,
+          "ask": "Four discs. This one is hard. Take your time.",
+          "answer": 15,
+          "why": "Fifteen at best. Each disc you add doubles the work and adds one, which is why the numbers run away so fast."
         },
         {
           "type": "number",
@@ -2211,20 +2223,24 @@
             "kind": "graph",
             "nodes": [
               {
-                "x": 10,
-                "y": 15
+                "x": 50.0,
+                "y": 18.0,
+                "label": "Mia"
               },
               {
-                "x": 90,
-                "y": 15
+                "x": 86.0,
+                "y": 52.0,
+                "label": "Sam"
               },
               {
-                "x": 90,
-                "y": 85
+                "x": 50.0,
+                "y": 86.0,
+                "label": "Ben"
               },
               {
-                "x": 10,
-                "y": 85
+                "x": 14.0,
+                "y": 52.0,
+                "label": "Zoe"
               }
             ],
             "edges": [
@@ -2233,30 +2249,31 @@
                 1
               ],
               [
-                1,
-                2
-              ],
-              [
-                2,
-                3
-              ],
-              [
-                3,
-                0
-              ],
-              [
                 0,
                 2
               ],
               [
+                0,
+                3
+              ],
+              [
                 1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
                 3
               ]
             ],
-            "w": 180,
-            "h": 180
+            "w": 210,
+            "h": 210,
+            "c": "teal"
           },
-          "cap": "4 people. Each dot is a person, each line a handshake. Count them: 6."
+          "cap": "4 people, and a line for every handshake. Count them: 6."
         },
         {
           "t": "say",
@@ -2291,20 +2308,24 @@
             "kind": "graph",
             "nodes": [
               {
-                "x": 10,
-                "y": 15
+                "x": 50.0,
+                "y": 18.0,
+                "label": "Mia"
               },
               {
-                "x": 90,
-                "y": 15
+                "x": 86.0,
+                "y": 52.0,
+                "label": "Sam"
               },
               {
-                "x": 90,
-                "y": 85
+                "x": 50.0,
+                "y": 86.0,
+                "label": "Ben"
               },
               {
-                "x": 10,
-                "y": 85
+                "x": 14.0,
+                "y": 52.0,
+                "label": "Zoe"
               }
             ],
             "edges": [
@@ -2313,28 +2334,29 @@
                 1
               ],
               [
-                1,
-                2
-              ],
-              [
-                2,
-                3
-              ],
-              [
-                3,
-                0
-              ],
-              [
                 0,
                 2
               ],
               [
+                0,
+                3
+              ],
+              [
                 1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
                 3
               ]
             ],
-            "w": 170,
-            "h": 170
+            "w": 190,
+            "h": 190,
+            "c": "teal"
           },
           "answer": 6,
           "why": "Six. Count the lines in the picture. The new person shakes with all 3 who were already there, so 3 more than last time."

@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIR = 'data/math';
-const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap'];
+const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi'];
 
 
 /* Regions of a grid map, and which pairs share an edge. */
@@ -159,6 +159,12 @@ for (const file of files) {
           warn(w, `allows ${e.limit} colours but ${need} would do`);
         }
         if (need > 4) err(w, `map needs ${need} colours, which cannot happen on a real map`);
+      } else if (e.type === 'hanoi') {
+        const n = e.discs || 3;
+        if (n < 2 || n > 6) err(w, `${n} discs is outside what a child can play on a screen`);
+        if (![0, 1, 2].includes(e.goal == null ? 2 : e.goal)) err(w, 'goal must be tower 0, 1 or 2');
+        const best = Math.pow(2, n) - 1;
+        if (e.answer !== best) err(w, `${n} discs takes ${best} moves, not ${e.answer}`);
       } else if (e.type === 'build') {
         if (!['tenframe', 'array'].includes(e.mode)) err(w, `unknown build mode "${e.mode}"`);
         if (typeof e.answer !== 'number') err(w, 'answer must be a number');

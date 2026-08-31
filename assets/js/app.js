@@ -31,7 +31,7 @@ const state = {
   answered: false,
   audioUnlocked: false,
   /** Math Lab: the topic being worked through and where we are in it. */
-  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false }
+  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null }
 };
 
 /* Runtime styles cannot ride in a style attribute: the site's CSP drops those.
@@ -693,6 +693,7 @@ function showExercise() {
   state.math.built = new Set();
   state.math.painted = {};
   state.math.settled = false;
+  state.math.hanoi = null;
   const total = topic.exercises.length;
 
   if (index >= total) {
@@ -716,6 +717,11 @@ function showExercise() {
   paint();
   $('#gp-ex-next').disabled = false;
   $('#gp-ex-prev').disabled = index === 0;
+  if (ex.type === 'hanoi') {
+    state.math.hanoi = mathlab.hanoiStart(ex.discs || 3);
+    drawHanoi();
+  }
+
   const input = $('#gp-exercise [data-answer-input]');
   if (input) input.focus({ preventScroll: true });
 }
@@ -794,6 +800,68 @@ function checkMath() {
 
 /* Tapping a country steps it through the four colours and back to blank, so a
    child can undo without needing a separate eraser. */
+/* ---- Tower of Hanoi ---- */
+
+const DISC_TONE = ['blue', 'green', 'yellow', 'orange', 'red', 'teal'];
+
+function drawHanoi() {
+  const box = $('#gp-exercise [data-hanoi]');
+  if (!box || !state.math.hanoi) return;
+  const st = state.math.hanoi;
+  const n = Number(box.dataset.discs);
+  $$('#gp-exercise [data-peg]').forEach((peg) => {
+    const i = Number(peg.dataset.peg);
+    const stack = st.pegs[i];
+    const holder = peg.querySelector('.gp-peg__discs');
+    holder.innerHTML = stack.map((d) => {
+      const pct = 34 + (d / n) * 62;
+      return `<span class="gp-disc" data-tone="${DISC_TONE[(d - 1) % DISC_TONE.length]}"
+        data-style="width:${pct.toFixed(0)}%">${d}</span>`;
+    }).reverse().join('');
+    peg.classList.toggle('is-picked', st.picked === i);
+  });
+  $('#gp-exercise [data-hanoi-moves]').textContent = st.moves;
+  paint();
+}
+
+function tapPeg(pegEl) {
+  if (state.math.settled) return;
+  const box = $('#gp-exercise [data-hanoi]');
+  const n = Number(box.dataset.discs);
+  const goal = Number(box.dataset.goal);
+  const i = Number(pegEl.dataset.peg);
+  const st = state.math.hanoi;
+  const say = $('#gp-exercise [data-hanoi-say]');
+
+  if (st.picked === null) {
+    if (!st.pegs[i].length) { say.textContent = 'That tower is empty. Pick one with a disc.'; return; }
+    st.picked = i;
+    say.textContent = `Holding disc ${st.pegs[i][st.pegs[i].length - 1]}. Where does it go?`;
+    drawHanoi();
+    return;
+  }
+  if (st.picked === i) { st.picked = null; say.textContent = 'Put it back. Pick again.'; drawHanoi(); return; }
+
+  const next = mathlab.hanoiMove(st, st.picked, i);
+  if (!next) {
+    say.textContent = 'That disc is too big to go on top of that one.';
+    st.picked = null;
+    drawHanoi();
+    return;
+  }
+  state.math.hanoi = next;
+  say.textContent = '';
+  drawHanoi();
+
+  if (mathlab.hanoiWon(next, goal, n)) {
+    const best = Math.pow(2, n) - 1;
+    say.textContent = next.moves === best
+      ? `Done in ${next.moves}. That is the fewest possible.`
+      : `Done in ${next.moves}. It can be done in ${best}, so there is a shorter way.`;
+    settleExercise(true);
+  }
+}
+
 function paintRegion(id) {
   /* A map that is not finished yet says so and stays editable. Only a correct
      map locks, otherwise the child is told what is wrong and then cannot
@@ -940,6 +1008,9 @@ function onClick(ev) {
     $('#gp-turn-head').scrollIntoView({ block: 'start', behavior: 'smooth' });
     return;
   }
+
+  const peg = ev.target.closest('[data-peg]');
+  if (peg) { tapPeg(peg); return; }
 
   const region = ev.target.closest('[data-region]');
   if (region) { paintRegion(region.dataset.region); return; }
