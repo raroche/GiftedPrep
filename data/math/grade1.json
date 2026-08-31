@@ -1,0 +1,1067 @@
+{
+  "grade": 1,
+  "title": "Grade 1 Math Lab",
+  "blurb": "Eight big ideas, each with a short lesson and puzzles to try. Built for a first grader who finds the normal work easy.",
+  "topics": [
+    {
+      "id": "ten-frames",
+      "name": "Ten Frames",
+      "emoji": "🎯",
+      "big": "See how many without counting.",
+      "parentNote": "Subitizing. Reading a quantity in one look instead of counting one by one is the foundation of fact fluency.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A ten frame is 2 rows of 5. It holds 10."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "tenframe",
+            "filled": 5
+          },
+          "cap": "A full top row is 5. You do not have to count it."
+        },
+        {
+          "t": "say",
+          "text": "So 7 is just a full row and 2 more."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "tenframe",
+            "filled": 7
+          },
+          "cap": "5 and 2. That is 7."
+        },
+        {
+          "t": "tip",
+          "text": "Empty squares matter too. If 7 are full, 3 are empty. 7 and 3 make 10."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "ask": "How many?",
+          "figure": {
+            "kind": "tenframe",
+            "filled": 6
+          },
+          "choices": [
+            {
+              "id": "a",
+              "label": "5"
+            },
+            {
+              "id": "b",
+              "label": "6"
+            },
+            {
+              "id": "c",
+              "label": "7"
+            },
+            {
+              "id": "d",
+              "label": "8"
+            }
+          ],
+          "answer": "b",
+          "why": "A full row is 5, and 1 more sits below it. 5 and 1 is 6."
+        },
+        {
+          "type": "number",
+          "ask": "How many?",
+          "figure": {
+            "kind": "tenframe",
+            "filled": 9
+          },
+          "answer": 9,
+          "why": "5 on top and 4 below. It is also 1 short of 10, which is the faster way to see it."
+        },
+        {
+          "type": "build",
+          "mode": "tenframe",
+          "target": 8,
+          "ask": "Fill in 8.",
+          "answer": 8,
+          "why": "Fill the top row of 5 first, then 3 more. That is quicker than counting one at a time."
+        },
+        {
+          "type": "number",
+          "ask": "How many empty squares?",
+          "figure": {
+            "kind": "tenframe",
+            "filled": 7
+          },
+          "answer": 3,
+          "why": "7 are full. The frame holds 10. 7 and 3 make 10."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A ten frame with 4 full has 6 empty.",
+          "answer": true,
+          "why": "4 and 6 make 10. Every ten frame splits into a full part and an empty part that add to 10."
+        },
+        {
+          "type": "paper",
+          "ask": "Two full frames and 4 more. How many?",
+          "answer": 24,
+          "hint": "One full frame is 10.",
+          "why": "10 and 10 is 20. Then 4 more is 24."
+        },
+        {
+          "type": "collect",
+          "mode": "pairs",
+          "total": 10,
+          "need": 5,
+          "ask": "Type a number. We show its partner to 10.",
+          "why": "Every pair here adds to 10. Knowing all of them by heart makes bigger addition much easier."
+        }
+      ]
+    },
+    {
+      "id": "number-bonds",
+      "name": "Number Bonds",
+      "emoji": "🔗",
+      "big": "Every number is made of smaller parts.",
+      "parentNote": "Part-whole structure. A single bond gives four facts, which is why fact families are taught together rather than memorised separately.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "The whole goes on top. The parts go below."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numberbond",
+            "whole": 10,
+            "parts": [
+              6,
+              4
+            ]
+          },
+          "cap": "10 is made of 6 and 4."
+        },
+        {
+          "t": "say",
+          "text": "One bond gives you four facts. All from the same picture."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "table",
+            "header": true,
+            "rows": [
+              [
+                "Add",
+                "Take away"
+              ],
+              [
+                "6 + 4 = 10",
+                "10 - 4 = 6"
+              ],
+              [
+                "4 + 6 = 10",
+                "10 - 6 = 4"
+              ]
+            ]
+          },
+          "cap": "Learn one bond, get four facts free."
+        },
+        {
+          "t": "tip",
+          "text": "If you know the whole and one part, you subtract. If you know both parts, you add."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "What is the missing part?",
+          "figure": {
+            "kind": "numberbond",
+            "whole": 9,
+            "parts": [
+              5,
+              null
+            ]
+          },
+          "answer": 4,
+          "why": "The whole is 9 and one part is 5. 9 take away 5 is 4."
+        },
+        {
+          "type": "number",
+          "ask": "What is the whole?",
+          "figure": {
+            "kind": "numberbond",
+            "whole": null,
+            "parts": [
+              7,
+              3
+            ]
+          },
+          "answer": 10,
+          "why": "Both parts are known, so you add them. 7 and 3 make 10."
+        },
+        {
+          "type": "number",
+          "ask": "What is the missing part?",
+          "figure": {
+            "kind": "numberbond",
+            "whole": 13,
+            "parts": [
+              null,
+              8
+            ]
+          },
+          "answer": 5,
+          "why": "13 take away 8 is 5. Or count up from 8 to 13, which is 5 steps."
+        },
+        {
+          "type": "truefalse",
+          "ask": "From the bond 8, 3 and 5 you can write 8 - 5 = 3.",
+          "answer": true,
+          "why": "Yes. Take one part off the whole and the other part is left. That is what a bond means."
+        },
+        {
+          "type": "choice",
+          "ask": "Which bond is broken?",
+          "choices": [
+            {
+              "id": "a",
+              "figure": {
+                "kind": "numberbond",
+                "whole": 7,
+                "parts": [
+                  4,
+                  3
+                ]
+              }
+            },
+            {
+              "id": "b",
+              "figure": {
+                "kind": "numberbond",
+                "whole": 9,
+                "parts": [
+                  6,
+                  3
+                ]
+              }
+            },
+            {
+              "id": "c",
+              "figure": {
+                "kind": "numberbond",
+                "whole": 8,
+                "parts": [
+                  5,
+                  2
+                ]
+              }
+            },
+            {
+              "id": "d",
+              "figure": {
+                "kind": "numberbond",
+                "whole": 10,
+                "parts": [
+                  2,
+                  8
+                ]
+              }
+            }
+          ],
+          "answer": "c",
+          "why": "5 and 2 make 7, not 8. The other three all add up correctly."
+        },
+        {
+          "type": "paper",
+          "ask": "Write all four facts for the bond 12, 5 and 7.",
+          "answer": 12,
+          "hint": "Two adding, two taking away. Then type the whole.",
+          "why": "5 + 7 = 12, 7 + 5 = 12, 12 - 5 = 7, 12 - 7 = 5. The whole is 12."
+        },
+        {
+          "type": "collect",
+          "mode": "pairs",
+          "total": 8,
+          "need": 4,
+          "ask": "Type a part of 8. We show the other part.",
+          "why": "8 can be split many ways. Seeing them all is what makes a number feel flexible instead of fixed."
+        }
+      ]
+    },
+    {
+      "id": "doubles-parity",
+      "name": "Doubles, Odd and Even",
+      "emoji": "👯",
+      "big": "Even means everyone gets a partner.",
+      "parentNote": "Parity, taught as pairing rather than as a rule about last digits. An even number IS a doubles fact; an odd number is a double plus one. That link is the real mathematics here.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A double is a number added to itself. 4 and 4 is 8."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "array",
+            "rows": 2,
+            "cols": 4,
+            "c": "blue"
+          },
+          "cap": "8 dots in 2 equal rows. Everyone has a partner."
+        },
+        {
+          "t": "say",
+          "text": "That is what even means. Every one has a partner."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "array",
+            "rows": 2,
+            "cols": 5,
+            "count": 9,
+            "c": "blue",
+            "markLone": true,
+            "lone": "orange"
+          },
+          "cap": "Now 9. The orange dot has nobody. 9 is odd."
+        },
+        {
+          "t": "tip",
+          "text": "So every even number is a double. And every odd number is a double plus 1."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "Double 6.",
+          "answer": 12,
+          "why": "6 and 6 is 12. Doubles are worth knowing by heart, they make other facts easy."
+        },
+        {
+          "type": "choice",
+          "ask": "Is 7 odd or even?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "Even"
+            },
+            {
+              "id": "b",
+              "label": "Odd"
+            }
+          ],
+          "answer": "b",
+          "why": "Pair them up: 3 pairs and 1 left over. One is alone, so 7 is odd."
+        },
+        {
+          "type": "number",
+          "ask": "7 = 3 + 3 + ?",
+          "answer": 1,
+          "why": "3 and 3 is 6, and 1 more makes 7. Every odd number is a double plus 1."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Every double is even.",
+          "answer": true,
+          "why": "A double is two equal groups, so everyone has a partner. That is exactly what even means."
+        },
+        {
+          "type": "truefalse",
+          "ask": "An even number plus an even number is odd.",
+          "answer": false,
+          "why": "Two even numbers make an even number. Both groups pair up, so the whole thing pairs up."
+        },
+        {
+          "type": "build",
+          "mode": "array",
+          "rows": 2,
+          "cols": 5,
+          "ask": "Build 10 as 2 equal rows.",
+          "answer": 10,
+          "why": "2 rows of 5. Because it fits into 2 equal rows, 10 is even, and it is the double of 5."
+        },
+        {
+          "type": "paper",
+          "ask": "On paper try 3 + 5, then 7 + 1, then 9 + 3. What is 9 + 3?",
+          "answer": 12,
+          "hint": "When you have all three answers, look at them together. Odd or even?",
+          "why": "9 + 3 is 12. Now look at all three answers: 8, 8 and 12. Every one is even. Two odd numbers always make an even number, because each odd number has one lonely dot and the two lonely dots pair up with each other."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ],
+          "need": 5,
+          "ask": "Type any even number up to 20.",
+          "why": "Even numbers step by 2. They are the numbers you land on when you skip count by twos."
+        }
+      ]
+    },
+    {
+      "id": "balance",
+      "name": "The Balance",
+      "emoji": "⚖️",
+      "big": "The equals sign means \"same as\".",
+      "parentNote": "The single highest-value idea on this page. Most children read = as \"write the answer\", and will call 4 + 5 = 6 + 3 wrong. That misconception is the main obstacle to algebra later.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "The equals sign is not a button that says \"answer here\"."
+        },
+        {
+          "t": "say",
+          "text": "It means both sides weigh the same."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "balance",
+            "left": [
+              {
+                "s": "circle",
+                "c": "blue"
+              },
+              {
+                "s": "circle",
+                "c": "blue"
+              },
+              {
+                "s": "circle",
+                "c": "blue"
+              },
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ],
+            "right": [
+              {
+                "s": "circle",
+                "c": "blue"
+              },
+              {
+                "s": "circle",
+                "c": "blue"
+              },
+              {
+                "s": "circle",
+                "c": "blue"
+              },
+              {
+                "s": "circle",
+                "c": "blue"
+              }
+            ]
+          },
+          "cap": "Same on both sides. Balanced."
+        },
+        {
+          "t": "say",
+          "text": "So 4 + 5 = 6 + 3 is completely fine. Both sides are 9."
+        },
+        {
+          "t": "tip",
+          "text": "Check both sides on their own. Then see if they match."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "truefalse",
+          "ask": "4 + 5 = 6 + 3",
+          "answer": true,
+          "why": "Left side is 9. Right side is 9. They match, so it is true. The equals sign is allowed to have sums on both sides."
+        },
+        {
+          "type": "truefalse",
+          "ask": "8 = 8",
+          "answer": true,
+          "why": "True. Nothing has to be worked out. Both sides are already the same."
+        },
+        {
+          "type": "truefalse",
+          "ask": "3 + 4 = 8",
+          "answer": false,
+          "why": "3 and 4 make 7, not 8. The two sides do not match, so the balance tips."
+        },
+        {
+          "type": "truefalse",
+          "ask": "10 = 6 + 4",
+          "answer": true,
+          "why": "True. The single number is allowed to be on the left. 6 and 4 make 10."
+        },
+        {
+          "type": "number",
+          "ask": "5 + 2 = ? + 3",
+          "answer": 4,
+          "why": "The left side is 7, so the right side must be 7 too. 4 and 3 make 7."
+        },
+        {
+          "type": "number",
+          "ask": "6 + 6 = 10 + ?",
+          "answer": 2,
+          "why": "6 and 6 is 12. So the right side must be 12. 10 and 2 make 12."
+        },
+        {
+          "type": "paper",
+          "ask": "9 + 4 = ? + 5. Work it out on paper.",
+          "answer": 8,
+          "hint": "Find the left side first.",
+          "why": "9 and 4 is 13. So the right side needs 13. 8 and 5 make 13."
+        },
+        {
+          "type": "collect",
+          "mode": "pairs",
+          "total": 12,
+          "need": 4,
+          "ask": "Type a number. We show what it needs to reach 12.",
+          "why": "Every one of these makes a true equation with 12 on the other side."
+        }
+      ]
+    },
+    {
+      "id": "missing-numbers",
+      "name": "Missing Numbers",
+      "emoji": "🔍",
+      "big": "The mystery number can hide anywhere.",
+      "parentNote": "MA.1.AR.2.3. Unknowns in the first, second or answer position. Children find the first two positions much harder, so those are practised most here.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Usually the missing number is at the end. 3 + 4 = ?"
+        },
+        {
+          "t": "say",
+          "text": "But it can hide at the front. ? + 4 = 7"
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numberbond",
+            "whole": 7,
+            "parts": [
+              null,
+              4
+            ]
+          },
+          "cap": "A bond helps. Whole on top, one part missing."
+        },
+        {
+          "t": "tip",
+          "text": "Know the whole and one part, take away. Know both parts, add."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "7 + ? = 12",
+          "answer": 5,
+          "why": "Count up from 7 to 12. That is 5 steps."
+        },
+        {
+          "type": "number",
+          "ask": "? + 4 = 11",
+          "answer": 7,
+          "why": "11 take away 4 is 7. The missing number is at the front, but it works the same way."
+        },
+        {
+          "type": "number",
+          "ask": "13 - ? = 8",
+          "answer": 5,
+          "why": "13 down to 8 is 5 steps, so 5 was taken away."
+        },
+        {
+          "type": "number",
+          "ask": "? - 6 = 7",
+          "answer": 13,
+          "why": "This one is backwards. Something lost 6 and had 7 left, so it started at 13."
+        },
+        {
+          "type": "choice",
+          "ask": "Which one is 9?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "? + 3 = 11"
+            },
+            {
+              "id": "b",
+              "label": "? + 5 = 14"
+            },
+            {
+              "id": "c",
+              "label": "? - 2 = 6"
+            },
+            {
+              "id": "d",
+              "label": "15 - ? = 5"
+            }
+          ],
+          "answer": "b",
+          "why": "9 and 5 make 14. Choice a is 8, choice c is 8, and choice d is 10."
+        },
+        {
+          "type": "paper",
+          "ask": "Mia had some stickers. She gave away 6 and has 9 left. How many did she start with?",
+          "answer": 15,
+          "hint": "Draw a bond. The whole is missing.",
+          "why": "She gave away 6 and kept 9, so she started with 6 and 9 together, which is 15."
+        },
+        {
+          "type": "truefalse",
+          "ask": "If ? + 8 = 8, then ? is 0.",
+          "answer": true,
+          "why": "True. Adding nothing leaves the number alone. Zero is a real answer."
+        }
+      ]
+    },
+    {
+      "id": "tens-and-ones",
+      "name": "Tens and Ones",
+      "emoji": "🏗️",
+      "big": "Big numbers are just bundles of ten.",
+      "parentNote": "MA.1.NSO.1.2 and 2.3, pushed past 100. Understanding that 10 more changes only the tens digit is what makes mental addition possible later.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "47 means 4 tens and 7 ones."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "tenframe",
+            "filled": 20,
+            "frames": 2
+          },
+          "cap": "Two full frames is 2 tens, which is 20."
+        },
+        {
+          "t": "say",
+          "text": "Add 10 and only the tens digit moves. 47 becomes 57."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numberline",
+            "min": 40,
+            "max": 80,
+            "step": 10,
+            "marks": [
+              40,
+              50
+            ]
+          },
+          "cap": "One jump of ten takes 40 to 50."
+        },
+        {
+          "t": "tip",
+          "text": "Adding 1 changes the last digit. Adding 10 changes the first one."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "3 tens and 6 ones is what number?",
+          "answer": 36,
+          "why": "3 tens is 30, plus 6 ones, which makes 36."
+        },
+        {
+          "type": "number",
+          "ask": "10 more than 47.",
+          "answer": 57,
+          "why": "Only the tens digit moves. 4 tens becomes 5 tens, and the 7 ones stay."
+        },
+        {
+          "type": "number",
+          "ask": "10 less than 62.",
+          "answer": 52,
+          "why": "6 tens drops to 5 tens. The 2 ones do not change."
+        },
+        {
+          "type": "choice",
+          "ask": "Which number has 8 tens and 0 ones?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "18"
+            },
+            {
+              "id": "b",
+              "label": "80"
+            },
+            {
+              "id": "c",
+              "label": "88"
+            },
+            {
+              "id": "d",
+              "label": "8"
+            }
+          ],
+          "answer": "b",
+          "why": "80 is 8 tens and nothing else. 18 is 1 ten and 8 ones, which is the same digits the other way round."
+        },
+        {
+          "type": "number",
+          "ask": "10 more than 95.",
+          "answer": 105,
+          "why": "This one crosses 100. 9 tens plus 1 ten is 10 tens, which is 100, plus the 5 ones makes 105."
+        },
+        {
+          "type": "truefalse",
+          "ask": "63 is bigger than 36.",
+          "answer": true,
+          "why": "True. 63 has 6 tens and 36 has only 3 tens. Compare the tens first."
+        },
+        {
+          "type": "paper",
+          "ask": "58 + 20. Work it out on paper.",
+          "answer": 78,
+          "hint": "20 is two jumps of ten.",
+          "why": "58 to 68 is one ten, 68 to 78 is another. The 8 ones never move."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ],
+          "need": 4,
+          "ask": "Type any number with exactly 4 tens.",
+          "why": "Anything from 40 to 49 has 4 tens. Only the ones digit changes."
+        }
+      ]
+    },
+    {
+      "id": "equal-groups",
+      "name": "Equal Groups",
+      "emoji": "✖️",
+      "big": "Same-size groups are a shortcut.",
+      "parentNote": "Skip counting turned into arrays. This is the honest start of multiplication, and the commutative property is visible here long before it gets a name.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "3 groups of 4 is 4 + 4 + 4."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "array",
+            "rows": 3,
+            "cols": 4
+          },
+          "cap": "3 rows of 4. Twelve dots."
+        },
+        {
+          "t": "say",
+          "text": "You can skip count instead of adding. 4, 8, 12."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "array",
+            "rows": 4,
+            "cols": 3,
+            "c": "green"
+          },
+          "cap": "Turn it. 4 rows of 3. Still twelve."
+        },
+        {
+          "t": "tip",
+          "text": "Turning an array sideways never changes how many dots there are."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many dots?",
+          "figure": {
+            "kind": "array",
+            "rows": 3,
+            "cols": 4
+          },
+          "answer": 12,
+          "why": "3 rows of 4. Skip count 4, 8, 12."
+        },
+        {
+          "type": "number",
+          "ask": "How many dots?",
+          "figure": {
+            "kind": "array",
+            "rows": 2,
+            "cols": 5,
+            "c": "green"
+          },
+          "answer": 10,
+          "why": "2 rows of 5, so 5 and 5, which is 10."
+        },
+        {
+          "type": "build",
+          "mode": "array",
+          "rows": 3,
+          "cols": 3,
+          "ask": "Build 3 rows of 3.",
+          "answer": 9,
+          "why": "3, 6, 9. Three equal rows of three make nine."
+        },
+        {
+          "type": "number",
+          "ask": "Skip count by 5 four times. Where do you land?",
+          "answer": 20,
+          "why": "5, 10, 15, 20. That is also 4 groups of 5."
+        },
+        {
+          "type": "truefalse",
+          "ask": "3 groups of 4 has the same number as 4 groups of 3.",
+          "answer": true,
+          "why": "True, and it is a big deal. It is the same array turned sideways, so it must be the same amount."
+        },
+        {
+          "type": "choice",
+          "ask": "Which one shows 6?",
+          "choices": [
+            {
+              "id": "a",
+              "figure": {
+                "kind": "array",
+                "rows": 2,
+                "cols": 4
+              }
+            },
+            {
+              "id": "b",
+              "figure": {
+                "kind": "array",
+                "rows": 2,
+                "cols": 3
+              }
+            },
+            {
+              "id": "c",
+              "figure": {
+                "kind": "array",
+                "rows": 3,
+                "cols": 3
+              }
+            },
+            {
+              "id": "d",
+              "figure": {
+                "kind": "array",
+                "rows": 1,
+                "cols": 5
+              }
+            }
+          ],
+          "answer": "b",
+          "why": "2 rows of 3 is 6. Choice a is 8, choice c is 9 and choice d is 5."
+        },
+        {
+          "type": "paper",
+          "ask": "5 bags. Each bag holds 3 apples. How many apples?",
+          "answer": 15,
+          "hint": "Draw 5 rows of 3, or skip count by 3.",
+          "why": "3, 6, 9, 12, 15. Five groups of three is fifteen."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            12
+          ],
+          "need": 4,
+          "ask": "12 dots split into equal rows. Type a number of rows that works.",
+          "why": "1, 2, 3, 4, 6 and 12 all divide 12 evenly. 5 does not, which is why 5 rows always leaves a gap."
+        }
+      ]
+    },
+    {
+      "id": "patterns-shapes",
+      "name": "Patterns and Shapes",
+      "emoji": "🔷",
+      "big": "Find the rule, then keep it going.",
+      "parentNote": "Growing patterns and shape composition. The triangular-number pattern in exercise 3 is well beyond grade 1 and is deliberately the hardest thing on the page.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Some patterns repeat. Some patterns grow."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numberline",
+            "min": 0,
+            "max": 10,
+            "step": 2,
+            "marks": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10
+            ]
+          },
+          "cap": "Growing by 2 each time."
+        },
+        {
+          "t": "say",
+          "text": "To find the rule, ask what changed from one step to the next."
+        },
+        {
+          "t": "say",
+          "text": "Shapes have patterns too. Two halves make a whole. Four fourths make a whole."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 4,
+            "shaded": 1,
+            "c": "green"
+          },
+          "cap": "One fourth is shaded. Four equal parts make the whole."
+        },
+        {
+          "t": "tip",
+          "text": "If the jump is not the same each time, look at the jumps themselves. They might have their own pattern."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2, 4, 6, 8, ?",
+          "answer": 10,
+          "why": "The jump is 2 every time, so 8 and 2 more is 10."
+        },
+        {
+          "type": "number",
+          "ask": "3, 6, 9, ?",
+          "answer": 12,
+          "why": "Counting up in threes. 9 and 3 more is 12."
+        },
+        {
+          "type": "number",
+          "ask": "20, 18, 16, ?",
+          "answer": 14,
+          "why": "This one shrinks by 2 each step. 16 take away 2 is 14."
+        },
+        {
+          "type": "number",
+          "ask": "1, 3, 6, 10, ?",
+          "answer": 15,
+          "why": "The jumps grow: 2, then 3, then 4, then 5. 10 and 5 is 15. These are called triangle numbers."
+        },
+        {
+          "type": "choice",
+          "ask": "Which shape is cut into fourths?",
+          "choices": [
+            {
+              "id": "a",
+              "figure": {
+                "kind": "fraction",
+                "shape": "circle",
+                "parts": 2,
+                "shaded": 1,
+                "c": "blue"
+              }
+            },
+            {
+              "id": "b",
+              "figure": {
+                "kind": "fraction",
+                "shape": "circle",
+                "parts": 4,
+                "shaded": 1,
+                "c": "green"
+              }
+            },
+            {
+              "id": "c",
+              "figure": {
+                "kind": "fraction",
+                "shape": "rect",
+                "parts": 3,
+                "shaded": 1,
+                "c": "red"
+              }
+            },
+            {
+              "id": "d",
+              "figure": {
+                "kind": "fraction",
+                "shape": "circle",
+                "parts": 1,
+                "shaded": 0,
+                "c": "yellow"
+              }
+            }
+          ],
+          "answer": "b",
+          "why": "Fourths means four equal parts. Choice a is halves, choice c is thirds, and choice d is not cut at all."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Two halves make one whole.",
+          "answer": true,
+          "why": "True. That is what half means: one of two equal parts."
+        },
+        {
+          "type": "paper",
+          "ask": "1, 2, 4, 8, ? What is the rule and the next number?",
+          "answer": 16,
+          "hint": "It is not adding the same number each time.",
+          "why": "Each number doubles. 8 doubled is 16. This is a doubling pattern, not a counting one."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            45,
+            50
+          ],
+          "need": 4,
+          "ask": "Type any number you land on counting by 5.",
+          "why": "Counting by fives lands on numbers ending in 5 or 0, and never anywhere else."
+        }
+      ]
+    }
+  ]
+}

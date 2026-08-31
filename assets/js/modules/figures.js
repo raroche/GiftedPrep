@@ -571,6 +571,136 @@ const RENDERERS = {
     return { w, h, body: parts.join('') };
   },
 
+  /* Ten frame: two rows of five. A child reads 7 as "a full five and two
+     more" instead of counting to seven, which is the whole point of the
+     frame, so the two rows are drawn as clearly separate blocks. */
+  tenframe(spec) {
+    const filled = Math.max(0, Math.min(20, spec.filled || 0));
+    const frames = filled > 10 || spec.frames === 2 ? 2 : 1;
+    const cell = 46;
+    const pad = 8;
+    const fw = cell * 5 + pad * 2;
+    const w = frames * fw + (frames - 1) * 22;
+    const h = cell * 2 + pad * 2;
+    const dotColour = colour(spec.c || 'orange');
+    const parts = [];
+    for (let f = 0; f < frames; f += 1) {
+      const ox = f * (fw + 22);
+      parts.push(`<rect x="${ox + pad - 3}" y="${pad - 3}" width="${cell * 5 + 6}" height="${cell * 2 + 6}" rx="7" fill="${CANVAS}" stroke="${STROKE}" stroke-width="3.5" />`);
+      for (let i = 0; i < 10; i += 1) {
+        const col = i % 5;
+        const row = Math.floor(i / 5);
+        const x = ox + pad + col * cell;
+        const y = pad + row * cell;
+        parts.push(`<rect x="${x}" y="${y}" width="${cell}" height="${cell}" fill="none" stroke="${FRAME}" stroke-width="2" />`);
+        if (f * 10 + i < filled) {
+          parts.push(`<circle cx="${x + cell / 2}" cy="${y + cell / 2}" r="${cell * 0.31}" fill="${dotColour}" stroke="${STROKE}" stroke-width="2.5" />`);
+        }
+      }
+    }
+    return { w, h, body: parts.join('') };
+  },
+
+  /* Number bond: a whole on top joined to its parts underneath. A part shown
+     as null is the one the child has to work out. */
+  numberbond(spec) {
+    const parts_ = spec.parts || [null, null];
+    const rTop = 34;
+    const rBot = 30;
+    const gapX = 96;
+    const w = gapX * (parts_.length - 1) + rBot * 2 + 40;
+    const h = 178;
+    const cx = w / 2;
+    const topY = rTop + 8;
+    const botY = h - rBot - 10;
+    const out = [];
+    const x0 = cx - (gapX * (parts_.length - 1)) / 2;
+    parts_.forEach((_, i) => {
+      const px = x0 + i * gapX;
+      out.push(`<path d="M${cx} ${topY + rTop} L${px} ${botY - rBot}" stroke="${STROKE}" stroke-width="4" stroke-linecap="round" />`);
+    });
+    const bubble = (x, y, r, val, tone) =>
+      `<circle cx="${x}" cy="${y}" r="${r}" fill="${tone}" stroke="${STROKE}" stroke-width="3.5" />`
+      + `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" font-size="${r * 0.95}" `
+      + `font-weight="700" fill="${STROKE}" font-family="system-ui, sans-serif">${val == null ? '?' : esc(String(val))}</text>`;
+    out.push(bubble(cx, topY, rTop, spec.whole, colour(spec.c || 'yellow')));
+    parts_.forEach((v, i) => {
+      out.push(bubble(x0 + i * gapX, botY, rBot, v, colour(spec.pc || 'teal')));
+    });
+    return { w, h, body: out.join('') };
+  },
+
+  /* Equal groups drawn as a rectangle of dots. Rows times columns is the
+     seed of multiplication, so the grid is spaced to read as rows. */
+  array(spec) {
+    const rows = Math.max(1, Math.min(10, spec.rows || 1));
+    const cols = Math.max(1, Math.min(10, spec.cols || 1));
+    /* `count` fills only part of the grid. That is how an odd number is shown:
+       two rows of five holding nine dots leaves one without a partner, which
+       is the whole argument for what odd means. */
+    const total = rows * cols;
+    const count = spec.count == null ? total : Math.max(0, Math.min(total, spec.count));
+    const cell = 40;
+    const pad = 12;
+    const w = cols * cell + pad * 2;
+    const h = rows * cell + pad * 2;
+    const fill = colour(spec.c || 'blue');
+    const lone = colour(spec.lone || 'orange');
+    const out = [`<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`];
+    for (let i = 0; i < count; i += 1) {
+      const r = Math.floor(i / cols);
+      const c = i % cols;
+      /* When a column is only half filled the dot in it has no partner. */
+      const partnered = rows === 2 ? (count > c + cols) || (i >= cols) : true;
+      const solo = spec.markLone && rows === 2 && !partnered;
+      out.push(`<circle cx="${pad + c * cell + cell / 2}" cy="${pad + r * cell + cell / 2}" r="${cell * 0.3}" fill="${solo ? lone : fill}" stroke="${STROKE}" stroke-width="${solo ? 3.5 : 2.5}" />`);
+    }
+    return { w, h, body: out.join('') };
+  },
+
+  /* A circle or rectangle cut into equal parts, some shaded. Grade 1 only
+     needs halves and fourths, but thirds are drawn correctly too so the page
+     can show why three parts is NOT a fourth. */
+  fraction(spec) {
+    const parts = Math.max(1, Math.min(8, spec.parts || 2));
+    const shaded = Math.max(0, Math.min(parts, spec.shaded == null ? 1 : spec.shaded));
+    const size = 120;
+    const w = size + 12;
+    const h = size + 12;
+    const cx = w / 2;
+    const cy = h / 2;
+    const fill = colour(spec.c || 'blue');
+    const out = [];
+    if ((spec.shape || 'circle') === 'rect') {
+      const bw = size;
+      const bh = size * 0.7;
+      const x0 = cx - bw / 2;
+      const y0 = cy - bh / 2;
+      const vertical = spec.split !== 'rows';
+      for (let i = 0; i < parts; i += 1) {
+        const px = vertical ? x0 + (i * bw) / parts : x0;
+        const py = vertical ? y0 : y0 + (i * bh) / parts;
+        const pw = vertical ? bw / parts : bw;
+        const ph = vertical ? bh : bh / parts;
+        out.push(`<rect x="${px.toFixed(1)}" y="${py.toFixed(1)}" width="${pw.toFixed(1)}" height="${ph.toFixed(1)}" fill="${i < shaded ? fill : 'none'}" stroke="${STROKE}" stroke-width="3" />`);
+      }
+    } else {
+      const r = size / 2;
+      for (let i = 0; i < parts; i += 1) {
+        const a0 = (i / parts) * Math.PI * 2 - Math.PI / 2;
+        const a1 = ((i + 1) / parts) * Math.PI * 2 - Math.PI / 2;
+        const big = (a1 - a0) > Math.PI ? 1 : 0;
+        const p0 = [cx + r * Math.cos(a0), cy + r * Math.sin(a0)];
+        const p1 = [cx + r * Math.cos(a1), cy + r * Math.sin(a1)];
+        const d = parts === 1
+          ? `M${cx - r} ${cy} a${r} ${r} 0 1 0 ${r * 2} 0 a${r} ${r} 0 1 0 ${-r * 2} 0`
+          : `M${cx} ${cy} L${p0[0].toFixed(2)} ${p0[1].toFixed(2)} A${r} ${r} 0 ${big} 1 ${p1[0].toFixed(2)} ${p1[1].toFixed(2)} Z`;
+        out.push(`<path d="${d}" fill="${i < shaded ? fill : 'none'}" stroke="${STROKE}" stroke-width="3" stroke-linejoin="round" />`);
+      }
+    }
+    return { w, h, body: out.join('') };
+  },
+
   numberline(spec) {
     const min = spec.min == null ? 0 : spec.min;
     const max = spec.max == null ? 10 : spec.max;
@@ -581,7 +711,13 @@ const RENDERERS = {
     const w = padX * 2 + n * gapPx;
     const h = 96;
     const y = 46;
-    const parts = [`<path d="M${padX - 16} ${y} H${w - padX + 16}" stroke="${STROKE}" stroke-width="4" stroke-linecap="round" />`];
+    /* Every other figure kind sits on a light canvas, which is what lets the
+       dark ink read in both themes. The number line had none, so in dark mode
+       it was drawn dark on dark and all but disappeared. */
+    const parts = [
+      `<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`,
+      `<path d="M${padX - 16} ${y} H${w - padX + 16}" stroke="${STROKE}" stroke-width="4" stroke-linecap="round" />`
+    ];
     const missingAt = spec.missingAt == null ? -1 : spec.missingAt;
     for (let i = 0; i <= n; i += 1) {
       const x = padX + i * gapPx;
@@ -670,6 +806,10 @@ export function describeFigure(spec) {
     case 'barchart': return `A bar graph titled ${spec.title || 'untitled'}.`;
     case 'pictograph': return 'A picture graph.';
     case 'balance':  return 'A balance scale with shapes on both sides.';
+    case 'fraction': return `A shape cut into ${spec.parts || 2} equal parts with ${spec.shaded == null ? 1 : spec.shaded} shaded.`;
+    case 'tenframe': return `A ten frame with ${spec.filled || 0} counters.`;
+    case 'numberbond': return 'A number bond joining a whole to its parts.';
+    case 'array': return `${spec.rows || 1} rows of ${spec.cols || 1} dots.`;
     case 'numberline': return 'A number line with one number missing.';
     case 'table':    return 'A grid of numbers with one box missing.';
     default:         return 'A picture.';

@@ -1,0 +1,260 @@
+/**
+ * Math Lab — grade-by-grade advanced maths pages.
+ *
+ * A topic is a short lesson followed by exercises taken one at a time. The
+ * lesson is deliberately tiny: a first grader will not read a paragraph, so
+ * the pictures do the explaining and the words only name what is shown.
+ *
+ * Six exercise types, because a page that asks the same thing eight times in
+ * a row stops being interesting on the third:
+ *
+ *   choice     tap one of a few pictures or numbers
+ *   number     type a number
+ *   truefalse  decide whether an equation holds
+ *   build      fill a ten frame or an array by tapping
+ *   paper      leave the screen, work it out with a pencil, come back
+ *   collect    open ended, find as many answers as you can
+ *
+ * This module owns the markup and the checking. Routing and persistence stay
+ * in app.js, the same split the quiz screens use.
+ */
+
+import { renderFigure } from './figures.js';
+
+const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => (
+  { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]
+));
+
+/* ------------------------------------------------------------------ */
+/* Loading                                                             */
+/* ------------------------------------------------------------------ */
+
+const cache = new Map();
+
+export async function loadGrade(grade) {
+  if (cache.has(grade)) return cache.get(grade);
+  const res = await fetch(`data/math/grade${grade}.json`, { cache: 'no-cache' });
+  if (!res.ok) throw new Error(`No math data for grade ${grade}`);
+  const data = await res.json();
+  cache.set(grade, data);
+  return data;
+}
+
+/** Grades that have a page written. The rest are shown as not ready yet. */
+export const READY_GRADES = [1];
+
+/* ------------------------------------------------------------------ */
+/* Grade index                                                         */
+/* ------------------------------------------------------------------ */
+
+export function renderGradeIndex() {
+  const cards = [1, 2, 3, 4].map((g) => {
+    const ready = READY_GRADES.includes(g);
+    const inner = `
+      <span class="gp-card__icon" aria-hidden="true">${g}</span>
+      <span class="gp-card__title">Grade ${g}</span>
+      <span class="gp-card__sub">${ready
+        ? 'Eight big ideas, with lessons and puzzles.'
+        : 'Not written yet.'}</span>`;
+    return ready
+      ? `<a class="gp-card gp-card--action" href="#/math/${g}">${inner}</a>`
+      : `<div class="gp-card gp-card--action is-disabled" aria-disabled="true">${inner}</div>`;
+  }).join('');
+  return `<div class="gp-grid gp-grid--start">${cards}</div>`;
+}
+
+/* ------------------------------------------------------------------ */
+/* Topic index for one grade                                           */
+/* ------------------------------------------------------------------ */
+
+export function renderTopicIndex(data, done = {}) {
+  const cards = data.topics.map((t, i) => {
+    const n = (done[t.id] || 0);
+    const total = t.exercises.length;
+    const bar = n
+      ? `<span class="gp-topic__bar"><span style="width:${Math.round((n / total) * 100)}%"></span></span>`
+      : '';
+    return `
+      <a class="gp-card gp-card--topic" href="#/math/${data.grade}/${t.id}">
+        <span class="gp-topic__num" aria-hidden="true">${i + 1}</span>
+        <span class="gp-topic__emoji" aria-hidden="true">${t.emoji}</span>
+        <span class="gp-card__title">${esc(t.name)}</span>
+        <span class="gp-card__sub">${esc(t.big)}</span>
+        ${bar}
+        <span class="gp-topic__count">${n ? `${n} of ${total} done` : `${total} puzzles`}</span>
+      </a>`;
+  }).join('');
+  return `<div class="gp-grid gp-grid--topics">${cards}</div>`;
+}
+
+/* ------------------------------------------------------------------ */
+/* The lesson                                                          */
+/* ------------------------------------------------------------------ */
+
+export function renderTeach(topic) {
+  const blocks = (topic.teach || []).map((b) => {
+    if (b.t === 'say') return `<p class="gp-teach__say">${esc(b.text)}</p>`;
+    if (b.t === 'tip') {
+      return `<div class="gp-teach__tip"><span aria-hidden="true">💡</span><p>${esc(b.text)}</p></div>`;
+    }
+    if (b.t === 'show') {
+      return `<figure class="gp-teach__show">
+        <div class="gp-teach__fig">${renderFigure(b.figure)}</div>
+        ${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}
+      </figure>`;
+    }
+    return '';
+  }).join('');
+  /* Collapsible. A child reads the lesson once, then wants the puzzles, and
+     scrolling past the whole thing on every question gets old fast. */
+  return `<details class="gp-teachwrap" open>
+    <summary class="gp-teach__toggle"><span aria-hidden="true">📖</span> The lesson</summary>
+    <section class="gp-teach">${blocks}</section>
+  </details>`;
+}
+
+/* ------------------------------------------------------------------ */
+/* Exercises                                                           */
+/* ------------------------------------------------------------------ */
+
+const TYPE_BADGE = {
+  choice: { label: 'Tap it', icon: '👆' },
+  number: { label: 'Type it', icon: '⌨️' },
+  truefalse: { label: 'True or false', icon: '🤔' },
+  build: { label: 'Build it', icon: '🧱' },
+  paper: { label: 'Pencil job', icon: '✏️' },
+  collect: { label: 'Find them all', icon: '🔎' }
+};
+
+function badge(type) {
+  const b = TYPE_BADGE[type] || { label: 'Puzzle', icon: '❓' };
+  return `<span class="gp-ex__badge"><span aria-hidden="true">${b.icon}</span> ${b.label}</span>`;
+}
+
+/** Build the body of one exercise. Returns HTML only; wiring happens later. */
+export function renderExercise(ex, index, total) {
+  const head = `
+    <div class="gp-ex__head">
+      ${badge(ex.type)}
+      <span class="gp-ex__count">${index + 1} of ${total}</span>
+    </div>
+    <p class="gp-ex__ask">${esc(ex.ask)}</p>
+    ${ex.figure ? `<div class="gp-ex__fig">${renderFigure(ex.figure)}</div>` : ''}`;
+
+  let body = '';
+
+  if (ex.type === 'choice') {
+    body = `<div class="gp-ex__choices" role="group">${
+      (ex.choices || []).map((c) => `
+        <button type="button" class="gp-mchoice" data-pick="${c.id}">
+          ${c.figure ? renderFigure(c.figure) : `<span class="gp-mchoice__label">${esc(c.label)}</span>`}
+        </button>`).join('')
+    }</div>`;
+  } else if (ex.type === 'truefalse') {
+    body = `<div class="gp-ex__choices gp-ex__choices--tf" role="group">
+      <button type="button" class="gp-mchoice gp-mchoice--tf" data-pick="true"><span aria-hidden="true">✅</span> True</button>
+      <button type="button" class="gp-mchoice gp-mchoice--tf" data-pick="false"><span aria-hidden="true">❌</span> False</button>
+    </div>`;
+  } else if (ex.type === 'number') {
+    body = numberBox('What is it?');
+  } else if (ex.type === 'paper') {
+    body = `
+      <div class="gp-paper">
+        <p class="gp-paper__cue"><span aria-hidden="true">✏️</span> Grab a pencil and paper for this one.</p>
+        ${ex.hint ? `<p class="gp-paper__hint">Hint: ${esc(ex.hint)}</p>` : ''}
+      </div>
+      ${numberBox('Your answer')}`;
+  } else if (ex.type === 'build') {
+    body = `
+      <div class="gp-build" data-mode="${ex.mode}" data-rows="${ex.rows || 2}" data-cols="${ex.cols || 5}">
+        ${buildGrid(ex)}
+      </div>
+      <p class="gp-build__now">Tapped: <strong data-build-count>0</strong></p>
+      <button type="button" class="gp-btn gp-btn--primary" data-check>Check it</button>`;
+  } else if (ex.type === 'collect') {
+    body = `
+      ${numberBox('Add one', 'Add')}
+      <ul class="gp-collect" data-collect></ul>
+      <p class="gp-collect__score">Found <strong data-collect-count>0</strong> of ${ex.need}</p>`;
+  }
+
+  return `${head}<div class="gp-ex__body">${body}</div>
+    <div class="gp-ex__feedback" data-feedback hidden></div>`;
+}
+
+function numberBox(label, action = 'Check') {
+  return `
+    <div class="gp-numrow">
+      <label class="gp-numrow__label" for="gp-num">${esc(label)}</label>
+      <input class="gp-numrow__input" id="gp-num" type="number" inputmode="numeric"
+             autocomplete="off" data-answer-input>
+      <button type="button" class="gp-btn gp-btn--primary" data-check>${esc(action)}</button>
+    </div>`;
+}
+
+function buildGrid(ex) {
+  if (ex.mode === 'tenframe') {
+    const cells = Array.from({ length: 10 }, (_, i) =>
+      `<button type="button" class="gp-bcell" data-cell="${i}" aria-label="Square ${i + 1}"></button>`).join('');
+    return `<div class="gp-bframe">${cells}</div>`;
+  }
+  const rows = ex.rows || 2;
+  const cols = ex.cols || 5;
+  const cells = Array.from({ length: rows * cols }, (_, i) =>
+    `<button type="button" class="gp-bcell" data-cell="${i}" aria-label="Dot ${i + 1}"></button>`).join('');
+  return `<div class="gp-barray" style="grid-template-columns:repeat(${cols}, 1fr)">${cells}</div>`;
+}
+
+/* ------------------------------------------------------------------ */
+/* Checking                                                            */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Decide whether a given response is right.
+ * `given` is a string for choice and truefalse, a number otherwise.
+ */
+export function check(ex, given) {
+  if (ex.type === 'choice') return String(given) === String(ex.answer);
+  if (ex.type === 'truefalse') return String(given) === String(ex.answer);
+  if (ex.type === 'build') return Number(given) === Number(ex.answer);
+  return Number(given) === Number(ex.answer);
+}
+
+/** For collect: is this a fresh, valid find? Returns a short label or null. */
+export function collectHit(ex, value, found) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return null;
+  if (ex.mode === 'pairs') {
+    if (n < 0 || n > ex.total) return null;
+    const pair = [Math.min(n, ex.total - n), Math.max(n, ex.total - n)];
+    const key = pair.join('+');
+    if (found.has(key)) return { key, label: `${pair[0]} + ${pair[1]} = ${ex.total}`, repeat: true };
+    return { key, label: `${pair[0]} + ${pair[1]} = ${ex.total}` };
+  }
+  if (!(ex.valid || []).includes(n)) return null;
+  const key = String(n);
+  if (found.has(key)) return { key, label: key, repeat: true };
+  return { key, label: key };
+}
+
+/* ------------------------------------------------------------------ */
+/* Feedback wording                                                    */
+/* ------------------------------------------------------------------ */
+
+const CHEERS = ['Nice one.', 'Got it.', 'Yes!', 'Exactly.', 'Sharp.', 'That is it.'];
+
+export function feedbackHtml(ok, ex, seed = 0) {
+  const title = ok
+    ? CHEERS[seed % CHEERS.length]
+    : 'Not quite. Here is why.';
+  return `
+    <div class="gp-fb ${ok ? 'is-right' : 'is-wrong'}">
+      <p class="gp-fb__title"><span aria-hidden="true">${ok ? '🎉' : '💡'}</span> ${title}</p>
+      <p class="gp-fb__why">${esc(ex.why || '')}</p>
+    </div>`;
+}
+
+export default {
+  loadGrade, renderGradeIndex, renderTopicIndex, renderTeach,
+  renderExercise, check, collectHit, feedbackHtml, READY_GRADES
+};

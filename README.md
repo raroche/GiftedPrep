@@ -64,6 +64,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Light and dark** | Follows the system theme, with a manual override |
 | **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
+| **Math Lab** | A separate section for advanced maths, grade by grade. Grade 1 has 8 topics, each a short illustrated lesson then puzzles |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
 Keyboard: <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the next
@@ -110,6 +111,40 @@ listening types stop after grade 2 and the quantitative types do not start
 until grade 3 — the same near-total break the real test has between Level C
 and Level D.
 </details>
+
+## Math Lab
+
+Separate from the test practice. The screening tests measure reasoning, and
+this measures nothing at all: it is a place for a child who finds grade-level
+maths easy to go deeper.
+
+Grade 1 is written. Grades 2 to 4 are not yet.
+
+Eight topics, each a short illustrated lesson followed by puzzles taken one at
+a time:
+
+| # | Topic | The idea |
+|---|---|---|
+| 1 | Ten Frames | Read a quantity in one look instead of counting |
+| 2 | Number Bonds | One part-whole picture gives four facts |
+| 3 | Doubles, Odd and Even | An even number IS a double; an odd one is a double plus 1 |
+| 4 | The Balance | `=` means "same as", so `4 + 5 = 6 + 3` is fine |
+| 5 | Missing Numbers | The unknown can hide in any position |
+| 6 | Tens and Ones | Adding 10 moves only the tens digit |
+| 7 | Equal Groups | Skip counting and arrays, the honest start of multiplication |
+| 8 | Patterns and Shapes | Find the rule, including one that grows |
+
+Six exercise types, so it never reads as a worksheet: tap a picture, type a
+number, decide true or false, build a ten frame or an array by tapping, work
+one out **on paper** and come back with the answer, or hunt for as many
+answers as you can find.
+
+Topic four is the one that matters most. Most children read `=` as "write the
+answer here" and will call `4 + 5 = 6 + 3` wrong. That misconception is well
+documented and is the main obstacle to algebra later. Fixing it at six is free.
+
+Choices behind the topic list are in [`docs/research/math-grade1.md`](docs/research/math-grade1.md),
+including the Florida benchmark each topic sits on and where it reaches past it.
 
 ## The honest bit about test prep
 
@@ -177,7 +212,7 @@ A few corrections to claims that circulate widely and are wrong:
 
 ```
 GiftedPrep/
-├── index.html                  the whole app shell, five screens
+├── index.html                  the whole app shell, one section per screen
 ├── netlify.toml                deploy config; no build command
 ├── manifest.webmanifest
 ├── assets/
@@ -193,13 +228,16 @@ GiftedPrep/
 │           ├── storage.js      localStorage with a memory fallback
 │           ├── charts.js       results ring and bars
 │           ├── icons.js        inline SVG icon set
-│           └── parents.js      the Parent Guide
+│           ├── parents.js      the Parent Guide
+│           └── mathlab.js      Math Lab lessons and exercise engine
 ├── data/
 │   ├── manifest.json           tests, grades, category index
 │   ├── cogat/  nnat/  olsat/   one JSON file per category
+│   └── math/                   Math Lab topics, one file per grade
 ├── docs/research/              the sources behind every question
 └── tools/
     ├── validate.mjs            checks the whole bank
+    ├── mathcheck.mjs           checks the Math Lab data
     └── _authoring.py           helpers used to write the JSON by hand
 ```
 

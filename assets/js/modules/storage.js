@@ -44,7 +44,9 @@ const DEFAULTS = {
     /* How many questions a practice set holds. One of QUESTION_COUNTS. */
     questionCount: 10,
     /* Language of the Parent Guide only. The child-facing screens are English. */
-    guideLang: 'en'
+    guideLang: 'en',
+    /* Math Lab progress: { "1:ten-frames": 4, ... } furthest exercise reached. */
+    mathDone: {}
   },
   /* stats[categoryId] = { seen, correct, streakBest, lastSeenIso } */
   stats: {},

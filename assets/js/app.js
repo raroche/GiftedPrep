@@ -15,6 +15,7 @@ import { renderFigure, describeFigure } from './modules/figures.js';
 import { icon } from './modules/icons.js';
 import { ring, bars, escapeHtml } from './modules/charts.js';
 import { renderParentGuide } from './modules/parents.js';
+import * as mathlab from './modules/mathlab.js';
 
 /* ------------------------------------------------------------------ */
 /* State                                                               */
@@ -27,7 +28,9 @@ const state = {
   /** what the current session was built from, so "another set" can repeat it */
   lastRun: null,
   answered: false,
-  audioUnlocked: false
+  audioUnlocked: false,
+  /** Math Lab: the topic being worked through and where we are in it. */
+  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set() }
 };
 
 const $ = (sel) => document.querySelector(sel);
@@ -100,7 +103,7 @@ function speakQuestion() {
 /* Screens                                                             */
 /* ------------------------------------------------------------------ */
 
-const SCREENS = ['home', 'tests', 'categories', 'quiz', 'results', 'parents', 'error'];
+const SCREENS = ['home', 'tests', 'categories', 'quiz', 'results', 'parents', 'math', 'mathtopic', 'error'];
 
 function showScreen(name) {
   SCREENS.forEach((s) => {
@@ -593,6 +596,204 @@ function toggleGuideLanguage() {
 }
 
 /* ------------------------------------------------------------------ */
+/* Math Lab                                                            */
+/* ------------------------------------------------------------------ */
+
+const MATH_DONE_KEY = 'mathDone';
+
+function mathDone() {
+  const raw = state.settings[MATH_DONE_KEY];
+  return raw && typeof raw === 'object' ? raw : {};
+}
+
+function markTopicProgress(gradeId, topicId, count) {
+  const all = { ...mathDone() };
+  const key = `${gradeId}:${topicId}`;
+  if ((all[key] || 0) >= count) return;
+  all[key] = count;
+  state.settings[MATH_DONE_KEY] = all;
+  storage.setSetting(MATH_DONE_KEY, all);
+}
+
+/** Route target: #/math, #/math/1, #/math/1/<topic> */
+async function renderMath(gradeArg, topicArg) {
+  if (!gradeArg) {
+    $('#math-title').textContent = 'Math Lab';
+    $('#screen-math .gp-page-lede').textContent =
+      'Advanced maths, one grade at a time. Short lessons, then puzzles.';
+    $('#gp-math-body').innerHTML = mathlab.renderGradeIndex();
+    showScreen('math');
+    return;
+  }
+  const grade = Number(gradeArg);
+  if (!mathlab.READY_GRADES.includes(grade)) {
+    showError('That grade is not written yet.');
+    return;
+  }
+  let payload;
+  try {
+    payload = await mathlab.loadGrade(grade);
+  } catch (err) {
+    console.error(err);
+    showError('The maths page could not be loaded.');
+    return;
+  }
+  state.math.data = payload;
+
+  if (!topicArg) {
+    const done = {};
+    const all = mathDone();
+    payload.topics.forEach((t) => { done[t.id] = all[`${grade}:${t.id}`] || 0; });
+    $('#gp-math-body').innerHTML = mathlab.renderTopicIndex(payload, done);
+    $('#math-title').textContent = payload.title;
+    $('#screen-math .gp-page-lede').textContent = payload.blurb;
+    showScreen('math');
+    return;
+  }
+
+  const topic = payload.topics.find((t) => t.id === topicArg);
+  if (!topic) { showError('That topic does not exist.'); return; }
+  state.math.topic = topic;
+  state.math.index = 0;
+  openTopic(grade, topic);
+}
+
+function openTopic(grade, topic) {
+  $('#gp-math-crumb').innerHTML =
+    `<a href="#/math/${grade}">Grade ${grade} Math Lab</a>`;
+  $('#mathtopic-title').textContent = topic.name;
+  $('#gp-topic-big').textContent = topic.big;
+  $('#gp-topic-teach').innerHTML = mathlab.renderTeach(topic);
+  showScreen('mathtopic');
+  showExercise();
+}
+
+function exDots(topic, index) {
+  return topic.exercises.map((_, i) => {
+    const cls = i === index ? 'is-now' : (i < index ? 'is-done' : '');
+    return `<span class="gp-dot ${cls}" aria-hidden="true"></span>`;
+  }).join('');
+}
+
+function showExercise() {
+  const { topic, index } = state.math;
+  if (!topic) return;
+  state.math.collected = new Set();
+  state.math.built = new Set();
+  const total = topic.exercises.length;
+
+  if (index >= total) {
+    $('#gp-exercise').innerHTML = `
+      <div class="gp-done">
+        <p class="gp-done__mark" aria-hidden="true">🏅</p>
+        <h3>Topic finished.</h3>
+        <p>You worked through all ${total} puzzles in ${escapeHtml(topic.name)}.</p>
+        <a class="gp-btn gp-btn--primary" href="#/math/${state.math.data.grade}">Pick another topic</a>
+      </div>`;
+    $('#gp-ex-dots').innerHTML = exDots(topic, index);
+    $('#gp-ex-next').hidden = true;
+    $('#gp-ex-prev').disabled = index === 0;
+    return;
+  }
+
+  const ex = topic.exercises[index];
+  $('#gp-exercise').innerHTML = mathlab.renderExercise(ex, index, total);
+  $('#gp-ex-dots').innerHTML = exDots(topic, index);
+  $('#gp-ex-next').hidden = false;
+  $('#gp-ex-next').disabled = false;
+  $('#gp-ex-prev').disabled = index === 0;
+  const input = $('#gp-exercise [data-answer-input]');
+  if (input) input.focus({ preventScroll: true });
+}
+
+function settleExercise(ok) {
+  const { topic, index, data: payload } = state.math;
+  const ex = topic.exercises[index];
+  const box = $('#gp-exercise [data-feedback]');
+  box.hidden = false;
+  box.innerHTML = mathlab.feedbackHtml(ok, ex, index);
+  if (ok) markTopicProgress(payload.grade, topic.id, index + 1);
+  $$('#gp-exercise .gp-mchoice').forEach((b) => { b.disabled = true; });
+  const check = $('#gp-exercise [data-check]');
+  if (check) check.disabled = true;
+  const input = $('#gp-exercise [data-answer-input]');
+  if (input) input.disabled = true;
+  box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+function answerMath(pick) {
+  const { topic, index } = state.math;
+  const ex = topic.exercises[index];
+  if ($('#gp-exercise [data-feedback]') && !$('#gp-exercise [data-feedback]').hidden) return;
+  const btn = $(`#gp-exercise [data-pick="${CSS.escape(pick)}"]`);
+  const ok = mathlab.check(ex, pick);
+  if (btn) btn.classList.add(ok ? 'is-right' : 'is-wrong');
+  if (!ok) {
+    const right = $(`#gp-exercise [data-pick="${CSS.escape(String(ex.answer))}"]`);
+    if (right) right.classList.add('is-right');
+  }
+  settleExercise(ok);
+}
+
+function checkMath() {
+  const { topic, index } = state.math;
+  const ex = topic.exercises[index];
+
+  if (ex.type === 'build') {
+    settleExercise(mathlab.check(ex, state.math.built.size));
+    return;
+  }
+
+  const input = $('#gp-exercise [data-answer-input]');
+  if (!input) return;
+  const raw = input.value.trim();
+  if (raw === '') { input.focus(); return; }
+
+  if (ex.type === 'collect') {
+    const hit = mathlab.collectHit(ex, raw, state.math.collected);
+    const list = $('#gp-exercise [data-collect]');
+    input.value = '';
+    input.focus();
+    if (!hit) {
+      list.insertAdjacentHTML('beforeend',
+        `<li class="gp-collect__item is-wrong">${escapeHtml(raw)} does not work</li>`);
+      return;
+    }
+    if (hit.repeat) {
+      list.insertAdjacentHTML('beforeend',
+        `<li class="gp-collect__item is-repeat">${escapeHtml(hit.label)} — already had that one</li>`);
+      return;
+    }
+    state.math.collected.add(hit.key);
+    list.insertAdjacentHTML('beforeend',
+      `<li class="gp-collect__item is-right">${escapeHtml(hit.label)}</li>`);
+    $('#gp-exercise [data-collect-count]').textContent = state.math.collected.size;
+    if (state.math.collected.size >= ex.need) settleExercise(true);
+    return;
+  }
+
+  settleExercise(mathlab.check(ex, raw));
+}
+
+function toggleBuildCell(cell) {
+  const i = cell.dataset.cell;
+  const on = cell.classList.toggle('is-on');
+  if (on) state.math.built.add(i); else state.math.built.delete(i);
+  const count = $('#gp-exercise [data-build-count]');
+  if (count) count.textContent = state.math.built.size;
+}
+
+function stepExercise(delta) {
+  const { topic } = state.math;
+  if (!topic) return;
+  const next = state.math.index + delta;
+  if (next < 0 || next > topic.exercises.length) return;
+  state.math.index = next;
+  showExercise();
+  $('#gp-turn-head').scrollIntoView({ block: 'start', behavior: 'smooth' });
+}
+
+/* ------------------------------------------------------------------ */
 /* Router                                                              */
 /* ------------------------------------------------------------------ */
 
@@ -625,6 +826,9 @@ function route() {
       if (!state.session) { location.hash = '#/home'; return; }
       renderResults();
       showScreen('results');
+      break;
+    case 'math':
+      renderMath(parts[1], parts[2]);
       break;
     case 'parents':
       renderParents();
@@ -674,6 +878,14 @@ function onClick(ev) {
     renderCountPicker();
     return;
   }
+
+  const cell = ev.target.closest('[data-cell]');
+  if (cell) { toggleBuildCell(cell); return; }
+
+  const pick = ev.target.closest('[data-pick]');
+  if (pick && !pick.disabled) { answerMath(pick.dataset.pick); return; }
+
+  if (ev.target.closest('#gp-exercise [data-check]')) { checkMath(); return; }
 
   const choice = ev.target.closest('.gp-choice');
   if (choice && !state.answered) { handleAnswer(choice.dataset.choice); return; }
@@ -750,6 +962,15 @@ async function boot() {
   ));
   $('#gp-theme-toggle').addEventListener('click', toggleTheme);
   $('#gp-lang-toggle').addEventListener('click', toggleGuideLanguage);
+  $('#gp-ex-prev').addEventListener('click', () => stepExercise(-1));
+  $('#gp-ex-next').addEventListener('click', () => stepExercise(1));
+  /* Enter should submit the answer box, the way any small form behaves. */
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key !== 'Enter') return;
+    if (!ev.target.matches('#gp-exercise [data-answer-input]')) return;
+    ev.preventDefault();
+    checkMath();
+  });
   $('#gp-speak-toggle').addEventListener('click', () => {
     state.settings.readAloud = !state.settings.readAloud;
     storage.setSetting('readAloud', state.settings.readAloud);

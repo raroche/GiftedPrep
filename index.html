@@ -56,6 +56,9 @@
     <button type="button" class="gp-btn gp-btn--icon gp-btn--ghost" id="gp-theme-toggle" aria-label="Switch to dark mode">
       <span data-icon="moon"></span>
     </button>
+    <a class="gp-btn gp-btn--quiet" href="#/math" id="gp-math-link">
+      <span data-icon="calc"></span><span class="gp-btn__label">Math Lab</span>
+    </a>
     <a class="gp-btn gp-btn--quiet" href="#/parents" id="gp-parents-link">
       <span data-icon="parent"></span><span class="gp-btn__label">For parents</span>
     </a>
@@ -106,6 +109,11 @@
           <span class="gp-card__icon" data-icon="sort"></span>
           <span class="gp-card__title">Pick a puzzle type</span>
           <span class="gp-card__sub">All 31 kinds of puzzle in one list. Practice just one of them.</span>
+        </a>
+        <a class="gp-card gp-card--action" href="#/math">
+          <span class="gp-card__icon" data-icon="calc"></span>
+          <span class="gp-card__title">Math Lab</span>
+          <span class="gp-card__sub">Advanced maths lessons and puzzles, grade by grade.</span>
         </a>
         <a class="gp-card gp-card--action" href="#/tests">
           <span class="gp-card__icon" data-icon="target"></span>
@@ -265,6 +273,33 @@
   <!-- ============================================================ -->
   <!-- Error / empty state                                           -->
   <!-- ============================================================ -->
+  <!-- ============================================================== -->
+  <!-- Math Lab                                                       -->
+  <!-- ============================================================== -->
+  <section class="gp-screen" id="screen-math" aria-labelledby="math-title">
+    <div class="gp-container">
+      <h1 class="gp-page-title" id="math-title">Math Lab</h1>
+      <p class="gp-page-lede">Advanced maths, one grade at a time. Short lessons, then puzzles.</p>
+      <div id="gp-math-body"></div>
+    </div>
+  </section>
+
+  <section class="gp-screen" id="screen-mathtopic" aria-labelledby="mathtopic-title">
+    <div class="gp-container">
+      <p class="gp-crumb" id="gp-math-crumb"></p>
+      <h1 class="gp-page-title" id="mathtopic-title">Topic</h1>
+      <p class="gp-page-lede" id="gp-topic-big"></p>
+      <div id="gp-topic-teach"></div>
+      <h2 class="gp-turn" id="gp-turn-head">Your turn</h2>
+      <div class="gp-exwrap" id="gp-exercise"></div>
+      <div class="gp-exnav">
+        <button type="button" class="gp-btn gp-btn--ghost" id="gp-ex-prev">&larr; Back</button>
+        <span class="gp-dots" id="gp-ex-dots"></span>
+        <button type="button" class="gp-btn gp-btn--primary" id="gp-ex-next">Next &rarr;</button>
+      </div>
+    </div>
+  </section>
+
   <section class="gp-screen" id="screen-error" aria-labelledby="error-title">
     <div class="gp-container gp-stack gp-center">
       <h1 class="gp-page-title" id="error-title">Something did not load</h1>
