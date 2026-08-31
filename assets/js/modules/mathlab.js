@@ -105,11 +105,23 @@ export function renderTeach(topic) {
     }
     return '';
   }).join('');
-  /* Collapsible. A child reads the lesson once, then wants the puzzles, and
-     scrolling past the whole thing on every question gets old fast. */
+  /* Collapsible, with the control repeated at the bottom. The lesson is taller
+     than a phone screen, so a single toggle at the top is out of reach by the
+     time you have finished reading, which reads as no way to close it at all.
+     The button at the end is the one that will actually get used: it closes
+     the lesson and drops you straight onto the first puzzle. */
   return `<details class="gp-teachwrap" open>
-    <summary class="gp-teach__toggle"><span aria-hidden="true">📖</span> The lesson</summary>
-    <section class="gp-teach">${blocks}</section>
+    <summary class="gp-teach__toggle">
+      <span aria-hidden="true">📖</span>
+      <span class="gp-teach__toggle-open">Hide the lesson</span>
+      <span class="gp-teach__toggle-shut">Show the lesson</span>
+    </summary>
+    <section class="gp-teach">
+      ${blocks}
+      <button type="button" class="gp-btn gp-btn--primary gp-teach__go" data-lesson-done>
+        Start the puzzles &darr;
+      </button>
+    </section>
   </details>`;
 }
 

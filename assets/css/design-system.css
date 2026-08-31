@@ -1806,3 +1806,9 @@ button, a, label, summary, [role="button"] {
 .gp-teach__toggle::after { content: " ▾"; }
 .gp-teachwrap[open] .gp-teach__toggle::after { content: " ▴"; }
 .gp-teachwrap .gp-teach { margin: var(--gp-space-4) 0 0; }
+
+/* The lesson's own "done reading" button, and a label that says what the
+   toggle will do rather than just naming the section. */
+.gp-teach__go { margin-top: var(--gp-space-2); }
+.gp-teachwrap[open] .gp-teach__toggle-shut,
+.gp-teachwrap:not([open]) .gp-teach__toggle-open { display: none; }

@@ -879,6 +879,13 @@ function onClick(ev) {
     return;
   }
 
+  if (ev.target.closest('[data-lesson-done]')) {
+    const wrap = document.querySelector('.gp-teachwrap');
+    if (wrap) wrap.open = false;
+    $('#gp-turn-head').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    return;
+  }
+
   const cell = ev.target.closest('[data-cell]');
   if (cell) { toggleBuildCell(cell); return; }
 
