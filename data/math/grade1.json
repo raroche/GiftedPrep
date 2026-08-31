@@ -1,7 +1,7 @@
 {
   "grade": 1,
   "title": "Grade 1 Math Lab",
-  "blurb": "Eight big ideas, each with a short lesson and puzzles to try. Built for a first grader who finds the normal work easy.",
+  "blurb": "Sixteen topics. Each one is a short lesson you can see, then puzzles to try.",
   "topics": [
     {
       "id": "ten-frames",
@@ -117,7 +117,8 @@
           "ask": "Type a number. We show its partner to 10.",
           "why": "Every pair here adds to 10. Knowing all of them by heart makes bigger addition much easier."
         }
-      ]
+      ],
+      "track": "skills"
     },
     {
       "id": "number-bonds",
@@ -289,7 +290,8 @@
           "ask": "Type a part of 8. We show the other part.",
           "why": "8 can be split many ways. Seeing them all is what makes a number feel flexible instead of fixed."
         }
-      ]
+      ],
+      "track": "skills"
     },
     {
       "id": "doubles-parity",
@@ -410,7 +412,8 @@
           "ask": "Type any even number up to 20.",
           "why": "Even numbers step by 2. They are the numbers you land on when you skip count by twos."
         }
-      ]
+      ],
+      "track": "skills"
     },
     {
       "id": "balance",
@@ -531,7 +534,8 @@
           "ask": "Type a number. We show what it needs to reach 12.",
           "why": "Every one of these makes a true equation with 12 on the other side."
         }
-      ]
+      ],
+      "track": "skills"
     },
     {
       "id": "missing-numbers",
@@ -627,7 +631,8 @@
           "answer": true,
           "why": "True. Adding nothing leaves the number alone. Zero is a real answer."
         }
-      ]
+      ],
+      "track": "skills"
     },
     {
       "id": "tens-and-ones",
@@ -753,7 +758,8 @@
           "ask": "Type any number with exactly 4 tens.",
           "why": "Anything from 40 to 49 has 4 tens. Only the ones digit changes."
         }
-      ]
+      ],
+      "track": "skills"
     },
     {
       "id": "equal-groups",
@@ -901,7 +907,8 @@
           "ask": "12 dots split into equal rows. Type a number of rows that works.",
           "why": "1, 2, 3, 4, 6 and 12 all divide 12 evenly. 5 does not, which is why 5 rows always leaves a gap."
         }
-      ]
+      ],
+      "track": "skills"
     },
     {
       "id": "patterns-shapes",
@@ -1061,7 +1068,1325 @@
           "ask": "Type any number you land on counting by 5.",
           "why": "Counting by fives lands on numbers ending in 5 or 0, and never anywhere else."
         }
+      ],
+      "track": "skills"
+    },
+    {
+      "id": "four-colours",
+      "track": "wonders",
+      "name": "Four Colours",
+      "emoji": "🎨",
+      "big": "Colour any map with just four colours.",
+      "parentNote": "Graph colouring. The statement is simple enough for a six-year-old and it took mathematicians 124 years to prove, finally in 1976 with the first computer-assisted proof in history. Taught successfully to seven-year-olds by the logician Joel David Hamkins.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Here is a map. Each country needs a colour."
+        },
+        {
+          "t": "say",
+          "text": "One rule: countries that share a border cannot match."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "map",
+            "cells": [
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                3,
+                1
+              ],
+              [
+                2,
+                2,
+                1
+              ]
+            ],
+            "paint": {
+              "0": "red",
+              "1": "blue",
+              "2": "green",
+              "3": "yellow"
+            }
+          },
+          "cap": "Four countries. Every pair touches, so this one needs all four colours."
+        },
+        {
+          "t": "say",
+          "text": "Touching at just a corner does not count. Only a real border."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "map",
+            "cells": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "paint": {
+              "0": "red",
+              "1": "blue"
+            }
+          },
+          "cap": "The two reds only meet at a corner. That is allowed."
+        },
+        {
+          "t": "tip",
+          "text": "Nobody has ever drawn a map that needs five. People tried for 124 years."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "colormap",
+          "ask": "Colour this map. No two countries with a border may match.",
+          "cells": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "limit": 2,
+          "why": "Two colours are enough here. The two countries of the same colour only touch at a corner, and a corner is not a border."
+        },
+        {
+          "type": "colormap",
+          "ask": "Now this one. Try to use only three colours.",
+          "cells": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "limit": 3,
+          "why": "Three works. The long country on top borders all three below it, but the left and right ones never touch each other, so they can share."
+        },
+        {
+          "type": "colormap",
+          "ask": "This map needs four. Find a way.",
+          "cells": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ],
+          "limit": 4,
+          "why": "Every country here borders every other one, so no two can ever share. Four countries, four colours, and there is no way around it."
+        },
+        {
+          "type": "number",
+          "ask": "A map has 3 countries and every pair shares a border. How many colours?",
+          "answer": 3,
+          "why": "Each one touches both others, so no two can match. Three countries all touching means three colours."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Two countries that meet only at a corner may be the same colour.",
+          "answer": true,
+          "why": "True. The rule is about borders, which are lines, not points. A corner is a point."
+        },
+        {
+          "type": "paper",
+          "ask": "Draw your own squiggly map on paper. Colour it with four. How many did you actually need?",
+          "answer": 4,
+          "hint": "Draw a few loops crossing each other, then colour the pieces. Type 4 when you have finished.",
+          "why": "Whatever you drew, four was enough. It always is. That is the theorem, and it took people from 1852 until 1976 to prove it."
+        },
+        {
+          "type": "colormap",
+          "ask": "Last one. Four colours, and every country coloured.",
+          "cells": [
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              2,
+              3,
+              3,
+              4
+            ],
+            [
+              2,
+              2,
+              5,
+              4
+            ],
+            [
+              6,
+              6,
+              5,
+              5
+            ]
+          ],
+          "limit": 4,
+          "why": "Seven countries and still only four colours. That is the surprising part: the map can get as big and messy as you like and four never stops being enough."
+        }
       ]
+    },
+    {
+      "id": "one-line",
+      "track": "wonders",
+      "name": "One Line, No Lifting",
+      "emoji": "✏️",
+      "big": "Some shapes you can draw in one go. Some you cannot.",
+      "parentNote": "Eulerian paths. The child discovers a rule and then uses it to predict, which is what a theorem is for. This is where graph theory began, with Euler and the bridges of Königsberg in 1736.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Draw the whole shape without lifting your pencil. No line twice."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "graph",
+            "nodes": [
+              {
+                "x": 10,
+                "y": 10
+              },
+              {
+                "x": 90,
+                "y": 10
+              },
+              {
+                "x": 90,
+                "y": 90
+              },
+              {
+                "x": 10,
+                "y": 90
+              }
+            ],
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                0
+              ]
+            ],
+            "w": 180,
+            "h": 180
+          },
+          "cap": "A square. Easy, you can do it."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "graph",
+            "nodes": [
+              {
+                "x": 10,
+                "y": 10
+              },
+              {
+                "x": 90,
+                "y": 10
+              },
+              {
+                "x": 90,
+                "y": 90
+              },
+              {
+                "x": 10,
+                "y": 90
+              }
+            ],
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "w": 180,
+            "h": 180,
+            "markOdd": true
+          },
+          "cap": "A square with both crossings. Try it. You cannot."
+        },
+        {
+          "t": "say",
+          "text": "Here is how to tell without trying. Count the lines at each corner."
+        },
+        {
+          "t": "say",
+          "text": "A corner is odd if an odd number of lines meet there. The orange ones above are odd."
+        },
+        {
+          "t": "tip",
+          "text": "Zero odd corners or exactly two: you can do it. Any other number: nobody can."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many lines meet at each corner of a square?",
+          "figure": {
+            "kind": "graph",
+            "nodes": [
+              {
+                "x": 10,
+                "y": 10
+              },
+              {
+                "x": 90,
+                "y": 10
+              },
+              {
+                "x": 90,
+                "y": 90
+              },
+              {
+                "x": 10,
+                "y": 90
+              }
+            ],
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                0
+              ]
+            ],
+            "w": 170,
+            "h": 170
+          },
+          "answer": 2,
+          "why": "Two lines at every corner. Two is even, so a square has zero odd corners, which means you can draw it in one go."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A square can be drawn without lifting your pencil.",
+          "answer": true,
+          "why": "True. No odd corners at all, so you can even finish back where you started."
+        },
+        {
+          "type": "number",
+          "ask": "How many odd corners does this have?",
+          "figure": {
+            "kind": "graph",
+            "nodes": [
+              {
+                "x": 10,
+                "y": 10
+              },
+              {
+                "x": 90,
+                "y": 10
+              },
+              {
+                "x": 90,
+                "y": 90
+              },
+              {
+                "x": 10,
+                "y": 90
+              }
+            ],
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            "w": 170,
+            "h": 170,
+            "markOdd": true
+          },
+          "answer": 2,
+          "why": "The two corners joined by the crossing line have 3 lines each, and 3 is odd. Two odd corners means yes, it can be drawn. Start at one odd corner and you will finish at the other."
+        },
+        {
+          "type": "choice",
+          "ask": "Which one can NOT be drawn in one line?",
+          "choices": [
+            {
+              "id": "a",
+              "figure": {
+                "kind": "graph",
+                "nodes": [
+                  {
+                    "x": 10,
+                    "y": 50
+                  },
+                  {
+                    "x": 50,
+                    "y": 10
+                  },
+                  {
+                    "x": 90,
+                    "y": 50
+                  },
+                  {
+                    "x": 50,
+                    "y": 90
+                  }
+                ],
+                "edges": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    2,
+                    3
+                  ],
+                  [
+                    3,
+                    0
+                  ]
+                ],
+                "w": 140,
+                "h": 140
+              }
+            },
+            {
+              "id": "b",
+              "figure": {
+                "kind": "graph",
+                "nodes": [
+                  {
+                    "x": 10,
+                    "y": 10
+                  },
+                  {
+                    "x": 90,
+                    "y": 10
+                  },
+                  {
+                    "x": 90,
+                    "y": 90
+                  },
+                  {
+                    "x": 10,
+                    "y": 90
+                  }
+                ],
+                "edges": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    2,
+                    3
+                  ],
+                  [
+                    3,
+                    0
+                  ],
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    1,
+                    3
+                  ]
+                ],
+                "w": 140,
+                "h": 140
+              }
+            },
+            {
+              "id": "c",
+              "figure": {
+                "kind": "graph",
+                "nodes": [
+                  {
+                    "x": 10,
+                    "y": 10
+                  },
+                  {
+                    "x": 90,
+                    "y": 10
+                  },
+                  {
+                    "x": 50,
+                    "y": 90
+                  }
+                ],
+                "edges": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    2,
+                    0
+                  ]
+                ],
+                "w": 140,
+                "h": 140
+              }
+            }
+          ],
+          "answer": "b",
+          "why": "Choice b has four odd corners, and four is too many. The others have none at all, so they can be drawn and you even end up back at the start."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A shape with 4 odd corners can be drawn in one line.",
+          "answer": false,
+          "why": "False. Only zero or two odd corners will work. Four means it is impossible, and no amount of trying will change that."
+        },
+        {
+          "type": "number",
+          "ask": "In Königsberg, 4 pieces of land had 3, 3, 5 and 3 bridges. How many odd?",
+          "answer": 4,
+          "why": "All four are odd numbers, so there are 4 odd corners. That is why nobody could ever walk all seven bridges once. Euler proved it in 1736 and invented a whole branch of mathematics doing it."
+        },
+        {
+          "type": "paper",
+          "ask": "Draw an envelope: a box, a roof, and both crossing lines. One line?",
+          "answer": 1,
+          "hint": "Count the odd corners first, then try. Start at an odd one. Type 1 for yes, 0 for no.",
+          "why": "Yes. The envelope has exactly two odd corners, the two bottom ones. Start at one and you will always finish at the other. It never works if you start anywhere else."
+        }
+      ]
+    },
+    {
+      "id": "bees-hexagons",
+      "track": "wonders",
+      "name": "The Bees' Secret",
+      "emoji": "🐝",
+      "big": "Why every honeycomb is hexagons.",
+      "parentNote": "Tiling and optimisation. The honeycomb conjecture, that hexagons enclose the most area for the least perimeter, was only proved in 1999 by Thomas Hales. The bees had it first.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A tiling covers the floor with no gaps and no overlaps."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "tiling",
+            "shape": "square",
+            "rows": 3,
+            "cols": 4,
+            "c": "blue"
+          },
+          "cap": "Squares fit. No gaps."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "tiling",
+            "shape": "pentagon",
+            "rows": 3,
+            "cols": 4,
+            "c": "red"
+          },
+          "cap": "Regular pentagons do not. Look at the gaps."
+        },
+        {
+          "t": "say",
+          "text": "Triangles work. Squares work. Hexagons work. Pentagons never do."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "tiling",
+            "shape": "hexagon",
+            "rows": 3,
+            "cols": 4,
+            "c": "yellow"
+          },
+          "cap": "Hexagons. This is what bees build."
+        },
+        {
+          "t": "tip",
+          "text": "A bee eats 8 pounds of honey to make 1 pound of wax. Hexagons save wax, so the shape is worth real food."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many sides does a hexagon have?",
+          "answer": 6,
+          "why": "Six. A honeycomb cell has six sides, and so does every snowflake arm, which is not a coincidence: both are the shape that packs best."
+        },
+        {
+          "type": "choice",
+          "ask": "Which shape leaves gaps?",
+          "choices": [
+            {
+              "id": "a",
+              "figure": {
+                "kind": "tiling",
+                "shape": "square",
+                "rows": 2,
+                "cols": 2,
+                "c": "blue"
+              }
+            },
+            {
+              "id": "b",
+              "figure": {
+                "kind": "tiling",
+                "shape": "pentagon",
+                "rows": 2,
+                "cols": 2,
+                "c": "red"
+              }
+            },
+            {
+              "id": "c",
+              "figure": {
+                "kind": "tiling",
+                "shape": "hexagon",
+                "rows": 2,
+                "cols": 2,
+                "c": "yellow"
+              }
+            }
+          ],
+          "answer": "b",
+          "why": "Pentagons. Five-sided shapes will not sit side by side without leaving gaps, no matter how you turn them. This is why you never see a five-sided honeycomb."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Triangles can tile a floor with no gaps.",
+          "answer": true,
+          "why": "True. Turn every other one upside down and they fit perfectly. Triangles, squares and hexagons are the only regular shapes that do."
+        },
+        {
+          "type": "number",
+          "ask": "How many hexagons meet at one point in a honeycomb?",
+          "figure": {
+            "kind": "tiling",
+            "shape": "hexagon",
+            "rows": 3,
+            "cols": 3,
+            "c": "yellow"
+          },
+          "answer": 3,
+          "why": "Three. Look at any corner in the picture and count. Three hexagons meeting is what makes the walls share, and sharing walls is what saves the wax."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Bees use hexagons because they hold a lot of honey for very little wax.",
+          "answer": true,
+          "why": "True, and it is a real mathematical fact, not just a nice story. It was finally proved in 1999. The bees had been using it for about 100 million years."
+        },
+        {
+          "type": "paper",
+          "ask": "Find something at home made of hexagons or of repeating tiles. Count how many shapes meet at one corner.",
+          "answer": 3,
+          "hint": "Try a bathroom floor, a football, a chain-link fence, or a picture of a honeycomb. For hexagons the answer is 3.",
+          "why": "Hexagons always meet three at a corner. Squares meet four. Triangles meet six. That number is fixed by the shape, and it is why some shapes tile and others cannot."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            3,
+            4,
+            6
+          ],
+          "need": 3,
+          "ask": "Type the number of sides of a shape that tiles with no gaps.",
+          "why": "Only 3, 4 and 6 work among the regular shapes. Not 5, not 7, not 8. Just those three, and nobody can add a fourth."
+        }
+      ]
+    },
+    {
+      "id": "snowflakes",
+      "track": "wonders",
+      "name": "Snowflakes and Mirrors",
+      "emoji": "❄️",
+      "big": "Fold it in half. Do the sides match?",
+      "parentNote": "Symmetry. The idea that runs from a butterfly to a cathedral to particle physics. Zvonkin ran this with preschoolers, session 42, using folded paper and scissors.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A mirror line cuts a shape into two halves that match."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 2,
+            "shaded": 1,
+            "c": "blue"
+          },
+          "cap": "Fold a circle anywhere through the middle and it matches. A circle has endless mirror lines."
+        },
+        {
+          "t": "say",
+          "text": "A square has 4 mirror lines. Two straight, two across the corners."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          "cap": "Fold it up and down, side to side, and both ways across the corners."
+        },
+        {
+          "t": "say",
+          "text": "A real snowflake always has 6. Never 5, never 7."
+        },
+        {
+          "t": "tip",
+          "text": "Letters have mirror lines too. A has one. H has two. F has none at all."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many mirror lines does a square have?",
+          "figure": {
+            "shapes": [
+              {
+                "s": "square",
+                "c": "green"
+              }
+            ]
+          },
+          "answer": 4,
+          "why": "Four. Up and down, side to side, and the two lines through opposite corners. Try folding a paper square to check."
+        },
+        {
+          "type": "number",
+          "ask": "How many mirror lines does a triangle with equal sides have?",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "blue"
+              }
+            ]
+          },
+          "answer": 3,
+          "why": "Three, one from each corner to the middle of the opposite side. A shape with equal sides has one mirror line per side."
+        },
+        {
+          "type": "number",
+          "ask": "How many arms does a snowflake have?",
+          "answer": 6,
+          "why": "Six, always. It comes from the way water molecules lock together as they freeze, which happens to make hexagons, the same shape the bees use."
+        },
+        {
+          "type": "choice",
+          "ask": "Which letter has NO mirror line?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "A"
+            },
+            {
+              "id": "b",
+              "label": "H"
+            },
+            {
+              "id": "c",
+              "label": "F"
+            },
+            {
+              "id": "d",
+              "label": "O"
+            }
+          ],
+          "answer": "c",
+          "why": "F has none. Fold it any way you like and the halves never match. A folds up and down the middle, H folds two ways, and O folds almost any way at all."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A shape can have more than one mirror line.",
+          "answer": true,
+          "why": "True. A square has 4, a hexagon has 6, and a circle has so many you cannot count them."
+        },
+        {
+          "type": "paper",
+          "ask": "Fold paper in half twice, cut the folded edge, open it. How many mirror lines?",
+          "answer": 2,
+          "hint": "Two folds gives two mirror lines. Try three folds after and see what happens.",
+          "why": "Two folds makes two mirror lines. Every fold you add before cutting doubles the matching, which is exactly how paper snowflakes are made."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12
+          ],
+          "need": 4,
+          "ask": "Type any number of mirror lines a shape can have.",
+          "why": "A shape with equal sides has one mirror line per side, so any of these is possible. Build a shape with 12 sides and it has 12."
+        }
+      ]
+    },
+    {
+      "id": "mobius",
+      "track": "wonders",
+      "name": "The Twisted Loop",
+      "emoji": "🌀",
+      "big": "A paper strip with only one side.",
+      "parentNote": "The Möbius band. The best wow moment in elementary mathematics, and a genuine object topologists still study. Zvonkin used it with five-year-olds, session 21. This topic is mostly scissors and paper on purpose.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Cut a long paper strip. Give one end a half twist. Tape the ends together."
+        },
+        {
+          "t": "say",
+          "text": "Now draw a line down the middle without lifting your pen."
+        },
+        {
+          "t": "say",
+          "text": "The line comes back to the start, and it has covered the whole strip. Both sides. So it only has one side."
+        },
+        {
+          "t": "say",
+          "text": "Now cut along that line. It should fall into two loops."
+        },
+        {
+          "t": "tip",
+          "text": "It does not. You get one long loop instead. Try it before you believe it."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many sides does a normal paper loop have, with no twist?",
+          "answer": 2,
+          "why": "Two. The inside and the outside. You cannot get from one to the other without going over the edge."
+        },
+        {
+          "type": "number",
+          "ask": "How many sides does a loop with one twist have?",
+          "answer": 1,
+          "why": "One. The twist joins the inside to the outside, so a pen never has to cross the edge. This shape is called a Möbius band."
+        },
+        {
+          "type": "paper",
+          "ask": "Make a normal loop and cut it down the middle. How many loops do you get?",
+          "answer": 2,
+          "hint": "Paper strip, tape the ends, no twist. Then cut along the middle all the way round.",
+          "why": "Two separate loops, exactly as you would expect. Keep this one to compare with the twisted version."
+        },
+        {
+          "type": "paper",
+          "ask": "Now make a twisted loop and cut it down the middle. How many loops?",
+          "answer": 1,
+          "hint": "Same strip, but give one end a half twist before taping. Cut down the middle.",
+          "why": "One. One long loop with a couple of twists in it. It surprises grown-ups too, and there is no trick: it is just what a one-sided surface does."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The recycling symbol is a twisted loop.",
+          "answer": true,
+          "why": "True. Look closely at the three arrows next time. It is a Möbius band, chosen on purpose because it has no end."
+        },
+        {
+          "type": "number",
+          "ask": "How many edges does a twisted loop have?",
+          "answer": 1,
+          "why": "One. Run a finger along the rim and you go all the way round and come back without lifting. A normal loop has two rims."
+        },
+        {
+          "type": "paper",
+          "ask": "Cut a twisted loop one third of the way from the edge instead of the middle. How many loops now?",
+          "answer": 2,
+          "hint": "Keep the same distance from the edge the whole way round. You will go round twice before meeting your start.",
+          "why": "Two, but they are linked together and one is twice as long as the other. Nobody would guess that. This is the kind of thing mathematicians spend whole careers on."
+        }
+      ]
+    },
+    {
+      "id": "socks",
+      "track": "wonders",
+      "name": "Socks in the Dark",
+      "emoji": "🧦",
+      "big": "Being sure, not just lucky.",
+      "parentNote": "The pigeonhole principle. A genuine proof technique that produces certainty rather than a good guess, and it teaches the difference between 'probably' and 'definitely' which many adults never get straight.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A drawer has black socks and white socks all mixed up. The light is broken."
+        },
+        {
+          "t": "say",
+          "text": "You grab 2 socks. Might they match? Yes. Must they? No."
+        },
+        {
+          "t": "say",
+          "text": "Grab 3. Now there are only 2 colours, so 2 of your 3 have to be the same."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "text": "🧦🧦🧦"
+          },
+          "cap": "Three socks, two colours. Two of them must match."
+        },
+        {
+          "t": "tip",
+          "text": "10 socks or 10,000 makes no difference. Three is always enough. That is what makes it maths, not luck."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2 sock colours in the drawer. How many must you grab to be SURE of a pair?",
+          "answer": 3,
+          "why": "Three. With only 2 colours, the third sock has to match one of the first two. There is nowhere else for it to go."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Grabbing 2 socks might give you a pair.",
+          "answer": true,
+          "why": "True, it might. But might is not the same as must, and this topic is about must."
+        },
+        {
+          "type": "number",
+          "ask": "3 sock colours now. How many to be sure of a pair?",
+          "answer": 4,
+          "why": "Four. Three could all be different, one of each colour. The fourth has no new colour left to be."
+        },
+        {
+          "type": "number",
+          "ask": "5 sock colours. How many to be sure?",
+          "answer": 6,
+          "why": "Six. Always one more than the number of colours. That is the whole rule, and it never changes."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A drawer with 1000 black and 1000 white socks needs more than 3 grabs.",
+          "answer": false,
+          "why": "False, and this is the surprising part. How many socks are in there makes no difference at all. Only the number of colours matters."
+        },
+        {
+          "type": "number",
+          "ask": "In a room of 13 people, how many must share a birth month?",
+          "answer": 2,
+          "why": "Two. There are only 12 months, so with 13 people two of them must land in the same one. You do not need to know a single thing about any of them."
+        },
+        {
+          "type": "paper",
+          "ask": "There are 8 socks in the drawer: 4 red, 4 blue. You want 2 BLUE ones for certain. How many must you grab?",
+          "answer": 6,
+          "hint": "Think about the worst possible luck. What if you pull out every red one first?",
+          "why": "Six. The worst case is all 4 red first, then 2 blue. Asking for a matching pair is easy. Asking for a particular colour means planning for the worst luck there is."
+        }
+      ]
+    },
+    {
+      "id": "tower",
+      "track": "wonders",
+      "name": "The Tower",
+      "emoji": "🗼",
+      "big": "Move the stack. Never a big disc on a small one.",
+      "parentNote": "Tower of Hanoi. Recursion and doubling. The child finds 1, 3, 7, 15, 31 themselves, which is double-and-add-one. Zvonkin used it in session 23.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Three pegs. A stack of discs, biggest at the bottom."
+        },
+        {
+          "t": "say",
+          "text": "Move the whole stack to another peg. One disc at a time."
+        },
+        {
+          "t": "say",
+          "text": "One rule: a bigger disc may never sit on a smaller one."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "table",
+            "header": true,
+            "rows": [
+              [
+                "Discs",
+                "Moves"
+              ],
+              [
+                "1",
+                "1"
+              ],
+              [
+                "2",
+                "3"
+              ],
+              [
+                "3",
+                "7"
+              ],
+              [
+                "4",
+                "15"
+              ]
+            ]
+          },
+          "cap": "Look at the moves. What is happening each time?"
+        },
+        {
+          "t": "tip",
+          "text": "Double the last one and add 1. So 5 discs takes 31, and 6 takes 63."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "1 disc takes 1 move. How many for 2 discs?",
+          "answer": 3,
+          "why": "Three. Small one off, big one across, small one back on top. There is no shorter way."
+        },
+        {
+          "type": "number",
+          "ask": "How many moves for 3 discs?",
+          "answer": 7,
+          "why": "Seven. Move the top two across, which takes 3, move the big one, which takes 1, then move the two back, another 3. So 3 and 1 and 3."
+        },
+        {
+          "type": "number",
+          "ask": "4 discs?",
+          "answer": 15,
+          "why": "Fifteen. Double 7 and add 1. The pattern is 1, 3, 7, 15, and every step doubles and adds one."
+        },
+        {
+          "type": "number",
+          "ask": "5 discs?",
+          "answer": 31,
+          "why": "Thirty-one. Double 15 is 30, plus 1. You can now work out any number of discs without moving a single one."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Each extra disc roughly doubles the work.",
+          "answer": true,
+          "why": "True, and doubling gets out of hand fast. Ten discs is over a thousand moves. Twenty discs is over a million."
+        },
+        {
+          "type": "paper",
+          "ask": "Use 3 coins of different sizes and 3 spots on the table. Move the stack. How many moves did you use?",
+          "answer": 7,
+          "hint": "Big coin at the bottom. Never put a bigger coin on a smaller one. Seven is the best possible.",
+          "why": "Seven if you did it perfectly. More than that means there was a wasted move somewhere. Try again and see if you can hit exactly 7."
+        },
+        {
+          "type": "number",
+          "ask": "6 discs?",
+          "answer": 63,
+          "why": "Sixty-three. There is an old story about monks moving 64 discs, and the world ending when they finish. At one move a second that would take longer than the universe has existed, so there is no rush."
+        }
+      ]
+    },
+    {
+      "id": "handshakes",
+      "track": "wonders",
+      "name": "Handshakes",
+      "emoji": "🤝",
+      "big": "Three puzzles that are secretly the same one.",
+      "parentNote": "Combinatorics and isomorphism. Recognising that two different-looking problems are the same problem is close to a definition of mathematical maturity. Zvonkin spent several sessions on exactly this, sessions 45 to 47.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Everyone at a party shakes hands once with everyone else."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "graph",
+            "nodes": [
+              {
+                "x": 10,
+                "y": 15
+              },
+              {
+                "x": 90,
+                "y": 15
+              },
+              {
+                "x": 90,
+                "y": 85
+              },
+              {
+                "x": 10,
+                "y": 85
+              }
+            ],
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "w": 180,
+            "h": 180
+          },
+          "cap": "4 people. Each dot is a person, each line a handshake. Count them: 6."
+        },
+        {
+          "t": "say",
+          "text": "Now a different puzzle. 4 dots on paper. Join every pair with a line. How many lines?"
+        },
+        {
+          "t": "say",
+          "text": "Also 6. It is the same picture. It was the same puzzle all along."
+        },
+        {
+          "t": "tip",
+          "text": "1, 3, 6, 10, 15. The same numbers as the triangle pattern. Three puzzles, one answer."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2 people shake hands. How many handshakes?",
+          "answer": 1,
+          "why": "Just one. They shake with each other, and that is the whole party."
+        },
+        {
+          "type": "number",
+          "ask": "3 people?",
+          "answer": 3,
+          "why": "Three. Call them A, B and C. AB, AC, BC. Nobody shakes their own hand and nobody shakes twice."
+        },
+        {
+          "type": "number",
+          "ask": "4 people?",
+          "figure": {
+            "kind": "graph",
+            "nodes": [
+              {
+                "x": 10,
+                "y": 15
+              },
+              {
+                "x": 90,
+                "y": 15
+              },
+              {
+                "x": 90,
+                "y": 85
+              },
+              {
+                "x": 10,
+                "y": 85
+              }
+            ],
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "w": 170,
+            "h": 170
+          },
+          "answer": 6,
+          "why": "Six. Count the lines in the picture. The new person shakes with all 3 who were already there, so 3 more than last time."
+        },
+        {
+          "type": "number",
+          "ask": "5 people?",
+          "answer": 10,
+          "why": "Ten. The fifth person adds 4 handshakes to the 6 you already had. Each new guest shakes with everyone already in the room."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Joining every pair of 5 dots needs the same number of lines as 5 people shaking hands.",
+          "answer": true,
+          "why": "True. They are the same puzzle wearing different clothes. Spotting that is one of the most useful things a mathematician does."
+        },
+        {
+          "type": "paper",
+          "ask": "Draw 6 dots on paper. Join every pair. Count the lines.",
+          "answer": 15,
+          "hint": "Go dot by dot. The first joins to 5, the next to 4 new ones, then 3, then 2, then 1.",
+          "why": "Fifteen. And 5 + 4 + 3 + 2 + 1 is 15, which is why these are called triangle numbers: stack those rows up and you get a triangle."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            1,
+            3,
+            6,
+            10,
+            15,
+            21,
+            28
+          ],
+          "need": 4,
+          "ask": "Type a handshake number: 2 people, 3 people, 4 people, and so on.",
+          "why": "1, 3, 6, 10, 15, 21, 28. The gaps between them grow by one each time, because each new guest adds one more handshake than the last one did."
+        }
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "id": "wonders",
+      "name": "Big ideas",
+      "blurb": "Real mathematics. Maps, bridges, bees and a paper loop with one side. This is the kind that makes people want to be mathematicians."
+    },
+    {
+      "id": "skills",
+      "name": "Number skills",
+      "blurb": "Getting quick and sure with numbers. Useful, and it makes the big ideas easier to reach."
     }
   ]
 }

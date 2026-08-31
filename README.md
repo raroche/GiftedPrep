@@ -64,7 +64,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Light and dark** | Follows the system theme, with a manual override |
 | **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
-| **Math Lab** | A separate section for advanced maths, grade by grade. Grade 1 has 8 topics, each a short illustrated lesson then puzzles |
+| **Math Lab** | A separate section for advanced maths, grade by grade. Grade 1 has 16 topics in two tracks: real mathematics (maps, bridges, bees, a one-sided loop) and number skills |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
 Keyboard: <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the next
@@ -120,31 +120,60 @@ maths easy to go deeper.
 
 Grade 1 is written. Grades 2 to 4 are not yet.
 
-Eight topics, each a short illustrated lesson followed by puzzles taken one at
-a time:
+Sixteen topics in two tracks. Each is a short illustrated lesson followed by
+puzzles taken one at a time.
+
+**Big ideas** — real mathematics, chosen to be the kind that makes a child want
+to keep going:
+
+| # | Topic | The idea | Wow |
+|---|---|---|---|
+| 1 | Four Colours | Colour any map so bordering countries differ | Four is always enough. It took 124 years to prove |
+| 2 | One Line, No Lifting | Which shapes draw in one stroke | Count the odd corners and you can predict it |
+| 3 | The Bees' Secret | Which shapes tile with no gaps | Hexagons hold the most honey for the least wax |
+| 4 | Snowflakes and Mirrors | Mirror lines and symmetry | A snowflake always has exactly six arms |
+| 5 | The Twisted Loop | A Möbius band | Cut it down the middle and it does not fall apart |
+| 6 | Socks in the Dark | The pigeonhole principle | Three socks is enough whether the drawer holds 10 or 10,000 |
+| 7 | The Tower | Tower of Hanoi | 1, 3, 7, 15, 31 — double it and add one |
+| 8 | Handshakes | Counting pairs | Three problems that look different are the same problem |
+
+**Number skills** — the grade 1 curriculum done deeper:
 
 | # | Topic | The idea |
 |---|---|---|
-| 1 | Ten Frames | Read a quantity in one look instead of counting |
-| 2 | Number Bonds | One part-whole picture gives four facts |
-| 3 | Doubles, Odd and Even | An even number IS a double; an odd one is a double plus 1 |
-| 4 | The Balance | `=` means "same as", so `4 + 5 = 6 + 3` is fine |
-| 5 | Missing Numbers | The unknown can hide in any position |
-| 6 | Tens and Ones | Adding 10 moves only the tens digit |
-| 7 | Equal Groups | Skip counting and arrays, the honest start of multiplication |
-| 8 | Patterns and Shapes | Find the rule, including one that grows |
+| 9 | Ten Frames | Read a quantity in one look instead of counting |
+| 10 | Number Bonds | One part-whole picture gives four facts |
+| 11 | Doubles, Odd and Even | An even number IS a double; an odd one is a double plus 1 |
+| 12 | The Balance | `=` means "same as", so `4 + 5 = 6 + 3` is fine |
+| 13 | Missing Numbers | The unknown can hide in any position |
+| 14 | Tens and Ones | Adding 10 moves only the tens digit |
+| 15 | Equal Groups | Skip counting and arrays, the honest start of multiplication |
+| 16 | Patterns and Shapes | Find the rule, including one that grows |
 
-Six exercise types, so it never reads as a worksheet: tap a picture, type a
-number, decide true or false, build a ten frame or an array by tapping, work
-one out **on paper** and come back with the answer, or hunt for as many
-answers as you can find.
+The big ideas are not invented. Zvonkin's *Math from Three to Seven* is a
+session-by-session journal of a research mathematician running a circle for
+four to seven year olds; his actual sessions include the Möbius band, the Tower
+of Hanoi, topology, snowflakes and four colours. The logician Joel David
+Hamkins taught graph colouring, chromatic numbers, Eulerian paths and the
+Seven Bridges of Königsberg to **seven-year-olds**, and a girl in that class
+told him afterwards she wanted to be a mathematician. Both are cited in
+[`docs/research/math-wonders.md`](docs/research/math-wonders.md).
+
+Seven exercise types, so it never reads as a worksheet: tap a picture, type a
+number, decide true or false, build a ten frame or an array by tapping, colour
+a map in and have it checked, work one out **on paper** and come back with the
+answer, or hunt for as many answers as you can find.
+
+Several of the big-idea exercises want scissors, coins or a pencil rather than
+a screen, and say so. Cutting a Möbius band in half is the point of that
+topic, and no animation replaces holding the thing.
 
 Topic four is the one that matters most. Most children read `=` as "write the
 answer here" and will call `4 + 5 = 6 + 3` wrong. That misconception is well
 documented and is the main obstacle to algebra later. Fixing it at six is free.
 
-Choices behind the topic list are in [`docs/research/math-grade1.md`](docs/research/math-grade1.md),
-including the Florida benchmark each topic sits on and where it reaches past it.
+Choices behind the number topics are in [`docs/research/math-grade1.md`](docs/research/math-grade1.md),
+including the Florida benchmark each one sits on and where it reaches past it.
 
 ## The honest bit about test prep
 

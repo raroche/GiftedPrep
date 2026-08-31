@@ -30,7 +30,7 @@ const state = {
   answered: false,
   audioUnlocked: false,
   /** Math Lab: the topic being worked through and where we are in it. */
-  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set() }
+  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false }
 };
 
 const $ = (sel) => document.querySelector(sel);
@@ -680,6 +680,8 @@ function showExercise() {
   if (!topic) return;
   state.math.collected = new Set();
   state.math.built = new Set();
+  state.math.painted = {};
+  state.math.settled = false;
   const total = topic.exercises.length;
 
   if (index >= total) {
@@ -712,6 +714,7 @@ function settleExercise(ok) {
   const box = $('#gp-exercise [data-feedback]');
   box.hidden = false;
   box.innerHTML = mathlab.feedbackHtml(ok, ex, index);
+  state.math.settled = true;
   if (ok) markTopicProgress(payload.grade, topic.id, index + 1);
   $$('#gp-exercise .gp-mchoice').forEach((b) => { b.disabled = true; });
   const check = $('#gp-exercise [data-check]');
@@ -744,6 +747,8 @@ function checkMath() {
     return;
   }
 
+  if (ex.type === 'colormap') { checkColourMap(ex); return; }
+
   const input = $('#gp-exercise [data-answer-input]');
   if (!input) return;
   const raw = input.value.trim();
@@ -773,6 +778,44 @@ function checkMath() {
   }
 
   settleExercise(mathlab.check(ex, raw));
+}
+
+/* Tapping a country steps it through the four colours and back to blank, so a
+   child can undo without needing a separate eraser. */
+function paintRegion(id) {
+  /* A map that is not finished yet says so and stays editable. Only a correct
+     map locks, otherwise the child is told what is wrong and then cannot
+     touch it, which is worse than saying nothing. */
+  if (state.math.settled) return;
+  const box = $('#gp-exercise [data-feedback]');
+  if (box) box.hidden = true;
+  const cycle = [null, ...mathlab.MAP_COLOURS];
+  const now = state.math.painted[id] || null;
+  const next = cycle[(cycle.indexOf(now) + 1) % cycle.length];
+  if (next) state.math.painted[id] = next; else delete state.math.painted[id];
+  $$(`#gp-exercise [data-region="${CSS.escape(id)}"]`).forEach((el) => {
+    el.dataset.paint = next || '';
+  });
+  const used = new Set(Object.values(state.math.painted)).size;
+  const label = $('#gp-exercise [data-cm-used]');
+  if (label) label.textContent = used;
+}
+
+function checkColourMap(ex) {
+  const verdict = mathlab.checkMap(ex, state.math.painted);
+  if (verdict.ok) { settleExercise(true); return; }
+  /* Say what is actually wrong. "Wrong" on its own teaches nothing. */
+  const box = $('#gp-exercise [data-feedback]');
+  const msg = verdict.reason === 'blank'
+    ? `${verdict.count} ${verdict.count === 1 ? 'country is' : 'countries are'} still blank. Every one needs a colour.`
+    : verdict.reason === 'clash'
+      ? 'Two countries that share a border have the same colour. Find them and change one.'
+      : `You used ${verdict.used} colours. See if you can do it with ${ex.limit}.`;
+  box.hidden = false;
+  box.innerHTML = `<div class="gp-fb is-wrong">
+      <p class="gp-fb__title"><span aria-hidden="true">🔍</span> Not yet.</p>
+      <p class="gp-fb__why">${escapeHtml(msg)}</p>
+    </div>`;
 }
 
 function toggleBuildCell(cell) {
@@ -885,6 +928,9 @@ function onClick(ev) {
     $('#gp-turn-head').scrollIntoView({ block: 'start', behavior: 'smooth' });
     return;
   }
+
+  const region = ev.target.closest('[data-region]');
+  if (region) { paintRegion(region.dataset.region); return; }
 
   const cell = ev.target.closest('[data-cell]');
   if (cell) { toggleBuildCell(cell); return; }

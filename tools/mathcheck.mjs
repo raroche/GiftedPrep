@@ -11,7 +11,54 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIR = 'data/math';
-const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect'];
+const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap'];
+
+
+/* Regions of a grid map, and which pairs share an edge. */
+function mapRegions(cells) {
+  const seen = [];
+  cells.forEach((row) => row.forEach((id) => { if (!seen.includes(id)) seen.push(id); }));
+  return seen;
+}
+
+function mapEdges(cells) {
+  const pairs = new Set();
+  for (let y = 0; y < cells.length; y += 1) {
+    for (let x = 0; x < cells[y].length; x += 1) {
+      const a = cells[y][x];
+      const right = cells[y][x + 1];
+      const down = cells[y + 1] ? cells[y + 1][x] : undefined;
+      [right, down].forEach((b) => {
+        if (b === undefined || b === a) return;
+        pairs.add([a, b].sort().join('|'));
+      });
+    }
+  }
+  return [...pairs].map((k) => k.split('|'));
+}
+
+/* Smallest number of colours that works. Brute force, fine at this size. */
+function chromatic(cells) {
+  const regions = mapRegions(cells).map(String);
+  const edges = mapEdges(cells);
+  if (regions.length > 12) return null;
+  for (let k = 1; k <= 5; k += 1) {
+    const paint = {};
+    const fits = (i) => {
+      if (i === regions.length) return true;
+      for (let c = 0; c < k; c += 1) {
+        paint[regions[i]] = c;
+        const clash = edges.some(([a, b]) =>
+          paint[a] !== undefined && paint[b] !== undefined && paint[a] === paint[b]);
+        if (!clash && fits(i + 1)) return true;
+      }
+      delete paint[regions[i]];
+      return false;
+    };
+    if (fits(0)) return k;
+  }
+  return 6;
+}
 
 const errors = [];
 const warnings = [];
@@ -98,6 +145,20 @@ for (const file of files) {
           if (!Array.isArray(e.valid) || !e.valid.length) err(w, 'list mode needs valid answers');
           else if (e.need > e.valid.length) err(w, `asks for ${e.need} but only ${e.valid.length} are valid`);
         } else err(w, `unknown collect mode "${e.mode}"`);
+      } else if (e.type === 'colormap') {
+        if (!Array.isArray(e.cells) || !e.cells.length) { err(w, 'no map'); return; }
+        const width = e.cells[0].length;
+        if (e.cells.some((r) => r.length !== width)) err(w, 'map rows are different lengths');
+        /* A colour limit the map cannot meet would be unwinnable. Work out the
+           real answer by brute force; these maps are small. */
+        const need = chromatic(e.cells);
+        if (need === null) err(w, 'map is too big to check');
+        else if (e.limit && e.limit < need) {
+          err(w, `allows ${e.limit} colours but the map needs ${need}`);
+        } else if (e.limit && e.limit > need) {
+          warn(w, `allows ${e.limit} colours but ${need} would do`);
+        }
+        if (need > 4) err(w, `map needs ${need} colours, which cannot happen on a real map`);
       } else if (e.type === 'build') {
         if (!['tenframe', 'array'].includes(e.mode)) err(w, `unknown build mode "${e.mode}"`);
         if (typeof e.answer !== 'number') err(w, 'answer must be a number');

@@ -701,6 +701,133 @@ const RENDERERS = {
     return { w, h, body: out.join('') };
   },
 
+  /* A graph: dots joined by lines. Used for Euler paths and for handshake
+     counting, which are the same picture asking two different questions. */
+  graph(spec) {
+    const nodes = spec.nodes || [];
+    const edges = spec.edges || [];
+    const pad = 26;
+    const w = (spec.w || 240) + pad * 2;
+    const h = (spec.h || 200) + pad * 2;
+    const px = (n) => pad + (n.x / 100) * (w - pad * 2);
+    const py = (n) => pad + (n.y / 100) * (h - pad * 2);
+    const out = [`<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`];
+    edges.forEach(([a, b]) => {
+      const A = nodes[a];
+      const B = nodes[b];
+      if (!A || !B) return;
+      out.push(`<path d="M${px(A).toFixed(1)} ${py(A).toFixed(1)} L${px(B).toFixed(1)} ${py(B).toFixed(1)}" stroke="${STROKE}" stroke-width="5" stroke-linecap="round" />`);
+    });
+    nodes.forEach((n) => {
+      const odd = spec.markOdd && edges.filter(([a, b]) => nodes[a] === n || nodes[b] === n).length % 2 === 1;
+      out.push(`<circle cx="${px(n).toFixed(1)}" cy="${py(n).toFixed(1)}" r="13" fill="${colour(odd ? 'orange' : (spec.c || 'blue'))}" stroke="${STROKE}" stroke-width="3.5" />`);
+      if (n.label != null) {
+        out.push(`<text x="${px(n).toFixed(1)}" y="${(py(n) - 24).toFixed(1)}" text-anchor="middle" font-size="19" font-weight="700" fill="${STROKE}" font-family="system-ui, sans-serif">${esc(String(n.label))}</text>`);
+      }
+    });
+    return { w, h, body: out.join('') };
+  },
+
+  /* Shapes laid edge to edge. Pentagons are drawn on the same centres as the
+     hexagons so the gaps they leave are obvious, which is the whole point. */
+  tiling(spec) {
+    const shape = spec.shape || 'hexagon';
+    const cols = spec.cols || 4;
+    const rows = spec.rows || 3;
+    const r = 26;
+    const out = [];
+    const fill = colour(spec.c || 'yellow');
+    const poly = (cx, cy, sides, rot) => {
+      const pts = [];
+      for (let i = 0; i < sides; i += 1) {
+        const a = (i / sides) * Math.PI * 2 + rot;
+        pts.push(`${(cx + r * Math.cos(a)).toFixed(1)},${(cy + r * Math.sin(a)).toFixed(1)}`);
+      }
+      return pts.join(' ');
+    };
+    let w;
+    let h;
+    const cells = [];
+    if (shape === 'square') {
+      const side = r * 1.6;
+      w = cols * side + 20;
+      h = rows * side + 20;
+      for (let y = 0; y < rows; y += 1) {
+        for (let x = 0; x < cols; x += 1) {
+          cells.push(`<rect x="${10 + x * side}" y="${10 + y * side}" width="${side}" height="${side}" fill="${fill}" stroke="${STROKE}" stroke-width="3" />`);
+        }
+      }
+    } else if (shape === 'triangle') {
+      const side = r * 1.7;
+      const ht = side * 0.866;
+      w = (cols / 2 + 0.5) * side + 20;
+      h = rows * ht + 20;
+      for (let y = 0; y < rows; y += 1) {
+        for (let x = 0; x < cols; x += 1) {
+          const up = (x + y) % 2 === 0;
+          const bx = 10 + (x / 2) * side;
+          const by = 10 + y * ht;
+          const pts = up
+            ? `${bx},${by + ht} ${bx + side},${by + ht} ${bx + side / 2},${by}`
+            : `${bx},${by} ${bx + side},${by} ${bx + side / 2},${by + ht}`;
+          cells.push(`<polygon points="${pts}" fill="${fill}" stroke="${STROKE}" stroke-width="3" />`);
+        }
+      }
+    } else {
+      /* hexagon, and pentagon drawn on the same lattice so the gaps show */
+      const sides = shape === 'pentagon' ? 5 : 6;
+      const dx = r * 1.732;
+      const dy = r * 1.5;
+      w = cols * dx + dx / 2 + 20;
+      h = rows * dy + r + 20;
+      for (let y = 0; y < rows; y += 1) {
+        for (let x = 0; x < cols; x += 1) {
+          const cx = 10 + r + x * dx + (y % 2 ? dx / 2 : 0);
+          const cy = 10 + r + y * dy;
+          cells.push(`<polygon points="${poly(cx, cy, sides, sides === 5 ? -Math.PI / 2 : Math.PI / 6)}" fill="${fill}" stroke="${STROKE}" stroke-width="3" />`);
+        }
+      }
+    }
+    out.push(`<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`);
+    out.push(cells.join(''));
+    return { w, h, body: out.join('') };
+  },
+
+  /* A map built from a grid of cells, where cells sharing a number are one
+     country. Borders are drawn only where the country changes, so a handful of
+     digits describes a whole map. */
+  map(spec) {
+    const grid = spec.cells || [[0]];
+    const rows = grid.length;
+    const cols = grid[0].length;
+    const cell = spec.cell || 46;
+    const pad = 8;
+    const w = cols * cell + pad * 2;
+    const h = rows * cell + pad * 2;
+    const paint = spec.paint || {};
+    const out = [`<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`];
+    for (let y = 0; y < rows; y += 1) {
+      for (let x = 0; x < cols; x += 1) {
+        const id = grid[y][x];
+        const f = paint[id] ? colour(paint[id]) : 'transparent';
+        out.push(`<rect x="${pad + x * cell}" y="${pad + y * cell}" width="${cell}" height="${cell}" fill="${f}" stroke="none" />`);
+      }
+    }
+    /* Only draw a line where two different countries meet, plus the outline. */
+    for (let y = 0; y < rows; y += 1) {
+      for (let x = 0; x < cols; x += 1) {
+        const id = grid[y][x];
+        const X = pad + x * cell;
+        const Y = pad + y * cell;
+        if (x === cols - 1 || grid[y][x + 1] !== id) out.push(`<path d="M${X + cell} ${Y} v${cell}" stroke="${STROKE}" stroke-width="3.5" stroke-linecap="round" />`);
+        if (y === rows - 1 || grid[y + 1][x] !== id) out.push(`<path d="M${X} ${Y + cell} h${cell}" stroke="${STROKE}" stroke-width="3.5" stroke-linecap="round" />`);
+        if (x === 0) out.push(`<path d="M${X} ${Y} v${cell}" stroke="${STROKE}" stroke-width="3.5" stroke-linecap="round" />`);
+        if (y === 0) out.push(`<path d="M${X} ${Y} h${cell}" stroke="${STROKE}" stroke-width="3.5" stroke-linecap="round" />`);
+      }
+    }
+    return { w, h, body: out.join('') };
+  },
+
   numberline(spec) {
     const min = spec.min == null ? 0 : spec.min;
     const max = spec.max == null ? 10 : spec.max;
@@ -806,6 +933,9 @@ export function describeFigure(spec) {
     case 'barchart': return `A bar graph titled ${spec.title || 'untitled'}.`;
     case 'pictograph': return 'A picture graph.';
     case 'balance':  return 'A balance scale with shapes on both sides.';
+    case 'graph': return `${(spec.nodes || []).length} dots joined by ${(spec.edges || []).length} lines.`;
+    case 'tiling': return `A floor tiled with ${spec.shape || 'hexagon'}s.`;
+    case 'map': return 'A map divided into countries.';
     case 'fraction': return `A shape cut into ${spec.parts || 2} equal parts with ${spec.shaded == null ? 1 : spec.shaded} shaded.`;
     case 'tenframe': return `A ten frame with ${spec.filled || 0} counters.`;
     case 'numberbond': return 'A number bond joining a whole to its parts.';

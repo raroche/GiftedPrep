@@ -68,14 +68,29 @@ export function renderGradeIndex() {
 /* ------------------------------------------------------------------ */
 
 export function renderTopicIndex(data, done = {}) {
-  const cards = data.topics.map((t, i) => {
+  /* Two tracks. Big ideas lead, because that is what a child comes back for,
+     and the number work sits underneath where it belongs. */
+  const tracks = data.tracks || [{ id: null, name: '', blurb: '' }];
+  return tracks.map((tr) => {
+    const inTrack = data.topics.filter((t) => (t.track || null) === tr.id);
+    if (!inTrack.length) return '';
+    return `<section class="gp-track">
+      ${tr.name ? `<h2 class="gp-track__head">${esc(tr.name)}</h2>` : ''}
+      ${tr.blurb ? `<p class="gp-track__sub">${esc(tr.blurb)}</p>` : ''}
+      ${topicCards(inTrack, data.grade, done)}
+    </section>`;
+  }).join('');
+}
+
+function topicCards(topics, grade, done) {
+  const cards = topics.map((t, i) => {
     const n = (done[t.id] || 0);
     const total = t.exercises.length;
     const bar = n
       ? `<span class="gp-topic__bar"><span style="width:${Math.round((n / total) * 100)}%"></span></span>`
       : '';
     return `
-      <a class="gp-card gp-card--topic" href="#/math/${data.grade}/${t.id}">
+      <a class="gp-card gp-card--topic" href="#/math/${grade}/${t.id}">
         <span class="gp-topic__num" aria-hidden="true">${i + 1}</span>
         <span class="gp-topic__emoji" aria-hidden="true">${t.emoji}</span>
         <span class="gp-card__title">${esc(t.name)}</span>
@@ -135,7 +150,8 @@ const TYPE_BADGE = {
   truefalse: { label: 'True or false', icon: '🤔' },
   build: { label: 'Build it', icon: '🧱' },
   paper: { label: 'Pencil job', icon: '✏️' },
-  collect: { label: 'Find them all', icon: '🔎' }
+  collect: { label: 'Find them all', icon: '🔎' },
+  colormap: { label: 'Colour it in', icon: '🎨' }
 };
 
 function badge(type) {
@@ -183,6 +199,14 @@ export function renderExercise(ex, index, total) {
       </div>
       <p class="gp-build__now">Tapped: <strong data-build-count>0</strong></p>
       <button type="button" class="gp-btn gp-btn--primary" data-check>Check it</button>`;
+  } else if (ex.type === 'colormap') {
+    body = `
+      <p class="gp-cm__rule">Tap a country to change its colour. Two countries that
+      share a <strong>border</strong> may not match. Touching at a corner is fine.</p>
+      <div class="gp-cm" data-colormap>${mapButtons(ex)}</div>
+      <p class="gp-cm__score">Colours used: <strong data-cm-used>0</strong>${
+        ex.limit ? ` &middot; allowed: ${ex.limit}` : ''}</p>
+      <button type="button" class="gp-btn gp-btn--primary" data-check>Check my map</button>`;
   } else if (ex.type === 'collect') {
     body = `
       ${numberBox('Add one', 'Add')}
@@ -215,6 +239,67 @@ function buildGrid(ex) {
   const cells = Array.from({ length: rows * cols }, (_, i) =>
     `<button type="button" class="gp-bcell" data-cell="${i}" aria-label="Dot ${i + 1}"></button>`).join('');
   return `<div class="gp-barray" style="grid-template-columns:repeat(${cols}, 1fr)">${cells}</div>`;
+}
+
+/* The palette a child colours with. Four is the whole point of the topic, so
+   there are exactly four to reach for. */
+export const MAP_COLOURS = ['red', 'blue', 'green', 'yellow'];
+
+/** Region ids that appear in a grid map, in reading order. */
+export function regionsOf(cells) {
+  const seen = [];
+  cells.forEach((row) => row.forEach((id) => { if (!seen.includes(id)) seen.push(id); }));
+  return seen;
+}
+
+/** Pairs of regions that share an edge. Corners do not count, which is exactly
+    the rule the four colour theorem is about. */
+export function adjacency(cells) {
+  const pairs = new Set();
+  for (let y = 0; y < cells.length; y += 1) {
+    for (let x = 0; x < cells[y].length; x += 1) {
+      const a = cells[y][x];
+      const right = cells[y][x + 1];
+      const down = cells[y + 1] ? cells[y + 1][x] : undefined;
+      [right, down].forEach((b) => {
+        if (b === undefined || b === a) return;
+        pairs.add([a, b].sort().join('|'));
+      });
+    }
+  }
+  return [...pairs].map((k) => k.split('|'));
+}
+
+function mapButtons(ex) {
+  const cells = ex.cells || [[0]];
+  const cols = cells[0].length;
+  const size = cols > 5 ? 46 : 56;
+  return `<div class="gp-cm__grid" style="grid-template-columns:repeat(${cols}, ${size}px)">${
+    cells.map((row, y) => row.map((id, x) => {
+      const right = row[x + 1] !== id;
+      const down = !cells[y + 1] || cells[y + 1][x] !== id;
+      const left = x === 0 || row[x - 1] !== id;
+      const up = y === 0 || cells[y - 1][x] !== id;
+      const edges = [up ? 'u' : '', right ? 'r' : '', down ? 'd' : '', left ? 'l' : ''].join('');
+      return `<button type="button" class="gp-cm__cell" data-region="${id}"
+        data-edge="${edges}" aria-label="Country ${id}"></button>`;
+    }).join('')).join('')
+  }</div>`;
+}
+
+/**
+ * Check a coloured map. Returns what went wrong so the feedback can name it,
+ * because "wrong" on its own teaches a six-year-old nothing.
+ */
+export function checkMap(ex, painted) {
+  const regions = regionsOf(ex.cells);
+  const missing = regions.filter((r) => !painted[r]);
+  if (missing.length) return { ok: false, reason: 'blank', count: missing.length };
+  const clash = adjacency(ex.cells).find(([a, b]) => painted[a] === painted[b]);
+  if (clash) return { ok: false, reason: 'clash', pair: clash };
+  const used = new Set(regions.map((r) => painted[r])).size;
+  if (ex.limit && used > ex.limit) return { ok: false, reason: 'toomany', used };
+  return { ok: true, used };
 }
 
 /* ------------------------------------------------------------------ */
@@ -268,5 +353,6 @@ export function feedbackHtml(ok, ex, seed = 0) {
 
 export default {
   loadGrade, renderGradeIndex, renderTopicIndex, renderTeach,
-  renderExercise, check, collectHit, feedbackHtml, READY_GRADES
+  renderExercise, check, collectHit, feedbackHtml, READY_GRADES,
+  checkMap, adjacency, regionsOf, MAP_COLOURS
 };

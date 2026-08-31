@@ -1812,3 +1812,40 @@ button, a, label, summary, [role="button"] {
 .gp-teach__go { margin-top: var(--gp-space-2); }
 .gp-teachwrap[open] .gp-teach__toggle-shut,
 .gp-teachwrap:not([open]) .gp-teach__toggle-open { display: none; }
+
+/* ---- colour the map ---- */
+
+.gp-cm__rule { margin: 0 0 var(--gp-space-4); color: var(--gp-ink-soft); }
+.gp-cm { display: flex; justify-content: center; margin-bottom: var(--gp-space-4); }
+.gp-cm__grid {
+  display: grid;
+  background: var(--gp-fig-canvas, #fdfbf7);
+  border: 3px solid var(--gp-ink);
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* Each square is one piece of a country. Borders are drawn only on the sides
+   where the country actually changes, so the countries read as whole shapes. */
+.gp-cm__cell {
+  aspect-ratio: 1;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: none;
+}
+.gp-cm__cell[data-edge*="u"] { border-top: 3px solid var(--gp-fig-stroke, #2f3542); }
+.gp-cm__cell[data-edge*="r"] { border-right: 3px solid var(--gp-fig-stroke, #2f3542); }
+.gp-cm__cell[data-edge*="d"] { border-bottom: 3px solid var(--gp-fig-stroke, #2f3542); }
+.gp-cm__cell[data-edge*="l"] { border-left: 3px solid var(--gp-fig-stroke, #2f3542); }
+.gp-cm__cell[data-paint="red"]    { background: var(--gp-fig-red, #d9614f); }
+.gp-cm__cell[data-paint="blue"]   { background: var(--gp-fig-blue, #3b82c4); }
+.gp-cm__cell[data-paint="green"]  { background: var(--gp-fig-green, #4f9d69); }
+.gp-cm__cell[data-paint="yellow"] { background: var(--gp-fig-yellow, #e0a83c); }
+.gp-cm__cell:focus-visible { outline: 3px solid var(--gp-focus); outline-offset: -3px; }
+.gp-cm__score { margin: 0 0 var(--gp-space-4); font-weight: 700; }
+
+/* Two tracks of topics on the grade page. */
+.gp-track { margin-top: var(--gp-space-8); }
+.gp-track__head { font-size: var(--gp-text-xl); font-weight: 800; margin: 0 0 var(--gp-space-1); }
+.gp-track__sub { color: var(--gp-ink-soft); margin: 0 0 var(--gp-space-4); }
