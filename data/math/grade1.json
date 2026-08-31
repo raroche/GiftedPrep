@@ -1914,26 +1914,29 @@
         },
         {
           "type": "paper",
-          "ask": "Fold paper in half twice, cut the folded edge, open it. How many mirror lines?",
+          "ask": "Fold paper in half, then in half the other way. Cut, open. How many mirror lines?",
           "answer": 2,
-          "hint": "Two folds gives two mirror lines. Try three folds after and see what happens.",
+          "hint": "Fold once across, once down, so the folds cross. Then cut shapes from the folded edges.",
           "why": "Two folds makes two mirror lines. Every fold you add before cutting doubles the matching, which is exactly how paper snowflakes are made."
         },
         {
           "type": "collect",
           "mode": "list",
           "valid": [
+            1,
+            2,
             3,
             4,
             5,
             6,
+            7,
             8,
             10,
             12
           ],
           "need": 4,
           "ask": "Type any number of mirror lines a shape can have.",
-          "why": "A shape with equal sides has one mirror line per side, so any of these is possible. Build a shape with 12 sides and it has 12."
+          "why": "Any of these is real. A letter A has 1. A rectangle has 2. A shape with equal sides has one mirror line per side, so a hexagon has 6 and a twelve-sided shape has 12."
         }
       ]
     },
