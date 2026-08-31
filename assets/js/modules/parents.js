@@ -378,7 +378,7 @@ ${callout('caution', 'An anxious parent plus frequent drilling is the harmful co
 </ol>
 
 ${callout('tip', 'The one sentence',
-  `<p style="font-size:var(--gp-text-lg);font-weight:700">
+  `<p data-style="font-size:var(--gp-text-lg);font-weight:700">
    "However today goes, nothing changes about you or about us."</p>
    <p>Say it once. Do not repeat it — repetition turns reassurance into evidence
    that there is something to worry about.</p>`)}

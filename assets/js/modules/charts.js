@@ -35,7 +35,7 @@ export function ring({ correct, total, size = 190 }) {
         </svg>
       </div>
       <div class="gp-center">
-        <div class="gp-ring__value">${correct}<span class="gp-muted" style="font-size:.5em"> / ${total}</span></div>
+        <div class="gp-ring__value">${correct}<span class="gp-muted" data-style="font-size:.5em"> / ${total}</span></div>
         <div class="gp-ring__label">puzzles right</div>
       </div>
     </div>`;
@@ -57,7 +57,7 @@ export function bars(rows) {
           <span class="gp-bar__value">${row.correct} of ${row.seen}</span>
         </div>
         <div class="gp-bar__track" role="img" aria-label="${escapeHtml(row.name)}: ${row.correct} of ${row.seen} correct">
-          <div class="gp-bar__fill" data-tone="${tone}" style="width:${pct}%"></div>
+          <div class="gp-bar__fill" data-tone="${tone}" data-style="width:${pct}%"></div>
         </div>
       </div>`;
   }).join('');

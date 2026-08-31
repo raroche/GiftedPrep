@@ -16,6 +16,7 @@ import { icon } from './modules/icons.js';
 import { ring, bars, escapeHtml } from './modules/charts.js';
 import { renderParentGuide } from './modules/parents.js';
 import * as mathlab from './modules/mathlab.js';
+import { applyStyles } from './modules/style.js';
 
 /* ------------------------------------------------------------------ */
 /* State                                                               */
@@ -32,6 +33,10 @@ const state = {
   /** Math Lab: the topic being worked through and where we are in it. */
   math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false }
 };
+
+/* Runtime styles cannot ride in a style attribute: the site's CSP drops those.
+   See modules/style.js. Call this after inserting any generated markup. */
+const paint = () => applyStyles(document.body);
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => Array.from(document.querySelectorAll(sel));
@@ -189,7 +194,8 @@ function renderHomeStats() {
     .slice(0, 6);
   $('#gp-home-stats-body').innerHTML =
     `<p class="gp-muted">${totals.answered} puzzles answered, ${totals.correct} right, across ${totals.sessions} session${totals.sessions === 1 ? '' : 's'}.</p>`
-    + `<div class="gp-bars" style="margin-top:var(--gp-space-4)">${bars(rows)}</div>`;
+    + `<div class="gp-bars" data-style="margin-top:var(--gp-space-4)">${bars(rows)}</div>`;
+    paint();
 }
 
 /* ------------------------------------------------------------------ */
@@ -540,6 +546,7 @@ function renderResults() {
   $('#gp-results-bars').innerHTML = bars(sum.categories.map((c) => ({
     name: c.name, correct: c.correct, seen: c.seen
   })));
+  paint();
 
   const missed = s.questions.filter((q) => sum.missed.includes(q.id));
   const card = $('#gp-review-card');
@@ -574,6 +581,7 @@ function renderParents() {
     body.innerHTML = renderParentGuide(state.manifest, lang);
     body.dataset.lang = lang;
     body.setAttribute('lang', lang);
+    paint();
   }
   $('#parents-title').textContent = GUIDE_TITLE[lang];
   document.getElementById('screen-parents').setAttribute('lang', lang);
@@ -622,6 +630,7 @@ async function renderMath(gradeArg, topicArg) {
     $('#screen-math .gp-page-lede').textContent =
       'Advanced maths, one grade at a time. Short lessons, then puzzles.';
     $('#gp-math-body').innerHTML = mathlab.renderGradeIndex();
+  paint();
     showScreen('math');
     return;
   }
@@ -645,6 +654,7 @@ async function renderMath(gradeArg, topicArg) {
     const all = mathDone();
     payload.topics.forEach((t) => { done[t.id] = all[`${grade}:${t.id}`] || 0; });
     $('#gp-math-body').innerHTML = mathlab.renderTopicIndex(payload, done);
+    paint();
     $('#math-title').textContent = payload.title;
     $('#screen-math .gp-page-lede').textContent = payload.blurb;
     showScreen('math');
@@ -664,6 +674,7 @@ function openTopic(grade, topic) {
   $('#mathtopic-title').textContent = topic.name;
   $('#gp-topic-big').textContent = topic.big;
   $('#gp-topic-teach').innerHTML = mathlab.renderTeach(topic);
+  paint();
   showScreen('mathtopic');
   showExercise();
 }
@@ -702,6 +713,7 @@ function showExercise() {
   $('#gp-exercise').innerHTML = mathlab.renderExercise(ex, index, total);
   $('#gp-ex-dots').innerHTML = exDots(topic, index);
   $('#gp-ex-next').hidden = false;
+  paint();
   $('#gp-ex-next').disabled = false;
   $('#gp-ex-prev').disabled = index === 0;
   const input = $('#gp-exercise [data-answer-input]');

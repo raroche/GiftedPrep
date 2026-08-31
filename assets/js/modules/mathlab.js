@@ -87,7 +87,7 @@ function topicCards(topics, grade, done) {
     const n = (done[t.id] || 0);
     const total = t.exercises.length;
     const bar = n
-      ? `<span class="gp-topic__bar"><span style="width:${Math.round((n / total) * 100)}%"></span></span>`
+      ? `<span class="gp-topic__bar"><span data-style="width:${Math.round((n / total) * 100)}%"></span></span>`
       : '';
     return `
       <a class="gp-card gp-card--topic" href="#/math/${grade}/${t.id}">
@@ -238,7 +238,7 @@ function buildGrid(ex) {
   const cols = ex.cols || 5;
   const cells = Array.from({ length: rows * cols }, (_, i) =>
     `<button type="button" class="gp-bcell" data-cell="${i}" aria-label="Dot ${i + 1}"></button>`).join('');
-  return `<div class="gp-barray" style="grid-template-columns:repeat(${cols}, 1fr)">${cells}</div>`;
+  return `<div class="gp-barray" data-style="grid-template-columns:repeat(${cols}, 1fr)">${cells}</div>`;
 }
 
 /* The palette a child colours with. Four is the whole point of the topic, so
@@ -274,7 +274,7 @@ function mapButtons(ex) {
   const cells = ex.cells || [[0]];
   const cols = cells[0].length;
   const size = cols > 5 ? 46 : 56;
-  return `<div class="gp-cm__grid" style="grid-template-columns:repeat(${cols}, ${size}px)">${
+  return `<div class="gp-cm__grid" data-style="grid-template-columns:repeat(${cols}, ${size}px)">${
     cells.map((row, y) => row.map((id, x) => {
       const right = row[x + 1] !== id;
       const down = !cells[y + 1] || cells[y + 1][x] !== id;

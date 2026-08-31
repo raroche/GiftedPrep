@@ -362,7 +362,7 @@ ${callout('caution', 'Un padre ansioso más ejercicios frecuentes es la combinac
 </ol>
 
 ${callout('tip', 'La frase',
-  `<p style="font-size:var(--gp-text-lg);font-weight:700">
+  `<p data-style="font-size:var(--gp-text-lg);font-weight:700">
    "Pase lo que pase hoy, nada cambia sobre ti ni sobre nosotros."</p>
    <p>Dila una vez. No la repitas — repetirla convierte el consuelo en evidencia de
    que hay algo de qué preocuparse.</p>`)}
