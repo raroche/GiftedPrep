@@ -2065,3 +2065,137 @@ button, a, label, summary, [role="button"] {
   font-weight: 600;
 }
 .gp-machine__row:first-child { background: var(--gp-surface-2); border-radius: var(--gp-radius-sm, 6px); }
+
+/* ================================================================== */
+/* Fun: name the flag                                                 */
+/* ================================================================== */
+
+.gp-backlink { margin-bottom: var(--gp-space-4); }
+.gp-grid--modes { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gp-space-4); }
+.gp-card--mode {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gp-space-2);
+  cursor: pointer;
+  text-align: left;
+}
+.gp-card--mode.is-selected { border-color: var(--gp-accent); box-shadow: 0 0 0 3px var(--gp-accent-line); }
+.gp-pill small { font-weight: 600; opacity: 0.7; margin-left: var(--gp-space-1); }
+.gp-btn--big { min-height: 60px; font-size: var(--gp-text-lg); padding-inline: var(--gp-space-8); }
+
+/* The score sits with the back link so both are reachable at any moment. */
+.gp-flagbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gp-space-3);
+  margin-bottom: var(--gp-space-5);
+}
+.gp-flagbar__score { display: flex; gap: var(--gp-space-3); margin: 0; }
+.gp-tally {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gp-space-2);
+  padding: var(--gp-space-2) var(--gp-space-4);
+  border-radius: var(--gp-radius-pill);
+  border: 2px solid var(--gp-line-strong);
+  font-weight: 800;
+  font-size: var(--gp-text-lg);
+}
+.gp-tally--right { color: var(--gp-good); border-color: var(--gp-good); }
+.gp-tally--wrong { color: var(--gp-retry); border-color: var(--gp-retry); }
+
+.gp-flagq { text-align: center; }
+/* A flag is a picture of a real thing, so it gets a plain light mount and a
+   border: several flags are mostly white and would vanish otherwise. */
+.gp-flagq__img {
+  display: flex;
+  justify-content: center;
+  margin: var(--gp-space-4) 0 var(--gp-space-5);
+}
+.gp-flagq__img img {
+  width: min(320px, 78vw);
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--gp-fig-canvas, #fdfbf7);
+  border: 3px solid var(--gp-ink);
+  border-radius: var(--gp-radius-md);
+  padding: var(--gp-space-2);
+}
+.gp-flagq__ask { font-size: var(--gp-text-lg); font-weight: 800; margin: 0 0 var(--gp-space-4); }
+.gp-flagq__choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--gp-space-3);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.gp-choice--flag { justify-content: center; text-align: center; min-height: 62px; }
+.gp-flagq__say { margin: var(--gp-space-5) 0 var(--gp-space-4); font-weight: 800; font-size: var(--gp-text-lg); }
+.gp-flagq__say.is-right { color: var(--gp-good); }
+.gp-flagq__say.is-wrong { color: var(--gp-retry); }
+
+.gp-flagdone { text-align: center; position: relative; }
+.gp-flagdone__head { font-size: var(--gp-text-2xl); font-weight: 800; margin: 0 0 var(--gp-space-2); }
+.gp-flagdone__score { font-size: var(--gp-text-lg); margin: 0 0 var(--gp-space-6); }
+.gp-flagdone__again {
+  display: flex; flex-wrap: wrap; gap: var(--gp-space-3);
+  justify-content: center; margin-top: var(--gp-space-6);
+}
+
+/* ---- the vault ---- */
+
+.gp-vault {
+  margin: var(--gp-space-6) auto;
+  padding: var(--gp-space-6);
+  max-width: 720px;
+  border: 3px solid var(--gp-accent);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface-2);
+}
+.gp-vault__badge {
+  display: inline-flex; align-items: center; gap: var(--gp-space-2);
+  margin: 0 0 var(--gp-space-2);
+  font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+  font-size: var(--gp-text-sm); color: var(--gp-accent);
+}
+.gp-vault__head { font-size: var(--gp-text-xl); margin: 0 0 var(--gp-space-2); }
+.gp-vault__told {
+  margin-top: var(--gp-space-5);
+  padding: var(--gp-space-4);
+  border-radius: var(--gp-radius-md);
+  border-left: 5px solid var(--gp-line-strong);
+  background: var(--gp-surface);
+  text-align: left;
+}
+.gp-vault__told.is-right { border-left-color: var(--gp-good); }
+.gp-vault__told.is-wrong { border-left-color: var(--gp-retry); }
+.gp-vault__name { font-weight: 800; margin: 0 0 var(--gp-space-2); }
+.gp-vault__story { margin: 0; color: var(--gp-ink-soft); }
+
+/* ---- the celebration ---- */
+
+.gp-confetti { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.gp-confetti span {
+  position: absolute;
+  top: -14px;
+  left: calc(var(--i) * 7.1%);
+  width: 11px; height: 15px;
+  border-radius: 2px;
+  background: var(--gp-accent);
+  animation: gp-fall 2.6s linear infinite;
+  animation-delay: calc(var(--i) * 0.13s);
+}
+.gp-confetti span:nth-child(3n)   { background: var(--gp-good); }
+.gp-confetti span:nth-child(3n+1) { background: var(--gp-fig-blue, #3b82c4); }
+@keyframes gp-fall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(340px) rotate(520deg); opacity: 0; }
+}
+/* Anyone who asked for less movement gets a still badge instead. */
+@media (prefers-reduced-motion: reduce) {
+  .gp-confetti span { animation: none; opacity: 0; }
+}

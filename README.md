@@ -64,6 +64,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Light and dark** | Follows the system theme, with a manual override |
 | **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
+| **Fun and games** | A section for games and memorising. First one is Name the Flag: all 250 country flags, with a vault of flags that no longer exist, opened by a perfect round |
 | **Math Lab** | A separate section for advanced maths, grades 1 to 6. 86 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, pi, three unsolved problems) and number skills |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
@@ -111,6 +112,31 @@ listening types stop after grade 2 and the quantitative types do not start
 until grade 3 — the same near-total break the real test has between Level C
 and Level D.
 </details>
+
+## Fun and games
+
+A section apart from both the test practice and the Math Lab, for games and
+memorising.
+
+**Name the Flag.** Every flag in the world, 250 of them. Choose 10, 25, 50 or
+all, then how they come: mixed up, by continent, or alphabetically. Wrong
+answers are drawn from the same continent, so "which of these four is Chad" is
+a real question rather than a giveaway.
+
+Name every flag in a round without one mistake and a vault opens: sixteen flags
+of countries that no longer exist, from the Soviet Union to the plain green
+flag Libya flew for 34 years. One is shown, and the wrong answers are chosen to
+be genuinely tempting. The Ottoman flag is offered against Turkey, Tunisia and
+Azerbaijan, which all use a crescent and star.
+
+Flags are bundled in the repository rather than loaded from a CDN, because the
+site's own Content-Security-Policy is `img-src 'self'` and a remote flag would
+be blocked. Country flags come from [flag-icons](https://github.com/lipis/flag-icons)
+(MIT), names and regions from the world-countries dataset, and the historical
+flags from Wikimedia Commons, where every one used here is public domain.
+`tools/flagcheck.mjs` checks the join: every country has a real image file,
+every bundled image is used, no two countries share a name, and every vault
+answer matches the flag it is shown against.
 
 ## Math Lab
 
@@ -284,6 +310,7 @@ GiftedPrep/
 ├── assets/
 │   ├── css/design-system.css   tokens, components, light + dark, print
 │   ├── img/                    favicon, touch icon, social card
+│   │   └── flags/              250 country flags plus 16 historical ones
 │   └── js/
 │       ├── app.js              state, router, event wiring
 │       └── modules/
@@ -295,16 +322,19 @@ GiftedPrep/
 │           ├── charts.js       results ring and bars
 │           ├── icons.js        inline SVG icon set
 │           ├── parents.js      the Parent Guide
-│           └── mathlab.js      Math Lab lessons and exercise engine
+│           ├── mathlab.js      Math Lab lessons and exercise engine
+│           └── flags.js        the flag game
 ├── data/
 │   ├── manifest.json           tests, grades, category index
 │   ├── cogat/  nnat/  olsat/   one JSON file per category
-│   └── math/                   Math Lab topics, one file per grade
+│   ├── math/                   Math Lab topics, one file per grade
+│   └── fun/                    flag game data: countries, continents, past flags
 ├── docs/research/              the sources behind every question
 └── tools/
     ├── validate.mjs            checks the whole bank
     ├── mathcheck.mjs           checks the Math Lab data
     ├── mathverify.mjs          recomputes every Math Lab answer from scratch
+    ├── flagcheck.mjs           checks the flag data against the image files
     ├── serve.py                dev server with the production CSP
     └── _authoring.py           helpers used to write the JSON by hand
 ```

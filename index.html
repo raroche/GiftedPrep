@@ -56,6 +56,10 @@
     <button type="button" class="gp-btn gp-btn--icon gp-btn--ghost" id="gp-theme-toggle" aria-label="Switch to dark mode">
       <span data-icon="moon"></span>
     </button>
+    <a class="gp-btn gp-btn--quiet" href="#/fun" id="gp-fun-link">
+      <span class="gp-btn__icon" data-icon="sparkle" aria-hidden="true"></span>
+      <span class="gp-btn__label">Fun</span>
+    </a>
     <a class="gp-btn gp-btn--quiet" href="#/math" id="gp-math-link">
       <span data-icon="calc"></span><span class="gp-btn__label">Math Lab</span>
     </a>
@@ -109,6 +113,11 @@
           <span class="gp-card__icon" data-icon="sort"></span>
           <span class="gp-card__title">Pick a puzzle type</span>
           <span class="gp-card__sub">All 31 kinds of puzzle in one list. Practice just one of them.</span>
+        </a>
+        <a class="gp-card gp-card--action" href="#/fun">
+          <span class="gp-card__icon" data-icon="sparkle"></span>
+          <span class="gp-card__title">Fun and games</span>
+          <span class="gp-card__sub">Name the flags of the world. More games to come.</span>
         </a>
         <a class="gp-card gp-card--action" href="#/math">
           <span class="gp-card__icon" data-icon="calc"></span>
@@ -297,6 +306,48 @@
         <span class="gp-dots" id="gp-ex-dots"></span>
         <button type="button" class="gp-btn gp-btn--primary" id="gp-ex-next">Next &rarr;</button>
       </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- Fun: the hub                                                   -->
+  <!-- ============================================================== -->
+  <section class="gp-screen" id="screen-fun" aria-labelledby="fun-title">
+    <div class="gp-container">
+      <h1 class="gp-page-title" id="fun-title">Fun and games</h1>
+      <p class="gp-page-lede">Games for remembering things. No scores are kept anywhere but on this device.</p>
+      <div class="gp-grid gp-grid--start" id="gp-fun-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- Fun: flag game setup                                           -->
+  <!-- ============================================================== -->
+  <section class="gp-screen" id="screen-flagsetup" aria-labelledby="flagsetup-title">
+    <div class="gp-container">
+      <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
+      <h1 class="gp-page-title" id="flagsetup-title">Name the Flag</h1>
+      <p class="gp-page-lede">Every flag in the world. Choose how many and which ones.</p>
+      <div class="gp-card gp-card--setup" id="gp-flag-setup"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- Fun: flag game                                                 -->
+  <!-- ============================================================== -->
+  <section class="gp-screen" id="screen-flaggame" aria-labelledby="flaggame-title">
+    <div class="gp-container">
+      <div class="gp-flagbar">
+        <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun/flags">&larr; Change the round</a>
+        <p class="gp-flagbar__score">
+          <span class="gp-tally gp-tally--right"><span aria-hidden="true">&#10003;</span>
+            <strong data-flag-right>0</strong><span class="gp-sr-only">right</span></span>
+          <span class="gp-tally gp-tally--wrong"><span aria-hidden="true">&#10007;</span>
+            <strong data-flag-wrong>0</strong><span class="gp-sr-only">wrong</span></span>
+        </p>
+      </div>
+      <h1 class="gp-sr-only" id="flaggame-title">Name the flag</h1>
+      <div id="gp-flag-body" aria-live="polite"></div>
     </div>
   </section>
 

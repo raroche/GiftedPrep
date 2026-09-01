@@ -17,6 +17,7 @@ import { ring, bars, escapeHtml } from './modules/charts.js';
 import { renderParentGuide } from './modules/parents.js';
 import * as mathlab from './modules/mathlab.js';
 import { applyStyles } from './modules/style.js';
+import * as flags from './modules/flags.js';
 
 /* ------------------------------------------------------------------ */
 /* State                                                               */
@@ -31,6 +32,12 @@ const state = {
   answered: false,
   audioUnlocked: false,
   /** Math Lab: the topic being worked through and where we are in it. */
+  /* The flag game. `setup` is what the child picked, `round` is the run. */
+  flags: {
+    data: null,
+    setup: { count: 10, mode: 'random', continents: [] },
+    round: null
+  },
   math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0, crossed: new Set(), shift: 0, nim: null, doors: null }
 };
 
@@ -108,7 +115,8 @@ function speakQuestion() {
 /* Screens                                                             */
 /* ------------------------------------------------------------------ */
 
-const SCREENS = ['home', 'tests', 'categories', 'quiz', 'results', 'parents', 'math', 'mathtopic', 'error'];
+const SCREENS = ['home', 'tests', 'categories', 'quiz', 'results', 'parents', 'math', 'mathtopic',
+  'fun', 'flagsetup', 'flaggame', 'error'];
 
 function showScreen(name) {
   SCREENS.forEach((s) => {
@@ -1094,6 +1102,168 @@ function stepExercise(delta) {
 }
 
 /* ------------------------------------------------------------------ */
+/* Fun: name the flag                                                  */
+/* ------------------------------------------------------------------ */
+
+const FUN_GAMES = [
+  { id: 'flags', icon: '🚩', name: 'Name the Flag',
+    sub: 'Every flag in the world, and a locked vault of flags that no longer exist.' }
+];
+
+function renderFunHub() {
+  $('#gp-fun-grid').innerHTML = FUN_GAMES.map((g) => `
+    <a class="gp-card gp-card--action" href="#/fun/${g.id}">
+      <span class="gp-card__icon" aria-hidden="true">${g.icon}</span>
+      <span class="gp-card__title">${escapeHtml(g.name)}</span>
+      <span class="gp-card__sub">${escapeHtml(g.sub)}</span>
+    </a>`).join('');
+  showScreen('fun');
+}
+
+async function renderFun(game, step) {
+  if (!game) { renderFunHub(); return; }
+  if (game !== 'flags') { renderFunHub(); return; }
+  try {
+    if (!state.flags.data) state.flags.data = await flags.loadFlags();
+  } catch (err) {
+    console.error(err);
+    showError('The flags could not be loaded.');
+    return;
+  }
+  if (step === 'play' && state.flags.round) { drawFlagQuestion(); return; }
+  drawFlagSetup();
+}
+
+function drawFlagSetup() {
+  $('#gp-flag-setup').innerHTML = flags.renderSetup(state.flags.data, state.flags.setup);
+  paint();
+  showScreen('flagsetup');
+}
+
+function startFlagRound() {
+  const setup = state.flags.setup;
+  const list = flags.buildRound(state.flags.data, setup);
+  if (!list.length) return;
+  state.flags.round = {
+    list, index: 0, right: 0, wrong: 0, answered: false,
+    choices: null, vault: null, vaultDone: false
+  };
+  location.hash = '#/fun/flags/play';
+  drawFlagQuestion();
+}
+
+function flagScore() {
+  const r = state.flags.round;
+  $('[data-flag-right]').textContent = r.right;
+  $('[data-flag-wrong]').textContent = r.wrong;
+}
+
+function drawFlagQuestion() {
+  const r = state.flags.round;
+  if (!r) { drawFlagSetup(); return; }
+  if (r.index >= r.list.length) { drawFlagResults(); return; }
+  const country = r.list[r.index];
+  r.choices = flags.makeChoices(country, state.flags.data);
+  r.answered = false;
+  $('#gp-flag-body').innerHTML = flags.renderQuestion(country, r.choices, r.index, r.list.length);
+  flagScore();
+  showScreen('flaggame');
+}
+
+function answerFlag(code) {
+  const r = state.flags.round;
+  if (!r || r.answered) return;
+  r.answered = true;
+  const country = r.list[r.index];
+  const right = code === country.code;
+  if (right) r.right += 1; else r.wrong += 1;
+  flagScore();
+
+  $$('#gp-flag-body [data-flagpick]').forEach((b) => {
+    b.disabled = true;
+    if (b.dataset.flagpick === country.code) b.classList.add('is-correct');
+    else if (b.dataset.flagpick === code) b.classList.add('is-incorrect');
+  });
+  $$('#gp-flag-body .gp-choice.is-correct .gp-choice__mark').forEach((m) => {
+    m.innerHTML = icon('check', { size: 20 });
+  });
+  $$('#gp-flag-body .gp-choice.is-incorrect .gp-choice__mark').forEach((m) => {
+    m.innerHTML = icon('cross', { size: 20 });
+  });
+
+  const say = document.createElement('p');
+  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`;
+  say.textContent = right
+    ? `Yes. That is ${country.name}.`
+    : `No, that one is ${country.name}.`;
+  $('#gp-flag-body .gp-flagq').appendChild(say);
+
+  const next = document.createElement('button');
+  next.type = 'button';
+  next.className = 'gp-btn gp-btn--primary gp-btn--big';
+  next.dataset.action = 'flag-next';
+  next.textContent = r.index + 1 >= r.list.length ? 'See how you did →' : 'Next flag →';
+  $('#gp-flag-body .gp-flagq').appendChild(next);
+  next.focus({ preventScroll: true });
+}
+
+function drawFlagResults() {
+  const r = state.flags.round;
+  const total = r.list.length;
+  const perfect = r.right === total && total > 0;
+  /* A clean sweep opens the vault. One flag from the past, once. */
+  if (perfect && !r.vaultDone) {
+    const past = state.flags.data.past;
+    r.vault = past[Math.floor(Math.random() * past.length)];
+  }
+  $('#gp-flag-body').innerHTML = `
+    <div class="gp-flagdone${perfect ? ' is-perfect' : ''}">
+      ${perfect ? '<div class="gp-confetti" aria-hidden="true">' +
+        Array.from({ length: 14 }, (_, i) => `<span data-style="--i:${i}"></span>`).join('') + '</div>' : ''}
+      <h2 class="gp-flagdone__head">${perfect ? 'Every single one.' : 'Round finished.'}</h2>
+      <p class="gp-flagdone__score"><strong>${r.right}</strong> right,
+        <strong>${r.wrong}</strong> wrong, out of ${total}.</p>
+      ${perfect && r.vault ? flags.renderVault(r.vault) : ''}
+      ${!perfect ? `<p class="gp-muted">Name every flag in a round without a single mistake and
+        something locked opens up.</p>` : ''}
+      <div class="gp-flagdone__again">
+        <button type="button" class="gp-btn gp-btn--primary" data-action="flag-again">Play again</button>
+        <a class="gp-btn gp-btn--ghost" href="#/fun/flags">Change the round</a>
+      </div>
+    </div>`;
+  paint();
+  flagScore();
+  showScreen('flaggame');
+}
+
+function answerVault(pick) {
+  const r = state.flags.round;
+  if (!r || !r.vault || r.vaultDone) return;
+  r.vaultDone = true;
+  const entry = r.vault;
+  const right = Number(pick) === entry.answer;
+  $$('#gp-flag-body [data-vaultpick]').forEach((b) => {
+    b.disabled = true;
+    if (Number(b.dataset.vaultpick) === entry.answer) b.classList.add('is-correct');
+    else if (Number(b.dataset.vaultpick) === Number(pick)) b.classList.add('is-incorrect');
+  });
+  $$('#gp-flag-body .gp-choice.is-correct .gp-choice__mark').forEach((m) => {
+    m.innerHTML = icon('check', { size: 20 });
+  });
+  $$('#gp-flag-body .gp-choice.is-incorrect .gp-choice__mark').forEach((m) => {
+    m.innerHTML = icon('cross', { size: 20 });
+  });
+
+  const box = document.createElement('div');
+  box.className = `gp-vault__told ${right ? 'is-right' : 'is-wrong'}`;
+  box.innerHTML = `
+    <p class="gp-vault__name">${right ? 'Got it. ' : ''}${escapeHtml(entry.name)},
+      ${escapeHtml(entry.years)}.</p>
+    <p class="gp-vault__story">${escapeHtml(entry.story)}</p>`;
+  $('#gp-flag-body .gp-vault').appendChild(box);
+}
+
+/* ------------------------------------------------------------------ */
 /* Router                                                              */
 /* ------------------------------------------------------------------ */
 
@@ -1126,6 +1296,9 @@ function route() {
       if (!state.session) { location.hash = '#/home'; return; }
       renderResults();
       showScreen('results');
+      break;
+    case 'fun':
+      renderFun(parts[1], parts[2]);
       break;
     case 'math':
       renderMath(parts[1], parts[2]);
@@ -1186,6 +1359,33 @@ function onClick(ev) {
     return;
   }
 
+  /* ---- flag game ---- */
+  const fc = ev.target.closest('[data-flagcount]');
+  if (fc) { state.flags.setup.count = fc.dataset.flagcount; drawFlagSetup(); return; }
+
+  const fm = ev.target.closest('[data-flagmode]');
+  if (fm) {
+    state.flags.setup.mode = fm.dataset.flagmode;
+    if (fm.dataset.flagmode !== 'continent') state.flags.setup.continents = [];
+    drawFlagSetup();
+    return;
+  }
+
+  const fk = ev.target.closest('[data-flagcont]');
+  if (fk) {
+    const id = fk.dataset.flagcont;
+    const on = state.flags.setup.continents;
+    state.flags.setup.continents = on.includes(id) ? on.filter((x) => x !== id) : on.concat(id);
+    drawFlagSetup();
+    return;
+  }
+
+  const flagPick = ev.target.closest('[data-flagpick]');
+  if (flagPick) { answerFlag(flagPick.dataset.flagpick); return; }
+
+  const vault = ev.target.closest('[data-vaultpick]');
+  if (vault) { answerVault(vault.dataset.vaultpick); return; }
+
   if (ev.target.closest('[data-run]')) { runMachine(); return; }
 
   const take = ev.target.closest('[data-take]');
@@ -1228,6 +1428,18 @@ function onClick(ev) {
   const action = ev.target.closest('[data-action]');
   if (!action) return;
   switch (action.dataset.action) {
+    case 'flag-start':
+      startFlagRound();
+      break;
+    case 'flag-next': {
+      const r = state.flags.round;
+      r.index += 1;
+      drawFlagQuestion();
+      break;
+    }
+    case 'flag-again':
+      startFlagRound();
+      break;
     case 'quick-start':
       startSession({ limit: questionCount() });
       break;
