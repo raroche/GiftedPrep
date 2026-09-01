@@ -1,0 +1,1292 @@
+{
+  "grade": 6,
+  "title": "Grade 6 Math Lab",
+  "blurb": "14 topics. Each one is a short lesson you can see, then puzzles to try.",
+  "tracks": [
+    {
+      "id": "wonders",
+      "name": "Big ideas",
+      "blurb": "Real mathematics. A trick a nine-year-old invented, a puzzle that is provably impossible, and a question open since 1742."
+    },
+    {
+      "id": "skills",
+      "name": "Number skills",
+      "blurb": "Negatives, ratios, exponents and the start of algebra."
+    }
+  ],
+  "topics": [
+    {
+      "id": "gauss-trick",
+      "track": "wonders",
+      "name": "Gauss's Trick",
+      "emoji": "➕",
+      "big": "Add 1 to 100 in about five seconds.",
+      "parentNote": "The story is that Gauss, aged about nine, was set this as busywork and answered almost immediately. The pairing argument generalises to n(n+1)/2, which is the handshake formula from grade 1 arriving in algebraic form.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Add every number from 1 to 100. Most people start plodding."
+        },
+        {
+          "t": "say",
+          "text": "Instead, fold the list. Pair the first with the last."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "1",
+                "2",
+                "3",
+                "..."
+              ],
+              [
+                "100",
+                "99",
+                "98",
+                "..."
+              ],
+              [
+                "101",
+                "101",
+                "101",
+                "..."
+              ]
+            ],
+            "cell": 62
+          },
+          "cap": "Every pair makes 101. There are 50 pairs."
+        },
+        {
+          "t": "say",
+          "text": "50 pairs of 101 is 5,050. Done."
+        },
+        {
+          "t": "tip",
+          "text": "The story goes that Gauss did this at about nine years old, while his class was still adding."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "1 + 100 = ?",
+          "answer": 101,
+          "why": "101, and so does 2 + 99, and 3 + 98. Every pair from the outside in gives the same total."
+        },
+        {
+          "type": "number",
+          "ask": "How many pairs are there in 1 to 100?",
+          "answer": 50,
+          "why": "50. A hundred numbers folded in half gives fifty pairs, with nothing left over."
+        },
+        {
+          "type": "number",
+          "ask": "50 x 101 = ?",
+          "answer": 5050,
+          "why": "5050. That is the sum of every number from 1 to 100, and the whole job took two multiplications."
+        },
+        {
+          "type": "number",
+          "ask": "Add 1 to 10 the same way. What is the total?",
+          "answer": 55,
+          "why": "55. Five pairs of 11. And 55 is a triangle number, the same ones from the handshake puzzle."
+        },
+        {
+          "type": "number",
+          "ask": "Add 1 to 20.",
+          "answer": 210,
+          "why": "210. Ten pairs of 21. The rule is: how many, times one more than how many, halved."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The trick still works when there is an odd count, like 1 to 9.",
+          "answer": true,
+          "why": "True. 1 to 9 pairs into four 10s with the 5 left in the middle, so 40 and 5 is 45. The middle number is always half of the pair total."
+        },
+        {
+          "type": "paper",
+          "ask": "Add 1 to 30 using the pairing trick.",
+          "answer": 465,
+          "hint": "15 pairs, each making 31.",
+          "why": "465. Fifteen 31s. The general rule is n times (n+1) divided by 2, and that is exactly the handshake formula wearing algebra."
+        }
+      ]
+    },
+    {
+      "id": "broken-chessboard",
+      "track": "wonders",
+      "name": "The Broken Board",
+      "emoji": "♟️",
+      "big": "Two squares missing, and now it is impossible.",
+      "parentNote": "The mutilated chessboard. The colouring argument is a complete, airtight impossibility proof that a child can hold entirely in their head, which is rare and worth meeting.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A chessboard has 64 squares. A domino covers exactly 2."
+        },
+        {
+          "t": "say",
+          "text": "32 dominoes cover it perfectly. Easy."
+        },
+        {
+          "t": "say",
+          "text": "Now cut off two opposite corners. 62 squares left, so 31 dominoes should fit."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                0,
+                1,
+                2,
+                1
+              ],
+              [
+                1,
+                2,
+                1,
+                2
+              ],
+              [
+                2,
+                1,
+                2,
+                1
+              ],
+              [
+                1,
+                2,
+                1,
+                0
+              ]
+            ],
+            "tones": [
+              "blue",
+              "yellow"
+            ]
+          },
+          "cap": "The two missing corners are both the same colour."
+        },
+        {
+          "t": "say",
+          "text": "Every domino covers one of each colour. Always. No exceptions."
+        },
+        {
+          "t": "tip",
+          "text": "You removed two of the same colour, so 30 of one and 32 of the other are left. No arrangement can ever work."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many squares on a chessboard?",
+          "answer": 64,
+          "why": "64, an 8 by 8 grid. Half are dark and half are light, so 32 each."
+        },
+        {
+          "type": "number",
+          "ask": "How many squares does one domino cover?",
+          "answer": 2,
+          "why": "2, and here is the key: always one dark and one light, because neighbouring squares never match."
+        },
+        {
+          "type": "number",
+          "ask": "Cut off 2 corners. How many squares are left?",
+          "answer": 62,
+          "why": "62. So 31 dominoes would be exactly the right number, which is what makes the puzzle feel possible."
+        },
+        {
+          "type": "number",
+          "ask": "Opposite corners are the same colour. How many of that colour remain?",
+          "answer": 30,
+          "why": "30, with 32 of the other. Once the counts differ, the puzzle is dead."
+        },
+        {
+          "type": "truefalse",
+          "ask": "31 dominoes can cover the board with two opposite corners removed.",
+          "answer": false,
+          "why": "False, and not because nobody has found a way. 31 dominoes must cover 31 of each colour, and only 30 of one colour exist. It is impossible, proved."
+        },
+        {
+          "type": "truefalse",
+          "ask": "If you remove two corners of DIFFERENT colours, it becomes possible.",
+          "answer": true,
+          "why": "True. With 31 of each colour left it can always be done. The colouring is not just an excuse, it is exactly what decides it."
+        },
+        {
+          "type": "paper",
+          "ask": "Draw an 8 by 8 grid, colour it like a chessboard, cross out two opposite corners. How many dark squares are left?",
+          "answer": 30,
+          "hint": "Opposite corners always share a colour. Count carefully.",
+          "why": "30. Try to cover it with dominoes and you will always be left with two squares of the same colour, far apart. The counting told you that before you started."
+        }
+      ]
+    },
+    {
+      "id": "minus-times-minus",
+      "track": "wonders",
+      "name": "Minus Times Minus",
+      "emoji": "➖",
+      "big": "Why does taking away a debt make you richer?",
+      "parentNote": "MA.6.NSO.4.2. Most children are told the rule and never shown a reason. The pattern argument is a genuine one, and the debt story makes it concrete.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Watch the pattern. 3 x 3 is 9, 3 x 2 is 6, 3 x 1 is 3, 3 x 0 is 0."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              9,
+              6,
+              3,
+              0,
+              -3
+            ],
+            "c": "blue"
+          },
+          "cap": "Each step down subtracts 3. Carry on past zero."
+        },
+        {
+          "t": "say",
+          "text": "So 3 x -1 must be -3. The pattern gives us no choice."
+        },
+        {
+          "t": "say",
+          "text": "Now fix the -1 and count down the other side: -1 x 3 is -3, -1 x 2 is -2, -1 x 1 is -1, -1 x 0 is 0."
+        },
+        {
+          "t": "tip",
+          "text": "Each step now ADDS 1, so -1 x -1 has to be 1. Or: taking away a debt of £5 leaves you £5 better off."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "3 x -2 = ?",
+          "answer": -6,
+          "why": "-6. Three lots of a debt of two is a debt of six."
+        },
+        {
+          "type": "number",
+          "ask": "-4 x -3 = ?",
+          "answer": 12,
+          "why": "12. Removing four debts of three leaves you twelve better off, so it must be positive."
+        },
+        {
+          "type": "number",
+          "ask": "-7 + 3 = ?",
+          "answer": -4,
+          "why": "-4. Start seven below zero and climb three. Adding and multiplying follow different rules, which is where most slips happen."
+        },
+        {
+          "type": "number",
+          "ask": "5 - (-3) = ?",
+          "answer": 8,
+          "why": "8. Taking away a debt of three makes you three better off, so it is the same as adding."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A negative times a negative is always positive.",
+          "answer": true,
+          "why": "True. It is forced by the pattern: if it were anything else, arithmetic would stop working consistently."
+        },
+        {
+          "type": "number",
+          "ask": "-2 x -2 x -2 = ?",
+          "answer": -8,
+          "why": "-8. The first two make 4, then times -2 gives -8. An odd number of minus signs leaves a minus."
+        },
+        {
+          "type": "paper",
+          "ask": "Work out -1 x -1 x -1 x -1 on paper.",
+          "answer": 1,
+          "hint": "Do them two at a time.",
+          "why": "1. Four minus signs, an even number, so they cancel in pairs. Count the minus signs: even gives plus, odd gives minus."
+        }
+      ]
+    },
+    {
+      "id": "goldbach",
+      "track": "wonders",
+      "name": "Goldbach's Guess",
+      "emoji": "🧩",
+      "big": "Every even number is two primes added. Probably.",
+      "parentNote": "Goldbach's conjecture, written in a letter in 1742 and still open. It has been checked by computer past four quintillion. A child can test it in a notebook and be doing exactly what everybody else has managed.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Take any even number bigger than 2. Try to write it as two primes added."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              "4=2+2",
+              "6=3+3",
+              "8=3+5",
+              "10=3+7"
+            ],
+            "c": "green",
+            "boxW": 96
+          },
+          "cap": "It keeps working."
+        },
+        {
+          "t": "say",
+          "text": "Christian Goldbach wrote this in a letter in 1742."
+        },
+        {
+          "t": "say",
+          "text": "Computers have checked past four quintillion. It always works."
+        },
+        {
+          "t": "tip",
+          "text": "Nobody has proved it. You can test it in a notebook and you are doing exactly what everyone else has managed: checking."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "12 = 5 + ?",
+          "answer": 7,
+          "why": "7. Both 5 and 7 are prime, so 12 works."
+        },
+        {
+          "type": "number",
+          "ask": "18 = 5 + ?",
+          "answer": 13,
+          "why": "13, and both are prime. 18 also works as 7 + 11, so some numbers have several ways."
+        },
+        {
+          "type": "number",
+          "ask": "20 = 3 + ?",
+          "answer": 17,
+          "why": "17. Also 7 + 13. The bigger the even number, the more ways there usually are."
+        },
+        {
+          "type": "number",
+          "ask": "How many ways can 10 be written as two primes? (3+7 and 5+5)",
+          "answer": 2,
+          "why": "2. Order does not count as different, so 3+7 and 7+3 are the same way."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Somebody has proved Goldbach's guess.",
+          "answer": false,
+          "why": "False. It has stood since 1742. Every even number anyone has ever tested works, and nobody can show it must."
+        },
+        {
+          "type": "number",
+          "ask": "28 = 11 + ?",
+          "answer": 17,
+          "why": "17. Also 5 + 23. Notice 28 turns up here and as a perfect number in grade 3, for completely unrelated reasons."
+        },
+        {
+          "type": "paper",
+          "ask": "Find two primes that add to 50.",
+          "answer": 47,
+          "hint": "Try 3 first, then 7, then 13. Type the bigger prime you find.",
+          "why": "3 + 47 works, and so do 7 + 43, 13 + 37 and 19 + 31. Four different ways for one number, and still nobody can prove it never fails."
+        }
+      ]
+    },
+    {
+      "id": "birthday-surprise",
+      "track": "wonders",
+      "name": "The Birthday Surprise",
+      "emoji": "🎂",
+      "big": "23 people, and it is better than even odds.",
+      "parentNote": "The birthday problem. The trick to seeing it is counting pairs rather than people, which is the handshake number from grade 1 turning up in probability.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "How many people before two share a birthday, more likely than not?"
+        },
+        {
+          "t": "say",
+          "text": "Most people guess about 180. The answer is 23."
+        },
+        {
+          "t": "say",
+          "text": "The trick is that it is not about you. It is about PAIRS."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              1,
+              3,
+              6,
+              10,
+              15
+            ],
+            "c": "teal"
+          },
+          "cap": "The handshake numbers again. 23 people make 253 pairs."
+        },
+        {
+          "t": "tip",
+          "text": "253 chances for a match, not 23. That is why it happens so much sooner than it feels like it should."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many pairs can 4 people make?",
+          "answer": 6,
+          "why": "6, the handshake number. Everyone pairs with everyone else exactly once."
+        },
+        {
+          "type": "number",
+          "ask": "How many pairs can 5 people make?",
+          "answer": 10,
+          "why": "10. Each new person pairs with everyone already there, so the count climbs fast."
+        },
+        {
+          "type": "number",
+          "ask": "How many pairs can 10 people make?",
+          "answer": 45,
+          "why": "45, from 9 + 8 + 7 + ... + 1. Ten people, but forty-five chances of a match."
+        },
+        {
+          "type": "number",
+          "ask": "How many days in a year, ignoring leap years?",
+          "answer": 365,
+          "why": "365. It feels like you would need hundreds of people, and the pairs are why you do not."
+        },
+        {
+          "type": "truefalse",
+          "ask": "In a class of 30 it is more likely than not that two share a birthday.",
+          "answer": true,
+          "why": "True, about 70% likely. 30 people make 435 pairs, and that many chances is plenty."
+        },
+        {
+          "type": "number",
+          "ask": "23 people. How many pairs? (23 x 22 ÷ 2)",
+          "answer": 253,
+          "why": "253. That is the number that matters, not 23. Once you count pairs, the answer stops feeling strange."
+        },
+        {
+          "type": "paper",
+          "ask": "Ask 25 people their birth month. Did two share? Type the number of pairs 25 people make.",
+          "answer": 300,
+          "hint": "25 times 24 divided by 2.",
+          "why": "300 pairs. With only 12 months, sharing a month is almost certain. This is the pigeonhole principle from grade 1 and the birthday problem meeting up."
+        }
+      ]
+    },
+    {
+      "id": "shadows",
+      "track": "wonders",
+      "name": "Shadows and Pyramids",
+      "emoji": "📏",
+      "big": "Measure a pyramid with a stick.",
+      "parentNote": "Thales measuring the Great Pyramid by its shadow, around 600 BC. Grade 6 does ratios and unit rates (MA.6.AR.3.x), which is exactly the machinery this needs.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "At one moment of the day, your shadow is exactly as long as you are tall."
+        },
+        {
+          "t": "say",
+          "text": "At that moment, every shadow is as long as the thing casting it."
+        },
+        {
+          "t": "say",
+          "text": "So measure the pyramid's shadow and you have measured the pyramid."
+        },
+        {
+          "t": "say",
+          "text": "Thales is said to have done this about 2,600 years ago."
+        },
+        {
+          "t": "tip",
+          "text": "Even at other times it works. If your shadow is twice your height, so is everything else's."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "A 2 m stick casts a 2 m shadow. A tree casts 12 m. How tall is the tree?",
+          "answer": 12,
+          "why": "12 m. Shadow equals height for everything at that moment, so the tree's shadow is its height."
+        },
+        {
+          "type": "number",
+          "ask": "A 2 m stick casts a 4 m shadow. A tree casts 20 m. How tall?",
+          "answer": 10,
+          "why": "10 m. Shadows are double, so the tree is half its shadow."
+        },
+        {
+          "type": "number",
+          "ask": "A 1 m stick casts 3 m. A tower casts 45 m. How tall?",
+          "answer": 15,
+          "why": "15 m. The shadow is 3 times the height, so divide by 3. That 3 is the unit rate."
+        },
+        {
+          "type": "number",
+          "ask": "The ratio height to shadow is 1 to 4. A shadow is 32 m. How tall?",
+          "answer": 8,
+          "why": "8 m. Divide by 4. Once you have the ratio you can measure anything you can see the shadow of."
+        },
+        {
+          "type": "truefalse",
+          "ask": "This works for a building you cannot climb.",
+          "answer": true,
+          "why": "True, and that is exactly the point. Thales measured the Great Pyramid without going anywhere near the top."
+        },
+        {
+          "type": "number",
+          "ask": "A 3 m pole casts 1 m of shadow. A wall casts 4 m. How tall?",
+          "answer": 12,
+          "why": "12 m. Here the height is 3 times the shadow, so a short shadow means a very tall wall. The sun is high."
+        },
+        {
+          "type": "paper",
+          "ask": "Measure your height and your shadow outside. Then measure a tree's shadow. Type your shadow in whole metres.",
+          "answer": 1,
+          "hint": "Do both at the same time of day or the ratio changes. Type 1 if your shadow is about a metre.",
+          "why": "Whatever you measured, divide the tree's shadow by yours and multiply by your height. That is the tree, without a ladder."
+        }
+      ]
+    },
+    {
+      "id": "why-sixty",
+      "track": "wonders",
+      "name": "Why 60 Minutes?",
+      "emoji": "🕐",
+      "big": "60 splits more ways than any small number.",
+      "parentNote": "Why the Babylonians counted in sixties, and why we still do for time and angles. Grade 6 does factors, GCF and LCM (MA.6.NSO.3.1), so this is a factor-counting question with a 4,000-year-old answer.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Why 60 minutes and not 100? Because 60 splits beautifully."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              [
+                "5",
+                "6",
+                "10",
+                "12"
+              ],
+              [
+                "15",
+                "20",
+                "30",
+                "60"
+              ]
+            ],
+            "cell": 58
+          },
+          "cap": "All twelve numbers that divide 60 exactly."
+        },
+        {
+          "t": "say",
+          "text": "60 splits into halves, thirds, quarters, fifths, sixths. 100 cannot do thirds."
+        },
+        {
+          "t": "say",
+          "text": "The Babylonians counted in sixties about 4,000 years ago. We still do, for time and for angles."
+        },
+        {
+          "t": "tip",
+          "text": "360 degrees in a circle is 6 sixties. That is not a coincidence either."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many numbers divide 60 exactly?",
+          "answer": 12,
+          "why": "12: 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60. No number under 60 has more."
+        },
+        {
+          "type": "number",
+          "ask": "A third of 60 is?",
+          "answer": 20,
+          "why": "20 minutes. A third of an hour is a whole number of minutes, which is why 60 is so convenient."
+        },
+        {
+          "type": "number",
+          "ask": "How many numbers divide 100 exactly?",
+          "answer": 9,
+          "why": "9: 1, 2, 4, 5, 10, 20, 25, 50 and 100. Fewer than 60, even though 100 is bigger."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A third of 100 is a whole number.",
+          "answer": false,
+          "why": "False, it is 33.33 recurring. If an hour had 100 minutes, a third of an hour would be a mess."
+        },
+        {
+          "type": "number",
+          "ask": "60 as a product of primes: 2 x 2 x 3 x ?",
+          "answer": 5,
+          "why": "5. So 60 is 2 squared times 3 times 5. Having three different small primes is what gives it so many factors."
+        },
+        {
+          "type": "number",
+          "ask": "How many sixties in 360?",
+          "answer": 6,
+          "why": "6. A circle is 360 degrees precisely because 360 splits even more ways than 60 does: it has 24 factors."
+        },
+        {
+          "type": "paper",
+          "ask": "List every factor of 24. How many are there?",
+          "answer": 8,
+          "hint": "Work in pairs: 1 and 24, 2 and 12, 3 and 8, 4 and 6.",
+          "why": "8. Factors come in pairs, which is why counting them in pairs is quicker and safer than hunting one at a time."
+        }
+      ]
+    },
+    {
+      "id": "function-machines",
+      "track": "wonders",
+      "name": "Function Machines",
+      "emoji": "⚙️",
+      "big": "Feed numbers in. Work out what it does.",
+      "parentNote": "MA.6.AR.1.1 and 1.3. A function as a machine, and finding a rule from its behaviour, which is what algebra is actually for.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A machine takes a number in and gives one back."
+        },
+        {
+          "t": "say",
+          "text": "Put in 1, get 4. Put in 2, get 7. Put in 3, get 10."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "in",
+                "1",
+                "2",
+                "3"
+              ],
+              [
+                "out",
+                "4",
+                "7",
+                "10"
+              ]
+            ],
+            "cell": 60
+          },
+          "cap": "Each step in adds 3 to the out. So it multiplies by 3."
+        },
+        {
+          "t": "say",
+          "text": "Multiply by 3 and add 1. Check it: 3 times 3 is 9, plus 1 is 10."
+        },
+        {
+          "t": "tip",
+          "text": "Two things to find: how much it climbs each step, and where it starts. Then write it as 3n + 1."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "The rule is 3n + 1. What comes out when 5 goes in?",
+          "answer": 16,
+          "why": "16. Three fives is 15, plus 1."
+        },
+        {
+          "type": "machine",
+          "rule": {
+            "m": 2,
+            "b": 5
+          },
+          "askFor": "What comes out when 20 goes in?",
+          "ask": "Find the rule, then say what 20 gives.",
+          "answer": 45,
+          "why": "45. The rule is double and add 5. Each step in raises the out by 2, and putting in 0 would give 5."
+        },
+        {
+          "type": "machine",
+          "rule": {
+            "m": 4,
+            "b": -3
+          },
+          "askFor": "What comes out when 10 goes in?",
+          "ask": "Find this rule, then say what 10 gives.",
+          "answer": 37,
+          "why": "37. The rule is times 4, take away 3. Feeding in 0 shows the -3 immediately."
+        },
+        {
+          "type": "machine",
+          "rule": {
+            "sq": true
+          },
+          "askFor": "What comes out when 12 goes in?",
+          "ask": "This one is not a straight line. What does 12 give?",
+          "answer": 144,
+          "why": "144. It squares the input. The gaps between outputs grow, which is the sign that it is not multiply-and-add."
+        },
+        {
+          "type": "number",
+          "ask": "In goes 1, 2, 3. Out comes 5, 10, 15. What is the rule? Type the multiplier.",
+          "answer": 5,
+          "why": "5. It multiplies by 5 and adds nothing. Putting in 0 would give 0."
+        },
+        {
+          "type": "truefalse",
+          "ask": "If the outputs go up by the same amount each time, the rule is multiply and add.",
+          "answer": true,
+          "why": "True. A steady climb means multiplying by that climb. If the climb itself changes, something more is going on, like squaring."
+        },
+        {
+          "type": "paper",
+          "ask": "In goes 0, 1, 2, 3. Out comes 7, 10, 13, 16. Write the rule and use it on 100.",
+          "answer": 307,
+          "hint": "It climbs by 3, and starts at 7.",
+          "why": "307. The rule is 3n + 7, so 300 plus 7. Once you have the rule, the size of the number stops mattering."
+        }
+      ]
+    },
+    {
+      "id": "integers",
+      "track": "skills",
+      "name": "Below Zero",
+      "emoji": "🌡️",
+      "big": "Numbers on the other side of zero.",
+      "parentNote": "MA.6.NSO.1.1 to 1.4 and 4.1. Negative numbers, opposites and absolute value as distance from zero.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A number line does not stop at zero. It carries on the other way."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numberline",
+            "min": -3,
+            "max": 3,
+            "step": 1,
+            "marks": [
+              -2,
+              2
+            ]
+          },
+          "cap": "-2 and 2 are opposites. Both are 2 away from zero."
+        },
+        {
+          "t": "say",
+          "text": "How far from zero is called the absolute value. It is never negative."
+        },
+        {
+          "t": "tip",
+          "text": "-7 is smaller than -2, even though 7 is bigger than 2. Further left means smaller."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "-5 + 8 = ?",
+          "answer": 3,
+          "why": "3. Start five below zero and climb eight, so you pass zero and land three above."
+        },
+        {
+          "type": "number",
+          "ask": "-3 - 4 = ?",
+          "answer": -7,
+          "why": "-7. Start three below and go four further down."
+        },
+        {
+          "type": "number",
+          "ask": "What is the absolute value of -9?",
+          "answer": 9,
+          "why": "9. Absolute value is distance from zero, and distance is never negative."
+        },
+        {
+          "type": "number",
+          "ask": "6 - 10 = ?",
+          "answer": -4,
+          "why": "-4. You run out of room above zero and carry on four below."
+        },
+        {
+          "type": "choice",
+          "ask": "Which is smallest?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "-7"
+            },
+            {
+              "id": "b",
+              "label": "-2"
+            },
+            {
+              "id": "c",
+              "label": "0"
+            },
+            {
+              "id": "d",
+              "label": "3"
+            }
+          ],
+          "answer": "a",
+          "why": "-7. Furthest left on the number line means smallest, even though 7 looks like the biggest digit."
+        },
+        {
+          "type": "truefalse",
+          "ask": "-2 is bigger than -5.",
+          "answer": true,
+          "why": "True. -2 is further right, so it is bigger. A debt of 2 is better than a debt of 5."
+        },
+        {
+          "type": "paper",
+          "ask": "The temperature is -6 and rises 15 degrees. What is it now?",
+          "answer": 9,
+          "hint": "Six degrees gets you to zero, then keep going.",
+          "why": "9. Six of the rise is used getting to zero, and the other nine take you above it."
+        }
+      ]
+    },
+    {
+      "id": "ratios",
+      "track": "skills",
+      "name": "Ratios and Rates",
+      "emoji": "⚖️",
+      "big": "How two amounts compare, and per one.",
+      "parentNote": "MA.6.AR.3.1 to 3.5. Ratios, unit rates and percentages as a single idea seen from three angles.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A ratio compares two amounts. 3 red to 2 blue is written 3:2."
+        },
+        {
+          "t": "say",
+          "text": "A unit rate says how much for ONE. 12 pounds for 4 kg is 3 pounds per kg."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "kg",
+                "1",
+                "2",
+                "4"
+              ],
+              [
+                "cost",
+                "3",
+                "6",
+                "12"
+              ]
+            ],
+            "cell": 62
+          },
+          "cap": "Equivalent ratios. Every column is the same comparison."
+        },
+        {
+          "t": "tip",
+          "text": "A percentage is just a ratio out of 100. 25% means 25 for every 100."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "12 pounds for 4 kg. What is the cost of 1 kg?",
+          "answer": 3,
+          "why": "3 pounds per kg. Divide by how many you had to reach one."
+        },
+        {
+          "type": "number",
+          "ask": "3 red to 2 blue. If there are 9 red, how many blue?",
+          "answer": 6,
+          "why": "6. The 3 tripled to 9, so the 2 triples to 6. Both sides scale together."
+        },
+        {
+          "type": "number",
+          "ask": "What is 25% of 80?",
+          "answer": 20,
+          "why": "20. 25% is a quarter, and a quarter of 80 is 20."
+        },
+        {
+          "type": "number",
+          "ask": "A car goes 150 km in 3 hours. How far in 1 hour?",
+          "answer": 50,
+          "why": "50 km per hour. Divide by 3 to get the rate for one."
+        },
+        {
+          "type": "number",
+          "ask": "15 out of 60 as a percentage.",
+          "answer": 25,
+          "why": "25%. 15 out of 60 is a quarter, and a quarter of 100 is 25."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The ratio 4:6 is the same as 2:3.",
+          "answer": true,
+          "why": "True. Divide both by 2 and the comparison does not change, exactly like equivalent fractions."
+        },
+        {
+          "type": "paper",
+          "ask": "A recipe for 4 people uses 200 g of rice. How much for 6 people?",
+          "answer": 300,
+          "hint": "Find the amount for one person first.",
+          "why": "300 g. 50 g each, times 6. Going through the unit rate always works, even when the numbers do not divide nicely."
+        }
+      ]
+    },
+    {
+      "id": "exponents",
+      "track": "skills",
+      "name": "Powers",
+      "emoji": "⬆️",
+      "big": "A short way to write repeated multiplying.",
+      "parentNote": "MA.6.NSO.3.3 and 3.4. Exponents, and prime factorisation written with them.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "2 to the power 5 means 2 x 2 x 2 x 2 x 2, which is 32."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              2,
+              4,
+              8,
+              16,
+              32
+            ],
+            "c": "blue"
+          },
+          "cap": "Each step is one more power of 2."
+        },
+        {
+          "t": "say",
+          "text": "The small number counts how many are multiplied, not what you multiply by."
+        },
+        {
+          "t": "tip",
+          "text": "Anything to the power 0 is 1. Going down the chain you halve each time, and half of 2 is 1."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2 to the power 5 = ?",
+          "answer": 32,
+          "why": "32. Five 2s multiplied. This is the same doubling chain as the Tower of Hanoi."
+        },
+        {
+          "type": "number",
+          "ask": "3 to the power 3 = ?",
+          "answer": 27,
+          "why": "27. Three 3s: 3 times 3 is 9, times 3 again is 27."
+        },
+        {
+          "type": "number",
+          "ask": "10 to the power 4 = ?",
+          "answer": 10000,
+          "why": "10000. The power counts the zeros, which is why powers of ten are so easy."
+        },
+        {
+          "type": "number",
+          "ask": "5 squared = ?",
+          "answer": 25,
+          "why": "25. Squared means to the power 2, and it is called that because it is the area of a square with side 5."
+        },
+        {
+          "type": "number",
+          "ask": "24 as primes is 2 x 2 x 2 x 3. What power of 2 is in it?",
+          "answer": 3,
+          "why": "3. So 24 is 2 cubed times 3. Exponents make prime factorisation much shorter to write."
+        },
+        {
+          "type": "truefalse",
+          "ask": "2 to the power 3 is the same as 3 to the power 2.",
+          "answer": false,
+          "why": "False. 2 cubed is 8 and 3 squared is 9. The order matters, unlike ordinary multiplication."
+        },
+        {
+          "type": "paper",
+          "ask": "Write 72 as a product of primes. What power of 2 does it have?",
+          "answer": 3,
+          "hint": "Keep halving: 72, 36, 18, 9.",
+          "why": "3. 72 is 2 cubed times 3 squared. Halving three times gets you to 9, which is 3 squared."
+        }
+      ]
+    },
+    {
+      "id": "expressions",
+      "track": "skills",
+      "name": "Letters for Numbers",
+      "emoji": "🔤",
+      "big": "A letter stands for a number you do not know yet.",
+      "parentNote": "MA.6.AR.1.1 to 1.4 and 2.2 to 2.3. Writing expressions, substituting, and solving one-step equations.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "'Five more than a number' is written n + 5."
+        },
+        {
+          "t": "say",
+          "text": "'Three times a number' is 3n. The multiply sign is left out."
+        },
+        {
+          "t": "say",
+          "text": "To evaluate, put the number in. If n is 4, then 3n + 5 is 17."
+        },
+        {
+          "t": "tip",
+          "text": "To solve n + 5 = 12, undo the +5 by taking 5 off both sides."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "If n = 4, what is 3n + 5?",
+          "answer": 17,
+          "why": "17. Three fours is 12, plus 5."
+        },
+        {
+          "type": "number",
+          "ask": "Solve n + 5 = 12.",
+          "answer": 7,
+          "why": "7. Take 5 from both sides. Whatever you do to one side you do to the other."
+        },
+        {
+          "type": "number",
+          "ask": "Solve 4n = 20.",
+          "answer": 5,
+          "why": "5. Divide both sides by 4."
+        },
+        {
+          "type": "number",
+          "ask": "Solve n - 7 = 3.",
+          "answer": 10,
+          "why": "10. Add 7 to both sides to undo the subtraction."
+        },
+        {
+          "type": "number",
+          "ask": "If n = 6, what is 2n - 4?",
+          "answer": 8,
+          "why": "8. Two sixes is 12, take away 4."
+        },
+        {
+          "type": "truefalse",
+          "ask": "3n means 3 + n.",
+          "answer": false,
+          "why": "False. 3n means 3 times n. Writing them side by side always means multiply."
+        },
+        {
+          "type": "paper",
+          "ask": "A number doubled and then increased by 7 gives 25. What is the number?",
+          "answer": 9,
+          "hint": "Write it as 2n + 7 = 25 and undo the steps backwards.",
+          "why": "9. Take 7 off both sides to get 2n = 18, then halve. Undo the last thing first."
+        }
+      ]
+    },
+    {
+      "id": "area-shapes",
+      "track": "skills",
+      "name": "Area of Anything",
+      "emoji": "🔺",
+      "big": "Cut it into rectangles and triangles.",
+      "parentNote": "MA.6.GR.2.1 and 2.2. Triangle area derived from the rectangle, then composite shapes by decomposing.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A triangle is exactly half of a rectangle around it."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "c": "blue"
+          },
+          "cap": "A 4 by 2 rectangle has area 8. A triangle inside it has area 4."
+        },
+        {
+          "t": "say",
+          "text": "So triangle area is base times height, halved."
+        },
+        {
+          "t": "tip",
+          "text": "For an odd shape, cut it into rectangles and triangles, work out each, and add."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "A rectangle 4 by 2. What is its area?",
+          "answer": 8,
+          "why": "8. Length times width."
+        },
+        {
+          "type": "number",
+          "ask": "A triangle with base 4 and height 2. What is its area?",
+          "answer": 4,
+          "why": "4. Half of the 4 by 2 rectangle around it."
+        },
+        {
+          "type": "number",
+          "ask": "A triangle with base 10 and height 6.",
+          "answer": 30,
+          "why": "30. Ten sixes is 60, halved."
+        },
+        {
+          "type": "number",
+          "ask": "A triangle with base 7 and height 4.",
+          "answer": 14,
+          "why": "14. 28 halved. It works even when the halving lands on the other number."
+        },
+        {
+          "type": "number",
+          "ask": "An L shape: a 5 by 3 rectangle plus a 2 by 2 square. Total area?",
+          "answer": 19,
+          "why": "19. 15 plus 4. Cutting a hard shape into easy ones is the whole method."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Two triangles with the same base and height have the same area.",
+          "answer": true,
+          "why": "True, even if they look completely different. Lean one over as far as you like and the area does not change."
+        },
+        {
+          "type": "paper",
+          "ask": "A triangle has area 24 and base 8. What is its height?",
+          "answer": 6,
+          "hint": "Work backwards: double the area first.",
+          "why": "6. Double 24 to get 48, then divide by the base of 8. Undoing the halving is the step people forget."
+        }
+      ]
+    },
+    {
+      "id": "spread",
+      "track": "skills",
+      "name": "Spread",
+      "emoji": "📦",
+      "big": "Where the middle is, and how spread out it is.",
+      "parentNote": "MA.6.DP.1.2 to 1.6. Mean, median, range and the box plot, plus how one changed value moves each of them.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "The median splits the data in half. Half above, half below."
+        },
+        {
+          "t": "say",
+          "text": "A box plot shows the middle half as a box and the rest as whiskers."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              2,
+              4,
+              6,
+              8,
+              20
+            ],
+            "c": "teal"
+          },
+          "cap": "Median 6, mean 8. One big value pulled the mean up but not the median."
+        },
+        {
+          "t": "tip",
+          "text": "That is why house prices are usually reported as a median. A few enormous ones would wreck the mean."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2, 4, 6, 8, 20. What is the median?",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              2,
+              4,
+              6,
+              8,
+              20
+            ],
+            "c": "teal"
+          },
+          "answer": 6,
+          "why": "6, the middle of five values in order."
+        },
+        {
+          "type": "number",
+          "ask": "2, 4, 6, 8, 20. What is the mean?",
+          "answer": 8,
+          "why": "8. They add to 40, shared by 5. The mean is above four of the five numbers, dragged up by the 20."
+        },
+        {
+          "type": "number",
+          "ask": "2, 4, 6, 8, 20. What is the range?",
+          "answer": 18,
+          "why": "18. 20 take away 2. Range is easy to work out and easy to distort with one odd value."
+        },
+        {
+          "type": "number",
+          "ask": "Change the 20 to 200. What is the median now?",
+          "answer": 6,
+          "why": "6, unchanged. The median only cares about position, not size, which is what makes it sturdy."
+        },
+        {
+          "type": "number",
+          "ask": "Change the 20 to 200. What is the mean now?",
+          "answer": 44,
+          "why": "44. They add to 220, shared by 5. One value moved the mean by 36 and the median not at all."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The median is affected less than the mean by one extreme value.",
+          "answer": true,
+          "why": "True. That is exactly why both get reported. If they disagree a lot, something unusual is in the data."
+        },
+        {
+          "type": "paper",
+          "ask": "1, 3, 5, 7, 9, 11. What is the median of these six numbers?",
+          "answer": 6,
+          "hint": "With an even count, take the middle two and find their midpoint.",
+          "why": "6, halfway between 5 and 7. With an even count the median often is not one of the numbers at all."
+        }
+      ]
+    }
+  ]
+}

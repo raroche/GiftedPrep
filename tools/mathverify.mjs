@@ -24,7 +24,8 @@ const g2 = JSON.parse(fs.readFileSync('data/math/grade2.json', 'utf8'));
 const g3 = JSON.parse(fs.readFileSync('data/math/grade3.json', 'utf8'));
 const g4 = JSON.parse(fs.readFileSync('data/math/grade4.json', 'utf8'));
 const g5 = JSON.parse(fs.readFileSync('data/math/grade5.json', 'utf8'));
-const ALL = [...data.topics, ...g2.topics, ...g3.topics, ...g4.topics, ...g5.topics];
+const g6 = JSON.parse(fs.readFileSync('data/math/grade6.json', 'utf8'));
+const ALL = [...data.topics, ...g2.topics, ...g3.topics, ...g4.topics, ...g5.topics, ...g6.topics];
 const topic = (id) => ALL.find((t) => t.id === id);
 const ex = (id, i) => topic(id).exercises[i];
 const asked = (id, needle) =>
@@ -788,6 +789,142 @@ topic('secret-writing').exercises.filter((e) => e.type === 'cipher').forEach((e,
     if (e.answer !== want) bad('powers', `"${e.ask.slice(0, 32)}" should be ${want}, data says ${e.answer}`);
     else ok('powers', `${e.ask.slice(0, 32)} = ${want}`);
   });
+}
+
+/* ---- Grade 6 --------------------------------------------------------- */
+
+const triangular = (n) => (n * (n + 1)) / 2;
+
+/* Gauss: every sum must match n(n+1)/2. */
+{
+  const t = topic('gauss-trick');
+  [[/Add 1 to 10 /i, 10], [/Add 1 to 20/i, 20], [/Add 1 to 30/i, 30]].forEach(([re, n]) => {
+    const e = t.exercises.find((x) => re.test(x.ask));
+    if (!e) return;
+    const want = triangular(n);
+    if (e.answer !== want) bad('gauss', `1 to ${n} is ${want}, data says ${e.answer}`);
+    else ok('gauss', `1 to ${n} = ${want}`);
+  });
+  const big = t.exercises.find((e) => /50 x 101/.test(e.ask));
+  if (big && big.answer !== triangular(100)) bad('gauss', `1 to 100 is ${triangular(100)}`);
+  else if (big) ok('gauss', `50 x 101 = ${triangular(100)}`);
+}
+
+/* Chessboard: the counts have to be right or the proof is empty. */
+{
+  const t = topic('broken-chessboard');
+  const want = { 'squares on a chessboard': 64, 'one domino cover': 2, 'How many squares are left': 62, 'of that colour remain': 30 };
+  Object.entries(want).forEach(([needle, v]) => {
+    const e = t.exercises.find((x) => x.ask.toLowerCase().includes(needle.toLowerCase()));
+    if (!e) return;
+    if (e.answer !== v) bad('chessboard', `"${needle}" should be ${v}, data says ${e.answer}`);
+    else ok('chessboard', `${needle} = ${v}`);
+  });
+  /* And confirm opposite corners really do share a colour on an 8x8. */
+  const colour = (r, c) => (r + c) % 2;
+  if (colour(0, 0) !== colour(7, 7)) bad('chessboard[colour]', 'opposite corners differ, so the proof fails');
+  else ok('chessboard[colour]', 'opposite corners share a colour, so 30 and 32 remain');
+}
+
+/* Integers */
+{
+  const t = topic('minus-times-minus');
+  [[/^3 x -2/, -6], [/^-4 x -3/, 12], [/^-7 \+ 3/, -4], [/^5 - \(-3\)/, 8],
+   [/^-2 x -2 x -2/, -8]].forEach(([re, want]) => {
+    const e = t.exercises.find((x) => re.test(x.ask));
+    if (!e) return;
+    if (e.answer !== want) bad('integers', `"${e.ask}" is ${want}, data says ${e.answer}`);
+    else ok('integers', `${e.ask} = ${want}`);
+  });
+  const four = t.exercises.find((e) => /-1 x -1 x -1 x -1/.test(e.ask));
+  if (four && four.answer !== 1) bad('integers', 'four minus signs give +1');
+  else if (four) ok('integers', 'four minus signs = 1');
+}
+
+/* Goldbach: every pair claimed must really be two primes summing right. */
+{
+  const t = topic('goldbach');
+  const pairs = [[12, 5, 7], [18, 5, 13], [20, 3, 17], [28, 11, 17]];
+  pairs.forEach(([n, a, b]) => {
+    const e = t.exercises.find((x) => x.ask.startsWith(`${n} = ${a} +`));
+    if (!e) return;
+    if (a + b !== n) bad('goldbach', `${a} + ${b} is not ${n}`);
+    else if (!prime(a) || !prime(b)) bad('goldbach', `${a} or ${b} is not prime`);
+    else if (e.answer !== b) bad('goldbach', `${n} - ${a} is ${n - a}, data says ${e.answer}`);
+    else ok('goldbach', `${n} = ${a} + ${b}, both prime`);
+  });
+  const fifty = t.exercises.find((e) => /add to 50/i.test(e.ask));
+  if (fifty && (!prime(fifty.answer) || !prime(50 - fifty.answer))) {
+    bad('goldbach[50]', `${fifty.answer} and ${50 - fifty.answer} are not both prime`);
+  } else if (fifty) ok('goldbach[50]', `50 = ${50 - fifty.answer} + ${fifty.answer}, both prime`);
+  /* And check Goldbach really does hold everywhere the page implies. */
+  let fails = 0;
+  for (let n = 4; n <= 1000; n += 2) {
+    let found = false;
+    for (let a = 2; a <= n / 2 && !found; a += 1) if (prime(a) && prime(n - a)) found = true;
+    if (!found) fails += 1;
+  }
+  if (fails) bad('goldbach[test]', `${fails} even numbers under 1000 have no prime pair`);
+  else ok('goldbach[test]', 'every even number to 1000 is a sum of two primes');
+}
+
+/* Birthday: the pair counts are handshake numbers. */
+{
+  const t = topic('birthday-surprise');
+  [[4, 6], [5, 10], [10, 45], [23, 253], [25, 300]].forEach(([people, want]) => {
+    const e = t.exercises.find((x) => x.ask.includes(`${people} people`) || x.ask.includes(`${people} x `));
+    if (!e) return;
+    const real = triangular(people - 1);
+    if (real !== want) bad('birthday', `${people} people make ${real} pairs, not ${want}`);
+    else if (e.answer !== want) bad('birthday', `data says ${e.answer} for ${people} people`);
+    else ok('birthday', `${people} people = ${want} pairs`);
+  });
+}
+
+/* Shadows: every one is a ratio, so check the ratio. */
+{
+  const t = topic('shadows');
+  const cases = [[/2 m stick casts a 2 m shadow.*12 m/, 12], [/2 m stick casts a 4 m shadow.*20 m/, 10],
+    [/1 m stick casts 3 m.*45 m/, 15], [/1 to 4.*32 m/, 8], [/3 m pole casts 1 m.*4 m/, 12]];
+  cases.forEach(([re, want]) => {
+    const e = t.exercises.find((x) => re.test(x.ask));
+    if (!e) return;
+    if (e.answer !== want) bad('shadows', `"${e.ask.slice(0, 40)}" should be ${want}, data says ${e.answer}`);
+    else ok('shadows', `${e.ask.slice(0, 40)} = ${want}`);
+  });
+}
+
+/* Sixty: the factor counts must be real. */
+{
+  const countDivisors = (n) => { let c = 0; for (let d = 1; d <= n; d += 1) if (n % d === 0) c += 1; return c; };
+  const t = topic('why-sixty');
+  [[60, 12], [100, 9], [24, 8]].forEach(([n, want]) => {
+    const real = countDivisors(n);
+    if (real !== want) bad('sixty', `${n} has ${real} divisors, the page says ${want}`);
+    else ok('sixty', `${n} has ${real} divisors`);
+  });
+  const e = t.exercises.find((x) => /sixties in 360/i.test(x.ask));
+  if (e && e.answer !== 360 / 60) bad('sixty', '360 is 6 sixties');
+  else if (e) ok('sixty', '360 = 6 x 60');
+}
+
+/* Function machines: run the rule and compare. */
+{
+  const run = (r, x) => (r.m == null ? 1 : r.m) * (r.sq ? x * x : x) + (r.b || 0);
+  topic('function-machines').exercises.filter((e) => e.type === 'machine').forEach((e, i) => {
+    const m = (e.askFor || '').match(/(\d+) goes in/);
+    if (!m) { bad(`machine[${i + 1}]`, 'cannot tell which input is being asked about'); return; }
+    const want = run(e.rule, Number(m[1]));
+    if (e.answer !== want) bad(`machine[${i + 1}]`, `the rule turns ${m[1]} into ${want}, data says ${e.answer}`);
+    else ok(`machine[${i + 1}]`, `${m[1]} -> ${want}`);
+  });
+  const t = topic('function-machines');
+  const fixed = t.exercises.find((e) => /3n \+ 1/.test(e.ask));
+  if (fixed && fixed.answer !== 3 * 5 + 1) bad('machine[3n+1]', '3(5)+1 is 16');
+  else if (fixed) ok('machine[3n+1]', '3n+1 at 5 = 16');
+  const paper = t.exercises.find((e) => e.type === 'paper');
+  if (paper && paper.answer !== 3 * 100 + 7) bad('machine[paper]', '3(100)+7 is 307');
+  else if (paper) ok('machine[paper]', '3n+7 at 100 = 307');
 }
 
 /* ---- Report ---------------------------------------------------------- */

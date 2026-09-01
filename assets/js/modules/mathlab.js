@@ -41,14 +41,17 @@ export async function loadGrade(grade) {
 }
 
 /** Grades that have a page written. The rest are shown as not ready yet. */
-export const READY_GRADES = [1, 2, 3, 4, 5];
+export const READY_GRADES = [1, 2, 3, 4, 5, 6];
 
 /* ------------------------------------------------------------------ */
 /* Grade index                                                         */
 /* ------------------------------------------------------------------ */
 
 export function renderGradeIndex() {
-  const cards = [1, 2, 3, 4].map((g) => {
+  /* Driven by READY_GRADES, so adding a grade file is enough to list it. The
+     hard-coded [1,2,3,4] here silently hid grades 5 and 6 after they shipped. */
+  const upto = Math.max(4, ...READY_GRADES);
+  const cards = Array.from({ length: upto }, (_, i) => i + 1).map((g) => {
     const ready = READY_GRADES.includes(g);
     const inner = `
       <span class="gp-card__icon" aria-hidden="true">${g}</span>
@@ -157,7 +160,8 @@ const TYPE_BADGE = {
   magic: { label: 'Fill it in', icon: '🔢' },
   cipher: { label: 'Crack it', icon: '🕵️' },
   nim: { label: 'Beat me', icon: '♟️' },
-  doors: { label: 'Try it 20 times', icon: '🚪' }
+  doors: { label: 'Try it 20 times', icon: '🚪' },
+  machine: { label: 'Find the rule', icon: '⚙️' }
 };
 
 function badge(type) {
@@ -223,6 +227,17 @@ export function renderExercise(ex, index, total) {
       <p class="gp-hanoi__count">Moves: <strong data-hanoi-moves>0</strong>
         &middot; best possible: ${Math.pow(2, n) - 1}</p>
       <p class="gp-hanoi__say" data-hanoi-say></p>`;
+  } else if (ex.type === 'machine') {
+    body = `
+      <p class="gp-cm__rule">Feed numbers in and watch what comes out. Work out the rule,
+      then answer the question.</p>
+      <div class="gp-machine">
+        <label class="gp-numrow__label" for="gp-feed">Put in</label>
+        <input class="gp-numrow__input" id="gp-feed" type="number" inputmode="numeric" data-feed>
+        <button type="button" class="gp-btn gp-btn--ghost" data-run>Run it</button>
+      </div>
+      <ul class="gp-machine__log" data-machine-log></ul>
+      ${numberBox(ex.askFor || 'Your answer')}`;
   } else if (ex.type === 'nim') {
     body = `
       <p class="gp-cm__rule">${esc(ex.rule || 'Take 1, 2 or 3 counters. Whoever takes the last one wins.')}</p>
@@ -431,6 +446,16 @@ export function checkMap(ex, painted) {
 /* ------------------------------------------------------------------ */
 
 /**
+ * A function machine. `m` multiplies, `b` adds, and `sq` squares first, which
+ * is enough to build every rule the page uses without letting arbitrary code
+ * anywhere near the data files.
+ */
+export function runMachine(rule, x) {
+  const v = rule.sq ? x * x : x;
+  return (rule.m == null ? 1 : rule.m) * v + (rule.b || 0);
+}
+
+/**
  * The subtraction game. With a pile of n and a take of 1..max, the player to
  * move loses exactly when n is a multiple of max+1, because whatever they take
  * the opponent can restore the multiple. So a perfect reply leaves one.
@@ -563,5 +588,5 @@ export default {
   checkMap, adjacency, regionsOf, MAP_COLOURS,
   hanoiStart, hanoiLegal, hanoiMove, hanoiWon,
   isPrime, sieveKeep, checkSieve, checkMagic, shiftLetters,
-  nimReply, nimLosing
+  nimReply, nimLosing, runMachine
 };

@@ -873,6 +873,21 @@ function tapPeg(pegEl) {
   }
 }
 
+function runMachine() {
+  const ex = state.math.topic.exercises[state.math.index];
+  const box = $('#gp-exercise [data-feed]');
+  const raw = box.value.trim();
+  if (raw === '') { box.focus(); return; }
+  const x = Number(raw);
+  if (!Number.isFinite(x)) { box.value = ''; return; }
+  const y = mathlab.runMachine(ex.rule, x);
+  $('#gp-exercise [data-machine-log]').insertAdjacentHTML('afterbegin',
+    `<li class="gp-machine__row"><strong>${escapeHtml(String(x))}</strong> goes in,
+      <strong>${escapeHtml(String(y))}</strong> comes out</li>`);
+  box.value = '';
+  box.focus();
+}
+
 /* ---- the subtraction game ---- */
 
 function nimSetup(ex) {
@@ -1171,6 +1186,8 @@ function onClick(ev) {
     return;
   }
 
+  if (ev.target.closest('[data-run]')) { runMachine(); return; }
+
   const take = ev.target.closest('[data-take]');
   if (take) { nimTake(Number(take.dataset.take)); return; }
 
@@ -1279,6 +1296,7 @@ async function boot() {
   /* Enter should submit the answer box, the way any small form behaves. */
   document.addEventListener('keydown', (ev) => {
     if (ev.key !== 'Enter') return;
+    if (ev.target.matches('#gp-exercise [data-feed]')) { ev.preventDefault(); runMachine(); return; }
     if (!ev.target.matches('#gp-exercise [data-answer-input]')) return;
     ev.preventDefault();
     checkMath();

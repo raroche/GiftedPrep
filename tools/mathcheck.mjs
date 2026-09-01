@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIR = 'data/math';
-const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi', 'sieve', 'magic', 'cipher', 'nim', 'doors'];
+const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi', 'sieve', 'magic', 'cipher', 'nim', 'doors', 'machine'];
 
 
 /* Regions of a grid map, and which pairs share an edge. */
@@ -195,6 +195,13 @@ for (const file of files) {
           warn(w, `allows ${e.limit} colours but ${need} would do`);
         }
         if (need > 4) err(w, `map needs ${need} colours, which cannot happen on a real map`);
+      } else if (e.type === 'machine') {
+        if (!e.rule || typeof e.rule !== 'object') err(w, 'no rule');
+        else {
+          const keys = Object.keys(e.rule).filter((k) => !['m', 'b', 'sq'].includes(k));
+          if (keys.length) err(w, `unknown rule parts: ${keys.join(', ')}`);
+        }
+        if (typeof e.answer !== 'number') err(w, 'answer must be a number');
       } else if (e.type === 'nim') {
         if (!e.start || e.start < 4) err(w, 'the pile is too small to be a game');
         const max = e.max || 3;

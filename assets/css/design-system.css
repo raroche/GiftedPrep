@@ -2042,3 +2042,26 @@ button, a, label, summary, [role="button"] {
 .gp-door.is-open { opacity: 0.5; border-style: dashed; }
 .gp-door.is-open::after { content: "empty"; font-size: var(--gp-text-sm); font-weight: 700; }
 .gp-doors__choice { display: flex; gap: var(--gp-space-3); margin-bottom: var(--gp-space-4); }
+
+/* ---- function machine ---- */
+
+.gp-machine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gp-space-3);
+  margin-bottom: var(--gp-space-3);
+}
+.gp-machine__log {
+  list-style: none;
+  margin: 0 0 var(--gp-space-4);
+  padding: 0;
+  max-height: 190px;
+  overflow-y: auto;
+}
+.gp-machine__row {
+  padding: var(--gp-space-2) var(--gp-space-3);
+  border-bottom: 1px solid var(--gp-line);
+  font-weight: 600;
+}
+.gp-machine__row:first-child { background: var(--gp-surface-2); border-radius: var(--gp-radius-sm, 6px); }
