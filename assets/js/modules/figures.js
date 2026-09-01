@@ -888,6 +888,63 @@ const RENDERERS = {
     return { w, h, body: out.join('') };
   },
 
+  /* Pascal's triangle. Each number is the two above it added together, which
+     is the only rule the picture needs to make. */
+  pascal(spec) {
+    const rows = Math.max(1, Math.min(8, spec.rows || 5));
+    const tri = [[1]];
+    for (let r = 1; r < rows; r += 1) {
+      const prev = tri[r - 1];
+      const row = [1];
+      for (let i = 0; i < prev.length - 1; i += 1) row.push(prev[i] + prev[i + 1]);
+      row.push(1);
+      tri.push(row);
+    }
+    const cell = 46;
+    const gap = 8;
+    const w = rows * (cell + gap) + 20;
+    const h = rows * (cell + gap) + 16;
+    const hide = spec.hide || [];        // [row, index] pairs shown as ?
+    const out = [`<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`];
+    tri.forEach((row, r) => {
+      const y = 10 + r * (cell + gap);
+      const x0 = (w - (row.length * (cell + gap) - gap)) / 2;
+      row.forEach((v, i) => {
+        const x = x0 + i * (cell + gap);
+        const gone = hide.some(([hr, hi]) => hr === r && hi === i);
+        const odd = spec.parity && v % 2 === 1;
+        const fill = spec.parity
+          ? (odd ? colour(spec.c || 'orange') : 'none')
+          : colour(spec.c || 'teal');
+        out.push(`<rect x="${x.toFixed(1)}" y="${y}" width="${cell}" height="${cell}" rx="8" fill="${gone ? 'none' : fill}" stroke="${STROKE}" stroke-width="3"${gone ? ' stroke-dasharray="6 5"' : ''} />`);
+        if (!spec.parity) {
+          out.push(`<text x="${(x + cell / 2).toFixed(1)}" y="${y + cell / 2}" text-anchor="middle" dominant-baseline="central" font-size="${v > 99 ? 17 : 21}" font-weight="700" fill="${STROKE}" font-family="system-ui, sans-serif">${gone ? '?' : v}</text>`);
+        }
+      });
+    });
+    return { w, h, body: out.join('') };
+  },
+
+  /* A grid of numbers, some blank. Used for magic squares and factor grids. */
+  numgrid(spec) {
+    const rows = spec.cells || [[1]];
+    const cols = rows[0].length;
+    const cell = spec.cell || 56;
+    const pad = 10;
+    const w = cols * cell + pad * 2;
+    const h = rows.length * cell + pad * 2;
+    const mark = spec.mark || [];
+    const out = [`<rect x="1.5" y="1.5" width="${w - 3}" height="${h - 3}" rx="10" fill="${CANVAS}" stroke="${FRAME}" stroke-width="2" />`];
+    rows.forEach((row, y) => row.forEach((v, x) => {
+      const px = pad + x * cell;
+      const py = pad + y * cell;
+      const hot = mark.includes(v);
+      out.push(`<rect x="${px}" y="${py}" width="${cell}" height="${cell}" fill="${hot ? colour(spec.c || 'orange') : 'none'}" stroke="${STROKE}" stroke-width="2.5" />`);
+      out.push(`<text x="${px + cell / 2}" y="${py + cell / 2}" text-anchor="middle" dominant-baseline="central" font-size="${String(v).length > 2 ? 18 : 22}" font-weight="700" fill="${v === null || v === '' ? MUTED : STROKE}" font-family="system-ui, sans-serif">${v === null ? '?' : esc(String(v))}</text>`);
+    }));
+    return { w, h, body: out.join('') };
+  },
+
   numberline(spec) {
     const min = spec.min == null ? 0 : spec.min;
     const max = spec.max == null ? 10 : spec.max;
@@ -993,6 +1050,8 @@ export function describeFigure(spec) {
     case 'barchart': return `A bar graph titled ${spec.title || 'untitled'}.`;
     case 'pictograph': return 'A picture graph.';
     case 'balance':  return 'A balance scale with shapes on both sides.';
+    case 'pascal': return `Pascal's triangle, ${spec.rows || 5} rows.`;
+    case 'numgrid': return 'A grid of numbers.';
     case 'polyomino': return 'Squares joined edge to edge on a grid.';
     case 'chain': return `A chain of numbers: ${(spec.items || []).join(', ')}.`;
     case 'graph': return `${(spec.nodes || []).length} dots joined by ${(spec.edges || []).length} lines.`;

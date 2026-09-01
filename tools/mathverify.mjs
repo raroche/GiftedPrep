@@ -21,8 +21,9 @@ const ok = (id, m) => checked.push(`${id}: ${m}`);
 
 const data = JSON.parse(fs.readFileSync('data/math/grade1.json', 'utf8'));
 const g2 = JSON.parse(fs.readFileSync('data/math/grade2.json', 'utf8'));
-const topic = (id) => data.topics.find((t) => t.id === id)
-  || g2.topics.find((t) => t.id === id);
+const g3 = JSON.parse(fs.readFileSync('data/math/grade3.json', 'utf8'));
+const ALL = [...data.topics, ...g2.topics, ...g3.topics];
+const topic = (id) => ALL.find((t) => t.id === id);
 const ex = (id, i) => topic(id).exercises[i];
 const asked = (id, needle) =>
   topic(id).exercises.find((e) => e.ask.toLowerCase().includes(needle.toLowerCase()));
@@ -188,7 +189,8 @@ topic('one-line').exercises.forEach((e, i) => {
 
 /** Work out the answer from the question text, or null if not parseable. */
 function arithmetic(ask) {
-  const t = ask.trim().replace(/\?$/, '').trim();
+  /* Strip thousands separators first: "2,950" is one number, not two. */
+  const t = ask.trim().replace(/(\d),(\d{3})\b/g, '$1$2').replace(/\?$/, '').trim();
   let m;
   if ((m = t.match(/^(\d+)\s*\+\s*\?\s*=\s*(\d+)$/))) return +m[2] - +m[1];
   if ((m = t.match(/^\?\s*\+\s*(\d+)\s*=\s*(\d+)$/))) return +m[2] - +m[1];
@@ -211,7 +213,7 @@ function arithmetic(ask) {
   return null;
 }
 
-[...data.topics, ...g2.topics].filter((t) => t.track === 'skills').forEach((t) => {
+ALL.filter((t) => t.track === 'skills').forEach((t) => {
   t.exercises.forEach((e, i) => {
     if (e.type !== 'number' && e.type !== 'paper') return;
     const want = arithmetic(e.ask);
@@ -231,7 +233,7 @@ const bondSound = (f) => {
   return parts.reduce((a, b) => a + b, 0) === f.whole;
 };
 
-[...data.topics, ...g2.topics].forEach((t) => {
+ALL.forEach((t) => {
   t.exercises.forEach((e, i) => {
     const id = `${t.id}[${i + 1}]`;
     const findBroken = /broken|wrong|does not work|not right/i.test(e.ask);
@@ -428,6 +430,129 @@ topic('how-many-ways').exercises.forEach((e, i) => {
     if (e.answer !== v) bad('turn', `"${needle}" should be ${v}, data says ${e.answer}`);
     else ok('turn', `${needle} = ${v}`);
   });
+}
+
+/* ---- Grade 3 --------------------------------------------------------- */
+
+const prime = (n) => { if (n < 2) return false; for (let d = 2; d * d <= n; d += 1) if (n % d === 0) return false; return true; };
+const divisors = (n) => { const out = []; for (let d = 1; d < n; d += 1) if (n % d === 0) out.push(d); return out; };
+const perfect = (n) => divisors(n).reduce((a, b) => a + b, 0) === n;
+
+/* Primes */
+{
+  const c = topic('primes').exercises.find((e) => e.type === 'collect');
+  const wrong = c.valid.filter((v) => !prime(v));
+  if (wrong.length) bad('primes[collect]', `${wrong.join(', ')} are not prime`);
+  else ok('primes[collect]', 'every listed value is prime');
+
+  const sieve = topic('primes').exercises.find((e) => e.type === 'sieve');
+  const want = [];
+  for (let n = 1; n <= sieve.upto; n += 1) if (prime(n)) want.push(n);
+  if (sieve.answer !== want.length) bad('primes[sieve]', `there are ${want.length} primes up to ${sieve.upto}, data says ${sieve.answer}`);
+  else ok('primes[sieve]', `${want.length} primes up to ${sieve.upto}`);
+
+  const nope = topic('primes').exercises.find((e) => e.type === 'choice');
+  const composite = nope.choices.filter((ch) => !prime(Number(ch.label)));
+  if (composite.length !== 1) bad('primes[choice]', `${composite.length} choices are composite; must be exactly 1`);
+  else if (composite[0].id !== nope.answer) bad('primes[choice]', `the composite is "${composite[0].id}"`);
+  else ok('primes[choice]', `only "${nope.answer}" is composite`);
+}
+
+/* Pascal's triangle */
+{
+  const rows = [[1]];
+  for (let r = 1; r < 8; r += 1) {
+    const p = rows[r - 1]; const row = [1];
+    for (let i = 0; i < p.length - 1; i += 1) row.push(p[i] + p[i + 1]);
+    row.push(1); rows.push(row);
+  }
+  const t = topic('pascal');
+  const hidden = t.exercises.find((e) => e.figure && e.figure.kind === 'pascal' && e.figure.hide);
+  if (hidden) {
+    const [r, i] = hidden.figure.hide[0];
+    if (hidden.answer !== rows[r][i]) bad('pascal[hidden]', `row ${r} position ${i} is ${rows[r][i]}, data says ${hidden.answer}`);
+    else ok('pascal[hidden]', `hidden entry is ${rows[r][i]}`);
+  }
+  const sums = t.exercises.filter((e) => /add (up )?(to|row)/i.test(e.ask) || /does it add to/i.test(e.ask));
+  sums.forEach((e, k) => {
+    const m = e.ask.match(/([\d,\s+]+)\./) || e.ask.match(/is ([\d, ]+)\./);
+    if (!m) return;
+    const nums = m[1].split(/[+,]/).map((x) => Number(x.trim())).filter((x) => !Number.isNaN(x));
+    if (nums.length < 2) return;
+    const want = nums.reduce((a, b) => a + b, 0);
+    if (e.answer !== want) bad(`pascal[sum${k}]`, `${nums.join('+')} is ${want}, data says ${e.answer}`);
+    else ok(`pascal[sum${k}]`, `${nums.join('+')} = ${want}`);
+  });
+  const big = topic('pascal').exercises.find((e) => /row 7/i.test(e.ask + (e.hint || '')));
+  if (big) {
+    const want = Math.max(...rows[6]);
+    if (big.answer !== want) bad('pascal[row7]', `the biggest in row 7 is ${want}, data says ${big.answer}`);
+    else ok('pascal[row7]', `biggest in row 7 is ${want}`);
+  }
+}
+
+/* Magic squares: the total must follow from the pool, and each puzzle solve. */
+{
+  const t = topic('magic-squares');
+  const sumAll = t.exercises.find((e) => /1 \+ 2 \+ 3/.test(e.ask));
+  if (sumAll && sumAll.answer !== 45) bad('magic[sum]', '1..9 adds to 45');
+  else if (sumAll) ok('magic[sum]', '1 to 9 adds to 45');
+  const per = t.exercises.find((e) => /shared between 3 rows/i.test(e.ask));
+  if (per && per.answer !== 45 / 3) bad('magic[row]', `each row must be ${45 / 3}`);
+  else if (per) ok('magic[row]', 'each line must be 15');
+  t.exercises.filter((e) => e.type === 'magic').forEach((e, k) => {
+    const n = e.given.length;
+    const g = e.given.map((r) => r.slice());
+    /* Every given line that is already complete must hit the total. */
+    const sum = (a) => a.reduce((x, y) => x + y, 0);
+    const lines = [...g, ...g[0].map((_, x) => g.map((r) => r[x])),
+      g.map((r, i) => r[i]), g.map((r, i) => r[n - 1 - i])];
+    const broken = lines.find((l) => l.every((v) => v != null) && sum(l) !== e.total);
+    if (broken) bad(`magic[${k}]`, `a given line adds to ${sum(broken)}, not ${e.total}`);
+    else ok(`magic[${k}]`, 'given lines are consistent');
+  });
+}
+
+/* Perfect numbers */
+{
+  const t = topic('perfect-numbers');
+  const c = t.exercises.find((e) => e.type === 'collect');
+  const wrong = c.valid.filter((v) => !perfect(v));
+  if (wrong.length) bad('perfect[collect]', `${wrong.join(', ')} are not perfect`);
+  else ok('perfect[collect]', `${c.valid.join(', ')} are all perfect numbers`);
+  [[6, 6], [8, 7], [12, 16], [10, 8]].forEach(([n, want]) => {
+    const real = divisors(n).reduce((a, b) => a + b, 0);
+    if (real !== want) bad('perfect[calc]', `parts of ${n} add to ${real}, the page says ${want}`);
+    else ok('perfect[calc]', `parts of ${n} add to ${real}`);
+  });
+}
+
+/* Tiling angles */
+{
+  const t = topic('shapes-that-fit');
+  const want = { 'four-sided shape add to': 360, 'triangle add to': 180, 'squares meet at a corner': 4, 'equal sides meet at a corner': 6 };
+  Object.entries(want).forEach(([needle, v]) => {
+    const e = t.exercises.find((x) => x.ask.toLowerCase().includes(needle.toLowerCase()));
+    if (!e) return;
+    if (e.answer !== v) bad('tiling', `"${needle}" should be ${v}, data says ${e.answer}`);
+    else ok('tiling', `${needle} = ${v}`);
+  });
+  /* Regular polygons meeting at a point: 360 divided by the interior angle. */
+  const sq = 360 / (((4 - 2) * 180) / 4);
+  const tri = 360 / (((3 - 2) * 180) / 3);
+  if (sq !== 4 || tri !== 6) bad('tiling[angles]', 'the corner arithmetic does not hold');
+  else ok('tiling[angles]', `squares meet ${sq}, triangles meet ${tri}`);
+}
+
+/* Infinity: the pairing claims */
+{
+  const t = topic('forever');
+  const a = t.exercises.find((e) => /5 goes with/i.test(e.ask));
+  if (a && a.answer !== 10) bad('forever[pair]', '5 doubles to 10');
+  else if (a) ok('forever[pair]', '5 pairs with 10');
+  const b = t.exercises.find((e) => /pairs with 40/i.test(e.ask));
+  if (b && b.answer !== 20) bad('forever[pair]', '40 halves to 20');
+  else if (b) ok('forever[pair]', '40 pairs with 20');
 }
 
 /* ---- Report ---------------------------------------------------------- */

@@ -31,7 +31,7 @@ const state = {
   answered: false,
   audioUnlocked: false,
   /** Math Lab: the topic being worked through and where we are in it. */
-  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0 }
+  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0, crossed: new Set() }
 };
 
 /* Runtime styles cannot ride in a style attribute: the site's CSP drops those.
@@ -696,6 +696,7 @@ function showExercise() {
   state.math.settled = false;
   state.math.hanoi = null;
   state.math.builtTotal = 0;
+  state.math.crossed = new Set();
   const total = topic.exercises.length;
 
   if (index >= total) {
@@ -769,6 +770,8 @@ function checkMath() {
   }
 
   if (ex.type === 'colormap') { checkColourMap(ex); return; }
+  if (ex.type === 'sieve') { checkSieveNow(ex); return; }
+  if (ex.type === 'magic') { checkMagicNow(ex); return; }
 
   const input = $('#gp-exercise [data-answer-input]');
   if (!input) return;
@@ -863,6 +866,51 @@ function tapPeg(pegEl) {
       : `Done in ${next.moves}. It can be done in ${best}, so there is a shorter way.`;
     settleExercise(true);
   }
+}
+
+function crossOut(cell) {
+  if (state.math.settled) return;
+  const n = cell.dataset.num;
+  const off = cell.classList.toggle('is-out');
+  if (off) state.math.crossed.add(n); else state.math.crossed.delete(n);
+  const left = $('#gp-exercise [data-sieve-left]');
+  const box = $('#gp-exercise [data-sieve]');
+  if (left && box) left.textContent = Number(box.dataset.upto) - state.math.crossed.size;
+  const fb = $('#gp-exercise [data-feedback]');
+  if (fb) fb.hidden = true;
+}
+
+function say(msg) {
+  const box = $('#gp-exercise [data-feedback]');
+  box.hidden = false;
+  box.innerHTML = `<div class="gp-fb is-wrong">
+      <p class="gp-fb__title"><span aria-hidden="true">🔍</span> Not yet.</p>
+      <p class="gp-fb__why">${escapeHtml(msg)}</p>
+    </div>`;
+}
+
+function checkSieveNow(ex) {
+  const v = mathlab.checkSieve(ex, state.math.crossed);
+  if (v.ok) { settleExercise(true); return; }
+  say(v.reason === 'extra'
+    ? `${v.n} should have been crossed out. Look at it again.`
+    : `You crossed out ${v.n}, but it belongs in the list. Put it back.`);
+}
+
+function checkMagicNow(ex) {
+  const values = {};
+  $$('#gp-exercise [data-cell]').forEach((el) => {
+    if (el.value !== '') values[el.dataset.cell] = el.value;
+  });
+  const v = mathlab.checkMagic(ex, values);
+  if (v.ok) { settleExercise(true); return; }
+  const msg = {
+    blank: 'Some squares are still empty.',
+    repeat: 'A number is used more than once. Each one goes in exactly once.',
+    outside: `${v.n} is not one of the numbers you may use.`,
+    line: `One line adds to ${v.got}, not ${ex.total}. Check every row, column and diagonal.`
+  }[v.reason] || 'Not right yet.';
+  say(msg);
 }
 
 function paintRegion(id) {
@@ -1020,6 +1068,9 @@ function onClick(ev) {
     $('#gp-turn-head').scrollIntoView({ block: 'start', behavior: 'smooth' });
     return;
   }
+
+  const scell = ev.target.closest('[data-num]');
+  if (scell) { crossOut(scell); return; }
 
   const peg = ev.target.closest('[data-peg]');
   if (peg) { tapPeg(peg); return; }

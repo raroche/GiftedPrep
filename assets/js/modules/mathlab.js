@@ -41,7 +41,7 @@ export async function loadGrade(grade) {
 }
 
 /** Grades that have a page written. The rest are shown as not ready yet. */
-export const READY_GRADES = [1, 2];
+export const READY_GRADES = [1, 2, 3];
 
 /* ------------------------------------------------------------------ */
 /* Grade index                                                         */
@@ -152,7 +152,9 @@ const TYPE_BADGE = {
   paper: { label: 'Pencil job', icon: '✏️' },
   collect: { label: 'Find them all', icon: '🔎' },
   colormap: { label: 'Colour it in', icon: '🎨' },
-  hanoi: { label: 'Play it', icon: '🕹️' }
+  hanoi: { label: 'Play it', icon: '🕹️' },
+  sieve: { label: 'Cross them out', icon: '🧹' },
+  magic: { label: 'Fill it in', icon: '🔢' }
 };
 
 function badge(type) {
@@ -218,6 +220,28 @@ export function renderExercise(ex, index, total) {
       <p class="gp-hanoi__count">Moves: <strong data-hanoi-moves>0</strong>
         &middot; best possible: ${Math.pow(2, n) - 1}</p>
       <p class="gp-hanoi__say" data-hanoi-say></p>`;
+  } else if (ex.type === 'sieve') {
+    const upto = ex.upto || 30;
+    body = `
+      <p class="gp-cm__rule">${esc(ex.rule || 'Tap a number to cross it out.')}</p>
+      <div class="gp-sieve" data-sieve data-upto="${upto}">${
+        Array.from({ length: upto }, (_, i) => i + 1).map((n) =>
+          `<button type="button" class="gp-scell" data-num="${n}">${n}</button>`).join('')
+      }</div>
+      <p class="gp-cm__score">Left standing: <strong data-sieve-left>${upto}</strong></p>
+      <button type="button" class="gp-btn gp-btn--primary" data-check>Check</button>`;
+  } else if (ex.type === 'magic') {
+    const given = ex.given || [];
+    body = `
+      <p class="gp-cm__rule">Every row, every column and both diagonals must add to
+      <strong>${ex.total}</strong>. Use each number once.</p>
+      <div class="gp-magic" data-magic>${
+        given.map((row, y) => row.map((v, x) => v == null
+          ? `<input class="gp-mcell" type="number" inputmode="numeric" data-cell="${y}-${x}" aria-label="Row ${y + 1} column ${x + 1}">`
+          : `<span class="gp-mcell is-given">${v}</span>`).join('')).join('')
+      }</div>
+      ${ex.pool ? `<p class="gp-magic__pool">Numbers to use: ${ex.pool.join(', ')}</p>` : ''}
+      <button type="button" class="gp-btn gp-btn--primary" data-check>Check it</button>`;
   } else if (ex.type === 'colormap') {
     body = `
       <p class="gp-cm__rule">Tap a country to change its colour. Two countries that
@@ -362,6 +386,65 @@ export function checkMap(ex, painted) {
 }
 
 /* ------------------------------------------------------------------ */
+/* Prime sieve and magic square                                        */
+/* ------------------------------------------------------------------ */
+
+export function isPrime(n) {
+  if (n < 2) return false;
+  for (let d = 2; d * d <= n; d += 1) if (n % d === 0) return false;
+  return true;
+}
+
+/** Numbers up to `upto` that should be left standing, per the exercise. */
+export function sieveKeep(ex) {
+  const upto = ex.upto || 30;
+  const all = Array.from({ length: upto }, (_, i) => i + 1);
+  if (ex.keep === 'primes') return all.filter(isPrime);
+  if (ex.keep === 'multiples') return all.filter((n) => n % ex.of === 0);
+  return all;
+}
+
+/** What is wrong with the child's sieve, in words worth reading. */
+export function checkSieve(ex, crossed) {
+  const upto = ex.upto || 30;
+  const keep = new Set(sieveKeep(ex));
+  const standing = [];
+  for (let n = 1; n <= upto; n += 1) if (!crossed.has(String(n))) standing.push(n);
+  const extra = standing.filter((n) => !keep.has(n));
+  const missing = [...keep].filter((n) => !standing.includes(n));
+  if (extra.length) return { ok: false, reason: 'extra', n: extra[0] };
+  if (missing.length) return { ok: false, reason: 'missing', n: missing[0] };
+  return { ok: true };
+}
+
+/** A filled magic square: every line must hit the total, no repeats. */
+export function checkMagic(ex, values) {
+  const n = ex.given.length;
+  const grid = ex.given.map((row, y) => row.map((v, x) =>
+    v == null ? values[`${y}-${x}`] : v));
+  if (grid.flat().some((v) => v == null || v === '' || Number.isNaN(Number(v)))) {
+    return { ok: false, reason: 'blank' };
+  }
+  const g = grid.map((r) => r.map(Number));
+  const flat = g.flat();
+  if (new Set(flat).size !== flat.length) return { ok: false, reason: 'repeat' };
+  if (ex.pool) {
+    const outside = flat.find((v) => !ex.pool.includes(v));
+    if (outside !== undefined) return { ok: false, reason: 'outside', n: outside };
+  }
+  const sum = (a) => a.reduce((x, y) => x + y, 0);
+  const lines = [
+    ...g.map((r) => r),
+    ...g[0].map((_, x) => g.map((r) => r[x])),
+    g.map((r, i) => r[i]),
+    g.map((r, i) => r[n - 1 - i])
+  ];
+  const wrong = lines.find((l) => sum(l) !== ex.total);
+  if (wrong) return { ok: false, reason: 'line', got: sum(wrong) };
+  return { ok: true };
+}
+
+/* ------------------------------------------------------------------ */
 /* Checking                                                            */
 /* ------------------------------------------------------------------ */
 
@@ -414,5 +497,6 @@ export default {
   loadGrade, renderGradeIndex, renderTopicIndex, renderTeach,
   renderExercise, check, collectHit, feedbackHtml, READY_GRADES,
   checkMap, adjacency, regionsOf, MAP_COLOURS,
-  hanoiStart, hanoiLegal, hanoiMove, hanoiWon
+  hanoiStart, hanoiLegal, hanoiMove, hanoiWon,
+  isPrime, sieveKeep, checkSieve, checkMagic
 };

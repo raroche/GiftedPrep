@@ -1,0 +1,1447 @@
+{
+  "grade": 3,
+  "title": "Grade 3 Math Lab",
+  "blurb": "14 topics. Each one is a short lesson you can see, then puzzles to try.",
+  "tracks": [
+    {
+      "id": "wonders",
+      "name": "Big ideas",
+      "blurb": "Real mathematics. The atoms every number is built from, a triangle that hides a dozen patterns, and what happens when you try to count forever."
+    },
+    {
+      "id": "skills",
+      "name": "Number skills",
+      "blurb": "Times tables, fractions as real numbers, and area."
+    }
+  ],
+  "topics": [
+    {
+      "id": "primes",
+      "track": "wonders",
+      "name": "The Atoms",
+      "emoji": "🧱",
+      "big": "Some numbers cannot be split. Everything is built from them.",
+      "parentNote": "Primes, found with the sieve of Eratosthenes, about 200 BC. Grade 3 meets multiples (MA.3.AR.3.2), which is exactly what is needed. Every number breaks into primes exactly one way, which is why they are the atoms.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "12 can be split into equal rows: 2 by 6, or 3 by 4."
+        },
+        {
+          "t": "say",
+          "text": "But 7 cannot. Only 1 by 7. Numbers like that are called prime."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              [
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              [
+                12,
+                13,
+                14,
+                15,
+                16
+              ],
+              [
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            ],
+            "mark": [
+              2,
+              3,
+              5,
+              7,
+              11,
+              13,
+              17,
+              19
+            ],
+            "c": "orange"
+          },
+          "cap": "The marked ones are prime. They cannot be split."
+        },
+        {
+          "t": "say",
+          "text": "Every other number is primes multiplied together. 12 is 2 times 2 times 3."
+        },
+        {
+          "t": "tip",
+          "text": "Cicadas come out of the ground after 13 or 17 years, both prime, so predators can never learn to wait for them."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "sieve",
+          "upto": 30,
+          "keep": "primes",
+          "rule": "Cross out every number that CAN be split into equal rows. Leave the primes.",
+          "ask": "Find the primes up to 30.",
+          "answer": 10,
+          "why": "2, 3, 5, 7, 11, 13, 17, 19, 23 and 29. Cross out 1, then every multiple of 2, then of 3, then of 5. Whatever survives is prime. Eratosthenes did this about 2,200 years ago."
+        },
+        {
+          "type": "truefalse",
+          "ask": "1 is a prime number.",
+          "answer": false,
+          "why": "False, and it catches people out. A prime has exactly two divisors, itself and 1. The number 1 only has one, so it does not qualify."
+        },
+        {
+          "type": "number",
+          "ask": "What is the only even prime?",
+          "answer": 2,
+          "why": "2. Every other even number can be split in half, so it is not prime. 2 is the odd one out, which is a nice thing for the only even one to be."
+        },
+        {
+          "type": "choice",
+          "ask": "Which one is NOT prime?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "23"
+            },
+            {
+              "id": "b",
+              "label": "29"
+            },
+            {
+              "id": "c",
+              "label": "27"
+            },
+            {
+              "id": "d",
+              "label": "31"
+            }
+          ],
+          "answer": "c",
+          "why": "27, because it is 3 times 9. The other three cannot be split at all."
+        },
+        {
+          "type": "number",
+          "ask": "12 = 2 x 2 x ?",
+          "answer": 3,
+          "why": "3. Every number breaks into primes exactly one way, and for 12 it is 2, 2 and 3. No other set of primes multiplies to 12."
+        },
+        {
+          "type": "paper",
+          "ask": "Break 30 into primes on paper. How many primes do you use?",
+          "answer": 3,
+          "hint": "Start by halving. 30 is 2 times 15, and 15 splits again.",
+          "why": "Three: 2, 3 and 5. 2 times 3 times 5 is 30. Everyone who tries gets the same three, which is the whole point."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            2,
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            37
+          ],
+          "need": 5,
+          "ask": "Type a prime number.",
+          "why": "They thin out as you go but they never stop. Euclid proved over 2,000 years ago that there is no biggest prime."
+        }
+      ]
+    },
+    {
+      "id": "forever",
+      "track": "wonders",
+      "name": "Forever",
+      "emoji": "♾️",
+      "big": "There are just as many even numbers as numbers.",
+      "parentNote": "Zvonkin's session 22, 'What is bigger, the whole or its part?'. Comparing infinite sets by pairing rather than counting. Held back from grade 1 because it needs the child to be settled that numbers go on forever.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "How do you tell if two piles are the same size without counting?"
+        },
+        {
+          "t": "say",
+          "text": "Pair them up. One from each. If nothing is left over, they match."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "c": "blue"
+          },
+          "cap": "All the numbers."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              2,
+              4,
+              6,
+              8,
+              10
+            ],
+            "c": "green"
+          },
+          "cap": "Just the even ones. Pair each with the row above."
+        },
+        {
+          "t": "say",
+          "text": "1 goes with 2. 2 goes with 4. 3 goes with 6. Nothing is ever left over."
+        },
+        {
+          "t": "tip",
+          "text": "So there are as many even numbers as numbers. Forever does not behave like other sizes."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "In the pairing, 5 goes with which even number?",
+          "answer": 10,
+          "why": "10. Each number pairs with its own double, so the pairing never runs out and never repeats."
+        },
+        {
+          "type": "number",
+          "ask": "Which number pairs with 40?",
+          "answer": 20,
+          "why": "20, because 20 doubled is 40. Every even number has exactly one partner, so nothing is missed."
+        },
+        {
+          "type": "truefalse",
+          "ask": "There are more whole numbers than even numbers.",
+          "answer": false,
+          "why": "False, and this is the surprising part. They can be paired off perfectly with nothing left over, and that is what same size means once you cannot count."
+        },
+        {
+          "type": "number",
+          "ask": "What is the biggest whole number?",
+          "answer": 0,
+          "why": "There isn't one. Type 0 because there is no answer to type. Whatever number you name, add 1 and you have a bigger one."
+        },
+        {
+          "type": "truefalse",
+          "ask": "There is a biggest prime number.",
+          "answer": false,
+          "why": "False. Euclid proved it around 300 BC: take any list of primes, multiply them and add 1, and you always find a prime that was not on your list."
+        },
+        {
+          "type": "number",
+          "ask": "Half of the numbers are even. Half of 100 is?",
+          "answer": 50,
+          "why": "50. Up to any number, exactly half are even. But 'forever' is not a number, which is why the rule stops working there."
+        },
+        {
+          "type": "paper",
+          "ask": "Pair every number with its triple: 1 with 3, 2 with 6. Does anything get left out? Type 0 for no.",
+          "answer": 0,
+          "hint": "Try to find a multiple of 3 with no partner.",
+          "why": "Nothing is left out. Every multiple of 3 has exactly one partner. So there are as many multiples of 3 as there are numbers, too."
+        }
+      ]
+    },
+    {
+      "id": "pascal",
+      "track": "wonders",
+      "name": "The Triangle",
+      "emoji": "🔺",
+      "big": "One rule, and a dozen patterns fall out.",
+      "parentNote": "Pascal's triangle. Each entry is the two above it added. It contains the counting numbers, the triangle numbers already met in grade 1 handshakes, the powers of two, and a fractal in its odd entries.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Start with 1. Every number is the two above it added together."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "pascal",
+            "rows": 5
+          },
+          "cap": "The edges are all 1. Everything else is the pair above."
+        },
+        {
+          "t": "say",
+          "text": "Look down the second slope: 1, 2, 3, 4. Just counting."
+        },
+        {
+          "t": "say",
+          "text": "The next slope is 1, 3, 6, 10. The handshake numbers."
+        },
+        {
+          "t": "tip",
+          "text": "Add across any row and you get 1, 2, 4, 8, 16. Doubling, hiding inside a triangle of additions."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "What number sits between 1 and 1 on row three?",
+          "figure": {
+            "kind": "pascal",
+            "rows": 3
+          },
+          "answer": 2,
+          "why": "2, because 1 and 1 above it add to 2. That is the only rule the triangle has."
+        },
+        {
+          "type": "number",
+          "ask": "3 and 3 sit side by side. What goes below them?",
+          "answer": 6,
+          "why": "6. Always add the pair directly above. That is how the whole triangle is built."
+        },
+        {
+          "type": "number",
+          "ask": "What is the missing number?",
+          "figure": {
+            "kind": "pascal",
+            "rows": 5,
+            "hide": [
+              [
+                4,
+                2
+              ]
+            ]
+          },
+          "answer": 6,
+          "why": "6. The two above it are 3 and 3. Row five is 1, 4, 6, 4, 1."
+        },
+        {
+          "type": "number",
+          "ask": "Add up row four: 1 + 3 + 3 + 1.",
+          "answer": 8,
+          "why": "8, which is 2 doubled three times. Every row adds to the next power of two: 1, 2, 4, 8, 16."
+        },
+        {
+          "type": "number",
+          "ask": "Row five is 1, 4, 6, 4, 1. What does it add to?",
+          "answer": 16,
+          "why": "16. The doubling carries on, because each number feeds into two below it."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The triangle numbers 1, 3, 6, 10 appear in the triangle.",
+          "answer": true,
+          "why": "True. They run down the third slope. They are the same numbers as the handshake puzzle, showing up again in a completely different place."
+        },
+        {
+          "type": "paper",
+          "ask": "Build 7 rows on paper. What is the biggest number in row 7?",
+          "answer": 20,
+          "hint": "Row 7 is 1, 6, 15, 20, 15, 6, 1.",
+          "why": "20, right in the middle. The middle is always the biggest, because it gets fed from both sides."
+        }
+      ]
+    },
+    {
+      "id": "magic-squares",
+      "track": "wonders",
+      "name": "Magic Squares",
+      "emoji": "🔢",
+      "big": "Every line adds to the same number.",
+      "parentNote": "The 3x3 magic square, known in China as Lo Shu and over 2,000 years old. There is exactly one solution, and every other arrangement is that one turned or flipped.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Put 1 to 9 in a square so every line adds to the same total."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                8,
+                1,
+                6
+              ],
+              [
+                3,
+                5,
+                7
+              ],
+              [
+                4,
+                9,
+                2
+              ]
+            ],
+            "cell": 56
+          },
+          "cap": "Rows, columns and both diagonals all add to 15."
+        },
+        {
+          "t": "say",
+          "text": "The total has to be 15. All nine numbers add to 45, and there are 3 rows."
+        },
+        {
+          "t": "say",
+          "text": "5 must go in the middle. It is in four of the lines."
+        },
+        {
+          "t": "tip",
+          "text": "There is only ONE answer. Every other one you can find is this one turned round or flipped over."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = ?",
+          "answer": 45,
+          "why": "45. Pair them up: 1 and 9, 2 and 8, 3 and 7, 4 and 6 all make 10, and 5 is left over. That is 40 and 5."
+        },
+        {
+          "type": "number",
+          "ask": "45 shared between 3 rows. What must each row add to?",
+          "answer": 15,
+          "why": "15. Every row, column and diagonal has to hit 15, and that is settled before you place a single number."
+        },
+        {
+          "type": "magic",
+          "given": [
+            [
+              8,
+              1,
+              null
+            ],
+            [
+              3,
+              null,
+              7
+            ],
+            [
+              4,
+              9,
+              2
+            ]
+          ],
+          "total": 15,
+          "pool": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "ask": "Fill in the two gaps.",
+          "answer": 15,
+          "why": "6 and 5. The top row needs 6 to reach 15, and the middle must be 5 because it sits in four different lines."
+        },
+        {
+          "type": "magic",
+          "given": [
+            [
+              null,
+              1,
+              6
+            ],
+            [
+              3,
+              5,
+              null
+            ],
+            [
+              4,
+              null,
+              2
+            ]
+          ],
+          "total": 15,
+          "pool": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "ask": "Now three gaps.",
+          "answer": 15,
+          "why": "8, 7 and 9. Find a line with only one gap first, fill it, and that opens up the next one."
+        },
+        {
+          "type": "number",
+          "ask": "Which number belongs in the middle?",
+          "answer": 5,
+          "why": "5. The middle sits in four lines, more than any other square, so it needs the middle-sized number to balance them all."
+        },
+        {
+          "type": "truefalse",
+          "ask": "There are lots of different 3 by 3 magic squares.",
+          "answer": false,
+          "why": "False. There is exactly one, and the eight you can make are all that same square turned or flipped. People have known this for centuries."
+        },
+        {
+          "type": "magic",
+          "given": [
+            [
+              null,
+              null,
+              6
+            ],
+            [
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              9,
+              null
+            ]
+          ],
+          "total": 15,
+          "pool": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "ask": "Three gaps again, harder places.",
+          "answer": 15,
+          "why": "8, 1 and 2. The right column already has 6 and 7, so the bottom right must be 2, and the rest follows."
+        }
+      ]
+    },
+    {
+      "id": "fair-shares",
+      "track": "wonders",
+      "name": "Fair Shares",
+      "emoji": "🍰",
+      "big": "I cut, you choose. Now it has to be fair.",
+      "parentNote": "Divide and choose, the oldest result in fair division. The rule makes fairness happen without anyone being trusted, which is a genuinely different kind of mathematical idea.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Two people, one cake. How do you split it fairly?"
+        },
+        {
+          "t": "say",
+          "text": "Do not just trust the cutter. Use a rule instead."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 2,
+            "shaded": 1,
+            "c": "red"
+          },
+          "cap": "One cuts. The OTHER one picks first."
+        },
+        {
+          "t": "say",
+          "text": "Now the cutter wants the pieces equal. An unequal cut just loses them the big piece."
+        },
+        {
+          "t": "tip",
+          "text": "Nobody has to be honest. The rule makes it fair on its own. That is what makes it clever."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "truefalse",
+          "ask": "With cut and choose, the cutter should make the pieces equal.",
+          "answer": true,
+          "why": "True. The chooser will take the bigger piece, so the cutter is left with the smaller one. Making them equal is the cutter's own best move."
+        },
+        {
+          "type": "number",
+          "ask": "One cake shared fairly between 2. What fraction each?",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 2,
+            "shaded": 1,
+            "c": "red"
+          },
+          "answer": 2,
+          "why": "One half each. Type 2 for the number of parts. Fair means equal parts, and there are two of them."
+        },
+        {
+          "type": "number",
+          "ask": "One cake shared fairly between 4. How many parts?",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 4,
+            "shaded": 1,
+            "c": "blue"
+          },
+          "answer": 4,
+          "why": "Four parts, one fourth each. The more people, the smaller each share."
+        },
+        {
+          "type": "choice",
+          "ask": "Who should cut, and who should choose?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "Same person does both"
+            },
+            {
+              "id": "b",
+              "label": "One cuts, the other chooses"
+            },
+            {
+              "id": "c",
+              "label": "Both cut together"
+            }
+          ],
+          "answer": "b",
+          "why": "One cuts and the other chooses. If the same person did both they could keep the big piece, and the rule would protect nobody."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Cut and choose needs both people to be honest.",
+          "answer": false,
+          "why": "False, and that is the beautiful part. Even someone trying to cheat ends up cutting evenly, because cheating costs them the bigger piece."
+        },
+        {
+          "type": "number",
+          "ask": "3 children share 12 sweets fairly. How many each?",
+          "answer": 4,
+          "why": "4 each. 12 shared into 3 equal groups. Fair sharing is division, which is why the two ideas belong together."
+        },
+        {
+          "type": "paper",
+          "ask": "Cut and choose works for 2. Try to invent a rule for 3 people. How many cuts does one cake need for 3 shares?",
+          "answer": 2,
+          "hint": "Think about how many cuts a cake needs to become 3 pieces.",
+          "why": "Two cuts make three pieces. Making it fair for three is genuinely hard, and mathematicians only found good methods for it in the last hundred years."
+        }
+      ]
+    },
+    {
+      "id": "perfect-numbers",
+      "track": "wonders",
+      "name": "Perfect Numbers",
+      "emoji": "💎",
+      "big": "A number that equals the sum of its own parts.",
+      "parentNote": "6 = 1+2+3 and 28 = 1+2+4+7+14. Known to the Greeks. Only 51 have ever been found, and whether an odd one exists is still open after 2,000 years.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "The parts of a number are what divides into it, not counting itself."
+        },
+        {
+          "t": "say",
+          "text": "The parts of 6 are 1, 2 and 3. Add them: 1 + 2 + 3 = 6."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              1,
+              2,
+              3
+            ],
+            "c": "yellow"
+          },
+          "cap": "The parts of 6 add back to 6. That makes it perfect."
+        },
+        {
+          "t": "say",
+          "text": "Most numbers do not do this. The parts of 8 are 1, 2 and 4, which make only 7."
+        },
+        {
+          "t": "tip",
+          "text": "The next perfect number after 6 is 28. After that, 496. They are very rare, and only 51 have ever been found."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "The parts of 6 are 1, 2 and 3. What do they add to?",
+          "answer": 6,
+          "why": "6, the number itself. That is what perfect means."
+        },
+        {
+          "type": "number",
+          "ask": "What are the parts of 8 added up? (1 + 2 + 4)",
+          "answer": 7,
+          "why": "7, which is less than 8. Numbers whose parts fall short are called deficient, and most numbers are."
+        },
+        {
+          "type": "number",
+          "ask": "The parts of 12 are 1, 2, 3, 4 and 6. What do they add to?",
+          "answer": 16,
+          "why": "16, which is more than 12. That makes 12 abundant. So numbers come in three kinds and perfect is the rare middle one."
+        },
+        {
+          "type": "number",
+          "ask": "1 + 2 + 4 + 7 + 14 = ?",
+          "answer": 28,
+          "why": "28, and those are exactly the parts of 28. So 28 is the second perfect number."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Somebody has found an odd perfect number.",
+          "answer": false,
+          "why": "False. Every perfect number ever found is even. Whether an odd one exists has been open for more than 2,000 years, and nobody knows."
+        },
+        {
+          "type": "paper",
+          "ask": "Find the parts of 10 and add them. What do you get?",
+          "answer": 8,
+          "hint": "What divides into 10? Do not count 10 itself.",
+          "why": "8, from 1 + 2 + 5. Less than 10, so 10 is deficient. Try a few more and you will see how rare perfect really is."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            6,
+            28,
+            496,
+            8128
+          ],
+          "need": 2,
+          "ask": "Type a perfect number.",
+          "why": "6, 28, 496 and 8128 were all known to the ancient Greeks. The next one is 33,550,336, which shows how fast they thin out."
+        }
+      ]
+    },
+    {
+      "id": "chance",
+      "track": "wonders",
+      "name": "Chance",
+      "emoji": "🎲",
+      "big": "How likely, written as a fraction.",
+      "parentNote": "Probability, which needs fractions to be honest, so grade 3 is the first place it can be done properly. Zvonkin found this hard going with preschoolers and he was right.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A dice has 6 faces. Each one is equally likely."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "text": "🎲"
+          },
+          "cap": "One chance in 6 of rolling a 4."
+        },
+        {
+          "t": "say",
+          "text": "3 of the faces are even. So even is 3 out of 6, which is a half."
+        },
+        {
+          "t": "say",
+          "text": "Something certain is 6 out of 6. Something impossible is 0 out of 6."
+        },
+        {
+          "t": "tip",
+          "text": "A dice has no memory. Five sixes in a row does not make the next roll any different."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many faces on a dice?",
+          "answer": 6,
+          "why": "6, numbered 1 to 6, and every one is equally likely."
+        },
+        {
+          "type": "number",
+          "ask": "How many faces show an even number?",
+          "answer": 3,
+          "why": "3, which are 2, 4 and 6. So rolling even is 3 out of 6, or one half."
+        },
+        {
+          "type": "number",
+          "ask": "Out of 6 faces, how many are bigger than 4?",
+          "answer": 2,
+          "why": "2, which are 5 and 6. So it is 2 out of 6, less likely than a half."
+        },
+        {
+          "type": "number",
+          "ask": "How many ways can a coin land?",
+          "answer": 2,
+          "why": "2. Heads or tails, each one chance in two."
+        },
+        {
+          "type": "truefalse",
+          "ask": "After four heads in a row, tails is more likely next.",
+          "answer": false,
+          "why": "False. The coin does not remember. It is still one chance in two, every single time. Believing otherwise is such a common mistake it has a name."
+        },
+        {
+          "type": "number",
+          "ask": "A bag has 2 red and 4 blue. How many balls in total?",
+          "answer": 6,
+          "why": "6. So red is 2 out of 6 and blue is 4 out of 6, and together they make 6 out of 6, which is certain."
+        },
+        {
+          "type": "paper",
+          "ask": "Roll a dice 12 times and tally the evens. How many would you expect?",
+          "answer": 6,
+          "hint": "Half the faces are even, so about half of 12.",
+          "why": "About 6, but you will rarely get exactly 6, and that is the real lesson. Chance tells you what to expect, not what will happen."
+        }
+      ]
+    },
+    {
+      "id": "shapes-that-fit",
+      "track": "wonders",
+      "name": "Shapes That Fit",
+      "emoji": "🦎",
+      "big": "Any four-sided shape tiles the floor.",
+      "parentNote": "Tiling beyond the regular shapes. Every quadrilateral tiles the plane, however odd it looks, because four copies rotated round a point make a full turn. This is how Escher built his lizards.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "In grade 2 you found only triangles, squares and hexagons tile on their own."
+        },
+        {
+          "t": "say",
+          "text": "That was for shapes with equal sides. Drop that rule and more works."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "shapes": [
+              {
+                "s": "trapezoid",
+                "c": "green"
+              }
+            ]
+          },
+          "cap": "This tiles. So does any shape with 4 sides, however lopsided."
+        },
+        {
+          "t": "say",
+          "text": "The 4 corners of any four-sided shape add to 360. So 4 copies fit round a point."
+        },
+        {
+          "t": "tip",
+          "text": "Escher made lizards tile by starting with a shape that fits, then bending its edges."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "The corners of any four-sided shape add to what?",
+          "answer": 360,
+          "why": "360, a full turn. That is exactly why four copies fit round a point with no gap."
+        },
+        {
+          "type": "number",
+          "ask": "The corners of any triangle add to what?",
+          "answer": 180,
+          "why": "180, a half turn. Two triangles make a four-sided shape, which is why 180 doubles to 360."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Every four-sided shape can tile a floor.",
+          "answer": true,
+          "why": "True, even a lopsided one. Turn four copies round a point and their corners use up the full 360 exactly."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Regular pentagons can tile a floor.",
+          "answer": false,
+          "why": "False. Each corner is 108, and 108 does not divide 360. Three leave a gap and four overlap."
+        },
+        {
+          "type": "number",
+          "ask": "How many squares meet at a corner in a tiling?",
+          "answer": 4,
+          "why": "4, because each corner is 90 and four 90s make 360. The corner rule decides everything."
+        },
+        {
+          "type": "number",
+          "ask": "How many triangles with equal sides meet at a corner?",
+          "answer": 6,
+          "why": "6. Each corner is 60, and six 60s make 360."
+        },
+        {
+          "type": "paper",
+          "ask": "Cut out 4 copies of a lopsided 4-sided shape. Fit them round a point. How many fit?",
+          "answer": 4,
+          "hint": "Turn each one so a different corner faces the middle.",
+          "why": "All 4, with no gap. Each of the four corners takes a turn at the centre, and together they use the whole 360."
+        }
+      ]
+    },
+    {
+      "id": "times-tables",
+      "track": "skills",
+      "name": "Times Tables",
+      "emoji": "✖️",
+      "big": "Rows and columns, learned by heart.",
+      "parentNote": "MA.3.NSO.2.2 and 2.4, products to 144. Arrays first, facts second.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "4 rows of 6 is 24. That is what 4 times 6 means."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "array",
+            "rows": 4,
+            "cols": 6,
+            "c": "blue"
+          },
+          "cap": "4 rows of 6. Count them: 24."
+        },
+        {
+          "t": "say",
+          "text": "Turn it sideways and it is 6 rows of 4. Still 24."
+        },
+        {
+          "t": "tip",
+          "text": "So you only have to learn half the table. 7 times 8 and 8 times 7 are the same fact."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "4 x 6 = ?",
+          "figure": {
+            "kind": "array",
+            "rows": 4,
+            "cols": 6,
+            "c": "blue"
+          },
+          "answer": 24,
+          "why": "24. Four rows of six. Count by sixes: 6, 12, 18, 24."
+        },
+        {
+          "type": "number",
+          "ask": "7 x 8 = ?",
+          "answer": 56,
+          "why": "56. A famously slippery one. It helps that 5, 6, 7, 8 goes 56 = 7 x 8."
+        },
+        {
+          "type": "number",
+          "ask": "9 x 6 = ?",
+          "answer": 54,
+          "why": "54. Ten sixes is 60, then take one six away."
+        },
+        {
+          "type": "number",
+          "ask": "12 x 12 = ?",
+          "answer": 144,
+          "why": "144, the biggest one in grade 3. Ten twelves is 120, plus two more twelves is 24."
+        },
+        {
+          "type": "number",
+          "ask": "56 ÷ 8 = ?",
+          "answer": 7,
+          "why": "7. Division is the same fact backwards: 7 times 8 is 56, so 56 shared into 8 is 7."
+        },
+        {
+          "type": "truefalse",
+          "ask": "6 x 7 is the same as 7 x 6.",
+          "answer": true,
+          "why": "True. It is the same array turned sideways, which halves how much you have to learn."
+        },
+        {
+          "type": "paper",
+          "ask": "Work out 6 x 14 on paper by splitting it.",
+          "answer": 84,
+          "hint": "6 x 10 and 6 x 4, then add.",
+          "why": "84. Six tens is 60 and six fours is 24. Splitting like this is the distributive property, and it makes big multiplications easy."
+        }
+      ]
+    },
+    {
+      "id": "fraction-numbers",
+      "track": "skills",
+      "name": "Fractions Are Numbers",
+      "emoji": "🧮",
+      "big": "A fraction has a place on the number line.",
+      "parentNote": "MA.3.FR.1.1 to 2.2. The shift from fractions as pictures of pizza to fractions as numbers with a position and a size.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "One fourth is one of four equal parts."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 4,
+            "shaded": 1,
+            "c": "blue"
+          },
+          "cap": "One fourth."
+        },
+        {
+          "t": "say",
+          "text": "Three fourths is that same part, taken three times."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 4,
+            "shaded": 3,
+            "c": "blue"
+          },
+          "cap": "Three fourths."
+        },
+        {
+          "t": "tip",
+          "text": "With the same top number, more parts means smaller pieces. One third beats one fourth."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many fourths make a whole?",
+          "answer": 4,
+          "why": "4. The bottom number always says how many equal parts make one whole."
+        },
+        {
+          "type": "number",
+          "ask": "How many sixths make a whole?",
+          "answer": 6,
+          "why": "6. More parts, so each one is smaller."
+        },
+        {
+          "type": "choice",
+          "ask": "Which is bigger, one third or one fourth?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "one third"
+            },
+            {
+              "id": "b",
+              "label": "one fourth"
+            },
+            {
+              "id": "c",
+              "label": "the same"
+            }
+          ],
+          "answer": "a",
+          "why": "One third. Fewer parts means each part is bigger, which feels backwards until you picture the pizza."
+        },
+        {
+          "type": "number",
+          "ask": "How many fourths are the same as one half?",
+          "figure": {
+            "kind": "fraction",
+            "shape": "circle",
+            "parts": 4,
+            "shaded": 2,
+            "c": "green"
+          },
+          "answer": 2,
+          "why": "2. Two fourths shade exactly half the circle, so they are the same number written two ways."
+        },
+        {
+          "type": "number",
+          "ask": "How many sixths are the same as one half?",
+          "answer": 3,
+          "why": "3. Half of six parts is three of them."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Four fourths is the same as one whole.",
+          "answer": true,
+          "why": "True. All the parts together are the whole thing again, which is why four fourths is just 1."
+        },
+        {
+          "type": "paper",
+          "ask": "Draw a number line from 0 to 1 and mark the fourths. How many marks between 0 and 1?",
+          "answer": 3,
+          "hint": "One fourth, two fourths, three fourths. The ends do not count.",
+          "why": "3 marks inside. Fractions are not just pictures, they are numbers with a place on the line."
+        }
+      ]
+    },
+    {
+      "id": "area",
+      "track": "skills",
+      "name": "Area",
+      "emoji": "🟦",
+      "big": "Cover it in squares, then multiply.",
+      "parentNote": "MA.3.GR.2.1 to 2.4. Area by covering first, formula second, then composite shapes.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Area is how many unit squares cover the shape."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "c": "blue"
+          },
+          "cap": "3 rows of 4 squares. Area 12."
+        },
+        {
+          "t": "say",
+          "text": "You do not have to count them. 3 times 4 is 12."
+        },
+        {
+          "t": "tip",
+          "text": "For an odd shape, cut it into rectangles, find each area, and add."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "What is the area of this rectangle?",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "c": "blue"
+          },
+          "answer": 12,
+          "why": "12. Three rows of four. Area is just multiplication with a picture attached."
+        },
+        {
+          "type": "number",
+          "ask": "A rectangle 5 long and 6 wide. What is its area?",
+          "answer": 30,
+          "why": "30. Five sixes, or six fives, whichever is easier for you."
+        },
+        {
+          "type": "number",
+          "ask": "A square with sides of 7. What is its area?",
+          "answer": 49,
+          "why": "49. A square's area is its side times itself, which is why 49 is called a square number."
+        },
+        {
+          "type": "number",
+          "ask": "A rectangle has area 24 and is 4 wide. How long is it?",
+          "answer": 6,
+          "why": "6. Area divided by one side gives the other, because area is the two sides multiplied."
+        },
+        {
+          "type": "number",
+          "ask": "What is the perimeter of a rectangle 3 by 4?",
+          "answer": 14,
+          "why": "14. Two threes and two fours. Perimeter adds the sides, area multiplies them, which is why they are different numbers."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A 2 by 6 rectangle and a 3 by 4 rectangle have the same area.",
+          "answer": true,
+          "why": "True, both 12. But their perimeters are 16 and 14, so same area does not mean same fence."
+        },
+        {
+          "type": "paper",
+          "ask": "An L shape: a 4 by 2 rectangle with a 2 by 2 square joined on. Total area?",
+          "answer": 12,
+          "hint": "Work out each rectangle, then add.",
+          "why": "12. The 4 by 2 gives 8 and the 2 by 2 gives 4. Cutting a hard shape into easy ones is the whole method."
+        }
+      ]
+    },
+    {
+      "id": "big-numbers",
+      "track": "skills",
+      "name": "Big Numbers",
+      "emoji": "🔟",
+      "big": "Thousands work exactly like tens.",
+      "parentNote": "MA.3.NSO.1.1 to 1.4. Place value to 10,000, and rounding.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "4,207 is 4 thousands, 2 hundreds, no tens and 7 ones."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              4000,
+              200,
+              0,
+              7
+            ],
+            "c": "teal"
+          },
+          "cap": "Expanded form. The 0 holds the tens place open."
+        },
+        {
+          "t": "say",
+          "text": "Each place is ten times the one to its right."
+        },
+        {
+          "t": "tip",
+          "text": "Rounding to the nearest hundred asks which hundred it is closer to, exactly like rounding to tens."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "4 thousands and 2 hundreds and 7 ones is what number?",
+          "answer": 4207,
+          "why": "4207. The 0 in the tens place is doing real work; without it the digits slide."
+        },
+        {
+          "type": "number",
+          "ask": "What is the 3 worth in 3,614?",
+          "answer": 3000,
+          "why": "3000. It sits in the thousands place, so it means 3 thousands."
+        },
+        {
+          "type": "number",
+          "ask": "Round 462 to the nearest hundred.",
+          "answer": 500,
+          "why": "500. It sits between 400 and 500, and 462 is closer to 500."
+        },
+        {
+          "type": "number",
+          "ask": "Round 1,238 to the nearest ten.",
+          "answer": 1240,
+          "why": "1240. Look only at the ones digit: 8 is past halfway, so round up."
+        },
+        {
+          "type": "number",
+          "ask": "100 more than 2,950.",
+          "answer": 3050,
+          "why": "3050. Nine hundreds plus one hundred makes ten hundreds, which is a whole thousand, so the thousands digit moves too."
+        },
+        {
+          "type": "truefalse",
+          "ask": "3,099 is bigger than 3,100.",
+          "answer": false,
+          "why": "False. Compare from the left: same thousands, but 0 hundreds against 1 hundred, so 3,100 wins."
+        },
+        {
+          "type": "paper",
+          "ask": "Write 7,050 in expanded form. What is the biggest part?",
+          "answer": 7000,
+          "hint": "7000 + 0 + 50 + 0.",
+          "why": "7000. There are no hundreds and no ones, but those zeros still have to be written or everything shifts."
+        }
+      ]
+    },
+    {
+      "id": "word-problems",
+      "track": "skills",
+      "name": "Two-Step Problems",
+      "emoji": "🧩",
+      "big": "Some questions need two goes.",
+      "parentNote": "MA.3.AR.1.2. Two-step word problems across all four operations, which is where most children first get stuck.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Read it once for the story. Read it again for the numbers."
+        },
+        {
+          "t": "say",
+          "text": "Ask: what do I need to work out FIRST before I can answer?"
+        },
+        {
+          "t": "say",
+          "text": "6 packs of 4 pens, and 5 get lost. That is a times, then a take away."
+        },
+        {
+          "t": "tip",
+          "text": "Write the first answer down before starting the second step. Most mistakes come from trying to hold both in your head."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "6 packs of 4 pens. 5 get lost. How many left?",
+          "answer": 19,
+          "why": "19. First 6 times 4 is 24, then take away 5. Doing it in the other order gives the wrong answer."
+        },
+        {
+          "type": "number",
+          "ask": "3 boxes of 8 cakes. 4 are eaten. How many left?",
+          "answer": 20,
+          "why": "20. 3 times 8 is 24, take away 4."
+        },
+        {
+          "type": "number",
+          "ask": "You have 50. You spend 12 and then 15. What is left?",
+          "answer": 23,
+          "why": "23. 12 and 15 is 27 spent, and 50 take away 27 is 23."
+        },
+        {
+          "type": "number",
+          "ask": "24 sweets shared between 4, then each child eats 2. How many does each have left?",
+          "answer": 4,
+          "why": "4. First 24 divided by 4 is 6 each, then take away 2."
+        },
+        {
+          "type": "number",
+          "ask": "5 rows of 7 chairs. 9 people sit down. How many chairs empty?",
+          "answer": 26,
+          "why": "26. 5 times 7 is 35 chairs, minus 9 people."
+        },
+        {
+          "type": "truefalse",
+          "ask": "In a two-step problem the order of the steps matters.",
+          "answer": true,
+          "why": "True. Multiplying then subtracting gives a different answer from subtracting then multiplying. Work out which has to come first."
+        },
+        {
+          "type": "paper",
+          "ask": "A book has 120 pages. You read 35 on Monday and 28 on Tuesday. How many are left?",
+          "answer": 57,
+          "hint": "Add what you read first, then take it off the total.",
+          "why": "57. 35 and 28 is 63 read, and 120 take away 63 is 57."
+        }
+      ]
+    },
+    {
+      "id": "elapsed-time",
+      "track": "skills",
+      "name": "Time Passing",
+      "emoji": "🕐",
+      "big": "How long from then until now.",
+      "parentNote": "MA.3.M.2.1 and 2.2. Time to the minute and elapsed time, which children find much harder than reading a clock.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "There are 60 minutes in an hour."
+        },
+        {
+          "t": "say",
+          "text": "From 2:30 to 3:30 is one hour. From 2:30 to 3:00 is 30 minutes."
+        },
+        {
+          "t": "say",
+          "text": "For a tricky one, jump to the next whole hour first, then count on."
+        },
+        {
+          "t": "tip",
+          "text": "2:45 to 4:10? Jump to 3:00, that is 15. Then to 4:00, that is another hour. Then 10 more."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many minutes in an hour?",
+          "answer": 60,
+          "why": "60. Every time question comes back to this."
+        },
+        {
+          "type": "number",
+          "ask": "From 3:00 to 3:45. How many minutes?",
+          "answer": 45,
+          "why": "45 minutes. Same hour, so just read the minutes."
+        },
+        {
+          "type": "number",
+          "ask": "From 2:30 to 3:00. How many minutes?",
+          "answer": 30,
+          "why": "30. Half an hour. Jumping to the whole hour is usually the easiest first step."
+        },
+        {
+          "type": "number",
+          "ask": "How many minutes in 2 hours?",
+          "answer": 120,
+          "why": "120. Two lots of 60."
+        },
+        {
+          "type": "number",
+          "ask": "From 1:50 to 2:20. How many minutes?",
+          "answer": 30,
+          "why": "30. Ten minutes gets you to 2:00, then twenty more. Crossing the hour is where most slips happen."
+        },
+        {
+          "type": "truefalse",
+          "ask": "From 11:45 to 12:15 is 30 minutes.",
+          "answer": true,
+          "why": "True. 15 minutes to reach 12:00 and 15 more after it. Crossing midday changes nothing about the counting."
+        },
+        {
+          "type": "paper",
+          "ask": "A film starts at 4:20 and lasts 95 minutes. What time does it end? Type the minutes past the hour.",
+          "answer": 55,
+          "hint": "95 minutes is one hour and 35 minutes.",
+          "why": "5:55. An hour takes you to 5:20, then 35 more minutes reaches 5:55."
+        }
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIR = 'data/math';
-const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi'];
+const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi', 'sieve', 'magic'];
 
 
 /* Regions of a grid map, and which pairs share an edge. */
@@ -58,6 +58,39 @@ function chromatic(cells) {
     if (fits(0)) return k;
   }
   return 6;
+}
+
+
+/* Can the blanks be filled from the pool so every line hits the total? */
+function solvableMagic(given, total, pool) {
+  const n = given.length;
+  const used = given.flat().filter((v) => v != null);
+  const spare = pool.filter((v) => !used.includes(v));
+  const blanks = [];
+  given.forEach((row, y) => row.forEach((v, x) => { if (v == null) blanks.push([y, x]); }));
+  if (spare.length < blanks.length) return false;
+  const grid = given.map((r) => r.slice());
+  const sum = (a) => a.reduce((x, y) => x + y, 0);
+  const good = () => {
+    const lines = [
+      ...grid,
+      ...grid[0].map((_, x) => grid.map((r) => r[x])),
+      grid.map((r, i) => r[i]),
+      grid.map((r, i) => r[n - 1 - i])
+    ];
+    return lines.every((l) => l.some((v) => v == null) || sum(l) === total);
+  };
+  const place = (i, left) => {
+    if (i === blanks.length) return good();
+    for (let k = 0; k < left.length; k += 1) {
+      const [y, x] = blanks[i];
+      grid[y][x] = left[k];
+      if (good() && place(i + 1, left.filter((_, j) => j !== k))) return true;
+      grid[y][x] = null;
+    }
+    return false;
+  };
+  return place(0, spare);
 }
 
 const errors = [];
@@ -159,6 +192,27 @@ for (const file of files) {
           warn(w, `allows ${e.limit} colours but ${need} would do`);
         }
         if (need > 4) err(w, `map needs ${need} colours, which cannot happen on a real map`);
+      } else if (e.type === 'sieve') {
+        if (!['primes', 'multiples'].includes(e.keep)) err(w, `unknown sieve rule "${e.keep}"`);
+        if (e.keep === 'multiples' && !e.of) err(w, 'multiples mode needs "of"');
+        const upto = e.upto || 30;
+        if (upto < 10 || upto > 100) err(w, `${upto} is outside a sensible grid`);
+      } else if (e.type === 'magic') {
+        const g = e.given || [];
+        if (!g.length || g.some((r) => r.length !== g.length)) err(w, 'the square must be square');
+        if (!e.total) err(w, 'no total');
+        /* The puzzle has to be solvable, and the given numbers must not already
+           break a full line. */
+        const blanks = g.flat().filter((v) => v == null).length;
+        if (!blanks) err(w, 'nothing to fill in');
+        if (e.pool) {
+          const used = g.flat().filter((v) => v != null);
+          const dup = used.find((v, i) => used.indexOf(v) !== i);
+          if (dup !== undefined) err(w, `${dup} is given twice`);
+          const outside = used.find((v) => !e.pool.includes(v));
+          if (outside !== undefined) err(w, `${outside} is not in the pool`);
+          if (!solvableMagic(g, e.total, e.pool)) err(w, 'this square cannot be completed');
+        }
       } else if (e.type === 'hanoi') {
         const n = e.discs || 3;
         if (n < 2 || n > 6) err(w, `${n} discs is outside what a child can play on a screen`);

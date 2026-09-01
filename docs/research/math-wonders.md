@@ -191,22 +191,22 @@ connect a room full of computers.
 
 ## What got considered and cut
 
-**Magic squares** (Zvonkin session 44). Good, but it is arithmetic practice
-wearing a hat, and the current Balance topic already covers equality.
+**Magic squares** (Zvonkin session 44). Cut from grade 1: with shaky arithmetic
+it is practice wearing a hat. **Now the grade 3 topic**, where fluent times
+tables turn it into a real deduction puzzle with exactly one answer.
 
 **Probability** (Zvonkin sessions 28, 31, 36). Genuinely wonderful, and Zvonkin
-found it hard going. It also needs dice in hand and repeated trials to mean
-anything; a web page showing a child a number would teach the wrong lesson.
-Better done at a table with real dice, so it is mentioned in the parent note
-for Socks in the Dark instead.
+found it hard going. Cut from grade 1 because it cannot be honest without
+fractions. **Now the grade 3 topic "Chance"**, where fractions make it possible
+to say how likely rather than just which is likelier.
 
 **Infinity / whole versus part** (Zvonkin session 22). The most beautiful item
-on his list. Cut because the honest version needs the child to be comfortable
-with the counting numbers going on forever, and grade 1 is still building the
-first hundred. It is the right topic for grade 3.
+on his list. Cut from grade 1 because the honest version needs the child to be
+comfortable with the counting numbers going on forever, and grade 1 is still
+building the first hundred. **Now the grade 3 topic "Forever".**
 
-**Binary and codes** (Zvonkin session 52). Held for grade 2, where doubling and
-place value are steadier.
+**Binary and codes** (Zvonkin session 52). **Now the grade 2 topic "Secret
+Codes"**, reached through doubling rather than base arithmetic.
 
 **Knots and homeomorphism** (Zvonkin sessions 65, 66). Needs string and a pair
 of hands more than a screen.

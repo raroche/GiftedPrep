@@ -64,7 +64,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Light and dark** | Follows the system theme, with a manual override |
 | **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
-| **Math Lab** | A separate section for advanced maths, grade by grade. Grades 1 and 2, 30 topics, in two tracks: real mathematics (maps, bridges, bees, an unsolved problem) and number skills |
+| **Math Lab** | A separate section for advanced maths, grade by grade. Grades 1 to 3, 44 topics, in two tracks: real mathematics (maps, bridges, primes, infinity, two unsolved problems) and number skills |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
 Keyboard: <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the next
@@ -118,7 +118,7 @@ Separate from the test practice. The screening tests measure reasoning, and
 this measures nothing at all: it is a place for a child who finds grade-level
 maths easy to go deeper.
 
-Grades 1 and 2 are written. Grades 3 and 4 are not yet.
+Grades 1, 2 and 3 are written. Grade 4 is not yet.
 
 Grade 2's big ideas are a proof the child can see rather than take on
 trust (odd numbers stacking into squares), a genuinely unsolved problem
@@ -127,6 +127,13 @@ doubling, the fact that perimeter and area are independent, Fibonacci
 counted off a real flower, rotational symmetry, the multiplication
 principle, and which flat shapes fold into a cube. Sources and the cut
 list are in [`docs/research/math-wonders.md`](docs/research/math-wonders.md).
+
+Grade 3 opens up what multiplication and fractions make possible: primes found
+with the sieve of Eratosthenes, infinity compared by pairing rather than
+counting, Pascal's triangle, the Lo Shu magic square, fair division by cut and
+choose, perfect numbers and the odd-perfect question still open after 2,000
+years, probability written as a fraction, and why any four-sided shape tiles a
+floor.
 
 Sixteen topics in two tracks. Each is a short illustrated lesson followed by
 puzzles taken one at a time.

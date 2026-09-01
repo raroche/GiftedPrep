@@ -1937,3 +1937,58 @@ button, a, label, summary, [role="button"] {
 }
 .gp-dchip.is-on { background: var(--gp-accent); border-color: var(--gp-ink); color: var(--gp-on-accent); }
 .gp-dchip.is-on::after { content: " ✓"; font-size: var(--gp-text-sm); }
+
+/* ---- prime sieve ---- */
+
+.gp-sieve {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  gap: 6px;
+  max-width: 520px;
+  margin-bottom: var(--gp-space-4);
+}
+.gp-scell {
+  aspect-ratio: 1;
+  min-height: 48px;
+  border: 2.5px solid var(--gp-line-strong);
+  border-radius: 8px;
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  font-weight: 800;
+  font-size: var(--gp-text-base);
+  cursor: pointer;
+}
+/* Crossed out is shown by a line as well as a fade, never by colour alone. */
+.gp-scell.is-out {
+  color: var(--gp-ink-soft);
+  text-decoration: line-through;
+  background: var(--gp-surface-2);
+  border-style: dashed;
+  opacity: 0.65;
+}
+
+/* ---- magic square ---- */
+
+.gp-magic {
+  display: grid;
+  grid-template-columns: repeat(3, 72px);
+  gap: 6px;
+  margin-bottom: var(--gp-space-4);
+}
+.gp-mcell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  width: 72px;
+  border: 3px solid var(--gp-line-strong);
+  border-radius: 8px;
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  font-size: var(--gp-text-xl);
+  font-weight: 800;
+  text-align: center;
+}
+.gp-mcell.is-given { background: var(--gp-surface-2); color: var(--gp-ink-soft); }
+.gp-mcell:focus-visible { outline: 3px solid var(--gp-focus); outline-offset: 2px; }
+.gp-magic__pool { margin: 0 0 var(--gp-space-4); font-weight: 700; }
