@@ -31,7 +31,7 @@ const state = {
   answered: false,
   audioUnlocked: false,
   /** Math Lab: the topic being worked through and where we are in it. */
-  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0, crossed: new Set() }
+  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0, crossed: new Set(), shift: 0 }
 };
 
 /* Runtime styles cannot ride in a style attribute: the site's CSP drops those.
@@ -697,6 +697,7 @@ function showExercise() {
   state.math.hanoi = null;
   state.math.builtTotal = 0;
   state.math.crossed = new Set();
+  state.math.shift = 0;
   const total = topic.exercises.length;
 
   if (index >= total) {
@@ -866,6 +867,14 @@ function tapPeg(pegEl) {
       : `Done in ${next.moves}. It can be done in ${best}, so there is a shorter way.`;
     settleExercise(true);
   }
+}
+
+function turnDial(step) {
+  const ex = state.math.topic.exercises[state.math.index];
+  state.math.shift = (state.math.shift + step + 26) % 26;
+  $('#gp-exercise [data-cipher-shift]').textContent = state.math.shift;
+  $('#gp-exercise [data-cipher-out]').textContent =
+    mathlab.shiftLetters(ex.coded, state.math.shift);
 }
 
 function crossOut(cell) {
@@ -1068,6 +1077,9 @@ function onClick(ev) {
     $('#gp-turn-head').scrollIntoView({ block: 'start', behavior: 'smooth' });
     return;
   }
+
+  const dial = ev.target.closest('[data-shift]');
+  if (dial) { turnDial(Number(dial.dataset.shift)); return; }
 
   const scell = ev.target.closest('[data-num]');
   if (scell) { crossOut(scell); return; }

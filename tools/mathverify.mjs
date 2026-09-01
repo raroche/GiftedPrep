@@ -22,7 +22,8 @@ const ok = (id, m) => checked.push(`${id}: ${m}`);
 const data = JSON.parse(fs.readFileSync('data/math/grade1.json', 'utf8'));
 const g2 = JSON.parse(fs.readFileSync('data/math/grade2.json', 'utf8'));
 const g3 = JSON.parse(fs.readFileSync('data/math/grade3.json', 'utf8'));
-const ALL = [...data.topics, ...g2.topics, ...g3.topics];
+const g4 = JSON.parse(fs.readFileSync('data/math/grade4.json', 'utf8'));
+const ALL = [...data.topics, ...g2.topics, ...g3.topics, ...g4.topics];
 const topic = (id) => ALL.find((t) => t.id === id);
 const ex = (id, i) => topic(id).exercises[i];
 const asked = (id, needle) =>
@@ -553,6 +554,123 @@ const perfect = (n) => divisors(n).reduce((a, b) => a + b, 0) === n;
   const b = t.exercises.find((e) => /pairs with 40/i.test(e.ask));
   if (b && b.answer !== 20) bad('forever[pair]', '40 halves to 20');
   else if (b) ok('forever[pair]', '40 pairs with 20');
+}
+
+/* ---- Grade 4 --------------------------------------------------------- */
+
+const shift = (text, by) => text.toUpperCase().replace(/[A-Z]/g, (ch) =>
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[(('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(ch) + (by % 26) + 26) % 26)]);
+
+/* Ciphers: the stated shift must actually produce the word in the explanation. */
+topic('secret-writing').exercises.filter((e) => e.type === 'cipher').forEach((e, i) => {
+  const id = `cipher[${i + 1}]`;
+  const out = shift(e.coded, e.answer);
+  /* The explanation should contain whatever the code decodes to. */
+  if (!e.why.toUpperCase().includes(out)) {
+    bad(id, `shift ${e.answer} turns ${e.coded} into ${out}, which the explanation never mentions`);
+  } else ok(id, `${e.coded} + ${e.answer} = ${out}`);
+  /* And no OTHER shift should give the same word, or the puzzle is ambiguous. */
+  let hits = 0;
+  for (let k = 0; k < 26; k += 1) if (shift(e.coded, k) === out) hits += 1;
+  if (hits !== 1) bad(id, `${hits} shifts give ${out}`);
+});
+
+/* Euler: corners - edges + faces = 2, for every solid the page names. */
+{
+  const solids = [[4, 6, 4], [8, 12, 6], [6, 12, 8], [20, 30, 12], [12, 30, 20], [5, 8, 5]];
+  const wrong = solids.filter(([v, e2, f]) => v - e2 + f !== 2);
+  if (wrong.length) bad('euler', `${wrong.length} of the listed solids break V - E + F = 2`);
+  else ok('euler', `all ${solids.length} solids satisfy V - E + F = 2`);
+  const t = topic('five-solids');
+  const cube = t.exercises.find((e) => /cube has 8 corners/i.test(e.ask));
+  if (cube && cube.answer !== 2 + 12 - 8) bad('euler[cube]', `should be ${2 + 12 - 8}`);
+  else if (cube) ok('euler[cube]', 'cube has 6 faces');
+  const six = t.exercises.find((e) => /6 corners and 12 edges/i.test(e.ask));
+  if (six && six.answer !== 2 + 12 - 6) bad('euler[oct]', `should be ${2 + 12 - 6}`);
+  else if (six) ok('euler[oct]', '6 corners 12 edges gives 8 faces');
+  const five = t.exercises.find((e) => /how many perfect solids/i.test(e.ask));
+  if (five && five.answer !== 5) bad('euler[count]', 'there are exactly 5 Platonic solids');
+  else if (five) ok('euler[count]', 'exactly 5 Platonic solids');
+}
+
+/* Angles: the triangle sum drives every answer in that topic. */
+{
+  const t = topic('tear-the-corners');
+  const checks = [
+    [/angles add to how many degrees/i, 180],
+    [/60 and 70/i, 180 - 60 - 70],
+    [/right angle and a 30/i, 180 - 90 - 30],
+    [/All three angles are equal/i, 180 / 3],
+    [/four-sided shape's angles/i, 360]
+  ];
+  checks.forEach(([re, want]) => {
+    const e = t.exercises.find((x) => re.test(x.ask));
+    if (!e) return;
+    if (e.answer !== want) bad('angles', `"${e.ask}" should be ${want}, data says ${e.answer}`);
+    else ok('angles', `${e.ask.slice(0, 34)} = ${want}`);
+  });
+}
+
+/* Sierpinski counts triple each step. */
+{
+  const c = topic('fractals').exercises.find((e) => e.type === 'collect');
+  const want = [0, 1, 2, 3, 4, 5, 6].map((k) => 3 ** k);
+  const wrong = c.valid.filter((v) => !want.includes(v));
+  if (wrong.length) bad('fractals[collect]', `${wrong.join(', ')} are not powers of 3`);
+  else ok('fractals[collect]', 'every value is a power of 3');
+  const t = topic('fractals');
+  [[/How many are left/i, 3], [/How many small triangles now/i, 9], [/One more step/i, 27]]
+    .forEach(([re, want2]) => {
+      const e = t.exercises.find((x) => re.test(x.ask));
+      if (e && e.answer !== want2) bad('fractals', `"${e.ask}" should be ${want2}`);
+      else if (e) ok('fractals', `${e.ask.slice(0, 30)} = ${want2}`);
+    });
+}
+
+/* Halving forever: 1 - 1/2^n on top of 2^n. */
+{
+  const t = topic('halving-forever');
+  [[/in fourths/i, 3], [/in eighths/i, 7], [/in sixteenths/i, 15]].forEach(([re, want]) => {
+    const e = t.exercises.find((x) => re.test(x.ask));
+    if (e && e.answer !== want) bad('halving', `"${e.ask}" should be ${want}`);
+    else if (e) ok('halving', `${e.ask.slice(0, 34)} = ${want}`);
+  });
+  const fold = t.exercises.find((e) => /Fold paper in half 5 times/i.test(e.ask));
+  if (fold && fold.answer !== 2 ** 5) bad('halving[fold]', `5 folds gives ${2 ** 5} parts`);
+  else if (fold) ok('halving[fold]', `5 folds = ${2 ** 5} parts`);
+}
+
+/* Digit sums really do decide divisibility by 3 and 9. */
+{
+  const t = topic('why-tricks-work');
+  const digitSum = (n) => String(n).split('').reduce((a, b) => a + Number(b), 0);
+  [[372, 12], [4653, 9]].forEach(([n, want]) => {
+    let d = digitSum(n);
+    if (n === 4653) while (d > 9) d = digitSum(d);
+    if (d !== want) bad('tricks', `digit sum of ${n} is ${d}, the page says ${want}`);
+    else ok('tricks', `digit sum of ${n} = ${want}`);
+  });
+  [[531, true], [418, false]].forEach(([n, want]) => {
+    const real = n % 3 === 0;
+    if (real !== want) bad('tricks', `${n} divisible by 3 is ${real}, the page says ${want}`);
+    else ok('tricks', `${n} divisible by 3: ${real}`);
+  });
+}
+
+/* Fibonacci ratios really do close on 1.618. */
+{
+  const t = topic('golden-number');
+  const a = t.exercises.find((e) => /8 \+ 13/.test(e.ask));
+  if (a && a.answer !== 21) bad('golden', '8 + 13 is 21');
+  else if (a) ok('golden', '8 + 13 = 21');
+  const b = t.exercises.find((e) => /13 \+ 21/.test(e.ask));
+  if (b && b.answer !== 34) bad('golden', '13 + 21 is 34');
+  else if (b) ok('golden', '13 + 21 = 34');
+  const ratio = 55 / 34;
+  const hundredth = Math.round(ratio * 100) % 10;
+  const p = t.exercises.find((e) => /55 divided by 34/i.test(e.ask));
+  if (p && p.answer !== hundredth) bad('golden[ratio]', `55/34 is ${ratio.toFixed(2)}, hundredths digit ${hundredth}`);
+  else if (p) ok('golden[ratio]', `55/34 = ${ratio.toFixed(2)}`);
 }
 
 /* ---- Report ---------------------------------------------------------- */

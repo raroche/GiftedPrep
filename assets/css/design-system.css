@@ -1992,3 +1992,24 @@ button, a, label, summary, [role="button"] {
 .gp-mcell.is-given { background: var(--gp-surface-2); color: var(--gp-ink-soft); }
 .gp-mcell:focus-visible { outline: 3px solid var(--gp-focus); outline-offset: 2px; }
 .gp-magic__pool { margin: 0 0 var(--gp-space-4); font-weight: 700; }
+
+/* ---- Caesar cipher ---- */
+
+.gp-cipher__coded {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: var(--gp-text-xl);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: var(--gp-space-4);
+  border-radius: var(--gp-radius-md);
+  background: var(--gp-surface-2);
+  margin: 0 0 var(--gp-space-4);
+  overflow-wrap: anywhere;
+}
+.gp-cipher__dial {
+  display: flex;
+  align-items: center;
+  gap: var(--gp-space-4);
+  margin-bottom: var(--gp-space-4);
+}
+.gp-cipher__n { font-weight: 700; }

@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIR = 'data/math';
-const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi', 'sieve', 'magic'];
+const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi', 'sieve', 'magic', 'cipher'];
 
 
 /* Regions of a grid map, and which pairs share an edge. */
@@ -192,6 +192,11 @@ for (const file of files) {
           warn(w, `allows ${e.limit} colours but ${need} would do`);
         }
         if (need > 4) err(w, `map needs ${need} colours, which cannot happen on a real map`);
+      } else if (e.type === 'cipher') {
+        if (!e.coded) err(w, 'no coded text');
+        if (typeof e.answer !== 'number' || e.answer < 0 || e.answer > 25) {
+          err(w, 'the answer must be a shift from 0 to 25');
+        }
       } else if (e.type === 'sieve') {
         if (!['primes', 'multiples'].includes(e.keep)) err(w, `unknown sieve rule "${e.keep}"`);
         if (e.keep === 'multiples' && !e.of) err(w, 'multiples mode needs "of"');

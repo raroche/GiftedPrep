@@ -64,7 +64,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Light and dark** | Follows the system theme, with a manual override |
 | **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
-| **Math Lab** | A separate section for advanced maths, grade by grade. Grades 1 to 3, 44 topics, in two tracks: real mathematics (maps, bridges, primes, infinity, two unsolved problems) and number skills |
+| **Math Lab** | A separate section for advanced maths, grades 1 to 4. 58 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, two unsolved problems) and number skills |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
 Keyboard: <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the next
@@ -118,7 +118,7 @@ Separate from the test practice. The screening tests measure reasoning, and
 this measures nothing at all: it is a place for a child who finds grade-level
 maths easy to go deeper.
 
-Grades 1, 2 and 3 are written. Grade 4 is not yet.
+All four grades are written: 58 topics and 413 exercises.
 
 Grade 2's big ideas are a proof the child can see rather than take on
 trust (odd numbers stacking into squares), a genuinely unsolved problem
@@ -134,6 +134,14 @@ counting, Pascal's triangle, the Lo Shu magic square, fair division by cut and
 choose, perfect numbers and the odd-perfect question still open after 2,000
 years, probability written as a fraction, and why any four-sided shape tiles a
 floor.
+
+Grade 4 closes several loops on purpose. The Sierpinski triangle turns out to
+be grade 3's Pascal triangle with the odd numbers shaded, which nobody expects.
+Euler's V - E + F = 2 explains the cube numbers counted back in grade 2. The
+golden ratio comes out of grade 2's Fibonacci. The rest: repeating decimals and
+why 0.999... is exactly 1, the triangle angle sum proved with scissors, endless
+halves adding to 1, the Caesar shift, and why adding digits tells you about
+dividing by 3.
 
 Sixteen topics in two tracks. Each is a short illustrated lesson followed by
 puzzles taken one at a time.

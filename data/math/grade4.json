@@ -1,0 +1,1284 @@
+{
+  "grade": 4,
+  "title": "Grade 4 Math Lab",
+  "blurb": "14 topics. Each one is a short lesson you can see, then puzzles to try.",
+  "tracks": [
+    {
+      "id": "wonders",
+      "name": "Big ideas",
+      "blurb": "Real mathematics. A shape that repeats forever, a proof you do with scissors, and a number that turns up in sunflowers."
+    },
+    {
+      "id": "skills",
+      "name": "Number skills",
+      "blurb": "Big multiplication, decimals, fractions and angles."
+    }
+  ],
+  "topics": [
+    {
+      "id": "fractals",
+      "track": "wonders",
+      "name": "Forever Smaller",
+      "emoji": "🌿",
+      "big": "A shape made of smaller copies of itself.",
+      "parentNote": "Fractals. The Sierpinski triangle falls out of Pascal's triangle from grade 3 by shading only the odd numbers, which is a genuine surprise: two topics that look unrelated turn out to be the same picture.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Take a triangle. Cut out the middle one. Do it again to each piece."
+        },
+        {
+          "t": "say",
+          "text": "Keep going forever and you get the Sierpinski triangle."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "pascal",
+            "rows": 8,
+            "parity": true,
+            "c": "orange"
+          },
+          "cap": "This is Pascal's triangle with only the ODD numbers shaded. The same shape appears."
+        },
+        {
+          "t": "say",
+          "text": "A fern works the same way. Each frond is a small copy of the whole fern."
+        },
+        {
+          "t": "tip",
+          "text": "This is called self-similar: zoom in and you see the same thing again."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "Cut a triangle into 4 and remove the middle. How many are left?",
+          "answer": 3,
+          "why": "3. Each step keeps three quarters and throws one away, then does the same to each of the three."
+        },
+        {
+          "type": "number",
+          "ask": "Do it again to each of those 3. How many small triangles now?",
+          "answer": 9,
+          "why": "9. Three lots of three. The count goes 1, 3, 9, 27, tripling every step."
+        },
+        {
+          "type": "number",
+          "ask": "One more step. How many now?",
+          "answer": 27,
+          "why": "27. Tripling again. After ten steps there would be 59,049."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Pascal's triangle hides the Sierpinski triangle in its odd numbers.",
+          "answer": true,
+          "why": "True, and nobody expects it. Shade every odd entry and the pattern appears on its own. Two ideas that look unrelated turn out to be the same."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A fern is self-similar.",
+          "answer": true,
+          "why": "True. Each frond looks like a small version of the whole leaf, and each part of a frond looks like a small version of the frond."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            1,
+            3,
+            9,
+            27,
+            81,
+            243,
+            729
+          ],
+          "need": 4,
+          "ask": "Type a number of triangles at some step.",
+          "why": "1, 3, 9, 27, 81, 243, 729. Tripling every step, which is why fractals gain detail so fast."
+        },
+        {
+          "type": "paper",
+          "ask": "Draw a triangle, cut out the middle, repeat twice more. How many triangles at the end?",
+          "answer": 27,
+          "hint": "1 becomes 3, then 9, then 27.",
+          "why": "27. Real coastlines and broccoli do this too, which is why a coastline gets longer the more closely you measure it."
+        }
+      ]
+    },
+    {
+      "id": "five-solids",
+      "track": "wonders",
+      "name": "The Five Solids",
+      "emoji": "🎲",
+      "big": "There are exactly five perfect solids. No more exist.",
+      "parentNote": "The Platonic solids, and Euler's formula V - E + F = 2. Grade 2 counted a cube's faces, edges and corners; here those numbers turn out to obey a law that holds for every solid.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A perfect solid has every face the same shape and every corner the same."
+        },
+        {
+          "t": "say",
+          "text": "There are exactly 5. Plato knew them over 2,000 years ago."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "4",
+                "6",
+                "4"
+              ],
+              [
+                "8",
+                "12",
+                "6"
+              ],
+              [
+                "6",
+                "12",
+                "8"
+              ],
+              [
+                "20",
+                "30",
+                "12"
+              ],
+              [
+                "12",
+                "30",
+                "20"
+              ]
+            ],
+            "cell": 58
+          },
+          "cap": "Corners, edges, faces. Try corners minus edges plus faces for each row."
+        },
+        {
+          "t": "say",
+          "text": "Every row gives 2. Always. Euler found this."
+        },
+        {
+          "t": "tip",
+          "text": "Corners take away edges, add faces, and you get 2. It works for any solid at all, not just these five."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "A cube has 8 corners and 12 edges. How many faces?",
+          "answer": 6,
+          "why": "6. And 8 take away 12 add 6 is 2, exactly as Euler's rule says."
+        },
+        {
+          "type": "number",
+          "ask": "8 - 12 + 6 = ?",
+          "answer": 2,
+          "why": "2. Corners minus edges plus faces. It comes out as 2 for every solid you can make."
+        },
+        {
+          "type": "number",
+          "ask": "A pyramid with a square base: 5 corners, 8 edges. How many faces?",
+          "answer": 5,
+          "why": "5, which is 4 triangles and the square base. Check it: 5 minus 8 add 5 is 2."
+        },
+        {
+          "type": "number",
+          "ask": "How many perfect solids are there?",
+          "answer": 5,
+          "why": "Exactly 5, and there is a proof that no sixth can exist. The angles at a corner have to add to less than 360, and that only leaves five ways."
+        },
+        {
+          "type": "number",
+          "ask": "A shape has 6 corners and 12 edges. How many faces?",
+          "answer": 8,
+          "why": "8. Rearrange Euler's rule: faces equals 2 plus edges minus corners, so 2 add 12 take away 6."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Euler's rule works for every solid, not just the perfect ones.",
+          "answer": true,
+          "why": "True, as long as it has no holes through it. A football, a house shape, a pyramid, all of them give 2."
+        },
+        {
+          "type": "paper",
+          "ask": "Count the corners, edges and faces of a real box. What do you get for corners minus edges plus faces?",
+          "answer": 2,
+          "hint": "A box is a cube shape: 8, 12 and 6.",
+          "why": "2, every time. Find any solid object in the house and it will still be 2."
+        }
+      ]
+    },
+    {
+      "id": "never-ending",
+      "track": "wonders",
+      "name": "Never Ending",
+      "emoji": "🔁",
+      "big": "Some fractions turn into decimals that never stop.",
+      "parentNote": "Repeating decimals, and the fact that 0.999... equals 1 exactly. Grade 4 meets decimals to hundredths (MA.4.NSO.1.5), which is enough to make this honest.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "One half is 0.5. One fourth is 0.25. Both stop."
+        },
+        {
+          "t": "say",
+          "text": "But one third is 0.333333... and it never stops."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              "0.3",
+              "0.33",
+              "0.333",
+              "0.3333"
+            ],
+            "c": "blue",
+            "boxW": 82
+          },
+          "cap": "Closer and closer to one third, but never quite there in a finite number of digits."
+        },
+        {
+          "t": "say",
+          "text": "Three thirds is 1. So 0.333... times 3 must be 0.999..."
+        },
+        {
+          "t": "tip",
+          "text": "Which means 0.999... IS 1. Not nearly 1. Exactly 1. Mathematicians agree, and it still surprises people."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "One half as a decimal has how many digits after the point?",
+          "answer": 1,
+          "why": "1, because one half is 0.5. Some fractions stop quickly and some never stop at all."
+        },
+        {
+          "type": "number",
+          "ask": "1 fourth is 0.25. How many hundredths is that?",
+          "answer": 25,
+          "why": "25 hundredths. One fourth, 0.25 and 25 out of 100 are three ways of writing the same number."
+        },
+        {
+          "type": "truefalse",
+          "ask": "One third can be written exactly with a finite decimal.",
+          "answer": false,
+          "why": "False. However many 3s you write, you are still a little short. The digits never stop."
+        },
+        {
+          "type": "number",
+          "ask": "1 tenth is 0.1. How many hundredths is that?",
+          "answer": 10,
+          "why": "10 hundredths. Ten hundredths and one tenth are the same amount, just cut differently."
+        },
+        {
+          "type": "truefalse",
+          "ask": "0.999... with the nines going on forever is exactly 1.",
+          "answer": true,
+          "why": "True, and almost nobody believes it at first. One third is 0.333..., and three of those is 1, so 0.999... has to be 1. There is no gap left to fit anything into."
+        },
+        {
+          "type": "number",
+          "ask": "0.25 + 0.25 = ? Type the answer in hundredths.",
+          "answer": 50,
+          "why": "50 hundredths, which is 0.5, which is one half. Two fourths make a half, whichever way you write it."
+        },
+        {
+          "type": "paper",
+          "ask": "Divide 1 by 7 on paper. How many digits before the pattern repeats?",
+          "answer": 6,
+          "hint": "0.142857 and then it starts again.",
+          "why": "6. One seventh is 0.142857142857... repeating forever in blocks of six. Sevenths are famous for this."
+        }
+      ]
+    },
+    {
+      "id": "tear-the-corners",
+      "track": "wonders",
+      "name": "Tear the Corners",
+      "emoji": "📐",
+      "big": "Every triangle's corners make a straight line.",
+      "parentNote": "The angle sum of a triangle, proved with scissors rather than asserted. Grade 4 measures angles (MA.4.GR.1.2), so the child can check it as well as see it.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Draw any triangle. Any shape at all. Tear off the three corners."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "shapes": [
+              {
+                "s": "triangle",
+                "c": "green"
+              }
+            ]
+          },
+          "cap": "Any triangle. Lopsided is fine."
+        },
+        {
+          "t": "say",
+          "text": "Put the three torn corners together, points touching."
+        },
+        {
+          "t": "say",
+          "text": "They always make a straight line. Every time, for every triangle."
+        },
+        {
+          "t": "tip",
+          "text": "A straight line is 180 degrees. So a triangle's angles always add to 180. That is a proof, and you did it with scissors."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "A triangle's angles add to how many degrees?",
+          "answer": 180,
+          "why": "180, a straight line. It does not matter what the triangle looks like."
+        },
+        {
+          "type": "number",
+          "ask": "Two angles are 60 and 70. What is the third?",
+          "answer": 50,
+          "why": "50. The three must total 180, and 60 and 70 make 130, so 50 is left."
+        },
+        {
+          "type": "number",
+          "ask": "A right angle is 90. A triangle has a right angle and a 30. What is the third?",
+          "answer": 60,
+          "why": "60. 90 and 30 is 120, and 180 take away 120 is 60."
+        },
+        {
+          "type": "number",
+          "ask": "All three angles are equal. How big is each?",
+          "answer": 60,
+          "why": "60. 180 shared into 3. That is why a triangle with equal sides has three 60 degree corners."
+        },
+        {
+          "type": "number",
+          "ask": "A four-sided shape's angles add to how many?",
+          "answer": 360,
+          "why": "360. Cut it into two triangles with one line, and 180 and 180 is 360. This is why any four-sided shape tiles a floor."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A triangle can have two right angles.",
+          "answer": false,
+          "why": "False. Two right angles is already 180, leaving nothing for the third corner, and a corner of zero is not a corner."
+        },
+        {
+          "type": "paper",
+          "ask": "Cut out a lopsided triangle, tear the corners, put them together. How many degrees?",
+          "answer": 180,
+          "hint": "They should form a straight line along the edge of a ruler.",
+          "why": "180 every time. Try a very thin triangle and a very fat one. It never changes, which is what makes it a theorem and not a coincidence."
+        }
+      ]
+    },
+    {
+      "id": "halving-forever",
+      "track": "wonders",
+      "name": "Halving Forever",
+      "emoji": "➗",
+      "big": "Add up endless halves and land on exactly 1.",
+      "parentNote": "An infinite series, shown as a square being filled. Zeno's paradox in a form a nine-year-old can hold. Follows on from grade 3's Forever.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Take half a square. Then half of what is left. Then half of that."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                3,
+                4
+              ],
+              [
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                3,
+                3
+              ]
+            ],
+            "cell": 30
+          },
+          "cap": "A half, then a fourth, then an eighth, then a sixteenth."
+        },
+        {
+          "t": "say",
+          "text": "Half plus a fourth is three fourths. Add an eighth and you have seven eighths."
+        },
+        {
+          "t": "say",
+          "text": "You get closer and closer to the whole square, but never overshoot."
+        },
+        {
+          "t": "tip",
+          "text": "Keep going forever and it adds to exactly 1. The square gets completely filled."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "One half plus one fourth. Type the answer in fourths.",
+          "answer": 3,
+          "why": "3 fourths. A half is two fourths, and two plus one is three."
+        },
+        {
+          "type": "number",
+          "ask": "Add an eighth to that. Type the answer in eighths.",
+          "answer": 7,
+          "why": "7 eighths. Three fourths is six eighths, and one more makes seven. Always one short of the whole."
+        },
+        {
+          "type": "number",
+          "ask": "Add a sixteenth. Type the answer in sixteenths.",
+          "answer": 15,
+          "why": "15 sixteenths. Notice the pattern: 1 of 2, 3 of 4, 7 of 8, 15 of 16. Always one short."
+        },
+        {
+          "type": "number",
+          "ask": "How much is missing from the whole at that point? Type the bottom number.",
+          "answer": 16,
+          "why": "One sixteenth is missing. The gap halves every time, so it shrinks towards nothing."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Adding halves forever gives exactly 1.",
+          "answer": true,
+          "why": "True. The gap is always one piece, and that piece halves each step, so it closes completely. This is what mathematicians mean by an infinite sum."
+        },
+        {
+          "type": "number",
+          "ask": "8 eighths is how many wholes?",
+          "answer": 1,
+          "why": "1. When the parts on top match the parts on the bottom you have the whole thing."
+        },
+        {
+          "type": "paper",
+          "ask": "Fold paper in half 5 times. How many parts?",
+          "answer": 32,
+          "hint": "2, 4, 8, 16 ...",
+          "why": "32. Doubling each fold. Try a sixth fold and you will find paper fights back, which is a different and equally real limit."
+        }
+      ]
+    },
+    {
+      "id": "secret-writing",
+      "track": "wonders",
+      "name": "Secret Writing",
+      "emoji": "🔤",
+      "big": "Push every letter along the alphabet.",
+      "parentNote": "The Caesar shift, used by Julius Caesar around 50 BC. Grade 2's Secret Codes did binary; this is the other kind of code, and it is breakable, which is the interesting part.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Take a word and push every letter 3 places along. A becomes D."
+        },
+        {
+          "t": "say",
+          "text": "CAT becomes FDW. To read it, push back 3."
+        },
+        {
+          "t": "say",
+          "text": "Julius Caesar really used this, about 2,000 years ago."
+        },
+        {
+          "t": "tip",
+          "text": "There are only 25 shifts to try, so this code is easy to break. Try them all and the words appear."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "A becomes D. What is the shift?",
+          "answer": 3,
+          "why": "3. A, B, C, D. Every letter moves the same distance along the alphabet."
+        },
+        {
+          "type": "cipher",
+          "coded": "GRJ",
+          "answer": 23,
+          "why": "Shift 23, or push back 3, and GRJ becomes DOG. Pushing back 3 and forward 23 are the same thing, because the alphabet wraps around.",
+          "ask": "Crack this: GRJ. What shift turns it into a word?",
+          "askFor": "The shift is"
+        },
+        {
+          "type": "cipher",
+          "coded": "RFYM",
+          "answer": 21,
+          "why": "Shift 21 turns MFYM into MATH. Once the first letter looks right, the rest usually follows.",
+          "ask": "Crack this: RFYM. What shift turns it into a word?",
+          "askFor": "The shift is"
+        },
+        {
+          "type": "number",
+          "ask": "How many different shifts are there to try?",
+          "answer": 25,
+          "why": "25 useful ones. A shift of 0 leaves the message alone, and a shift of 26 brings every letter back where it started."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The Caesar shift is a safe code today.",
+          "answer": false,
+          "why": "False. With only 25 shifts a computer breaks it instantly, and a person can do it in a few minutes. Real codes need far more possibilities."
+        },
+        {
+          "type": "number",
+          "ask": "Z is shifted by 1. How many letters from the start of the alphabet does it land?",
+          "answer": 1,
+          "why": "1, which is A. The alphabet wraps round, so Z plus one goes back to the beginning."
+        },
+        {
+          "type": "paper",
+          "ask": "Write a message to someone with a shift of 5. How many letters did you shift?",
+          "answer": 5,
+          "hint": "A becomes F, B becomes G, and so on. Tell them the number so they can read it.",
+          "why": "5. The number is the key. Anyone who has the key can read it, and anyone who does not has 25 things to try."
+        }
+      ]
+    },
+    {
+      "id": "golden-number",
+      "track": "wonders",
+      "name": "The Golden Number",
+      "emoji": "🌀",
+      "big": "Divide Fibonacci numbers and you always land near 1.62.",
+      "parentNote": "The golden ratio, reached by dividing consecutive Fibonacci numbers. Grade 4 handles decimals to hundredths, so the convergence is visible rather than asserted.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "The Fibonacci numbers again: 1, 1, 2, 3, 5, 8, 13, 21."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              1,
+              2,
+              3,
+              5,
+              8,
+              13
+            ],
+            "c": "green"
+          },
+          "cap": "Add the last two to get the next."
+        },
+        {
+          "t": "say",
+          "text": "Now divide each one by the one before it."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              "1.50",
+              "1.67",
+              "1.60",
+              "1.63",
+              "1.62"
+            ],
+            "c": "yellow",
+            "boxW": 78
+          },
+          "cap": "3/2, 5/3, 8/5, 13/8, 21/13. They close in on one number."
+        },
+        {
+          "t": "tip",
+          "text": "That number is about 1.618, called the golden ratio. It shows up in sunflowers, pinecones and pineapples."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "8 + 13 = ?",
+          "answer": 21,
+          "why": "21, the next Fibonacci number. Always add the two before it."
+        },
+        {
+          "type": "number",
+          "ask": "13 + 21 = ?",
+          "answer": 34,
+          "why": "34. The list keeps going: 34, 55, 89, 144."
+        },
+        {
+          "type": "number",
+          "ask": "6 divided by 3 = ?",
+          "answer": 2,
+          "why": "2. Warming up. Now try dividing Fibonacci numbers by their neighbour and watch what happens."
+        },
+        {
+          "type": "number",
+          "ask": "The ratio settles near 1.6 something. Type the hundredths digit of 1.62.",
+          "answer": 2,
+          "why": "2. The number is about 1.618, so to the hundredth it is 1.62. It never settles exactly, it just keeps closing in."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Dividing bigger Fibonacci numbers gets closer to the same answer.",
+          "answer": true,
+          "why": "True. 3/2 is 1.5, 21/13 is about 1.615, 144/89 is about 1.618. The further along you go the closer it gets."
+        },
+        {
+          "type": "number",
+          "ask": "A sunflower often has 34 spirals one way and how many the other?",
+          "answer": 55,
+          "why": "55. Both are Fibonacci numbers, and they are neighbours, which is why the ratio of the spirals is the golden number."
+        },
+        {
+          "type": "paper",
+          "ask": "Work out 55 divided by 34 on paper to two decimal places. Type the hundredths digit.",
+          "answer": 2,
+          "hint": "It starts 1.6 ...",
+          "why": "1.62. Every neighbouring pair gives roughly this, whether you start at 3 and 2 or at 55 and 34."
+        }
+      ]
+    },
+    {
+      "id": "why-tricks-work",
+      "track": "wonders",
+      "name": "Why the Trick Works",
+      "emoji": "🔍",
+      "big": "Add the digits. If 3 goes in, 3 goes into the number.",
+      "parentNote": "Divisibility by 3 and 9, with the reason rather than just the rule. Grade 4 does factor pairs (MA.4.AR.3.1). Knowing why a trick works is the difference between mathematics and a magic spell.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Is 372 divisible by 3? Add the digits: 3 + 7 + 2 = 12. Yes, because 3 goes into 12."
+        },
+        {
+          "t": "say",
+          "text": "Why does that work? Look at what a digit is worth."
+        },
+        {
+          "t": "say",
+          "text": "10 is 9 and 1. 100 is 99 and 1. 1000 is 999 and 1."
+        },
+        {
+          "t": "say",
+          "text": "9, 99 and 999 all divide by 3. So all that is left over is the digits themselves."
+        },
+        {
+          "t": "tip",
+          "text": "That is why adding the digits tells you. It is not a trick, it is a proof you can follow."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "Add the digits of 372.",
+          "answer": 12,
+          "why": "12, from 3 and 7 and 2. Since 3 goes into 12, it also goes into 372."
+        },
+        {
+          "type": "truefalse",
+          "ask": "531 divides by 3.",
+          "answer": true,
+          "why": "True. 5 and 3 and 1 make 9, and 3 goes into 9. So 3 goes into 531, which is 177 threes."
+        },
+        {
+          "type": "truefalse",
+          "ask": "418 divides by 3.",
+          "answer": false,
+          "why": "False. 4 and 1 and 8 make 13, and 3 does not go into 13. So it does not go into 418 either."
+        },
+        {
+          "type": "number",
+          "ask": "100 = 99 + ?",
+          "answer": 1,
+          "why": "1. And 99 divides by 3 and by 9, so only the leftover 1 matters. That is the heart of the whole proof."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The same digit-adding trick works for 9.",
+          "answer": true,
+          "why": "True, and for exactly the same reason. 9, 99 and 999 all divide by 9 too, so only the digits are left over."
+        },
+        {
+          "type": "number",
+          "ask": "Add the digits of 4,653. Then add those digits again.",
+          "answer": 9,
+          "why": "4+6+5+3 is 18, and 1+8 is 9. So 4,653 divides by 9. You can keep adding until one digit is left."
+        },
+        {
+          "type": "paper",
+          "ask": "Find a 4-digit number whose digits add to 9. Does 9 divide it? Type its digit sum.",
+          "answer": 9,
+          "hint": "Try 1233, or 5040, or anything you like.",
+          "why": "9, and yes it divides every time. This is not luck, it follows from 9, 99 and 999 all being multiples of 9."
+        }
+      ]
+    },
+    {
+      "id": "big-multiplication",
+      "track": "skills",
+      "name": "Big Multiplication",
+      "emoji": "✖️",
+      "big": "Split it up, multiply the pieces, add them back.",
+      "parentNote": "MA.4.NSO.2.2 and 2.3. The area model before the algorithm, so the standard method has a reason behind it.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "To do 23 x 14, split both numbers up."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "x",
+                "20",
+                "3"
+              ],
+              [
+                "10",
+                "200",
+                "30"
+              ],
+              [
+                "4",
+                "80",
+                "12"
+              ]
+            ],
+            "cell": 62
+          },
+          "cap": "Four easy multiplications. Add them all: 200 + 30 + 80 + 12."
+        },
+        {
+          "t": "say",
+          "text": "That is 322. The grid is exactly what the written method does."
+        },
+        {
+          "t": "tip",
+          "text": "Estimate first. 23 is about 20 and 14 is about 15, so expect around 300."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "20 x 10 = ?",
+          "answer": 200,
+          "why": "200. Two tens times one ten is two hundreds."
+        },
+        {
+          "type": "number",
+          "ask": "23 x 14 = ?",
+          "answer": 322,
+          "why": "322. From the grid: 200 + 30 + 80 + 12."
+        },
+        {
+          "type": "number",
+          "ask": "34 x 20 = ?",
+          "answer": 680,
+          "why": "680. 34 times 2 is 68, then times 10 for the extra zero."
+        },
+        {
+          "type": "number",
+          "ask": "7 x 300 = ?",
+          "answer": 2100,
+          "why": "2100. Seven threes is 21, then two zeros for the hundreds."
+        },
+        {
+          "type": "number",
+          "ask": "46 x 12 = ?",
+          "answer": 552,
+          "why": "552. 46 tens is 460, plus 46 twos is 92, and 460 and 92 make 552."
+        },
+        {
+          "type": "truefalse",
+          "ask": "25 x 16 is the same as 50 x 8.",
+          "answer": true,
+          "why": "True, both 400. Double one and halve the other and the answer never changes, which turns hard sums into easy ones."
+        },
+        {
+          "type": "paper",
+          "ask": "128 x 4 on paper.",
+          "answer": 512,
+          "hint": "Split 128 into 100, 20 and 8.",
+          "why": "512. 400 plus 80 plus 32. Splitting by place value is the whole method."
+        }
+      ]
+    },
+    {
+      "id": "decimals",
+      "track": "skills",
+      "name": "Decimals",
+      "emoji": "🔢",
+      "big": "Tenths and hundredths sit to the right of the point.",
+      "parentNote": "MA.4.NSO.1.5, 2.6 and 2.7, plus MA.4.FR.1.2 linking decimals to fractions with denominators 10 and 100.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "0.7 is seven tenths. 0.07 is seven hundredths, ten times smaller."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "rect",
+            "parts": 10,
+            "shaded": 7,
+            "c": "blue"
+          },
+          "cap": "Seven tenths, which is 0.7."
+        },
+        {
+          "t": "say",
+          "text": "Each step right divides by ten, exactly as each step left multiplies by ten."
+        },
+        {
+          "t": "tip",
+          "text": "0.5 and 0.50 are the same number. The extra zero changes nothing."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "0.7 is how many tenths?",
+          "answer": 7,
+          "why": "7 tenths. The first place after the point is tenths."
+        },
+        {
+          "type": "number",
+          "ask": "0.35 is how many hundredths?",
+          "answer": 35,
+          "why": "35 hundredths. Two places after the point means hundredths."
+        },
+        {
+          "type": "number",
+          "ask": "3 tenths as hundredths is how many?",
+          "answer": 30,
+          "why": "30 hundredths. 0.3 and 0.30 are the same number, so three tenths is thirty hundredths."
+        },
+        {
+          "type": "choice",
+          "ask": "Which is biggest?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "0.4"
+            },
+            {
+              "id": "b",
+              "label": "0.39"
+            },
+            {
+              "id": "c",
+              "label": "0.09"
+            }
+          ],
+          "answer": "a",
+          "why": "0.4, which is 40 hundredths, beats 0.39 and 0.09. Compare tenths first, not how many digits there are."
+        },
+        {
+          "type": "number",
+          "ask": "0.25 + 0.25 = ? Type it in hundredths.",
+          "answer": 50,
+          "why": "50 hundredths, or 0.5. Two quarters make a half."
+        },
+        {
+          "type": "truefalse",
+          "ask": "0.5 is bigger than 0.45.",
+          "answer": true,
+          "why": "True. 0.5 is 50 hundredths and 0.45 is 45. More digits does not mean a bigger number."
+        },
+        {
+          "type": "paper",
+          "ask": "Write three fourths as a decimal. Type it in hundredths.",
+          "answer": 75,
+          "hint": "One fourth is 25 hundredths.",
+          "why": "75 hundredths, so 0.75. Three lots of 25."
+        }
+      ]
+    },
+    {
+      "id": "fraction-work",
+      "track": "skills",
+      "name": "Fraction Work",
+      "emoji": "🍰",
+      "big": "Same bottom number, just add the tops.",
+      "parentNote": "MA.4.FR.1.3, 2.1 and 2.2. Equivalent fractions and adding with like denominators.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Two eighths plus three eighths is five eighths. The pieces are the same size, so just count them."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "rect",
+            "parts": 8,
+            "shaded": 5,
+            "c": "green"
+          },
+          "cap": "Five eighths."
+        },
+        {
+          "t": "say",
+          "text": "Two fourths and one half are the same amount, written differently."
+        },
+        {
+          "t": "tip",
+          "text": "Multiply top and bottom by the same number and the value never changes. One half is 2/4, 3/6, 50/100."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2 eighths + 3 eighths = ? Type the top number.",
+          "answer": 5,
+          "why": "5 eighths. Same size pieces, so you count them like anything else."
+        },
+        {
+          "type": "number",
+          "ask": "How many eighths are the same as one half?",
+          "answer": 4,
+          "why": "4 eighths. Half of eight pieces is four of them."
+        },
+        {
+          "type": "number",
+          "ask": "3/4 is the same as how many twelfths?",
+          "answer": 9,
+          "why": "9 twelfths. Multiply top and bottom by 3, so 3/4 becomes 9/12."
+        },
+        {
+          "type": "number",
+          "ask": "7 eighths take away 3 eighths. Type the top number.",
+          "answer": 4,
+          "why": "4 eighths, which is also one half. Subtracting works the same way as adding."
+        },
+        {
+          "type": "number",
+          "ask": "How many tenths make 100 hundredths?",
+          "answer": 10,
+          "why": "10 tenths. Both make one whole, just cut into different numbers of pieces."
+        },
+        {
+          "type": "truefalse",
+          "ask": "5/10 and 1/2 are the same number.",
+          "answer": true,
+          "why": "True. Divide top and bottom by 5 and 5/10 becomes 1/2. Same amount, different clothes."
+        },
+        {
+          "type": "paper",
+          "ask": "Add 3/10 and 40/100 on paper. Type the answer in hundredths.",
+          "answer": 70,
+          "hint": "Turn 3/10 into hundredths first.",
+          "why": "70 hundredths. 3/10 is 30/100, and 30 plus 40 is 70."
+        }
+      ]
+    },
+    {
+      "id": "angles",
+      "track": "skills",
+      "name": "Angles",
+      "emoji": "📏",
+      "big": "How far something turns, measured in degrees.",
+      "parentNote": "MA.4.GR.1.1 to 1.3. Naming, estimating and measuring angles, and that angle measures add.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A full turn is 360 degrees. A half turn is 180. A quarter turn is 90."
+        },
+        {
+          "t": "say",
+          "text": "A 90 degree angle is called a right angle. It looks like the corner of a book."
+        },
+        {
+          "t": "say",
+          "text": "Less than 90 is acute. More than 90 but less than 180 is obtuse."
+        },
+        {
+          "t": "tip",
+          "text": "Angles add. Two angles side by side on a straight line always make 180 together."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many degrees in a full turn?",
+          "answer": 360,
+          "why": "360. A quarter of that is 90, which is a right angle."
+        },
+        {
+          "type": "number",
+          "ask": "How many degrees in a right angle?",
+          "answer": 90,
+          "why": "90. A quarter of a full turn, and the corner of anything square."
+        },
+        {
+          "type": "number",
+          "ask": "Two angles on a straight line. One is 110. What is the other?",
+          "answer": 70,
+          "why": "70. Together they must make 180, and 180 take away 110 is 70."
+        },
+        {
+          "type": "choice",
+          "ask": "An angle of 130 degrees is called what?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "acute"
+            },
+            {
+              "id": "b",
+              "label": "obtuse"
+            },
+            {
+              "id": "c",
+              "label": "right"
+            },
+            {
+              "id": "d",
+              "label": "straight"
+            }
+          ],
+          "answer": "b",
+          "why": "Obtuse, because it is bigger than 90 but smaller than 180. Acute is under 90."
+        },
+        {
+          "type": "number",
+          "ask": "Three angles meet at a point on one side of a line: 40, 60 and one more. What is it?",
+          "answer": 80,
+          "why": "80. All three must add to 180, and 40 and 60 make 100."
+        },
+        {
+          "type": "truefalse",
+          "ask": "An angle of 200 degrees is bigger than a half turn.",
+          "answer": true,
+          "why": "True. A half turn is 180, so 200 goes past it. Angles over 180 are called reflex."
+        },
+        {
+          "type": "paper",
+          "ask": "Find a right angle in the room and check it with the corner of a piece of paper. How many degrees?",
+          "answer": 90,
+          "hint": "A door frame, a table, a book.",
+          "why": "90. Paper corners are cut square, which makes them a free right-angle checker."
+        }
+      ]
+    },
+    {
+      "id": "division",
+      "track": "skills",
+      "name": "Division",
+      "emoji": "➗",
+      "big": "Sharing out, and what to do with the bit left over.",
+      "parentNote": "MA.4.NSO.2.4 and MA.4.AR.1.1. Dividing up to four digits by one, and interpreting the remainder in context, which is where the real difficulty is.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "96 shared between 4 is 24. Nothing left over."
+        },
+        {
+          "t": "say",
+          "text": "But 97 shared between 4 is 24 with 1 left over."
+        },
+        {
+          "t": "say",
+          "text": "What you do with that 1 depends on the question."
+        },
+        {
+          "t": "tip",
+          "text": "25 children need cars holding 4. That is 6 cars and 1 child left, so you need 7 cars. The leftover still needs a ride."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "96 ÷ 4 = ?",
+          "answer": 24,
+          "why": "24. Four twenties is 80, and four fours is 16, so 24 in total."
+        },
+        {
+          "type": "number",
+          "ask": "97 ÷ 4. What is the remainder?",
+          "answer": 1,
+          "why": "1. Four goes into 97 twenty-four times, using 96, and 1 is left over."
+        },
+        {
+          "type": "number",
+          "ask": "25 children, cars hold 4. How many cars?",
+          "answer": 7,
+          "why": "7. Six cars carry 24, and the last child still needs a car. Here you round up because a child cannot be left behind."
+        },
+        {
+          "type": "number",
+          "ask": "25 sweets shared between 4. How many whole sweets each?",
+          "answer": 6,
+          "why": "6 each, with 1 left over. Same numbers as the cars, opposite answer, because here the leftover is not shared."
+        },
+        {
+          "type": "truefalse",
+          "ask": "25 ÷ 4 gives the same answer whether you are sharing sweets or booking cars.",
+          "answer": false,
+          "why": "False. Both are 6 remainder 1, but sweets give 6 each and cars need 7. The leftover changes the answer, and the question tells you how."
+        },
+        {
+          "type": "number",
+          "ask": "144 ÷ 12 = ?",
+          "answer": 12,
+          "why": "12. This is the biggest fact in the times tables, and it is worth knowing by heart."
+        },
+        {
+          "type": "choice",
+          "ask": "Which one does NOT divide exactly by 6?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "42"
+            },
+            {
+              "id": "b",
+              "label": "54"
+            },
+            {
+              "id": "c",
+              "label": "58"
+            },
+            {
+              "id": "d",
+              "label": "72"
+            }
+          ],
+          "answer": "c",
+          "why": "58. Six goes into 42, 54 and 72 exactly, but 58 leaves 4 over."
+        },
+        {
+          "type": "number",
+          "ask": "850 ÷ 5 = ?",
+          "answer": 170,
+          "why": "170. Five into 8 is 1 remainder 3, five into 35 is 7, five into 0 is 0."
+        },
+        {
+          "type": "paper",
+          "ask": "A bus holds 45. 200 people are waiting. How many buses?",
+          "answer": 5,
+          "hint": "Four buses carry 180. Is that enough?",
+          "why": "5. Four buses hold 180, leaving 20 people standing, so a fifth bus is needed. Always ask what the leftover means."
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "track": "skills",
+      "name": "Middle and Spread",
+      "emoji": "📈",
+      "big": "One number to stand for the whole list.",
+      "parentNote": "MA.4.DP.1.1 to 1.3. Mode, median and range, and reading a line plot.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "The mode is the one that appears most often."
+        },
+        {
+          "t": "say",
+          "text": "The median is the middle one, once you put them in order."
+        },
+        {
+          "t": "say",
+          "text": "The range is the biggest take away the smallest."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              2,
+              3,
+              3,
+              5,
+              9
+            ],
+            "c": "teal"
+          },
+          "cap": "Mode 3, median 3, range 7."
+        },
+        {
+          "t": "tip",
+          "text": "Put the numbers in order first. Almost every mistake comes from skipping that."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2, 3, 3, 5, 9. What is the mode?",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              2,
+              3,
+              3,
+              5,
+              9
+            ],
+            "c": "teal"
+          },
+          "answer": 3,
+          "why": "3, because it appears twice and everything else appears once."
+        },
+        {
+          "type": "number",
+          "ask": "2, 3, 3, 5, 9. What is the median?",
+          "answer": 3,
+          "why": "3. Five numbers in order, so the third one is the middle."
+        },
+        {
+          "type": "number",
+          "ask": "2, 3, 3, 5, 9. What is the range?",
+          "answer": 7,
+          "why": "7. The biggest is 9 and the smallest is 2, and 9 take away 2 is 7."
+        },
+        {
+          "type": "number",
+          "ask": "1, 4, 6, 8. What is the range?",
+          "answer": 7,
+          "why": "7. 8 take away 1. Range measures how spread out they are, not where they sit."
+        },
+        {
+          "type": "number",
+          "ask": "5, 2, 8, 2, 3. What is the mode?",
+          "answer": 2,
+          "why": "2, the only one that appears twice. Order does not matter for the mode, but it helps you spot it."
+        },
+        {
+          "type": "truefalse",
+          "ask": "You must put numbers in order before finding the median.",
+          "answer": true,
+          "why": "True. The median is the middle of the sorted list. Take the middle of an unsorted list and you get the wrong answer."
+        },
+        {
+          "type": "paper",
+          "ask": "Measure 5 things in your room in centimetres. What is the range?",
+          "answer": 0,
+          "hint": "Biggest take away smallest. Type 0 when you have worked it out, then read why.",
+          "why": "Whatever you got, the range tells you how spread out your measurements were. A small range means your things were all about the same size."
+        }
+      ]
+    }
+  ]
+}

@@ -41,7 +41,7 @@ export async function loadGrade(grade) {
 }
 
 /** Grades that have a page written. The rest are shown as not ready yet. */
-export const READY_GRADES = [1, 2, 3];
+export const READY_GRADES = [1, 2, 3, 4];
 
 /* ------------------------------------------------------------------ */
 /* Grade index                                                         */
@@ -154,7 +154,8 @@ const TYPE_BADGE = {
   colormap: { label: 'Colour it in', icon: '🎨' },
   hanoi: { label: 'Play it', icon: '🕹️' },
   sieve: { label: 'Cross them out', icon: '🧹' },
-  magic: { label: 'Fill it in', icon: '🔢' }
+  magic: { label: 'Fill it in', icon: '🔢' },
+  cipher: { label: 'Crack it', icon: '🕵️' }
 };
 
 function badge(type) {
@@ -220,6 +221,17 @@ export function renderExercise(ex, index, total) {
       <p class="gp-hanoi__count">Moves: <strong data-hanoi-moves>0</strong>
         &middot; best possible: ${Math.pow(2, n) - 1}</p>
       <p class="gp-hanoi__say" data-hanoi-say></p>`;
+  } else if (ex.type === 'cipher') {
+    body = `
+      <p class="gp-cm__rule">Every letter has been pushed along the alphabet by the
+      same amount. Try shifts until the words appear.</p>
+      <p class="gp-cipher__coded" data-cipher-out>${esc(ex.coded)}</p>
+      <div class="gp-cipher__dial">
+        <button type="button" class="gp-btn gp-btn--ghost" data-shift="-1">&minus;1</button>
+        <span class="gp-cipher__n">Shift: <strong data-cipher-shift>0</strong></span>
+        <button type="button" class="gp-btn gp-btn--ghost" data-shift="1">+1</button>
+      </div>
+      ${numberBox(ex.askFor || 'The shift is')}`;
   } else if (ex.type === 'sieve') {
     const upto = ex.upto || 30;
     body = `
@@ -389,6 +401,13 @@ export function checkMap(ex, painted) {
 /* Prime sieve and magic square                                        */
 /* ------------------------------------------------------------------ */
 
+/** Shift every letter along the alphabet, wrapping round. */
+export function shiftLetters(text, by) {
+  const A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  return text.toUpperCase().replace(/[A-Z]/g, (ch) =>
+    A[(A.indexOf(ch) + (by % 26) + 26) % 26]);
+}
+
 export function isPrime(n) {
   if (n < 2) return false;
   for (let d = 2; d * d <= n; d += 1) if (n % d === 0) return false;
@@ -498,5 +517,5 @@ export default {
   renderExercise, check, collectHit, feedbackHtml, READY_GRADES,
   checkMap, adjacency, regionsOf, MAP_COLOURS,
   hanoiStart, hanoiLegal, hanoiMove, hanoiWon,
-  isPrime, sieveKeep, checkSieve, checkMagic
+  isPrime, sieveKeep, checkSieve, checkMagic, shiftLetters
 };
