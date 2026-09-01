@@ -413,6 +413,7 @@ GiftedPrep/
     ├── shapecheck.mjs          checks the outline data and typed-answer names
     ├── roomcheck.mjs           checks the room registry against CSS and creatures
     ├── archcheck.mjs           checks the import layering and finds cycles
+    ├── linkcheck.mjs           follows every internal link to a real route
     ├── palette.mjs             builds the palette and proves every contrast ratio
     ├── mkicon.py               rasterises the app icon (no dependencies)
     ├── serve.py                dev server with the production CSP
