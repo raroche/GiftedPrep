@@ -1,0 +1,28 @@
+# The deploy is gated on `npm run verify`, which is good, but a failing build on
+# Netlify is quiet: the old site simply stays up. Two commits shipped to main and
+# never reached production before anyone noticed. This runs the same command on
+# push, so a broken build shows up as a red mark on the commit instead.
+#
+# Both Node versions run on purpose. The break that caused this was a version
+# difference: `node --test <glob>` needs Node 22, so the build passed locally on
+# Node 24 and failed on Netlify's Node 20.
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['20', '22']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm run verify

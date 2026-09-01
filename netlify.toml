@@ -10,7 +10,7 @@
   command = "npm run verify"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
 
 # None of these filenames carry a content hash, so any max-age above zero lets a
 # browser pair a fresh index.html with stale CSS and JS. That shipped a real bug:
