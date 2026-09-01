@@ -32,6 +32,8 @@ export const state = {
     setup: { count: 10, mode: 'random', continents: [] },
     round: null
   },
+  /* Browsing mode, shared by the flag, outline and capital games. */
+  learn: { game: null, order: 'alpha', index: 0, list: null },
   /* Name the element. `set` is which elements, `ask` is which of the four
      kinds of question. */
   elements: {
@@ -89,7 +91,7 @@ export function hydrateIcons(root = document) {
 
 const SCREENS = ['home', 'gifted', 'tests', 'categories', 'quiz', 'results', 'parents',
   'math', 'mathtopic', 'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame',
-  'capsetup', 'capgame', 'elemsetup', 'elemgame', 'error'];
+  'capsetup', 'capgame', 'elemsetup', 'elemgame', 'learn', 'elemlearn', 'error'];
 
 /**
  * Show one screen and hide the rest.

@@ -184,8 +184,13 @@ export function renderTable(data, { pickable = true } = {}) {
       <span class="cz-pt__sym">${esc(e.symbol)}</span>
     </button>`).join('');
   /* The f-block sits under the table on every printed periodic table, so the
-     two rows it lives on get a gap above them. */
-  return `<div class="cz-pt" role="group" aria-label="Periodic table">${cells}</div>`;
+     two rows it lives on get a gap above them.
+
+     The scroller matters on a phone: 18 columns across 375px gives 12px cells,
+     which can be seen but not reliably tapped. Inside a scroller the cells keep
+     a usable size and the table moves instead. */
+  return `<div class="cz-pt-scroll">`
+    + `<div class="cz-pt" role="group" aria-label="Periodic table">${cells}</div></div>`;
 }
 
 export function renderQuestion(el, choices, index, total, ask, data) {

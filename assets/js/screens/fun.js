@@ -12,6 +12,7 @@ import * as flags from './../modules/flags.js';
 import * as shapes from './../modules/shapes.js';
 import * as capitals from './../modules/capitals.js';
 import * as elements from './../modules/elements.js';
+import { renderLearn, renderElemLearn } from './learn.js';
 import { $, $$, paint, react, showError, showScreen, state } from './../modules/shell.js';
 
 /* ------------------------------------------------------------------ */
@@ -96,6 +97,10 @@ function renderFunHub() {
 
 export async function renderFun(game, step) {
   if (!game) { renderFunHub(); return; }
+  if (step === 'learn') {
+    await (game === 'elements' ? renderElemLearn() : renderLearn(game));
+    return;
+  }
   if (game === 'shapes') { await renderShapes(step); return; }
   if (game === 'capitals') { await renderCapitals(step); return; }
   if (game === 'elements') { await renderElements(step); return; }

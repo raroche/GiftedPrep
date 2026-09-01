@@ -27,6 +27,7 @@ import { answerElement, drawElemQuestion, drawElemSetup, nextElement, startElemR
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
+import { renderLearn, renderElemLearn, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
 
 /* ------------------------------------------------------------------ */
 /* Theme                                                               */
@@ -160,6 +161,20 @@ function onClick(ev) {
   }
 
   /* ---- country shape game ---- */
+  /* ---- browsing mode ---- */
+  const ls = ev.target.closest('[data-learnstep]');
+  if (ls) { learnStep(ls.dataset.learnstep); return; }
+
+  const lj = ev.target.closest('[data-learnjump]');
+  if (lj) { learnJump(lj.dataset.learnjump); return; }
+
+  const lo = ev.target.closest('[data-learnorder]');
+  if (lo) { learnOrder(lo.dataset.learnorder); return; }
+
+  /* On the learning page a cell explains itself instead of being an answer. */
+  const learnCell = ev.target.closest('#screen-elemlearn [data-elemcell]');
+  if (learnCell) { showElementDetail(learnCell.dataset.elemcell); return; }
+
   /* ---- name the element ---- */
   const es = ev.target.closest('[data-elemset]');
   if (es) { state.elements.setup.set = es.dataset.elemset; drawElemSetup(); return; }
@@ -408,6 +423,12 @@ function radioGroupKeys(ev) {
 }
 
 function onKeydown(ev) {
+  /* Arrows page through the browsing mode, the way any gallery behaves. */
+  if (document.getElementById('screen-learn')?.classList.contains('is-active')
+      && !/^(INPUT|TEXTAREA)$/.test(ev.target.tagName)) {
+    if (ev.key === 'ArrowRight') { ev.preventDefault(); learnStep(1); return; }
+    if (ev.key === 'ArrowLeft') { ev.preventDefault(); learnStep(-1); return; }
+  }
   if (!document.getElementById('screen-quiz').classList.contains('is-active')) return;
   if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
 

@@ -3009,3 +3009,128 @@ button, a, label, summary, [role="button"] {
 @media (prefers-reduced-motion: reduce) {
   .cz-pt__cell, .cz-pt__cell:hover:not(:disabled) { transition: none; transform: none; }
 }
+
+/* ====================================================================
+   Browsing mode
+   ==================================================================== */
+
+.cz-learnlink { width: 100%; justify-content: center; margin-top: var(--gp-space-4); }
+.cz-learnlink .gp-btn__label { white-space: normal; }
+
+.cz-learn { display: grid; gap: var(--gp-space-4); }
+.cz-learn__bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--gp-space-4); flex-wrap: wrap;
+}
+.cz-learn__head { margin: 0; }
+.cz-learn__jump { margin: 0; }
+.gp-pill--small { font-size: var(--gp-text-xs); padding: 6px 12px; }
+
+.cz-learn__card {
+  display: grid;
+  justify-items: center;
+  gap: var(--gp-space-2);
+  padding: var(--gp-space-6) var(--gp-space-5);
+  border: 2px solid var(--gp-line);
+  border-radius: var(--gp-radius-xl);
+  background: var(--gp-surface);
+  text-align: center;
+}
+.cz-learn__media {
+  display: grid; place-items: center;
+  width: 100%; min-height: 200px;
+}
+.cz-learn__flag {
+  max-width: min(320px, 100%); height: auto;
+  border-radius: var(--gp-radius-sm);
+  border: 1px solid var(--gp-line);
+}
+.cz-learn__media .gp-shapefig { width: 100%; max-width: 260px; height: auto; color: var(--gp-accent); }
+.cz-learn__big {
+  font-size: var(--gp-text-2xl); font-weight: 800; color: var(--gp-ink-soft);
+  margin: 0; line-height: var(--gp-leading-tight);
+}
+.cz-learn__name {
+  margin: 0; font-size: var(--gp-text-2xl); font-weight: 800;
+  letter-spacing: -0.02em; color: var(--gp-accent); line-height: var(--gp-leading-tight);
+}
+.cz-learn__sub { margin: 0; color: var(--gp-ink-soft); font-size: var(--gp-text-md); }
+.cz-learn__note { margin: 0; color: var(--gp-ink-muted); font-size: var(--gp-text-sm); }
+
+.cz-learn__nav {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--gp-space-5);
+}
+.cz-learn__nav .gp-btn { min-width: 84px; }
+.cz-learn__count { margin: 0; font-size: var(--gp-text-md); color: var(--gp-ink-soft); }
+.cz-learn__hint { text-align: center; margin: 0; font-size: var(--gp-text-xs); }
+
+/* ---- the periodic table page ---- */
+
+.cz-pt__cell.is-picked {
+  outline: 3px solid var(--gp-focus);
+  outline-offset: 1px;
+  transform: scale(1.25);
+  z-index: 3;
+}
+.cz-elem-detail:empty { display: none; }
+.cz-elem-detail {
+  display: flex; align-items: center; gap: var(--gp-space-5);
+  flex-wrap: wrap;
+  padding: var(--gp-space-5);
+  border: 2px solid var(--gp-line);
+  border-radius: var(--gp-radius-xl);
+  background: var(--gp-surface);
+  margin-top: var(--gp-space-5);
+}
+.cz-elem-card {
+  display: grid; place-content: center; flex: none;
+  width: 104px; height: 104px;
+  border-radius: var(--gp-radius-lg);
+  border: 3px solid var(--cell-line, var(--gp-line-strong));
+  background: var(--cell-bg, var(--gp-surface-2));
+  color: var(--cell-ink, var(--gp-ink));
+}
+.cz-elem-card__z { font-size: var(--gp-text-sm); font-weight: 700; opacity: .75; }
+.cz-elem-card__sym { font-size: 38px; font-weight: 800; line-height: 1.05; }
+.cz-elem-facts { display: grid; gap: 2px; min-width: 0; }
+.cz-elem-facts__name { margin: 0; font-size: var(--gp-text-xl); font-weight: 800; }
+.cz-elem-facts__es { margin: 0; color: var(--gp-ink-soft); }
+.cz-elem-facts__meta { margin: 0; color: var(--gp-ink-muted); font-size: var(--gp-text-sm); }
+.cz-elem-facts__use { margin: 4px 0 0; color: var(--gp-ink); }
+
+.cz-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gp-space-5);
+  margin-top: var(--gp-space-6);
+}
+.cz-fact h2 { margin: 0 0 var(--gp-space-2); font-size: var(--gp-text-lg); color: var(--gp-accent); }
+.cz-fact p { margin: 0 0 var(--gp-space-3); line-height: var(--gp-leading-body); }
+.cz-fact p:last-child { margin-bottom: 0; }
+.cz-fact--wide { grid-column: 1 / -1; }
+
+.cz-legend { margin-top: var(--gp-space-6); display: grid; gap: var(--gp-space-2); }
+.cz-legend__head { font-size: var(--gp-text-lg); margin: 0 0 var(--gp-space-2); }
+.cz-legend__row {
+  display: flex; align-items: flex-start; gap: var(--gp-space-3);
+  font-size: var(--gp-text-sm); line-height: var(--gp-leading-snug);
+}
+.cz-legend__swatch {
+  flex: none; width: 26px; height: 26px; border-radius: 7px;
+  background: var(--cell-bg, var(--gp-surface-2));
+  border: 2px solid var(--cell-line, var(--gp-line));
+}
+
+@media (max-width: 560px) {
+  .cz-learn__media { min-height: 150px; }
+  .cz-learn__nav .gp-btn { min-width: 64px; }
+}
+
+/* The table scrolls sideways rather than shrinking its cells below a tappable
+   size. 18 columns in 375px is a 12px cell; a child cannot hit that. */
+.cz-pt-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 720px) {
+  .cz-pt { min-width: 560px; }
+  .cz-pt-scroll { margin-inline: calc(var(--gp-space-5) * -1); padding-inline: var(--gp-space-5); }
+}

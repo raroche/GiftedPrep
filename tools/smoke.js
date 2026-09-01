@@ -79,6 +79,13 @@
       await wait(900);
       check(`${g.id}: next actually advances`, vis(document.querySelector(g.screen)));
     }
+
+    /* The browsing mode is a page a child can land on directly, so it gets the
+       same visibility check the games do. */
+    location.hash = `#/fun/${g.id}/learn`;
+    await wait(1600);
+    const seen = [...document.querySelectorAll('.gp-screen')].filter(vis).map((s) => s.id);
+    check(`${g.id}: learn mode is visible`, seen.length === 1, seen.join(',') || 'nothing visible');
   }
 
   const failed = results.filter((r) => !r.ok);

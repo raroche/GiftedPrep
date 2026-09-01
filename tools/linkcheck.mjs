@@ -98,7 +98,9 @@ for (const [link, from] of links) {
   if (head === 'fun' && parts[1] && !open) {
     const games = new Set(['flags', 'shapes', 'capitals', 'elements']);
     if (!games.has(parts[1])) err(`${link} -> no game called "${parts[1]}"   [${where}]`);
-    if (parts[2] && parts[2] !== 'play') err(`${link} -> unknown step "${parts[2]}"   [${where}]`);
+    if (parts[2] && !['play', 'learn'].includes(parts[2])) {
+      err(`${link} -> unknown step "${parts[2]}"   [${where}]`);
+    }
   }
 }
 

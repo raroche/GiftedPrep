@@ -116,7 +116,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Nothing is collected** | No account, no analytics, no third-party requests, no telemetry. The only network traffic is the site fetching its own question files from its own domain. Progress lives in `localStorage` and is never uploaded |
 | **Read-aloud stays on the device** | Voices are chosen device-first. Some browsers ship cloud-backed "Online" voices that send text to a server; those are used only if the device offers no voice of its own |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
-| **Fun and games** | Name the Flag (250 flags, vault of flags that no longer exist), Name the Country Shape (242 outlines), Name the Capital (192 capitals) and Name the Element (all 118, four kinds of question, including finding it on a clickable periodic table). Typed answers take English or Spanish and forgive a spelling slip |
+| **Fun and games** | Name the Flag (250 flags, vault of flags that no longer exist), Name the Country Shape (242 outlines), Name the Capital (192 capitals) and Name the Element (all 118, four kinds of question). Every game also has a browsing mode with no score, so the material can be met before it is tested, and the element one is a full periodic table with the story of how it was built. Typed answers take English or Spanish and forgive a spelling slip |
 | **Math Lab** | A separate section for advanced maths, grades 1 to 6. 86 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, pi, three unsolved problems) and number skills |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
@@ -417,6 +417,7 @@ GiftedPrep/
 │           ├── capitals.js     the capital city game
 │           ├── elements.js     the periodic table game
 │           ├── elemart.js      a drawn picture per everyday element use
+│           └── learn.js        the browsing component the games share
 │           ├── fuzzy.js        typo tolerance shared by both typed games
 │           ├── sections.js     the rooms, and the creature that fronts each
 │           └── shell.js        shared state and DOM helpers
@@ -425,7 +426,8 @@ GiftedPrep/
 │           ├── gifted.js       test practice: pickers, questions, results
 │           ├── math.js         the Math Lab lessons and every exercise type
 │           ├── fun.js          the games hub, flags and country shapes
-│           └── parents.js      the Parent Guide screen
+│           ├── parents.js      the Parent Guide screen
+│           └── learn.js        browsing modes, and the periodic table page
 ├── data/
 │   ├── manifest.json           tests, grades, category index
 │   ├── cogat/  nnat/  olsat/   one JSON file per category
