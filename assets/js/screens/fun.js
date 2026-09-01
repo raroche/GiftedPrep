@@ -106,7 +106,8 @@ export function answerFlag(code) {
   });
 
   const say = document.createElement('p');
-  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`;
+  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`
+    + (saidWhat && saidWhat.spelling ? ' is-nearly' : '');
   say.textContent = right
     ? `Yes. That is ${country.name}.`
     : `No, that one is ${country.name}.`;
@@ -259,11 +260,16 @@ function settleShape(right, saidWhat) {
   say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`;
   /* Naming another real country is a different kind of wrong from a typo, and
      saying which one turns a miss into something learned. */
-  say.textContent = right
-    ? `Yes. That is ${country.name}.`
-    : (saidWhat && saidWhat.namedCountry
-      ? `That is ${saidWhat.namedCountry}. This one is ${country.name}.`
-      : `No, that one is ${country.name}.`);
+  /* Three kinds of outcome, not two. A near-miss is marked right and then
+     shown the spelling, because the point is to learn the country and the
+     spelling both, and being told "no" over one letter teaches neither. */
+  say.textContent = saidWhat && saidWhat.spelling
+    ? `Right country, small slip. It is spelled ${saidWhat.spelling}.`
+    : right
+      ? `Yes. That is ${country.name}.`
+      : (saidWhat && saidWhat.namedCountry
+        ? `That is ${saidWhat.namedCountry}. This one is ${country.name}.`
+        : `No, that one is ${country.name}.`);
   $('#gp-shape-body .gp-flagq').appendChild(say);
 
   const next = document.createElement('button');
@@ -288,9 +294,14 @@ export function answerShapeTyped() {
   const said = (box.value || '').trim();
   if (!said) { box.focus(); return; }
   const country = r.list[r.index];
-  const right = shapes.matchesCountry(said, country);
-  const named = right ? null : shapes.whichCountry(said, state.shapes.data);
-  settleShape(right, named ? { namedCountry: named.name } : null);
+  /* A spelling slip now counts, but only when it is unambiguous. See
+     modules/fuzzy.js: 23 pairs of countries here are within a typo of each
+     other, and every one of those is refused rather than guessed. */
+  const v = shapes.judge(said, country, state.shapes.data);
+  settleShape(v.verdict === 'right' || v.verdict === 'close', {
+    namedCountry: v.verdict === 'other' ? v.other.name : null,
+    spelling: v.verdict === 'close' ? v.shown : null
+  });
 }
 
 async function drawShapeResults() {

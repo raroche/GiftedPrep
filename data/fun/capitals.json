@@ -1,0 +1,3324 @@
+{
+ "note": "Capital cities for the sovereign states in the shape game. Territories are excluded on purpose: a flag or an outline is recognisable on its own, but the capital of a dependency is not knowledge worth drilling. Every capital carries its English and Spanish spellings and the names people actually type.",
+ "attribution": {
+  "capitals": "Capital names in English and Spanish from Wikidata (https://query.wikidata.org), CC0. Retrieved for this project.",
+  "countries": ""
+ },
+ "continents": [
+  {
+   "id": "africa",
+   "name": "Africa"
+  },
+  {
+   "id": "americas",
+   "name": "The Americas"
+  },
+  {
+   "id": "asia",
+   "name": "Asia"
+  },
+  {
+   "id": "europe",
+   "name": "Europe"
+  },
+  {
+   "id": "oceania",
+   "name": "Oceania"
+  },
+  {
+   "id": "antarctic",
+   "name": "Antarctic"
+  }
+ ],
+ "countries": [
+  {
+   "code": "af",
+   "country": "Afghanistan",
+   "countryNames": [
+    "Afghanistan",
+    "Islamic Republic of Afghanistan",
+    "Afganistán",
+    "República Islámica de Afganistán",
+    "AF"
+   ],
+   "continent": "asia",
+   "capital": "Kabul",
+   "names": [
+    "Kabul"
+   ]
+  },
+  {
+   "code": "al",
+   "country": "Albania",
+   "countryNames": [
+    "Albania",
+    "Republic of Albania",
+    "República de Albania",
+    "AL",
+    "Shqipëri",
+    "Shqipëria",
+    "Shqipnia"
+   ],
+   "continent": "europe",
+   "capital": "Tirana",
+   "names": [
+    "Tirana"
+   ]
+  },
+  {
+   "code": "dz",
+   "country": "Algeria",
+   "countryNames": [
+    "Algeria",
+    "People's Democratic Republic of Algeria",
+    "Argelia",
+    "República Argelina Democrática y Popular",
+    "DZ",
+    "Dzayer",
+    "Algérie"
+   ],
+   "continent": "africa",
+   "capital": "Algiers",
+   "names": [
+    "Algiers",
+    "Argel"
+   ]
+  },
+  {
+   "code": "ad",
+   "country": "Andorra",
+   "countryNames": [
+    "Andorra",
+    "Principality of Andorra",
+    "Principado de Andorra",
+    "AD",
+    "Principat d'Andorra"
+   ],
+   "continent": "europe",
+   "capital": "Andorra la Vella",
+   "names": [
+    "Andorra la Vella",
+    "Andorra la Vieja"
+   ]
+  },
+  {
+   "code": "ao",
+   "country": "Angola",
+   "countryNames": [
+    "Angola",
+    "Republic of Angola",
+    "República de Angola",
+    "AO",
+    "ʁɛpublika de an'ɡɔla"
+   ],
+   "continent": "africa",
+   "capital": "Luanda",
+   "names": [
+    "Luanda"
+   ]
+  },
+  {
+   "code": "ag",
+   "country": "Antigua and Barbuda",
+   "countryNames": [
+    "Antigua and Barbuda",
+    "Antigua y Barbuda",
+    "AG"
+   ],
+   "continent": "americas",
+   "capital": "Saint John's",
+   "names": [
+    "Saint John's",
+    "Saint John"
+   ]
+  },
+  {
+   "code": "ar",
+   "country": "Argentina",
+   "countryNames": [
+    "Argentina",
+    "Argentine Republic",
+    "República Argentina",
+    "AR"
+   ],
+   "continent": "americas",
+   "capital": "Buenos Aires",
+   "names": [
+    "Buenos Aires"
+   ]
+  },
+  {
+   "code": "am",
+   "country": "Armenia",
+   "countryNames": [
+    "Armenia",
+    "Republic of Armenia",
+    "República de Armenia",
+    "AM",
+    "Hayastan"
+   ],
+   "continent": "asia",
+   "capital": "Yerevan",
+   "names": [
+    "Yerevan",
+    "Ereván"
+   ]
+  },
+  {
+   "code": "au",
+   "country": "Australia",
+   "countryNames": [
+    "Australia",
+    "Commonwealth of Australia",
+    "Mancomunidad de Australia",
+    "AU"
+   ],
+   "continent": "oceania",
+   "capital": "Canberra",
+   "names": [
+    "Canberra"
+   ]
+  },
+  {
+   "code": "at",
+   "country": "Austria",
+   "countryNames": [
+    "Austria",
+    "Republic of Austria",
+    "República de Austria",
+    "AT",
+    "Osterreich",
+    "Oesterreich"
+   ],
+   "continent": "europe",
+   "capital": "Vienna",
+   "names": [
+    "Vienna",
+    "Viena"
+   ]
+  },
+  {
+   "code": "az",
+   "country": "Azerbaijan",
+   "countryNames": [
+    "Azerbaijan",
+    "Republic of Azerbaijan",
+    "Azerbaiyán",
+    "República de Azerbaiyán",
+    "AZ",
+    "Azərbaycan Respublikası"
+   ],
+   "continent": "asia",
+   "capital": "Baku",
+   "names": [
+    "Baku"
+   ]
+  },
+  {
+   "code": "bs",
+   "country": "Bahamas",
+   "countryNames": [
+    "Bahamas",
+    "Commonwealth of the Bahamas",
+    "Commonwealth de las Bahamas",
+    "BS"
+   ],
+   "continent": "americas",
+   "capital": "Nassau",
+   "names": [
+    "Nassau",
+    "Nasáu"
+   ]
+  },
+  {
+   "code": "bh",
+   "country": "Bahrain",
+   "countryNames": [
+    "Bahrain",
+    "Kingdom of Bahrain",
+    "Bahrein",
+    "Reino de Bahrein",
+    "BH",
+    "Mamlakat al-Baḥrayn"
+   ],
+   "continent": "asia",
+   "capital": "Manama",
+   "names": [
+    "Manama"
+   ]
+  },
+  {
+   "code": "bd",
+   "country": "Bangladesh",
+   "countryNames": [
+    "Bangladesh",
+    "People's Republic of Bangladesh",
+    "República Popular de Bangladesh",
+    "BD",
+    "Gônôprôjatôntri Bangladesh"
+   ],
+   "continent": "asia",
+   "capital": "Dhaka",
+   "names": [
+    "Dhaka",
+    "Daca"
+   ]
+  },
+  {
+   "code": "bb",
+   "country": "Barbados",
+   "countryNames": [
+    "Barbados",
+    "BB"
+   ],
+   "continent": "americas",
+   "capital": "Bridgetown",
+   "names": [
+    "Bridgetown"
+   ]
+  },
+  {
+   "code": "by",
+   "country": "Belarus",
+   "countryNames": [
+    "Belarus",
+    "Republic of Belarus",
+    "Bielorrusia",
+    "República de Belarús",
+    "BY",
+    "Bielaruś"
+   ],
+   "continent": "europe",
+   "capital": "Minsk",
+   "names": [
+    "Minsk"
+   ]
+  },
+  {
+   "code": "be",
+   "country": "Belgium",
+   "countryNames": [
+    "Belgium",
+    "Kingdom of Belgium",
+    "Bélgica",
+    "Reino de Bélgica",
+    "BE",
+    "België",
+    "Belgien",
+    "Belgique",
+    "Koninkrijk België",
+    "Royaume de Belgique",
+    "Königreich Belgien"
+   ],
+   "continent": "europe",
+   "capital": "Brussels",
+   "names": [
+    "Brussels",
+    "Bruselas"
+   ]
+  },
+  {
+   "code": "bz",
+   "country": "Belize",
+   "countryNames": [
+    "Belize",
+    "Belice",
+    "BZ"
+   ],
+   "continent": "americas",
+   "capital": "Belmopan",
+   "names": [
+    "Belmopan"
+   ]
+  },
+  {
+   "code": "bj",
+   "country": "Benin",
+   "countryNames": [
+    "Benin",
+    "Republic of Benin",
+    "República de Benin",
+    "BJ",
+    "République du Bénin"
+   ],
+   "continent": "africa",
+   "capital": "Porto-Novo",
+   "names": [
+    "Porto-Novo"
+   ]
+  },
+  {
+   "code": "bt",
+   "country": "Bhutan",
+   "countryNames": [
+    "Bhutan",
+    "Kingdom of Bhutan",
+    "Bután",
+    "Reino de Bután",
+    "BT"
+   ],
+   "continent": "asia",
+   "capital": "Thimphu",
+   "names": [
+    "Thimphu",
+    "Timbu"
+   ]
+  },
+  {
+   "code": "bo",
+   "country": "Bolivia",
+   "countryNames": [
+    "Bolivia",
+    "Plurinational State of Bolivia",
+    "Estado Plurinacional de Bolivia",
+    "BO",
+    "Buliwya",
+    "Wuliwya",
+    "Bolivia, Plurinational State of",
+    "Buliwya Mamallaqta",
+    "Wuliwya Suyu",
+    "Tetã Volívia"
+   ],
+   "continent": "americas",
+   "capital": "La Paz",
+   "names": [
+    "La Paz",
+    "Sucre"
+   ]
+  },
+  {
+   "code": "ba",
+   "country": "Bosnia and Herzegovina",
+   "countryNames": [
+    "Bosnia and Herzegovina",
+    "Bosnia y Herzegovina",
+    "BA",
+    "Bosnia-Herzegovina"
+   ],
+   "continent": "europe",
+   "capital": "Sarajevo",
+   "names": [
+    "Sarajevo"
+   ]
+  },
+  {
+   "code": "bw",
+   "country": "Botswana",
+   "countryNames": [
+    "Botswana",
+    "Republic of Botswana",
+    "República de Botswana",
+    "BW",
+    "Lefatshe la Botswana"
+   ],
+   "continent": "africa",
+   "capital": "Gaborone",
+   "names": [
+    "Gaborone"
+   ]
+  },
+  {
+   "code": "br",
+   "country": "Brazil",
+   "countryNames": [
+    "Brazil",
+    "Federative Republic of Brazil",
+    "Brasil",
+    "República Federativa del Brasil",
+    "BR",
+    "República Federativa do Brasil"
+   ],
+   "continent": "americas",
+   "capital": "Brasília",
+   "names": [
+    "Brasília"
+   ]
+  },
+  {
+   "code": "bn",
+   "country": "Brunei",
+   "countryNames": [
+    "Brunei",
+    "Nation of Brunei, Abode of Peace",
+    "Nación de Brunei, Morada de la Paz",
+    "BN",
+    "Brunei Darussalam",
+    "Nation of Brunei",
+    "the Abode of Peace"
+   ],
+   "continent": "asia",
+   "capital": "Bandar Seri Begawan",
+   "names": [
+    "Bandar Seri Begawan"
+   ]
+  },
+  {
+   "code": "bg",
+   "country": "Bulgaria",
+   "countryNames": [
+    "Bulgaria",
+    "Republic of Bulgaria",
+    "República de Bulgaria",
+    "BG"
+   ],
+   "continent": "europe",
+   "capital": "Sofia",
+   "names": [
+    "Sofia"
+   ]
+  },
+  {
+   "code": "bf",
+   "country": "Burkina Faso",
+   "countryNames": [
+    "Burkina Faso",
+    "BF"
+   ],
+   "continent": "africa",
+   "capital": "Ouagadougou",
+   "names": [
+    "Ouagadougou",
+    "Uagadugú"
+   ]
+  },
+  {
+   "code": "bi",
+   "country": "Burundi",
+   "countryNames": [
+    "Burundi",
+    "Republic of Burundi",
+    "República de Burundi",
+    "BI",
+    "Republika y'Uburundi",
+    "République du Burundi"
+   ],
+   "continent": "africa",
+   "capital": "Gitega",
+   "names": [
+    "Gitega",
+    "Guitega"
+   ]
+  },
+  {
+   "code": "kh",
+   "country": "Cambodia",
+   "countryNames": [
+    "Cambodia",
+    "Kingdom of Cambodia",
+    "Camboya",
+    "Reino de Camboya",
+    "KH"
+   ],
+   "continent": "asia",
+   "capital": "Phnom Penh",
+   "names": [
+    "Phnom Penh",
+    "Nom Pen"
+   ]
+  },
+  {
+   "code": "cm",
+   "country": "Cameroon",
+   "countryNames": [
+    "Cameroon",
+    "Republic of Cameroon",
+    "Camerún",
+    "República de Camerún",
+    "CM",
+    "République du Cameroun"
+   ],
+   "continent": "africa",
+   "capital": "Yaoundé",
+   "names": [
+    "Yaoundé",
+    "Yaundé"
+   ]
+  },
+  {
+   "code": "ca",
+   "country": "Canada",
+   "countryNames": [
+    "Canada",
+    "CA"
+   ],
+   "continent": "americas",
+   "capital": "Ottawa",
+   "names": [
+    "Ottawa"
+   ]
+  },
+  {
+   "code": "cv",
+   "country": "Cape Verde",
+   "countryNames": [
+    "Cape Verde",
+    "Republic of Cabo Verde",
+    "Cabo Verde",
+    "República de Cabo Verde",
+    "CV"
+   ],
+   "continent": "africa",
+   "capital": "Praia",
+   "names": [
+    "Praia"
+   ]
+  },
+  {
+   "code": "cf",
+   "country": "Central African Republic",
+   "countryNames": [
+    "Central African Republic",
+    "República Centroafricana",
+    "CF",
+    "République centrafricaine"
+   ],
+   "continent": "africa",
+   "capital": "Bangui",
+   "names": [
+    "Bangui"
+   ]
+  },
+  {
+   "code": "td",
+   "country": "Chad",
+   "countryNames": [
+    "Chad",
+    "Republic of Chad",
+    "República de Chad",
+    "TD",
+    "Tchad",
+    "République du Tchad"
+   ],
+   "continent": "africa",
+   "capital": "N'Djamena",
+   "names": [
+    "N'Djamena",
+    "Yamena"
+   ]
+  },
+  {
+   "code": "cl",
+   "country": "Chile",
+   "countryNames": [
+    "Chile",
+    "Republic of Chile",
+    "República de Chile",
+    "CL"
+   ],
+   "continent": "americas",
+   "capital": "Santiago",
+   "names": [
+    "Santiago",
+    "Santiago de Chile"
+   ]
+  },
+  {
+   "code": "cn",
+   "country": "China",
+   "countryNames": [
+    "China",
+    "People's Republic of China",
+    "República Popular de China",
+    "CN",
+    "Zhōngguó",
+    "Zhonghua",
+    "Zhōnghuá Rénmín Gònghéguó"
+   ],
+   "continent": "asia",
+   "capital": "Beijing",
+   "names": [
+    "Beijing",
+    "Pekín",
+    "Peking"
+   ]
+  },
+  {
+   "code": "co",
+   "country": "Colombia",
+   "countryNames": [
+    "Colombia",
+    "Republic of Colombia",
+    "República de Colombia",
+    "CO"
+   ],
+   "continent": "americas",
+   "capital": "Bogotá",
+   "names": [
+    "Bogotá"
+   ]
+  },
+  {
+   "code": "km",
+   "country": "Comoros",
+   "countryNames": [
+    "Comoros",
+    "Union of the Comoros",
+    "Comoras",
+    "Unión de las Comoras",
+    "KM",
+    "Union des Comores",
+    "Udzima wa Komori",
+    "al-Ittiḥād al-Qumurī"
+   ],
+   "continent": "africa",
+   "capital": "Moroni",
+   "names": [
+    "Moroni"
+   ]
+  },
+  {
+   "code": "cr",
+   "country": "Costa Rica",
+   "countryNames": [
+    "Costa Rica",
+    "Republic of Costa Rica",
+    "República de Costa Rica",
+    "CR"
+   ],
+   "continent": "americas",
+   "capital": "San José",
+   "names": [
+    "San José"
+   ]
+  },
+  {
+   "code": "hr",
+   "country": "Croatia",
+   "countryNames": [
+    "Croatia",
+    "Republic of Croatia",
+    "Croacia",
+    "República de Croacia",
+    "HR",
+    "Hrvatska",
+    "Republika Hrvatska"
+   ],
+   "continent": "europe",
+   "capital": "Zagreb",
+   "names": [
+    "Zagreb"
+   ]
+  },
+  {
+   "code": "cu",
+   "country": "Cuba",
+   "countryNames": [
+    "Cuba",
+    "Republic of Cuba",
+    "República de Cuba",
+    "CU"
+   ],
+   "continent": "americas",
+   "capital": "Havana",
+   "names": [
+    "Havana",
+    "La Habana"
+   ]
+  },
+  {
+   "code": "cy",
+   "country": "Cyprus",
+   "countryNames": [
+    "Cyprus",
+    "Republic of Cyprus",
+    "Chipre",
+    "República de Chipre",
+    "CY",
+    "Kýpros",
+    "Kıbrıs",
+    "Kıbrıs Cumhuriyeti"
+   ],
+   "continent": "europe",
+   "capital": "Nicosia",
+   "names": [
+    "Nicosia"
+   ]
+  },
+  {
+   "code": "cz",
+   "country": "Czechia",
+   "countryNames": [
+    "Czechia",
+    "Czech Republic",
+    "Chequia",
+    "República Checa",
+    "CZ",
+    "Česká republika",
+    "Česko"
+   ],
+   "continent": "europe",
+   "capital": "Prague",
+   "names": [
+    "Prague",
+    "Praga",
+    "Praha"
+   ]
+  },
+  {
+   "code": "cd",
+   "country": "DR Congo",
+   "countryNames": [
+    "DR Congo",
+    "Democratic Republic of the Congo",
+    "Congo (Rep. Dem.)",
+    "República Democrática del Congo",
+    "CD",
+    "Congo-Kinshasa",
+    "Congo, the Democratic Republic of the",
+    "Democratic Republic of Congo",
+    "DRC"
+   ],
+   "continent": "africa",
+   "capital": "Kinshasa",
+   "names": [
+    "Kinshasa",
+    "Kinsasa"
+   ]
+  },
+  {
+   "code": "dk",
+   "country": "Denmark",
+   "countryNames": [
+    "Denmark",
+    "Kingdom of Denmark",
+    "Dinamarca",
+    "Reino de Dinamarca",
+    "DK",
+    "Danmark",
+    "Kongeriget Danmark"
+   ],
+   "continent": "europe",
+   "capital": "Copenhagen",
+   "names": [
+    "Copenhagen",
+    "Copenhague"
+   ]
+  },
+  {
+   "code": "dj",
+   "country": "Djibouti",
+   "countryNames": [
+    "Djibouti",
+    "Republic of Djibouti",
+    "República de Djibouti",
+    "DJ",
+    "Jabuuti",
+    "Gabuuti",
+    "République de Djibouti",
+    "Gabuutih Ummuuno",
+    "Jamhuuriyadda Jabuuti"
+   ],
+   "continent": "africa",
+   "capital": "Djibouti",
+   "names": [
+    "Djibouti",
+    "Ciudad de Yibuti"
+   ]
+  },
+  {
+   "code": "dm",
+   "country": "Dominica",
+   "countryNames": [
+    "Dominica",
+    "Commonwealth of Dominica",
+    "Mancomunidad de Dominica",
+    "DM",
+    "Dominique",
+    "Wai‘tu kubuli"
+   ],
+   "continent": "americas",
+   "capital": "Roseau",
+   "names": [
+    "Roseau"
+   ]
+  },
+  {
+   "code": "do",
+   "country": "Dominican Republic",
+   "countryNames": [
+    "Dominican Republic",
+    "República Dominicana",
+    "DO"
+   ],
+   "continent": "americas",
+   "capital": "Santo Domingo",
+   "names": [
+    "Santo Domingo"
+   ]
+  },
+  {
+   "code": "ec",
+   "country": "Ecuador",
+   "countryNames": [
+    "Ecuador",
+    "Republic of Ecuador",
+    "República del Ecuador",
+    "EC"
+   ],
+   "continent": "americas",
+   "capital": "Quito",
+   "names": [
+    "Quito"
+   ]
+  },
+  {
+   "code": "eg",
+   "country": "Egypt",
+   "countryNames": [
+    "Egypt",
+    "Arab Republic of Egypt",
+    "Egipto",
+    "República Árabe de Egipto",
+    "EG"
+   ],
+   "continent": "africa",
+   "capital": "Cairo",
+   "names": [
+    "Cairo",
+    "El Cairo"
+   ]
+  },
+  {
+   "code": "sv",
+   "country": "El Salvador",
+   "countryNames": [
+    "El Salvador",
+    "Republic of El Salvador",
+    "República de El Salvador",
+    "SV"
+   ],
+   "continent": "americas",
+   "capital": "San Salvador",
+   "names": [
+    "San Salvador"
+   ]
+  },
+  {
+   "code": "gq",
+   "country": "Equatorial Guinea",
+   "countryNames": [
+    "Equatorial Guinea",
+    "Republic of Equatorial Guinea",
+    "Guinea Ecuatorial",
+    "República de Guinea Ecuatorial",
+    "GQ",
+    "République de Guinée équatoriale",
+    "República da Guiné Equatorial"
+   ],
+   "continent": "africa",
+   "capital": "Ciudad de la Paz",
+   "names": [
+    "Ciudad de la Paz"
+   ]
+  },
+  {
+   "code": "er",
+   "country": "Eritrea",
+   "countryNames": [
+    "Eritrea",
+    "State of Eritrea",
+    "Estado de Eritrea",
+    "ER",
+    "Dawlat Iritriyá",
+    "ʾErtrā",
+    "Iritriyā"
+   ],
+   "continent": "africa",
+   "capital": "Asmara",
+   "names": [
+    "Asmara"
+   ]
+  },
+  {
+   "code": "ee",
+   "country": "Estonia",
+   "countryNames": [
+    "Estonia",
+    "Republic of Estonia",
+    "República de Estonia",
+    "EE",
+    "Eesti",
+    "Eesti Vabariik"
+   ],
+   "continent": "europe",
+   "capital": "Tallinn",
+   "names": [
+    "Tallinn",
+    "Tallin"
+   ]
+  },
+  {
+   "code": "sz",
+   "country": "Eswatini",
+   "countryNames": [
+    "Eswatini",
+    "Kingdom of Eswatini",
+    "Suazilandia",
+    "Reino de eSwatini",
+    "SZ",
+    "Swaziland",
+    "weSwatini",
+    "Swatini",
+    "Ngwane",
+    "Umbuso weSwatini"
+   ],
+   "continent": "africa",
+   "capital": "Mbabane",
+   "names": [
+    "Mbabane",
+    "Lobamba"
+   ]
+  },
+  {
+   "code": "et",
+   "country": "Ethiopia",
+   "countryNames": [
+    "Ethiopia",
+    "Federal Democratic Republic of Ethiopia",
+    "Etiopía",
+    "República Democrática Federal de Etiopía",
+    "ET",
+    "ʾĪtyōṗṗyā"
+   ],
+   "continent": "africa",
+   "capital": "Addis Ababa",
+   "names": [
+    "Addis Ababa",
+    "Adís Abeba"
+   ]
+  },
+  {
+   "code": "fj",
+   "country": "Fiji",
+   "countryNames": [
+    "Fiji",
+    "Republic of Fiji",
+    "Fiyi",
+    "República de Fiji",
+    "FJ",
+    "Viti",
+    "Matanitu ko Viti",
+    "Fijī Gaṇarājya"
+   ],
+   "continent": "oceania",
+   "capital": "Suva",
+   "names": [
+    "Suva"
+   ]
+  },
+  {
+   "code": "fi",
+   "country": "Finland",
+   "countryNames": [
+    "Finland",
+    "Republic of Finland",
+    "Finlandia",
+    "República de Finlandia",
+    "FI",
+    "Suomi",
+    "Suomen tasavalta",
+    "Republiken Finland"
+   ],
+   "continent": "europe",
+   "capital": "Helsinki",
+   "names": [
+    "Helsinki"
+   ]
+  },
+  {
+   "code": "fr",
+   "country": "France",
+   "countryNames": [
+    "France",
+    "French Republic",
+    "Francia",
+    "República francés",
+    "FR",
+    "République française"
+   ],
+   "continent": "europe",
+   "capital": "Paris",
+   "names": [
+    "Paris"
+   ]
+  },
+  {
+   "code": "ga",
+   "country": "Gabon",
+   "countryNames": [
+    "Gabon",
+    "Gabonese Republic",
+    "República de Gabón",
+    "GA",
+    "République Gabonaise"
+   ],
+   "continent": "africa",
+   "capital": "Libreville",
+   "names": [
+    "Libreville"
+   ]
+  },
+  {
+   "code": "gm",
+   "country": "Gambia",
+   "countryNames": [
+    "Gambia",
+    "Republic of the Gambia",
+    "República de Gambia",
+    "GM"
+   ],
+   "continent": "africa",
+   "capital": "Banjul",
+   "names": [
+    "Banjul"
+   ]
+  },
+  {
+   "code": "ge",
+   "country": "Georgia",
+   "countryNames": [
+    "Georgia",
+    "GE",
+    "Sakartvelo"
+   ],
+   "continent": "asia",
+   "capital": "Tbilisi",
+   "names": [
+    "Tbilisi",
+    "Tiflis"
+   ]
+  },
+  {
+   "code": "de",
+   "country": "Germany",
+   "countryNames": [
+    "Germany",
+    "Federal Republic of Germany",
+    "Alemania",
+    "República Federal de Alemania",
+    "DE",
+    "Bundesrepublik Deutschland"
+   ],
+   "continent": "europe",
+   "capital": "Berlin",
+   "names": [
+    "Berlin"
+   ]
+  },
+  {
+   "code": "gh",
+   "country": "Ghana",
+   "countryNames": [
+    "Ghana",
+    "Republic of Ghana",
+    "República de Ghana",
+    "GH"
+   ],
+   "continent": "africa",
+   "capital": "Accra",
+   "names": [
+    "Accra",
+    "Acra"
+   ]
+  },
+  {
+   "code": "gr",
+   "country": "Greece",
+   "countryNames": [
+    "Greece",
+    "Hellenic Republic",
+    "Grecia",
+    "República Helénica",
+    "GR",
+    "Elláda"
+   ],
+   "continent": "europe",
+   "capital": "Athens",
+   "names": [
+    "Athens",
+    "Atenas"
+   ]
+  },
+  {
+   "code": "gd",
+   "country": "Grenada",
+   "countryNames": [
+    "Grenada",
+    "Granada",
+    "GD"
+   ],
+   "continent": "americas",
+   "capital": "St. George's",
+   "names": [
+    "St. George's",
+    "Saint George"
+   ]
+  },
+  {
+   "code": "gt",
+   "country": "Guatemala",
+   "countryNames": [
+    "Guatemala",
+    "Republic of Guatemala",
+    "República de Guatemala",
+    "GT"
+   ],
+   "continent": "americas",
+   "capital": "Guatemala City",
+   "names": [
+    "Guatemala City",
+    "Ciudad de Guatemala"
+   ]
+  },
+  {
+   "code": "gn",
+   "country": "Guinea",
+   "countryNames": [
+    "Guinea",
+    "Republic of Guinea",
+    "República de Guinea",
+    "GN",
+    "République de Guinée"
+   ],
+   "continent": "africa",
+   "capital": "Conakry",
+   "names": [
+    "Conakry",
+    "Conakri"
+   ]
+  },
+  {
+   "code": "gw",
+   "country": "Guinea-Bissau",
+   "countryNames": [
+    "Guinea-Bissau",
+    "Republic of Guinea-Bissau",
+    "Guinea-Bisáu",
+    "República de Guinea-Bissau",
+    "GW",
+    "República da Guiné-Bissau"
+   ],
+   "continent": "africa",
+   "capital": "Bissau",
+   "names": [
+    "Bissau",
+    "Bisáu"
+   ]
+  },
+  {
+   "code": "gy",
+   "country": "Guyana",
+   "countryNames": [
+    "Guyana",
+    "Co-operative Republic of Guyana",
+    "República Cooperativa de Guyana",
+    "GY"
+   ],
+   "continent": "americas",
+   "capital": "Georgetown",
+   "names": [
+    "Georgetown"
+   ]
+  },
+  {
+   "code": "ht",
+   "country": "Haiti",
+   "countryNames": [
+    "Haiti",
+    "Republic of Haiti",
+    "República de Haití",
+    "HT",
+    "République d'Haïti",
+    "Repiblik Ayiti"
+   ],
+   "continent": "americas",
+   "capital": "Port-au-Prince",
+   "names": [
+    "Port-au-Prince",
+    "Puerto Príncipe"
+   ]
+  },
+  {
+   "code": "hn",
+   "country": "Honduras",
+   "countryNames": [
+    "Honduras",
+    "Republic of Honduras",
+    "República de Honduras",
+    "HN"
+   ],
+   "continent": "americas",
+   "capital": "Tegucigalpa",
+   "names": [
+    "Tegucigalpa"
+   ]
+  },
+  {
+   "code": "hu",
+   "country": "Hungary",
+   "countryNames": [
+    "Hungary",
+    "Hungría",
+    "HU"
+   ],
+   "continent": "europe",
+   "capital": "Budapest",
+   "names": [
+    "Budapest"
+   ]
+  },
+  {
+   "code": "is",
+   "country": "Iceland",
+   "countryNames": [
+    "Iceland",
+    "Islandia",
+    "IS",
+    "Island",
+    "Republic of Iceland",
+    "Lýðveldið Ísland"
+   ],
+   "continent": "europe",
+   "capital": "Reykjavík",
+   "names": [
+    "Reykjavík",
+    "Reikiavik"
+   ]
+  },
+  {
+   "code": "in",
+   "country": "India",
+   "countryNames": [
+    "India",
+    "Republic of India",
+    "República de la India",
+    "IN",
+    "Bhārat",
+    "Bharat Ganrajya"
+   ],
+   "continent": "asia",
+   "capital": "New Delhi",
+   "names": [
+    "New Delhi",
+    "Nueva Delhi",
+    "Delhi"
+   ]
+  },
+  {
+   "code": "id",
+   "country": "Indonesia",
+   "countryNames": [
+    "Indonesia",
+    "Republic of Indonesia",
+    "República de Indonesia",
+    "ID",
+    "Republik Indonesia"
+   ],
+   "continent": "asia",
+   "capital": "Jakarta",
+   "names": [
+    "Jakarta",
+    "Yakarta"
+   ]
+  },
+  {
+   "code": "ir",
+   "country": "Iran",
+   "countryNames": [
+    "Iran",
+    "Islamic Republic of Iran",
+    "República Islámica de Irán",
+    "IR",
+    "Iran, Islamic Republic of",
+    "Jomhuri-ye Eslāmi-ye Irān"
+   ],
+   "continent": "asia",
+   "capital": "Tehran",
+   "names": [
+    "Tehran",
+    "Teherán"
+   ]
+  },
+  {
+   "code": "iq",
+   "country": "Iraq",
+   "countryNames": [
+    "Iraq",
+    "Republic of Iraq",
+    "Irak",
+    "República de Irak",
+    "IQ",
+    "Jumhūriyyat al-‘Irāq"
+   ],
+   "continent": "asia",
+   "capital": "Baghdad",
+   "names": [
+    "Baghdad",
+    "Bagdad"
+   ]
+  },
+  {
+   "code": "ie",
+   "country": "Ireland",
+   "countryNames": [
+    "Ireland",
+    "Republic of Ireland",
+    "Irlanda",
+    "República de Irlanda",
+    "IE",
+    "Éire",
+    "Poblacht na hÉireann"
+   ],
+   "continent": "europe",
+   "capital": "Dublin",
+   "names": [
+    "Dublin"
+   ]
+  },
+  {
+   "code": "il",
+   "country": "Israel",
+   "countryNames": [
+    "Israel",
+    "State of Israel",
+    "Estado de Israel",
+    "IL",
+    "Medīnat Yisrā'el"
+   ],
+   "continent": "asia",
+   "capital": "Jerusalem",
+   "names": [
+    "Jerusalem",
+    "Jerusalén"
+   ]
+  },
+  {
+   "code": "it",
+   "country": "Italy",
+   "countryNames": [
+    "Italy",
+    "Italian Republic",
+    "Italia",
+    "República Italiana",
+    "IT",
+    "Repubblica italiana"
+   ],
+   "continent": "europe",
+   "capital": "Rome",
+   "names": [
+    "Rome",
+    "Roma"
+   ]
+  },
+  {
+   "code": "ci",
+   "country": "Ivory Coast",
+   "countryNames": [
+    "Ivory Coast",
+    "Republic of Côte d'Ivoire",
+    "Costa de Marfil",
+    "República de Côte d'Ivoire",
+    "CI",
+    "Côte d'Ivoire",
+    "République de Côte d'Ivoire"
+   ],
+   "continent": "africa",
+   "capital": "Yamoussoukro",
+   "names": [
+    "Yamoussoukro",
+    "Yamusukro",
+    "Abidjan"
+   ]
+  },
+  {
+   "code": "jm",
+   "country": "Jamaica",
+   "countryNames": [
+    "Jamaica",
+    "JM"
+   ],
+   "continent": "americas",
+   "capital": "Kingston",
+   "names": [
+    "Kingston"
+   ]
+  },
+  {
+   "code": "jp",
+   "country": "Japan",
+   "countryNames": [
+    "Japan",
+    "Japón",
+    "JP",
+    "Nippon",
+    "Nihon"
+   ],
+   "continent": "asia",
+   "capital": "Tokyo",
+   "names": [
+    "Tokyo",
+    "Tokio"
+   ]
+  },
+  {
+   "code": "jo",
+   "country": "Jordan",
+   "countryNames": [
+    "Jordan",
+    "Hashemite Kingdom of Jordan",
+    "Jordania",
+    "Reino Hachemita de Jordania",
+    "JO",
+    "al-Mamlakah al-Urdunīyah al-Hāshimīyah"
+   ],
+   "continent": "asia",
+   "capital": "Amman",
+   "names": [
+    "Amman",
+    "Amán"
+   ]
+  },
+  {
+   "code": "kz",
+   "country": "Kazakhstan",
+   "countryNames": [
+    "Kazakhstan",
+    "Republic of Kazakhstan",
+    "Kazajistán",
+    "República de Kazajstán",
+    "KZ",
+    "Qazaqstan",
+    "Qazaqstan Respublïkası",
+    "Respublika Kazakhstan"
+   ],
+   "continent": "asia",
+   "capital": "Astana",
+   "names": [
+    "Astana"
+   ]
+  },
+  {
+   "code": "ke",
+   "country": "Kenya",
+   "countryNames": [
+    "Kenya",
+    "Republic of Kenya",
+    "Kenia",
+    "República de Kenya",
+    "KE",
+    "Jamhuri ya Kenya"
+   ],
+   "continent": "africa",
+   "capital": "Nairobi",
+   "names": [
+    "Nairobi"
+   ]
+  },
+  {
+   "code": "ki",
+   "country": "Kiribati",
+   "countryNames": [
+    "Kiribati",
+    "Independent and Sovereign Republic of Kiribati",
+    "República Independiente y Soberano de Kiribati",
+    "KI",
+    "Republic of Kiribati",
+    "Ribaberiki Kiribati"
+   ],
+   "continent": "oceania",
+   "capital": "South Tarawa",
+   "names": [
+    "South Tarawa",
+    "Tarawa Sur"
+   ]
+  },
+  {
+   "code": "kw",
+   "country": "Kuwait",
+   "countryNames": [
+    "Kuwait",
+    "State of Kuwait",
+    "Estado de Kuwait",
+    "KW",
+    "Dawlat al-Kuwait"
+   ],
+   "continent": "asia",
+   "capital": "Kuwait City",
+   "names": [
+    "Kuwait City",
+    "Ciudad de Kuwait"
+   ]
+  },
+  {
+   "code": "kg",
+   "country": "Kyrgyzstan",
+   "countryNames": [
+    "Kyrgyzstan",
+    "Kyrgyz Republic",
+    "Kirguizistán",
+    "República Kirguisa",
+    "KG",
+    "Kyrgyz Respublikasy"
+   ],
+   "continent": "asia",
+   "capital": "Bishkek",
+   "names": [
+    "Bishkek",
+    "Biskek"
+   ]
+  },
+  {
+   "code": "la",
+   "country": "Laos",
+   "countryNames": [
+    "Laos",
+    "Lao People's Democratic Republic",
+    "República Democrática Popular Lao",
+    "LA",
+    "Lao",
+    "Sathalanalat Paxathipatai Paxaxon Lao"
+   ],
+   "continent": "asia",
+   "capital": "Vientiane",
+   "names": [
+    "Vientiane",
+    "Vientián"
+   ]
+  },
+  {
+   "code": "lv",
+   "country": "Latvia",
+   "countryNames": [
+    "Latvia",
+    "Republic of Latvia",
+    "Letonia",
+    "República de Letonia",
+    "LV",
+    "Latvijas Republika"
+   ],
+   "continent": "europe",
+   "capital": "Riga",
+   "names": [
+    "Riga"
+   ]
+  },
+  {
+   "code": "lb",
+   "country": "Lebanon",
+   "countryNames": [
+    "Lebanon",
+    "Lebanese Republic",
+    "Líbano",
+    "República Libanesa",
+    "LB",
+    "Al-Jumhūrīyah Al-Libnānīyah"
+   ],
+   "continent": "asia",
+   "capital": "Beirut",
+   "names": [
+    "Beirut"
+   ]
+  },
+  {
+   "code": "ls",
+   "country": "Lesotho",
+   "countryNames": [
+    "Lesotho",
+    "Kingdom of Lesotho",
+    "Reino de Lesotho",
+    "LS",
+    "Muso oa Lesotho"
+   ],
+   "continent": "africa",
+   "capital": "Maseru",
+   "names": [
+    "Maseru"
+   ]
+  },
+  {
+   "code": "lr",
+   "country": "Liberia",
+   "countryNames": [
+    "Liberia",
+    "Republic of Liberia",
+    "República de Liberia",
+    "LR"
+   ],
+   "continent": "africa",
+   "capital": "Monrovia",
+   "names": [
+    "Monrovia"
+   ]
+  },
+  {
+   "code": "ly",
+   "country": "Libya",
+   "countryNames": [
+    "Libya",
+    "State of Libya",
+    "Libia",
+    "Estado de Libia",
+    "LY",
+    "Dawlat Libya"
+   ],
+   "continent": "africa",
+   "capital": "Tripoli",
+   "names": [
+    "Tripoli"
+   ]
+  },
+  {
+   "code": "li",
+   "country": "Liechtenstein",
+   "countryNames": [
+    "Liechtenstein",
+    "Principality of Liechtenstein",
+    "Principado de Liechtenstein",
+    "LI",
+    "Fürstentum Liechtenstein"
+   ],
+   "continent": "europe",
+   "capital": "Vaduz",
+   "names": [
+    "Vaduz"
+   ]
+  },
+  {
+   "code": "lt",
+   "country": "Lithuania",
+   "countryNames": [
+    "Lithuania",
+    "Republic of Lithuania",
+    "Lituania",
+    "República de Lituania",
+    "LT",
+    "Lietuvos Respublika"
+   ],
+   "continent": "europe",
+   "capital": "Vilnius",
+   "names": [
+    "Vilnius",
+    "Vilna"
+   ]
+  },
+  {
+   "code": "lu",
+   "country": "Luxembourg",
+   "countryNames": [
+    "Luxembourg",
+    "Grand Duchy of Luxembourg",
+    "Luxemburgo",
+    "Gran Ducado de Luxemburgo",
+    "LU",
+    "Grand-Duché de Luxembourg",
+    "Großherzogtum Luxemburg",
+    "Groussherzogtum Lëtzebuerg"
+   ],
+   "continent": "europe",
+   "capital": "Luxembourg",
+   "names": [
+    "Luxembourg",
+    "Luxemburgo"
+   ]
+  },
+  {
+   "code": "mg",
+   "country": "Madagascar",
+   "countryNames": [
+    "Madagascar",
+    "Republic of Madagascar",
+    "República de Madagascar",
+    "MG",
+    "Repoblikan'i Madagasikara",
+    "République de Madagascar"
+   ],
+   "continent": "africa",
+   "capital": "Antananarivo",
+   "names": [
+    "Antananarivo"
+   ]
+  },
+  {
+   "code": "mw",
+   "country": "Malawi",
+   "countryNames": [
+    "Malawi",
+    "Republic of Malawi",
+    "República de Malawi",
+    "MW"
+   ],
+   "continent": "africa",
+   "capital": "Lilongwe",
+   "names": [
+    "Lilongwe",
+    "Lilongüe"
+   ]
+  },
+  {
+   "code": "my",
+   "country": "Malaysia",
+   "countryNames": [
+    "Malaysia",
+    "Malasia",
+    "MY"
+   ],
+   "continent": "asia",
+   "capital": "Kuala Lumpur",
+   "names": [
+    "Kuala Lumpur"
+   ]
+  },
+  {
+   "code": "mv",
+   "country": "Maldives",
+   "countryNames": [
+    "Maldives",
+    "Republic of the Maldives",
+    "Maldivas",
+    "República de las Maldivas",
+    "MV",
+    "Maldive Islands",
+    "Dhivehi Raajjeyge Jumhooriyya"
+   ],
+   "continent": "asia",
+   "capital": "Malé",
+   "names": [
+    "Malé"
+   ]
+  },
+  {
+   "code": "ml",
+   "country": "Mali",
+   "countryNames": [
+    "Mali",
+    "Republic of Mali",
+    "República de Malí",
+    "ML",
+    "République du Mali"
+   ],
+   "continent": "africa",
+   "capital": "Bamako",
+   "names": [
+    "Bamako"
+   ]
+  },
+  {
+   "code": "mt",
+   "country": "Malta",
+   "countryNames": [
+    "Malta",
+    "Republic of Malta",
+    "República de Malta",
+    "MT",
+    "Repubblika ta' Malta"
+   ],
+   "continent": "europe",
+   "capital": "Valletta",
+   "names": [
+    "Valletta",
+    "La Valeta"
+   ]
+  },
+  {
+   "code": "mr",
+   "country": "Mauritania",
+   "countryNames": [
+    "Mauritania",
+    "Islamic Republic of Mauritania",
+    "República Islámica de Mauritania",
+    "MR",
+    "al-Jumhūriyyah al-ʾIslāmiyyah al-Mūrītāniyyah"
+   ],
+   "continent": "africa",
+   "capital": "Nouakchott",
+   "names": [
+    "Nouakchott",
+    "Nuakchot"
+   ]
+  },
+  {
+   "code": "mu",
+   "country": "Mauritius",
+   "countryNames": [
+    "Mauritius",
+    "Republic of Mauritius",
+    "Mauricio",
+    "República de Mauricio",
+    "MU",
+    "République de Maurice"
+   ],
+   "continent": "africa",
+   "capital": "Port Louis",
+   "names": [
+    "Port Louis"
+   ]
+  },
+  {
+   "code": "mx",
+   "country": "Mexico",
+   "countryNames": [
+    "Mexico",
+    "United Mexican States",
+    "Estados Unidos Mexicanos",
+    "MX",
+    "Mexicanos"
+   ],
+   "continent": "americas",
+   "capital": "Mexico City",
+   "names": [
+    "Mexico City",
+    "Ciudad de México",
+    "CDMX",
+    "Mexico D.F."
+   ]
+  },
+  {
+   "code": "md",
+   "country": "Moldova",
+   "countryNames": [
+    "Moldova",
+    "Republic of Moldova",
+    "Moldavia",
+    "República de Moldova",
+    "MD",
+    "Moldova, Republic of",
+    "Republica Moldova"
+   ],
+   "continent": "europe",
+   "capital": "Chișinău",
+   "names": [
+    "Chișinău"
+   ]
+  },
+  {
+   "code": "mc",
+   "country": "Monaco",
+   "countryNames": [
+    "Monaco",
+    "Principality of Monaco",
+    "Principado de Mónaco",
+    "MC",
+    "Principauté de Monaco"
+   ],
+   "continent": "europe",
+   "capital": "Monaco",
+   "names": [
+    "Monaco"
+   ]
+  },
+  {
+   "code": "mn",
+   "country": "Mongolia",
+   "countryNames": [
+    "Mongolia",
+    "MN"
+   ],
+   "continent": "asia",
+   "capital": "Ulaanbaatar",
+   "names": [
+    "Ulaanbaatar",
+    "Ulán Bator"
+   ]
+  },
+  {
+   "code": "me",
+   "country": "Montenegro",
+   "countryNames": [
+    "Montenegro",
+    "ME",
+    "Crna Gora"
+   ],
+   "continent": "europe",
+   "capital": "Podgorica",
+   "names": [
+    "Podgorica"
+   ]
+  },
+  {
+   "code": "ma",
+   "country": "Morocco",
+   "countryNames": [
+    "Morocco",
+    "Kingdom of Morocco",
+    "Marruecos",
+    "Reino de Marruecos",
+    "MA",
+    "Al-Mamlakah al-Maġribiyah"
+   ],
+   "continent": "africa",
+   "capital": "Rabat",
+   "names": [
+    "Rabat"
+   ]
+  },
+  {
+   "code": "mz",
+   "country": "Mozambique",
+   "countryNames": [
+    "Mozambique",
+    "Republic of Mozambique",
+    "República de Mozambique",
+    "MZ",
+    "República de Moçambique"
+   ],
+   "continent": "africa",
+   "capital": "Maputo",
+   "names": [
+    "Maputo"
+   ]
+  },
+  {
+   "code": "mm",
+   "country": "Myanmar",
+   "countryNames": [
+    "Myanmar",
+    "Republic of the Union of Myanmar",
+    "República de la Unión de Myanmar",
+    "MM",
+    "Burma",
+    "Pyidaunzu Thanmăda Myăma Nainngandaw"
+   ],
+   "continent": "asia",
+   "capital": "Naypyidaw",
+   "names": [
+    "Naypyidaw",
+    "Naipyidó",
+    "Nay Pyi Taw",
+    "Rangoon",
+    "Yangon"
+   ]
+  },
+  {
+   "code": "na",
+   "country": "Namibia",
+   "countryNames": [
+    "Namibia",
+    "Republic of Namibia",
+    "República de Namibia",
+    "NA",
+    "Namibië"
+   ],
+   "continent": "africa",
+   "capital": "Windhoek",
+   "names": [
+    "Windhoek"
+   ]
+  },
+  {
+   "code": "nr",
+   "country": "Nauru",
+   "countryNames": [
+    "Nauru",
+    "Republic of Nauru",
+    "República de Nauru",
+    "NR",
+    "Naoero",
+    "Pleasant Island",
+    "Ripublik Naoero"
+   ],
+   "continent": "oceania",
+   "capital": "Yaren District",
+   "names": [
+    "Yaren District",
+    "Yaren"
+   ]
+  },
+  {
+   "code": "np",
+   "country": "Nepal",
+   "countryNames": [
+    "Nepal",
+    "Federal Democratic Republic of Nepal",
+    "República Democrática Federal de Nepal",
+    "NP",
+    "Loktāntrik Ganatantra Nepāl"
+   ],
+   "continent": "asia",
+   "capital": "Kathmandu",
+   "names": [
+    "Kathmandu",
+    "Katmandú"
+   ]
+  },
+  {
+   "code": "nl",
+   "country": "Netherlands",
+   "countryNames": [
+    "Netherlands",
+    "Kingdom of the Netherlands",
+    "Países Bajos",
+    "NL",
+    "Holland",
+    "Nederland"
+   ],
+   "continent": "europe",
+   "capital": "Amsterdam",
+   "names": [
+    "Amsterdam",
+    "The Hague",
+    "La Haya"
+   ]
+  },
+  {
+   "code": "nz",
+   "country": "New Zealand",
+   "countryNames": [
+    "New Zealand",
+    "Nueva Zelanda",
+    "NZ",
+    "Aotearoa"
+   ],
+   "continent": "oceania",
+   "capital": "Wellington",
+   "names": [
+    "Wellington"
+   ]
+  },
+  {
+   "code": "ni",
+   "country": "Nicaragua",
+   "countryNames": [
+    "Nicaragua",
+    "Republic of Nicaragua",
+    "República de Nicaragua",
+    "NI"
+   ],
+   "continent": "americas",
+   "capital": "Managua",
+   "names": [
+    "Managua"
+   ]
+  },
+  {
+   "code": "ne",
+   "country": "Niger",
+   "countryNames": [
+    "Niger",
+    "Republic of Niger",
+    "República de Níger",
+    "NE",
+    "Nijar"
+   ],
+   "continent": "africa",
+   "capital": "Niamey",
+   "names": [
+    "Niamey"
+   ]
+  },
+  {
+   "code": "ng",
+   "country": "Nigeria",
+   "countryNames": [
+    "Nigeria",
+    "Federal Republic of Nigeria",
+    "República Federal de Nigeria",
+    "NG",
+    "Nijeriya",
+    "Naíjíríà"
+   ],
+   "continent": "africa",
+   "capital": "Abuja",
+   "names": [
+    "Abuja",
+    "Abuya"
+   ]
+  },
+  {
+   "code": "kp",
+   "country": "North Korea",
+   "countryNames": [
+    "North Korea",
+    "Democratic People's Republic of Korea",
+    "Corea del Norte",
+    "República Popular Democrática de Corea",
+    "KP",
+    "DPRK",
+    "Chosŏn Minjujuŭi Inmin Konghwaguk",
+    "Korea, Democratic People's Republic of"
+   ],
+   "continent": "asia",
+   "capital": "Pyongyang",
+   "names": [
+    "Pyongyang",
+    "Pionyang"
+   ]
+  },
+  {
+   "code": "mk",
+   "country": "North Macedonia",
+   "countryNames": [
+    "North Macedonia",
+    "Republic of North Macedonia",
+    "Macedonia del Norte",
+    "República de Macedonia del Norte",
+    "MK",
+    "The former Yugoslav Republic of Macedonia",
+    "Macedonia, The Former Yugoslav Republic of",
+    "Macedonia"
+   ],
+   "continent": "europe",
+   "capital": "Skopje",
+   "names": [
+    "Skopje",
+    "Skopie"
+   ]
+  },
+  {
+   "code": "no",
+   "country": "Norway",
+   "countryNames": [
+    "Norway",
+    "Kingdom of Norway",
+    "Noruega",
+    "Reino de Noruega",
+    "NO",
+    "Norge",
+    "Noreg",
+    "Kongeriket Norge",
+    "Kongeriket Noreg"
+   ],
+   "continent": "europe",
+   "capital": "Oslo",
+   "names": [
+    "Oslo"
+   ]
+  },
+  {
+   "code": "om",
+   "country": "Oman",
+   "countryNames": [
+    "Oman",
+    "Sultanate of Oman",
+    "Sultanato de Omán",
+    "OM",
+    "Salṭanat ʻUmān"
+   ],
+   "continent": "asia",
+   "capital": "Muscat",
+   "names": [
+    "Muscat",
+    "Mascate"
+   ]
+  },
+  {
+   "code": "pk",
+   "country": "Pakistan",
+   "countryNames": [
+    "Pakistan",
+    "Islamic Republic of Pakistan",
+    "República Islámica de Pakistán",
+    "PK",
+    "Islāmī Jumhūriya'eh Pākistān"
+   ],
+   "continent": "asia",
+   "capital": "Islamabad",
+   "names": [
+    "Islamabad"
+   ]
+  },
+  {
+   "code": "pw",
+   "country": "Palau",
+   "countryNames": [
+    "Palau",
+    "Republic of Palau",
+    "República de Palau",
+    "PW",
+    "Beluu er a Belau"
+   ],
+   "continent": "oceania",
+   "capital": "Ngerulmud",
+   "names": [
+    "Ngerulmud"
+   ]
+  },
+  {
+   "code": "pa",
+   "country": "Panama",
+   "countryNames": [
+    "Panama",
+    "Republic of Panama",
+    "República de Panamá",
+    "PA"
+   ],
+   "continent": "americas",
+   "capital": "Panama City",
+   "names": [
+    "Panama City",
+    "Ciudad de Panamá"
+   ]
+  },
+  {
+   "code": "pg",
+   "country": "Papua New Guinea",
+   "countryNames": [
+    "Papua New Guinea",
+    "Independent State of Papua New Guinea",
+    "Papúa Nueva Guinea",
+    "Estado Independiente de Papúa Nueva Guinea",
+    "PG",
+    "Independen Stet bilong Papua Niugini"
+   ],
+   "continent": "oceania",
+   "capital": "Port Moresby",
+   "names": [
+    "Port Moresby",
+    "Puerto Moresby"
+   ]
+  },
+  {
+   "code": "py",
+   "country": "Paraguay",
+   "countryNames": [
+    "Paraguay",
+    "Republic of Paraguay",
+    "República de Paraguay",
+    "PY",
+    "República del Paraguay",
+    "Tetã Paraguái"
+   ],
+   "continent": "americas",
+   "capital": "Asunción",
+   "names": [
+    "Asunción"
+   ]
+  },
+  {
+   "code": "pe",
+   "country": "Peru",
+   "countryNames": [
+    "Peru",
+    "Republic of Peru",
+    "República de Perú",
+    "PE",
+    "República del Perú"
+   ],
+   "continent": "americas",
+   "capital": "Lima",
+   "names": [
+    "Lima"
+   ]
+  },
+  {
+   "code": "ph",
+   "country": "Philippines",
+   "countryNames": [
+    "Philippines",
+    "Republic of the Philippines",
+    "Filipinas",
+    "República de las Filipinas",
+    "PH",
+    "Repúblika ng Pilipinas"
+   ],
+   "continent": "asia",
+   "capital": "Manila",
+   "names": [
+    "Manila"
+   ]
+  },
+  {
+   "code": "pl",
+   "country": "Poland",
+   "countryNames": [
+    "Poland",
+    "Republic of Poland",
+    "Polonia",
+    "República de Polonia",
+    "PL",
+    "Rzeczpospolita Polska"
+   ],
+   "continent": "europe",
+   "capital": "Warsaw",
+   "names": [
+    "Warsaw",
+    "Varsovia"
+   ]
+  },
+  {
+   "code": "pt",
+   "country": "Portugal",
+   "countryNames": [
+    "Portugal",
+    "Portuguese Republic",
+    "República Portuguesa",
+    "PT",
+    "Portuguesa"
+   ],
+   "continent": "europe",
+   "capital": "Lisbon",
+   "names": [
+    "Lisbon",
+    "Lisboa"
+   ]
+  },
+  {
+   "code": "qa",
+   "country": "Qatar",
+   "countryNames": [
+    "Qatar",
+    "State of Qatar",
+    "Catar",
+    "Estado de Qatar",
+    "QA",
+    "Dawlat Qaṭar"
+   ],
+   "continent": "asia",
+   "capital": "Doha",
+   "names": [
+    "Doha"
+   ]
+  },
+  {
+   "code": "cg",
+   "country": "Republic of the Congo",
+   "countryNames": [
+    "Republic of the Congo",
+    "Congo",
+    "República del Congo",
+    "CG",
+    "Congo-Brazzaville"
+   ],
+   "continent": "africa",
+   "capital": "Brazzaville",
+   "names": [
+    "Brazzaville"
+   ]
+  },
+  {
+   "code": "ro",
+   "country": "Romania",
+   "countryNames": [
+    "Romania",
+    "Rumania",
+    "RO",
+    "Roumania"
+   ],
+   "continent": "europe",
+   "capital": "Bucharest",
+   "names": [
+    "Bucharest",
+    "Bucarest"
+   ]
+  },
+  {
+   "code": "ru",
+   "country": "Russia",
+   "countryNames": [
+    "Russia",
+    "Russian Federation",
+    "Rusia",
+    "Federación de Rusia",
+    "RU"
+   ],
+   "continent": "europe",
+   "capital": "Moscow",
+   "names": [
+    "Moscow",
+    "Moscú"
+   ]
+  },
+  {
+   "code": "rw",
+   "country": "Rwanda",
+   "countryNames": [
+    "Rwanda",
+    "Republic of Rwanda",
+    "Ruanda",
+    "República de Rwanda",
+    "RW",
+    "Repubulika y'u Rwanda",
+    "République du Rwanda"
+   ],
+   "continent": "africa",
+   "capital": "Kigali",
+   "names": [
+    "Kigali"
+   ]
+  },
+  {
+   "code": "kn",
+   "country": "Saint Kitts and Nevis",
+   "countryNames": [
+    "Saint Kitts and Nevis",
+    "Federation of Saint Christopher and Nevis",
+    "San Cristóbal y Nieves",
+    "Federación de San Cristóbal y Nevis",
+    "KN"
+   ],
+   "continent": "americas",
+   "capital": "Basseterre",
+   "names": [
+    "Basseterre"
+   ]
+  },
+  {
+   "code": "lc",
+   "country": "Saint Lucia",
+   "countryNames": [
+    "Saint Lucia",
+    "Santa Lucía",
+    "LC"
+   ],
+   "continent": "americas",
+   "capital": "Castries",
+   "names": [
+    "Castries"
+   ]
+  },
+  {
+   "code": "vc",
+   "country": "Saint Vincent and the Grenadines",
+   "countryNames": [
+    "Saint Vincent and the Grenadines",
+    "San Vicente y Granadinas",
+    "San Vicente y las Granadinas",
+    "VC"
+   ],
+   "continent": "americas",
+   "capital": "Kingstown",
+   "names": [
+    "Kingstown"
+   ]
+  },
+  {
+   "code": "ws",
+   "country": "Samoa",
+   "countryNames": [
+    "Samoa",
+    "Independent State of Samoa",
+    "Estado Independiente de Samoa",
+    "WS",
+    "Malo Saʻoloto Tutoʻatasi o Sāmoa"
+   ],
+   "continent": "oceania",
+   "capital": "Apia",
+   "names": [
+    "Apia"
+   ]
+  },
+  {
+   "code": "sm",
+   "country": "San Marino",
+   "countryNames": [
+    "San Marino",
+    "Most Serene Republic of San Marino",
+    "Serenísima República de San Marino",
+    "SM",
+    "Republic of San Marino",
+    "Repubblica di San Marino"
+   ],
+   "continent": "europe",
+   "capital": "San Marino",
+   "names": [
+    "San Marino"
+   ]
+  },
+  {
+   "code": "sa",
+   "country": "Saudi Arabia",
+   "countryNames": [
+    "Saudi Arabia",
+    "Kingdom of Saudi Arabia",
+    "Arabia Saudí",
+    "Reino de Arabia Saudita",
+    "Saudi",
+    "SA",
+    "Al-Mamlakah al-‘Arabiyyah as-Su‘ūdiyyah"
+   ],
+   "continent": "asia",
+   "capital": "Riyadh",
+   "names": [
+    "Riyadh",
+    "Riad"
+   ]
+  },
+  {
+   "code": "sn",
+   "country": "Senegal",
+   "countryNames": [
+    "Senegal",
+    "Republic of Senegal",
+    "República de Senegal",
+    "SN",
+    "République du Sénégal"
+   ],
+   "continent": "africa",
+   "capital": "Dakar",
+   "names": [
+    "Dakar"
+   ]
+  },
+  {
+   "code": "rs",
+   "country": "Serbia",
+   "countryNames": [
+    "Serbia",
+    "Republic of Serbia",
+    "República de Serbia",
+    "RS",
+    "Srbija",
+    "Republika Srbija"
+   ],
+   "continent": "europe",
+   "capital": "Belgrade",
+   "names": [
+    "Belgrade",
+    "Belgrado"
+   ]
+  },
+  {
+   "code": "sc",
+   "country": "Seychelles",
+   "countryNames": [
+    "Seychelles",
+    "Republic of Seychelles",
+    "República de las Seychelles",
+    "SC",
+    "Repiblik Sesel",
+    "République des Seychelles"
+   ],
+   "continent": "africa",
+   "capital": "Victoria",
+   "names": [
+    "Victoria"
+   ]
+  },
+  {
+   "code": "sl",
+   "country": "Sierra Leone",
+   "countryNames": [
+    "Sierra Leone",
+    "Republic of Sierra Leone",
+    "República de Sierra Leona",
+    "SL"
+   ],
+   "continent": "africa",
+   "capital": "Freetown",
+   "names": [
+    "Freetown"
+   ]
+  },
+  {
+   "code": "sg",
+   "country": "Singapore",
+   "countryNames": [
+    "Singapore",
+    "Republic of Singapore",
+    "Singapur",
+    "República de Singapur",
+    "SG",
+    "Singapura",
+    "Republik Singapura"
+   ],
+   "continent": "asia",
+   "capital": "Singapore",
+   "names": [
+    "Singapore",
+    "Singapur"
+   ]
+  },
+  {
+   "code": "sk",
+   "country": "Slovakia",
+   "countryNames": [
+    "Slovakia",
+    "Slovak Republic",
+    "Eslovaquia",
+    "República Eslovaca",
+    "SK",
+    "Slovenská republika"
+   ],
+   "continent": "europe",
+   "capital": "Bratislava",
+   "names": [
+    "Bratislava"
+   ]
+  },
+  {
+   "code": "si",
+   "country": "Slovenia",
+   "countryNames": [
+    "Slovenia",
+    "Republic of Slovenia",
+    "Eslovenia",
+    "República de Eslovenia",
+    "SI",
+    "Republika Slovenija"
+   ],
+   "continent": "europe",
+   "capital": "Ljubljana",
+   "names": [
+    "Ljubljana",
+    "Liubliana"
+   ]
+  },
+  {
+   "code": "sb",
+   "country": "Solomon Islands",
+   "countryNames": [
+    "Solomon Islands",
+    "Islas Salomón",
+    "SB"
+   ],
+   "continent": "oceania",
+   "capital": "Honiara",
+   "names": [
+    "Honiara"
+   ]
+  },
+  {
+   "code": "so",
+   "country": "Somalia",
+   "countryNames": [
+    "Somalia",
+    "Federal Republic of Somalia",
+    "República Federal de Somalia",
+    "SO",
+    "aṣ-Ṣūmāl",
+    "Jamhuuriyadda Federaalka Soomaaliya",
+    "Jumhūriyyat aṣ-Ṣūmāl al-Fiderāliyya"
+   ],
+   "continent": "africa",
+   "capital": "Mogadishu",
+   "names": [
+    "Mogadishu",
+    "Mogadiscio"
+   ]
+  },
+  {
+   "code": "za",
+   "country": "South Africa",
+   "countryNames": [
+    "South Africa",
+    "Republic of South Africa",
+    "Sudáfrica",
+    "República de Sudáfrica",
+    "ZA",
+    "RSA",
+    "Suid-Afrika"
+   ],
+   "continent": "africa",
+   "capital": "Pretoria",
+   "names": [
+    "Pretoria",
+    "Cape Town",
+    "Bloemfontein",
+    "Ciudad del Cabo"
+   ]
+  },
+  {
+   "code": "kr",
+   "country": "South Korea",
+   "countryNames": [
+    "South Korea",
+    "Republic of Korea",
+    "Corea del Sur",
+    "República de Corea",
+    "KR",
+    "Korea, Republic of"
+   ],
+   "continent": "asia",
+   "capital": "Seoul",
+   "names": [
+    "Seoul",
+    "Seúl"
+   ]
+  },
+  {
+   "code": "ss",
+   "country": "South Sudan",
+   "countryNames": [
+    "South Sudan",
+    "Republic of South Sudan",
+    "Sudán del Sur",
+    "República de Sudán del Sur",
+    "SS"
+   ],
+   "continent": "africa",
+   "capital": "Juba",
+   "names": [
+    "Juba",
+    "Yuba"
+   ]
+  },
+  {
+   "code": "es",
+   "country": "Spain",
+   "countryNames": [
+    "Spain",
+    "Kingdom of Spain",
+    "España",
+    "Reino de España",
+    "ES"
+   ],
+   "continent": "europe",
+   "capital": "Madrid",
+   "names": [
+    "Madrid"
+   ]
+  },
+  {
+   "code": "lk",
+   "country": "Sri Lanka",
+   "countryNames": [
+    "Sri Lanka",
+    "Democratic Socialist Republic of Sri Lanka",
+    "República Democrática Socialista de Sri Lanka",
+    "LK",
+    "ilaṅkai"
+   ],
+   "continent": "asia",
+   "capital": "Colombo",
+   "names": [
+    "Colombo",
+    "Sri Jayawardenepura Kotte",
+    "Sri Jayawardenapura Kotte"
+   ]
+  },
+  {
+   "code": "sd",
+   "country": "Sudan",
+   "countryNames": [
+    "Sudan",
+    "Republic of the Sudan",
+    "República de Sudán",
+    "SD",
+    "Jumhūrīyat as-Sūdān"
+   ],
+   "continent": "africa",
+   "capital": "Khartoum",
+   "names": [
+    "Khartoum",
+    "Jartum"
+   ]
+  },
+  {
+   "code": "sr",
+   "country": "Suriname",
+   "countryNames": [
+    "Suriname",
+    "Republic of Suriname",
+    "Surinam",
+    "República de Suriname",
+    "SR",
+    "Sarnam",
+    "Sranangron",
+    "Republiek Suriname"
+   ],
+   "continent": "americas",
+   "capital": "Paramaribo",
+   "names": [
+    "Paramaribo"
+   ]
+  },
+  {
+   "code": "se",
+   "country": "Sweden",
+   "countryNames": [
+    "Sweden",
+    "Kingdom of Sweden",
+    "Suecia",
+    "Reino de Suecia",
+    "SE",
+    "Konungariket Sverige"
+   ],
+   "continent": "europe",
+   "capital": "Stockholm",
+   "names": [
+    "Stockholm",
+    "Estocolmo"
+   ]
+  },
+  {
+   "code": "ch",
+   "country": "Switzerland",
+   "countryNames": [
+    "Switzerland",
+    "Swiss Confederation",
+    "Suiza",
+    "Confederación Suiza",
+    "CH",
+    "Schweiz",
+    "Suisse",
+    "Svizzera",
+    "Svizra"
+   ],
+   "continent": "europe",
+   "capital": "Bern",
+   "names": [
+    "Bern",
+    "Berna",
+    "Berne"
+   ]
+  },
+  {
+   "code": "sy",
+   "country": "Syria",
+   "countryNames": [
+    "Syria",
+    "Syrian Arab Republic",
+    "Siria",
+    "República Árabe Siria",
+    "SY",
+    "Al-Jumhūrīyah Al-ʻArabīyah As-Sūrīyah"
+   ],
+   "continent": "asia",
+   "capital": "Damascus",
+   "names": [
+    "Damascus",
+    "Damasco"
+   ]
+  },
+  {
+   "code": "st",
+   "country": "São Tomé and Príncipe",
+   "countryNames": [
+    "São Tomé and Príncipe",
+    "Democratic Republic of São Tomé and Príncipe",
+    "Santo Tomé y Príncipe",
+    "República Democrática de Santo Tomé y Príncipe",
+    "ST",
+    "República Democrática de São Tomé e Príncipe"
+   ],
+   "continent": "africa",
+   "capital": "São Tomé",
+   "names": [
+    "São Tomé",
+    "Santo Tomé"
+   ]
+  },
+  {
+   "code": "tw",
+   "country": "Taiwan",
+   "countryNames": [
+    "Taiwan",
+    "Republic of China (Taiwan)",
+    "República de China en Taiwán",
+    "TW",
+    "Republic of China",
+    "Zhōnghuá Mínguó",
+    "Chinese Taipei"
+   ],
+   "continent": "asia",
+   "capital": "Taipei",
+   "names": [
+    "Taipei"
+   ]
+  },
+  {
+   "code": "tj",
+   "country": "Tajikistan",
+   "countryNames": [
+    "Tajikistan",
+    "Republic of Tajikistan",
+    "Tayikistán",
+    "República de Tayikistán",
+    "TJ",
+    "Toçikiston",
+    "Çumhuriyi Toçikiston"
+   ],
+   "continent": "asia",
+   "capital": "Dushanbe",
+   "names": [
+    "Dushanbe",
+    "Dusambé"
+   ]
+  },
+  {
+   "code": "tz",
+   "country": "Tanzania",
+   "countryNames": [
+    "Tanzania",
+    "United Republic of Tanzania",
+    "República Unida de Tanzania",
+    "TZ",
+    "Tanzania, United Republic of",
+    "Jamhuri ya Muungano wa Tanzania"
+   ],
+   "continent": "africa",
+   "capital": "Dodoma",
+   "names": [
+    "Dodoma",
+    "Dar es Salaam"
+   ]
+  },
+  {
+   "code": "th",
+   "country": "Thailand",
+   "countryNames": [
+    "Thailand",
+    "Kingdom of Thailand",
+    "Tailandia",
+    "Reino de Tailandia",
+    "TH",
+    "Prathet",
+    "Thai",
+    "Ratcha Anachak Thai"
+   ],
+   "continent": "asia",
+   "capital": "Bangkok",
+   "names": [
+    "Bangkok"
+   ]
+  },
+  {
+   "code": "tl",
+   "country": "Timor-Leste",
+   "countryNames": [
+    "Timor-Leste",
+    "Democratic Republic of Timor-Leste",
+    "Timor Oriental",
+    "República Democrática de Timor-Leste",
+    "TL",
+    "East Timor",
+    "Timor",
+    "Repúblika Demokrátika Timór-Leste",
+    "Timór Lorosa'e",
+    "Timor Lorosae"
+   ],
+   "continent": "asia",
+   "capital": "Dili",
+   "names": [
+    "Dili"
+   ]
+  },
+  {
+   "code": "tg",
+   "country": "Togo",
+   "countryNames": [
+    "Togo",
+    "Togolese Republic",
+    "República de Togo",
+    "TG",
+    "Togolese",
+    "République Togolaise"
+   ],
+   "continent": "africa",
+   "capital": "Lomé",
+   "names": [
+    "Lomé"
+   ]
+  },
+  {
+   "code": "to",
+   "country": "Tonga",
+   "countryNames": [
+    "Tonga",
+    "Kingdom of Tonga",
+    "Reino de Tonga",
+    "TO"
+   ],
+   "continent": "oceania",
+   "capital": "Nukuʻalofa",
+   "names": [
+    "Nukuʻalofa",
+    "Nukualofa"
+   ]
+  },
+  {
+   "code": "tt",
+   "country": "Trinidad and Tobago",
+   "countryNames": [
+    "Trinidad and Tobago",
+    "Republic of Trinidad and Tobago",
+    "Trinidad y Tobago",
+    "República de Trinidad y Tobago",
+    "TT"
+   ],
+   "continent": "americas",
+   "capital": "Port of Spain",
+   "names": [
+    "Port of Spain",
+    "Puerto España"
+   ]
+  },
+  {
+   "code": "tn",
+   "country": "Tunisia",
+   "countryNames": [
+    "Tunisia",
+    "Tunisian Republic",
+    "Túnez",
+    "República de Túnez",
+    "TN",
+    "Republic of Tunisia",
+    "al-Jumhūriyyah at-Tūnisiyyah"
+   ],
+   "continent": "africa",
+   "capital": "Tunis",
+   "names": [
+    "Tunis",
+    "Túnez"
+   ]
+  },
+  {
+   "code": "tm",
+   "country": "Turkmenistan",
+   "countryNames": [
+    "Turkmenistan",
+    "TM"
+   ],
+   "continent": "asia",
+   "capital": "Ashgabat",
+   "names": [
+    "Ashgabat",
+    "Asjabad"
+   ]
+  },
+  {
+   "code": "tr",
+   "country": "Türkiye",
+   "countryNames": [
+    "Türkiye",
+    "Republic of Türkiye",
+    "Turquía",
+    "República de Turquía",
+    "TR",
+    "Republic of Turkey",
+    "Türkiye Cumhuriyeti"
+   ],
+   "continent": "asia",
+   "capital": "Ankara",
+   "names": [
+    "Ankara"
+   ]
+  },
+  {
+   "code": "ug",
+   "country": "Uganda",
+   "countryNames": [
+    "Uganda",
+    "Republic of Uganda",
+    "República de Uganda",
+    "UG",
+    "Jamhuri ya Uganda"
+   ],
+   "continent": "africa",
+   "capital": "Kampala",
+   "names": [
+    "Kampala"
+   ]
+  },
+  {
+   "code": "ua",
+   "country": "Ukraine",
+   "countryNames": [
+    "Ukraine",
+    "Ucrania",
+    "UA",
+    "Ukrayina"
+   ],
+   "continent": "europe",
+   "capital": "Kyiv",
+   "names": [
+    "Kyiv",
+    "Kiev"
+   ]
+  },
+  {
+   "code": "ae",
+   "country": "United Arab Emirates",
+   "countryNames": [
+    "United Arab Emirates",
+    "Emiratos Árabes Unidos",
+    "AE",
+    "UAE",
+    "Emirates"
+   ],
+   "continent": "asia",
+   "capital": "Abu Dhabi",
+   "names": [
+    "Abu Dhabi"
+   ]
+  },
+  {
+   "code": "gb",
+   "country": "United Kingdom",
+   "countryNames": [
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "Reino Unido",
+    "Reino Unido de Gran Bretaña e Irlanda del Norte",
+    "GB",
+    "UK",
+    "Great Britain"
+   ],
+   "continent": "europe",
+   "capital": "London",
+   "names": [
+    "London",
+    "Londres"
+   ]
+  },
+  {
+   "code": "us",
+   "country": "United States",
+   "countryNames": [
+    "United States",
+    "United States of America",
+    "Estados Unidos",
+    "Estados Unidos de América",
+    "US",
+    "USA"
+   ],
+   "continent": "americas",
+   "capital": "Washington, D.C.",
+   "names": [
+    "Washington, D.C.",
+    "Washington DC",
+    "Washington"
+   ]
+  },
+  {
+   "code": "uy",
+   "country": "Uruguay",
+   "countryNames": [
+    "Uruguay",
+    "Oriental Republic of Uruguay",
+    "República Oriental del Uruguay",
+    "UY"
+   ],
+   "continent": "americas",
+   "capital": "Montevideo",
+   "names": [
+    "Montevideo"
+   ]
+  },
+  {
+   "code": "uz",
+   "country": "Uzbekistan",
+   "countryNames": [
+    "Uzbekistan",
+    "Republic of Uzbekistan",
+    "República de Uzbekistán",
+    "UZ",
+    "O‘zbekiston Respublikasi"
+   ],
+   "continent": "asia",
+   "capital": "Tashkent",
+   "names": [
+    "Tashkent",
+    "Taskent"
+   ]
+  },
+  {
+   "code": "vu",
+   "country": "Vanuatu",
+   "countryNames": [
+    "Vanuatu",
+    "Republic of Vanuatu",
+    "República de Vanuatu",
+    "VU",
+    "Ripablik blong Vanuatu",
+    "République de Vanuatu"
+   ],
+   "continent": "oceania",
+   "capital": "Port Vila",
+   "names": [
+    "Port Vila"
+   ]
+  },
+  {
+   "code": "va",
+   "country": "Vatican City",
+   "countryNames": [
+    "Vatican City",
+    "Vatican City State",
+    "Ciudad del Vaticano",
+    "VA",
+    "Holy See (Vatican City State)",
+    "Vatican",
+    "Stato della Città del Vaticano"
+   ],
+   "continent": "europe",
+   "capital": "Vatican City",
+   "names": [
+    "Vatican City",
+    "Ciudad del Vaticano"
+   ]
+  },
+  {
+   "code": "ve",
+   "country": "Venezuela",
+   "countryNames": [
+    "Venezuela",
+    "Bolivarian Republic of Venezuela",
+    "República Bolivariana de Venezuela",
+    "VE",
+    "Venezuela, Bolivarian Republic of"
+   ],
+   "continent": "americas",
+   "capital": "Caracas",
+   "names": [
+    "Caracas"
+   ]
+  },
+  {
+   "code": "vn",
+   "country": "Vietnam",
+   "countryNames": [
+    "Vietnam",
+    "Socialist Republic of Vietnam",
+    "República Socialista de Vietnam",
+    "VN",
+    "Cộng hòa Xã hội chủ nghĩa Việt Nam",
+    "Viet Nam"
+   ],
+   "continent": "asia",
+   "capital": "Hanoi",
+   "names": [
+    "Hanoi"
+   ]
+  },
+  {
+   "code": "ye",
+   "country": "Yemen",
+   "countryNames": [
+    "Yemen",
+    "Republic of Yemen",
+    "República de Yemen",
+    "YE",
+    "Yemeni Republic",
+    "al-Jumhūriyyah al-Yamaniyyah"
+   ],
+   "continent": "asia",
+   "capital": "Sanaa",
+   "names": [
+    "Sanaa",
+    "Aden",
+    "Saná"
+   ]
+  },
+  {
+   "code": "zm",
+   "country": "Zambia",
+   "countryNames": [
+    "Zambia",
+    "Republic of Zambia",
+    "República de Zambia",
+    "ZM"
+   ],
+   "continent": "africa",
+   "capital": "Lusaka",
+   "names": [
+    "Lusaka"
+   ]
+  },
+  {
+   "code": "zw",
+   "country": "Zimbabwe",
+   "countryNames": [
+    "Zimbabwe",
+    "Republic of Zimbabwe",
+    "Zimbabue",
+    "República de Zimbabue",
+    "ZW"
+   ],
+   "continent": "africa",
+   "capital": "Harare",
+   "names": [
+    "Harare"
+   ]
+  }
+ ]
+}

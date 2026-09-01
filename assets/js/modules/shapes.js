@@ -13,6 +13,8 @@
  * are a single silhouette that would otherwise be black on a black page.
  */
 
+import { judgeTyped } from './fuzzy.js';
+
 const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => (
   { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]
 ));
@@ -84,6 +86,27 @@ export function matchesCountry(typed, country) {
   const got = normaliseName(typed);
   if (!got) return false;
   return (country.names || [country.name]).some((n) => normaliseName(n) === got);
+}
+
+/**
+ * Judge a typed country name, forgiving a spelling slip.
+ *
+ * Country names collide far more than capitals do: 23 pairs of DIFFERENT
+ * countries sit within typo tolerance of each other here, against four for
+ * capitals. Iceland and Ireland are one edit apart, so are Gambia and Zambia
+ * and Guyana and Guiana; North Korea and South Korea are two. Every one of them
+ * is refused rather than guessed at, by the safety rule in modules/fuzzy.js: a
+ * child who types "Iseland" has not shown which country they meant.
+ */
+export function judge(typed, country, data) {
+  return judgeTyped({
+    typed,
+    normalise: normaliseName,
+    target: { id: country.code, names: country.names || [country.name] },
+    all: (data.countries || []).map((c) => ({
+      id: c.code, names: c.names || [c.name], name: c.name, code: c.code
+    }))
+  });
 }
 
 /** Which country a typed answer names, if any. Used to say "that is Chad". */

@@ -2800,3 +2800,7 @@ button, a, label, summary, [role="button"] {
   text-align: center;
 }
 .cz-parentlink .gp-btn__label { white-space: normal; }
+
+/* A near miss: right answer, wrong spelling. Green like a pass, because it is
+   one, with the correct spelling doing the teaching. */
+.gp-flagq__say.is-nearly { color: var(--gp-good); }
