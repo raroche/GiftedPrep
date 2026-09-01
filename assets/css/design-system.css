@@ -864,10 +864,13 @@ button, a, label, summary, [role="button"] {
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
+/* The lede sits under the page title. It used to carry a negative top margin,
+   which pulled it up hard against the heading: measured at -8px, so the two
+   boxes actually overlapped. A real gap instead. */
 .gp-page-lede {
   color: var(--gp-ink-soft);
   max-width: 62ch;
-  margin-top: calc(var(--gp-space-4) * -0.5);
+  margin-top: var(--gp-space-3);
 }
 
 .gp-grade-note { margin-top: var(--gp-space-4); }
