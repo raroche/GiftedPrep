@@ -17,12 +17,15 @@
     <g transform="rotate(20 19 19)"><circle cx="19" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/></g>
     <g transform="rotate(-20 45 19)"><circle cx="45" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/></g>
 
-    <!-- Shut eyes are drawn as arcs curving down, not as flattened circles.
-         A flat circle is a straight line, which reads as a robot; a downward
-         arc reads as a sleeping animal. -->
-    <g fill="none" stroke="#2B2926" stroke-width="3.6" stroke-linecap="round">
-      <path d="M13.5 24.5 Q21.5 33 29.5 24.5"/>
-      <path d="M34.5 24.5 Q42.5 33 50.5 24.5"/>
+    <!-- Shut eyes are an arc curving down inside the white disc, not a
+         flattened circle: a flat circle is a straight line, which reads as a
+         robot. The disc stays because dark ink is only legible on it; on a
+         dark page the arcs alone disappear. -->
+    <circle cx="21.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>
+    <circle cx="42.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>
+    <g fill="none" stroke="#2B2926" stroke-width="3.2" stroke-linecap="round">
+      <path d="M15 25 Q21.5 31.5 28 25"/>
+      <path d="M36 25 Q42.5 31.5 49 25"/>
     </g>
   </g>
 

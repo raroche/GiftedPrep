@@ -23,6 +23,7 @@
     12. Parent guide: prose, callouts, timeline, accordion
     13. Figures (inline SVG from figures.js)
     14. Motion, reduced motion, print
+    15. The mascot (inline SVG from mascot.js)
 
    CLASS INVENTORY (so HTML can be wired without guessing)
      shell      .gp-app .gp-main .gp-screen[.is-active] .gp-container
@@ -57,6 +58,11 @@
                 .gp-timeline .gp-timeline__item .gp-timeline__day
                 .gp-timeline__body
                 .gp-accordion .gp-accordion__trigger .gp-accordion__panel
+     mascot     .cz-mascot[data-mood=idle|curious|happy|oops|think|sleep]
+                .cz-mascot__head .cz-mascot__ear[--l|--r]
+                .cz-mascot__eye[--l|--r] .cz-mascot__pupils
+                .cz-mascot__eyes[--open|--happy|--sleep]
+                .cz-mascot__fx .cz-mascot__spark .cz-mascot__dot .cz-mascot__z
      figures    .gp-fig
      utilities  .gp-sr-only .gp-stack .gp-row[.--wrap|.--tools] .gp-hidden
                 .gp-center .gp-muted
@@ -2450,8 +2456,12 @@ button, a, label, summary, [role="button"] {
   border-radius: var(--gp-radius-xl);
   padding: var(--gp-space-8) var(--gp-space-6);
   display: grid;
-  gap: var(--gp-space-3);
+  /* Words, then the mascot leaning on the right-hand edge. */
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--gp-space-6);
 }
+.cz-welcome__text { display: grid; gap: var(--gp-space-3); }
 .cz-welcome__eyebrow {
   font-size: var(--gp-text-xs);
   font-weight: 700;
@@ -2524,4 +2534,259 @@ button, a, label, summary, [role="button"] {
   .cz-room, .cz-room__go { transition: none; }
   .cz-room:hover, .cz-room:focus-visible { transform: none; }
   .cz-room:hover .cz-room__go { transform: none; }
+}
+
+/* ==========================================================================
+   15. The mascot (inline SVG from modules/mascot.js)
+   --------------------------------------------------------------------------
+   The logo, animated. Markup comes from modules/mascot.js; the mood is a data
+   attribute on the <svg> and everything below reacts to it.
+
+   Two rules the whole section obeys:
+
+   1. Nothing flashes, buzzes or shakes. This is section 1's promise to a
+      nervous seven year old and it is not suspended because the thing moving
+      is cute. Rotations stay under fifteen degrees, the hop is eight units,
+      and the only fast movement in the set is a blink, which is fast in life
+      too.
+   2. A held pose is a transition, a repeating one is an animation. Mixing them
+      on the same property means the animation wins while it runs and the
+      element snaps when it is removed, so each mood uses one or the other.
+
+   The reduced-motion block in section 14 already collapses every animation
+   here to nothing, and each keyframe is written so that its 0% frame is the
+   resting pose. That is why "reduced motion" leaves a still, correct mascot
+   rather than a mascot frozen mid-blink.
+   ========================================================================== */
+
+.cz-mascot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* The hop and the sparkles reach above y=0. */
+  overflow: visible;
+}
+
+/* transform-box: view-box makes a px transform-origin mean user units, which
+   is what every origin below is written in. Without it the origins are read
+   against the element's own bounding box and every pivot is wrong. */
+.cz-mascot__head,
+.cz-mascot__pupils,
+.cz-mascot__ear,
+.cz-mascot__eye,
+.cz-mascot__spark,
+.cz-mascot__z path {
+  transform-box: view-box;
+}
+
+/* Low on the face, so a tilt swings the head over the wall rather than
+   spinning it about the bridge of its nose. */
+.cz-mascot__head { transform-origin: 32px 42px; }
+
+/* Each ear pivots at its own base. --dir is +1 on the left and -1 on the
+   right, so one keyframe drives both and they always move in opposite
+   directions; a pair of ears moving together is a head tilt, not a twitch. */
+.cz-mascot__ear--l { transform-origin: 19px 19px; --dir: 1; }
+.cz-mascot__ear--r { transform-origin: 45px 19px; --dir: -1; }
+
+/* A blink is the eye squashed about its own centre. The disc carries
+   vector-effect="non-scaling-stroke", so a shut eye is a clean 2.6 line and
+   not a flattened lens. */
+.cz-mascot__eye--l { transform-origin: 21.5px 27px; }
+.cz-mascot__eye--r { transform-origin: 42.5px 27px; }
+
+.cz-mascot__head,
+.cz-mascot__pupils,
+.cz-mascot__ear { transition: transform var(--gp-dur-slow) var(--gp-ease); }
+
+/* Three sets of eyes live in the markup at once and the mood cross-fades
+   between them. Bending a round eye into a smile reads as a wince.
+
+   What cross-fades is the CONTENTS of the eye, never the white disc. Dark ink
+   is only legible on that disc: on the page itself it disappears in dark mode,
+   and on the Deep welcome panel it disappears in both. */
+.cz-mascot__eyes,
+.cz-mascot__pupils { transition: opacity var(--gp-dur-mid) var(--gp-ease); }
+.cz-mascot__eyes--open  { opacity: 1; }
+.cz-mascot__eyes--happy,
+.cz-mascot__eyes--sleep { opacity: 0; }
+
+/* Sparkles, dots and z are silent until a mood asks for them. */
+.cz-mascot__spark,
+.cz-mascot__dot,
+.cz-mascot__z path { opacity: 0; }
+
+/* --- keyframes ------------------------------------------------------- */
+
+@keyframes cz-breathe {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(1.4px); }
+}
+
+/* Two blinks close together and then a long pause, which is how eyes
+   actually behave. Evenly spaced single blinks read as a metronome. */
+@keyframes cz-blink {
+  0%, 84%   { transform: scaleY(1); }
+  86%       { transform: scaleY(0.07); }
+  88%       { transform: scaleY(1); }
+  90%       { transform: scaleY(0.07); }
+  92%, 100% { transform: scaleY(1); }
+}
+
+@keyframes cz-tilt {
+  0%, 4%    { transform: rotate(0deg); }
+  12%, 30%  { transform: rotate(-6deg); }
+  42%       { transform: rotate(0deg); }
+  55%, 75%  { transform: rotate(5deg); }
+  86%, 100% { transform: rotate(0deg); }
+}
+
+/* Snap and stare, snap and stare. A pupil that slides continuously wobbles;
+   one that arrives and holds looks like it is reading something. */
+@keyframes cz-glance {
+  0%, 6%    { transform: translate(0, 0); }
+  28%       { transform: translate(-4.2px, 1.4px); }
+  34%, 50%  { transform: translate(-2px, -2.6px); }
+  60%, 80%  { transform: translate(4.6px, 1.2px); }
+  88%, 100% { transform: translate(0, 0); }
+}
+
+@keyframes cz-twitch {
+  0%, 44%, 56%, 100% { transform: rotate(0deg); }
+  47% { transform: rotate(calc(var(--dir) * -11deg)); }
+  50% { transform: rotate(calc(var(--dir) * 8deg)); }
+  53% { transform: rotate(calc(var(--dir) * -4deg)); }
+}
+
+/* Crouch, leap, hang, land, squash, rest. Take out the crouch and the squash
+   and it stops being a jump and becomes a lift in a shaft. */
+@keyframes cz-hop {
+  0%        { transform: translateY(0); }
+  8%        { transform: translateY(2px); }
+  14%, 30%  { transform: translateY(-8.5px); }
+  44%       { transform: translateY(0); }
+  50%       { transform: translateY(1.6px); }
+  56%, 100% { transform: translateY(0); }
+}
+
+@keyframes cz-earflap {
+  0%             { transform: rotate(0deg); }
+  8%             { transform: rotate(calc(var(--dir) * 6deg)); }
+  16%, 30%       { transform: rotate(calc(var(--dir) * -14deg)); }
+  46%            { transform: rotate(calc(var(--dir) * 9deg)); }
+  54%            { transform: rotate(calc(var(--dir) * -4deg)); }
+  62%, 100%      { transform: rotate(0deg); }
+}
+
+/* --x and --y carry each sparkle's position, so one keyframe serves all
+   three. They have to be repeated inside every frame because a transform is
+   replaced wholesale, not merged. */
+@keyframes cz-spark {
+  0%, 12%   { transform: translate(var(--x), var(--y)) scale(0);    opacity: 0; }
+  30%       { transform: translate(var(--x), var(--y)) scale(1.15); opacity: 1; }
+  55%, 100% { transform: translate(var(--x), var(--y)) scale(0);    opacity: 0; }
+}
+
+@keyframes cz-dot {
+  0%, 100% { opacity: 0.15; }
+  20%, 45% { opacity: 1; }
+}
+
+@keyframes cz-drift {
+  0%        { transform: translate(0, 0);        opacity: 0; }
+  15%       { transform: translate(1px, -3px);   opacity: 1; }
+  75%       { transform: translate(5px, -16px);  opacity: 1; }
+  100%      { transform: translate(7px, -22px);  opacity: 0; }
+}
+
+/* --- moods ------------------------------------------------------------ */
+
+/* idle: the resting state. A breath and a blink, nothing else, so it can sit
+   in the top bar beside a question without ever pulling a child off it. */
+.cz-mascot[data-mood="idle"] .cz-mascot__head { animation: cz-breathe 6s ease-in-out infinite; }
+.cz-mascot[data-mood="idle"] .cz-mascot__eye  { animation: cz-blink 6s linear infinite; }
+
+/* curious: the signature. The brand is called CurioZoo, so the one thing the
+   mascot has to look like it is doing is noticing. */
+.cz-mascot[data-mood="curious"] .cz-mascot__head   { animation: cz-tilt 8s ease-in-out infinite; }
+.cz-mascot[data-mood="curious"] .cz-mascot__eye    { animation: cz-blink 8s linear infinite; }
+.cz-mascot[data-mood="curious"] .cz-mascot__pupils { animation: cz-glance 8s ease-in-out infinite; }
+.cz-mascot[data-mood="curious"] .cz-mascot__ear    { animation: cz-twitch 8s linear infinite; }
+
+/* happy: after a right answer. Two hops at 900ms, which is why setMood is
+   called with 1800 there; a third hop starts to look like gloating. */
+.cz-mascot[data-mood="happy"] .cz-mascot__head { animation: cz-hop 900ms var(--gp-ease) 2; }
+.cz-mascot[data-mood="happy"] .cz-mascot__ear  { animation: cz-earflap 900ms var(--gp-ease) 2; }
+.cz-mascot[data-mood="happy"] .cz-mascot__pupils      { opacity: 0; }
+.cz-mascot[data-mood="happy"] .cz-mascot__eyes--happy { opacity: 1; }
+.cz-mascot[data-mood="happy"] .cz-mascot__spark { animation: cz-spark 900ms var(--gp-ease) 2; }
+.cz-mascot__spark--1 { --x: 9.5px;  --y: 15px; animation-delay: 0ms; }
+.cz-mascot__spark--2 { --x: 32px;   --y: 5px;  animation-delay: 60ms; }
+.cz-mascot__spark--3 { --x: 54.5px; --y: 15px; animation-delay: 30ms; }
+
+/* oops: after a wrong one. It ducks and looks away, and that is all. It must
+   never look disappointed in the child; the copy already says "here is why",
+   and a sad face on top of that is a telling-off. */
+.cz-mascot[data-mood="oops"] .cz-mascot__head   { transform: translateY(6px); }
+.cz-mascot[data-mood="oops"] .cz-mascot__pupils { transform: translate(-1px, 3.2px); }
+.cz-mascot[data-mood="oops"] .cz-mascot__ear    { transform: rotate(calc(var(--dir) * 16deg)); }
+
+/* think: instead of a spinner. A spinner says nothing is happening. */
+.cz-mascot[data-mood="think"] .cz-mascot__head   { transform: rotate(-3deg); }
+.cz-mascot[data-mood="think"] .cz-mascot__pupils { transform: translate(-3.4px, -3.4px); }
+.cz-mascot[data-mood="think"] .cz-mascot__ear    { transform: rotate(calc(var(--dir) * 14deg)); }
+.cz-mascot[data-mood="think"] .cz-mascot__dot    { animation: cz-dot 1.4s ease-in-out infinite; }
+/* Left to right, so it counts rather than flickers. */
+.cz-mascot__dot--1 { animation-delay: 0ms; }
+.cz-mascot__dot--2 { animation-delay: 160ms; }
+.cz-mascot__dot--3 { animation-delay: 320ms; }
+
+/* sleep: for an app left open. */
+.cz-mascot[data-mood="sleep"] .cz-mascot__head { animation: cz-breathe 4s ease-in-out infinite; }
+.cz-mascot[data-mood="sleep"] .cz-mascot__ear  { transform: rotate(calc(var(--dir) * 20deg)); }
+.cz-mascot[data-mood="sleep"] .cz-mascot__pupils      { opacity: 0; }
+.cz-mascot[data-mood="sleep"] .cz-mascot__eyes--sleep { opacity: 1; }
+.cz-mascot[data-mood="sleep"] .cz-mascot__z path { animation: cz-drift 4s linear infinite; }
+/* Negative delays start the second and third z partway through their own
+   drift, so all three are already spread out on the first frame. */
+.cz-mascot__z1 { animation-delay: 0s; }
+.cz-mascot__z2 { animation-delay: -1.33s; }
+.cz-mascot__z3 { animation-delay: -2.66s; }
+
+/* --- where it is used ------------------------------------------------- */
+
+/* The top bar. Hovering or focusing the brand makes it look up at you, which
+   is the cheapest possible invitation to press it. */
+.gp-brand:hover .cz-mascot[data-mood="idle"] .cz-mascot__pupils,
+.gp-brand:focus-visible .cz-mascot[data-mood="idle"] .cz-mascot__pupils {
+  transform: translate(0, -3px);
+}
+
+/* The welcome panel. Its background is Deep, and the brand orange is not
+   allowed to sit on Deep, so the mascot is recoloured through the variables
+   modules/mascot.js reads. The layout for this lives with the rest of
+   .cz-welcome, further up. */
+.cz-welcome__pet {
+  --cz-mascot-tone: var(--cz-on-deep-accent);
+  --cz-mascot-inner: var(--cz-deep);
+  --cz-mascot-paper: var(--cz-deep);
+  width: 116px;
+  height: 116px;
+  flex: none;
+  align-self: end;
+}
+
+@media (max-width: 560px) {
+  .cz-welcome { grid-template-columns: 1fr; justify-items: start; }
+  .cz-welcome__pet { width: 84px; height: 84px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Section 14 already stops every animation above. What it cannot do is hide
+     the three effects that only make sense in motion: a sparkle that never
+     grows and a z that never drifts are just specks on the mascot's face. */
+  .cz-mascot__spark,
+  .cz-mascot__dot,
+  .cz-mascot__z path { opacity: 0 !important; }
+  .cz-mascot[data-mood="think"] .cz-mascot__dot { opacity: 0.55 !important; }
 }

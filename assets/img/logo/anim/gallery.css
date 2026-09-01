@@ -1,0 +1,39 @@
+/* Only what this page needs on top of the design system. Kept in a file rather
+   than a <style> block because the site ships style-src 'self'. */
+.an-stage {
+  display: grid;
+  justify-items: center;
+  gap: var(--gp-space-5);
+  padding: var(--gp-space-8);
+  border: 2px solid var(--gp-line);
+  border-radius: var(--gp-radius-xl);
+  background: var(--gp-surface-2);
+}
+.an-stage__pet { display: block; width: 190px; height: 190px; }
+.an-stage__controls { display: flex; flex-wrap: wrap; gap: var(--gp-space-2); justify-content: center; }
+
+.an-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--gp-space-4);
+}
+.an-cell {
+  display: grid;
+  justify-items: center;
+  gap: var(--gp-space-2);
+  padding: var(--gp-space-4);
+  border: 2px solid var(--gp-line);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  text-align: center;
+}
+.an-cell__pic { display: block; width: 88px; height: 88px; object-fit: contain; }
+/* The wordmark is 452x104, so it needs the width of the cell, not a square. */
+.an-cell--wide { grid-column: span 2; }
+.an-cell--wide .an-cell__pic { width: 100%; height: 64px; }
+.an-cell__sizes { display: flex; align-items: flex-end; gap: var(--gp-space-3); height: 72px; }
+.an-cell__sizes > * { display: block; }
+.an-cell__s32 { width: 32px; height: 32px; }
+.an-cell__s64 { width: 64px; height: 64px; }
+.an-cell__name { font-weight: 800; font-size: var(--gp-text-sm); }
+.an-cell__note { font-size: var(--gp-text-xs); color: var(--gp-ink-muted); }

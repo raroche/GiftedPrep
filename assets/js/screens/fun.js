@@ -1,7 +1,7 @@
 /**
  * screens/fun.js — the Fun and Games room.
  *
- * The hub, Name the Flag and Name the Country. Round building, distractors and
+ * The hub, Name the Flag and Name the Country Shape. Round building, distractors and
  * typed-answer matching live in modules/flags.js and modules/shapes.js.
  */
 
@@ -19,7 +19,7 @@ import { $, $$, paint, showError, showScreen, state } from './../modules/shell.j
 const FUN_GAMES = [
   { id: 'flags', icon: '🚩', name: 'Name the Flag',
     sub: 'Every flag in the world, and a locked vault of flags that no longer exist.' },
-  { id: 'shapes', icon: '🗺️', name: 'Name the Country',
+  { id: 'shapes', icon: '🗺️', name: 'Name the Country Shape',
     sub: 'Guess the country from its outline. Pick from four, or type it and make it hard.' }
 ];
 

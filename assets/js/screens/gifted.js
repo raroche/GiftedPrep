@@ -13,6 +13,7 @@ import * as speech from './../modules/speech.js';
 import { QuizSession, encouragement, relabel } from './../modules/quiz.js';
 import { renderFigure, describeFigure } from './../modules/figures.js';
 import { icon } from './../modules/icons.js';
+import { setMood } from './../modules/mascot.js';
 import { ring, bars, escapeHtml } from './../modules/charts.js';
 import { ROOMS, roomGrid, creature, roomById } from './../modules/sections.js';
 import { renderTestsExplainer } from './../modules/parents.js';
@@ -453,6 +454,15 @@ function showResult(q, choiceId, correct, { speak = false, review = false } = {}
 
   if (speak) {
     speech.speak([result.correct ? 'That is right.' : 'Not that one.', result.explanation]);
+  }
+
+  /* The mascot in the top bar answers too. Not on a revisited question: the
+     child is reading, not being marked, and a hop there would be noise.
+     'oops' ducks and looks away; it is never a sad face, because the panel
+     underneath already says "here is why" and a disappointed animal on top of
+     that reads as a telling-off. */
+  if (!review) {
+    setMood($('.gp-brand__mark'), result.correct ? 'happy' : 'oops', 1800);
   }
 
   if (!review) {

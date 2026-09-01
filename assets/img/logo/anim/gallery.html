@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<title>CurioZoo mascot — animation gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../../../css/design-system.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body class="gp-app">
+<main class="gp-main">
+  <div class="gp-container gp-stack">
+
+    <div class="cz-welcome">
+      <div class="cz-welcome__text">
+        <p class="cz-welcome__eyebrow">Brand asset &middot; not linked from the site</p>
+        <h1 class="cz-welcome__title">The mascot, moving</h1>
+        <p class="cz-welcome__lede">
+          Every animation in the repository, side by side. Press the mood buttons
+          to drive the live mascot the app uses. The row underneath is the
+          standalone files, which are what you hand to a splash screen or an app
+          store. Switch your system to reduced motion and reload: the live one
+          goes still, the standalone files do not.
+        </p>
+      </div>
+      <span class="cz-welcome__pet" data-mascot="curious" aria-hidden="true"></span>
+    </div>
+
+    <div class="cz-sectionhead">
+      <h2>Live mascot</h2>
+      <p>modules/mascot.js &middot; CSS driven &middot; obeys reduced motion</p>
+    </div>
+
+    <div class="an-stage">
+      <span class="an-stage__pet" id="an-live" data-mascot="idle" aria-hidden="true"></span>
+      <div class="an-stage__controls" id="an-moods"></div>
+    </div>
+
+    <div class="cz-sectionhead">
+      <h2>Every mood, at the size it is used</h2>
+      <p>32px in the top bar, 64px on a card, 116px on the welcome panel</p>
+    </div>
+    <div class="an-grid" id="an-grid"></div>
+
+    <div class="cz-sectionhead">
+      <h2>Every creature blinks</h2>
+      <p>The eight room animals wear the same eyes</p>
+    </div>
+    <div class="an-grid" id="an-zoo"></div>
+
+    <div class="cz-sectionhead">
+      <h2>Standalone files</h2>
+      <p>SMIL &middot; drop into an &lt;img&gt;, a splash screen or a README</p>
+    </div>
+    <div class="an-grid" id="an-files"></div>
+
+  </div>
+</main>
+
+<script type="module" src="gallery.js"></script>
+</body>
+</html>

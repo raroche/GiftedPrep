@@ -37,7 +37,7 @@
       <span data-icon="back"></span>
     </button>
     <a class="gp-brand" href="#/home" aria-label="CurioZoo home">
-      <span class="gp-brand__mark" data-icon="curiozoo" aria-hidden="true"></span>
+      <span class="gp-brand__mark" data-mascot="idle" aria-hidden="true"></span>
       <span class="gp-brand__name">Curio<span class="gp-brand__zoo">Zoo</span></span>
     </a>
   </div>
@@ -82,13 +82,17 @@
     <div class="gp-container gp-stack">
 
       <div class="cz-welcome">
-        <p class="cz-welcome__eyebrow">Free &middot; no sign-up &middot; no ads &middot; nothing to install</p>
-        <h1 class="cz-welcome__title" id="home-title">Pick a room. Come out cleverer.</h1>
-        <p class="cz-welcome__lede">
-          CurioZoo is a place to spend an hour thinking instead of scrolling.
-          Real mathematics, games that are really puzzles, and practice for the
-          tests schools use. Everything explains itself afterwards.
-        </p>
+        <div class="cz-welcome__text">
+          <p class="cz-welcome__eyebrow">Free &middot; no sign-up &middot; no ads &middot; nothing to install</p>
+          <h1 class="cz-welcome__title" id="home-title">Pick a room. Come out cleverer.</h1>
+          <p class="cz-welcome__lede">
+            CurioZoo is a place to spend an hour thinking instead of scrolling.
+            Real mathematics, games that are really puzzles, and practice for the
+            tests schools use. Everything explains itself afterwards.
+          </p>
+        </div>
+        <!-- Filled by modules/mascot.js at boot, the way data-icon is. -->
+        <span class="cz-welcome__pet" data-mascot="curious" aria-hidden="true"></span>
       </div>
 
       <div class="cz-sectionhead">
@@ -384,7 +388,7 @@
   <section class="gp-screen" id="screen-shapesetup" aria-labelledby="shapesetup-title">
     <div class="gp-container">
       <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
-      <h1 class="gp-page-title" id="shapesetup-title">Name the Country</h1>
+      <h1 class="gp-page-title" id="shapesetup-title">Name the Country Shape</h1>
       <p class="gp-page-lede">Every country outline. Choose how many, which ones, and how hard.</p>
       <div class="gp-card gp-card--setup" id="gp-shape-setup"></div>
     </div>

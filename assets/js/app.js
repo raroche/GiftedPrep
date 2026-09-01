@@ -21,6 +21,7 @@ import * as storage from './modules/storage.js';
 import * as speech from './modules/speech.js';
 import { describeFigure } from './modules/figures.js';
 import { icon } from './modules/icons.js';
+import { hydrateMascots, setMood } from './modules/mascot.js';
 import { $, $$, hydrateIcons, showError, showScreen, state } from './modules/shell.js';
 import { answerFlag, answerShapeChoice, answerShapeTyped, answerShapeVault, answerVault, drawFlagQuestion, drawFlagSetup, drawShapeQuestion, drawShapeSetup, renderFun, startFlagRound, startShapeRound } from './screens/fun.js';
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
@@ -365,6 +366,7 @@ function onKeydown(ev) {
 
 async function boot() {
   hydrateIcons();
+  hydrateMascots();
   applyTheme();
   applySpeechButton();
 
@@ -383,6 +385,16 @@ async function boot() {
     { force: true }
   ));
   $('#gp-theme-toggle').addEventListener('click', toggleTheme);
+
+  /* The mascot in the top bar looks up when you reach for the logo and hops
+     when you press it. It is the one piece of the chrome a child is allowed to
+     poke at for no reason, and it costs three lines. */
+  const brand = $('.gp-brand');
+  if (brand) {
+    const mark = brand.querySelector('[data-mascot]');
+    brand.addEventListener('pointerenter', () => setMood(mark, 'curious', 2600));
+    brand.addEventListener('click', () => setMood(mark, 'happy', 1800));
+  }
   $('#gp-lang-toggle').addEventListener('click', toggleGuideLanguage);
   $('#gp-ex-prev').addEventListener('click', () => stepExercise(-1));
   $('#gp-ex-next').addEventListener('click', () => stepExercise(1));

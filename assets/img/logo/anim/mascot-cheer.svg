@@ -11,9 +11,12 @@
        in a shaft; the two extra frames are what make it a jump.
 
        Happy eyes are a second pair of shapes cross-faded in, not the round
-       eyes bent. A bent circle reads as a squint or a wince; an arc that
-       curves upwards is unambiguous at 24 pixels, which is the size this is
-       most often shown at. -->
+       eyes bent: a bent circle reads as a squint or a wince.
+
+       Only the pupils swap. The white disc stays in every mood, because it is
+       the one part of this mascot that is white whatever it is dropped on, and
+       so the only safe thing to draw dark ink on. Replacing the whole eye with
+       a bold arc was more readable and then vanished on any dark page. -->
 
   <g>
     <animateTransform attributeName="transform" attributeType="XML" type="translate"
@@ -38,12 +41,13 @@
       <circle cx="45" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>
     </g>
 
-    <!-- Open eyes: on the ground only. -->
+    <circle cx="21.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>
+    <circle cx="42.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>
+
+    <!-- Pupils: on the ground only. -->
     <g>
       <animate attributeName="opacity" dur="2.6s" repeatCount="indefinite"
         keyTimes="0; 0.09; 0.13; 0.48; 0.54; 1" values="1; 1; 0; 0; 1; 1"/>
-      <circle cx="21.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>
-      <circle cx="42.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>
       <circle cx="24.5" cy="25.5" r="4.6" fill="#2B2926"/>
       <circle cx="45.5" cy="25.5" r="4.6" fill="#2B2926"/>
       <circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF"/>
@@ -51,11 +55,11 @@
     </g>
 
     <!-- Happy eyes: in the air only. -->
-    <g fill="none" stroke="#2B2926" stroke-width="3.6" stroke-linecap="round">
+    <g fill="none" stroke="#2B2926" stroke-width="3.2" stroke-linecap="round">
       <animate attributeName="opacity" dur="2.6s" repeatCount="indefinite"
         keyTimes="0; 0.09; 0.13; 0.48; 0.54; 1" values="0; 0; 1; 1; 0; 0"/>
-      <path d="M13.5 30.5 Q21.5 19 29.5 30.5"/>
-      <path d="M34.5 30.5 Q42.5 19 50.5 30.5"/>
+      <path d="M15 29.5 Q21.5 21 28 29.5"/>
+      <path d="M36 29.5 Q42.5 21 49 29.5"/>
     </g>
   </g>
 
