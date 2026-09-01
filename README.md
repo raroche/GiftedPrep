@@ -437,6 +437,8 @@ GiftedPrep/
     ├── roomcheck.mjs           checks the room registry against CSS and creatures
     ├── archcheck.mjs           checks the import layering and finds cycles
     ├── linkcheck.mjs           follows every internal link to a real route
+    ├── smoke.js                plays every game in a real browser: paste it in
+    │                           the console before shipping a change to a game
     ├── capitalcheck.mjs        checks the capital data and proves the typo
     │                           tolerance never accepts another country's answer
     ├── elementcheck.mjs        proves the periodic table is complete: 1 to 118,

@@ -169,8 +169,7 @@ export function answerFlag(code) {
   });
 
   const say = document.createElement('p');
-  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`
-    + (saidWhat && saidWhat.spelling ? ' is-nearly' : '');
+  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`;
   say.textContent = right
     ? `Yes. That is ${country.name}.`
     : `No, that one is ${country.name}.`;
@@ -320,9 +319,8 @@ function settleShape(right, saidWhat) {
   if (checkBtn) checkBtn.disabled = true;
 
   const say = document.createElement('p');
-  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`;
-  /* Naming another real country is a different kind of wrong from a typo, and
-     saying which one turns a miss into something learned. */
+  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`
+    + (saidWhat && saidWhat.spelling ? ' is-nearly' : '');
   /* Three kinds of outcome, not two. A near-miss is marked right and then
      shown the spelling, because the point is to learn the country and the
      spelling both, and being told "no" over one letter teaches neither. */
