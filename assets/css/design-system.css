@@ -573,7 +573,9 @@ button, a, label, summary, [role="button"] {
   font-weight: 800;
   font-size: var(--gp-text-md);
   letter-spacing: -0.01em;
-  padding: var(--gp-space-2);
+  /* The mark carries its own whitespace, so the wrapper adds almost none: the
+     padding was making a 34px logo sit in a 50px hole. */
+  padding: 2px var(--gp-space-2) 2px 0;
   border-radius: var(--gp-radius-md);
 }
 /* The mark carries its own colours now, so it sits on the bar rather than
@@ -581,10 +583,10 @@ button, a, label, summary, [role="button"] {
 .gp-brand__mark {
   display: grid;
   place-items: center;
-  width: 34px; height: 34px;
+  width: 46px; height: 46px;
   flex: none;
 }
-.gp-brand__mark svg { width: 32px; height: 32px; }
+.gp-brand__mark svg { width: 46px; height: 46px; }
 .gp-brand__name { white-space: nowrap; }
 .gp-brand__zoo { color: var(--gp-accent); }
 

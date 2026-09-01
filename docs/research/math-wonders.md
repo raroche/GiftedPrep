@@ -1,5 +1,10 @@
 # Big Ideas — picking topics that make a child love mathematics
 
+> **Scope note.** Florida's B.E.S.T. benchmarks are used here as one
+> concrete, published set of US grade-level expectations to build and check
+> against. The site itself is not state specific; grade-level maths
+> expectations are close enough across US states for this to hold.
+
 The first eight grade 1 topics are school mathematics done deeper. They are
 useful and they are aligned to Florida's benchmarks, but no child has ever
 fallen in love with place value. This document is the research behind a second

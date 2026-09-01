@@ -6,7 +6,7 @@
 
 **Screen time that makes you think.** A place for curious kids: real
 mathematics, games that are actually puzzles, and practice for the tests
-Florida districts use to screen for gifted programs.
+US school districts use to screen for gifted programs.
 
 no login · no tracking · no ads · nothing sent anywhere
 
@@ -44,14 +44,14 @@ family, and a child recognises the eyes from the top bar.
 |---|---|
 | **Math Lab** | 86 topics and 609 exercises across grades 1–6. Real mathematics — primes, symmetry, graph colouring, the pigeonhole principle — not worksheets |
 | **Fun and games** | Games for memorising. Name the Flag (250 flags) and Name the Country (242 outlines, type the answer in English or Spanish) |
-| **Test Practice** | 1,576 questions in the shapes used by the CogAT, NNAT and OLSAT, grades 1–4 |
+| **GiftedPrep** | 1,576 questions in the shapes used by the CogAT, NNAT and OLSAT, grades 1–4 |
 
 The gifted practice is built for **familiarization, not coaching** — a
 distinction the research takes seriously, and so does this project. See
 [the honest bit](#the-honest-bit-about-test-prep) below.
 
 There is also a [**Parent Guide**](assets/js/modules/parents.js) inside the app:
-what the tests are, what Florida actually requires, how the scores work, and an
+what the tests are, what schools actually require, how the scores work, and an
 evidence-based plan for the week before test day.
 
 ## Quick start
@@ -301,7 +301,7 @@ answer here" and will call `4 + 5 = 6 + 3` wrong. That misconception is well
 documented and is the main obstacle to algebra later. Fixing it at six is free.
 
 Choices behind the number topics are in [`docs/research/math-grade1.md`](docs/research/math-grade1.md),
-including the Florida benchmark each one sits on and where it reaches past it.
+including the grade-level benchmark each one sits on and where it reaches past it.
 
 ## The honest bit about test prep
 
@@ -338,10 +338,18 @@ The question bank is built on primary sources, not on prep-site folklore. The
 notes record every claim's origin, and every place the sources contradict each
 other.
 
+The site is written for families anywhere in the United States. Two of these
+documents survey a single state in depth. That is deliberate and it is labelled:
+identification is set state by state and mostly delegated to districts, so the
+only way to say anything concrete about how it really works is to read one state
+all the way through and then say which parts generalise. The finding that
+carries everywhere is the variation itself — a full standard deviation between
+neighbouring districts' cut scores.
+
 | Document | Covers |
 |---|---|
-| [`florida-gifted.md`](docs/research/florida-gifted.md) | Rule 6A-6.03019, Plan A vs Plan B, and what the district survey shows |
-| [`florida-districts.md`](docs/research/florida-districts.md) | Screener, screening grade, cut score and Plan B criteria for the **20 largest Florida districts** |
+| [`florida-gifted.md`](docs/research/florida-gifted.md) | One state read end to end, as a worked example of how identification actually runs: Rule 6A-6.03019, Plan A vs Plan B, and what a district survey shows |
+| [`florida-districts.md`](docs/research/florida-districts.md) | Screener, screening grade, cut score and alternative-pathway criteria for the **20 largest districts in that state** |
 | [`cogat.md`](docs/research/cogat.md) | Nine subtests, level-to-grade mapping, item counts, timing, SAS scoring, ability profiles |
 | [`nnat-olsat.md`](docs/research/nnat-olsat.md) | NNAT3 item types and palette rules, OLSAT-8 scope and sequence, NAI and SAI scoring |
 | [`difficulty-model.md`](docs/research/difficulty-model.md) | How grade and difficulty are assigned, and the distractor recipe |
@@ -356,9 +364,9 @@ A few corrections to claims that circulate widely and are wrong:
 - The CogAT E-profile threshold is **24** SAS points, not 12.
 - NNAT and OLSAT level-to-grade tables **diverge from Level D**. A shared lookup
   table will be wrong for one of them.
-- Florida screening cut scores range from **107 (Duval) to 122 (Manatee)** — a
-  full standard deviation. There is no single Florida threshold.
-- Florida has **no decimal benchmark at all in grade 3**, and multiplication
+- gifted screening cut scores range from **107 (Duval) to 122 (Manatee)** — a
+  full standard deviation. There is no single state threshold.
+- some states have **no decimal benchmark at all in grade 3**, and multiplication
   facts are memorised in **grade 4**, not grade 3.
 - An **anticlockwise quarter turn is harder than a half turn** for a child.
   Direction beats magnitude.
@@ -505,7 +513,7 @@ tools/build.sh
 
 GiftedPrep is an independent project made by a parent. It is not affiliated
 with, endorsed by, or derived from Riverside Insights (CogAT), Pearson (NNAT,
-OLSAT), the Florida Department of Education, or any school district. CogAT is a
+OLSAT), the any state education department, or any school district. CogAT is a
 trademark of Riverside Assessments, LLC. NNAT and OLSAT are trademarks of NCS
 Pearson, Inc.
 
@@ -518,7 +526,7 @@ Issues and pull requests are welcome, particularly:
 
 - corrections to the research notes, with a source
 - new questions that follow the documented formats
-- district-specific information about Florida screening practice
+- district-specific information about gifted screening practice
 - translations
 
 Please run `node tools/validate.mjs` before opening a pull request.

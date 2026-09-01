@@ -23,7 +23,7 @@ import { describeFigure } from './modules/figures.js';
 import { icon } from './modules/icons.js';
 import { $, $$, hydrateIcons, showError, showScreen, state } from './modules/shell.js';
 import { answerFlag, answerShapeChoice, answerShapeTyped, answerShapeVault, answerVault, drawFlagQuestion, drawFlagSetup, drawShapeQuestion, drawShapeSetup, renderFun, startFlagRound, startShapeRound } from './screens/fun.js';
-import { applySpeechButton, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
+import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
 
@@ -70,6 +70,7 @@ function route() {
       break;
     case 'gifted':
       paintRoomHead('gifted', 'cz-gifted-pic');
+      renderGiftedExplainer();
       renderGradePicker();
       renderCountPicker();
       showScreen('gifted');

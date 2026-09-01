@@ -1,5 +1,12 @@
 # GiftedPrep research notes
 
+> **Scope note.** CurioZoo is written for families anywhere in the United
+> States. Some of these documents read a single state end to end. That is on
+> purpose: gifted identification is set state by state and then delegated to
+> districts, so the only way to say anything concrete is to read one state all
+> the way through and then be explicit about which parts generalise. Where a
+> finding is local, it says so.
+
 Everything in `data/` is built from the findings recorded here. Each file lists
 its sources. Where sources disagree, the disagreement is recorded rather than
 silently resolved.

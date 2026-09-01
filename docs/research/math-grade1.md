@@ -1,5 +1,10 @@
 # Advanced Grade 1 Math — what to teach and why
 
+> **Scope note.** Florida's B.E.S.T. benchmarks are used here as one
+> concrete, published set of US grade-level expectations to build and check
+> against. The site itself is not state specific; grade-level maths
+> expectations are close enough across US states for this to hold.
+
 This is the research behind the Grade 1 Math Lab page. It answers two
 questions: what does a first grader already have to learn in Florida, and what
 does "advanced" mean on top of that without simply handing a six-year-old

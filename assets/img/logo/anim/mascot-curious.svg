@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     role="img" aria-label="The CurioZoo mascot looking around">
+  <title>CurioZoo mascot — curious</title>
+  <desc>The mascot stays up and looks around, tilting its head and twitching its ears. Loops.</desc>
+
+  <!-- The signature idle. The brand is called Curio-zoo, so the one thing the
+       mascot must look like it is doing is noticing. See mascot-peek.svg for
+       why this is SMIL and not CSS, and for the blink technique.
+       One cycle is 8s; every keyTimes below is a fraction of that. -->
+
+  <g>
+    <!-- A head tilt of six degrees, and only towards the side the eyes have
+         already gone. Any more and it reads as a shake, which the design
+         system rules out for a child who may be nervous. -->
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+      dur="8s" repeatCount="indefinite" calcMode="spline"
+      keyTimes="0;  0.10;   0.30;   0.42;  0.55;  0.75;  0.86; 1"
+      values="0 32 40; -6 32 40; -6 32 40; 0 32 40; 5 32 40; 5 32 40; 0 32 40; 0 32 40"
+      keySplines="0.3 0 0.2 1; 0 0 1 1; 0.4 0 0.4 1; 0.3 0 0.2 1; 0 0 1 1; 0.4 0 0.4 1; 0 0 1 1"/>
+
+    <g>
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        dur="8s" repeatCount="indefinite"
+        keyTimes="0; 0.44; 0.47; 0.50; 0.53; 0.56; 1"
+        values="0 19 19; 0 19 19; -11 19 19; 8 19 19; -4 19 19; 0 19 19; 0 19 19"/>
+      <circle cx="19" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        dur="8s" repeatCount="indefinite"
+        keyTimes="0; 0.44; 0.47; 0.50; 0.53; 0.56; 1"
+        values="0 45 19; 0 45 19; 11 45 19; -8 45 19; 4 45 19; 0 45 19; 0 45 19"/>
+      <circle cx="45" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>
+    </g>
+
+    <ellipse cx="21.5" cy="27" rx="11" ry="11" fill="#FFFFFF" stroke="#2B2926"
+             stroke-width="2.6" vector-effect="non-scaling-stroke">
+      <animate attributeName="ry" dur="8s" repeatCount="indefinite"
+        keyTimes="0; 0.36; 0.378; 0.396; 0.90; 0.918; 0.936; 1"
+        values="11; 11; 0.9; 11; 11; 0.9; 11; 11"/>
+    </ellipse>
+    <ellipse cx="42.5" cy="27" rx="11" ry="11" fill="#FFFFFF" stroke="#2B2926"
+             stroke-width="2.6" vector-effect="non-scaling-stroke">
+      <animate attributeName="ry" dur="8s" repeatCount="indefinite"
+        keyTimes="0; 0.36; 0.378; 0.396; 0.90; 0.918; 0.936; 1"
+        values="11; 11; 0.9; 11; 11; 0.9; 11; 11"/>
+    </ellipse>
+
+    <g>
+      <!-- Down-left, up, right, back. Held at each stop: a pupil that slides
+           continuously looks like a wobble, a pupil that snaps and stares
+           looks like it is reading something. -->
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+        dur="8s" repeatCount="indefinite" calcMode="spline"
+        keyTimes="0;  0.06;    0.28;    0.34;    0.50;    0.60;    0.80;    0.88; 1"
+        values="0 0; -4.2 1.4; -4.2 1.4; -2 -2.6; -2 -2.6; 4.6 1.2; 4.6 1.2; 0 0; 0 0"
+        keySplines="0.3 0 0.2 1; 0 0 1 1; 0.3 0 0.2 1; 0 0 1 1; 0.3 0 0.2 1; 0 0 1 1; 0.3 0 0.2 1; 0 0 1 1"/>
+      <ellipse cx="24.5" cy="25.5" rx="4.6" ry="4.6" fill="#2B2926">
+        <animate attributeName="ry" dur="8s" repeatCount="indefinite"
+          keyTimes="0; 0.36; 0.378; 0.396; 0.90; 0.918; 0.936; 1"
+          values="4.6; 4.6; 0.3; 4.6; 4.6; 0.3; 4.6; 4.6"/>
+      </ellipse>
+      <ellipse cx="45.5" cy="25.5" rx="4.6" ry="4.6" fill="#2B2926">
+        <animate attributeName="ry" dur="8s" repeatCount="indefinite"
+          keyTimes="0; 0.36; 0.378; 0.396; 0.90; 0.918; 0.936; 1"
+          values="4.6; 4.6; 0.3; 4.6; 4.6; 0.3; 4.6; 4.6"/>
+      </ellipse>
+      <circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF">
+        <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+          keyTimes="0; 0.36; 0.378; 0.396; 0.90; 0.918; 0.936; 1"
+          values="1; 1; 0; 1; 1; 0; 1; 1"/>
+      </circle>
+      <circle cx="47.3" cy="23.6" r="1.6" fill="#FFFFFF">
+        <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+          keyTimes="0; 0.36; 0.378; 0.396; 0.90; 0.918; 0.936; 1"
+          values="1; 1; 0; 1; 1; 0; 1; 1"/>
+      </circle>
+    </g>
+  </g>
+
+  <rect x="4" y="36" width="56" height="22" rx="9" fill="var(--gp-accent, #BA5828)"/>
+  <path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="var(--gp-bg, #FDFBF7)"
+        stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+</svg>

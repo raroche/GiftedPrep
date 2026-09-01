@@ -39,12 +39,38 @@ const acc = (q, a) => `
 /**
  * @param {object} manifest
  * @param {'en'|'es'} [lang] Spanish is a full translation, not a summary — a
- *        large share of Florida families read Spanish first, and the CogAT
+ *        large share of US families read Spanish first, and the CogAT
  *        itself is read aloud in Spanish at grades 1 and 2.
  */
+/* "What these tests are" is wrapped in <!--#room--> markers inside both guides.
+   It explains the screening tests specifically, so it belongs in the GiftedPrep
+   room where a parent meets those tests, not in a guide that will grow to cover
+   the whole site. Markers rather than heading text, so translating or renaming a
+   heading cannot silently break the split. */
+const OPEN = '<!--#room-->';
+const CLOSE = '<!--/#room-->';
+
+function cut(html) {
+  const a = html.indexOf(OPEN);
+  const b = html.indexOf(CLOSE);
+  if (a === -1 || b === -1 || b < a) return { room: '', rest: html };
+  return {
+    room: html.slice(a + OPEN.length, b).trim(),
+    rest: (html.slice(0, a) + html.slice(b + CLOSE.length)).trim()
+  };
+}
+
+const whole = (manifest, lang) =>
+  (lang === 'es' ? renderParentGuideEs(manifest) : renderParentGuideEn(manifest));
+
+/** The guide, without the part that now lives in the GiftedPrep room. */
 export function renderParentGuide(manifest, lang = 'en') {
-  if (lang === 'es') return renderParentGuideEs(manifest);
-  return renderParentGuideEn(manifest);
+  return cut(whole(manifest, lang)).rest;
+}
+
+/** Just that part, for the GiftedPrep room. */
+export function renderTestsExplainer(manifest, lang = 'en') {
+  return cut(whole(manifest, lang)).room;
 }
 
 function renderParentGuideEn(manifest) {
@@ -84,22 +110,23 @@ ${callout('warn', 'About the score this site shows you',
    one usually means tired or bored. Treat it the way you would treat a score
    in a game.</p>`)}
 
+<!--#room-->
 <h2>What these tests are</h2>
 
 <p>
-  Florida districts screen children for gifted programs with a short group test,
-  and then send the children who clear that gate for a full one-to-one
-  evaluation with a school psychologist. The group test is only a doorway. It is
-  not the test that decides anything.
+  Across the United States, schools screen children for gifted programs with a
+  short group test, and then send the children who clear that gate for a full
+  one-to-one evaluation with a school psychologist. The group test is only a
+  doorway. It is not the test that decides anything.
 </p>
 
 <p>
-  There is no single Florida test. Districts choose their own instrument, and
-  most do not tell parents which one. The three most common across the country
-  are the <strong>CogAT</strong>, the <strong>NNAT</strong> and the
+  There is no national test, and usually no state-wide one either. Districts
+  choose their own instrument and most do not tell parents which. The three most
+  common are the <strong>CogAT</strong>, the <strong>NNAT</strong> and the
   <strong>OLSAT</strong>, and this site covers all three, ${total.toLocaleString()} questions in
-  all. Some Florida districts use something else entirely: Monroe County, for
-  example, screens every second grader with Raven's 2.
+  all. Plenty of districts use something else: Raven's 2, the KBIT-2 or the
+  RIAS-2 all turn up as screeners.
 </p>
 
 <div class="gp-table-scroll">
@@ -116,82 +143,69 @@ ${callout('caution', 'The grade 2 to grade 3 cliff',
    section. A child who found grade 2 easy can find grade 3 genuinely hard, and
    nothing has gone wrong.</p>`)}
 
-<h2>What Florida actually requires</h2>
+<!--/#room-->
+<h2>What schools actually require</h2>
 
 <p>
-  Eligibility is set by State Board of Education Rule 6A-6.03019. Under
-  <strong>Plan A</strong> a child must show all three of the following:
+  Gifted identification in the United States is set by each state, and most
+  states hand the details to the district. There is no national rule and no
+  national cut score. What is close to universal is the shape of it:
 </p>
 
 <ol>
-  <li>A score <strong>two standard deviations above the mean</strong> on an
-      individually administered intelligence test. On a WISC-V that is
-      <strong>130</strong>.</li>
-  <li>A majority of the characteristics of gifted students, on a district
-      checklist covering learning, motivation, creativity and leadership.</li>
-  <li>Evidence of need for a special instructional programme.</li>
+  <li>A <strong>group screener</strong> given to a whole grade, or to children
+      whose teacher or parent refers them.</li>
+  <li>For children who clear the screener, an <strong>individually administered
+      intelligence test</strong> given one-to-one by a school psychologist &mdash;
+      most often the WISC-V, and also the Stanford-Binet 5, the RIAS-2 or the
+      KBIT-2.</li>
+  <li>A <strong>characteristics checklist</strong> covering learning,
+      motivation, creativity and leadership.</li>
+  <li>Evidence that the child <strong>needs</strong> a different programme.</li>
 </ol>
 
 <p>
-  Districts may also run a <strong>Plan B</strong>, filed as Appendix C of their
-  policies and audited by the state. Plan B typically lowers the intellectual
-  bar to about <strong>115</strong> for children who are low income or English
-  learners. Both Collier and Monroe counties have an approved Plan B.
+  The usual intellectual bar is <strong>two standard deviations above the
+  mean</strong>, which on a WISC-V is <strong>130</strong>. Many states also
+  require or permit an alternative pathway with a lower threshold, often around
+  <strong>115</strong>, for children who are low income, who are English
+  learners, or who have a disability. It goes by different names in different
+  states; ask for it by description rather than by name.
 </p>
 
-<h3>What the twenty largest Florida districts actually use</h3>
+${callout('caution', 'The cut score is a local decision, and it varies enormously',
+  `<p>In a survey of the twenty largest districts in one state, the score needed
+   to move past the screener ranged from <strong>107 to 122</strong> &mdash; a
+   full standard deviation. A child referred for full evaluation in one district
+   would have been turned away in the next one over, on the same score.</p>
+   <p>Screening year varied too: most screened in grade 2, one in grade 1. Five
+   of the twenty published no group screener at all, using teacher ratings,
+   existing data, or referral only.</p>`)}
+
+${callout('caution', 'Some districts limit how many times a child may be tested',
+  `<p>This is the rule most likely to catch a family out, and in that same survey
+   it was the only kind of testing rule any district published. Real examples:
+   one instrument allowed <strong>only once in a child's whole K-12 career</strong>;
+   not the same test within twelve months; being screened with one test barring a
+   related test from being used later; referral for evaluation at most once a
+   year.</p>
+   <p>If you are thinking about asking for a re-screen, find out your district's
+   rule first. Where no limit is published, none applies.</p>`)}
 
 <p>
-  Every district's rules are filed with the state, and all twenty of the largest
-  have now been read. The pattern:
-</p>
-
-<ul>
-  <li><strong>The NNAT is the most common screener by far</strong> — nine of the
-      twenty use a Naglieri test. Lee has moved to the newer <strong>NGAT</strong>
-      and Miami-Dade names the <strong>NGAT-NV</strong>, so the Naglieri General
-      Ability Test looks to be replacing the NNAT3 in Florida.</li>
-  <li><strong>Grade 2 is the screening year</strong> in eleven districts.
-      Miami-Dade screens in <strong>grade 1</strong>.</li>
-  <li><strong>The cut score to move on varies by a full standard deviation</strong>,
-      from Duval's <strong>107</strong> to Manatee's <strong>122</strong>. A child
-      referred for full evaluation in Duval would be turned away in Manatee.</li>
-  <li><strong>Five districts publish no group screener at all.</strong>
-      Hillsborough screens from existing data, Marion uses a teacher rating scale,
-      Sarasota screens only on referral, and Pasco publishes nothing.</li>
-  <li><strong>Pasco operates no Plan B</strong>, so families there have no
-      reduced-threshold pathway.</li>
-</ul>
-
-${callout('caution', 'Four districts limit how many times a child may be tested',
-  `<p>This is the one rule that can catch a family out, and it is the only kind
-   of testing rule any Florida district publishes.</p>
-   <ul>
-     <li><strong>St. Johns</strong> — the CogAT and the KBIT-2R may each be taken
-         <strong>only once in a child's whole K-12 career</strong>.</li>
-     <li><strong>Sarasota</strong> — not the same instrument within 12 months, and
-         more than three screenings across a school career is discouraged.</li>
-     <li><strong>Manatee</strong> — being screened with one test can bar a related
-         test from being used for eligibility later.</li>
-     <li><strong>Osceola</strong> — referral for evaluation at most once a year.</li>
-   </ul>
-   <p>If you are in one of these districts, it is worth knowing before you ask for
-   a re-screen. Everywhere else, no attempt limit is published.</p>`)}
-
-<p>
-  <strong>No Florida district in the survey publishes any statement about test
-  preparation at all.</strong> None endorses it, discourages it or forbids it.
-  The attempt limits above are the only published constraints, and they work by
+  <strong>Almost no district publishes any statement about test preparation at
+  all.</strong> None of the twenty in that survey endorsed it, discouraged it or
+  forbade it. Attempt limits were the only published constraint, and they work by
   limiting tries rather than by addressing preparation.
 </p>
 
 ${callout('tip', 'Find out what your own district does',
-  `<p>Every district's rules are public. Search the Florida Department of
-   Education's policies repository at
-   <a href="https://beessgsw.org/#/spp/institution/public/" rel="noopener">beessgsw.org</a>,
-   open your district, and read Part III and Appendix C. Or simply ask the
-   gifted or ESE coordinator at your child's school which screener they use and
-   what the cut score is. Some districts publish it and some do not.</p>`)}
+  `<p>District gifted policies are public records. The fastest route is to ask the
+   gifted or ESE coordinator at your child's school two questions: which screener
+   do you use, and what score moves a child on? Some publish it and some do not.
+   Your state education department's website will have the state rule, and the
+   <a href="https://nagc.org/page/state-of-the-states" rel="noopener">NAGC State
+   of the States</a> report summarises how every state handles identification.</p>`)}
 
 <h2>Does practicing actually help?</h2>
 
@@ -548,7 +562,7 @@ ${acc('What cut score will my district use?', `
   <li><a href="https://journals.sagepub.com/doi/abs/10.1177/0956797615592630" rel="noopener">Maloney et al. (2015), intergenerational effects of parents' math anxiety</a></li>
   <li><a href="https://jcsm.aasm.org/doi/10.5664/jcsm.5866" rel="noopener">AASM sleep duration consensus, endorsed by the AAP</a></li>
   <li><a href="https://www.nagc.org/identification" rel="noopener">NAGC on identification</a></li>
-  <li><a href="https://beessgsw.org/#/spp/institution/public/" rel="noopener">Florida DOE district policies repository</a></li>
+  <li><a href="https://nagc.org/page/state-of-the-states" rel="noopener">NAGC, State of the States in Gifted Education</a></li>
 </ul>
 
 ${callout('info', 'A closing thought',

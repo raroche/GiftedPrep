@@ -1,5 +1,10 @@
 # How GiftedPrep assigns grade and difficulty
 
+> **Scope note.** Florida's B.E.S.T. benchmarks are used here as one
+> concrete, published set of US grade-level expectations to build and check
+> against. The site itself is not state specific; grade-level maths
+> expectations are close enough across US states for this to hold.
+
 Every question carries two independent numbers. `grade` fixes the **content**
 ceiling. `difficulty` fixes how much **reasoning** is held at once. They move
 independently, and that separation is the whole model: a question is never made

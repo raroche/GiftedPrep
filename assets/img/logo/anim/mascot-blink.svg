@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     role="img" aria-label="The CurioZoo mascot">
+  <title>CurioZoo mascot — blink</title>
+  <desc>The mascot breathes and blinks twice. Loops. The quietest of the set, for small sizes.</desc>
+
+  <!-- The one to reach for by default. It is the static mark plus a breath and
+       a blink, and nothing else, so it stays legible down to about 20 pixels
+       and never pulls attention off the question a child is working on.
+       See mascot-peek.svg for why this is SMIL. One cycle is 5s. -->
+
+  <g>
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+      dur="5s" repeatCount="indefinite" calcMode="spline"
+      keyTimes="0; 0.5; 1" values="0 0; 0 1.4; 0 0"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+    <circle cx="19" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>
+    <circle cx="45" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>
+
+    <ellipse cx="21.5" cy="27" rx="11" ry="11" fill="#FFFFFF" stroke="#2B2926"
+             stroke-width="2.6" vector-effect="non-scaling-stroke">
+      <animate attributeName="ry" dur="5s" repeatCount="indefinite"
+        keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1"
+        values="11; 11; 0.9; 11; 0.9; 11; 11"/>
+    </ellipse>
+    <ellipse cx="42.5" cy="27" rx="11" ry="11" fill="#FFFFFF" stroke="#2B2926"
+             stroke-width="2.6" vector-effect="non-scaling-stroke">
+      <animate attributeName="ry" dur="5s" repeatCount="indefinite"
+        keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1"
+        values="11; 11; 0.9; 11; 0.9; 11; 11"/>
+    </ellipse>
+
+    <ellipse cx="24.5" cy="25.5" rx="4.6" ry="4.6" fill="#2B2926">
+      <animate attributeName="ry" dur="5s" repeatCount="indefinite"
+        keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1"
+        values="4.6; 4.6; 0.3; 4.6; 0.3; 4.6; 4.6"/>
+    </ellipse>
+    <ellipse cx="45.5" cy="25.5" rx="4.6" ry="4.6" fill="#2B2926">
+      <animate attributeName="ry" dur="5s" repeatCount="indefinite"
+        keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1"
+        values="4.6; 4.6; 0.3; 4.6; 0.3; 4.6; 4.6"/>
+    </ellipse>
+    <circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF">
+      <animate attributeName="opacity" dur="5s" repeatCount="indefinite"
+        keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1" values="1; 1; 0; 1; 0; 1; 1"/>
+    </circle>
+    <circle cx="47.3" cy="23.6" r="1.6" fill="#FFFFFF">
+      <animate attributeName="opacity" dur="5s" repeatCount="indefinite"
+        keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1" values="1; 1; 0; 1; 0; 1; 1"/>
+    </circle>
+  </g>
+
+  <rect x="4" y="36" width="56" height="22" rx="9" fill="var(--gp-accent, #BA5828)"/>
+  <path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="var(--gp-bg, #FDFBF7)"
+        stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+</svg>

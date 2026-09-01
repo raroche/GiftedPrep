@@ -1,5 +1,5 @@
 /**
- * screens/gifted.js — the Test Practice room.
+ * screens/gifted.js — the GiftedPrep room.
  *
  * Everything that used to be the whole application: the grade and count
  * pickers, the test and category lists, building a session, the question
@@ -15,6 +15,7 @@ import { renderFigure, describeFigure } from './../modules/figures.js';
 import { icon } from './../modules/icons.js';
 import { ring, bars, escapeHtml } from './../modules/charts.js';
 import { ROOMS, roomGrid, creature, roomById } from './../modules/sections.js';
+import { renderTestsExplainer } from './../modules/parents.js';
 import { $, $$, paint, showError, state } from './../modules/shell.js';
 
 /* ------------------------------------------------------------------ */
@@ -52,6 +53,17 @@ const GRADE_NOTES = {
   3: 'Grade 3 is where the real tests change. Words and numbers replace pictures, there are five answers instead of four, and the clock starts.',
   4: 'Grade 4 keeps words and numbers, with more rules running at once in each puzzle.'
 };
+
+/**
+ * The room's own explainer, taken from the Parent Guide's first section. It is
+ * rendered here rather than duplicated, so the two can never disagree.
+ */
+export function renderGiftedExplainer() {
+  const host = $('#cz-gifted-explain');
+  if (!host) return;
+  host.innerHTML = renderTestsExplainer(state.manifest, state.settings.guideLang || 'en');
+  paint();
+}
 
 export function renderGradePicker() {
   const box = $('#gp-grade-picker');

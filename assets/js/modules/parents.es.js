@@ -1,7 +1,7 @@
 /**
  * parents.es.js — La Guía para Padres, en español.
  *
- * Traducción completa de parents.js, no un resumen. Florida tiene una población
+ * Traducción completa de parents.js, no un resumen. Estados Unidos tiene una población
  * hispanohablante grande, y el CogAT llega a leerse en voz alta en español en
  * los grados 1 y 2, así que una versión corta habría sido peor que ninguna.
  *
@@ -71,20 +71,23 @@ ${callout('warn', 'Sobre la puntuación que muestra este sitio',
    cansancio o aburrimiento. Tómala como tomarías una puntuación de un
    juego.</p>`)}
 
+<!--#room-->
 <h2>Qué son estas pruebas</h2>
 
 <p>
-  Los distritos de Florida hacen una prueba grupal corta para identificar niños
-  para programas de superdotados, y luego mandan a los que pasan esa puerta a una
-  evaluación individual completa con un psicólogo escolar. La prueba grupal es
-  solo una puerta. No es la prueba que decide nada.
+  En todo Estados Unidos, las escuelas hacen una prueba grupal corta para
+  identificar niños para programas de superdotados, y luego mandan a los que pasan
+  esa puerta a una evaluación individual completa con un psicólogo escolar. La
+  prueba grupal es solo una puerta. No es la prueba que decide nada.
 </p>
 
 <p>
-  No existe una sola prueba de Florida. Cada distrito escoge la suya, y la mayoría
-  no le dice a los padres cuál es. Las tres más comunes en el país son el
+  No existe una prueba nacional, y casi nunca una estatal. Cada distrito escoge la
+  suya, y la mayoría no le dice a los padres cuál es. Las tres más comunes son el
   <strong>CogAT</strong>, el <strong>NNAT</strong> y el <strong>OLSAT</strong>, y
   este sitio cubre las tres, con ${total.toLocaleString('es')} preguntas en total.
+  Muchos distritos usan otra: el Raven's 2, el KBIT-2 o el RIAS-2 también
+  aparecen.
 </p>
 
 <div class="gp-table-scroll">
@@ -101,83 +104,67 @@ ${callout('caution', 'El salto entre segundo y tercer grado',
    minutos exactos por sección. Un niño al que segundo grado le pareció fácil
    puede encontrar tercero genuinamente difícil, y no ha pasado nada malo.</p>`)}
 
-<h2>Qué exige Florida realmente</h2>
+<!--/#room-->
+<h2>Qué exigen las escuelas realmente</h2>
 
 <p>
-  La elegibilidad la fija la Regla 6A-6.03019 de la Junta Estatal de Educación.
-  Bajo el <strong>Plan A</strong>, el niño debe cumplir las tres cosas:
+  En Estados Unidos, la identificación de superdotados la fija cada estado, y casi
+  todos los estados dejan los detalles al distrito. No hay una regla nacional ni un
+  puntaje de corte nacional. Lo que sí es casi universal es la forma:
 </p>
 
 <ol>
-  <li>Un puntaje <strong>dos desviaciones estándar por encima del promedio</strong>
-      en una prueba de inteligencia aplicada individualmente. En un WISC-V eso es
-      <strong>130</strong>.</li>
-  <li>La mayoría de las características de los estudiantes superdotados, según una
-      lista del distrito que cubre aprendizaje, motivación, creatividad y
-      liderazgo.</li>
-  <li>Evidencia de necesidad de un programa de instrucción especial.</li>
+  <li>Una <strong>prueba grupal</strong> para todo un grado, o para los niños que
+      un maestro o un padre remite.</li>
+  <li>Para los que pasan, una <strong>prueba de inteligencia individual</strong>
+      aplicada uno a uno por un psicólogo escolar &mdash; casi siempre el WISC-V, y
+      también el Stanford-Binet 5, el RIAS-2 o el KBIT-2.</li>
+  <li>Una <strong>lista de características</strong> de aprendizaje, motivación,
+      creatividad y liderazgo.</li>
+  <li>Evidencia de que el niño <strong>necesita</strong> un programa distinto.</li>
 </ol>
 
 <p>
-  Los distritos también pueden tener un <strong>Plan B</strong>, presentado como
-  Apéndice C de sus políticas y auditado por el estado. El Plan B normalmente baja
-  el requisito intelectual a cerca de <strong>115</strong> para niños de bajos
-  ingresos o que están aprendiendo inglés.
+  El listón habitual es <strong>dos desviaciones estándar por encima del
+  promedio</strong>, que en un WISC-V son <strong>130</strong>. Muchos estados
+  también exigen o permiten una vía alterna con un listón más bajo, con frecuencia
+  alrededor de <strong>115</strong>, para niños de bajos ingresos, que están
+  aprendiendo inglés, o con una discapacidad. Se llama distinto en cada estado;
+  pídala describiéndola, no por su nombre.
 </p>
 
-<h3>Qué usan de verdad los veinte distritos más grandes de Florida</h3>
+${callout('caution', 'El puntaje de corte lo decide el distrito, y varía muchísimo',
+  `<p>En un estudio de los veinte distritos más grandes de un estado, el puntaje
+   necesario para pasar la prueba grupal iba de <strong>107 a 122</strong>: una
+   desviación estándar entera. Un niño remitido a evaluación completa en un
+   distrito habría sido rechazado en el de al lado, con el mismo puntaje.</p>
+   <p>El año de la prueba también variaba: casi todos en segundo grado, uno en
+   primero. Cinco de los veinte no publicaban ninguna prueba grupal.</p>`)}
+
+${callout('caution', 'Algunos distritos limitan cuántas veces se puede evaluar a un niño',
+  `<p>Es la regla que más sorprende a las familias, y en ese mismo estudio era la
+   única regla sobre evaluación que algún distrito publicaba. Ejemplos reales: un
+   instrumento permitido <strong>una sola vez en toda la vida escolar</strong>; no
+   repetir la misma prueba en doce meses; que hacer una prueba impida usar otra
+   relacionada después; remisión a evaluación como máximo una vez al año.</p>
+   <p>Si está pensando en pedir otra evaluación, averigüe primero la regla de su
+   distrito. Donde no se publica ningún límite, no hay ninguno.</p>`)}
 
 <p>
-  Las reglas de cada distrito están presentadas ante el estado, y ya se leyeron
-  las de los veinte más grandes. El patrón:
+  <strong>Casi ningún distrito publica nada sobre preparar la prueba.</strong>
+  Ninguno de los veinte del estudio la recomendaba, la desaconsejaba ni la
+  prohibía. Los límites de intentos eran la única restricción publicada, y
+  funcionan limitando intentos, no hablando de preparación.
 </p>
 
-<ul>
-  <li><strong>El NNAT es con mucho el más común</strong> — nueve de los veinte usan
-      una prueba de Naglieri. Lee ya pasó al más nuevo <strong>NGAT</strong> y
-      Miami-Dade menciona el <strong>NGAT-NV</strong>, así que la Prueba General de
-      Habilidad de Naglieri parece estar reemplazando al NNAT3 en Florida.</li>
-  <li><strong>Segundo grado es el año de la evaluación</strong> en once distritos.
-      Miami-Dade evalúa en <strong>primer grado</strong>.</li>
-  <li><strong>El puntaje mínimo para pasar varía una desviación estándar completa</strong>,
-      desde <strong>107</strong> en Duval hasta <strong>122</strong> en Manatee. Un
-      niño que en Duval pasaría a evaluación completa, en Manatee sería rechazado.</li>
-  <li><strong>Cinco distritos no publican ninguna prueba grupal.</strong>
-      Hillsborough revisa datos que ya tiene, Marion usa una escala de calificación
-      del maestro, Sarasota solo evalúa por referencia, y Pasco no publica nada.</li>
-  <li><strong>Pasco no tiene Plan B</strong>, así que las familias allí no tienen
-      ninguna vía con requisito reducido.</li>
-</ul>
-
-${callout('caution', 'Cuatro distritos limitan cuántas veces se puede evaluar a un niño',
-  `<p>Esta es la regla que puede tomar por sorpresa a una familia, y es el único
-   tipo de regla sobre evaluación que publica algún distrito de Florida.</p>
-   <ul>
-     <li><strong>St. Johns</strong> — el CogAT y el KBIT-2R se pueden tomar
-         <strong>una sola vez en toda la carrera escolar K-12</strong>.</li>
-     <li><strong>Sarasota</strong> — no la misma prueba en 12 meses, y se
-         desaconseja más de tres evaluaciones en toda la escuela.</li>
-     <li><strong>Manatee</strong> — evaluar con una prueba puede impedir que se use
-         una prueba relacionada más adelante para la elegibilidad.</li>
-     <li><strong>Osceola</strong> — referencia para evaluación como máximo una vez
-         al año.</li>
-   </ul>
-   <p>Si estás en uno de esos distritos, vale la pena saberlo antes de pedir una
-   nueva evaluación. En los demás no se publica ningún límite.</p>`)}
-
-<p>
-  <strong>Ningún distrito de Florida en el estudio publica declaración alguna sobre
-  la preparación para la prueba.</strong> Ninguno la respalda, la desaconseja ni la
-  prohíbe.
-</p>
-
-${callout('tip', 'Averigua qué hace tu propio distrito',
-  `<p>Las reglas de cada distrito son públicas. Busca en el repositorio de
-   políticas del Departamento de Educación de Florida en
-   <a href="https://beessgsw.org/#/spp/institution/public/" rel="noopener">beessgsw.org</a>,
-   abre tu distrito, y lee la Parte III y el Apéndice C. O simplemente pregunta al
-   coordinador de superdotados o de ESE en la escuela de tu hijo qué prueba usan y
-   cuál es el puntaje mínimo.</p>`)}
+${callout('tip', 'Averigüe qué hace su propio distrito',
+  `<p>Las políticas de superdotados de los distritos son documentos públicos. Lo
+   más rápido es preguntarle al coordinador de superdotados o de ESE de la escuela
+   dos cosas: qué prueba usan y qué puntaje pasa a un niño. Algunos lo publican y
+   otros no. La página del departamento de educación de su estado tiene la regla
+   estatal, y el informe
+   <a href="https://nagc.org/page/state-of-the-states" rel="noopener">State of the
+   States</a> de NAGC resume cómo lo hace cada estado.</p>`)}
 
 <h2>¿Practicar realmente ayuda?</h2>
 
@@ -534,7 +521,7 @@ ${acc('¿Qué puntaje mínimo va a usar mi distrito?', `
   <li><a href="https://journals.sagepub.com/doi/abs/10.1177/0956797615592630" rel="noopener">Maloney y col. (2015), ansiedad matemática de los padres</a></li>
   <li><a href="https://jcsm.aasm.org/doi/10.5664/jcsm.5866" rel="noopener">Consenso de la AASM sobre duración del sueño, avalado por la AAP</a></li>
   <li><a href="https://www.nagc.org/identification" rel="noopener">NAGC sobre identificación</a></li>
-  <li><a href="https://beessgsw.org/#/spp/institution/public/" rel="noopener">Repositorio de políticas de distritos del DOE de Florida</a></li>
+  <li><a href="https://nagc.org/page/state-of-the-states" rel="noopener">NAGC, State of the States in Gifted Education</a></li>
 </ul>
 
 ${callout('info', 'Una reflexión final',

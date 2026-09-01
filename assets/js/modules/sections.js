@@ -23,44 +23,93 @@
    them; both were completely hidden, and all three rooms showed the same
    animal. Ears are now large, high, and the sole difference. */
 const EARS = {
-  bear: (c, soft) => `<circle cx="15.5" cy="10.5" r="8.5" fill="${c}"/>`
-                    + `<circle cx="48.5" cy="10.5" r="8.5" fill="${c}"/>`
-                    + `<circle cx="15.5" cy="10.5" r="3.9" fill="${soft}"/>`
-                    + `<circle cx="48.5" cy="10.5" r="3.9" fill="${soft}"/>`,
+  bear: (c, soft) => [
+    `<circle cx="15.5" cy="10.5" r="8.5" fill="${c}"/>`
+    + `<circle cx="15.5" cy="10.5" r="3.9" fill="${soft}"/>`,
+    `<circle cx="48.5" cy="10.5" r="8.5" fill="${c}"/>`
+    + `<circle cx="48.5" cy="10.5" r="3.9" fill="${soft}"/>`
+  ],
 
-  rabbit: (c, soft) => `<ellipse cx="19" cy="12" rx="5.6" ry="13" fill="${c}"/>`
-                      + `<ellipse cx="45" cy="12" rx="5.6" ry="13" fill="${c}"/>`
-                      + `<ellipse cx="19" cy="12.5" rx="2.3" ry="8" fill="${soft}"/>`
-                      + `<ellipse cx="45" cy="12.5" rx="2.3" ry="8" fill="${soft}"/>`,
+  rabbit: (c, soft) => [
+    `<ellipse cx="19" cy="12" rx="5.6" ry="13" fill="${c}"/>`
+    + `<ellipse cx="19" cy="12.5" rx="2.3" ry="8" fill="${soft}"/>`,
+    `<ellipse cx="45" cy="12" rx="5.6" ry="13" fill="${c}"/>`
+    + `<ellipse cx="45" cy="12.5" rx="2.3" ry="8" fill="${soft}"/>`
+  ],
 
-  owl: (c) => `<path d="M8.5 19 L13 0.5 L25 13.5 Z" fill="${c}"/>`
-             + `<path d="M55.5 19 L51 0.5 L39 13.5 Z" fill="${c}"/>`,
+  owl: (c) => [
+    `<path d="M8.5 19 L13 0.5 L25 13.5 Z" fill="${c}"/>`,
+    `<path d="M55.5 19 L51 0.5 L39 13.5 Z" fill="${c}"/>`
+  ],
 
-  fox: (c, soft) => `<path d="M6 21 L13.5 0 L26.5 14 Z" fill="${c}"/>`
-                   + `<path d="M58 21 L50.5 0 L37.5 14 Z" fill="${c}"/>`
-                   + `<path d="M11.5 17.5 L14.5 6 L21.5 14 Z" fill="${soft}"/>`
-                   + `<path d="M52.5 17.5 L49.5 6 L42.5 14 Z" fill="${soft}"/>`,
+  fox: (c, soft) => [
+    `<path d="M6 21 L13.5 0 L26.5 14 Z" fill="${c}"/>`
+    + `<path d="M11.5 17.5 L14.5 6 L21.5 14 Z" fill="${soft}"/>`,
+    `<path d="M58 21 L50.5 0 L37.5 14 Z" fill="${c}"/>`
+    + `<path d="M52.5 17.5 L49.5 6 L42.5 14 Z" fill="${soft}"/>`
+  ],
 
-  cat: (c, soft) => `<path d="M10.5 18 L15.5 2 L25 14 Z" fill="${c}"/>`
-                   + `<path d="M53.5 18 L48.5 2 L39 14 Z" fill="${c}"/>`
-                   + `<path d="M14.5 15 L16.5 7 L21 13 Z" fill="${soft}"/>`
-                   + `<path d="M49.5 15 L47.5 7 L43 13 Z" fill="${soft}"/>`,
+  cat: (c, soft) => [
+    `<path d="M10.5 18 L15.5 2 L25 14 Z" fill="${c}"/>`
+    + `<path d="M14.5 15 L16.5 7 L21 13 Z" fill="${soft}"/>`,
+    `<path d="M53.5 18 L48.5 2 L39 14 Z" fill="${c}"/>`
+    + `<path d="M49.5 15 L47.5 7 L43 13 Z" fill="${soft}"/>`
+  ],
 
-  mouse: (c, soft) => `<circle cx="13" cy="12" r="10.5" fill="${c}"/>`
-                     + `<circle cx="51" cy="12" r="10.5" fill="${c}"/>`
-                     + `<circle cx="13" cy="12" r="5.2" fill="${soft}"/>`
-                     + `<circle cx="51" cy="12" r="5.2" fill="${soft}"/>`,
+  mouse: (c, soft) => [
+    `<circle cx="13" cy="12" r="10.5" fill="${c}"/>`
+    + `<circle cx="13" cy="12" r="5.2" fill="${soft}"/>`,
+    `<circle cx="51" cy="12" r="10.5" fill="${c}"/>`
+    + `<circle cx="51" cy="12" r="5.2" fill="${soft}"/>`
+  ],
 
-  giraffe: (c) => `<path d="M20.5 16 L17.5 4.5 M43.5 16 L46.5 4.5" stroke="${c}"`
-                  + ` stroke-width="3.6" stroke-linecap="round" fill="none"/>`
-                 + `<circle cx="17.1" cy="3.6" r="3.6" fill="${c}"/>`
-                 + `<circle cx="46.9" cy="3.6" r="3.6" fill="${c}"/>`,
+  giraffe: (c) => [
+    `<path d="M20.5 16 L17.5 4.5" stroke="${c}" stroke-width="3.6" stroke-linecap="round" fill="none"/>`
+    + `<circle cx="17.1" cy="3.6" r="3.6" fill="${c}"/>`,
+    `<path d="M43.5 16 L46.5 4.5" stroke="${c}" stroke-width="3.6" stroke-linecap="round" fill="none"/>`
+    + `<circle cx="46.9" cy="3.6" r="3.6" fill="${c}"/>`
+  ],
 
-  frog: (c) => `<circle cx="17" cy="9" r="6.5" fill="${c}"/>`
-              + `<circle cx="47" cy="9" r="6.5" fill="${c}"/>`
+  frog: (c) => [
+    `<circle cx="17" cy="9" r="6.5" fill="${c}"/>`,
+    `<circle cx="47" cy="9" r="6.5" fill="${c}"/>`
+  ],
+
+  /* The one on the sign. Plain round ears, because the mark has to survive a
+     16px favicon where anything shaped turns to mush. */
+  logo: (c) => [
+    `<circle cx="19" cy="14" r="5.4" fill="${c}"/>`,
+    `<circle cx="45" cy="14" r="5.4" fill="${c}"/>`
+  ]
 };
 
 export const CREATURES = Object.keys(EARS);
+
+/**
+ * The two ears of a creature, left first, as separate strings.
+ *
+ * They come back as a pair rather than one blob so that modules/mascot.js can
+ * put each ear in its own group and twitch them in opposite directions. Both
+ * ears rotating together is a head tilt; one up and one down is an animal.
+ */
+export function earPair(kind, tone, inner) {
+  return (EARS[kind] || EARS.bear)(tone, inner);
+}
+
+/* The face, the eyes and the wall: everything every creature shares. Exported
+   so the animated mascot draws from exactly the same geometry as the static
+   one and the two can never drift apart. */
+export const EYE = {
+  disc:  [{ cx: 21.5, cy: 27, r: 11 }, { cx: 42.5, cy: 27, r: 11 }],
+  pupil: [{ cx: 24.5, cy: 25.5, r: 4.6 }, { cx: 45.5, cy: 25.5, r: 4.6 }],
+  glint: [{ cx: 26.3, cy: 23.6, r: 1.6 }, { cx: 47.3, cy: 23.6, r: 1.6 }]
+};
+
+/** The enclosure wall the creature peeks over. `paper` is the rail colour. */
+export const wall = (tone, paper) =>
+  `<rect x="4" y="36" width="56" height="22" rx="9" fill="${tone}"/>`
+  + `<path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="${paper}"`
+  + ` stroke-width="2.4" stroke-linecap="round" opacity=".55"/>`;
 
 /**
  * One creature, as inline SVG.
@@ -78,21 +127,18 @@ export function creature(kind, {
   inner = 'var(--room-soft, var(--gp-accent-soft, #FBEDE4))',
   label = ''
 } = {}) {
-  const ears = EARS[kind] || EARS.bear;
   const a11y = label
     ? ` role="img" aria-label="${label}"`
     : ' aria-hidden="true"';
   return `<svg class="cz-creature" viewBox="0 0 64 64"${a11y} focusable="false">`
-    + ears(tone, inner)
+    + earPair(kind, tone, inner).join('')
     + `<circle cx="21.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>`
     + `<circle cx="42.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>`
     + `<circle cx="24.5" cy="25.5" r="4.6" fill="#2B2926"/>`
     + `<circle cx="45.5" cy="25.5" r="4.6" fill="#2B2926"/>`
     + `<circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF"/>`
     + `<circle cx="47.3" cy="23.6" r="1.6" fill="#FFFFFF"/>`
-    + `<rect x="4" y="36" width="56" height="22" rx="9" fill="${tone}"/>`
-    + `<path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="${paper}"`
-    + ` stroke-width="2.4" stroke-linecap="round" opacity=".55"/>`
+    + wall(tone, paper)
     + `</svg>`;
 }
 
@@ -131,7 +177,7 @@ export const ROOMS = [
   },
   {
     id: 'gifted',
-    name: 'Test Practice',
+    name: 'GiftedPrep',
     hue: 'orchid',
     creature: 'bear',
     href: '#/gifted',

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     role="img" aria-label="The CurioZoo mascot asleep">
+  <title>CurioZoo mascot — sleep</title>
+  <desc>The mascot dozes behind the wall, breathing slowly, with three z letters drifting up. Loops.</desc>
+
+  <!-- For an idle app, an empty progress screen, or the end of a long session.
+       See mascot-peek.svg for why this is SMIL. One cycle is 4s. -->
+
+  <g>
+    <!-- Breathing: the whole head rises and falls by two units. Nothing else
+         moves. Anything faster stops reading as sleep. -->
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+      dur="4s" repeatCount="indefinite" calcMode="spline"
+      keyTimes="0; 0.5; 1" values="0 0; 0 2.2; 0 0"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+    <g transform="rotate(20 19 19)"><circle cx="19" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/></g>
+    <g transform="rotate(-20 45 19)"><circle cx="45" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/></g>
+
+    <!-- Shut eyes are drawn as arcs curving down, not as flattened circles.
+         A flat circle is a straight line, which reads as a robot; a downward
+         arc reads as a sleeping animal. -->
+    <g fill="none" stroke="#2B2926" stroke-width="3.6" stroke-linecap="round">
+      <path d="M13.5 24.5 Q21.5 33 29.5 24.5"/>
+      <path d="M34.5 24.5 Q42.5 33 50.5 24.5"/>
+    </g>
+  </g>
+
+  <!-- Three z letters, each drifting up and right and fading out. -->
+  <g fill="none" stroke="var(--gp-accent, #BA5828)" stroke-width="2.2"
+     stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(46 26)">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+        dur="4s" repeatCount="indefinite" additive="sum"
+        keyTimes="0; 1" values="0 0; 7 -22"/>
+      <animate attributeName="opacity" dur="4s" repeatCount="indefinite"
+        keyTimes="0; 0.15; 0.75; 1" values="0; 1; 1; 0"/>
+      <path d="M0 0 h5.5 l-5.5 6.5 h5.5" transform="scale(0.85)"/>
+    </g>
+    <g transform="translate(46 26)">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+        dur="4s" repeatCount="indefinite" additive="sum" begin="-1.33s"
+        keyTimes="0; 1" values="0 0; 7 -22"/>
+      <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="-1.33s"
+        keyTimes="0; 0.15; 0.75; 1" values="0; 1; 1; 0"/>
+      <path d="M0 0 h5.5 l-5.5 6.5 h5.5" transform="scale(0.85)"/>
+    </g>
+    <g transform="translate(46 26)">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+        dur="4s" repeatCount="indefinite" additive="sum" begin="-2.66s"
+        keyTimes="0; 1" values="0 0; 7 -22"/>
+      <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="-2.66s"
+        keyTimes="0; 0.15; 0.75; 1" values="0; 1; 1; 0"/>
+      <path d="M0 0 h5.5 l-5.5 6.5 h5.5" transform="scale(0.85)"/>
+    </g>
+  </g>
+
+  <rect x="4" y="36" width="56" height="22" rx="9" fill="var(--gp-accent, #BA5828)"/>
+  <path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="var(--gp-bg, #FDFBF7)"
+        stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+</svg>

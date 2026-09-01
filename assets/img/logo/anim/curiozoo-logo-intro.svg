@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -6 452 104" width="452" height="104"
+     role="img" aria-label="CurioZoo">
+  <title>CurioZoo — logo intro</title>
+  <desc>The CurioZoo wordmark draws itself left to right, the two letter o of Zoo open as eyes, and the mascot peeks up beside it. Plays once, then the eyes keep looking around.</desc>
+
+  <!-- The splash. Plays once and freezes on the finished logo, so it can sit
+       on an app launch screen or the head of a page without ever replaying in
+       a child's peripheral vision. Only the eyes keep moving afterwards.
+
+       Every letter is drawn by animating stroke-dashoffset from the path's own
+       length down to zero. That is why each glyph carries a stroke-dasharray
+       of its measured length: too small and the line draws as a row of dashes,
+       too large and the glyph appears late and finishes early. The numbers are
+       measured from the geometry, not guessed.
+
+       See mascot-peek.svg for why this file uses SMIL rather than CSS. -->
+
+  <!-- The mascot, peeking up at the finished word. -->
+  <g transform="translate(0 14) scale(1.09)">
+    <clipPath id="cz-intro-clip">
+      <rect x="-20" y="-60" width="104" height="112"/>
+    </clipPath>
+    <g clip-path="url(#cz-intro-clip)">
+      <g>
+        <animateTransform attributeName="transform" attributeType="XML" type="translate"
+          begin="1.75s" dur="0.9s" fill="freeze" calcMode="spline"
+          keyTimes="0; 0.62; 0.82; 1" values="0 46; 0 -3.5; 0 1.2; 0 0"
+          keySplines="0.16 0.84 0.34 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
+        <circle cx="19" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>
+        <circle cx="45" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>
+        <ellipse cx="21.5" cy="27" rx="11" ry="11" fill="#FFFFFF" stroke="#2B2926"
+                 stroke-width="2.6" vector-effect="non-scaling-stroke">
+          <animate attributeName="ry" begin="3.2s" dur="4s" repeatCount="indefinite"
+            keyTimes="0; 0.80; 0.83; 0.86; 1" values="11; 11; 0.9; 11; 11"/>
+        </ellipse>
+        <ellipse cx="42.5" cy="27" rx="11" ry="11" fill="#FFFFFF" stroke="#2B2926"
+                 stroke-width="2.6" vector-effect="non-scaling-stroke">
+          <animate attributeName="ry" begin="3.2s" dur="4s" repeatCount="indefinite"
+            keyTimes="0; 0.80; 0.83; 0.86; 1" values="11; 11; 0.9; 11; 11"/>
+        </ellipse>
+        <ellipse cx="24.5" cy="25.5" rx="4.6" ry="4.6" fill="#2B2926">
+          <animate attributeName="ry" begin="3.2s" dur="4s" repeatCount="indefinite"
+            keyTimes="0; 0.80; 0.83; 0.86; 1" values="4.6; 4.6; 0.3; 4.6; 4.6"/>
+        </ellipse>
+        <ellipse cx="45.5" cy="25.5" rx="4.6" ry="4.6" fill="#2B2926">
+          <animate attributeName="ry" begin="3.2s" dur="4s" repeatCount="indefinite"
+            keyTimes="0; 0.80; 0.83; 0.86; 1" values="4.6; 4.6; 0.3; 4.6; 4.6"/>
+        </ellipse>
+        <circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF">
+          <animate attributeName="opacity" begin="3.2s" dur="4s" repeatCount="indefinite"
+            keyTimes="0; 0.80; 0.83; 0.86; 1" values="1; 1; 0; 1; 1"/>
+        </circle>
+        <circle cx="47.3" cy="23.6" r="1.6" fill="#FFFFFF">
+          <animate attributeName="opacity" begin="3.2s" dur="4s" repeatCount="indefinite"
+            keyTimes="0; 0.80; 0.83; 0.86; 1" values="1; 1; 0; 1; 1"/>
+        </circle>
+      </g>
+    </g>
+    <rect x="4" y="36" width="56" height="22" rx="9" fill="var(--gp-accent, #BA5828)"/>
+    <path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="var(--gp-bg, #FDFBF7)"
+          stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+  </g>
+
+  <!-- The word. -->
+  <g transform="translate(88 0)" fill="none" stroke-width="11"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- C: a 250 degree arc of radius 22, so 22 x 250 degrees in radians = 96. -->
+    <path d="M 40.12 31.98 A 22 22 0 1 0 40.12 68.02" stroke="var(--gp-ink, #2B2926)"
+          stroke-dasharray="98" stroke-dashoffset="98">
+      <animate attributeName="stroke-dashoffset" begin="0.15s" dur="0.55s" fill="freeze"
+               values="98;0" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+    </path>
+
+    <!-- u: 15 down, a half circle of radius 15, 15 up. 15 + 47.1 + 15 = 77. -->
+    <path d="M 67.5 42 V 57 A 15 15 0 0 0 97.5 57 V 72" stroke="var(--gp-ink, #2B2926)"
+          stroke-dasharray="79" stroke-dashoffset="79">
+      <animate attributeName="stroke-dashoffset" begin="0.28s" dur="0.55s" fill="freeze"
+               values="79;0" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+    </path>
+
+    <!-- r: a 30 stem plus a shoulder of about 23. -->
+    <path d="M 115.5 42 V 72 M 115.5 54 Q 115.5 42 131.5 42" stroke="var(--gp-ink, #2B2926)"
+          stroke-dasharray="55" stroke-dashoffset="55">
+      <animate attributeName="stroke-dashoffset" begin="0.41s" dur="0.55s" fill="freeze"
+               values="55;0" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+    </path>
+
+    <!-- i: a 30 stem, and a dot that lands after it. -->
+    <path d="M 149.5 42 V 72" stroke="var(--gp-ink, #2B2926)"
+          stroke-dasharray="32" stroke-dashoffset="32">
+      <animate attributeName="stroke-dashoffset" begin="0.54s" dur="0.4s" fill="freeze"
+               values="32;0" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+    </path>
+    <circle cx="149.5" cy="29" r="5.5" fill="var(--gp-ink, #2B2926)" stroke="none" opacity="0">
+      <animate attributeName="opacity" begin="0.95s" dur="0.2s" fill="freeze" values="0;1"/>
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+        begin="0.95s" dur="0.3s" fill="freeze" calcMode="spline"
+        keyTimes="0; 0.7; 1" values="0 -9; 0 1.5; 0 0"
+        keySplines="0.4 0 0.5 1; 0.4 0 0.6 1"/>
+    </circle>
+
+    <!-- o: a circle of radius 15, so a circumference of 94.2. -->
+    <circle cx="182.5" cy="57" r="15" stroke="var(--gp-ink, #2B2926)"
+            stroke-dasharray="96" stroke-dashoffset="96">
+      <animate attributeName="stroke-dashoffset" begin="0.67s" dur="0.55s" fill="freeze"
+               values="96;0" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+    </circle>
+
+    <!-- Z: 34 across, a 55.6 diagonal, 34 back. -->
+    <path d="M 215.5 28 H 249.5 L 215.5 72 H 249.5" stroke="var(--gp-accent, #BA5828)"
+          stroke-dasharray="126" stroke-dashoffset="126">
+      <animate attributeName="stroke-dashoffset" begin="0.80s" dur="0.7s" fill="freeze"
+               values="126;0" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+    </path>
+
+    <!-- The two o of Zoo are the pair of eyes. The whole logo is that joke, so
+         the pupils arrive last and then never quite settle. -->
+    <circle cx="282.5" cy="57" r="15" fill="#FFFFFF" stroke="none" opacity="0">
+      <animate attributeName="opacity" begin="1.0s" dur="0.4s" fill="freeze" values="0;1"/>
+    </circle>
+    <circle cx="282.5" cy="57" r="15" stroke="var(--gp-accent, #BA5828)"
+            stroke-dasharray="96" stroke-dashoffset="96">
+      <animate attributeName="stroke-dashoffset" begin="0.93s" dur="0.55s" fill="freeze"
+               values="96;0" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+    </circle>
+    <circle cx="330.5" cy="57" r="15" fill="#FFFFFF" stroke="none" opacity="0">
+      <animate attributeName="opacity" begin="1.0s" dur="0.4s" fill="freeze" values="0;1"/>
+    </circle>
+    <circle cx="330.5" cy="57" r="15" stroke="var(--gp-accent, #BA5828)"
+            stroke-dasharray="96" stroke-dashoffset="96">
+      <animate attributeName="stroke-dashoffset" begin="1.06s" dur="0.55s" fill="freeze"
+               values="96;0" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+    </circle>
+
+    <g stroke="none" opacity="0">
+      <animate attributeName="opacity" begin="1.5s" dur="0.3s" fill="freeze" values="0;1"/>
+      <!-- Both pupils drift together, so the word never looks cross-eyed. -->
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+        begin="3.2s" dur="6s" repeatCount="indefinite" calcMode="spline"
+        keyTimes="0; 0.12; 0.34; 0.46; 0.68; 0.80; 1"
+        values="0 0; 2.6 0.8; 2.6 0.8; -2.4 -1; -2.4 -1; 0 0; 0 0"
+        keySplines="0.3 0 0.2 1; 0 0 1 1; 0.3 0 0.2 1; 0 0 1 1; 0.3 0 0.2 1; 0 0 1 1"/>
+      <circle cx="279.6" cy="54.4" r="6.4" fill="#2B2926"/>
+      <circle cx="282.2" cy="51.7" r="2.2" fill="#FFFFFF"/>
+      <circle cx="327.6" cy="54.4" r="6.4" fill="#2B2926"/>
+      <circle cx="330.2" cy="51.7" r="2.2" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>
