@@ -33,6 +33,14 @@ const hsl2hex = (h, s, l) => {
   return rgb2hex(t.map((v) => (v + m) * 255));
 };
 
+/**
+ * Text sitting on one of the tinted room cards needs its own shade. A room name
+ * uses the section colour on that section's soft tint, and the tint is darker
+ * than white, so every one of the eight measured between 3.92:1 and 4.36:1 --
+ * below AA, on the most important word on the card.
+ */
+export const tuneOnBg = (hue, sat, bg, target, darker) => tune(hue, sat, bg, target, { darker });
+
 /** Lowest-contrast (most colourful) shade that still clears `target` on `bg`. */
 function tune(hue, sat, bg, target, { darker = true } = {}) {
   let lo = 0.02, hi = 0.98, best = null;

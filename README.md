@@ -22,11 +22,21 @@ that practice is now one section among several, and more are planned.
 
 Everything explains itself afterwards, in words a six-year-old can follow.
 
-| Section | What it is |
+Sections are declared in one list, [`sections.js`](assets/js/modules/sections.js).
+The home page, the room banners and `tools/roomcheck.mjs` all read from it, so
+adding a section is an entry in that list and a module — not a new screen in
+`index.html`, a new branch in the router and a new colour somewhere in the CSS.
+
+Each room has its own colour from the palette and its own creature. The
+creatures are all the logo wearing different ears: eight unrelated animal
+drawings would look like clip art, whereas one shape in eight hats reads as a
+family, and a child recognises the eyes from the top bar.
+
+| Room | What it is |
 |---|---|
 | **Math Lab** | 86 topics and 609 exercises across grades 1–6. Real mathematics — primes, symmetry, graph colouring, the pigeonhole principle — not worksheets |
 | **Fun and games** | Games for memorising. Name the Flag (250 flags) and Name the Country (242 outlines, type the answer in English or Spanish) |
-| **Gifted Prep** | 1,576 questions in the shapes used by the CogAT, NNAT and OLSAT, grades 1–4 |
+| **Test Practice** | 1,576 questions in the shapes used by the CogAT, NNAT and OLSAT, grades 1–4 |
 
 The gifted practice is built for **familiarization, not coaching** — a
 distinction the research takes seriously, and so does this project. See
@@ -372,7 +382,8 @@ GiftedPrep/
 │           ├── parents.js      the Parent Guide
 │           ├── mathlab.js      Math Lab lessons and exercise engine
 │           ├── flags.js        the flag game
-│           └── shapes.js       the country outline game
+│           ├── shapes.js       the country outline game
+│           └── sections.js     the rooms, and the creature that fronts each
 ├── data/
 │   ├── manifest.json           tests, grades, category index
 │   ├── cogat/  nnat/  olsat/   one JSON file per category
@@ -385,6 +396,9 @@ GiftedPrep/
     ├── mathverify.mjs          recomputes every Math Lab answer from scratch
     ├── flagcheck.mjs           checks the flag data against the image files
     ├── shapecheck.mjs          checks the outline data and typed-answer names
+    ├── roomcheck.mjs           checks the room registry against CSS and creatures
+    ├── palette.mjs             builds the palette and proves every contrast ratio
+    ├── mkicon.py               rasterises the app icon (no dependencies)
     ├── serve.py                dev server with the production CSP
     └── _authoring.py           helpers used to write the JSON by hand
 ```

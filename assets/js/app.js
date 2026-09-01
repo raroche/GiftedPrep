@@ -19,6 +19,7 @@ import * as mathlab from './modules/mathlab.js';
 import { applyStyles } from './modules/style.js';
 import * as flags from './modules/flags.js';
 import * as shapes from './modules/shapes.js';
+import { ROOMS, roomGrid, creature, roomById } from './modules/sections.js';
 
 /* ------------------------------------------------------------------ */
 /* State                                                               */
@@ -123,8 +124,8 @@ function speakQuestion() {
 /* Screens                                                             */
 /* ------------------------------------------------------------------ */
 
-const SCREENS = ['home', 'tests', 'categories', 'quiz', 'results', 'parents', 'math', 'mathtopic',
-  'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame', 'error'];
+const SCREENS = ['home', 'gifted', 'tests', 'categories', 'quiz', 'results', 'parents',
+  'math', 'mathtopic', 'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame', 'error'];
 
 function showScreen(name) {
   SCREENS.forEach((s) => {
@@ -197,6 +198,24 @@ function renderCountPicker() {
   $('#gp-count-note').textContent = COUNT_NOTES[chosen] || '';
   const sub = $('#gp-quick-sub');
   if (sub) sub.textContent = `${chosen} mixed puzzles from all three tests. Best place to start.`;
+}
+
+/**
+ * Draw the zoo map. Reading from ROOMS rather than from markup is the whole
+ * point of Phase 2: a new section appears here, in the navigation and in the
+ * checker without anyone editing this function.
+ */
+function renderRooms() {
+  const host = document.getElementById('cz-rooms');
+  if (host) host.innerHTML = roomGrid(ROOMS);
+}
+
+/* The room banner is painted from the same registry entry as its card, so the
+   creature on the section page can never drift from the one on the map. */
+function paintRoomHead(id, picId) {
+  const pic = document.getElementById(picId);
+  const room = roomById(id);
+  if (pic && room && !pic.childElementCount) pic.innerHTML = creature(room.creature);
 }
 
 function renderHomeStats() {
@@ -1487,10 +1506,15 @@ function route() {
 
   switch (head) {
     case 'home':
-      renderGradePicker();
-      renderCountPicker();
+      renderRooms();
       renderHomeStats();
       showScreen('home');
+      break;
+    case 'gifted':
+      paintRoomHead('gifted', 'cz-gifted-pic');
+      renderGradePicker();
+      renderCountPicker();
+      showScreen('gifted');
       break;
     case 'tests':
       renderTests();
@@ -1527,13 +1551,16 @@ function route() {
 
 function goBack() {
   const hash = location.hash || '#/home';
-  if (hash === '#/categories/all') location.hash = '#/home';
+  /* Test practice is a room now, so backing out of anything inside it lands in
+     that room rather than on the zoo map. Coming out of a room goes to the map. */
+  if (hash === '#/categories/all') location.hash = '#/gifted';
   else if (hash.startsWith('#/categories')) location.hash = '#/tests';
+  else if (hash.startsWith('#/tests')) location.hash = '#/gifted';
   else if (hash.startsWith('#/quiz')) {
     if (state.session && state.session.answers.length && !confirmLeave()) return;
     speech.cancel();
     location.hash = state.lastRun && state.lastRun.testId
-      ? `#/categories/${state.lastRun.testId}` : '#/home';
+      ? `#/categories/${state.lastRun.testId}` : '#/gifted';
   } else location.hash = '#/home';
 }
 

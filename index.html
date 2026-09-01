@@ -74,18 +74,52 @@
   <!-- ============================================================ -->
   <!-- Home                                                          -->
   <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- Home: the zoo map. Every room is drawn from the ROOMS list in  -->
+  <!-- modules/sections.js, so a new section never touches this file. -->
+  <!-- ============================================================ -->
   <section class="gp-screen" id="screen-home" aria-labelledby="home-title">
     <div class="gp-container gp-stack">
-      <div class="gp-home-top">
-      <div class="gp-hero">
-        <p class="gp-hero__eyebrow">Free &middot; no sign-up &middot; no ads &middot; nothing to install</p>
-        <h1 class="gp-hero__title" id="home-title">Screen time that makes you think</h1>
-        <p class="gp-hero__lede">
-          CurioZoo is somewhere for a curious child to spend an hour and come back
-          sharper: real mathematics, games that are actually puzzles, and practice
-          for gifted screening tests. Nothing here is a video to sit through.
-          Everything explains itself afterwards.
+
+      <div class="cz-welcome">
+        <p class="cz-welcome__eyebrow">Free &middot; no sign-up &middot; no ads &middot; nothing to install</p>
+        <h1 class="cz-welcome__title" id="home-title">Pick a room. Come out cleverer.</h1>
+        <p class="cz-welcome__lede">
+          CurioZoo is a place to spend an hour thinking instead of scrolling.
+          Real mathematics, games that are really puzzles, and practice for the
+          tests schools use. Everything explains itself afterwards.
         </p>
+      </div>
+
+      <div class="cz-sectionhead">
+        <h2>The rooms</h2>
+        <p>More are being built.</p>
+      </div>
+      <div id="cz-rooms"></div>
+
+      <div class="gp-card gp-card--stats" id="gp-home-stats" hidden>
+        <h2 class="gp-card__title">Your practice so far</h2>
+        <div id="gp-home-stats-body"></div>
+        <button type="button" class="gp-btn gp-btn--quiet" data-action="reset-progress">
+          <span data-icon="refresh"></span><span class="gp-btn__label">Start fresh</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Test Practice: what used to be the whole home page.           -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-gifted" aria-labelledby="gifted-title">
+    <div class="gp-container gp-stack">
+
+      <div class="cz-roomhead cz-room--orchid" id="cz-gifted-head">
+        <span class="cz-roomhead__pic" id="cz-gifted-pic"></span>
+        <div>
+          <h1 id="gifted-title">Test Practice</h1>
+          <p>The kinds of puzzles used on the CogAT, NNAT and OLSAT &mdash; so
+             test day is not the first time your child sees one.</p>
+        </div>
       </div>
 
       <div class="gp-card gp-card--setup">
@@ -101,7 +135,6 @@
         </fieldset>
         <p class="gp-muted gp-grade-note" id="gp-count-note"></p>
       </div>
-      </div>
 
       <div class="gp-grid gp-grid--start">
         <button type="button" class="gp-card gp-card--action" data-action="quick-start">
@@ -114,16 +147,6 @@
           <span class="gp-card__title">Pick a puzzle type</span>
           <span class="gp-card__sub">All 31 kinds of puzzle in one list. Practice just one of them.</span>
         </a>
-        <a class="gp-card gp-card--action" href="#/fun">
-          <span class="gp-card__icon" data-icon="sparkle"></span>
-          <span class="gp-card__title">Fun and games</span>
-          <span class="gp-card__sub">Name the flags of the world. More games to come.</span>
-        </a>
-        <a class="gp-card gp-card--action" href="#/math">
-          <span class="gp-card__icon" data-icon="calc"></span>
-          <span class="gp-card__title">Math Lab</span>
-          <span class="gp-card__sub">Advanced maths lessons and puzzles, grade by grade.</span>
-        </a>
         <a class="gp-card gp-card--action" href="#/tests">
           <span class="gp-card__icon" data-icon="target"></span>
           <span class="gp-card__title">Choose a test</span>
@@ -134,14 +157,6 @@
           <span class="gp-card__title">Parent guide</span>
           <span class="gp-card__sub">What the tests are, what the scores mean, and the week before.</span>
         </a>
-      </div>
-
-      <div class="gp-card gp-card--stats" id="gp-home-stats" hidden>
-        <h2 class="gp-card__title">Your practice so far</h2>
-        <div id="gp-home-stats-body"></div>
-        <button type="button" class="gp-btn gp-btn--quiet" data-action="reset-progress">
-          <span data-icon="refresh"></span><span class="gp-btn__label">Start fresh</span>
-        </button>
       </div>
     </div>
   </section>

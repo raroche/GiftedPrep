@@ -1,0 +1,175 @@
+/**
+ * sections.js — the rooms of the zoo, and the creatures that live in them.
+ *
+ * This file exists so that adding a section is one entry in one list rather
+ * than a new screen in index.html, a new branch in the router, a new render
+ * function in app.js and a new colour somewhere in the stylesheet. The home
+ * page, the navigation and the checker all read from ROOMS.
+ *
+ * Every creature is the logo with different ears. That is deliberate: eight
+ * unrelated animal drawings would look like clip art, whereas one shape wearing
+ * eight hats reads as a family, and a child recognises the eyes from the top
+ * bar. Colours come from the palette tokens, so every room re-themes itself.
+ */
+
+/* ------------------------------------------------------------------ */
+/* Creatures                                                           */
+/* ------------------------------------------------------------------ */
+
+/* Drawn on the same 64 grid as the logo, and constrained by it. The eye disc
+   occupies x 10.5-53.5 and y 16-38, and the wall takes y 36-58, so the only
+   space a distinguishing feature can live in is above the eyes. The first
+   attempt put an owl's beak between the eyes and an elephant's ears beside
+   them; both were completely hidden, and all three rooms showed the same
+   animal. Ears are now large, high, and the sole difference. */
+const EARS = {
+  bear: (c, soft) => `<circle cx="15.5" cy="10.5" r="8.5" fill="${c}"/>`
+                    + `<circle cx="48.5" cy="10.5" r="8.5" fill="${c}"/>`
+                    + `<circle cx="15.5" cy="10.5" r="3.9" fill="${soft}"/>`
+                    + `<circle cx="48.5" cy="10.5" r="3.9" fill="${soft}"/>`,
+
+  rabbit: (c, soft) => `<ellipse cx="19" cy="12" rx="5.6" ry="13" fill="${c}"/>`
+                      + `<ellipse cx="45" cy="12" rx="5.6" ry="13" fill="${c}"/>`
+                      + `<ellipse cx="19" cy="12.5" rx="2.3" ry="8" fill="${soft}"/>`
+                      + `<ellipse cx="45" cy="12.5" rx="2.3" ry="8" fill="${soft}"/>`,
+
+  owl: (c) => `<path d="M8.5 19 L13 0.5 L25 13.5 Z" fill="${c}"/>`
+             + `<path d="M55.5 19 L51 0.5 L39 13.5 Z" fill="${c}"/>`,
+
+  fox: (c, soft) => `<path d="M6 21 L13.5 0 L26.5 14 Z" fill="${c}"/>`
+                   + `<path d="M58 21 L50.5 0 L37.5 14 Z" fill="${c}"/>`
+                   + `<path d="M11.5 17.5 L14.5 6 L21.5 14 Z" fill="${soft}"/>`
+                   + `<path d="M52.5 17.5 L49.5 6 L42.5 14 Z" fill="${soft}"/>`,
+
+  cat: (c, soft) => `<path d="M10.5 18 L15.5 2 L25 14 Z" fill="${c}"/>`
+                   + `<path d="M53.5 18 L48.5 2 L39 14 Z" fill="${c}"/>`
+                   + `<path d="M14.5 15 L16.5 7 L21 13 Z" fill="${soft}"/>`
+                   + `<path d="M49.5 15 L47.5 7 L43 13 Z" fill="${soft}"/>`,
+
+  mouse: (c, soft) => `<circle cx="13" cy="12" r="10.5" fill="${c}"/>`
+                     + `<circle cx="51" cy="12" r="10.5" fill="${c}"/>`
+                     + `<circle cx="13" cy="12" r="5.2" fill="${soft}"/>`
+                     + `<circle cx="51" cy="12" r="5.2" fill="${soft}"/>`,
+
+  giraffe: (c) => `<path d="M20.5 16 L17.5 4.5 M43.5 16 L46.5 4.5" stroke="${c}"`
+                  + ` stroke-width="3.6" stroke-linecap="round" fill="none"/>`
+                 + `<circle cx="17.1" cy="3.6" r="3.6" fill="${c}"/>`
+                 + `<circle cx="46.9" cy="3.6" r="3.6" fill="${c}"/>`,
+
+  frog: (c) => `<circle cx="17" cy="9" r="6.5" fill="${c}"/>`
+              + `<circle cx="47" cy="9" r="6.5" fill="${c}"/>`
+};
+
+export const CREATURES = Object.keys(EARS);
+
+/**
+ * One creature, as inline SVG.
+ *
+ * `tone` and `paper` are CSS values, so a caller can hand in palette tokens and
+ * let the browser resolve them per theme. The eyes are hard-coded white with a
+ * dark pupil in every theme: tying them to the page colour made them vanish in
+ * dark mode, which is the bug the logo hit first.
+ */
+export function creature(kind, {
+  tone = 'var(--room, var(--gp-accent, #BA5828))',
+  paper = 'var(--gp-bg, #FDFBF7)',
+  /* Inner ear. Not `paper`: the creature sits on a white tile, so a page-
+     coloured inner ear all but disappears. The room's own tint shows. */
+  inner = 'var(--room-soft, var(--gp-accent-soft, #FBEDE4))',
+  label = ''
+} = {}) {
+  const ears = EARS[kind] || EARS.bear;
+  const a11y = label
+    ? ` role="img" aria-label="${label}"`
+    : ' aria-hidden="true"';
+  return `<svg class="cz-creature" viewBox="0 0 64 64"${a11y} focusable="false">`
+    + ears(tone, inner)
+    + `<circle cx="21.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>`
+    + `<circle cx="42.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>`
+    + `<circle cx="24.5" cy="25.5" r="4.6" fill="#2B2926"/>`
+    + `<circle cx="45.5" cy="25.5" r="4.6" fill="#2B2926"/>`
+    + `<circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF"/>`
+    + `<circle cx="47.3" cy="23.6" r="1.6" fill="#FFFFFF"/>`
+    + `<rect x="4" y="36" width="56" height="22" rx="9" fill="${tone}"/>`
+    + `<path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="${paper}"`
+    + ` stroke-width="2.4" stroke-linecap="round" opacity=".55"/>`
+    + `</svg>`;
+}
+
+/* ------------------------------------------------------------------ */
+/* The rooms                                                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Order is the order a child sees them, so the most inviting room comes first
+ * and the test practice comes last. `hue` is a palette key; `status` is 'live'
+ * or 'soon'. Anything marked 'soon' is shown greyed and is not a link.
+ */
+export const ROOMS = [
+  {
+    id: 'math',
+    name: 'Math Lab',
+    hue: 'sky',
+    creature: 'owl',
+    href: '#/math',
+    status: 'live',
+    blurb: 'Primes, infinity, secret codes and puzzles nobody has solved yet.',
+    meta: '86 topics · grades 1 to 6'
+  },
+  {
+    id: 'fun',
+    name: 'Fun and Games',
+    hue: 'flamingo',
+    /* Owl tufts and fox ears are both triangles and read alike at 46px. The
+       three live rooms take the three most unlike silhouettes there are:
+       sharp tufts, tall ears, round ears. */
+    creature: 'rabbit',
+    href: '#/fun',
+    status: 'live',
+    blurb: 'Name every flag in the world. Name a country from its shape alone.',
+    meta: '2 games · 492 things to learn'
+  },
+  {
+    id: 'gifted',
+    name: 'Test Practice',
+    hue: 'orchid',
+    creature: 'bear',
+    href: '#/gifted',
+    status: 'live',
+    blurb: 'The kinds of puzzles used on gifted tests, so test day is not a surprise.',
+    meta: '1,576 puzzles · grades 1 to 4'
+  }
+];
+
+export const LIVE_ROOMS = ROOMS.filter((r) => r.status === 'live');
+export const roomById = (id) => ROOMS.find((r) => r.id === id) || null;
+
+/* ------------------------------------------------------------------ */
+/* Rendering                                                           */
+/* ------------------------------------------------------------------ */
+
+const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => (
+  { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]
+));
+
+/** One room, as a card. A 'soon' room is a div, so it cannot be clicked. */
+export function roomCard(room) {
+  const soon = room.status !== 'live';
+  const tag = soon ? 'div' : 'a';
+  const attrs = soon ? '' : ` href="${room.href}"`;
+  return `<${tag} class="cz-room cz-room--${room.hue}${soon ? ' is-soon' : ''}"${attrs}>
+      <span class="cz-room__pic">${creature(room.creature)}</span>
+      <span class="cz-room__text">
+        <span class="cz-room__name">${esc(room.name)}</span>
+        <span class="cz-room__blurb">${esc(room.blurb)}</span>
+        <span class="cz-room__meta">${soon ? 'Being built' : esc(room.meta)}</span>
+      </span>
+      ${soon ? '' : '<span class="cz-room__go" aria-hidden="true">&rarr;</span>'}
+    </${tag}>`;
+}
+
+export function roomGrid(rooms = ROOMS) {
+  return `<div class="cz-rooms">${rooms.map(roomCard).join('')}</div>`;
+}
+
+export default { ROOMS, LIVE_ROOMS, roomById, roomCard, roomGrid, creature, CREATURES };

@@ -183,6 +183,18 @@
   --cz-flamingo-soft:   #FCE6EE;
   --cz-flamingo-line:   #EBADC4;
 
+  /* Text on a tinted room card. The section colour itself measured between
+     3.92:1 and 4.36:1 against its own soft tint -- below AA on the room's
+     name, which is the one word that has to be readable. */
+  --cz-mango-ink:    #AF5325;
+  --cz-honey-ink:    #8F6C1B;
+  --cz-leaf-ink:    #318041;
+  --cz-jade-ink:    #287F6A;
+  --cz-lagoon-ink:    #277894;
+  --cz-sky-ink:    #386AC1;
+  --cz-orchid-ink:    #914EB3;
+  --cz-flamingo-ink:    #BD3768;
+
   --gp-line:          #E2DCCF;
   --gp-line-strong:   #C9C0AE;
   --gp-focus:         #1E6B96;   /* focus ring, distinct from all states */
@@ -337,6 +349,15 @@
     --cz-flamingo:        #DA5E8B;
     --cz-flamingo-soft:   #2D1820;
     --cz-flamingo-line:   #623747;
+
+    --cz-mango-ink:    #DD6528;
+    --cz-honey-ink:    #B58619;
+    --cz-leaf-ink:    #32A348;
+    --cz-jade-ink:    #28A182;
+    --cz-lagoon-ink:    #2697BC;
+    --cz-sky-ink:    #5586D9;
+    --cz-orchid-ink:    #AA6ACB;
+    --cz-flamingo-ink:    #D95887;
 
     --gp-line:          #333944;
     --gp-line-strong:   #48505D;
@@ -2313,3 +2334,192 @@ button, a, label, summary, [role="button"] {
 }
 .gp-typerow { max-width: 560px; margin: 0 auto var(--gp-space-2); }
 .gp-typehint { text-align: center; margin: 0 0 var(--gp-space-2); font-size: var(--gp-text-sm); }
+
+/* ====================================================================
+   Rooms — the sections of the zoo
+   ====================================================================
+   A room card is the main thing a child touches on the home page, so it is
+   built to be aimed at rather than read: a big creature, a short name, and a
+   whole card that is the tap target. Minimum height is well past the 44px
+   guideline because the hand doing the tapping is six years old.
+
+   Colour comes from the palette tokens, which already carry a light and a
+   dark value, so none of this needs a dark-theme override.
+   ==================================================================== */
+
+.cz-rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gp-space-5);
+}
+
+.cz-room {
+  --room: var(--gp-accent);
+  --room-soft: var(--gp-accent-soft);
+  --room-line: var(--gp-accent-line);
+  --room-ink: var(--gp-accent-strong);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--gp-space-4);
+  min-height: 128px;
+  padding: var(--gp-space-5);
+  border: 2px solid var(--room-line);
+  border-radius: var(--gp-radius-xl);
+  background: var(--room-soft);
+  text-decoration: none;
+  color: var(--gp-ink);
+  transition: transform var(--gp-dur-fast) var(--gp-ease),
+              box-shadow var(--gp-dur-fast) var(--gp-ease);
+}
+
+.cz-room:hover,
+.cz-room:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--gp-shadow-2);
+}
+.cz-room:active { transform: translateY(0) scale(0.99); }
+
+.cz-room__pic {
+  display: grid;
+  place-items: center;
+  width: 76px; height: 76px;
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  border: 2px solid var(--room-line);
+  flex: none;
+}
+.cz-creature { width: 56px; height: 56px; display: block; }
+
+.cz-room__text { display: grid; gap: 3px; min-width: 0; }
+.cz-room__name {
+  font-size: var(--gp-text-lg);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--room-ink);
+}
+.cz-room__blurb {
+  font-size: var(--gp-text-sm);
+  line-height: var(--gp-leading-snug);
+  color: var(--gp-ink-soft);
+}
+.cz-room__meta {
+  font-size: var(--gp-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gp-ink-muted);
+}
+.cz-room__go {
+  font-size: 26px;
+  line-height: 1;
+  color: var(--room);
+  transition: transform var(--gp-dur-fast) var(--gp-ease);
+}
+.cz-room:hover .cz-room__go { transform: translateX(4px); }
+
+/* A room that does not exist yet: visible so the zoo looks like it is growing,
+   but plainly not a door you can open. */
+.cz-room.is-soon {
+  background: var(--gp-surface-2);
+  border-color: var(--gp-line);
+  border-style: dashed;
+  cursor: default;
+}
+.cz-room.is-soon .cz-room__name { color: var(--gp-ink-muted); }
+.cz-room.is-soon .cz-creature { opacity: 0.45; }
+
+/* One class per palette hue. Adding a section means adding an entry to ROOMS
+   and, if it uses a new hue, three lines here. */
+.cz-room--mango    { --room: var(--cz-mango);    --room-soft: var(--cz-mango-soft);    --room-line: var(--cz-mango-line); --room-ink: var(--cz-mango-ink); }
+.cz-room--honey    { --room: var(--cz-honey);    --room-soft: var(--cz-honey-soft);    --room-line: var(--cz-honey-line); --room-ink: var(--cz-honey-ink); }
+.cz-room--leaf     { --room: var(--cz-leaf);     --room-soft: var(--cz-leaf-soft);     --room-line: var(--cz-leaf-line); --room-ink: var(--cz-leaf-ink); }
+.cz-room--jade     { --room: var(--cz-jade);     --room-soft: var(--cz-jade-soft);     --room-line: var(--cz-jade-line); --room-ink: var(--cz-jade-ink); }
+.cz-room--lagoon   { --room: var(--cz-lagoon);   --room-soft: var(--cz-lagoon-soft);   --room-line: var(--cz-lagoon-line); --room-ink: var(--cz-lagoon-ink); }
+.cz-room--sky      { --room: var(--cz-sky);      --room-soft: var(--cz-sky-soft);      --room-line: var(--cz-sky-line); --room-ink: var(--cz-sky-ink); }
+.cz-room--orchid   { --room: var(--cz-orchid);   --room-soft: var(--cz-orchid-soft);   --room-line: var(--cz-orchid-line); --room-ink: var(--cz-orchid-ink); }
+.cz-room--flamingo { --room: var(--cz-flamingo); --room-soft: var(--cz-flamingo-soft); --room-line: var(--cz-flamingo-line); --room-ink: var(--cz-flamingo-ink); }
+
+/* The welcome band. Deep is the one surface the brand orange may not sit on as
+   text, so everything here uses the on-deep tokens. */
+.cz-welcome {
+  background: var(--cz-deep);
+  border-radius: var(--gp-radius-xl);
+  padding: var(--gp-space-8) var(--gp-space-6);
+  display: grid;
+  gap: var(--gp-space-3);
+}
+.cz-welcome__eyebrow {
+  font-size: var(--gp-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--cz-on-deep-accent);
+  margin: 0;
+}
+.cz-welcome__title {
+  font-size: var(--gp-text-3xl);
+  line-height: var(--gp-leading-tight);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--cz-on-deep);
+  margin: 0;
+}
+.cz-welcome__lede {
+  font-size: var(--gp-text-md);
+  line-height: var(--gp-leading-snug);
+  color: var(--cz-on-deep-muted);
+  margin: 0;
+  max-width: 54ch;
+}
+
+.cz-sectionhead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--gp-space-4);
+  flex-wrap: wrap;
+}
+.cz-sectionhead h2 { margin: 0; font-size: var(--gp-text-xl); }
+.cz-sectionhead p { margin: 0; color: var(--gp-ink-muted); font-size: var(--gp-text-sm); }
+
+/* The room's own banner, shown at the top of a section page. */
+/* No --room defaults here. They would sit later in the file than the hue
+   classes at equal specificity and quietly win, which painted the purple Test
+   Practice banner in the brand orange. Fallbacks go at the point of use. */
+.cz-roomhead {
+  display: flex;
+  align-items: center;
+  gap: var(--gp-space-4);
+  padding: var(--gp-space-5);
+  border: 2px solid var(--room-line, var(--gp-accent-line));
+  border-radius: var(--gp-radius-xl);
+  background: var(--room-soft, var(--gp-accent-soft));
+}
+.cz-roomhead__pic {
+  display: grid; place-items: center;
+  width: 68px; height: 68px; flex: none;
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  border: 2px solid var(--room-line, var(--gp-accent-line));
+}
+/* --room-ink, not --room: this heading sits on the tint, where the plain
+   section colour measures below AA. */
+.cz-roomhead h1 { margin: 0; font-size: var(--gp-text-2xl);
+  color: var(--room-ink, var(--gp-accent-strong)); }
+.cz-roomhead p { margin: 3px 0 0; color: var(--gp-ink-soft); font-size: var(--gp-text-sm); }
+
+@media (max-width: 560px) {
+  .cz-room { min-height: 112px; padding: var(--gp-space-4); gap: var(--gp-space-3); }
+  .cz-room__pic { width: 62px; height: 62px; }
+  .cz-creature { width: 46px; height: 46px; }
+  .cz-room__go { display: none; }
+  .cz-welcome { padding: var(--gp-space-6) var(--gp-space-5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cz-room, .cz-room__go { transition: none; }
+  .cz-room:hover, .cz-room:focus-visible { transform: none; }
+  .cz-room:hover .cz-room__go { transform: none; }
+}
