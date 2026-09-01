@@ -117,7 +117,7 @@
   --gp-on-accent:     #FFFFFF;
 
   /* --- Brand ---------------------------------------------------------- */
-  --gp-accent:        #C05C28;   /* on white text    4.7:1  AA           */
+  --gp-accent:        #BA5828;   /* on cream page    4.50:1 AA           */
   --gp-accent-strong: #9A4519;
   --gp-accent-soft:   #FBEDE4;
   --gp-accent-line:   #E9C4AC;
@@ -134,6 +134,45 @@
   --gp-retry:         #9A6410;   /* amber, never red. on white 4.9:1 AA  */
   --gp-retry-soft:    #FBF0DC;
   --gp-retry-line:    #E4C489;
+
+
+  /* --- CurioZoo palette ------------------------------------------------
+     Eight hues, one per section, spread far enough apart that no two can be
+     confused. Every value was searched until it clears AA 4.5:1 on BOTH the
+     cream page and a white card -- cream is the harder of the two, which is
+     what the old accent failed against.
+
+     Deep is the contrast to the orange. Hue alone was not enough: tuned only
+     against the background, Mango and Lagoon landed on the same lightness and
+     measured 1.00:1 against each other. Deep is 3.0:1 against Mango, so the
+     pair reads as a pair, including without colour vision. */
+  --cz-deep:         #0A303D;   /* white on it        13.97:1  AAA          */
+  --cz-deep-soft:    #E6F1F5;
+  --cz-deep-line:    #B9D5DE;
+  --cz-mango:        #BA5828;
+  --cz-mango-soft:   #FEEDE4;
+  --cz-mango-line:   #F0C0A8;
+  --cz-honey:        #926F1C;
+  --cz-honey-soft:   #FEF6E4;
+  --cz-honey-line:   #F1DBA7;
+  --cz-leaf:        #328442;
+  --cz-leaf-soft:   #E7FBEB;
+  --cz-leaf-line:   #B3E6BD;
+  --cz-jade:        #29826C;
+  --cz-jade-soft:   #E6FCF6;
+  --cz-jade-line:   #AFE9DB;
+  --cz-lagoon:        #297D9A;
+  --cz-lagoon-soft:   #E5F7FD;
+  --cz-lagoon-line:   #ACDCEC;
+  --cz-sky:        #4173C8;
+  --cz-sky-soft:   #E6EEFC;
+  --cz-sky-line:   #ADC4EB;
+  --cz-orchid:        #995AB8;
+  --cz-orchid-soft:   #F4E8FA;
+  --cz-orchid-line:   #D4B5E3;
+  --cz-flamingo:        #C84374;
+  --cz-flamingo-soft:   #FCE6EE;
+  --cz-flamingo-line:   #EBADC4;
 
   --gp-line:          #E2DCCF;
   --gp-line-strong:   #C9C0AE;
@@ -255,6 +294,37 @@
     --gp-retry:         #E8B968;   /* on --gp-surface  9.3:1  AAA        */
     --gp-retry-soft:    #33270F;
     --gp-retry-line:    #6A5124;
+
+
+    /* --- CurioZoo palette, dark. Same hues, lifted until each clears AA on
+       the dark card, which is the lighter and therefore harder surface. */
+    --cz-deep:         #184353;
+    --cz-deep-soft:    #0E2831;
+    --cz-deep-line:    #2A5A6C;
+    --cz-mango:        #DD6528;
+    --cz-mango-soft:   #2D1F18;
+    --cz-mango-line:   #624537;
+    --cz-honey:        #AD8118;
+    --cz-honey-soft:   #2D2718;
+    --cz-honey-line:   #625537;
+    --cz-leaf:        #309C45;
+    --cz-leaf-soft:   #182D1C;
+    --cz-leaf-line:   #376240;
+    --cz-jade:        #26997C;
+    --cz-jade-soft:   #182D28;
+    --cz-jade-line:   #376257;
+    --cz-lagoon:        #2593B7;
+    --cz-lagoon-soft:   #18282D;
+    --cz-lagoon-line:   #375762;
+    --cz-sky:        #5888D9;
+    --cz-sky-soft:   #18202D;
+    --cz-sky-line:   #374762;
+    --cz-orchid:        #AD6FCD;
+    --cz-orchid-soft:   #26182D;
+    --cz-orchid-line:   #543762;
+    --cz-flamingo:        #DA5E8B;
+    --cz-flamingo-soft:   #2D1820;
+    --cz-flamingo-line:   #623747;
 
     --gp-line:          #333944;
     --gp-line-strong:   #48505D;

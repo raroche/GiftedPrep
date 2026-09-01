@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -6 372 92" width="372" height="92"
+     role="img" aria-label="CurioZoo">
+  <title>CurioZoo</title>
+  <path d="M 40.12 31.98 A 22 22 0 1 0 40.12 68.02" stroke="var(--cz-c, #1E6B96)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 67.5 42 V 57 A 15 15 0 0 0 97.5 57 V 72" stroke="var(--cz-u, #2F7D4F)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 115.5 42 V 72 M 115.5 54 Q 115.5 42 131.5 42" stroke="var(--cz-r, #C05C28)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 149.5 42 V 72" stroke="var(--cz-i, #C9922B)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="149.5" cy="29" r="5.5" fill="var(--cz-i, #C9922B)"/>
+  <circle cx="182.5" cy="57" r="15" stroke="var(--cz-o, #7B4E8E)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <path d="M 215.5 28 H 249.5 L 215.5 72 H 249.5" stroke="var(--cz-gold, #E0A33C)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="239.3" cy="41.2" r="4.2" fill="var(--cz-spot, #A8631A)"/>
+  <circle cx="232.5" cy="50" r="4.6" fill="var(--cz-spot, #A8631A)"/>
+  <circle cx="225.7" cy="58.8" r="4.0" fill="var(--cz-spot, #A8631A)"/>
+  <g transform="rotate(-10 261 16)">
+    <ellipse cx="246" cy="9" rx="6" ry="4.4" fill="var(--cz-gold, #E0A33C)" transform="rotate(-30 246 9)"/>
+    <rect x="244" y="5.5" width="34" height="21.5" rx="10.7" fill="var(--cz-gold, #E0A33C)"/>
+  </g>
+  <path d="M 251 7.5 L 249.5 1 M 261.5 6.5 L 263 0" stroke="var(--cz-gold, #E0A33C)" stroke-width="3.6"
+        stroke-linecap="round" fill="none"/>
+  <circle cx="249.2" cy="0.7" r="3.2" fill="var(--cz-spot, #A8631A)"/>
+  <circle cx="263.3" cy="-0.3" r="3.2" fill="var(--cz-spot, #A8631A)"/>
+  <circle cx="262" cy="14.5" r="3.1" fill="#2B2926"/>
+  <circle cx="263.2" cy="13.3" r="1.15" fill="#FFFFFF"/>
+  <circle cx="274.5" cy="20" r="1.6" fill="var(--cz-spot, #A8631A)"/>
+  <circle cx="282.5" cy="57" r="15" stroke="var(--cz-o2, #26707C)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="318.5" cy="42.5" r="8.2" fill="var(--cz-bear, #3D7EA6)"/>
+  <circle cx="342.5" cy="42.5" r="8.2" fill="var(--cz-bear, #3D7EA6)"/>
+  <circle cx="318.5" cy="42.5" r="3.7" fill="var(--cz-ear, #8FBEDA)"/>
+  <circle cx="342.5" cy="42.5" r="3.7" fill="var(--cz-ear, #8FBEDA)"/>
+  <circle cx="330.5" cy="57" r="15" stroke="var(--cz-bear, #3D7EA6)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
