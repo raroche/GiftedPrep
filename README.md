@@ -81,7 +81,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Nothing is collected** | No account, no analytics, no third-party requests, no telemetry. The only network traffic is the site fetching its own question files from its own domain. Progress lives in `localStorage` and is never uploaded |
 | **Read-aloud stays on the device** | Voices are chosen device-first. Some browsers ship cloud-backed "Online" voices that send text to a server; those are used only if the device offers no voice of its own |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
-| **Fun and games** | A section for games and memorising. First one is Name the Flag: all 250 country flags, with a vault of flags that no longer exist, opened by a perfect round |
+| **Fun and games** | Games for memorising. Name the Flag (250 flags, vault of flags that no longer exist) and Name the Country (242 outlines, four choices or type it in English or Spanish, vault of shapes that look like other things) |
 | **Math Lab** | A separate section for advanced maths, grades 1 to 6. 86 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, pi, three unsolved problems) and number skills |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
@@ -146,14 +146,35 @@ flag Libya flew for 34 years. One is shown, and the wrong answers are chosen to
 be genuinely tempting. The Ottoman flag is offered against Turkey, Tunisia and
 Azerbaijan, which all use a crescent and star.
 
-Flags are bundled in the repository rather than loaded from a CDN, because the
-site's own Content-Security-Policy is `img-src 'self'` and a remote flag would
-be blocked. Country flags come from [flag-icons](https://github.com/lipis/flag-icons)
+**Name the Country.** The same shape of game with country outlines instead of
+flags, and one real difference: answer from four choices, or **type the name**,
+which is much harder. A typed answer is accepted in English and Spanish and
+under the names people actually use, so USA, US, United States, The United
+States and Estados Unidos are all the same answer, and Holland, Burma, UK and
+Côte d'Ivoire spelled without its accents all count. Those name lists are taken
+from a dataset rather than written by hand, and a checker proves no two
+countries can be named by the same typed string. Getting it wrong by naming a
+different real country says which one you named.
+
+A perfect round opens a vault of countries famous for looking like something
+else: Italy the boot, Chile the ribbon, Croatia the boomerang, Australia the
+scruffy dog. The question there is what the shape resembles, not which country
+it is, so the vault is a different puzzle rather than more of the same.
+
+Flags and outlines are bundled in the repository rather than loaded from a CDN,
+because the site's own Content-Security-Policy is `img-src 'self'` and a remote
+image would be blocked. Outlines are injected inline rather than used as an
+`<img>`, since an `<img>` cannot inherit the page colour and these files are a
+single silhouette that would otherwise be black on a black page. Country flags come from [flag-icons](https://github.com/lipis/flag-icons)
 (MIT), names and regions from the world-countries dataset, and the historical
 flags from Wikimedia Commons, where every one used here is public domain.
-`tools/flagcheck.mjs` checks the join: every country has a real image file,
-every bundled image is used, no two countries share a name, and every vault
-answer matches the flag it is shown against.
+Country outlines come from [mapsicon](https://github.com/djaiss/mapsicon) by
+Regis Freyd. It carries no standard licence: its terms are "do what you want
+with them as long as you mention me" and no reselling, so it is credited here
+and in the data file. `tools/flagcheck.mjs` and `tools/shapecheck.mjs` check
+the join: every country has a real image file, every bundled image is used, no
+two countries share a name or a typed answer, and every vault answer matches
+the picture it is shown against.
 
 ## Math Lab
 
@@ -327,7 +348,8 @@ GiftedPrep/
 ├── assets/
 │   ├── css/design-system.css   tokens, components, light + dark, print
 │   ├── img/                    favicon, touch icon, social card
-│   │   └── flags/              250 country flags plus 16 historical ones
+│   │   ├── flags/              250 country flags plus 16 historical ones
+│   │   └── shapes/             242 country outlines
 │   └── js/
 │       ├── app.js              state, router, event wiring
 │       └── modules/
@@ -340,7 +362,8 @@ GiftedPrep/
 │           ├── icons.js        inline SVG icon set
 │           ├── parents.js      the Parent Guide
 │           ├── mathlab.js      Math Lab lessons and exercise engine
-│           └── flags.js        the flag game
+│           ├── flags.js        the flag game
+│           └── shapes.js       the country outline game
 ├── data/
 │   ├── manifest.json           tests, grades, category index
 │   ├── cogat/  nnat/  olsat/   one JSON file per category
@@ -352,6 +375,7 @@ GiftedPrep/
     ├── mathcheck.mjs           checks the Math Lab data
     ├── mathverify.mjs          recomputes every Math Lab answer from scratch
     ├── flagcheck.mjs           checks the flag data against the image files
+    ├── shapecheck.mjs          checks the outline data and typed-answer names
     ├── serve.py                dev server with the production CSP
     └── _authoring.py           helpers used to write the JSON by hand
 ```

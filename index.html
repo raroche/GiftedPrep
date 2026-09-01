@@ -352,6 +352,34 @@
     </div>
   </section>
 
+  <!-- ============================================================== -->
+  <!-- Fun: country shape setup and game                              -->
+  <!-- ============================================================== -->
+  <section class="gp-screen" id="screen-shapesetup" aria-labelledby="shapesetup-title">
+    <div class="gp-container">
+      <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
+      <h1 class="gp-page-title" id="shapesetup-title">Name the Country</h1>
+      <p class="gp-page-lede">Every country outline. Choose how many, which ones, and how hard.</p>
+      <div class="gp-card gp-card--setup" id="gp-shape-setup"></div>
+    </div>
+  </section>
+
+  <section class="gp-screen" id="screen-shapegame" aria-labelledby="shapegame-title">
+    <div class="gp-container">
+      <div class="gp-flagbar">
+        <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun/shapes">&larr; Change the round</a>
+        <p class="gp-flagbar__score">
+          <span class="gp-tally gp-tally--right"><span aria-hidden="true">&#10003;</span>
+            <strong data-shape-right>0</strong><span class="gp-sr-only">right</span></span>
+          <span class="gp-tally gp-tally--wrong"><span aria-hidden="true">&#10007;</span>
+            <strong data-shape-wrong>0</strong><span class="gp-sr-only">wrong</span></span>
+        </p>
+      </div>
+      <h1 class="gp-sr-only" id="shapegame-title">Name the country from its shape</h1>
+      <div id="gp-shape-body" aria-live="polite"></div>
+    </div>
+  </section>
+
   <section class="gp-screen" id="screen-error" aria-labelledby="error-title">
     <div class="gp-container gp-stack gp-center">
       <h1 class="gp-page-title" id="error-title">Something did not load</h1>

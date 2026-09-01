@@ -18,6 +18,7 @@ import { renderParentGuide } from './modules/parents.js';
 import * as mathlab from './modules/mathlab.js';
 import { applyStyles } from './modules/style.js';
 import * as flags from './modules/flags.js';
+import * as shapes from './modules/shapes.js';
 
 /* ------------------------------------------------------------------ */
 /* State                                                               */
@@ -37,6 +38,12 @@ const state = {
   flags: {
     data: null,
     setup: { count: 10, mode: 'random', continents: [] },
+    round: null
+  },
+  /* The shape game. `pick` is the answering modality: four choices, or typed. */
+  shapes: {
+    data: null,
+    setup: { count: 10, mode: 'random', continents: [], pick: 'choice' },
     round: null
   },
   math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0, crossed: new Set(), shift: 0, nim: null, doors: null }
@@ -117,7 +124,7 @@ function speakQuestion() {
 /* ------------------------------------------------------------------ */
 
 const SCREENS = ['home', 'tests', 'categories', 'quiz', 'results', 'parents', 'math', 'mathtopic',
-  'fun', 'flagsetup', 'flaggame', 'error'];
+  'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame', 'error'];
 
 function showScreen(name) {
   SCREENS.forEach((s) => {
@@ -1142,7 +1149,9 @@ function stepExercise(delta) {
 
 const FUN_GAMES = [
   { id: 'flags', icon: '🚩', name: 'Name the Flag',
-    sub: 'Every flag in the world, and a locked vault of flags that no longer exist.' }
+    sub: 'Every flag in the world, and a locked vault of flags that no longer exist.' },
+  { id: 'shapes', icon: '🗺️', name: 'Name the Country',
+    sub: 'Guess the country from its outline. Pick from four, or type it and make it hard.' }
 ];
 
 function renderFunHub() {
@@ -1157,6 +1166,7 @@ function renderFunHub() {
 
 async function renderFun(game, step) {
   if (!game) { renderFunHub(); return; }
+  if (game === 'shapes') { await renderShapes(step); return; }
   if (game !== 'flags') { renderFunHub(); return; }
   try {
     if (!state.flags.data) state.flags.data = await flags.loadFlags();
@@ -1299,6 +1309,174 @@ function answerVault(pick) {
 }
 
 /* ------------------------------------------------------------------ */
+/* Fun: name the country from its shape                                */
+/* ------------------------------------------------------------------ */
+
+async function renderShapes(step) {
+  try {
+    if (!state.shapes.data) state.shapes.data = await shapes.loadShapes();
+  } catch (err) {
+    console.error(err);
+    showError('The country shapes could not be loaded.');
+    return;
+  }
+  if (step === 'play' && state.shapes.round) { await drawShapeQuestion(); return; }
+  drawShapeSetup();
+}
+
+function drawShapeSetup() {
+  $('#gp-shape-setup').innerHTML = shapes.renderSetup(state.shapes.data, state.shapes.setup);
+  paint();
+  showScreen('shapesetup');
+}
+
+function startShapeRound() {
+  const setup = state.shapes.setup;
+  const list = shapes.buildRound(state.shapes.data, setup);
+  if (!list.length) return;
+  state.shapes.round = {
+    list, index: 0, right: 0, wrong: 0, answered: false,
+    pick: setup.pick, vault: null, vaultDone: false
+  };
+  location.hash = '#/fun/shapes/play';
+  drawShapeQuestion();
+}
+
+function shapeScore() {
+  const r = state.shapes.round;
+  $('[data-shape-right]').textContent = r.right;
+  $('[data-shape-wrong]').textContent = r.wrong;
+}
+
+async function drawShapeQuestion() {
+  const r = state.shapes.round;
+  if (!r) { drawShapeSetup(); return; }
+  if (r.index >= r.list.length) { await drawShapeResults(); return; }
+  const country = r.list[r.index];
+  r.answered = false;
+  showScreen('shapegame');
+  $('#gp-shape-body').innerHTML = '<p class="gp-muted">Loading the outline…</p>';
+  let svg;
+  try { svg = await shapes.shapeSvg(country.code); }
+  catch (err) { console.error(err); showError('That outline could not be loaded.'); return; }
+  const choices = r.pick === 'choice' ? shapes.makeChoices(country, state.shapes.data) : [];
+  $('#gp-shape-body').innerHTML = shapes.renderQuestion(svg, choices, r.index, r.list.length, r.pick);
+  shapeScore();
+  const box = $('#gp-shape-body [data-shapetyped]');
+  if (box) box.focus({ preventScroll: true });
+}
+
+/** Finish one shape, however it was answered. */
+function settleShape(right, saidWhat) {
+  const r = state.shapes.round;
+  const country = r.list[r.index];
+  r.answered = true;
+  if (right) r.right += 1; else r.wrong += 1;
+  shapeScore();
+
+  $$('#gp-shape-body [data-shapeanswer]').forEach((b) => {
+    b.disabled = true;
+    if (b.dataset.shapeanswer === country.code) b.classList.add('is-correct');
+    else if (b.dataset.shapeanswer === saidWhat) b.classList.add('is-incorrect');
+  });
+  $$('#gp-shape-body .gp-choice.is-correct .gp-choice__mark').forEach((m) => { m.innerHTML = icon('check', { size: 20 }); });
+  $$('#gp-shape-body .gp-choice.is-incorrect .gp-choice__mark').forEach((m) => { m.innerHTML = icon('cross', { size: 20 }); });
+  const typed = $('#gp-shape-body [data-shapetyped]');
+  if (typed) typed.disabled = true;
+  const checkBtn = $('#gp-shape-body [data-shapecheck]');
+  if (checkBtn) checkBtn.disabled = true;
+
+  const say = document.createElement('p');
+  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`;
+  /* Naming another real country is a different kind of wrong from a typo, and
+     saying which one turns a miss into something learned. */
+  say.textContent = right
+    ? `Yes. That is ${country.name}.`
+    : (saidWhat && saidWhat.namedCountry
+      ? `That is ${saidWhat.namedCountry}. This one is ${country.name}.`
+      : `No, that one is ${country.name}.`);
+  $('#gp-shape-body .gp-flagq').appendChild(say);
+
+  const next = document.createElement('button');
+  next.type = 'button';
+  next.className = 'gp-btn gp-btn--primary gp-btn--big';
+  next.dataset.action = 'shape-next';
+  next.textContent = r.index + 1 >= r.list.length ? 'See how you did →' : 'Next shape →';
+  $('#gp-shape-body .gp-flagq').appendChild(next);
+  next.focus({ preventScroll: true });
+}
+
+function answerShapeChoice(code) {
+  const r = state.shapes.round;
+  if (!r || r.answered) return;
+  settleShape(code === r.list[r.index].code, code);
+}
+
+function answerShapeTyped() {
+  const r = state.shapes.round;
+  if (!r || r.answered) return;
+  const box = $('#gp-shape-body [data-shapetyped]');
+  const said = (box.value || '').trim();
+  if (!said) { box.focus(); return; }
+  const country = r.list[r.index];
+  const right = shapes.matchesCountry(said, country);
+  const named = right ? null : shapes.whichCountry(said, state.shapes.data);
+  settleShape(right, named ? { namedCountry: named.name } : null);
+}
+
+async function drawShapeResults() {
+  const r = state.shapes.round;
+  const total = r.list.length;
+  const perfect = r.right === total && total > 0;
+  let vaultHtml = '';
+  if (perfect && !r.vaultDone) {
+    const pool = state.shapes.data.lookalikes;
+    r.vault = pool[Math.floor(Math.random() * pool.length)];
+    try { vaultHtml = shapes.renderVault(r.vault, await shapes.shapeSvg(r.vault.code)); }
+    catch (err) { console.error(err); r.vault = null; }
+  }
+  $('#gp-shape-body').innerHTML = `
+    <div class="gp-flagdone${perfect ? ' is-perfect' : ''}">
+      ${perfect ? '<div class="gp-confetti" aria-hidden="true">' +
+        Array.from({ length: 14 }, (_, i) => `<span data-style="--i:${i}"></span>`).join('') + '</div>' : ''}
+      <h2 class="gp-flagdone__head">${perfect ? 'Every single one.' : 'Round finished.'}</h2>
+      <p class="gp-flagdone__score"><strong>${r.right}</strong> right,
+        <strong>${r.wrong}</strong> wrong, out of ${total}.</p>
+      ${vaultHtml}
+      ${!perfect ? `<p class="gp-muted">Name every shape in a round without a single mistake and
+        something locked opens up.</p>` : ''}
+      <div class="gp-flagdone__again">
+        <button type="button" class="gp-btn gp-btn--primary" data-action="shape-again">Play again</button>
+        <a class="gp-btn gp-btn--ghost" href="#/fun/shapes">Change the round</a>
+      </div>
+    </div>`;
+  paint();
+  shapeScore();
+  showScreen('shapegame');
+}
+
+function answerShapeVault(pick) {
+  const r = state.shapes.round;
+  if (!r || !r.vault || r.vaultDone) return;
+  r.vaultDone = true;
+  const entry = r.vault;
+  const right = Number(pick) === entry.answer;
+  $$('#gp-shape-body [data-shapevault]').forEach((b) => {
+    b.disabled = true;
+    if (Number(b.dataset.shapevault) === entry.answer) b.classList.add('is-correct');
+    else if (Number(b.dataset.shapevault) === Number(pick)) b.classList.add('is-incorrect');
+  });
+  $$('#gp-shape-body .gp-choice.is-correct .gp-choice__mark').forEach((m) => { m.innerHTML = icon('check', { size: 20 }); });
+  $$('#gp-shape-body .gp-choice.is-incorrect .gp-choice__mark').forEach((m) => { m.innerHTML = icon('cross', { size: 20 }); });
+  const box = document.createElement('div');
+  box.className = `gp-vault__told ${right ? 'is-right' : 'is-wrong'}`;
+  box.innerHTML = `<p class="gp-vault__name">${right ? 'Got it. ' : ''}${escapeHtml(entry.country)}
+      &mdash; ${escapeHtml(entry.thing.toLowerCase())}.</p>
+    <p class="gp-vault__story">${escapeHtml(entry.story)}</p>`;
+  $('#gp-shape-body .gp-vault').appendChild(box);
+}
+
+/* ------------------------------------------------------------------ */
 /* Router                                                              */
 /* ------------------------------------------------------------------ */
 
@@ -1394,6 +1572,38 @@ function onClick(ev) {
     return;
   }
 
+  /* ---- country shape game ---- */
+  const sc = ev.target.closest('[data-shapecount]');
+  if (sc) { state.shapes.setup.count = sc.dataset.shapecount; drawShapeSetup(); return; }
+
+  const sp = ev.target.closest('[data-shapepick]');
+  if (sp) { state.shapes.setup.pick = sp.dataset.shapepick; drawShapeSetup(); return; }
+
+  const sm = ev.target.closest('[data-shapemode]');
+  if (sm) {
+    state.shapes.setup.mode = sm.dataset.shapemode;
+    if (sm.dataset.shapemode !== 'continent') state.shapes.setup.continents = [];
+    drawShapeSetup();
+    return;
+  }
+
+  const sk = ev.target.closest('[data-shapecont]');
+  if (sk) {
+    const id = sk.dataset.shapecont;
+    const on = state.shapes.setup.continents;
+    state.shapes.setup.continents = on.includes(id) ? on.filter((x) => x !== id) : on.concat(id);
+    drawShapeSetup();
+    return;
+  }
+
+  const sa = ev.target.closest('[data-shapeanswer]');
+  if (sa) { answerShapeChoice(sa.dataset.shapeanswer); return; }
+
+  if (ev.target.closest('[data-shapecheck]')) { answerShapeTyped(); return; }
+
+  const sv = ev.target.closest('[data-shapevault]');
+  if (sv) { answerShapeVault(sv.dataset.shapevault); return; }
+
   /* ---- flag game ---- */
   const fc = ev.target.closest('[data-flagcount]');
   if (fc) { state.flags.setup.count = fc.dataset.flagcount; drawFlagSetup(); return; }
@@ -1463,6 +1673,16 @@ function onClick(ev) {
   const action = ev.target.closest('[data-action]');
   if (!action) return;
   switch (action.dataset.action) {
+    case 'shape-start':
+      startShapeRound();
+      break;
+    case 'shape-next':
+      state.shapes.round.index += 1;
+      drawShapeQuestion();
+      break;
+    case 'shape-again':
+      startShapeRound();
+      break;
     case 'flag-start':
       startFlagRound();
       break;
@@ -1583,6 +1803,7 @@ async function boot() {
   /* Enter should submit the answer box, the way any small form behaves. */
   document.addEventListener('keydown', (ev) => {
     if (ev.key !== 'Enter') return;
+    if (ev.target.matches('[data-shapetyped]')) { ev.preventDefault(); answerShapeTyped(); return; }
     if (ev.target.matches('#gp-exercise [data-feed]')) { ev.preventDefault(); runMachine(); return; }
     if (!ev.target.matches('#gp-exercise [data-answer-input]')) return;
     ev.preventDefault();

@@ -2213,3 +2213,21 @@ button, a, label, summary, [role="button"] {
   background: var(--gp-retry-soft, var(--gp-surface-2));
 }
 .gp-warnbox p { margin: 0; }
+
+/* ---- country outlines ---- */
+
+/* The outlines are injected inline, not used as <img>, so currentColor works
+   and one rule can colour every shape correctly in both themes. */
+.gp-shapebox {
+  display: flex;
+  justify-content: center;
+  margin: var(--gp-space-4) 0 var(--gp-space-5);
+  color: var(--gp-fig-blue, #3b82c4);
+}
+.gp-shapefig {
+  width: min(300px, 72vw);
+  height: auto;
+  max-height: 46vh;
+}
+.gp-typerow { max-width: 560px; margin: 0 auto var(--gp-space-2); }
+.gp-typehint { text-align: center; margin: 0 0 var(--gp-space-2); font-size: var(--gp-text-sm); }

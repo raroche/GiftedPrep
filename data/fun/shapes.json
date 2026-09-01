@@ -1,0 +1,3667 @@
+{
+ "attribution": {
+  "shapes": "Country outline maps from mapsicon by Regis Freyd (djaiss). Its licence reads: do what you want with them as long as you mention me, and do not resell them. github.com/djaiss/mapsicon",
+  "names": "Country names, Spanish translations and alternate spellings from the world-countries dataset (mledoze/countries), ODbL"
+ },
+ "continents": [
+  {
+   "id": "africa",
+   "name": "Africa"
+  },
+  {
+   "id": "americas",
+   "name": "The Americas"
+  },
+  {
+   "id": "asia",
+   "name": "Asia"
+  },
+  {
+   "id": "europe",
+   "name": "Europe"
+  },
+  {
+   "id": "oceania",
+   "name": "Oceania"
+  },
+  {
+   "id": "antarctic",
+   "name": "Antarctic"
+  }
+ ],
+ "countries": [
+  {
+   "code": "af",
+   "name": "Afghanistan",
+   "es": "Afganistán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Afghanistan",
+    "Islamic Republic of Afghanistan",
+    "Afganistán",
+    "República Islámica de Afganistán",
+    "AF"
+   ]
+  },
+  {
+   "code": "al",
+   "name": "Albania",
+   "es": "Albania",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Albania",
+    "Republic of Albania",
+    "República de Albania",
+    "AL",
+    "Shqipëri",
+    "Shqipëria",
+    "Shqipnia"
+   ]
+  },
+  {
+   "code": "dz",
+   "name": "Algeria",
+   "es": "Argelia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Algeria",
+    "People's Democratic Republic of Algeria",
+    "Argelia",
+    "República Argelina Democrática y Popular",
+    "DZ",
+    "Dzayer",
+    "Algérie"
+   ]
+  },
+  {
+   "code": "as",
+   "name": "American Samoa",
+   "es": "Samoa Americana",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "American Samoa",
+    "Samoa Americana",
+    "AS",
+    "Amerika Sāmoa",
+    "Amelika Sāmoa",
+    "Sāmoa Amelika"
+   ]
+  },
+  {
+   "code": "ad",
+   "name": "Andorra",
+   "es": "Andorra",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Andorra",
+    "Principality of Andorra",
+    "Principado de Andorra",
+    "AD",
+    "Principat d'Andorra"
+   ]
+  },
+  {
+   "code": "ao",
+   "name": "Angola",
+   "es": "Angola",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Angola",
+    "Republic of Angola",
+    "República de Angola",
+    "AO",
+    "ʁɛpublika de an'ɡɔla"
+   ]
+  },
+  {
+   "code": "ai",
+   "name": "Anguilla",
+   "es": "Anguilla",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Anguilla",
+    "Anguila",
+    "AI"
+   ]
+  },
+  {
+   "code": "aq",
+   "name": "Antarctica",
+   "es": "Antártida",
+   "continent": "antarctic",
+   "un": false,
+   "names": [
+    "Antarctica",
+    "Antártida",
+    "AQ"
+   ]
+  },
+  {
+   "code": "ag",
+   "name": "Antigua and Barbuda",
+   "es": "Antigua y Barbuda",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Antigua and Barbuda",
+    "Antigua y Barbuda",
+    "AG"
+   ]
+  },
+  {
+   "code": "ar",
+   "name": "Argentina",
+   "es": "Argentina",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Argentina",
+    "Argentine Republic",
+    "República Argentina",
+    "AR"
+   ]
+  },
+  {
+   "code": "am",
+   "name": "Armenia",
+   "es": "Armenia",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Armenia",
+    "Republic of Armenia",
+    "República de Armenia",
+    "AM",
+    "Hayastan"
+   ]
+  },
+  {
+   "code": "aw",
+   "name": "Aruba",
+   "es": "Aruba",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Aruba",
+    "AW"
+   ]
+  },
+  {
+   "code": "au",
+   "name": "Australia",
+   "es": "Australia",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Australia",
+    "Commonwealth of Australia",
+    "Mancomunidad de Australia",
+    "AU"
+   ]
+  },
+  {
+   "code": "at",
+   "name": "Austria",
+   "es": "Austria",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Austria",
+    "Republic of Austria",
+    "República de Austria",
+    "AT",
+    "Osterreich",
+    "Oesterreich"
+   ]
+  },
+  {
+   "code": "az",
+   "name": "Azerbaijan",
+   "es": "Azerbaiyán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Azerbaijan",
+    "Republic of Azerbaijan",
+    "Azerbaiyán",
+    "República de Azerbaiyán",
+    "AZ",
+    "Azərbaycan Respublikası"
+   ]
+  },
+  {
+   "code": "bs",
+   "name": "Bahamas",
+   "es": "Bahamas",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Bahamas",
+    "Commonwealth of the Bahamas",
+    "Commonwealth de las Bahamas",
+    "BS"
+   ]
+  },
+  {
+   "code": "bh",
+   "name": "Bahrain",
+   "es": "Bahrein",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Bahrain",
+    "Kingdom of Bahrain",
+    "Bahrein",
+    "Reino de Bahrein",
+    "BH",
+    "Mamlakat al-Baḥrayn"
+   ]
+  },
+  {
+   "code": "bd",
+   "name": "Bangladesh",
+   "es": "Bangladesh",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Bangladesh",
+    "People's Republic of Bangladesh",
+    "República Popular de Bangladesh",
+    "BD",
+    "Gônôprôjatôntri Bangladesh"
+   ]
+  },
+  {
+   "code": "bb",
+   "name": "Barbados",
+   "es": "Barbados",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Barbados",
+    "BB"
+   ]
+  },
+  {
+   "code": "by",
+   "name": "Belarus",
+   "es": "Bielorrusia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Belarus",
+    "Republic of Belarus",
+    "Bielorrusia",
+    "República de Belarús",
+    "BY",
+    "Bielaruś"
+   ]
+  },
+  {
+   "code": "be",
+   "name": "Belgium",
+   "es": "Bélgica",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Belgium",
+    "Kingdom of Belgium",
+    "Bélgica",
+    "Reino de Bélgica",
+    "BE",
+    "België",
+    "Belgien",
+    "Belgique",
+    "Koninkrijk België",
+    "Royaume de Belgique",
+    "Königreich Belgien"
+   ]
+  },
+  {
+   "code": "bz",
+   "name": "Belize",
+   "es": "Belice",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Belize",
+    "Belice",
+    "BZ"
+   ]
+  },
+  {
+   "code": "bj",
+   "name": "Benin",
+   "es": "Benín",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Benin",
+    "Republic of Benin",
+    "República de Benin",
+    "BJ",
+    "République du Bénin"
+   ]
+  },
+  {
+   "code": "bm",
+   "name": "Bermuda",
+   "es": "Bermudas",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Bermuda",
+    "Bermudas",
+    "BM",
+    "The Islands of Bermuda",
+    "Somers Isles"
+   ]
+  },
+  {
+   "code": "bt",
+   "name": "Bhutan",
+   "es": "Bután",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Bhutan",
+    "Kingdom of Bhutan",
+    "Bután",
+    "Reino de Bután",
+    "BT"
+   ]
+  },
+  {
+   "code": "bo",
+   "name": "Bolivia",
+   "es": "Bolivia",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Bolivia",
+    "Plurinational State of Bolivia",
+    "Estado Plurinacional de Bolivia",
+    "BO",
+    "Buliwya",
+    "Wuliwya",
+    "Bolivia, Plurinational State of",
+    "Buliwya Mamallaqta",
+    "Wuliwya Suyu",
+    "Tetã Volívia"
+   ]
+  },
+  {
+   "code": "ba",
+   "name": "Bosnia and Herzegovina",
+   "es": "Bosnia y Herzegovina",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Bosnia and Herzegovina",
+    "Bosnia y Herzegovina",
+    "BA",
+    "Bosnia-Herzegovina"
+   ]
+  },
+  {
+   "code": "bw",
+   "name": "Botswana",
+   "es": "Botswana",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Botswana",
+    "Republic of Botswana",
+    "República de Botswana",
+    "BW",
+    "Lefatshe la Botswana"
+   ]
+  },
+  {
+   "code": "bv",
+   "name": "Bouvet Island",
+   "es": "Isla Bouvet",
+   "continent": "antarctic",
+   "un": false,
+   "names": [
+    "Bouvet Island",
+    "Isla Bouvet",
+    "BV",
+    "Bouvetøya"
+   ]
+  },
+  {
+   "code": "br",
+   "name": "Brazil",
+   "es": "Brasil",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Brazil",
+    "Federative Republic of Brazil",
+    "Brasil",
+    "República Federativa del Brasil",
+    "BR",
+    "República Federativa do Brasil"
+   ]
+  },
+  {
+   "code": "io",
+   "name": "British Indian Ocean Territory",
+   "es": "Territorio Británico del Océano Índico",
+   "continent": "africa",
+   "un": false,
+   "names": [
+    "British Indian Ocean Territory",
+    "Territorio Británico del Océano Índico",
+    "IO"
+   ]
+  },
+  {
+   "code": "vg",
+   "name": "British Virgin Islands",
+   "es": "Islas Vírgenes del Reino Unido",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "British Virgin Islands",
+    "Virgin Islands",
+    "Islas Vírgenes del Reino Unido",
+    "Islas Vírgenes",
+    "VG",
+    "Virgin Islands, British"
+   ]
+  },
+  {
+   "code": "bn",
+   "name": "Brunei",
+   "es": "Brunei",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Brunei",
+    "Nation of Brunei, Abode of Peace",
+    "Nación de Brunei, Morada de la Paz",
+    "BN",
+    "Brunei Darussalam",
+    "Nation of Brunei",
+    "the Abode of Peace"
+   ]
+  },
+  {
+   "code": "bg",
+   "name": "Bulgaria",
+   "es": "Bulgaria",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Bulgaria",
+    "Republic of Bulgaria",
+    "República de Bulgaria",
+    "BG"
+   ]
+  },
+  {
+   "code": "bf",
+   "name": "Burkina Faso",
+   "es": "Burkina Faso",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Burkina Faso",
+    "BF"
+   ]
+  },
+  {
+   "code": "bi",
+   "name": "Burundi",
+   "es": "Burundi",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Burundi",
+    "Republic of Burundi",
+    "República de Burundi",
+    "BI",
+    "Republika y'Uburundi",
+    "République du Burundi"
+   ]
+  },
+  {
+   "code": "kh",
+   "name": "Cambodia",
+   "es": "Camboya",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Cambodia",
+    "Kingdom of Cambodia",
+    "Camboya",
+    "Reino de Camboya",
+    "KH"
+   ]
+  },
+  {
+   "code": "cm",
+   "name": "Cameroon",
+   "es": "Camerún",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Cameroon",
+    "Republic of Cameroon",
+    "Camerún",
+    "República de Camerún",
+    "CM",
+    "République du Cameroun"
+   ]
+  },
+  {
+   "code": "ca",
+   "name": "Canada",
+   "es": "Canadá",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Canada",
+    "CA"
+   ]
+  },
+  {
+   "code": "cv",
+   "name": "Cape Verde",
+   "es": "Cabo Verde",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Cape Verde",
+    "Republic of Cabo Verde",
+    "Cabo Verde",
+    "República de Cabo Verde",
+    "CV"
+   ]
+  },
+  {
+   "code": "bq",
+   "name": "Caribbean Netherlands",
+   "es": "Caribe Neerlandés",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Caribbean Netherlands",
+    "Bonaire, Sint Eustatius and Saba",
+    "Caribe Neerlandés",
+    "Bonaire, San Eustaquio y Saba",
+    "BES islands"
+   ]
+  },
+  {
+   "code": "ky",
+   "name": "Cayman Islands",
+   "es": "Islas Caimán",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Cayman Islands",
+    "Islas Caimán",
+    "KY"
+   ]
+  },
+  {
+   "code": "cf",
+   "name": "Central African Republic",
+   "es": "República Centroafricana",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Central African Republic",
+    "República Centroafricana",
+    "CF",
+    "République centrafricaine"
+   ]
+  },
+  {
+   "code": "td",
+   "name": "Chad",
+   "es": "Chad",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Chad",
+    "Republic of Chad",
+    "República de Chad",
+    "TD",
+    "Tchad",
+    "République du Tchad"
+   ]
+  },
+  {
+   "code": "cl",
+   "name": "Chile",
+   "es": "Chile",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Chile",
+    "Republic of Chile",
+    "República de Chile",
+    "CL"
+   ]
+  },
+  {
+   "code": "cn",
+   "name": "China",
+   "es": "China",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "China",
+    "People's Republic of China",
+    "República Popular de China",
+    "CN",
+    "Zhōngguó",
+    "Zhonghua",
+    "Zhōnghuá Rénmín Gònghéguó"
+   ]
+  },
+  {
+   "code": "cx",
+   "name": "Christmas Island",
+   "es": "Isla de Navidad",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Christmas Island",
+    "Territory of Christmas Island",
+    "Isla de Navidad",
+    "Territorio de la Isla de Navidad",
+    "CX"
+   ]
+  },
+  {
+   "code": "cc",
+   "name": "Cocos (Keeling) Islands",
+   "es": "Islas Cocos o Islas Keeling",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Cocos (Keeling) Islands",
+    "Territory of the Cocos (Keeling) Islands",
+    "Islas Cocos o Islas Keeling",
+    "Territorio de los (Keeling) Islas Cocos",
+    "CC",
+    "Keeling Islands",
+    "Cocos Islands"
+   ]
+  },
+  {
+   "code": "co",
+   "name": "Colombia",
+   "es": "Colombia",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Colombia",
+    "Republic of Colombia",
+    "República de Colombia",
+    "CO"
+   ]
+  },
+  {
+   "code": "km",
+   "name": "Comoros",
+   "es": "Comoras",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Comoros",
+    "Union of the Comoros",
+    "Comoras",
+    "Unión de las Comoras",
+    "KM",
+    "Union des Comores",
+    "Udzima wa Komori",
+    "al-Ittiḥād al-Qumurī"
+   ]
+  },
+  {
+   "code": "ck",
+   "name": "Cook Islands",
+   "es": "Islas Cook",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Cook Islands",
+    "Islas Cook",
+    "CK",
+    "Kūki 'Āirani"
+   ]
+  },
+  {
+   "code": "cr",
+   "name": "Costa Rica",
+   "es": "Costa Rica",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Costa Rica",
+    "Republic of Costa Rica",
+    "República de Costa Rica",
+    "CR"
+   ]
+  },
+  {
+   "code": "hr",
+   "name": "Croatia",
+   "es": "Croacia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Croatia",
+    "Republic of Croatia",
+    "Croacia",
+    "República de Croacia",
+    "HR",
+    "Hrvatska",
+    "Republika Hrvatska"
+   ]
+  },
+  {
+   "code": "cu",
+   "name": "Cuba",
+   "es": "Cuba",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Cuba",
+    "Republic of Cuba",
+    "República de Cuba",
+    "CU"
+   ]
+  },
+  {
+   "code": "cw",
+   "name": "Curaçao",
+   "es": "Curazao",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Curaçao",
+    "Country of Curaçao",
+    "Curazao",
+    "País de Curazao",
+    "CW",
+    "Kòrsou",
+    "Land Curaçao",
+    "Pais Kòrsou"
+   ]
+  },
+  {
+   "code": "cy",
+   "name": "Cyprus",
+   "es": "Chipre",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Cyprus",
+    "Republic of Cyprus",
+    "Chipre",
+    "República de Chipre",
+    "CY",
+    "Kýpros",
+    "Kıbrıs",
+    "Kıbrıs Cumhuriyeti"
+   ]
+  },
+  {
+   "code": "cz",
+   "name": "Czechia",
+   "es": "Chequia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Czechia",
+    "Czech Republic",
+    "Chequia",
+    "República Checa",
+    "CZ",
+    "Česká republika",
+    "Česko"
+   ]
+  },
+  {
+   "code": "cd",
+   "name": "DR Congo",
+   "es": "Congo (Rep. Dem.)",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "DR Congo",
+    "Democratic Republic of the Congo",
+    "Congo (Rep. Dem.)",
+    "República Democrática del Congo",
+    "CD",
+    "Congo-Kinshasa",
+    "Congo, the Democratic Republic of the",
+    "Democratic Republic of Congo",
+    "DRC"
+   ]
+  },
+  {
+   "code": "dk",
+   "name": "Denmark",
+   "es": "Dinamarca",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Denmark",
+    "Kingdom of Denmark",
+    "Dinamarca",
+    "Reino de Dinamarca",
+    "DK",
+    "Danmark",
+    "Kongeriget Danmark"
+   ]
+  },
+  {
+   "code": "dj",
+   "name": "Djibouti",
+   "es": "Djibouti",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Djibouti",
+    "Republic of Djibouti",
+    "República de Djibouti",
+    "DJ",
+    "Jabuuti",
+    "Gabuuti",
+    "République de Djibouti",
+    "Gabuutih Ummuuno",
+    "Jamhuuriyadda Jabuuti"
+   ]
+  },
+  {
+   "code": "dm",
+   "name": "Dominica",
+   "es": "Dominica",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Dominica",
+    "Commonwealth of Dominica",
+    "Mancomunidad de Dominica",
+    "DM",
+    "Dominique",
+    "Wai‘tu kubuli"
+   ]
+  },
+  {
+   "code": "do",
+   "name": "Dominican Republic",
+   "es": "República Dominicana",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Dominican Republic",
+    "República Dominicana",
+    "DO"
+   ]
+  },
+  {
+   "code": "ec",
+   "name": "Ecuador",
+   "es": "Ecuador",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Ecuador",
+    "Republic of Ecuador",
+    "República del Ecuador",
+    "EC"
+   ]
+  },
+  {
+   "code": "eg",
+   "name": "Egypt",
+   "es": "Egipto",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Egypt",
+    "Arab Republic of Egypt",
+    "Egipto",
+    "República Árabe de Egipto",
+    "EG"
+   ]
+  },
+  {
+   "code": "sv",
+   "name": "El Salvador",
+   "es": "El Salvador",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "El Salvador",
+    "Republic of El Salvador",
+    "República de El Salvador",
+    "SV"
+   ]
+  },
+  {
+   "code": "gq",
+   "name": "Equatorial Guinea",
+   "es": "Guinea Ecuatorial",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Equatorial Guinea",
+    "Republic of Equatorial Guinea",
+    "Guinea Ecuatorial",
+    "República de Guinea Ecuatorial",
+    "GQ",
+    "République de Guinée équatoriale",
+    "República da Guiné Equatorial"
+   ]
+  },
+  {
+   "code": "er",
+   "name": "Eritrea",
+   "es": "Eritrea",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Eritrea",
+    "State of Eritrea",
+    "Estado de Eritrea",
+    "ER",
+    "Dawlat Iritriyá",
+    "ʾErtrā",
+    "Iritriyā"
+   ]
+  },
+  {
+   "code": "ee",
+   "name": "Estonia",
+   "es": "Estonia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Estonia",
+    "Republic of Estonia",
+    "República de Estonia",
+    "EE",
+    "Eesti",
+    "Eesti Vabariik"
+   ]
+  },
+  {
+   "code": "sz",
+   "name": "Eswatini",
+   "es": "Suazilandia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Eswatini",
+    "Kingdom of Eswatini",
+    "Suazilandia",
+    "Reino de eSwatini",
+    "SZ",
+    "Swaziland",
+    "weSwatini",
+    "Swatini",
+    "Ngwane",
+    "Umbuso weSwatini"
+   ]
+  },
+  {
+   "code": "et",
+   "name": "Ethiopia",
+   "es": "Etiopía",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Ethiopia",
+    "Federal Democratic Republic of Ethiopia",
+    "Etiopía",
+    "República Democrática Federal de Etiopía",
+    "ET",
+    "ʾĪtyōṗṗyā"
+   ]
+  },
+  {
+   "code": "fk",
+   "name": "Falkland Islands",
+   "es": "Islas Malvinas",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Falkland Islands",
+    "Islas Malvinas",
+    "FK",
+    "Falkland Islands (Malvinas)"
+   ]
+  },
+  {
+   "code": "fo",
+   "name": "Faroe Islands",
+   "es": "Islas Faroe",
+   "continent": "europe",
+   "un": false,
+   "names": [
+    "Faroe Islands",
+    "Islas Faroe",
+    "Islas Feroe",
+    "FO",
+    "Føroyar",
+    "Færøerne",
+    "Faeroe Islands"
+   ]
+  },
+  {
+   "code": "fj",
+   "name": "Fiji",
+   "es": "Fiyi",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Fiji",
+    "Republic of Fiji",
+    "Fiyi",
+    "República de Fiji",
+    "FJ",
+    "Viti",
+    "Matanitu ko Viti",
+    "Fijī Gaṇarājya"
+   ]
+  },
+  {
+   "code": "fi",
+   "name": "Finland",
+   "es": "Finlandia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Finland",
+    "Republic of Finland",
+    "Finlandia",
+    "República de Finlandia",
+    "FI",
+    "Suomi",
+    "Suomen tasavalta",
+    "Republiken Finland"
+   ]
+  },
+  {
+   "code": "fr",
+   "name": "France",
+   "es": "Francia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "France",
+    "French Republic",
+    "Francia",
+    "República francés",
+    "FR",
+    "République française"
+   ]
+  },
+  {
+   "code": "gf",
+   "name": "French Guiana",
+   "es": "Guayana Francesa",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "French Guiana",
+    "Guiana",
+    "Guayana Francesa",
+    "Guayana",
+    "GF",
+    "Guyane"
+   ]
+  },
+  {
+   "code": "pf",
+   "name": "French Polynesia",
+   "es": "Polinesia Francesa",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "French Polynesia",
+    "Polinesia Francesa",
+    "Polinesia francés",
+    "PF",
+    "Polynésie française",
+    "Pōrīnetia Farāni"
+   ]
+  },
+  {
+   "code": "tf",
+   "name": "French Southern and Antarctic Lands",
+   "es": "Tierras Australes y Antárticas Francesas",
+   "continent": "antarctic",
+   "un": false,
+   "names": [
+    "French Southern and Antarctic Lands",
+    "Territory of the French Southern and Antarctic Lands",
+    "Tierras Australes y Antárticas Francesas",
+    "Territorio del Francés Tierras australes y antárticas",
+    "TF",
+    "French Southern Territories"
+   ]
+  },
+  {
+   "code": "ga",
+   "name": "Gabon",
+   "es": "Gabón",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Gabon",
+    "Gabonese Republic",
+    "República de Gabón",
+    "GA",
+    "République Gabonaise"
+   ]
+  },
+  {
+   "code": "gm",
+   "name": "Gambia",
+   "es": "Gambia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Gambia",
+    "Republic of the Gambia",
+    "República de Gambia",
+    "GM"
+   ]
+  },
+  {
+   "code": "ge",
+   "name": "Georgia",
+   "es": "Georgia",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Georgia",
+    "GE",
+    "Sakartvelo"
+   ]
+  },
+  {
+   "code": "de",
+   "name": "Germany",
+   "es": "Alemania",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Germany",
+    "Federal Republic of Germany",
+    "Alemania",
+    "República Federal de Alemania",
+    "DE",
+    "Bundesrepublik Deutschland"
+   ]
+  },
+  {
+   "code": "gh",
+   "name": "Ghana",
+   "es": "Ghana",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Ghana",
+    "Republic of Ghana",
+    "República de Ghana",
+    "GH"
+   ]
+  },
+  {
+   "code": "gi",
+   "name": "Gibraltar",
+   "es": "Gibraltar",
+   "continent": "europe",
+   "un": false,
+   "names": [
+    "Gibraltar",
+    "GI"
+   ]
+  },
+  {
+   "code": "gr",
+   "name": "Greece",
+   "es": "Grecia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Greece",
+    "Hellenic Republic",
+    "Grecia",
+    "República Helénica",
+    "GR",
+    "Elláda"
+   ]
+  },
+  {
+   "code": "gl",
+   "name": "Greenland",
+   "es": "Groenlandia",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Greenland",
+    "Groenlandia",
+    "GL",
+    "Grønland"
+   ]
+  },
+  {
+   "code": "gd",
+   "name": "Grenada",
+   "es": "Grenada",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Grenada",
+    "Granada",
+    "GD"
+   ]
+  },
+  {
+   "code": "gp",
+   "name": "Guadeloupe",
+   "es": "Guadalupe",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Guadeloupe",
+    "Guadalupe",
+    "GP",
+    "Gwadloup"
+   ]
+  },
+  {
+   "code": "gu",
+   "name": "Guam",
+   "es": "Guam",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Guam",
+    "GU",
+    "Guåhån"
+   ]
+  },
+  {
+   "code": "gt",
+   "name": "Guatemala",
+   "es": "Guatemala",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Guatemala",
+    "Republic of Guatemala",
+    "República de Guatemala",
+    "GT"
+   ]
+  },
+  {
+   "code": "gg",
+   "name": "Guernsey",
+   "es": "Guernsey",
+   "continent": "europe",
+   "un": false,
+   "names": [
+    "Guernsey",
+    "Bailiwick of Guernsey",
+    "Bailía de Guernsey",
+    "GG",
+    "Bailliage de Guernesey"
+   ]
+  },
+  {
+   "code": "gn",
+   "name": "Guinea",
+   "es": "Guinea",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Guinea",
+    "Republic of Guinea",
+    "República de Guinea",
+    "GN",
+    "République de Guinée"
+   ]
+  },
+  {
+   "code": "gw",
+   "name": "Guinea-Bissau",
+   "es": "Guinea-Bisáu",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Guinea-Bissau",
+    "Republic of Guinea-Bissau",
+    "Guinea-Bisáu",
+    "República de Guinea-Bissau",
+    "GW",
+    "República da Guiné-Bissau"
+   ]
+  },
+  {
+   "code": "gy",
+   "name": "Guyana",
+   "es": "Guyana",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Guyana",
+    "Co-operative Republic of Guyana",
+    "República Cooperativa de Guyana",
+    "GY"
+   ]
+  },
+  {
+   "code": "ht",
+   "name": "Haiti",
+   "es": "Haití",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Haiti",
+    "Republic of Haiti",
+    "República de Haití",
+    "HT",
+    "République d'Haïti",
+    "Repiblik Ayiti"
+   ]
+  },
+  {
+   "code": "hm",
+   "name": "Heard Island and McDonald Islands",
+   "es": "Islas Heard y McDonald",
+   "continent": "antarctic",
+   "un": false,
+   "names": [
+    "Heard Island and McDonald Islands",
+    "Islas Heard y McDonald",
+    "HM"
+   ]
+  },
+  {
+   "code": "hn",
+   "name": "Honduras",
+   "es": "Honduras",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Honduras",
+    "Republic of Honduras",
+    "República de Honduras",
+    "HN"
+   ]
+  },
+  {
+   "code": "hk",
+   "name": "Hong Kong",
+   "es": "Hong Kong",
+   "continent": "asia",
+   "un": false,
+   "names": [
+    "Hong Kong",
+    "Hong Kong Special Administrative Region of the People's Republic of China",
+    "Hong Kong Región Administrativa Especial de la República Popular China",
+    "HK"
+   ]
+  },
+  {
+   "code": "hu",
+   "name": "Hungary",
+   "es": "Hungría",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Hungary",
+    "Hungría",
+    "HU"
+   ]
+  },
+  {
+   "code": "is",
+   "name": "Iceland",
+   "es": "Islandia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Iceland",
+    "Islandia",
+    "IS",
+    "Island",
+    "Republic of Iceland",
+    "Lýðveldið Ísland"
+   ]
+  },
+  {
+   "code": "in",
+   "name": "India",
+   "es": "India",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "India",
+    "Republic of India",
+    "República de la India",
+    "IN",
+    "Bhārat",
+    "Bharat Ganrajya"
+   ]
+  },
+  {
+   "code": "id",
+   "name": "Indonesia",
+   "es": "Indonesia",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Indonesia",
+    "Republic of Indonesia",
+    "República de Indonesia",
+    "ID",
+    "Republik Indonesia"
+   ]
+  },
+  {
+   "code": "ir",
+   "name": "Iran",
+   "es": "Iran",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Iran",
+    "Islamic Republic of Iran",
+    "República Islámica de Irán",
+    "IR",
+    "Iran, Islamic Republic of",
+    "Jomhuri-ye Eslāmi-ye Irān"
+   ]
+  },
+  {
+   "code": "iq",
+   "name": "Iraq",
+   "es": "Irak",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Iraq",
+    "Republic of Iraq",
+    "Irak",
+    "República de Irak",
+    "IQ",
+    "Jumhūriyyat al-‘Irāq"
+   ]
+  },
+  {
+   "code": "ie",
+   "name": "Ireland",
+   "es": "Irlanda",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Ireland",
+    "Republic of Ireland",
+    "Irlanda",
+    "República de Irlanda",
+    "IE",
+    "Éire",
+    "Poblacht na hÉireann"
+   ]
+  },
+  {
+   "code": "im",
+   "name": "Isle of Man",
+   "es": "Isla de Man",
+   "continent": "europe",
+   "un": false,
+   "names": [
+    "Isle of Man",
+    "Isla de Man",
+    "IM",
+    "Ellan Vannin",
+    "Mann",
+    "Mannin"
+   ]
+  },
+  {
+   "code": "il",
+   "name": "Israel",
+   "es": "Israel",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Israel",
+    "State of Israel",
+    "Estado de Israel",
+    "IL",
+    "Medīnat Yisrā'el"
+   ]
+  },
+  {
+   "code": "it",
+   "name": "Italy",
+   "es": "Italia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Italy",
+    "Italian Republic",
+    "Italia",
+    "República Italiana",
+    "IT",
+    "Repubblica italiana"
+   ]
+  },
+  {
+   "code": "ci",
+   "name": "Ivory Coast",
+   "es": "Costa de Marfil",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Ivory Coast",
+    "Republic of Côte d'Ivoire",
+    "Costa de Marfil",
+    "República de Côte d'Ivoire",
+    "CI",
+    "Côte d'Ivoire",
+    "République de Côte d'Ivoire"
+   ]
+  },
+  {
+   "code": "jm",
+   "name": "Jamaica",
+   "es": "Jamaica",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Jamaica",
+    "JM"
+   ]
+  },
+  {
+   "code": "jp",
+   "name": "Japan",
+   "es": "Japón",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Japan",
+    "Japón",
+    "JP",
+    "Nippon",
+    "Nihon"
+   ]
+  },
+  {
+   "code": "jo",
+   "name": "Jordan",
+   "es": "Jordania",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Jordan",
+    "Hashemite Kingdom of Jordan",
+    "Jordania",
+    "Reino Hachemita de Jordania",
+    "JO",
+    "al-Mamlakah al-Urdunīyah al-Hāshimīyah"
+   ]
+  },
+  {
+   "code": "kz",
+   "name": "Kazakhstan",
+   "es": "Kazajistán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Kazakhstan",
+    "Republic of Kazakhstan",
+    "Kazajistán",
+    "República de Kazajstán",
+    "KZ",
+    "Qazaqstan",
+    "Qazaqstan Respublïkası",
+    "Respublika Kazakhstan"
+   ]
+  },
+  {
+   "code": "ke",
+   "name": "Kenya",
+   "es": "Kenia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Kenya",
+    "Republic of Kenya",
+    "Kenia",
+    "República de Kenya",
+    "KE",
+    "Jamhuri ya Kenya"
+   ]
+  },
+  {
+   "code": "ki",
+   "name": "Kiribati",
+   "es": "Kiribati",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Kiribati",
+    "Independent and Sovereign Republic of Kiribati",
+    "República Independiente y Soberano de Kiribati",
+    "KI",
+    "Republic of Kiribati",
+    "Ribaberiki Kiribati"
+   ]
+  },
+  {
+   "code": "kw",
+   "name": "Kuwait",
+   "es": "Kuwait",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Kuwait",
+    "State of Kuwait",
+    "Estado de Kuwait",
+    "KW",
+    "Dawlat al-Kuwait"
+   ]
+  },
+  {
+   "code": "kg",
+   "name": "Kyrgyzstan",
+   "es": "Kirguizistán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Kyrgyzstan",
+    "Kyrgyz Republic",
+    "Kirguizistán",
+    "República Kirguisa",
+    "KG",
+    "Kyrgyz Respublikasy"
+   ]
+  },
+  {
+   "code": "la",
+   "name": "Laos",
+   "es": "Laos",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Laos",
+    "Lao People's Democratic Republic",
+    "República Democrática Popular Lao",
+    "LA",
+    "Lao",
+    "Sathalanalat Paxathipatai Paxaxon Lao"
+   ]
+  },
+  {
+   "code": "lv",
+   "name": "Latvia",
+   "es": "Letonia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Latvia",
+    "Republic of Latvia",
+    "Letonia",
+    "República de Letonia",
+    "LV",
+    "Latvijas Republika"
+   ]
+  },
+  {
+   "code": "lb",
+   "name": "Lebanon",
+   "es": "Líbano",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Lebanon",
+    "Lebanese Republic",
+    "Líbano",
+    "República Libanesa",
+    "LB",
+    "Al-Jumhūrīyah Al-Libnānīyah"
+   ]
+  },
+  {
+   "code": "ls",
+   "name": "Lesotho",
+   "es": "Lesotho",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Lesotho",
+    "Kingdom of Lesotho",
+    "Reino de Lesotho",
+    "LS",
+    "Muso oa Lesotho"
+   ]
+  },
+  {
+   "code": "lr",
+   "name": "Liberia",
+   "es": "Liberia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Liberia",
+    "Republic of Liberia",
+    "República de Liberia",
+    "LR"
+   ]
+  },
+  {
+   "code": "ly",
+   "name": "Libya",
+   "es": "Libia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Libya",
+    "State of Libya",
+    "Libia",
+    "Estado de Libia",
+    "LY",
+    "Dawlat Libya"
+   ]
+  },
+  {
+   "code": "li",
+   "name": "Liechtenstein",
+   "es": "Liechtenstein",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Liechtenstein",
+    "Principality of Liechtenstein",
+    "Principado de Liechtenstein",
+    "LI",
+    "Fürstentum Liechtenstein"
+   ]
+  },
+  {
+   "code": "lt",
+   "name": "Lithuania",
+   "es": "Lituania",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Lithuania",
+    "Republic of Lithuania",
+    "Lituania",
+    "República de Lituania",
+    "LT",
+    "Lietuvos Respublika"
+   ]
+  },
+  {
+   "code": "lu",
+   "name": "Luxembourg",
+   "es": "Luxemburgo",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Luxembourg",
+    "Grand Duchy of Luxembourg",
+    "Luxemburgo",
+    "Gran Ducado de Luxemburgo",
+    "LU",
+    "Grand-Duché de Luxembourg",
+    "Großherzogtum Luxemburg",
+    "Groussherzogtum Lëtzebuerg"
+   ]
+  },
+  {
+   "code": "mo",
+   "name": "Macau",
+   "es": "Macao",
+   "continent": "asia",
+   "un": false,
+   "names": [
+    "Macau",
+    "Macao Special Administrative Region of the People's Republic of China",
+    "Macao",
+    "Macao, Región Administrativa Especial de la República Popular China",
+    "MO",
+    "Região Administrativa Especial de Macau da República Popular da China"
+   ]
+  },
+  {
+   "code": "mg",
+   "name": "Madagascar",
+   "es": "Madagascar",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Madagascar",
+    "Republic of Madagascar",
+    "República de Madagascar",
+    "MG",
+    "Repoblikan'i Madagasikara",
+    "République de Madagascar"
+   ]
+  },
+  {
+   "code": "mw",
+   "name": "Malawi",
+   "es": "Malawi",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Malawi",
+    "Republic of Malawi",
+    "República de Malawi",
+    "MW"
+   ]
+  },
+  {
+   "code": "my",
+   "name": "Malaysia",
+   "es": "Malasia",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Malaysia",
+    "Malasia",
+    "MY"
+   ]
+  },
+  {
+   "code": "mv",
+   "name": "Maldives",
+   "es": "Maldivas",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Maldives",
+    "Republic of the Maldives",
+    "Maldivas",
+    "República de las Maldivas",
+    "MV",
+    "Maldive Islands",
+    "Dhivehi Raajjeyge Jumhooriyya"
+   ]
+  },
+  {
+   "code": "ml",
+   "name": "Mali",
+   "es": "Mali",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Mali",
+    "Republic of Mali",
+    "República de Malí",
+    "ML",
+    "République du Mali"
+   ]
+  },
+  {
+   "code": "mt",
+   "name": "Malta",
+   "es": "Malta",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Malta",
+    "Republic of Malta",
+    "República de Malta",
+    "MT",
+    "Repubblika ta' Malta"
+   ]
+  },
+  {
+   "code": "mq",
+   "name": "Martinique",
+   "es": "Martinica",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Martinique",
+    "Martinica",
+    "MQ"
+   ]
+  },
+  {
+   "code": "mr",
+   "name": "Mauritania",
+   "es": "Mauritania",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Mauritania",
+    "Islamic Republic of Mauritania",
+    "República Islámica de Mauritania",
+    "MR",
+    "al-Jumhūriyyah al-ʾIslāmiyyah al-Mūrītāniyyah"
+   ]
+  },
+  {
+   "code": "mu",
+   "name": "Mauritius",
+   "es": "Mauricio",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Mauritius",
+    "Republic of Mauritius",
+    "Mauricio",
+    "República de Mauricio",
+    "MU",
+    "République de Maurice"
+   ]
+  },
+  {
+   "code": "yt",
+   "name": "Mayotte",
+   "es": "Mayotte",
+   "continent": "africa",
+   "un": false,
+   "names": [
+    "Mayotte",
+    "Department of Mayotte",
+    "Departamento de Mayotte",
+    "YT",
+    "Département de Mayotte"
+   ]
+  },
+  {
+   "code": "mx",
+   "name": "Mexico",
+   "es": "México",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Mexico",
+    "United Mexican States",
+    "Estados Unidos Mexicanos",
+    "MX",
+    "Mexicanos"
+   ]
+  },
+  {
+   "code": "md",
+   "name": "Moldova",
+   "es": "Moldavia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Moldova",
+    "Republic of Moldova",
+    "Moldavia",
+    "República de Moldova",
+    "MD",
+    "Moldova, Republic of",
+    "Republica Moldova"
+   ]
+  },
+  {
+   "code": "mc",
+   "name": "Monaco",
+   "es": "Mónaco",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Monaco",
+    "Principality of Monaco",
+    "Principado de Mónaco",
+    "MC",
+    "Principauté de Monaco"
+   ]
+  },
+  {
+   "code": "mn",
+   "name": "Mongolia",
+   "es": "Mongolia",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Mongolia",
+    "MN"
+   ]
+  },
+  {
+   "code": "me",
+   "name": "Montenegro",
+   "es": "Montenegro",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Montenegro",
+    "ME",
+    "Crna Gora"
+   ]
+  },
+  {
+   "code": "ms",
+   "name": "Montserrat",
+   "es": "Montserrat",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Montserrat",
+    "MS"
+   ]
+  },
+  {
+   "code": "ma",
+   "name": "Morocco",
+   "es": "Marruecos",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Morocco",
+    "Kingdom of Morocco",
+    "Marruecos",
+    "Reino de Marruecos",
+    "MA",
+    "Al-Mamlakah al-Maġribiyah"
+   ]
+  },
+  {
+   "code": "mz",
+   "name": "Mozambique",
+   "es": "Mozambique",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Mozambique",
+    "Republic of Mozambique",
+    "República de Mozambique",
+    "MZ",
+    "República de Moçambique"
+   ]
+  },
+  {
+   "code": "mm",
+   "name": "Myanmar",
+   "es": "Myanmar",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Myanmar",
+    "Republic of the Union of Myanmar",
+    "República de la Unión de Myanmar",
+    "MM",
+    "Burma",
+    "Pyidaunzu Thanmăda Myăma Nainngandaw"
+   ]
+  },
+  {
+   "code": "na",
+   "name": "Namibia",
+   "es": "Namibia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Namibia",
+    "Republic of Namibia",
+    "República de Namibia",
+    "NA",
+    "Namibië"
+   ]
+  },
+  {
+   "code": "nr",
+   "name": "Nauru",
+   "es": "Nauru",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Nauru",
+    "Republic of Nauru",
+    "República de Nauru",
+    "NR",
+    "Naoero",
+    "Pleasant Island",
+    "Ripublik Naoero"
+   ]
+  },
+  {
+   "code": "np",
+   "name": "Nepal",
+   "es": "Nepal",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Nepal",
+    "Federal Democratic Republic of Nepal",
+    "República Democrática Federal de Nepal",
+    "NP",
+    "Loktāntrik Ganatantra Nepāl"
+   ]
+  },
+  {
+   "code": "nl",
+   "name": "Netherlands",
+   "es": "Países Bajos",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Netherlands",
+    "Kingdom of the Netherlands",
+    "Países Bajos",
+    "NL",
+    "Holland",
+    "Nederland"
+   ]
+  },
+  {
+   "code": "nc",
+   "name": "New Caledonia",
+   "es": "Nueva Caledonia",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "New Caledonia",
+    "Nueva Caledonia",
+    "NC"
+   ]
+  },
+  {
+   "code": "nz",
+   "name": "New Zealand",
+   "es": "Nueva Zelanda",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "New Zealand",
+    "Nueva Zelanda",
+    "NZ",
+    "Aotearoa"
+   ]
+  },
+  {
+   "code": "ni",
+   "name": "Nicaragua",
+   "es": "Nicaragua",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Nicaragua",
+    "Republic of Nicaragua",
+    "República de Nicaragua",
+    "NI"
+   ]
+  },
+  {
+   "code": "ne",
+   "name": "Niger",
+   "es": "Níger",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Niger",
+    "Republic of Niger",
+    "República de Níger",
+    "NE",
+    "Nijar"
+   ]
+  },
+  {
+   "code": "ng",
+   "name": "Nigeria",
+   "es": "Nigeria",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Nigeria",
+    "Federal Republic of Nigeria",
+    "República Federal de Nigeria",
+    "NG",
+    "Nijeriya",
+    "Naíjíríà"
+   ]
+  },
+  {
+   "code": "nu",
+   "name": "Niue",
+   "es": "Niue",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Niue",
+    "NU"
+   ]
+  },
+  {
+   "code": "nf",
+   "name": "Norfolk Island",
+   "es": "Isla de Norfolk",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Norfolk Island",
+    "Territory of Norfolk Island",
+    "Isla de Norfolk",
+    "Territorio de la Isla Norfolk",
+    "NF",
+    "Teratri of Norf'k Ailen"
+   ]
+  },
+  {
+   "code": "kp",
+   "name": "North Korea",
+   "es": "Corea del Norte",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "North Korea",
+    "Democratic People's Republic of Korea",
+    "Corea del Norte",
+    "República Popular Democrática de Corea",
+    "KP",
+    "DPRK",
+    "Chosŏn Minjujuŭi Inmin Konghwaguk",
+    "Korea, Democratic People's Republic of"
+   ]
+  },
+  {
+   "code": "mk",
+   "name": "North Macedonia",
+   "es": "Macedonia del Norte",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "North Macedonia",
+    "Republic of North Macedonia",
+    "Macedonia del Norte",
+    "República de Macedonia del Norte",
+    "MK",
+    "The former Yugoslav Republic of Macedonia",
+    "Macedonia, The Former Yugoslav Republic of",
+    "Macedonia"
+   ]
+  },
+  {
+   "code": "no",
+   "name": "Norway",
+   "es": "Noruega",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Norway",
+    "Kingdom of Norway",
+    "Noruega",
+    "Reino de Noruega",
+    "NO",
+    "Norge",
+    "Noreg",
+    "Kongeriket Norge",
+    "Kongeriket Noreg"
+   ]
+  },
+  {
+   "code": "om",
+   "name": "Oman",
+   "es": "Omán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Oman",
+    "Sultanate of Oman",
+    "Sultanato de Omán",
+    "OM",
+    "Salṭanat ʻUmān"
+   ]
+  },
+  {
+   "code": "pk",
+   "name": "Pakistan",
+   "es": "Pakistán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Pakistan",
+    "Islamic Republic of Pakistan",
+    "República Islámica de Pakistán",
+    "PK",
+    "Islāmī Jumhūriya'eh Pākistān"
+   ]
+  },
+  {
+   "code": "pw",
+   "name": "Palau",
+   "es": "Palau",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Palau",
+    "Republic of Palau",
+    "República de Palau",
+    "PW",
+    "Beluu er a Belau"
+   ]
+  },
+  {
+   "code": "pa",
+   "name": "Panama",
+   "es": "Panamá",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Panama",
+    "Republic of Panama",
+    "República de Panamá",
+    "PA"
+   ]
+  },
+  {
+   "code": "pg",
+   "name": "Papua New Guinea",
+   "es": "Papúa Nueva Guinea",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Papua New Guinea",
+    "Independent State of Papua New Guinea",
+    "Papúa Nueva Guinea",
+    "Estado Independiente de Papúa Nueva Guinea",
+    "PG",
+    "Independen Stet bilong Papua Niugini"
+   ]
+  },
+  {
+   "code": "py",
+   "name": "Paraguay",
+   "es": "Paraguay",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Paraguay",
+    "Republic of Paraguay",
+    "República de Paraguay",
+    "PY",
+    "República del Paraguay",
+    "Tetã Paraguái"
+   ]
+  },
+  {
+   "code": "pe",
+   "name": "Peru",
+   "es": "Perú",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Peru",
+    "Republic of Peru",
+    "República de Perú",
+    "PE",
+    "República del Perú"
+   ]
+  },
+  {
+   "code": "ph",
+   "name": "Philippines",
+   "es": "Filipinas",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Philippines",
+    "Republic of the Philippines",
+    "Filipinas",
+    "República de las Filipinas",
+    "PH",
+    "Repúblika ng Pilipinas"
+   ]
+  },
+  {
+   "code": "pn",
+   "name": "Pitcairn Islands",
+   "es": "Islas Pitcairn",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Pitcairn Islands",
+    "Pitcairn Group of Islands",
+    "Islas Pitcairn",
+    "Grupo de Islas Pitcairn",
+    "PN",
+    "Pitcairn",
+    "Pitcairn Henderson Ducie and Oeno Islands"
+   ]
+  },
+  {
+   "code": "pl",
+   "name": "Poland",
+   "es": "Polonia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Poland",
+    "Republic of Poland",
+    "Polonia",
+    "República de Polonia",
+    "PL",
+    "Rzeczpospolita Polska"
+   ]
+  },
+  {
+   "code": "pt",
+   "name": "Portugal",
+   "es": "Portugal",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Portugal",
+    "Portuguese Republic",
+    "República Portuguesa",
+    "PT",
+    "Portuguesa"
+   ]
+  },
+  {
+   "code": "pr",
+   "name": "Puerto Rico",
+   "es": "Puerto Rico",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Puerto Rico",
+    "Commonwealth of Puerto Rico",
+    "Asociado de Puerto Rico",
+    "PR",
+    "Estado Libre Asociado de Puerto Rico"
+   ]
+  },
+  {
+   "code": "qa",
+   "name": "Qatar",
+   "es": "Catar",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Qatar",
+    "State of Qatar",
+    "Catar",
+    "Estado de Qatar",
+    "QA",
+    "Dawlat Qaṭar"
+   ]
+  },
+  {
+   "code": "cg",
+   "name": "Republic of the Congo",
+   "es": "Congo",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Republic of the Congo",
+    "Congo",
+    "República del Congo",
+    "CG",
+    "Congo-Brazzaville"
+   ]
+  },
+  {
+   "code": "ro",
+   "name": "Romania",
+   "es": "Rumania",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Romania",
+    "Rumania",
+    "RO",
+    "Roumania"
+   ]
+  },
+  {
+   "code": "ru",
+   "name": "Russia",
+   "es": "Rusia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Russia",
+    "Russian Federation",
+    "Rusia",
+    "Federación de Rusia",
+    "RU"
+   ]
+  },
+  {
+   "code": "rw",
+   "name": "Rwanda",
+   "es": "Ruanda",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Rwanda",
+    "Republic of Rwanda",
+    "Ruanda",
+    "República de Rwanda",
+    "RW",
+    "Repubulika y'u Rwanda",
+    "République du Rwanda"
+   ]
+  },
+  {
+   "code": "re",
+   "name": "Réunion",
+   "es": "Reunión",
+   "continent": "africa",
+   "un": false,
+   "names": [
+    "Réunion",
+    "Réunion Island",
+    "Isla de la Reunión",
+    "RE"
+   ]
+  },
+  {
+   "code": "bl",
+   "name": "Saint Barthélemy",
+   "es": "San Bartolomé",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Saint Barthélemy",
+    "Collectivity of Saint Barthélemy",
+    "San Bartolomé",
+    "Colectividad de San Barthélemy",
+    "BL",
+    "St. Barthelemy",
+    "Collectivité de Saint-Barthélemy"
+   ]
+  },
+  {
+   "code": "sh",
+   "name": "Saint Helena, Ascension and Tristan da Cunha",
+   "es": "Santa Elena, Ascensión y Tristán de Acuña",
+   "continent": "africa",
+   "un": false,
+   "names": [
+    "Saint Helena, Ascension and Tristan da Cunha",
+    "Santa Elena, Ascensión y Tristán de Acuña",
+    "Saint Helena",
+    "St. Helena, Ascension and Tristan da Cunha"
+   ]
+  },
+  {
+   "code": "kn",
+   "name": "Saint Kitts and Nevis",
+   "es": "San Cristóbal y Nieves",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Saint Kitts and Nevis",
+    "Federation of Saint Christopher and Nevis",
+    "San Cristóbal y Nieves",
+    "Federación de San Cristóbal y Nevis",
+    "KN"
+   ]
+  },
+  {
+   "code": "lc",
+   "name": "Saint Lucia",
+   "es": "Santa Lucía",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Saint Lucia",
+    "Santa Lucía",
+    "LC"
+   ]
+  },
+  {
+   "code": "mf",
+   "name": "Saint Martin",
+   "es": "Saint Martin",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Saint Martin",
+    "MF",
+    "Collectivity of Saint Martin",
+    "Collectivité de Saint-Martin",
+    "Saint Martin (French part)"
+   ]
+  },
+  {
+   "code": "pm",
+   "name": "Saint Pierre and Miquelon",
+   "es": "San Pedro y Miquelón",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Saint Pierre and Miquelon",
+    "San Pedro y Miquelón",
+    "PM",
+    "Collectivité territoriale de Saint-Pierre-et-Miquelon"
+   ]
+  },
+  {
+   "code": "vc",
+   "name": "Saint Vincent and the Grenadines",
+   "es": "San Vicente y Granadinas",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Saint Vincent and the Grenadines",
+    "San Vicente y Granadinas",
+    "San Vicente y las Granadinas",
+    "VC"
+   ]
+  },
+  {
+   "code": "ws",
+   "name": "Samoa",
+   "es": "Samoa",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Samoa",
+    "Independent State of Samoa",
+    "Estado Independiente de Samoa",
+    "WS",
+    "Malo Saʻoloto Tutoʻatasi o Sāmoa"
+   ]
+  },
+  {
+   "code": "sm",
+   "name": "San Marino",
+   "es": "San Marino",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "San Marino",
+    "Most Serene Republic of San Marino",
+    "Serenísima República de San Marino",
+    "SM",
+    "Republic of San Marino",
+    "Repubblica di San Marino"
+   ]
+  },
+  {
+   "code": "sa",
+   "name": "Saudi Arabia",
+   "es": "Arabia Saudí",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Saudi Arabia",
+    "Kingdom of Saudi Arabia",
+    "Arabia Saudí",
+    "Reino de Arabia Saudita",
+    "Saudi",
+    "SA",
+    "Al-Mamlakah al-‘Arabiyyah as-Su‘ūdiyyah"
+   ]
+  },
+  {
+   "code": "sn",
+   "name": "Senegal",
+   "es": "Senegal",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Senegal",
+    "Republic of Senegal",
+    "República de Senegal",
+    "SN",
+    "République du Sénégal"
+   ]
+  },
+  {
+   "code": "rs",
+   "name": "Serbia",
+   "es": "Serbia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Serbia",
+    "Republic of Serbia",
+    "República de Serbia",
+    "RS",
+    "Srbija",
+    "Republika Srbija"
+   ]
+  },
+  {
+   "code": "sc",
+   "name": "Seychelles",
+   "es": "Seychelles",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Seychelles",
+    "Republic of Seychelles",
+    "República de las Seychelles",
+    "SC",
+    "Repiblik Sesel",
+    "République des Seychelles"
+   ]
+  },
+  {
+   "code": "sl",
+   "name": "Sierra Leone",
+   "es": "Sierra Leone",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Sierra Leone",
+    "Republic of Sierra Leone",
+    "República de Sierra Leona",
+    "SL"
+   ]
+  },
+  {
+   "code": "sg",
+   "name": "Singapore",
+   "es": "Singapur",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Singapore",
+    "Republic of Singapore",
+    "Singapur",
+    "República de Singapur",
+    "SG",
+    "Singapura",
+    "Republik Singapura"
+   ]
+  },
+  {
+   "code": "sx",
+   "name": "Sint Maarten",
+   "es": "Sint Maarten",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Sint Maarten",
+    "SX",
+    "Sint Maarten (Dutch part)"
+   ]
+  },
+  {
+   "code": "sk",
+   "name": "Slovakia",
+   "es": "Eslovaquia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Slovakia",
+    "Slovak Republic",
+    "Eslovaquia",
+    "República Eslovaca",
+    "SK",
+    "Slovenská republika"
+   ]
+  },
+  {
+   "code": "si",
+   "name": "Slovenia",
+   "es": "Eslovenia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Slovenia",
+    "Republic of Slovenia",
+    "Eslovenia",
+    "República de Eslovenia",
+    "SI",
+    "Republika Slovenija"
+   ]
+  },
+  {
+   "code": "sb",
+   "name": "Solomon Islands",
+   "es": "Islas Salomón",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Solomon Islands",
+    "Islas Salomón",
+    "SB"
+   ]
+  },
+  {
+   "code": "so",
+   "name": "Somalia",
+   "es": "Somalia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Somalia",
+    "Federal Republic of Somalia",
+    "República Federal de Somalia",
+    "SO",
+    "aṣ-Ṣūmāl",
+    "Jamhuuriyadda Federaalka Soomaaliya",
+    "Jumhūriyyat aṣ-Ṣūmāl al-Fiderāliyya"
+   ]
+  },
+  {
+   "code": "za",
+   "name": "South Africa",
+   "es": "Sudáfrica",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "South Africa",
+    "Republic of South Africa",
+    "Sudáfrica",
+    "República de Sudáfrica",
+    "ZA",
+    "RSA",
+    "Suid-Afrika"
+   ]
+  },
+  {
+   "code": "gs",
+   "name": "South Georgia",
+   "es": "Islas Georgias del Sur y Sandwich del Sur",
+   "continent": "antarctic",
+   "un": false,
+   "names": [
+    "South Georgia",
+    "South Georgia and the South Sandwich Islands",
+    "Islas Georgias del Sur y Sandwich del Sur",
+    "Georgia del Sur y las Islas Sandwich del Sur",
+    "GS"
+   ]
+  },
+  {
+   "code": "kr",
+   "name": "South Korea",
+   "es": "Corea del Sur",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "South Korea",
+    "Republic of Korea",
+    "Corea del Sur",
+    "República de Corea",
+    "KR",
+    "Korea, Republic of"
+   ]
+  },
+  {
+   "code": "ss",
+   "name": "South Sudan",
+   "es": "Sudán del Sur",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "South Sudan",
+    "Republic of South Sudan",
+    "Sudán del Sur",
+    "República de Sudán del Sur",
+    "SS"
+   ]
+  },
+  {
+   "code": "es",
+   "name": "Spain",
+   "es": "España",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Spain",
+    "Kingdom of Spain",
+    "España",
+    "Reino de España",
+    "ES"
+   ]
+  },
+  {
+   "code": "lk",
+   "name": "Sri Lanka",
+   "es": "Sri Lanka",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Sri Lanka",
+    "Democratic Socialist Republic of Sri Lanka",
+    "República Democrática Socialista de Sri Lanka",
+    "LK",
+    "ilaṅkai"
+   ]
+  },
+  {
+   "code": "sd",
+   "name": "Sudan",
+   "es": "Sudán",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Sudan",
+    "Republic of the Sudan",
+    "República de Sudán",
+    "SD",
+    "Jumhūrīyat as-Sūdān"
+   ]
+  },
+  {
+   "code": "sr",
+   "name": "Suriname",
+   "es": "Surinam",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Suriname",
+    "Republic of Suriname",
+    "Surinam",
+    "República de Suriname",
+    "SR",
+    "Sarnam",
+    "Sranangron",
+    "Republiek Suriname"
+   ]
+  },
+  {
+   "code": "sj",
+   "name": "Svalbard and Jan Mayen",
+   "es": "Islas Svalbard y Jan Mayen",
+   "continent": "europe",
+   "un": false,
+   "names": [
+    "Svalbard and Jan Mayen",
+    "Svalbard og Jan Mayen",
+    "Islas Svalbard y Jan Mayen",
+    "SJ",
+    "Svalbard and Jan Mayen Islands"
+   ]
+  },
+  {
+   "code": "se",
+   "name": "Sweden",
+   "es": "Suecia",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Sweden",
+    "Kingdom of Sweden",
+    "Suecia",
+    "Reino de Suecia",
+    "SE",
+    "Konungariket Sverige"
+   ]
+  },
+  {
+   "code": "ch",
+   "name": "Switzerland",
+   "es": "Suiza",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Switzerland",
+    "Swiss Confederation",
+    "Suiza",
+    "Confederación Suiza",
+    "CH",
+    "Schweiz",
+    "Suisse",
+    "Svizzera",
+    "Svizra"
+   ]
+  },
+  {
+   "code": "sy",
+   "name": "Syria",
+   "es": "Siria",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Syria",
+    "Syrian Arab Republic",
+    "Siria",
+    "República Árabe Siria",
+    "SY",
+    "Al-Jumhūrīyah Al-ʻArabīyah As-Sūrīyah"
+   ]
+  },
+  {
+   "code": "st",
+   "name": "São Tomé and Príncipe",
+   "es": "Santo Tomé y Príncipe",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "São Tomé and Príncipe",
+    "Democratic Republic of São Tomé and Príncipe",
+    "Santo Tomé y Príncipe",
+    "República Democrática de Santo Tomé y Príncipe",
+    "ST",
+    "República Democrática de São Tomé e Príncipe"
+   ]
+  },
+  {
+   "code": "tw",
+   "name": "Taiwan",
+   "es": "Taiwán",
+   "continent": "asia",
+   "un": false,
+   "names": [
+    "Taiwan",
+    "Republic of China (Taiwan)",
+    "República de China en Taiwán",
+    "TW",
+    "Republic of China",
+    "Zhōnghuá Mínguó",
+    "Chinese Taipei"
+   ]
+  },
+  {
+   "code": "tj",
+   "name": "Tajikistan",
+   "es": "Tayikistán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Tajikistan",
+    "Republic of Tajikistan",
+    "Tayikistán",
+    "República de Tayikistán",
+    "TJ",
+    "Toçikiston",
+    "Çumhuriyi Toçikiston"
+   ]
+  },
+  {
+   "code": "tz",
+   "name": "Tanzania",
+   "es": "Tanzania",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Tanzania",
+    "United Republic of Tanzania",
+    "República Unida de Tanzania",
+    "TZ",
+    "Tanzania, United Republic of",
+    "Jamhuri ya Muungano wa Tanzania"
+   ]
+  },
+  {
+   "code": "th",
+   "name": "Thailand",
+   "es": "Tailandia",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Thailand",
+    "Kingdom of Thailand",
+    "Tailandia",
+    "Reino de Tailandia",
+    "TH",
+    "Prathet",
+    "Thai",
+    "Ratcha Anachak Thai"
+   ]
+  },
+  {
+   "code": "tl",
+   "name": "Timor-Leste",
+   "es": "Timor Oriental",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Timor-Leste",
+    "Democratic Republic of Timor-Leste",
+    "Timor Oriental",
+    "República Democrática de Timor-Leste",
+    "TL",
+    "East Timor",
+    "Timor",
+    "Repúblika Demokrátika Timór-Leste",
+    "Timór Lorosa'e",
+    "Timor Lorosae"
+   ]
+  },
+  {
+   "code": "tg",
+   "name": "Togo",
+   "es": "Togo",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Togo",
+    "Togolese Republic",
+    "República de Togo",
+    "TG",
+    "Togolese",
+    "République Togolaise"
+   ]
+  },
+  {
+   "code": "tk",
+   "name": "Tokelau",
+   "es": "Islas Tokelau",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Tokelau",
+    "Islas Tokelau",
+    "TK"
+   ]
+  },
+  {
+   "code": "to",
+   "name": "Tonga",
+   "es": "Tonga",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Tonga",
+    "Kingdom of Tonga",
+    "Reino de Tonga",
+    "TO"
+   ]
+  },
+  {
+   "code": "tt",
+   "name": "Trinidad and Tobago",
+   "es": "Trinidad y Tobago",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Trinidad and Tobago",
+    "Republic of Trinidad and Tobago",
+    "Trinidad y Tobago",
+    "República de Trinidad y Tobago",
+    "TT"
+   ]
+  },
+  {
+   "code": "tn",
+   "name": "Tunisia",
+   "es": "Túnez",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Tunisia",
+    "Tunisian Republic",
+    "Túnez",
+    "República de Túnez",
+    "TN",
+    "Republic of Tunisia",
+    "al-Jumhūriyyah at-Tūnisiyyah"
+   ]
+  },
+  {
+   "code": "tm",
+   "name": "Turkmenistan",
+   "es": "Turkmenistán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Turkmenistan",
+    "TM"
+   ]
+  },
+  {
+   "code": "tc",
+   "name": "Turks and Caicos Islands",
+   "es": "Islas Turks y Caicos",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "Turks and Caicos Islands",
+    "Islas Turks y Caicos",
+    "Islas Turcas y Caicos",
+    "TC"
+   ]
+  },
+  {
+   "code": "tr",
+   "name": "Türkiye",
+   "es": "Turquía",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Türkiye",
+    "Republic of Türkiye",
+    "Turquía",
+    "República de Turquía",
+    "TR",
+    "Republic of Turkey",
+    "Türkiye Cumhuriyeti"
+   ]
+  },
+  {
+   "code": "ug",
+   "name": "Uganda",
+   "es": "Uganda",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Uganda",
+    "Republic of Uganda",
+    "República de Uganda",
+    "UG",
+    "Jamhuri ya Uganda"
+   ]
+  },
+  {
+   "code": "ua",
+   "name": "Ukraine",
+   "es": "Ucrania",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Ukraine",
+    "Ucrania",
+    "UA",
+    "Ukrayina"
+   ]
+  },
+  {
+   "code": "ae",
+   "name": "United Arab Emirates",
+   "es": "Emiratos Árabes Unidos",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "United Arab Emirates",
+    "Emiratos Árabes Unidos",
+    "AE",
+    "UAE",
+    "Emirates"
+   ]
+  },
+  {
+   "code": "gb",
+   "name": "United Kingdom",
+   "es": "Reino Unido",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "Reino Unido",
+    "Reino Unido de Gran Bretaña e Irlanda del Norte",
+    "GB",
+    "UK",
+    "Great Britain"
+   ]
+  },
+  {
+   "code": "us",
+   "name": "United States",
+   "es": "Estados Unidos",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "United States",
+    "United States of America",
+    "Estados Unidos",
+    "Estados Unidos de América",
+    "US",
+    "USA"
+   ]
+  },
+  {
+   "code": "vi",
+   "name": "United States Virgin Islands",
+   "es": "Islas Vírgenes de los Estados Unidos",
+   "continent": "americas",
+   "un": false,
+   "names": [
+    "United States Virgin Islands",
+    "Virgin Islands of the United States",
+    "Islas Vírgenes de los Estados Unidos",
+    "VI",
+    "Virgin Islands, U.S."
+   ]
+  },
+  {
+   "code": "uy",
+   "name": "Uruguay",
+   "es": "Uruguay",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Uruguay",
+    "Oriental Republic of Uruguay",
+    "República Oriental del Uruguay",
+    "UY"
+   ]
+  },
+  {
+   "code": "uz",
+   "name": "Uzbekistan",
+   "es": "Uzbekistán",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Uzbekistan",
+    "Republic of Uzbekistan",
+    "República de Uzbekistán",
+    "UZ",
+    "O‘zbekiston Respublikasi"
+   ]
+  },
+  {
+   "code": "vu",
+   "name": "Vanuatu",
+   "es": "Vanuatu",
+   "continent": "oceania",
+   "un": true,
+   "names": [
+    "Vanuatu",
+    "Republic of Vanuatu",
+    "República de Vanuatu",
+    "VU",
+    "Ripablik blong Vanuatu",
+    "République de Vanuatu"
+   ]
+  },
+  {
+   "code": "va",
+   "name": "Vatican City",
+   "es": "Ciudad del Vaticano",
+   "continent": "europe",
+   "un": true,
+   "names": [
+    "Vatican City",
+    "Vatican City State",
+    "Ciudad del Vaticano",
+    "VA",
+    "Holy See (Vatican City State)",
+    "Vatican",
+    "Stato della Città del Vaticano"
+   ]
+  },
+  {
+   "code": "ve",
+   "name": "Venezuela",
+   "es": "Venezuela",
+   "continent": "americas",
+   "un": true,
+   "names": [
+    "Venezuela",
+    "Bolivarian Republic of Venezuela",
+    "República Bolivariana de Venezuela",
+    "VE",
+    "Venezuela, Bolivarian Republic of"
+   ]
+  },
+  {
+   "code": "vn",
+   "name": "Vietnam",
+   "es": "Vietnam",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Vietnam",
+    "Socialist Republic of Vietnam",
+    "República Socialista de Vietnam",
+    "VN",
+    "Cộng hòa Xã hội chủ nghĩa Việt Nam",
+    "Viet Nam"
+   ]
+  },
+  {
+   "code": "wf",
+   "name": "Wallis and Futuna",
+   "es": "Wallis y Futuna",
+   "continent": "oceania",
+   "un": false,
+   "names": [
+    "Wallis and Futuna",
+    "Territory of the Wallis and Futuna Islands",
+    "Wallis y Futuna",
+    "Territorio de las Islas Wallis y Futuna",
+    "WF",
+    "Territoire des îles Wallis et Futuna"
+   ]
+  },
+  {
+   "code": "eh",
+   "name": "Western Sahara",
+   "es": "Sahara Occidental",
+   "continent": "africa",
+   "un": false,
+   "names": [
+    "Western Sahara",
+    "Sahrawi Arab Democratic Republic",
+    "Sahara Occidental",
+    "República Árabe Saharaui Democrática",
+    "EH",
+    "Taneẓroft Tutrimt"
+   ]
+  },
+  {
+   "code": "ye",
+   "name": "Yemen",
+   "es": "Yemen",
+   "continent": "asia",
+   "un": true,
+   "names": [
+    "Yemen",
+    "Republic of Yemen",
+    "República de Yemen",
+    "YE",
+    "Yemeni Republic",
+    "al-Jumhūriyyah al-Yamaniyyah"
+   ]
+  },
+  {
+   "code": "zm",
+   "name": "Zambia",
+   "es": "Zambia",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Zambia",
+    "Republic of Zambia",
+    "República de Zambia",
+    "ZM"
+   ]
+  },
+  {
+   "code": "zw",
+   "name": "Zimbabwe",
+   "es": "Zimbabue",
+   "continent": "africa",
+   "un": true,
+   "names": [
+    "Zimbabwe",
+    "Republic of Zimbabwe",
+    "Zimbabue",
+    "República de Zimbabue",
+    "ZW"
+   ]
+  },
+  {
+   "code": "ax",
+   "name": "Åland Islands",
+   "es": "Alandia",
+   "continent": "europe",
+   "un": false,
+   "names": [
+    "Åland Islands",
+    "Alandia",
+    "Islas Åland",
+    "AX",
+    "Aaland",
+    "Aland",
+    "Ahvenanmaa"
+   ]
+  }
+ ],
+ "lookalikes": [
+  {
+   "code": "it",
+   "thing": "A boot",
+   "story": "Italy is the boot everyone knows, kicking the island of Sicily like a ball.",
+   "choices": [
+    "A boot",
+    "A glove",
+    "A fish",
+    "A hammer"
+   ],
+   "answer": 0,
+   "country": "Italy"
+  },
+  {
+   "code": "cl",
+   "thing": "A long ribbon",
+   "story": "Chile runs 4,300 km north to south but averages only 177 km across. It borders one ocean and one mountain range, and that is what stretched it.",
+   "choices": [
+    "A long ribbon",
+    "A boomerang",
+    "A teardrop",
+    "A crescent moon"
+   ],
+   "answer": 0,
+   "country": "Chile"
+  },
+  {
+   "code": "hr",
+   "thing": "A boomerang",
+   "story": "Croatia wraps around Bosnia, which is what bends it. Some people say a croissant instead.",
+   "choices": [
+    "A boomerang",
+    "A boot",
+    "A key",
+    "A hook"
+   ],
+   "answer": 0,
+   "country": "Croatia"
+  },
+  {
+   "code": "lk",
+   "thing": "A teardrop",
+   "story": "Sri Lanka is often called the teardrop of India, hanging just below it.",
+   "choices": [
+    "A teardrop",
+    "An egg",
+    "A leaf",
+    "A shell"
+   ],
+   "answer": 0,
+   "country": "Sri Lanka"
+  },
+  {
+   "code": "au",
+   "thing": "A dog's head",
+   "story": "Many people see a scruffy dog facing left, with Cape York as an ear.",
+   "choices": [
+    "A dog's head",
+    "A turtle",
+    "A hat",
+    "A cloud"
+   ],
+   "answer": 0,
+   "country": "Australia"
+  },
+  {
+   "code": "fr",
+   "thing": "A hexagon",
+   "story": "The French call their own country l'Hexagone, because it has roughly six sides.",
+   "choices": [
+    "A hexagon",
+    "A square",
+    "A star",
+    "A triangle"
+   ],
+   "answer": 0,
+   "country": "France"
+  },
+  {
+   "code": "pt",
+   "thing": "A rectangle",
+   "story": "Portugal is one of the tidiest shapes on the map, a tall rectangle down the side of Spain.",
+   "choices": [
+    "A rectangle",
+    "A circle",
+    "A boot",
+    "A wedge"
+   ],
+   "answer": 0,
+   "country": "Portugal"
+  },
+  {
+   "code": "no",
+   "thing": "A spoon",
+   "story": "Norway curls round Sweden with a long thin handle and a wider bowl at the north.",
+   "choices": [
+    "A spoon",
+    "A fork",
+    "A knife",
+    "A ladder"
+   ],
+   "answer": 0,
+   "country": "Norway"
+  },
+  {
+   "code": "in",
+   "thing": "A diamond",
+   "story": "India narrows to a point at the bottom, which is why it reads as a diamond or an arrowhead.",
+   "choices": [
+    "A diamond",
+    "A circle",
+    "A boot",
+    "A crescent"
+   ],
+   "answer": 0,
+   "country": "India"
+  },
+  {
+   "code": "gr",
+   "thing": "A hand",
+   "story": "The Peloponnese in the south reaches into the sea with four finger-like points.",
+   "choices": [
+    "A hand",
+    "A foot",
+    "A face",
+    "A wing"
+   ],
+   "answer": 0,
+   "country": "Greece"
+  },
+  {
+   "code": "ru",
+   "thing": "A bison",
+   "story": "Russia is the biggest country there is, and many people see a bison or bear facing right.",
+   "choices": [
+    "A bison",
+    "A whale",
+    "A dragon",
+    "A horse"
+   ],
+   "answer": 0,
+   "country": "Russia"
+  },
+  {
+   "code": "kh",
+   "thing": "A slice of bread",
+   "story": "Cambodia is close to a square with a rounded top, which is why people see a slice.",
+   "choices": [
+    "A slice of bread",
+    "A shield",
+    "A bell",
+    "A boat"
+   ],
+   "answer": 0,
+   "country": "Cambodia"
+  }
+ ]
+}

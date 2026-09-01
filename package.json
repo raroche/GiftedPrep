@@ -17,7 +17,8 @@
     "mathverify": "node tools/mathverify.mjs",
     "flagcheck": "node tools/flagcheck.mjs",
     "test": "node --test \"tools/tests/**/*.test.mjs\"",
-    "verify": "npm run parse && npm run validate && npm run dupcheck && npm run rulecheck && npm run mathcheck && npm run mathverify && npm run flagcheck && npm test",
-    "serve": "python3 tools/serve.py 8765"
+    "verify": "npm run parse && npm run validate && npm run dupcheck && npm run rulecheck && npm run mathcheck && npm run mathverify && npm run flagcheck && npm run shapecheck && npm test",
+    "serve": "python3 tools/serve.py 8765",
+    "shapecheck": "node tools/shapecheck.mjs"
   }
 }
