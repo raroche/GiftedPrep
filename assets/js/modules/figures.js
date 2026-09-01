@@ -1,5 +1,5 @@
 /**
- * figures.js — Declarative SVG figure renderer for GiftedPrep.
+ * figures.js — Declarative SVG figure renderer for CurioZoo.
  *
  * Visual reasoning items (matrices, series, classification sets, paper folding,
  * charts) are stored in JSON as a compact spec instead of raw SVG markup. This

@@ -1,5 +1,5 @@
 /**
- * app.js — GiftedPrep controller.
+ * app.js — CurioZoo controller.
  *
  * Holds the app state, owns the hash router, and wires the DOM in index.html to
  * the modules in ./modules. No framework: the whole app is five screens and one

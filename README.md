@@ -2,12 +2,13 @@
 
 <img src="assets/img/favicon.svg" width="72" alt="">
 
-# GiftedPrep
+# CurioZoo
 
-**Friendly practice for the CogAT, NNAT and OLSAT — the group tests Florida
-districts use to screen children for gifted programs.**
+**Screen time that makes you think.** A place for curious kids: real
+mathematics, games that are actually puzzles, and practice for the tests
+Florida districts use to screen for gifted programs.
 
-1,576 questions · grades 1–4 · no login · no tracking · nothing sent anywhere
+no login · no tracking · no ads · nothing sent anywhere
 
 </div>
 
@@ -15,12 +16,20 @@ districts use to screen children for gifted programs.**
 
 ## What this is
 
-A free, single-page web app where a child in grades 1 to 4 can meet the *kinds*
-of questions used on gifted screening tests before they meet them for real.
-Every question explains itself afterwards, in words a six-year-old can follow.
+A free, single-page web app for a child who would rather work something out
+than watch another video. It started as gifted-test practice and grew past it;
+that practice is now one section among several, and more are planned.
 
-It is built for **familiarization, not coaching** — a distinction the research
-takes seriously, and so does this project. See
+Everything explains itself afterwards, in words a six-year-old can follow.
+
+| Section | What it is |
+|---|---|
+| **Math Lab** | 86 topics and 609 exercises across grades 1–6. Real mathematics — primes, symmetry, graph colouring, the pigeonhole principle — not worksheets |
+| **Fun and games** | Games for memorising. Name the Flag (250 flags) and Name the Country (242 outlines, type the answer in English or Spanish) |
+| **Gifted Prep** | 1,576 questions in the shapes used by the CogAT, NNAT and OLSAT, grades 1–4 |
+
+The gifted practice is built for **familiarization, not coaching** — a
+distinction the research takes seriously, and so does this project. See
 [the honest bit](#the-honest-bit-about-test-prep) below.
 
 There is also a [**Parent Guide**](assets/js/modules/parents.js) inside the app:

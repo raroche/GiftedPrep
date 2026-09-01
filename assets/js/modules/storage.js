@@ -1,12 +1,16 @@
 /**
  * storage.js — Small, forgiving wrapper over localStorage.
  *
- * GiftedPrep has no account and no server. Everything a family does stays in
+ * CurioZoo has no account and no server. Everything a family does stays in
  * the browser on their own device. Private browsing, a full disk, or a locked
  * down school iPad can all make localStorage throw, so every call here is
  * guarded and falls back to an in-memory store for the session.
  */
 
+/* Deliberately still the old name. The key is the only thing standing between
+   a child and every score, streak and seen-question they have built up, and a
+   rename would silently wipe all of it on the next load. The brand changed;
+   the storage contract did not. */
 const KEY = 'giftedprep.v1';
 const memory = new Map();
 

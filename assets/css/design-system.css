@@ -555,17 +555,17 @@ button, a, label, summary, [role="button"] {
   padding: var(--gp-space-2);
   border-radius: var(--gp-radius-md);
 }
+/* The mark carries its own colours now, so it sits on the bar rather than
+   inside a tinted tile: a gradient chip behind an animal reads as two logos. */
 .gp-brand__mark {
   display: grid;
   place-items: center;
   width: 34px; height: 34px;
-  border-radius: 11px;
-  background: linear-gradient(150deg, var(--gp-accent), var(--gp-secondary));
-  color: #fff;
   flex: none;
 }
-.gp-brand__mark svg { width: 21px; height: 21px; }
+.gp-brand__mark svg { width: 32px; height: 32px; }
 .gp-brand__name { white-space: nowrap; }
+.gp-brand__zoo { color: var(--gp-accent); }
 
 .gp-footer {
   border-top: 1px solid var(--gp-line);

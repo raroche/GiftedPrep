@@ -46,6 +46,22 @@ const ICONS = {
   chart:     stroke('M4 20V4') + stroke('M4 20h16') + stroke('M8 17v-5M12.5 17V7M17 17v-8'),
   listOrder: stroke('M9 6h11M9 12h11M9 18h11') + stroke('M4 5.5h1.5v4M4 13h2v1.5H4.5V16H6M4 19h2'),
   target:    stroke('M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z') + stroke('M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z') + stroke('M12 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z'),
+  /* The CurioZoo mark. Not a stroke() icon: it is the logo, drawn at 64 and
+     scaled to the 24 grid. Colours are presentation attributes with
+     fallbacks, because style-src 'self' discards a <style> block inside
+     inlined SVG. The eyes stay white in both themes on purpose. */
+  curiozoo: '<g transform="scale(.375)">'
+    + '<circle cx="19" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>'
+    + '<circle cx="45" cy="14" r="5.4" fill="var(--gp-accent, #BA5828)"/>'
+    + '<circle cx="21.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>'
+    + '<circle cx="42.5" cy="27" r="11" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>'
+    + '<circle cx="24.5" cy="25.5" r="4.6" fill="#2B2926"/>'
+    + '<circle cx="45.5" cy="25.5" r="4.6" fill="#2B2926"/>'
+    + '<circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF"/>'
+    + '<circle cx="47.3" cy="23.6" r="1.6" fill="#FFFFFF"/>'
+    + '<rect x="4" y="36" width="56" height="22" rx="9" fill="var(--gp-accent, #BA5828)"/>'
+    + '<path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="var(--gp-bg, #FDFBF7)" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>'
+    + '</g>',
   rotate:    stroke('M4 12a8 8 0 1 1 3 6.2') + stroke('M3 14.5 4 19l4.5-1') + stroke('M9.5 9.5h5v5h-5Z')
 };
 

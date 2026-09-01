@@ -1,7 +1,7 @@
 {
-  "name": "GiftedPrep",
-  "short_name": "GiftedPrep",
-  "description": "Friendly practice for the CogAT, NNAT and OLSAT gifted screening tests, grades 1 to 4.",
+  "name": "CurioZoo",
+  "short_name": "CurioZoo",
+  "description": "A place for curious kids: real mathematics, thinking games, and practice for gifted screening tests. Free, no sign-up.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
