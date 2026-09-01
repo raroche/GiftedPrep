@@ -97,6 +97,38 @@ for (const r of ROOMS.filter((x) => x.status === 'live')) {
   }
 }
 
+/* ---- every screen shown must be registered, and must exist in the HTML ----
+   showScreen() with an unknown name hides everything and shows nothing. It
+   throws now, but throwing at runtime is still a page a child sees break, so
+   the mismatch is caught here instead. This shipped once: the capital game's
+   screens were added to a SCREENS list in app.js that no longer existed, the
+   real one having moved to shell.js during the split. */
+const shell = fs.readFileSync(`${ROOT}/modules/shell.js`, 'utf8');
+const listed = new Set(
+  (shell.match(/const SCREENS = \[([\s\S]*?)\];/) || [, ''])[1]
+    .match(/'([a-z]+)'/g)?.map((q) => q.slice(1, -1)) || []
+);
+if (!listed.size) err('could not read SCREENS from modules/shell.js');
+
+const html = fs.readFileSync('index.html', 'utf8');
+for (const name of listed) {
+  if (!html.includes(`id="screen-${name}"`)) {
+    err(`SCREENS lists "${name}" but index.html has no id="screen-${name}"`);
+  }
+}
+for (const f of files) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/showScreen\('([a-z]+)'\)/g)) {
+    if (!listed.has(m[1])) {
+      err(`${f} calls showScreen('${m[1]}'), which is not in SCREENS — `
+        + 'that hides every screen and shows none');
+    }
+  }
+}
+for (const m of html.matchAll(/id="screen-([a-z]+)"/g)) {
+  if (!listed.has(m[1])) warn(`index.html has #screen-${m[1]} but SCREENS does not list it`);
+}
+
 /* ---- report ---- */
 
 const byLayer = { app: 0, screens: 0, modules: 0 };

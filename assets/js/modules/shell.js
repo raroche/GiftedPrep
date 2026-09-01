@@ -70,9 +70,23 @@ export function hydrateIcons(root = document) {
 /* ------------------------------------------------------------------ */
 
 const SCREENS = ['home', 'gifted', 'tests', 'categories', 'quiz', 'results', 'parents',
-  'math', 'mathtopic', 'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame', 'error'];
+  'math', 'mathtopic', 'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame',
+  'capsetup', 'capgame', 'error'];
 
+/**
+ * Show one screen and hide the rest.
+ *
+ * A name that is not in SCREENS used to hide everything and show nothing: the
+ * loop turned each screen off and never found one to turn on. That shipped the
+ * capital game as a blank page — the markup was in the DOM and the round had
+ * been built, so nothing threw and nothing logged. It only looked broken to a
+ * person. Now it says so.
+ */
 export function showScreen(name) {
+  if (!SCREENS.includes(name)) {
+    throw new Error(`showScreen("${name}"): not in SCREENS, so every screen `
+      + `would be hidden. Add it to modules/shell.js.`);
+  }
   SCREENS.forEach((s) => {
     const el = document.getElementById(`screen-${s}`);
     if (el) el.classList.toggle('is-active', s === name);
