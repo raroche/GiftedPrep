@@ -64,7 +64,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Light and dark** | Follows the system theme, with a manual override |
 | **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
-| **Math Lab** | A separate section for advanced maths, grades 1 to 4. 58 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, two unsolved problems) and number skills |
+| **Math Lab** | A separate section for advanced maths, grades 1 to 5. 72 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, pi, a game you can always win) and number skills |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
 Keyboard: <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the next
@@ -118,7 +118,7 @@ Separate from the test practice. The screening tests measure reasoning, and
 this measures nothing at all: it is a place for a child who finds grade-level
 maths easy to go deeper.
 
-All four grades are written: 58 topics and 413 exercises.
+Grades 1 to 5 are written: 72 topics and 511 exercises.
 
 Grade 2's big ideas are a proof the child can see rather than take on
 trust (odd numbers stacking into squares), a genuinely unsolved problem
@@ -134,6 +134,14 @@ counting, Pascal's triangle, the Lo Shu magic square, fair division by cut and
 choose, perfect numbers and the odd-perfect question still open after 2,000
 years, probability written as a fraction, and why any four-sided shape tiles a
 floor.
+
+Grade 5 goes past the tests, since the screening only covers grades 1 to 4.
+It has pi found with a piece of string rather than handed over, the
+subtraction game where a child who spots the rule can beat any adult who has
+not, the square-cube law and why there are no giant ants, powers of ten,
+clock arithmetic, Cantor's argument that there are no more fractions than
+whole numbers, the Monty Hall doors played twenty times because nothing else
+convinces anyone, and Pythagoras shown as three squares that fit.
 
 Grade 4 closes several loops on purpose. The Sierpinski triangle turns out to
 be grade 3's Pascal triangle with the odd numbers shaded, which nobody expects.

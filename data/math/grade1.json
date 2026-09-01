@@ -960,7 +960,7 @@
         },
         {
           "t": "tip",
-          "text": "If the jump is not the same each time, look at the jumps themselves. They might have their own pattern."
+          "text": "If the jump changes each time, look at the jumps. They may have a pattern too."
         }
       ],
       "exercises": [
@@ -1705,7 +1705,7 @@
         },
         {
           "t": "tip",
-          "text": "A bee eats 8 pounds of honey to make 1 pound of wax. Hexagons save wax, so the shape is worth real food."
+          "text": "A bee eats 8 pounds of honey per pound of wax. Hexagons save wax, so the shape is food."
         }
       ],
       "exercises": [
@@ -1780,9 +1780,9 @@
         },
         {
           "type": "paper",
-          "ask": "Find something at home made of hexagons or of repeating tiles. Count how many shapes meet at one corner.",
+          "ask": "Find repeating tiles at home. How many shapes meet at one corner?",
           "answer": 3,
-          "hint": "Try a bathroom floor, a football, a chain-link fence, or a picture of a honeycomb. For hexagons the answer is 3.",
+          "hint": "A bathroom floor, a football, a fence. For hexagons the answer is 3.",
           "why": "Hexagons always meet three at a corner. Squares meet four. Triangles meet six. That number is fixed by the shape, and it is why some shapes tile and others cannot."
         },
         {
@@ -1958,7 +1958,7 @@
         },
         {
           "t": "say",
-          "text": "The line comes back to the start, and it has covered the whole strip. Both sides. So it only has one side."
+          "text": "The line comes back to the start, having covered both sides. So it has one side."
         },
         {
           "t": "say",
@@ -2010,9 +2010,9 @@
         },
         {
           "type": "paper",
-          "ask": "Cut a twisted loop one third of the way from the edge instead of the middle. How many loops now?",
+          "ask": "Cut a twisted loop a third of the way in, not the middle. How many loops?",
           "answer": 2,
-          "hint": "Keep the same distance from the edge the whole way round. You will go round twice before meeting your start.",
+          "hint": "Keep the same distance from the edge all the way round.",
           "why": "Two, but they are linked together and one is twice as long as the other. Nobody would guess that. This is the kind of thing mathematicians spend whole careers on."
         }
       ]
@@ -2046,7 +2046,7 @@
         },
         {
           "t": "tip",
-          "text": "10 socks or 10,000 makes no difference. Three is always enough. That is what makes it maths, not luck."
+          "text": "10 socks or 10,000 makes no difference. Three is always enough."
         }
       ],
       "exercises": [
@@ -2088,9 +2088,9 @@
         },
         {
           "type": "paper",
-          "ask": "There are 8 socks in the drawer: 4 red, 4 blue. You want 2 BLUE ones for certain. How many must you grab?",
+          "ask": "8 socks: 4 red, 4 blue. You want 2 BLUE for certain. How many grabs?",
           "answer": 6,
-          "hint": "Think about the worst possible luck. What if you pull out every red one first?",
+          "hint": "Think about the worst luck. What if every red comes out first?",
           "why": "Six. The worst case is all 4 red first, then 2 blue. Asking for a matching pair is easy. Asking for a particular colour means planning for the worst luck there is."
         }
       ]
@@ -2195,9 +2195,9 @@
         },
         {
           "type": "paper",
-          "ask": "Use 3 coins of different sizes and 3 spots on the table. Move the stack. How many moves did you use?",
+          "ask": "Use 3 coins of different sizes and 3 spots. Move the stack. How many moves?",
           "answer": 7,
-          "hint": "Big coin at the bottom. Never put a bigger coin on a smaller one. Seven is the best possible.",
+          "hint": "Never a bigger coin on a smaller one. Seven is the best possible.",
           "why": "Seven if you did it perfectly. More than that means there was a wasted move somewhere. Try again and see if you can hit exactly 7."
         },
         {

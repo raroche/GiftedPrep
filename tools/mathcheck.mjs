@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIR = 'data/math';
-const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi', 'sieve', 'magic', 'cipher'];
+const TYPES = ['choice', 'number', 'truefalse', 'build', 'paper', 'collect', 'colormap', 'hanoi', 'sieve', 'magic', 'cipher', 'nim', 'doors'];
 
 
 /* Regions of a grid map, and which pairs share an edge. */
@@ -130,8 +130,10 @@ for (const file of files) {
       if (!['say', 'show', 'tip'].includes(b.t)) err(where, `lesson block ${bi + 1} has unknown type "${b.t}"`);
       if (b.t === 'show' && !b.figure) err(where, `lesson block ${bi + 1} shows nothing`);
       if (b.t !== 'show' && !b.text) err(where, `lesson block ${bi + 1} has no text`);
-      if (b.text && b.text.length > 120) {
-        warn(where, `lesson block ${bi + 1} is ${b.text.length} characters; a first grader will not read it`);
+      /* Older children read more, but a lesson line is still a line. */
+      const lineCap = 100 + (data.grade - 1) * 12;
+      if (b.text && b.text.length > lineCap) {
+        warn(where, `lesson block ${bi + 1} is ${b.text.length} characters, over the ${lineCap} a grade ${data.grade} line should stay under`);
       }
     });
 
@@ -147,7 +149,8 @@ for (const file of files) {
 
       if (!TYPES.includes(e.type)) { err(w, `unknown type "${e.type}"`); return; }
       if (!e.ask) err(w, 'no question');
-      if (e.ask && e.ask.length > 110) warn(w, `question is ${e.ask.length} characters, too long to read`);
+      const askCap = 95 + (data.grade - 1) * 12;
+      if (e.ask && e.ask.length > askCap) warn(w, `question is ${e.ask.length} characters, over the ${askCap} a grade ${data.grade} question should stay under`);
       if (!e.why) err(w, 'no explanation');
 
       if (e.type === 'choice') {
@@ -192,6 +195,15 @@ for (const file of files) {
           warn(w, `allows ${e.limit} colours but ${need} would do`);
         }
         if (need > 4) err(w, `map needs ${need} colours, which cannot happen on a real map`);
+      } else if (e.type === 'nim') {
+        if (!e.start || e.start < 4) err(w, 'the pile is too small to be a game');
+        const max = e.max || 3;
+        if (e.start % (max + 1) === 0) {
+          err(w, `a pile of ${e.start} with take up to ${max} is a LOSS for the player going first`);
+        }
+        if (!e.wins) err(w, 'no target number of wins');
+      } else if (e.type === 'doors') {
+        if (!e.rounds || e.rounds < 5) err(w, 'too few rounds to show the pattern');
       } else if (e.type === 'cipher') {
         if (!e.coded) err(w, 'no coded text');
         if (typeof e.answer !== 'number' || e.answer < 0 || e.answer > 25) {

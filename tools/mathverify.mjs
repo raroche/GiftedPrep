@@ -23,7 +23,8 @@ const data = JSON.parse(fs.readFileSync('data/math/grade1.json', 'utf8'));
 const g2 = JSON.parse(fs.readFileSync('data/math/grade2.json', 'utf8'));
 const g3 = JSON.parse(fs.readFileSync('data/math/grade3.json', 'utf8'));
 const g4 = JSON.parse(fs.readFileSync('data/math/grade4.json', 'utf8'));
-const ALL = [...data.topics, ...g2.topics, ...g3.topics, ...g4.topics];
+const g5 = JSON.parse(fs.readFileSync('data/math/grade5.json', 'utf8'));
+const ALL = [...data.topics, ...g2.topics, ...g3.topics, ...g4.topics, ...g5.topics];
 const topic = (id) => ALL.find((t) => t.id === id);
 const ex = (id, i) => topic(id).exercises[i];
 const asked = (id, needle) =>
@@ -671,6 +672,122 @@ topic('secret-writing').exercises.filter((e) => e.type === 'cipher').forEach((e,
   const p = t.exercises.find((e) => /55 divided by 34/i.test(e.ask));
   if (p && p.answer !== hundredth) bad('golden[ratio]', `55/34 is ${ratio.toFixed(2)}, hundredths digit ${hundredth}`);
   else if (p) ok('golden[ratio]', `55/34 = ${ratio.toFixed(2)}`);
+}
+
+/* ---- Grade 5 --------------------------------------------------------- */
+
+/* Pi: every circumference claim must match diameter x pi. */
+{
+  const t = topic('pi');
+  [[10, 31], [100, 314]].forEach(([across, want]) => {
+    const e = t.exercises.find((x) => x.ask.includes(`${across} across`));
+    if (!e) return;
+    const real = Math.round(across * Math.PI);
+    if (real !== want || e.answer !== want) bad('pi', `${across} across is about ${real} round, data says ${e.answer}`);
+    else ok('pi', `${across} across = about ${real} round`);
+  });
+  const d2 = t.exercises.find((x) => /hundredths digit/i.test(x.ask) && /3\.1/.test(x.ask));
+  if (d2 && d2.answer !== Number(Math.PI.toFixed(2).split('.')[1][1])) bad('pi[digit]', 'pi is 3.14');
+  else if (d2) ok('pi[digit]', 'pi to 2 places is 3.14');
+}
+
+/* The subtraction game: the stated first move must actually win. */
+{
+  const t = topic('always-win');
+  const game = t.exercises.find((e) => e.type === 'nim');
+  const max = game.max || 3;
+  const block = max + 1;
+  if (game.start % block === 0) bad('nim', `a pile of ${game.start} is a loss for the first player`);
+  else ok('nim', `pile ${game.start}, take up to ${max}: first player wins`);
+  const first = t.exercises.find((e) => /How many should you take first/i.test(e.ask));
+  const want = game.start % block;
+  if (first && first.answer !== want) bad('nim[first]', `take ${want} to leave a multiple of ${block}`);
+  else if (first) ok('nim[first]', `take ${want} leaves ${game.start - want}`);
+  const c = t.exercises.find((e) => e.type === 'collect');
+  const notLosing = c.valid.filter((v) => v % block !== 0);
+  if (notLosing.length) bad('nim[collect]', `${notLosing.join(', ')} are not losing sizes`);
+  else ok('nim[collect]', `all listed sizes are multiples of ${block}`);
+  const other = t.exercises.find((e) => e.type === 'paper');
+  if (other && other.answer !== 3) bad('nim[paper]', 'take 1 or 2 makes multiples of 3 the losing sizes');
+  else if (other) ok('nim[paper]', 'take up to 2 gives losing multiples of 3');
+}
+
+/* Square-cube law: doubling gives 8x volume and 4x surface. */
+{
+  const t = topic('big-and-small');
+  const checks = [[/sides of 2.*volume/i, 2 ** 3], [/6 faces of 2 by 2/i, 6 * 4],
+    [/sides of 3.*volume/i, 3 ** 3], [/how many times heavier/i, 8],
+    [/how many times more surface/i, 4], [/cube with side 4/i, 4 ** 3]];
+  checks.forEach(([re, want]) => {
+    const e = t.exercises.find((x) => re.test(x.ask));
+    if (!e) return;
+    if (e.answer !== want) bad('cube-law', `"${e.ask.slice(0, 34)}" should be ${want}, data says ${e.answer}`);
+    else ok('cube-law', `${e.ask.slice(0, 34)} = ${want}`);
+  });
+}
+
+/* Clock arithmetic really is remainder arithmetic. */
+{
+  const t = topic('clock-arithmetic');
+  [[/9 o'clock.*5 hours/i, (9 + 5) % 12], [/11 o'clock.*3 hours/i, (11 + 3) % 12],
+   [/8 o'clock.*24 hours/i, 8], [/100 is divided by 7/i, 100 % 7],
+   [/365 is divided by 7/i, 365 % 7]].forEach(([re, want]) => {
+    const e = t.exercises.find((x) => re.test(x.ask));
+    if (!e) return;
+    if (e.answer !== want) bad('clock', `"${e.ask.slice(0, 36)}" should be ${want}, data says ${e.answer}`);
+    else ok('clock', `${e.ask.slice(0, 36)} = ${want}`);
+  });
+}
+
+/* Pythagoras: every triple named must actually be right-angled. */
+{
+  const t = topic('right-triangle');
+  [[3, 4, 5], [6, 8, 10], [5, 12, 13]].forEach(([a, b, c]) => {
+    if (a * a + b * b !== c * c) bad('pythagoras', `${a},${b},${c} is not a right triangle`);
+    else ok('pythagoras', `${a}^2 + ${b}^2 = ${c}^2`);
+  });
+  const sum = t.exercises.find((e) => /36 \+ 64/.test(e.ask));
+  if (sum && sum.answer !== 36 + 64) bad('pythagoras', '36 + 64 is 100');
+  else if (sum) ok('pythagoras', '36 + 64 = 100');
+}
+
+/* Monty Hall: the stated chances must be the real ones. */
+{
+  const t = topic('three-doors');
+  const first = t.exercises.find((e) => /first pick right/i.test(e.ask) && /3 doors/i.test(e.ask));
+  if (first && first.answer !== 1) bad('doors', 'the first pick is right 1 time in 3');
+  else if (first) ok('doors', 'first pick right 1 in 3');
+  const other = t.exercises.find((e) => /OTHER two/i.test(e.ask));
+  if (other && other.answer !== 2) bad('doors', 'the other two hold 2 thirds');
+  else if (other) ok('doors', 'other two hold 2 in 3');
+  const hundred = t.exercises.find((e) => /100 doors/i.test(e.ask));
+  if (hundred && hundred.answer !== 1) bad('doors', 'with 100 doors the first pick is right 1 in 100');
+  else if (hundred) ok('doors', '100 doors: first pick right 1 in 100');
+  /* And simulate it, because the topic asks a child to trust a simulation. */
+  /* Walk every (prize, pick) pair equally. Staying wins only when the first
+     pick was already right; switching wins in every other case, because the
+     host never opens the prize. */
+  let stay = 0; let sw = 0;
+  for (let prize = 0; prize < 3; prize += 1) {
+    for (let pick = 0; pick < 3; pick += 1) {
+      if (pick === prize) stay += 1; else sw += 1;
+    }
+  }
+  const ratio = sw / stay;
+  if (ratio < 1.8 || ratio > 2.2) bad('doors[sim]', `switching wins ${ratio.toFixed(2)}x, expected about 2`);
+  else ok('doors[sim]', `simulated: switching wins ${ratio.toFixed(2)} times as often as staying`);
+}
+
+/* Powers of ten */
+{
+  const t = topic('powers-of-ten');
+  [[/10 x 10 x 10/i, 1000], [/1 to 1,000,000/i, 6], [/0\.001 is one what/i, 1000],
+   [/thousand thousands/i, 6]].forEach(([re, want]) => {
+    const e = t.exercises.find((x) => re.test(x.ask));
+    if (!e) return;
+    if (e.answer !== want) bad('powers', `"${e.ask.slice(0, 32)}" should be ${want}, data says ${e.answer}`);
+    else ok('powers', `${e.ask.slice(0, 32)} = ${want}`);
+  });
 }
 
 /* ---- Report ---------------------------------------------------------- */

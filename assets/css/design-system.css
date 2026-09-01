@@ -2013,3 +2013,32 @@ button, a, label, summary, [role="button"] {
   margin-bottom: var(--gp-space-4);
 }
 .gp-cipher__n { font-weight: 700; }
+
+/* ---- the subtraction game and the three doors ---- */
+
+.gp-nim__pile { font-size: var(--gp-text-2xl); font-weight: 800; margin: 0 0 var(--gp-space-4); }
+.gp-nim__take { display: flex; flex-wrap: wrap; gap: var(--gp-space-3); margin-bottom: var(--gp-space-4); }
+.gp-nim__say { margin: 0 0 var(--gp-space-2); font-weight: 700; min-height: 1.5em; }
+.gp-nim__score { margin: 0; color: var(--gp-ink-soft); font-weight: 600; }
+
+.gp-doors { display: flex; gap: var(--gp-space-4); margin-bottom: var(--gp-space-4); }
+.gp-door {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gp-space-1);
+  padding: var(--gp-space-4);
+  font-size: 2.4rem;
+  border: 3px solid var(--gp-line-strong);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  cursor: pointer;
+}
+.gp-door span { font-size: var(--gp-text-base); font-weight: 800; }
+.gp-door.is-picked { border-color: var(--gp-accent); box-shadow: 0 0 0 4px var(--gp-accent-line); }
+/* An opened door is shown as opened, not merely faded. */
+.gp-door.is-open { opacity: 0.5; border-style: dashed; }
+.gp-door.is-open::after { content: "empty"; font-size: var(--gp-text-sm); font-weight: 700; }
+.gp-doors__choice { display: flex; gap: var(--gp-space-3); margin-bottom: var(--gp-space-4); }

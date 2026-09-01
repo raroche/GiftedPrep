@@ -31,7 +31,7 @@ const state = {
   answered: false,
   audioUnlocked: false,
   /** Math Lab: the topic being worked through and where we are in it. */
-  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0, crossed: new Set(), shift: 0 }
+  math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0, crossed: new Set(), shift: 0, nim: null, doors: null }
 };
 
 /* Runtime styles cannot ride in a style attribute: the site's CSP drops those.
@@ -698,6 +698,8 @@ function showExercise() {
   state.math.builtTotal = 0;
   state.math.crossed = new Set();
   state.math.shift = 0;
+  state.math.nim = null;
+  state.math.doors = null;
   const total = topic.exercises.length;
 
   if (index >= total) {
@@ -725,6 +727,8 @@ function showExercise() {
     state.math.hanoi = mathlab.hanoiStart(ex.discs || 3);
     drawHanoi();
   }
+  if (ex.type === 'nim') { nimSetup(ex); nimShow('Your go.'); }
+  if (ex.type === 'doors') { doorsSetup(ex); doorsShow('Pick a door.'); }
 
   const input = $('#gp-exercise [data-answer-input]');
   if (input) input.focus({ preventScroll: true });
@@ -867,6 +871,95 @@ function tapPeg(pegEl) {
       : `Done in ${next.moves}. It can be done in ${best}, so there is a shorter way.`;
     settleExercise(true);
   }
+}
+
+/* ---- the subtraction game ---- */
+
+function nimSetup(ex) {
+  state.math.nim = { left: ex.start, wins: 0, over: false };
+}
+
+function nimShow(msg) {
+  const n = state.math.nim;
+  $('#gp-exercise [data-nim-left]').textContent = n.left;
+  $('#gp-exercise [data-nim-wins]').textContent = n.wins;
+  if (msg) $('#gp-exercise [data-nim-say]').textContent = msg;
+  $$('#gp-exercise [data-take]').forEach((b) => {
+    b.disabled = n.over || Number(b.dataset.take) > n.left;
+  });
+}
+
+function nimTake(k) {
+  const ex = state.math.topic.exercises[state.math.index];
+  const n = state.math.nim;
+  if (!n || n.over || k > n.left) return;
+  n.left -= k;
+  if (n.left === 0) {
+    n.wins += 1;
+    if (n.wins >= ex.wins) { nimShow(`You took the last one. That is ${n.wins} in a row.`); settleExercise(true); return; }
+    n.left = ex.start;
+    nimShow(`You win that one. ${n.wins} of ${ex.wins}. New pile.`);
+    return;
+  }
+  /* The computer plays perfectly, so the only way through is the real rule. */
+  const reply = mathlab.nimReply(n.left, ex.max || 3);
+  n.left -= reply;
+  if (n.left === 0) {
+    n.wins = 0;
+    n.left = ex.start;
+    nimShow(`I took the last ${reply}. I win that one, so the count goes back to nought. Try again.`);
+    return;
+  }
+  nimShow(`I take ${reply}. Your go.`);
+}
+
+/* ---- three doors ---- */
+
+function doorsSetup(ex) {
+  state.math.doors = { round: 1, stay: 0, switched: 0, prize: null, picked: null, shown: null, phase: 'pick' };
+}
+
+function doorsShow(msg) {
+  const d = state.math.doors;
+  $('#gp-exercise [data-doors-round]').textContent = d.round;
+  $('#gp-exercise [data-doors-stay]').textContent = d.stay;
+  $('#gp-exercise [data-doors-switch]').textContent = d.switched;
+  $('#gp-exercise [data-doors-choice]').hidden = d.phase !== 'choose';
+  if (msg) $('#gp-exercise [data-doors-say]').textContent = msg;
+}
+
+function pickDoor(i) {
+  const d = state.math.doors;
+  if (!d || d.phase !== 'pick') return;
+  d.prize = Math.floor(Math.random() * 3);
+  d.picked = i;
+  /* Open a door that is neither the pick nor the prize. */
+  d.shown = [0, 1, 2].find((x) => x !== i && x !== d.prize);
+  d.phase = 'choose';
+  $$('#gp-exercise [data-door]').forEach((b) => {
+    const n = Number(b.dataset.door);
+    b.classList.toggle('is-picked', n === i);
+    b.classList.toggle('is-open', n === d.shown);
+  });
+  doorsShow(`You picked door ${i + 1}. Door ${d.shown + 1} is empty. Stay or switch?`);
+}
+
+function settleDoor(switching) {
+  const ex = state.math.topic.exercises[state.math.index];
+  const d = state.math.doors;
+  if (!d || d.phase !== 'choose') return;
+  const final = switching ? [0, 1, 2].find((x) => x !== d.picked && x !== d.shown) : d.picked;
+  const won = final === d.prize;
+  if (won) { if (switching) d.switched += 1; else d.stay += 1; }
+  d.round += 1;
+  d.phase = d.round > ex.rounds ? 'done' : 'pick';
+  $$('#gp-exercise [data-door]').forEach((b) => b.classList.remove('is-picked', 'is-open'));
+  if (d.phase === 'done') {
+    doorsShow(`Done. Switching won ${d.switched}, staying won ${d.stay}.`);
+    settleExercise(true);
+    return;
+  }
+  doorsShow(`${won ? 'Prize!' : 'Empty.'} It was door ${d.prize + 1}. Pick again.`);
 }
 
 function turnDial(step) {
@@ -1077,6 +1170,14 @@ function onClick(ev) {
     $('#gp-turn-head').scrollIntoView({ block: 'start', behavior: 'smooth' });
     return;
   }
+
+  const take = ev.target.closest('[data-take]');
+  if (take) { nimTake(Number(take.dataset.take)); return; }
+
+  const door = ev.target.closest('[data-door]');
+  if (door) { pickDoor(Number(door.dataset.door)); return; }
+  if (ev.target.closest('[data-stay]')) { settleDoor(false); return; }
+  if (ev.target.closest('[data-switch]')) { settleDoor(true); return; }
 
   const dial = ev.target.closest('[data-shift]');
   if (dial) { turnDial(Number(dial.dataset.shift)); return; }

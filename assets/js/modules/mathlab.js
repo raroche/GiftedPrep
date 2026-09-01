@@ -41,7 +41,7 @@ export async function loadGrade(grade) {
 }
 
 /** Grades that have a page written. The rest are shown as not ready yet. */
-export const READY_GRADES = [1, 2, 3, 4];
+export const READY_GRADES = [1, 2, 3, 4, 5];
 
 /* ------------------------------------------------------------------ */
 /* Grade index                                                         */
@@ -155,7 +155,9 @@ const TYPE_BADGE = {
   hanoi: { label: 'Play it', icon: '🕹️' },
   sieve: { label: 'Cross them out', icon: '🧹' },
   magic: { label: 'Fill it in', icon: '🔢' },
-  cipher: { label: 'Crack it', icon: '🕵️' }
+  cipher: { label: 'Crack it', icon: '🕵️' },
+  nim: { label: 'Beat me', icon: '♟️' },
+  doors: { label: 'Try it 20 times', icon: '🚪' }
 };
 
 function badge(type) {
@@ -221,6 +223,33 @@ export function renderExercise(ex, index, total) {
       <p class="gp-hanoi__count">Moves: <strong data-hanoi-moves>0</strong>
         &middot; best possible: ${Math.pow(2, n) - 1}</p>
       <p class="gp-hanoi__say" data-hanoi-say></p>`;
+  } else if (ex.type === 'nim') {
+    body = `
+      <p class="gp-cm__rule">${esc(ex.rule || 'Take 1, 2 or 3 counters. Whoever takes the last one wins.')}</p>
+      <div class="gp-nim" data-nim data-start="${ex.start}" data-max="${ex.max || 3}">
+        <p class="gp-nim__pile"><strong data-nim-left>${ex.start}</strong> left</p>
+        <div class="gp-nim__take">${
+          Array.from({ length: ex.max || 3 }, (_, i) => i + 1).map((k) =>
+            `<button type="button" class="gp-btn gp-btn--ghost" data-take="${k}">Take ${k}</button>`).join('')
+        }</div>
+        <p class="gp-nim__say" data-nim-say>Your go.</p>
+        <p class="gp-nim__score">Games you won: <strong data-nim-wins>0</strong> of ${ex.wins}</p>
+      </div>`;
+  } else if (ex.type === 'doors') {
+    body = `
+      <p class="gp-cm__rule">Pick a door. One hides the prize. I will open an empty one,
+      then you decide: stay or switch. Play ${ex.rounds} rounds.</p>
+      <div class="gp-doors" data-doors data-rounds="${ex.rounds}">
+        ${[0, 1, 2].map((d) => `<button type="button" class="gp-door" data-door="${d}">🚪<span>${d + 1}</span></button>`).join('')}
+      </div>
+      <div class="gp-doors__choice" data-doors-choice hidden>
+        <button type="button" class="gp-btn gp-btn--ghost" data-stay>Stay</button>
+        <button type="button" class="gp-btn gp-btn--primary" data-switch>Switch</button>
+      </div>
+      <p class="gp-nim__say" data-doors-say>Pick a door.</p>
+      <p class="gp-nim__score">Round <strong data-doors-round>1</strong> of ${ex.rounds}
+        &middot; stayed and won <strong data-doors-stay>0</strong>
+        &middot; switched and won <strong data-doors-switch>0</strong></p>`;
   } else if (ex.type === 'cipher') {
     body = `
       <p class="gp-cm__rule">Every letter has been pushed along the alphabet by the
@@ -401,6 +430,22 @@ export function checkMap(ex, painted) {
 /* Prime sieve and magic square                                        */
 /* ------------------------------------------------------------------ */
 
+/**
+ * The subtraction game. With a pile of n and a take of 1..max, the player to
+ * move loses exactly when n is a multiple of max+1, because whatever they take
+ * the opponent can restore the multiple. So a perfect reply leaves one.
+ */
+export function nimReply(left, max) {
+  const block = max + 1;
+  const want = left % block;          // leaves a multiple of block when possible
+  if (want === 0) return Math.min(max, left);   // already lost; take something
+  return want;
+}
+
+export function nimLosing(left, max) {
+  return left % (max + 1) === 0;
+}
+
 /** Shift every letter along the alphabet, wrapping round. */
 export function shiftLetters(text, by) {
   const A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -517,5 +562,6 @@ export default {
   renderExercise, check, collectHit, feedbackHtml, READY_GRADES,
   checkMap, adjacency, regionsOf, MAP_COLOURS,
   hanoiStart, hanoiLegal, hanoiMove, hanoiWon,
-  isPrime, sieveKeep, checkSieve, checkMagic, shiftLetters
+  isPrime, sieveKeep, checkSieve, checkMagic, shiftLetters,
+  nimReply, nimLosing
 };

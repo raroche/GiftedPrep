@@ -1,0 +1,1257 @@
+{
+  "grade": 5,
+  "title": "Grade 5 Math Lab",
+  "blurb": "14 topics. Each one is a short lesson you can see, then puzzles to try.",
+  "tracks": [
+    {
+      "id": "wonders",
+      "name": "Big ideas",
+      "blurb": "Real mathematics. A number hiding in every circle, a game you can always win, and the reason there are no giant ants."
+    },
+    {
+      "id": "skills",
+      "name": "Number skills",
+      "blurb": "Decimals, fractions, volume and the coordinate grid."
+    }
+  ],
+  "topics": [
+    {
+      "id": "pi",
+      "track": "wonders",
+      "name": "The Circle Number",
+      "emoji": "🥧",
+      "big": "Every circle hides the same number.",
+      "parentNote": "Pi, discovered by measuring rather than told. Grade 5 handles decimals to the thousandths (MA.5.NSO.1.2), which is exactly enough to see 3.142 emerge from a tape measure.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Take any round thing. Measure all the way round, then measure across."
+        },
+        {
+          "t": "say",
+          "text": "Divide the way round by the way across."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              "3.14",
+              "3.15",
+              "3.13",
+              "3.14"
+            ],
+            "c": "orange",
+            "boxW": 76
+          },
+          "cap": "A cup, a plate, a coin, a wheel. Always about 3.14."
+        },
+        {
+          "t": "say",
+          "text": "It does not matter how big the circle is. The answer is always the same."
+        },
+        {
+          "t": "tip",
+          "text": "That number is called pi. Its digits never stop and never repeat. People have worked out trillions of them."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "Pi to two decimal places is 3.1 something. What is the hundredths digit?",
+          "answer": 4,
+          "why": "4, so pi is about 3.14. The digits carry on 3.14159265... and never fall into a repeating pattern."
+        },
+        {
+          "type": "number",
+          "ask": "A circle is 10 across. About how far is it round?",
+          "answer": 31,
+          "why": "About 31. Across times pi, so 10 times 3.14 is 31.4, which rounds to 31."
+        },
+        {
+          "type": "number",
+          "ask": "A circle is 100 across. About how far round?",
+          "answer": 314,
+          "why": "About 314. The rule never changes with size, which is the whole surprise."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A bigger circle has a bigger value of pi.",
+          "answer": false,
+          "why": "False. Pi is the same for every circle in the universe. That is what makes it worth a name."
+        },
+        {
+          "type": "number",
+          "ask": "Round 3.142 to the nearest hundredth. Type the hundredths digit.",
+          "answer": 4,
+          "why": "4, giving 3.14. The thousandths digit is 2, which is below halfway, so nothing rounds up."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Pi's digits eventually start repeating.",
+          "answer": false,
+          "why": "False. They never repeat and never stop. Numbers like that are called irrational, and pi is the most famous one."
+        },
+        {
+          "type": "paper",
+          "ask": "Measure round a mug and across it with string. Divide. Type the whole-number part of your answer.",
+          "answer": 3,
+          "hint": "Wrap string round, mark it, straighten it against a ruler.",
+          "why": "3, and if you measured carefully the decimal part starts .1. Every circle anyone has ever measured gives the same thing."
+        }
+      ]
+    },
+    {
+      "id": "always-win",
+      "track": "wonders",
+      "name": "A Game You Always Win",
+      "emoji": "♟️",
+      "big": "There is a secret, and once you know it you cannot lose.",
+      "parentNote": "The subtraction game, the simplest case of Nim. The losing positions are the multiples of 4. A child who finds that rule can beat any adult who has not, which is a memorable way to learn what a strategy is.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "21 counters. Take 1, 2 or 3. Whoever takes the last one wins."
+        },
+        {
+          "t": "say",
+          "text": "Play it a few times. There is a pattern in when you lose."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              4,
+              8,
+              12,
+              16,
+              20
+            ],
+            "c": "red"
+          },
+          "cap": "If it is your turn and this many are left, you are in trouble."
+        },
+        {
+          "t": "say",
+          "text": "Leave your opponent a multiple of 4 and they cannot escape."
+        },
+        {
+          "t": "tip",
+          "text": "Whatever they take, you take enough to make 4 together. 21 is not a multiple of 4, so going first you can always win."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "21 counters. How many should you take first?",
+          "answer": 1,
+          "why": "1, leaving 20, which is a multiple of 4. From there you just make every round add to 4 and you cannot lose."
+        },
+        {
+          "type": "number",
+          "ask": "They take 3. How many do you take to keep the pattern?",
+          "answer": 1,
+          "why": "1, because 3 and 1 make 4. Whatever they take, you take the rest of the four."
+        },
+        {
+          "type": "number",
+          "ask": "12 are left and it is your turn. How many can you take to win?",
+          "answer": 0,
+          "why": "None of them work. 12 is a multiple of 4, so whatever you take your opponent can answer. Type 0: this position is already lost."
+        },
+        {
+          "type": "nim",
+          "start": 21,
+          "max": 3,
+          "wins": 3,
+          "rule": "21 counters. Take 1, 2 or 3. Whoever takes the last one wins. Beat me three times in a row.",
+          "ask": "Beat me three times in a row.",
+          "answer": 3,
+          "why": "Take 1 first to leave 20, then always make the round add to 4. Once you leave a multiple of 4 every time, there is nothing I can do."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The player who goes first always wins this game.",
+          "answer": false,
+          "why": "False. It depends on the starting pile. From 21 the first player wins, but from 20 the first player loses against anyone who knows the rule."
+        },
+        {
+          "type": "collect",
+          "mode": "list",
+          "valid": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28
+          ],
+          "need": 4,
+          "ask": "Type a losing pile size.",
+          "why": "The multiples of 4. If it is your turn and the pile is one of these, a perfect opponent will beat you every time."
+        },
+        {
+          "type": "paper",
+          "ask": "Play with take 1 or 2 instead of 1 to 3. What are the losing sizes? Type the smallest one after 0.",
+          "answer": 3,
+          "hint": "Now every round adds to 3 instead of 4.",
+          "why": "3, then 6, 9, 12. The rule is the same shape: the losing sizes are multiples of one more than the biggest take."
+        }
+      ]
+    },
+    {
+      "id": "big-and-small",
+      "track": "wonders",
+      "name": "No Giant Ants",
+      "emoji": "🐘",
+      "big": "Double a creature and its weight grows eight times.",
+      "parentNote": "The square-cube law. Grade 5 meets volume (MA.5.GR.3.x), which makes this possible. It explains real biology: why insects are small, why elephants have big ears, why cells never get large.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "A cube 1 across has area 6 and volume 1."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "c": "blue"
+          },
+          "cap": "Double the side and the surface goes up 4 times."
+        },
+        {
+          "t": "say",
+          "text": "But the volume goes up 8 times. Weight follows volume."
+        },
+        {
+          "t": "say",
+          "text": "So a creature twice as tall is 8 times heavier, but its legs are only 4 times stronger."
+        },
+        {
+          "t": "tip",
+          "text": "That is why there are no ant-sized elephants or elephant-sized ants. A giant ant's legs would snap."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "A cube has sides of 2. What is its volume?",
+          "answer": 8,
+          "why": "8. Two times two times two. Volume is the side multiplied by itself three times."
+        },
+        {
+          "type": "number",
+          "ask": "That cube's surface: 6 faces of 2 by 2. What is the total?",
+          "answer": 24,
+          "why": "24. Each face is 4, and there are 6 of them. Surface grows with two dimensions, volume with three."
+        },
+        {
+          "type": "number",
+          "ask": "A cube has sides of 3. What is its volume?",
+          "answer": 27,
+          "why": "27. Three times three times three. Tripling the side gives 27 times the volume."
+        },
+        {
+          "type": "number",
+          "ask": "Double a creature's height. How many times heavier?",
+          "answer": 8,
+          "why": "8 times, because weight follows volume and volume goes up by 2 times 2 times 2."
+        },
+        {
+          "type": "number",
+          "ask": "Double it. How many times more surface?",
+          "answer": 4,
+          "why": "4 times, because surface goes up by 2 times 2 only. Surface cannot keep up with volume, and that is the whole idea."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A giant ant the size of a dog could walk.",
+          "answer": false,
+          "why": "False. Its weight would grow far faster than its legs got thicker, so they would break. Films get this wrong all the time."
+        },
+        {
+          "type": "paper",
+          "ask": "An elephant has big ears to lose heat. A mouse does not need them. Type the volume of a cube with side 4.",
+          "answer": 64,
+          "hint": "4 times 4 times 4.",
+          "why": "64. A big animal has lots of volume making heat but relatively little skin to lose it through, so an elephant grows extra surface on purpose. A mouse has surface to spare."
+        }
+      ]
+    },
+    {
+      "id": "powers-of-ten",
+      "track": "wonders",
+      "name": "Powers of Ten",
+      "emoji": "🔭",
+      "big": "Ten steps takes you from a person to a country.",
+      "parentNote": "Place value stretched to its full range (MA.5.NSO.1.1). Each step of ten is small on paper and enormous in the world, which is the intuition most people never build.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Every step left multiplies by 10. Every step right divides by 10."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              1,
+              10,
+              100,
+              1000,
+              10000
+            ],
+            "c": "teal",
+            "boxW": 74
+          },
+          "cap": "Only four steps, and already ten thousand."
+        },
+        {
+          "t": "say",
+          "text": "1 metre is a big step. 10 is a room. 100 is a street. 1,000 is a town."
+        },
+        {
+          "t": "say",
+          "text": "Ten more steps and you are past the moon."
+        },
+        {
+          "t": "tip",
+          "text": "Going the other way: a tenth is a finger, a hundredth is a fingernail, a thousandth is a hair."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "10 x 10 x 10 = ?",
+          "answer": 1000,
+          "why": "1000. Three steps of ten. Each one only looks like adding a zero, but it multiplies the whole thing."
+        },
+        {
+          "type": "number",
+          "ask": "How many steps of ten from 1 to 1,000,000?",
+          "answer": 6,
+          "why": "6. Count the zeros: a million has six. Each zero is one multiplication by ten."
+        },
+        {
+          "type": "number",
+          "ask": "0.001 is one what? Type the bottom number.",
+          "answer": 1000,
+          "why": "One thousandth. Three steps to the right of 1, each one dividing by ten."
+        },
+        {
+          "type": "number",
+          "ask": "Move the digit 5 one place left in 0.05. What is it worth now?",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              "0.05",
+              "0.5"
+            ],
+            "c": "blue",
+            "boxW": 78
+          },
+          "answer": 5,
+          "why": "Five tenths, or 0.5. Type 5 for the digit. One place left always means ten times bigger."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Adding a zero to the end of a whole number multiplies it by 10.",
+          "answer": true,
+          "why": "True for whole numbers, because every digit shifts one place left. Be careful with decimals: 0.50 is the same as 0.5, not ten times bigger."
+        },
+        {
+          "type": "number",
+          "ask": "A thousand thousands is what? Type the number of zeros.",
+          "answer": 6,
+          "why": "6 zeros, which is a million. Three zeros times three zeros gives six, because the steps add up."
+        },
+        {
+          "type": "paper",
+          "ask": "Start at 1 metre and multiply by 10 six times. How many kilometres is that?",
+          "answer": 1000,
+          "hint": "A kilometre is 1,000 metres.",
+          "why": "1,000 kilometres, which crosses a country. Six steps, each one trivial on paper, and you have gone from your hand to the length of Spain."
+        }
+      ]
+    },
+    {
+      "id": "clock-arithmetic",
+      "track": "wonders",
+      "name": "Clock Arithmetic",
+      "emoji": "🕛",
+      "big": "Numbers that wrap around instead of growing.",
+      "parentNote": "Modular arithmetic, met through the clock and the days of the week. It underlies check digits on every barcode and bank card, and is the first arithmetic where numbers do not just get bigger.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "It is 9 o'clock. In 5 hours it is 2 o'clock, not 14."
+        },
+        {
+          "t": "say",
+          "text": "The clock wraps round at 12. That is a whole kind of arithmetic."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              9,
+              10,
+              11,
+              12,
+              1,
+              2
+            ],
+            "c": "yellow"
+          },
+          "cap": "9 plus 5 hours. Past 12 it starts again."
+        },
+        {
+          "t": "say",
+          "text": "Days work the same way, wrapping at 7."
+        },
+        {
+          "t": "tip",
+          "text": "Every barcode has a last digit chosen so the whole thing wraps to zero. If it does not, the scanner knows it misread."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "It is 9 o'clock. What time in 5 hours?",
+          "answer": 2,
+          "why": "2 o'clock. 9 and 5 is 14, and 14 wraps past 12 to leave 2."
+        },
+        {
+          "type": "number",
+          "ask": "It is 11 o'clock. What time in 3 hours?",
+          "answer": 2,
+          "why": "2 o'clock again. 14 wraps to 2, whichever way you reach 14."
+        },
+        {
+          "type": "number",
+          "ask": "Today is day 1 of the week. What day number in 7 days?",
+          "answer": 1,
+          "why": "Day 1 again. A whole week takes you right back, which is what makes 7 the wrapping point."
+        },
+        {
+          "type": "number",
+          "ask": "What is the remainder when 100 is divided by 7?",
+          "answer": 2,
+          "why": "2, because 7 times 14 is 98 and 2 is left. So 100 days from today is 2 days later in the week."
+        },
+        {
+          "type": "number",
+          "ask": "It is 8 o'clock. What time in 24 hours?",
+          "answer": 8,
+          "why": "8 o'clock. 24 is two full turns of the 12 hour clock, so nothing changes at all."
+        },
+        {
+          "type": "truefalse",
+          "ask": "On a clock, 15 and 3 mean the same position.",
+          "answer": true,
+          "why": "True. 15 take away 12 is 3. In clock arithmetic any two numbers 12 apart are the same, which is why the hands point the same way."
+        },
+        {
+          "type": "paper",
+          "ask": "What is the remainder when 365 is divided by 7?",
+          "answer": 1,
+          "hint": "7 times 52 is 364.",
+          "why": "1. That is why your birthday moves forward one day each year, and two after a leap year."
+        }
+      ]
+    },
+    {
+      "id": "counting-fractions",
+      "track": "wonders",
+      "name": "Counting the Fractions",
+      "emoji": "♾️",
+      "big": "There are no more fractions than whole numbers.",
+      "parentNote": "Cantor's pairing argument, in its visual form. This extends grade 3's Forever. The result feels impossible: the fractions are dense everywhere and yet they can be put in a queue.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "In grade 3 you paired numbers with even numbers and nothing was left out."
+        },
+        {
+          "t": "say",
+          "text": "Now try the fractions. There are infinitely many just between 0 and 1."
+        },
+        {
+          "t": "say",
+          "text": "Put them in a grid: tops across, bottoms down. Every fraction is somewhere in it."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "1/1",
+                "2/1",
+                "3/1"
+              ],
+              [
+                "1/2",
+                "2/2",
+                "3/2"
+              ],
+              [
+                "1/3",
+                "2/3",
+                "3/3"
+              ]
+            ],
+            "cell": 66
+          },
+          "cap": "Now walk the grid in diagonals and number them 1, 2, 3, 4 as you go."
+        },
+        {
+          "t": "tip",
+          "text": "Every fraction gets a number, so they can be queued up. There are exactly as many fractions as whole numbers."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "How many fractions are there between 0 and 1?",
+          "answer": 0,
+          "why": "Infinitely many. Type 0 because no number is the answer. Between any two fractions you can always find another."
+        },
+        {
+          "type": "number",
+          "ask": "Halfway between 0 and 1 is one half. Halfway between 0 and a half? Type the bottom number.",
+          "answer": 4,
+          "why": "One fourth. You can keep halving forever and never run out of room, which is why the fractions are packed so tightly."
+        },
+        {
+          "type": "truefalse",
+          "ask": "There are more fractions than whole numbers.",
+          "answer": false,
+          "why": "False, and almost nobody believes it. Walk the grid diagonally and every fraction gets a place in the queue, so the two are the same size."
+        },
+        {
+          "type": "number",
+          "ask": "In the grid, what is the top left fraction? Type its bottom number.",
+          "answer": 1,
+          "why": "1, because the corner is 1/1. Every fraction sits somewhere in the grid: its top number picks the column and its bottom picks the row."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Some infinities are bigger than others.",
+          "answer": true,
+          "why": "True. Cantor proved the decimals that never repeat cannot be queued up at all, so there are strictly more of them than fractions. There is more than one size of forever."
+        },
+        {
+          "type": "number",
+          "ask": "How many fractions have 5 as the bottom number and a top from 1 to 4?",
+          "answer": 4,
+          "why": "4: one fifth, two fifths, three fifths, four fifths. Each row of the grid is endless, and there are endlessly many rows."
+        },
+        {
+          "type": "paper",
+          "ask": "Write the first 6 fractions you meet walking the grid diagonally. How many did you write?",
+          "answer": 6,
+          "hint": "1/1, then 2/1 and 1/2, then 3/1, 2/2, 1/3.",
+          "why": "6, and the queue never stops. Because every fraction eventually gets counted, the fractions and the counting numbers are the same size of infinite."
+        }
+      ]
+    },
+    {
+      "id": "three-doors",
+      "track": "wonders",
+      "name": "Three Doors",
+      "emoji": "🚪",
+      "big": "Switching wins twice as often. Try it and see.",
+      "parentNote": "The Monty Hall problem. Famously counterintuitive: thousands of people including mathematicians got it wrong in public in 1990. The only convincing argument at this age is playing it enough times.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Three doors. A prize behind one. You pick one."
+        },
+        {
+          "t": "say",
+          "text": "I know where the prize is. I open an empty door you did not pick."
+        },
+        {
+          "t": "say",
+          "text": "Now: stay with your door, or switch to the other one?"
+        },
+        {
+          "t": "say",
+          "text": "Most people say it makes no difference. Most people are wrong."
+        },
+        {
+          "t": "tip",
+          "text": "Your first pick was right 1 time in 3. So the other door is right 2 times in 3. Switching doubles your chances."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "3 doors, 1 prize. Out of 3 tries, how often is your first pick right?",
+          "answer": 1,
+          "why": "1 time in 3. Nothing that happens afterwards changes what your first pick was worth."
+        },
+        {
+          "type": "number",
+          "ask": "So out of 3 tries, how often is the prize behind one of the OTHER two?",
+          "answer": 2,
+          "why": "2 times in 3. That is the key. Those two doors hold two thirds of the chance between them."
+        },
+        {
+          "type": "number",
+          "ask": "I open one of those two and it is empty. How much chance is left on the other one?",
+          "answer": 2,
+          "why": "All 2 thirds, because I never open the prize door. All the chance from those two doors collects on the one I did not open."
+        },
+        {
+          "type": "doors",
+          "rounds": 20,
+          "ask": "Play 20 rounds. Watch what switching does.",
+          "answer": 20,
+          "why": "Over 20 rounds switching usually wins about twice as often as staying. Not always, because 20 is a small number, but the pattern is hard to miss."
+        },
+        {
+          "type": "truefalse",
+          "ask": "After a door is opened, it is 50-50 between the two left.",
+          "answer": false,
+          "why": "False, and this is what fools everybody. It would be 50-50 if I opened a door at random, but I never open the prize. That knowledge is what tips the odds."
+        },
+        {
+          "type": "number",
+          "ask": "With 100 doors, you pick one and I open 98 empty ones. Out of 100, how often is your first pick right?",
+          "answer": 1,
+          "why": "1 in 100. With 100 doors it becomes obvious: the door I left closed is almost certainly the prize. The 3-door version is the same thing, just harder to feel."
+        },
+        {
+          "type": "paper",
+          "ask": "Play 10 rounds with a friend and three cups. How many rounds did you play?",
+          "answer": 10,
+          "hint": "Always switch. Count how many you win.",
+          "why": "10, and if you always switched you probably won about 6 or 7. In 1990 a magazine printed this answer and thousands of people, including people with maths degrees, wrote in to say it was wrong. It was not."
+        }
+      ]
+    },
+    {
+      "id": "right-triangle",
+      "track": "wonders",
+      "name": "The Right Triangle",
+      "emoji": "📐",
+      "big": "The two small squares add up to the big one.",
+      "parentNote": "Pythagoras, shown as areas rather than as a formula. Builders really do use a 3-4-5 triangle to get a corner square, so this is checkable with a tape measure.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Take a triangle with a square corner. Sides 3 and 4, and the long side 5."
+        },
+        {
+          "t": "say",
+          "text": "Draw a square on each side. 3 by 3 is 9. 4 by 4 is 16. 5 by 5 is 25."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "9",
+                "16",
+                "25"
+              ]
+            ],
+            "cell": 66
+          },
+          "cap": "9 plus 16 is 25. The two small squares exactly fill the big one."
+        },
+        {
+          "t": "say",
+          "text": "This works for every triangle with a square corner. Every single one."
+        },
+        {
+          "t": "tip",
+          "text": "Builders measure 3 along, 4 up, and check the diagonal is exactly 5. If it is, the corner is square."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "3 x 3 = ?",
+          "answer": 9,
+          "why": "9, the area of the square on the short side."
+        },
+        {
+          "type": "number",
+          "ask": "4 x 4 = ?",
+          "answer": 16,
+          "why": "16, the square on the other short side."
+        },
+        {
+          "type": "number",
+          "ask": "9 + 16 = ?",
+          "answer": 25,
+          "why": "25, which is 5 times 5. So the long side is 5, and that is Pythagoras."
+        },
+        {
+          "type": "number",
+          "ask": "Sides 6 and 8. What is 36 + 64?",
+          "answer": 100,
+          "why": "100, which is 10 times 10. So the long side is 10. This is just 3-4-5 doubled."
+        },
+        {
+          "type": "truefalse",
+          "ask": "A triangle with sides 5, 12 and 13 has a square corner.",
+          "answer": true,
+          "why": "True. 25 and 144 make 169, and 13 times 13 is 169. It is the next famous one after 3-4-5."
+        },
+        {
+          "type": "truefalse",
+          "ask": "This works for every triangle, not just ones with a square corner.",
+          "answer": false,
+          "why": "False. The square corner is what makes it work. Change the corner and the squares stop adding up."
+        },
+        {
+          "type": "paper",
+          "ask": "Measure 3 along a table edge and 4 up. Measure the diagonal. What do you get?",
+          "answer": 5,
+          "hint": "Use the same units for all three, and keep the corner square.",
+          "why": "5, if the corner really is square. This is how builders check corners with nothing but a tape measure, and it has worked for about 4,000 years."
+        }
+      ]
+    },
+    {
+      "id": "decimal-work",
+      "track": "skills",
+      "name": "Decimal Work",
+      "emoji": "🔢",
+      "big": "Thousandths, and multiplying by tenths.",
+      "parentNote": "MA.5.NSO.1.1 to 2.5. Decimals to thousandths, and what multiplying by a tenth actually does.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "0.125 is one tenth, two hundredths and five thousandths."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              "0.1",
+              "0.02",
+              "0.005"
+            ],
+            "c": "blue",
+            "boxW": 80
+          },
+          "cap": "They add to 0.125."
+        },
+        {
+          "t": "say",
+          "text": "Multiplying by one tenth moves every digit one place right."
+        },
+        {
+          "t": "tip",
+          "text": "Multiplying by a number smaller than 1 makes the answer smaller. That feels wrong until you notice a half of 8 is 4."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "0.125 is how many thousandths?",
+          "answer": 125,
+          "why": "125 thousandths. Three places after the point means thousandths."
+        },
+        {
+          "type": "number",
+          "ask": "What is 4.7 x 0.1? Type it in tenths.",
+          "answer": 47,
+          "why": "0.47, which is 47 hundredths. Type 47. Multiplying by a tenth shifts every digit one place right."
+        },
+        {
+          "type": "number",
+          "ask": "Round 3.567 to the nearest hundredth. Type the hundredths digit.",
+          "answer": 7,
+          "why": "3.57. The thousandths digit is 7, which is past halfway, so the hundredths digit rounds up from 6 to 7."
+        },
+        {
+          "type": "number",
+          "ask": "0.4 + 0.25 = ? Type it in hundredths.",
+          "answer": 65,
+          "why": "65 hundredths, or 0.65. Line up the points: 0.40 plus 0.25."
+        },
+        {
+          "type": "choice",
+          "ask": "Which is biggest?",
+          "choices": [
+            {
+              "id": "a",
+              "label": "0.5"
+            },
+            {
+              "id": "b",
+              "label": "0.45"
+            },
+            {
+              "id": "c",
+              "label": "0.499"
+            }
+          ],
+          "answer": "a",
+          "why": "0.5. More digits does not mean bigger. 0.5 is 500 thousandths, beating 450 and 499."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Multiplying by 0.1 makes a number bigger.",
+          "answer": false,
+          "why": "False. It makes it ten times smaller. Multiplying only makes things bigger when you multiply by more than 1."
+        },
+        {
+          "type": "paper",
+          "ask": "Work out 2.5 x 0.4 on paper. Type it in tenths.",
+          "answer": 10,
+          "hint": "25 times 4 is 100, then count the decimal places.",
+          "why": "1.0, which is 10 tenths. Two decimal places in the question means two in the answer, so 100 becomes 1.00."
+        }
+      ]
+    },
+    {
+      "id": "fraction-ops",
+      "track": "skills",
+      "name": "Unlike Fractions",
+      "emoji": "🍰",
+      "big": "Different bottom numbers? Make them match first.",
+      "parentNote": "MA.5.FR.2.1 to 2.4. Adding unlike denominators, multiplying fractions, and dividing by a unit fraction.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "You cannot add halves and thirds directly. The pieces are different sizes."
+        },
+        {
+          "t": "say",
+          "text": "Cut both into sixths. A half is 3 sixths and a third is 2 sixths."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "fraction",
+            "shape": "rect",
+            "parts": 6,
+            "shaded": 5,
+            "c": "green"
+          },
+          "cap": "3 sixths and 2 sixths make 5 sixths."
+        },
+        {
+          "t": "tip",
+          "text": "Multiplying fractions is easier: tops times tops, bottoms times bottoms."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "1 half + 1 third. Type the answer in sixths.",
+          "answer": 5,
+          "why": "5 sixths. A half is 3 sixths and a third is 2 sixths."
+        },
+        {
+          "type": "number",
+          "ask": "1 half is how many sixths?",
+          "answer": 3,
+          "why": "3 sixths. Multiply top and bottom by 3 and the value does not change."
+        },
+        {
+          "type": "number",
+          "ask": "1 half x 1 half. Type the bottom number.",
+          "answer": 4,
+          "why": "One fourth. Tops give 1, bottoms give 4. Half of a half really is a quarter."
+        },
+        {
+          "type": "number",
+          "ask": "3 fourths x 2. Type the answer in fourths.",
+          "answer": 6,
+          "why": "6 fourths, which is one and a half. Multiplying by a whole number just multiplies the top."
+        },
+        {
+          "type": "number",
+          "ask": "How many halves are in 3?",
+          "answer": 6,
+          "why": "6. Dividing by a half asks how many halves fit, and each whole holds two."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Multiplying by 2/3 makes a number smaller.",
+          "answer": true,
+          "why": "True, because 2/3 is less than 1. Multiplying by anything under 1 shrinks the number."
+        },
+        {
+          "type": "paper",
+          "ask": "Work out 2/3 + 1/4 on paper. Type the answer in twelfths.",
+          "answer": 11,
+          "hint": "Twelfths work for both.",
+          "why": "11 twelfths. 2/3 is 8 twelfths and 1/4 is 3 twelfths."
+        }
+      ]
+    },
+    {
+      "id": "volume",
+      "track": "skills",
+      "name": "Volume",
+      "emoji": "📦",
+      "big": "Fill it with cubes and count them.",
+      "parentNote": "MA.5.GR.3.1 to 3.3. Volume by packing unit cubes first, then the formula.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Volume is how many unit cubes fit inside with no gaps."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "polyomino",
+            "cells": [
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "c": "blue"
+          },
+          "cap": "One layer of 12 cubes. Stack 2 layers and the volume is 24."
+        },
+        {
+          "t": "say",
+          "text": "So volume is length times width times height."
+        },
+        {
+          "t": "tip",
+          "text": "Area covers a flat shape and uses two lengths. Volume fills a solid and uses three."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "A box 4 by 3 by 2. What is its volume?",
+          "answer": 24,
+          "why": "24. One layer is 4 times 3, which is 12, and there are 2 layers."
+        },
+        {
+          "type": "number",
+          "ask": "A cube with sides of 5. What is its volume?",
+          "answer": 125,
+          "why": "125. Five times five times five."
+        },
+        {
+          "type": "number",
+          "ask": "A box has volume 60 and a base of 4 by 5. How tall is it?",
+          "answer": 3,
+          "why": "3. The base is 20, and 60 divided by 20 is 3."
+        },
+        {
+          "type": "number",
+          "ask": "How many faces does a box have?",
+          "answer": 6,
+          "why": "6. Volume fills it, and surface area covers those 6 faces. Two different questions about the same box."
+        },
+        {
+          "type": "number",
+          "ask": "A box 10 by 10 by 10. What is its volume?",
+          "answer": 1000,
+          "why": "1000. This is why a cubic metre is a thousand litres."
+        },
+        {
+          "type": "truefalse",
+          "ask": "Two boxes with the same volume must be the same shape.",
+          "answer": false,
+          "why": "False. 1 by 1 by 24 and 2 by 3 by 4 both hold 24, and they look nothing alike."
+        },
+        {
+          "type": "paper",
+          "ask": "Measure a cereal box in centimetres. Multiply the three sides. Type the number of sides you multiplied.",
+          "answer": 3,
+          "hint": "Length, width and height.",
+          "why": "3. Volume always needs three measurements, which is exactly what makes it grow so much faster than surface."
+        }
+      ]
+    },
+    {
+      "id": "coordinates",
+      "track": "skills",
+      "name": "The Grid",
+      "emoji": "📍",
+      "big": "Two numbers pin down a point exactly.",
+      "parentNote": "MA.5.GR.4.1 and 4.2. The first quadrant, ordered pairs, and reading a point in context.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "The origin is where the two lines cross. It is the point (0, 0)."
+        },
+        {
+          "t": "say",
+          "text": "The first number goes across. The second goes up."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "numgrid",
+            "cells": [
+              [
+                "(0,2)",
+                "(1,2)",
+                "(2,2)"
+              ],
+              [
+                "(0,1)",
+                "(1,1)",
+                "(2,1)"
+              ],
+              [
+                "(0,0)",
+                "(1,0)",
+                "(2,0)"
+              ]
+            ],
+            "cell": 76
+          },
+          "cap": "Across first, then up. (2,0) is far right and on the floor."
+        },
+        {
+          "t": "tip",
+          "text": "Across the hall, then up the stairs. That order never changes."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "In the point (7, 3), which number tells you how far across?",
+          "answer": 7,
+          "why": "7. The first number is always the across one."
+        },
+        {
+          "type": "number",
+          "ask": "In (7, 3), how far up?",
+          "answer": 3,
+          "why": "3, the second number. Across first, then up."
+        },
+        {
+          "type": "number",
+          "ask": "Start at (2, 5) and move 3 across. What is the new first number?",
+          "answer": 5,
+          "why": "5. Moving across changes only the first number, from 2 to 5."
+        },
+        {
+          "type": "number",
+          "ask": "How far across is the origin?",
+          "answer": 0,
+          "why": "0. The origin is (0,0), where both lines cross and nothing has moved yet."
+        },
+        {
+          "type": "number",
+          "ask": "A point sits on the floor line, 6 across. What is its second number?",
+          "answer": 0,
+          "why": "0. Anything on the bottom line has not gone up at all."
+        },
+        {
+          "type": "truefalse",
+          "ask": "(3, 5) and (5, 3) are the same point.",
+          "answer": false,
+          "why": "False. One is 3 across and 5 up, the other is 5 across and 3 up. The order is what makes a coordinate work."
+        },
+        {
+          "type": "paper",
+          "ask": "Plot (1,1), (4,1), (4,4) and (1,4) and join them. How many sides has your shape?",
+          "answer": 4,
+          "hint": "Across first, then up, each time.",
+          "why": "4, and it is a square with sides of 3. Coordinates turn shapes into pure numbers, which is what Descartes noticed."
+        }
+      ]
+    },
+    {
+      "id": "order-of-operations",
+      "track": "skills",
+      "name": "Which First?",
+      "emoji": "🧾",
+      "big": "There is an agreed order, or answers would disagree.",
+      "parentNote": "MA.5.AR.2.2. Order of operations, taught as a convention everybody keeps rather than a magic word.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "2 + 3 x 4. Is that 20 or 14?"
+        },
+        {
+          "t": "say",
+          "text": "Everyone agrees to do the multiplying first. So it is 14."
+        },
+        {
+          "t": "say",
+          "text": "Brackets first, then times and divide, then plus and minus."
+        },
+        {
+          "t": "tip",
+          "text": "It is an agreement, not a law of nature. Without it we would all get different answers."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2 + 3 x 4 = ?",
+          "answer": 14,
+          "why": "14. Multiply first: 3 times 4 is 12, then add 2."
+        },
+        {
+          "type": "number",
+          "ask": "(2 + 3) x 4 = ?",
+          "answer": 20,
+          "why": "20. Brackets force the addition to happen first, which is exactly what brackets are for."
+        },
+        {
+          "type": "number",
+          "ask": "10 - 2 x 3 = ?",
+          "answer": 4,
+          "why": "4. Multiply first to get 6, then 10 take away 6."
+        },
+        {
+          "type": "number",
+          "ask": "20 ÷ 4 + 1 = ?",
+          "answer": 6,
+          "why": "6. Divide first to get 5, then add 1."
+        },
+        {
+          "type": "number",
+          "ask": "3 x (8 - 5) = ?",
+          "answer": 9,
+          "why": "9. Brackets first gives 3, then 3 times 3."
+        },
+        {
+          "type": "truefalse",
+          "ask": "6 + 2 x 5 is 40.",
+          "answer": false,
+          "why": "False. That would be doing the addition first. Multiply first: 2 times 5 is 10, then add 6, giving 16."
+        },
+        {
+          "type": "paper",
+          "ask": "Work out 4 + 6 ÷ 2 x 3 on paper.",
+          "answer": 13,
+          "hint": "Divide and multiply left to right, then add.",
+          "why": "13. 6 divided by 2 is 3, times 3 is 9, plus 4 is 13. Divide and multiply have equal rank, so you go left to right."
+        }
+      ]
+    },
+    {
+      "id": "averages",
+      "track": "skills",
+      "name": "The Mean",
+      "emoji": "📊",
+      "big": "Share everything out evenly.",
+      "parentNote": "MA.5.DP.1.2. The mean added to mode, median and range from grade 4, taught as levelling out rather than as a formula.",
+      "teach": [
+        {
+          "t": "say",
+          "text": "Four children have 2, 4, 4 and 6 sweets. Pool them and share equally."
+        },
+        {
+          "t": "show",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              2,
+              4,
+              4,
+              6
+            ],
+            "c": "teal"
+          },
+          "cap": "16 sweets between 4 children is 4 each. The mean is 4."
+        },
+        {
+          "t": "say",
+          "text": "So the mean is the total shared by how many there are."
+        },
+        {
+          "t": "tip",
+          "text": "One very big number drags the mean a long way. The median hardly moves, which is why both are useful."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "number",
+          "ask": "2, 4, 4, 6. What is the mean?",
+          "figure": {
+            "kind": "chain",
+            "items": [
+              2,
+              4,
+              4,
+              6
+            ],
+            "c": "teal"
+          },
+          "answer": 4,
+          "why": "4. They add to 16, and 16 shared between 4 is 4."
+        },
+        {
+          "type": "number",
+          "ask": "3, 5, 10. What is the mean?",
+          "answer": 6,
+          "why": "6. They add to 18, and 18 shared between 3 is 6."
+        },
+        {
+          "type": "number",
+          "ask": "2, 4, 4, 6. What is the median?",
+          "answer": 4,
+          "why": "4. In order the two middle numbers are 4 and 4, so the median is 4 as well."
+        },
+        {
+          "type": "number",
+          "ask": "1, 2, 3, 100. What is the mean?",
+          "answer": 26,
+          "why": "26. They add to 106, shared by 4. One huge number has dragged the mean far above almost every value."
+        },
+        {
+          "type": "number",
+          "ask": "1, 2, 3, 100. What is the median?",
+          "answer": 2,
+          "why": "Between 2 and 3, so 2.5. Type 2 for the lower middle. The median barely moved while the mean shot up, which is why you often want both."
+        },
+        {
+          "type": "truefalse",
+          "ask": "The mean is always one of the numbers in the list.",
+          "answer": false,
+          "why": "False. The mean of 1 and 2 is 1.5, which is neither. It is where things would sit if you levelled them out."
+        },
+        {
+          "type": "paper",
+          "ask": "Write down how many hours you slept for 5 nights. What do you divide the total by?",
+          "answer": 5,
+          "hint": "One number for each night.",
+          "why": "5, because there are 5 numbers. The mean is always the total divided by how many things you counted."
+        }
+      ]
+    }
+  ]
+}
