@@ -376,6 +376,35 @@
   <!-- Fun: country shape setup and game                              -->
   <!-- ============================================================== -->
   <!-- ============================================================ -->
+  <!-- Fun: name the element                                         -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-elemsetup" aria-labelledby="elemsetup-title">
+    <div class="gp-container">
+      <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
+      <h1 class="gp-page-title" id="elemsetup-title">Name the Element</h1>
+      <p class="gp-page-lede">Everything is made of these. Four ways to ask, and
+         you can start with only the ones you actually meet.</p>
+      <div class="gp-card gp-card--setup" id="gp-elem-setup"></div>
+    </div>
+  </section>
+
+  <section class="gp-screen" id="screen-elemgame" aria-labelledby="elemgame-title">
+    <div class="gp-container">
+      <div class="gp-flagbar">
+        <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun/elements">&larr; Change the round</a>
+        <p class="gp-flagbar__score">
+          <span class="gp-tally gp-tally--right"><span aria-hidden="true">&#10003;</span>
+            <strong data-elem-right>0</strong><span class="gp-sr-only">right</span></span>
+          <span class="gp-tally gp-tally--wrong"><span aria-hidden="true">&#10007;</span>
+            <strong data-elem-wrong>0</strong><span class="gp-sr-only">wrong</span></span>
+        </p>
+      </div>
+      <h1 class="gp-sr-only" id="elemgame-title">Name the element</h1>
+      <div id="gp-elem-body" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
   <!-- Fun: name the capital city                                    -->
   <!-- ============================================================ -->
   <section class="gp-screen" id="screen-capsetup" aria-labelledby="capsetup-title">

@@ -2820,3 +2820,119 @@ button, a, label, summary, [role="button"] {
   text-align: center;
   margin: var(--gp-space-6) 0 var(--gp-space-2);
 }
+
+/* ====================================================================
+   Name the Element
+   ==================================================================== */
+
+.cz-elemq { text-align: center; }
+
+.cz-elem-pic {
+  display: grid;
+  place-items: center;
+  width: 128px; height: 128px;
+  margin: var(--gp-space-5) auto var(--gp-space-3);
+  border-radius: var(--gp-radius-xl);
+  background: var(--gp-surface);
+  border: 2px solid var(--gp-line);
+}
+.cz-elemart { width: 92px; height: 92px; display: block; }
+
+.cz-elem-ask {
+  font-size: var(--gp-text-lg);
+  line-height: var(--gp-leading-snug);
+  color: var(--gp-ink);
+  max-width: 34ch;
+  margin: 0 auto var(--gp-space-2);
+}
+.cz-elem-hint { margin: 0 0 var(--gp-space-4); font-size: var(--gp-text-sm); }
+.cz-elem-extra { margin-top: var(--gp-space-2); font-size: var(--gp-text-sm); }
+.cz-elem-sym { font-size: var(--gp-text-xl); font-weight: 800; letter-spacing: 0.01em; }
+
+/* The big tile for "what is this symbol", drawn like a cell of the real table */
+.cz-elem-tile {
+  display: grid;
+  place-content: center;
+  width: 132px; height: 132px;
+  margin: var(--gp-space-5) auto var(--gp-space-3);
+  border-radius: var(--gp-radius-lg);
+  border: 3px solid var(--cell-line, var(--gp-line-strong));
+  background: var(--cell-bg, var(--gp-surface-2));
+  color: var(--cell-ink, var(--gp-ink));
+}
+.cz-elem-tile__z { font-size: var(--gp-text-sm); font-weight: 700; opacity: .75; }
+.cz-elem-tile__sym { font-size: 46px; font-weight: 800; line-height: 1.05; }
+
+/* ---- the periodic table ----
+   18 columns wide, with the f-block on rows 9 and 10 as every printed table
+   does. Cells are square and scale with the viewport, so the whole table fits
+   a phone without a horizontal scrollbar. */
+.cz-pt {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-auto-rows: minmax(0, 1fr);
+  gap: clamp(1px, 0.3vw, 3px);
+  max-width: 760px;
+  margin: var(--gp-space-4) auto 0;
+}
+.cz-pt__cell {
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  padding: 0;
+  border: 1px solid var(--cell-line, var(--gp-line));
+  border-radius: clamp(2px, 0.5vw, 5px);
+  background: var(--cell-bg, var(--gp-surface-2));
+  color: var(--cell-ink, var(--gp-ink));
+  cursor: pointer;
+  min-width: 0;
+  overflow: hidden;
+  transition: transform var(--gp-dur-fast) var(--gp-ease);
+}
+.cz-pt__cell:hover:not(:disabled) { transform: scale(1.18); z-index: 2; }
+.cz-pt__cell:disabled { cursor: default; }
+.cz-pt__z { display: none; }
+.cz-pt__sym {
+  font-size: clamp(7px, 1.35vw, 13px);
+  font-weight: 800;
+  line-height: 1;
+}
+/* The f-block rows sit apart from the main block. */
+.cz-pt__cell[data-style*="grid-row:9"] { margin-top: 10px; }
+
+.cz-pt__cell.is-correct {
+  background: var(--gp-good); border-color: var(--gp-good);
+  color: #fff; transform: scale(1.25); z-index: 3;
+}
+.cz-pt__cell.is-incorrect {
+  background: var(--gp-retry); border-color: var(--gp-retry); color: #fff;
+}
+
+/* One colour per family, so the table's shape is visible before any answer:
+   the noble gases really are a column, the metals really are most of it. */
+.cz-pt__cell--nonmetal,             .cz-elem-tile.cz-pt__cell--nonmetal
+  { --cell-bg: var(--cz-leaf-soft);     --cell-line: var(--cz-leaf-line);     --cell-ink: var(--cz-leaf-ink); }
+.cz-pt__cell--noble-gas,            .cz-elem-tile.cz-pt__cell--noble-gas
+  { --cell-bg: var(--cz-orchid-soft);   --cell-line: var(--cz-orchid-line);   --cell-ink: var(--cz-orchid-ink); }
+.cz-pt__cell--halogen,              .cz-elem-tile.cz-pt__cell--halogen
+  { --cell-bg: var(--cz-lagoon-soft);   --cell-line: var(--cz-lagoon-line);   --cell-ink: var(--cz-lagoon-ink); }
+.cz-pt__cell--alkali-metal,         .cz-elem-tile.cz-pt__cell--alkali-metal
+  { --cell-bg: var(--cz-mango-soft);    --cell-line: var(--cz-mango-line);    --cell-ink: var(--cz-mango-ink); }
+.cz-pt__cell--alkaline-earth-metal, .cz-elem-tile.cz-pt__cell--alkaline-earth-metal
+  { --cell-bg: var(--cz-honey-soft);    --cell-line: var(--cz-honey-line);    --cell-ink: var(--cz-honey-ink); }
+.cz-pt__cell--transition-metal,     .cz-elem-tile.cz-pt__cell--transition-metal
+  { --cell-bg: var(--cz-sky-soft);      --cell-line: var(--cz-sky-line);      --cell-ink: var(--cz-sky-ink); }
+.cz-pt__cell--metalloid,            .cz-elem-tile.cz-pt__cell--metalloid
+  { --cell-bg: var(--cz-jade-soft);     --cell-line: var(--cz-jade-line);     --cell-ink: var(--cz-jade-ink); }
+.cz-pt__cell--metal,                .cz-elem-tile.cz-pt__cell--metal
+  { --cell-bg: var(--gp-surface-3);     --cell-line: var(--gp-line-strong);   --cell-ink: var(--gp-ink-soft); }
+.cz-pt__cell--lanthanide,           .cz-elem-tile.cz-pt__cell--lanthanide
+  { --cell-bg: var(--cz-flamingo-soft); --cell-line: var(--cz-flamingo-line); --cell-ink: var(--cz-flamingo-ink); }
+.cz-pt__cell--actinide,             .cz-elem-tile.cz-pt__cell--actinide
+  { --cell-bg: var(--cz-flamingo-soft); --cell-line: var(--cz-flamingo-line); --cell-ink: var(--cz-flamingo-ink); }
+
+.gp-flagq__choices--tight { max-width: 420px; margin-inline: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cz-pt__cell, .cz-pt__cell:hover:not(:disabled) { transition: none; transform: none; }
+}

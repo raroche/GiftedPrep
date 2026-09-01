@@ -11,6 +11,7 @@ import { escapeHtml } from './../modules/charts.js';
 import * as flags from './../modules/flags.js';
 import * as shapes from './../modules/shapes.js';
 import * as capitals from './../modules/capitals.js';
+import * as elements from './../modules/elements.js';
 import { $, $$, paint, showError, showScreen, state } from './../modules/shell.js';
 
 /* ------------------------------------------------------------------ */
@@ -39,6 +40,15 @@ const ART = {
     <circle cx="49" cy="48" r="3.1" fill="${t}"/>
     <circle cx="44" cy="53" r="1.8" fill="${t}"/>`,
 
+  flask: (t, p) => `
+    <rect x="4" y="4" width="56" height="56" rx="13" fill="${p}"/>
+    <path d="M27 12v14L15 46a4 4 0 0 0 3.5 6h27A4 4 0 0 0 49 46L37 26V12Z"
+          fill="none" stroke="${t}" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M22.5 34h19l7 12a4 4 0 0 1-3.5 6h-26a4 4 0 0 1-3.5-6Z" fill="${t}"/>
+    <path d="M24 10h16" stroke="${t}" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="28" cy="43" r="2.6" fill="${p}"/>
+    <circle cx="36" cy="47" r="2" fill="${p}"/>`,
+
   capital: (t, p) => `
     <rect x="4" y="4" width="56" height="56" rx="13" fill="${p}"/>
     <path d="M32 10 l2.6 5.6 6.1 .8 -4.5 4.2 1.1 6 -5.3 -2.9 -5.3 2.9 1.1 -6 -4.5 -4.2 6.1 -.8 Z"
@@ -62,7 +72,10 @@ const FUN_GAMES = [
     meta: '242 outlines \u00b7 English or Spanish' },
   { id: 'capitals', art: 'capital', hue: 'honey', name: 'Name the Capital',
     sub: 'The country is given. Name its capital city, from four or by typing it.',
-    meta: '192 capitals \u00b7 a typo still counts' }
+    meta: '192 capitals \u00b7 a typo still counts' },
+  { id: 'elements', art: 'flask', hue: 'jade', name: 'Name the Element',
+    sub: 'Everything is made of these. What is in a pencil, a balloon, a banana?',
+    meta: '118 elements \u00b7 4 kinds of question' }
 ];
 
 function renderFunHub() {
@@ -85,6 +98,7 @@ export async function renderFun(game, step) {
   if (!game) { renderFunHub(); return; }
   if (game === 'shapes') { await renderShapes(step); return; }
   if (game === 'capitals') { await renderCapitals(step); return; }
+  if (game === 'elements') { await renderElements(step); return; }
   if (game !== 'flags') { renderFunHub(); return; }
   try {
     if (!state.flags.data) state.flags.data = await flags.loadFlags();
@@ -556,4 +570,136 @@ function drawCapResults() {
     </div>`;
   paint();
   showScreen('capgame');
+}
+
+
+/* ------------------------------------------------------------------ */
+/* Fun: name the element                                               */
+/* ------------------------------------------------------------------ */
+
+export async function renderElements(step) {
+  try {
+    if (!state.elements.data) state.elements.data = await elements.loadElements();
+  } catch (err) {
+    console.error(err);
+    showError('The elements could not be loaded.');
+    return;
+  }
+  if (step === 'play' && state.elements.round) { drawElemQuestion(); return; }
+  drawElemSetup();
+}
+
+export function drawElemSetup() {
+  $('#gp-elem-setup').innerHTML =
+    elements.renderSetup(state.elements.data, state.elements.setup);
+  paint();
+  showScreen('elemsetup');
+}
+
+export function startElemRound() {
+  const list = elements.buildRound(state.elements.data, state.elements.setup);
+  if (!list.length) return;
+  state.elements.round = {
+    list, index: 0, right: 0, wrong: 0, answered: false, choices: null
+  };
+  location.hash = '#/fun/elements/play';
+  drawElemQuestion();
+}
+
+function elemScore() {
+  const r = state.elements.round;
+  $('[data-elem-right]').textContent = r.right;
+  $('[data-elem-wrong]').textContent = r.wrong;
+}
+
+export function drawElemQuestion() {
+  const r = state.elements.round;
+  if (!r) { drawElemSetup(); return; }
+  if (r.index >= r.list.length) { drawElemResults(); return; }
+  const el = r.list[r.index];
+  const ask = state.elements.setup.ask;
+  if (!r.choices) r.choices = elements.makeChoices(el, state.elements.data);
+  r.answered = false;
+  $('#gp-elem-body').innerHTML = elements.renderQuestion(
+    el, r.choices, r.index, r.list.length, ask, state.elements.data);
+  elemScore();
+  paint();
+  showScreen('elemgame');
+}
+
+function settleElem(pickedZ) {
+  const r = state.elements.round;
+  if (r.answered) return;
+  const el = r.list[r.index];
+  const ask = state.elements.setup.ask;
+  const right = pickedZ === el.z;
+  r.answered = true;
+  if (right) r.right += 1; else r.wrong += 1;
+  elemScore();
+
+  const mark = (sel) => $$(sel).forEach((b) => {
+    b.disabled = true;
+    const z = Number(b.dataset.elemanswer || b.dataset.elemcell);
+    if (z === el.z) b.classList.add('is-correct');
+    else if (z === pickedZ) b.classList.add('is-incorrect');
+  });
+  mark('#gp-elem-body [data-elemanswer]');
+  mark('#gp-elem-body [data-elemcell]');
+  $$('#gp-elem-body .gp-choice.is-correct .gp-choice__mark')
+    .forEach((m) => { m.innerHTML = icon('check', { size: 20 }); });
+  $$('#gp-elem-body .gp-choice.is-incorrect .gp-choice__mark')
+    .forEach((m) => { m.innerHTML = icon('cross', { size: 20 }); });
+
+  /* Every answer teaches the same three facts, whichever way it was asked, so
+     a child who came in by "what is it in" still leaves knowing the symbol. */
+  const picked = state.elements.data.elements.find((e) => e.z === pickedZ);
+  const say = document.createElement('p');
+  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`;
+  say.textContent = right
+    ? `Yes. ${el.symbol} is ${el.name}, number ${el.z}. In Spanish, ${el.es}.`
+    : `That is ${picked ? picked.name : 'something else'}. `
+      + `This one is ${el.name} — ${el.symbol}, number ${el.z}.`;
+  $('#gp-elem-body .gp-flagq').appendChild(say);
+
+  if (el.use && ask !== 'use') {
+    const extra = document.createElement('p');
+    extra.className = 'gp-muted cz-elem-extra';
+    extra.textContent = el.use;
+    $('#gp-elem-body .gp-flagq').appendChild(extra);
+  }
+
+  const next = document.createElement('button');
+  next.type = 'button';
+  next.className = 'gp-btn gp-btn--primary gp-btn--big';
+  next.dataset.action = 'elem-next';
+  next.textContent = r.index + 1 >= r.list.length ? 'See how you did \u2192' : 'Next one \u2192';
+  $('#gp-elem-body .gp-flagq').appendChild(next);
+  next.focus();
+}
+
+export function answerElement(z) { settleElem(Number(z)); }
+
+export function nextElement() {
+  const r = state.elements.round;
+  r.index += 1;
+  r.choices = null;
+  drawElemQuestion();
+}
+
+function drawElemResults() {
+  const r = state.elements.round;
+  const total = r.right + r.wrong;
+  const pct = total ? Math.round((r.right / total) * 100) : 0;
+  $('#gp-elem-body').innerHTML = `
+    <div class="gp-flagdone">
+      <h2 class="gp-flagdone__title">${pct >= 70 ? 'Nice work!' : 'All done!'}</h2>
+      <p class="gp-flagdone__score"><strong>${r.right}</strong> out of ${total}</p>
+      <div class="gp-row gp-row--wrap">
+        <button type="button" class="gp-btn gp-btn--primary" data-action="elem-again">Play again</button>
+        <a class="gp-btn gp-btn--ghost" href="#/fun/elements">Change the round</a>
+        <a class="gp-btn gp-btn--quiet" href="#/fun">Back to games</a>
+      </div>
+    </div>`;
+  paint();
+  showScreen('elemgame');
 }

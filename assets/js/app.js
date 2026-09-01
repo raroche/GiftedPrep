@@ -23,7 +23,7 @@ import { describeFigure } from './modules/figures.js';
 import { icon } from './modules/icons.js';
 import { hydrateMascots, setMood } from './modules/mascot.js';
 import { $, $$, hydrateIcons, showError, showScreen, state } from './modules/shell.js';
-import { answerCapChoice, answerCapTyped, drawCapQuestion, drawCapSetup, nextCapital, startCapRound, answerFlag, answerShapeChoice, answerShapeTyped, answerShapeVault, answerVault, drawFlagQuestion, drawFlagSetup, drawShapeQuestion, drawShapeSetup, renderFun, startFlagRound, startShapeRound } from './screens/fun.js';
+import { answerElement, drawElemQuestion, drawElemSetup, nextElement, startElemRound, answerCapChoice, answerCapTyped, drawCapQuestion, drawCapSetup, nextCapital, startCapRound, answerFlag, answerShapeChoice, answerShapeTyped, answerShapeVault, answerVault, drawFlagQuestion, drawFlagSetup, drawShapeQuestion, drawShapeSetup, renderFun, startFlagRound, startShapeRound } from './screens/fun.js';
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
@@ -160,6 +160,22 @@ function onClick(ev) {
   }
 
   /* ---- country shape game ---- */
+  /* ---- name the element ---- */
+  const es = ev.target.closest('[data-elemset]');
+  if (es) { state.elements.setup.set = es.dataset.elemset; drawElemSetup(); return; }
+
+  const ea = ev.target.closest('[data-elemask]');
+  if (ea) { state.elements.setup.ask = ea.dataset.elemask; drawElemSetup(); return; }
+
+  const en = ev.target.closest('[data-elemcount]');
+  if (en) { state.elements.setup.count = en.dataset.elemcount; drawElemSetup(); return; }
+
+  const ans = ev.target.closest('[data-elemanswer]');
+  if (ans) { answerElement(ans.dataset.elemanswer); return; }
+
+  const cellPick = ev.target.closest('[data-elemcell]');
+  if (cellPick) { answerElement(cellPick.dataset.elemcell); return; }
+
   /* ---- capital city game ---- */
   const cc = ev.target.closest('[data-capcount]');
   if (cc) { state.capitals.setup.count = cc.dataset.capcount; drawCapSetup(); return; }
@@ -290,6 +306,15 @@ function onClick(ev) {
   const action = ev.target.closest('[data-action]');
   if (!action) return;
   switch (action.dataset.action) {
+    case 'elem-start':
+      startElemRound();
+      break;
+    case 'elem-next':
+      nextElement();
+      break;
+    case 'elem-again':
+      startElemRound();
+      break;
     case 'cap-start':
       startCapRound();
       break;

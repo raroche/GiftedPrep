@@ -31,6 +31,13 @@ export const state = {
     setup: { count: 10, mode: 'random', continents: [] },
     round: null
   },
+  /* Name the element. `set` is which elements, `ask` is which of the four
+     kinds of question. */
+  elements: {
+    data: null,
+    setup: { set: 'everyday', ask: 'use', count: 10 },
+    round: null
+  },
   /* The capital game. Same shape as the others; `pick` is four choices or typed. */
   capitals: {
     data: null,
@@ -71,7 +78,7 @@ export function hydrateIcons(root = document) {
 
 const SCREENS = ['home', 'gifted', 'tests', 'categories', 'quiz', 'results', 'parents',
   'math', 'mathtopic', 'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame',
-  'capsetup', 'capgame', 'error'];
+  'capsetup', 'capgame', 'elemsetup', 'elemgame', 'error'];
 
 /**
  * Show one screen and hide the rest.
