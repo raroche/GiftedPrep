@@ -2808,3 +2808,15 @@ button, a, label, summary, [role="button"] {
 /* Game art sits in the same tile as a creature does, so it is sized to match. */
 .cz-gameart { width: 56px; height: 56px; display: block; }
 @media (max-width: 560px) { .cz-gameart { width: 46px; height: 46px; } }
+
+/* The country being asked about in the capital game. It is the whole question,
+   so it is set at the size a picture would have been. */
+.cz-capital-country {
+  font-size: var(--gp-text-3xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: var(--gp-leading-tight);
+  color: var(--gp-accent);
+  text-align: center;
+  margin: var(--gp-space-6) 0 var(--gp-space-2);
+}

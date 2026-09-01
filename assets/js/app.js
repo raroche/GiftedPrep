@@ -23,7 +23,7 @@ import { describeFigure } from './modules/figures.js';
 import { icon } from './modules/icons.js';
 import { hydrateMascots, setMood } from './modules/mascot.js';
 import { $, $$, hydrateIcons, showError, showScreen, state } from './modules/shell.js';
-import { answerFlag, answerShapeChoice, answerShapeTyped, answerShapeVault, answerVault, drawFlagQuestion, drawFlagSetup, drawShapeQuestion, drawShapeSetup, renderFun, startFlagRound, startShapeRound } from './screens/fun.js';
+import { answerCapChoice, answerCapTyped, drawCapQuestion, drawCapSetup, nextCapital, startCapRound, answerFlag, answerShapeChoice, answerShapeTyped, answerShapeVault, answerVault, drawFlagQuestion, drawFlagSetup, drawShapeQuestion, drawShapeSetup, renderFun, startFlagRound, startShapeRound } from './screens/fun.js';
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
@@ -160,6 +160,36 @@ function onClick(ev) {
   }
 
   /* ---- country shape game ---- */
+  /* ---- capital city game ---- */
+  const cc = ev.target.closest('[data-capcount]');
+  if (cc) { state.capitals.setup.count = cc.dataset.capcount; drawCapSetup(); return; }
+
+  const cp = ev.target.closest('[data-cappick]');
+  if (cp) { state.capitals.setup.pick = cp.dataset.cappick; drawCapSetup(); return; }
+
+  const cm = ev.target.closest('[data-capmode]');
+  if (cm) {
+    state.capitals.setup.mode = cm.dataset.capmode;
+    if (cm.dataset.capmode !== 'continent') state.capitals.setup.continents = [];
+    drawCapSetup();
+    return;
+  }
+
+  const ck = ev.target.closest('[data-capcont]');
+  if (ck) {
+    const id = ck.dataset.capcont;
+    const on = state.capitals.setup.continents;
+    const at = on.indexOf(id);
+    if (at === -1) on.push(id); else on.splice(at, 1);
+    drawCapSetup();
+    return;
+  }
+
+  const ca = ev.target.closest('[data-capanswer]');
+  if (ca) { answerCapChoice(ca.dataset.capanswer); return; }
+
+  if (ev.target.closest('[data-capcheck]')) { answerCapTyped(); return; }
+
   const sc = ev.target.closest('[data-shapecount]');
   if (sc) { state.shapes.setup.count = sc.dataset.shapecount; drawShapeSetup(); return; }
 
@@ -260,6 +290,15 @@ function onClick(ev) {
   const action = ev.target.closest('[data-action]');
   if (!action) return;
   switch (action.dataset.action) {
+    case 'cap-start':
+      startCapRound();
+      break;
+    case 'cap-next':
+      nextCapital();
+      break;
+    case 'cap-again':
+      startCapRound();
+      break;
     case 'shape-start':
       startShapeRound();
       break;
@@ -402,6 +441,7 @@ async function boot() {
   document.addEventListener('keydown', (ev) => {
     if (ev.key !== 'Enter') return;
     if (ev.target.matches('[data-shapetyped]')) { ev.preventDefault(); answerShapeTyped(); return; }
+    if (ev.target.matches('[data-captyped]')) { ev.preventDefault(); answerCapTyped(); return; }
     if (ev.target.matches('#gp-exercise [data-feed]')) { ev.preventDefault(); runMachine(); return; }
     if (!ev.target.matches('#gp-exercise [data-answer-input]')) return;
     ev.preventDefault();

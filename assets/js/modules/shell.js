@@ -31,6 +31,12 @@ export const state = {
     setup: { count: 10, mode: 'random', continents: [] },
     round: null
   },
+  /* The capital game. Same shape as the others; `pick` is four choices or typed. */
+  capitals: {
+    data: null,
+    setup: { count: 10, mode: 'random', continents: [], pick: 'choice' },
+    round: null
+  },
   /* The shape game. `pick` is the answering modality: four choices, or typed. */
   shapes: {
     data: null,

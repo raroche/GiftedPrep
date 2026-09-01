@@ -375,6 +375,35 @@
   <!-- ============================================================== -->
   <!-- Fun: country shape setup and game                              -->
   <!-- ============================================================== -->
+  <!-- ============================================================ -->
+  <!-- Fun: name the capital city                                    -->
+  <!-- ============================================================ -->
+  <section class="gp-screen" id="screen-capsetup" aria-labelledby="capsetup-title">
+    <div class="gp-container">
+      <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
+      <h1 class="gp-page-title" id="capsetup-title">Name the Capital</h1>
+      <p class="gp-page-lede">The country is given, the capital city is the answer.
+         Choose how many, which ones, and how hard.</p>
+      <div class="gp-card gp-card--setup" id="gp-cap-setup"></div>
+    </div>
+  </section>
+
+  <section class="gp-screen" id="screen-capgame" aria-labelledby="capgame-title">
+    <div class="gp-container">
+      <div class="gp-flagbar">
+        <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun/capitals">&larr; Change the round</a>
+        <p class="gp-flagbar__score">
+          <span class="gp-tally gp-tally--right"><span aria-hidden="true">&#10003;</span>
+            <strong data-cap-right>0</strong><span class="gp-sr-only">right</span></span>
+          <span class="gp-tally gp-tally--wrong"><span aria-hidden="true">&#10007;</span>
+            <strong data-cap-wrong>0</strong><span class="gp-sr-only">wrong</span></span>
+        </p>
+      </div>
+      <h1 class="gp-sr-only" id="capgame-title">Name the capital city</h1>
+      <div id="gp-cap-body" aria-live="polite"></div>
+    </div>
+  </section>
+
   <section class="gp-screen" id="screen-shapesetup" aria-labelledby="shapesetup-title">
     <div class="gp-container">
       <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>

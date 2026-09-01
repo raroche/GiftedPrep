@@ -10,6 +10,7 @@ import { icon } from './../modules/icons.js';
 import { escapeHtml } from './../modules/charts.js';
 import * as flags from './../modules/flags.js';
 import * as shapes from './../modules/shapes.js';
+import * as capitals from './../modules/capitals.js';
 import { $, $$, paint, showError, showScreen, state } from './../modules/shell.js';
 
 /* ------------------------------------------------------------------ */
@@ -58,7 +59,10 @@ const FUN_GAMES = [
     meta: '250 flags \u00b7 a hidden vault' },
   { id: 'shapes', art: 'outline', hue: 'lagoon', name: 'Name the Country Shape',
     sub: 'Guess the country from its outline. Pick from four, or type it and make it hard.',
-    meta: '242 outlines \u00b7 English or Spanish' }
+    meta: '242 outlines \u00b7 English or Spanish' },
+  { id: 'capitals', art: 'capital', hue: 'honey', name: 'Name the Capital',
+    sub: 'The country is given. Name its capital city, from four or by typing it.',
+    meta: '192 capitals \u00b7 a typo still counts' }
 ];
 
 function renderFunHub() {
@@ -80,6 +84,7 @@ function renderFunHub() {
 export async function renderFun(game, step) {
   if (!game) { renderFunHub(); return; }
   if (game === 'shapes') { await renderShapes(step); return; }
+  if (game === 'capitals') { await renderCapitals(step); return; }
   if (game !== 'flags') { renderFunHub(); return; }
   try {
     if (!state.flags.data) state.flags.data = await flags.loadFlags();
@@ -398,4 +403,157 @@ export function answerShapeVault(pick) {
       &mdash; ${escapeHtml(entry.thing.toLowerCase())}.</p>
     <p class="gp-vault__story">${escapeHtml(entry.story)}</p>`;
   $('#gp-shape-body .gp-vault').appendChild(box);
+}
+
+
+/* ------------------------------------------------------------------ */
+/* Fun: name the capital city                                          */
+/* ------------------------------------------------------------------ */
+
+export async function renderCapitals(step) {
+  try {
+    if (!state.capitals.data) state.capitals.data = await capitals.loadCapitals();
+  } catch (err) {
+    console.error(err);
+    showError('The capitals could not be loaded.');
+    return;
+  }
+  if (step === 'play' && state.capitals.round) { drawCapQuestion(); return; }
+  drawCapSetup();
+}
+
+export function drawCapSetup() {
+  $('#gp-cap-setup').innerHTML = capitals.renderSetup(state.capitals.data, state.capitals.setup);
+  paint();
+  showScreen('capsetup');
+}
+
+export function startCapRound() {
+  const list = capitals.buildRound(state.capitals.data, state.capitals.setup);
+  if (!list.length) return;
+  state.capitals.round = {
+    list, index: 0, right: 0, wrong: 0, answered: false, choices: null
+  };
+  location.hash = '#/fun/capitals/play';
+  drawCapQuestion();
+}
+
+function capScore() {
+  const r = state.capitals.round;
+  $('[data-cap-right]').textContent = r.right;
+  $('[data-cap-wrong]').textContent = r.wrong;
+}
+
+export function drawCapQuestion() {
+  const r = state.capitals.round;
+  if (!r) { drawCapSetup(); return; }
+  if (r.index >= r.list.length) { drawCapResults(); return; }
+  const country = r.list[r.index];
+  const pick = state.capitals.setup.pick;
+  if (!r.choices) r.choices = capitals.makeChoices(country, state.capitals.data);
+  r.answered = false;
+  $('#gp-cap-body').innerHTML =
+    capitals.renderQuestion(country, r.choices, r.index, r.list.length, pick);
+  capScore();
+  paint();
+  showScreen('capgame');
+  if (pick === 'type') {
+    const box = $('#gp-cap-body [data-captyped]');
+    if (box) box.focus();
+  }
+}
+
+/**
+ * Finish one capital.
+ *
+ * Three outcomes, not two: right, right-but-misspelled, and a real capital
+ * belonging to somewhere else. See modules/fuzzy.js for why the middle one
+ * exists and why it is scored as correct.
+ */
+function settleCap(verdict) {
+  const r = state.capitals.round;
+  const country = r.list[r.index];
+  if (r.answered) return;
+  r.answered = true;
+  const right = verdict.verdict === 'right' || verdict.verdict === 'close';
+  if (right) r.right += 1; else r.wrong += 1;
+  capScore();
+
+  $$('#gp-cap-body [data-capanswer]').forEach((b) => {
+    b.disabled = true;
+    if (b.dataset.capanswer === country.code) b.classList.add('is-correct');
+    else if (b.dataset.capanswer === verdict.pickedCode) b.classList.add('is-incorrect');
+  });
+  $$('#gp-cap-body .gp-choice.is-correct .gp-choice__mark')
+    .forEach((m) => { m.innerHTML = icon('check', { size: 20 }); });
+  $$('#gp-cap-body .gp-choice.is-incorrect .gp-choice__mark')
+    .forEach((m) => { m.innerHTML = icon('cross', { size: 20 }); });
+  const typed = $('#gp-cap-body [data-captyped]');
+  if (typed) typed.disabled = true;
+  const checkBtn = $('#gp-cap-body [data-capcheck]');
+  if (checkBtn) checkBtn.disabled = true;
+
+  const say = document.createElement('p');
+  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`
+    + (verdict.verdict === 'close' ? ' is-nearly' : '');
+  say.textContent = verdict.verdict === 'close'
+    ? `Right city, small slip. It is spelled ${verdict.shown}.`
+    : verdict.verdict === 'right'
+      ? `Yes. ${country.capital} is the capital of ${country.country}.`
+      : verdict.verdict === 'other'
+        ? `${verdict.other.capital} is the capital of ${verdict.other.country}. `
+          + `${country.country}'s is ${country.capital}.`
+        : `No. The capital of ${country.country} is ${country.capital}.`;
+  $('#gp-cap-body .gp-flagq').appendChild(say);
+
+  const next = document.createElement('button');
+  next.type = 'button';
+  next.className = 'gp-btn gp-btn--primary gp-btn--big';
+  next.dataset.action = 'cap-next';
+  next.textContent = r.index + 1 >= r.list.length ? 'See how you did \u2192' : 'Next country \u2192';
+  $('#gp-cap-body .gp-flagq').appendChild(next);
+  next.focus();
+}
+
+export function answerCapChoice(code) {
+  const r = state.capitals.round;
+  if (!r || r.answered) return;
+  const country = r.list[r.index];
+  if (code === country.code) { settleCap({ verdict: 'right' }); return; }
+  const picked = state.capitals.data.countries.find((c) => c.code === code);
+  settleCap({ verdict: 'other', other: picked, pickedCode: code });
+}
+
+export function answerCapTyped() {
+  const r = state.capitals.round;
+  if (!r || r.answered) return;
+  const box = $('#gp-cap-body [data-captyped]');
+  const said = (box.value || '').trim();
+  if (!said) { box.focus(); return; }
+  settleCap(capitals.judge(said, r.list[r.index], state.capitals.data));
+}
+
+export function nextCapital() {
+  const r = state.capitals.round;
+  r.index += 1;
+  r.choices = null;
+  drawCapQuestion();
+}
+
+function drawCapResults() {
+  const r = state.capitals.round;
+  const total = r.right + r.wrong;
+  const pct = total ? Math.round((r.right / total) * 100) : 0;
+  $('#gp-cap-body').innerHTML = `
+    <div class="gp-flagdone">
+      <h2 class="gp-flagdone__title">${pct >= 70 ? 'Nice work!' : 'All done!'}</h2>
+      <p class="gp-flagdone__score"><strong>${r.right}</strong> out of ${total}</p>
+      <div class="gp-row gp-row--wrap">
+        <button type="button" class="gp-btn gp-btn--primary" data-action="cap-again">Play again</button>
+        <a class="gp-btn gp-btn--ghost" href="#/fun/capitals">Change the round</a>
+        <a class="gp-btn gp-btn--quiet" href="#/fun">Back to games</a>
+      </div>
+    </div>`;
+  paint();
+  showScreen('capgame');
 }
