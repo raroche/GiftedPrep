@@ -64,13 +64,13 @@ for (const hue of hues) {
   for (const suffix of ['', '-soft', '-line', '-ink']) {
     if (!css.includes(`--cz-${hue}${suffix}:`)) err(`no --cz-${hue}${suffix} token in ${CSS}`);
   }
-  if (!css.includes(`.cz-room--${hue}`)) err(`no .cz-room--${hue} class in ${CSS}`);
+  if (!css.includes(`.cz-tile--${hue}`)) err(`no .cz-tile--${hue} class in ${CSS}`);
 }
 
 /* ---- a room's own colour must not be declared after the hue classes ----
    Equal specificity means the later rule wins, so a component that sets its
    own --room default below the hue block silently overrides every room. */
-const hueAt = css.indexOf('.cz-room--mango');
+const hueAt = css.indexOf('.cz-tile--mango');
 for (const comp of ['.cz-roomhead', '.cz-welcome']) {
   const at = css.indexOf(comp + ' {');
   if (at > hueAt && at !== -1 && /--room(-soft|-line|-ink)?:/.test(css.slice(at, css.indexOf('}', at)))) {
@@ -96,7 +96,7 @@ for (const r of ROOMS) {
   const html = roomCard(r);
   if (r.status === 'live' && !html.includes(`href="${r.href}"`)) err(`${r.id}: card is not a link`);
   if (r.status === 'soon' && html.includes('href=')) err(`${r.id}: a "soon" room must not be clickable`);
-  if (!html.includes(`cz-room--${r.hue}`)) err(`${r.id}: card is missing its hue class`);
+  if (!html.includes(`cz-tile--${r.hue}`)) err(`${r.id}: card is missing its hue class`);
 }
 
 /* ---- report ---- */

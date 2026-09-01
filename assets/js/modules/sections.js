@@ -203,19 +203,19 @@ export function roomCard(room) {
   const soon = room.status !== 'live';
   const tag = soon ? 'div' : 'a';
   const attrs = soon ? '' : ` href="${room.href}"`;
-  return `<${tag} class="cz-room cz-room--${room.hue}${soon ? ' is-soon' : ''}"${attrs}>
-      <span class="cz-room__pic">${creature(room.creature)}</span>
-      <span class="cz-room__text">
-        <span class="cz-room__name">${esc(room.name)}</span>
-        <span class="cz-room__blurb">${esc(room.blurb)}</span>
-        <span class="cz-room__meta">${soon ? 'Being built' : esc(room.meta)}</span>
+  return `<${tag} class="cz-tile cz-tile--${room.hue}${soon ? ' is-soon' : ''}"${attrs}>
+      <span class="cz-tile__pic">${creature(room.creature)}</span>
+      <span class="cz-tile__text">
+        <span class="cz-tile__name">${esc(room.name)}</span>
+        <span class="cz-tile__blurb">${esc(room.blurb)}</span>
+        <span class="cz-tile__meta">${soon ? 'Being built' : esc(room.meta)}</span>
       </span>
-      ${soon ? '' : '<span class="cz-room__go" aria-hidden="true">&rarr;</span>'}
+      ${soon ? '' : '<span class="cz-tile__go" aria-hidden="true">&rarr;</span>'}
     </${tag}>`;
 }
 
 export function roomGrid(rooms = ROOMS) {
-  return `<div class="cz-rooms">${rooms.map(roomCard).join('')}</div>`;
+  return `<div class="cz-tiles">${rooms.map(roomCard).join('')}</div>`;
 }
 
 export default { ROOMS, LIVE_ROOMS, roomById, roomCard, roomGrid, creature, CREATURES };

@@ -2344,24 +2344,24 @@ button, a, label, summary, [role="button"] {
 .gp-typehint { text-align: center; margin: 0 0 var(--gp-space-2); font-size: var(--gp-text-sm); }
 
 /* ====================================================================
-   Rooms — the sections of the zoo
+   Tiles — a room on the map, or a game inside one
    ====================================================================
-   A room card is the main thing a child touches on the home page, so it is
-   built to be aimed at rather than read: a big creature, a short name, and a
-   whole card that is the tap target. Minimum height is well past the 44px
+   A tile is the main thing a child touches, so it is built to be aimed at
+   rather than read: big art, a short name, and a whole card that is the tap
+   target. The home page uses them for rooms and the games hub for games. Minimum height is well past the 44px
    guideline because the hand doing the tapping is six years old.
 
    Colour comes from the palette tokens, which already carry a light and a
    dark value, so none of this needs a dark-theme override.
    ==================================================================== */
 
-.cz-rooms {
+.cz-tiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--gp-space-5);
 }
 
-.cz-room {
+.cz-tile {
   --room: var(--gp-accent);
   --room-soft: var(--gp-accent-soft);
   --room-line: var(--gp-accent-line);
@@ -2382,14 +2382,14 @@ button, a, label, summary, [role="button"] {
               box-shadow var(--gp-dur-fast) var(--gp-ease);
 }
 
-.cz-room:hover,
-.cz-room:focus-visible {
+.cz-tile:hover,
+.cz-tile:focus-visible {
   transform: translateY(-3px);
   box-shadow: var(--gp-shadow-2);
 }
-.cz-room:active { transform: translateY(0) scale(0.99); }
+.cz-tile:active { transform: translateY(0) scale(0.99); }
 
-.cz-room__pic {
+.cz-tile__pic {
   display: grid;
   place-items: center;
   width: 76px; height: 76px;
@@ -2400,54 +2400,54 @@ button, a, label, summary, [role="button"] {
 }
 .cz-creature { width: 56px; height: 56px; display: block; }
 
-.cz-room__text { display: grid; gap: 3px; min-width: 0; }
-.cz-room__name {
+.cz-tile__text { display: grid; gap: 3px; min-width: 0; }
+.cz-tile__name {
   font-size: var(--gp-text-lg);
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--room-ink);
 }
-.cz-room__blurb {
+.cz-tile__blurb {
   font-size: var(--gp-text-sm);
   line-height: var(--gp-leading-snug);
   color: var(--gp-ink-soft);
 }
-.cz-room__meta {
+.cz-tile__meta {
   font-size: var(--gp-text-xs);
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--gp-ink-muted);
 }
-.cz-room__go {
+.cz-tile__go {
   font-size: 26px;
   line-height: 1;
   color: var(--room);
   transition: transform var(--gp-dur-fast) var(--gp-ease);
 }
-.cz-room:hover .cz-room__go { transform: translateX(4px); }
+.cz-tile:hover .cz-tile__go { transform: translateX(4px); }
 
 /* A room that does not exist yet: visible so the zoo looks like it is growing,
    but plainly not a door you can open. */
-.cz-room.is-soon {
+.cz-tile.is-soon {
   background: var(--gp-surface-2);
   border-color: var(--gp-line);
   border-style: dashed;
   cursor: default;
 }
-.cz-room.is-soon .cz-room__name { color: var(--gp-ink-muted); }
-.cz-room.is-soon .cz-creature { opacity: 0.45; }
+.cz-tile.is-soon .cz-tile__name { color: var(--gp-ink-muted); }
+.cz-tile.is-soon .cz-creature { opacity: 0.45; }
 
 /* One class per palette hue. Adding a section means adding an entry to ROOMS
    and, if it uses a new hue, three lines here. */
-.cz-room--mango    { --room: var(--cz-mango);    --room-soft: var(--cz-mango-soft);    --room-line: var(--cz-mango-line); --room-ink: var(--cz-mango-ink); }
-.cz-room--honey    { --room: var(--cz-honey);    --room-soft: var(--cz-honey-soft);    --room-line: var(--cz-honey-line); --room-ink: var(--cz-honey-ink); }
-.cz-room--leaf     { --room: var(--cz-leaf);     --room-soft: var(--cz-leaf-soft);     --room-line: var(--cz-leaf-line); --room-ink: var(--cz-leaf-ink); }
-.cz-room--jade     { --room: var(--cz-jade);     --room-soft: var(--cz-jade-soft);     --room-line: var(--cz-jade-line); --room-ink: var(--cz-jade-ink); }
-.cz-room--lagoon   { --room: var(--cz-lagoon);   --room-soft: var(--cz-lagoon-soft);   --room-line: var(--cz-lagoon-line); --room-ink: var(--cz-lagoon-ink); }
-.cz-room--sky      { --room: var(--cz-sky);      --room-soft: var(--cz-sky-soft);      --room-line: var(--cz-sky-line); --room-ink: var(--cz-sky-ink); }
-.cz-room--orchid   { --room: var(--cz-orchid);   --room-soft: var(--cz-orchid-soft);   --room-line: var(--cz-orchid-line); --room-ink: var(--cz-orchid-ink); }
-.cz-room--flamingo { --room: var(--cz-flamingo); --room-soft: var(--cz-flamingo-soft); --room-line: var(--cz-flamingo-line); --room-ink: var(--cz-flamingo-ink); }
+.cz-tile--mango    { --room: var(--cz-mango);    --room-soft: var(--cz-mango-soft);    --room-line: var(--cz-mango-line); --room-ink: var(--cz-mango-ink); }
+.cz-tile--honey    { --room: var(--cz-honey);    --room-soft: var(--cz-honey-soft);    --room-line: var(--cz-honey-line); --room-ink: var(--cz-honey-ink); }
+.cz-tile--leaf     { --room: var(--cz-leaf);     --room-soft: var(--cz-leaf-soft);     --room-line: var(--cz-leaf-line); --room-ink: var(--cz-leaf-ink); }
+.cz-tile--jade     { --room: var(--cz-jade);     --room-soft: var(--cz-jade-soft);     --room-line: var(--cz-jade-line); --room-ink: var(--cz-jade-ink); }
+.cz-tile--lagoon   { --room: var(--cz-lagoon);   --room-soft: var(--cz-lagoon-soft);   --room-line: var(--cz-lagoon-line); --room-ink: var(--cz-lagoon-ink); }
+.cz-tile--sky      { --room: var(--cz-sky);      --room-soft: var(--cz-sky-soft);      --room-line: var(--cz-sky-line); --room-ink: var(--cz-sky-ink); }
+.cz-tile--orchid   { --room: var(--cz-orchid);   --room-soft: var(--cz-orchid-soft);   --room-line: var(--cz-orchid-line); --room-ink: var(--cz-orchid-ink); }
+.cz-tile--flamingo { --room: var(--cz-flamingo); --room-soft: var(--cz-flamingo-soft); --room-line: var(--cz-flamingo-line); --room-ink: var(--cz-flamingo-ink); }
 
 /* The welcome band. Deep is the one surface the brand orange may not sit on as
    text, so everything here uses the on-deep tokens. */
@@ -2523,17 +2523,17 @@ button, a, label, summary, [role="button"] {
 .cz-roomhead p { margin: 3px 0 0; color: var(--gp-ink-soft); font-size: var(--gp-text-sm); }
 
 @media (max-width: 560px) {
-  .cz-room { min-height: 112px; padding: var(--gp-space-4); gap: var(--gp-space-3); }
-  .cz-room__pic { width: 62px; height: 62px; }
+  .cz-tile { min-height: 112px; padding: var(--gp-space-4); gap: var(--gp-space-3); }
+  .cz-tile__pic { width: 62px; height: 62px; }
   .cz-creature { width: 46px; height: 46px; }
-  .cz-room__go { display: none; }
+  .cz-tile__go { display: none; }
   .cz-welcome { padding: var(--gp-space-6) var(--gp-space-5); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cz-room, .cz-room__go { transition: none; }
-  .cz-room:hover, .cz-room:focus-visible { transform: none; }
-  .cz-room:hover .cz-room__go { transform: none; }
+  .cz-tile, .cz-tile__go { transition: none; }
+  .cz-tile:hover, .cz-tile:focus-visible { transform: none; }
+  .cz-tile:hover .cz-tile__go { transform: none; }
 }
 
 /* ==========================================================================
@@ -2804,3 +2804,7 @@ button, a, label, summary, [role="button"] {
 /* A near miss: right answer, wrong spelling. Green like a pass, because it is
    one, with the correct spelling doing the teaching. */
 .gp-flagq__say.is-nearly { color: var(--gp-good); }
+
+/* Game art sits in the same tile as a creature does, so it is sized to match. */
+.cz-gameart { width: 56px; height: 56px; display: block; }
+@media (max-width: 560px) { .cz-gameart { width: 46px; height: 46px; } }

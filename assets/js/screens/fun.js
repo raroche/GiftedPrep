@@ -16,20 +16,64 @@ import { $, $$, paint, showError, showScreen, state } from './../modules/shell.j
 /* Fun: name the flag                                                  */
 /* ------------------------------------------------------------------ */
 
+/* Drawn rather than picked from the emoji table. An emoji is whatever the
+   device decides it is -- a different colour, a different style and a different
+   weight on every platform -- which is a poor way to build the front door of a
+   room. These are flat, use the palette, and re-theme with the page. */
+const ART = {
+  flag: (t, p) => `
+    <path d="M14 8 V58" stroke="var(--gp-ink)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M14 11 H55 L46 23.5 L55 36 H14 Z" fill="${t}"/>
+    <circle cx="28" cy="23.5" r="5.4" fill="${p}"/>`,
+
+  /* Straight edges made this read as an octagon on a grid, not a country. A
+     coastline is curves, a peninsula and an island, so it is drawn as those. */
+  outline: (t, p) => `
+    <rect x="4" y="4" width="56" height="56" rx="13" fill="${p}"/>
+    <path d="M4 25 H60 M4 43 H60 M23 4 V60 M43 4 V60" stroke="${t}" stroke-width="1.1"
+          opacity=".22" fill="none"/>
+    <path d="M17 28 C16 20 22 14 29 15 C33 11 41 12 43 17 C50 17 53 23 50 28
+             C54 31 53 38 48 39 C48 45 42 48 38 45 C33 51 25 49 24 43
+             C17 42 14 34 17 28 Z" fill="${t}"/>
+    <circle cx="49" cy="48" r="3.1" fill="${t}"/>
+    <circle cx="44" cy="53" r="1.8" fill="${t}"/>`,
+
+  capital: (t, p) => `
+    <rect x="4" y="4" width="56" height="56" rx="13" fill="${p}"/>
+    <path d="M32 10 l2.6 5.6 6.1 .8 -4.5 4.2 1.1 6 -5.3 -2.9 -5.3 2.9 1.1 -6 -4.5 -4.2 6.1 -.8 Z"
+          fill="${t}"/>
+    <rect x="13" y="36" width="11" height="16" rx="2" fill="${t}"/>
+    <rect x="26.5" y="29" width="11" height="23" rx="2" fill="${t}"/>
+    <rect x="40" y="33" width="11" height="19" rx="2" fill="${t}"/>
+    <path d="M10 52 H54" stroke="${t}" stroke-width="3.4" stroke-linecap="round" fill="none"/>`
+};
+
+const gameArt = (kind) => `<svg class="cz-gameart" viewBox="0 0 64 64" aria-hidden="true"
+  focusable="false">${ART[kind](
+    'var(--room, var(--gp-accent))', 'var(--room-soft, var(--gp-accent-soft))')}</svg>`;
+
 const FUN_GAMES = [
-  { id: 'flags', icon: '🚩', name: 'Name the Flag',
-    sub: 'Every flag in the world, and a locked vault of flags that no longer exist.' },
-  { id: 'shapes', icon: '🗺️', name: 'Name the Country Shape',
-    sub: 'Guess the country from its outline. Pick from four, or type it and make it hard.' }
+  { id: 'flags', art: 'flag', hue: 'mango', name: 'Name the Flag',
+    sub: 'Every flag in the world, and a locked vault of flags that no longer exist.',
+    meta: '250 flags \u00b7 a hidden vault' },
+  { id: 'shapes', art: 'outline', hue: 'lagoon', name: 'Name the Country Shape',
+    sub: 'Guess the country from its outline. Pick from four, or type it and make it hard.',
+    meta: '242 outlines \u00b7 English or Spanish' }
 ];
 
 function renderFunHub() {
-  $('#gp-fun-grid').innerHTML = FUN_GAMES.map((g) => `
-    <a class="gp-card gp-card--action" href="#/fun/${g.id}">
-      <span class="gp-card__icon" aria-hidden="true">${g.icon}</span>
-      <span class="gp-card__title">${escapeHtml(g.name)}</span>
-      <span class="gp-card__sub">${escapeHtml(g.sub)}</span>
-    </a>`).join('');
+  /* Same tile as the rooms on the home page. A game is a room one level down,
+     so it should not look like a different kind of object. */
+  $('#gp-fun-grid').innerHTML = `<div class="cz-tiles">${FUN_GAMES.map((g) => `
+    <a class="cz-tile cz-tile--${g.hue}" href="#/fun/${g.id}">
+      <span class="cz-tile__pic">${gameArt(g.art)}</span>
+      <span class="cz-tile__text">
+        <span class="cz-tile__name">${escapeHtml(g.name)}</span>
+        <span class="cz-tile__blurb">${escapeHtml(g.sub)}</span>
+        <span class="cz-tile__meta">${escapeHtml(g.meta)}</span>
+      </span>
+      <span class="cz-tile__go" aria-hidden="true">&rarr;</span>
+    </a>`).join('')}</div>`;
   showScreen('fun');
 }
 

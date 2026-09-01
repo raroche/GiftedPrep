@@ -113,7 +113,7 @@ export function renderCountPicker() {
  * checker without anyone editing this function.
  */
 export function renderRooms() {
-  const host = document.getElementById('cz-rooms');
+  const host = document.getElementById('cz-tiles');
   if (host) host.innerHTML = roomGrid(ROOMS);
 }
 
