@@ -50,7 +50,8 @@
     </circle>
   </g>
 
-  <rect x="4" y="36" width="56" height="22" rx="9" fill="var(--gp-accent, #BA5828)"/>
-  <path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="var(--gp-bg, #FDFBF7)"
-        stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+  <path d="M 15 46 Q 32 56 49 46" fill="none" stroke="var(--gp-accent, #BA5828)"
+        stroke-width="22" stroke-linecap="round"/>
+  <path d="M 21 48.9 Q 32 53.1 43 48.9" fill="none" stroke="var(--gp-bg, #FDFBF7)"
+        stroke-width="2.6" stroke-linecap="round" opacity=".6"/>
 </svg>

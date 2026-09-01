@@ -2,10 +2,12 @@
      role="img" aria-label="CurioZoo">
   <title>CurioZoo</title>
   <!-- A favicon cannot inherit the page's colours and is shown at 16px, so this
-       is a self-contained tile: the ears and fence rails of the full mark are
-       dropped because they turn to mush at that size. Eyes survive. -->
+       is a self-contained tile: the ears of the full mark are dropped, and so
+       is the seam along the mouth, because a 2.6 line turns to mud at that
+       size. The mouth's curve survives, because a silhouette does. -->
   <rect width="64" height="64" rx="14" fill="#BA5828"/>
-  <rect x="6" y="45" width="52" height="15" rx="7" fill="#8E3F17"/>
+  <path d="M 13.5 51 Q 32 58 50.5 51" fill="none" stroke="#8E3F17"
+        stroke-width="15" stroke-linecap="round"/>
   <circle cx="21" cy="29" r="12" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>
   <circle cx="43" cy="29" r="12" fill="#FFFFFF" stroke="#2B2926" stroke-width="2.6"/>
   <circle cx="24" cy="27.5" r="5.4" fill="#2B2926"/>

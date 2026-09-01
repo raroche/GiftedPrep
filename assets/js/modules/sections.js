@@ -105,11 +105,30 @@ export const EYE = {
   glint: [{ cx: 26.3, cy: 23.6, r: 1.6 }, { cx: 47.3, cy: 23.6, r: 1.6 }]
 };
 
-/** The enclosure wall the creature peeks over. `paper` is the rail colour. */
+/* The bar under the eyes. It used to be a straight <rect> with three fence
+   rails on it, which is what an enclosure wall looks like and also what a
+   frown looks like, sitting as it does directly beneath two eyes.
+
+   It is now one thick round-capped stroke, because a rect cannot bend. The
+   centre line dips 5 in the middle, so the bar reads as a mouth, and the three
+   rails are replaced by a single soft seam that follows the same curve: a
+   closed, content smile. The stroke still spans exactly x 4..60, so every
+   creature keeps the silhouette it had. */
+
+/** The curve the bar and the seam both follow. Dips 5 at x=32. */
+export const MOUTH_LINE = 'M 15 46 Q 32 56 49 46';
+/** The seam, on the same curve, pulled in 6 at each end to stay inside. */
+export const MOUTH_SEAM = 'M 21 48.9 Q 32 53.1 43 48.9';
+/** Where the seam's ends sit. Scaling about this point deepens the smile
+    without moving its corners, which is how every expression is made. */
+export const MOUTH_PIVOT = { x: 32, y: 48.9 };
+
+/** The bar the creature rests its chin on. `paper` is the seam colour. */
 export const wall = (tone, paper) =>
-  `<rect x="4" y="36" width="56" height="22" rx="9" fill="${tone}"/>`
-  + `<path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="${paper}"`
-  + ` stroke-width="2.4" stroke-linecap="round" opacity=".55"/>`;
+  `<path d="${MOUTH_LINE}" fill="none" stroke="${tone}"`
+  + ` stroke-width="22" stroke-linecap="round"/>`
+  + `<path d="${MOUTH_SEAM}" fill="none" stroke="${paper}"`
+  + ` stroke-width="2.6" stroke-linecap="round" opacity=".6"/>`;
 
 /**
  * One creature, as inline SVG.

@@ -7,6 +7,7 @@
  * typed string, no answer is right. That is the main thing checked.
  */
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import { normaliseName } from '../assets/js/modules/shapes.js';
 
@@ -81,6 +82,23 @@ const seenLook = new Set();
 
 for (const key of ['shapes', 'names']) {
   if (!data.attribution || !data.attribution[key]) err(`no attribution recorded for "${key}"`);
+}
+
+/* ---- no two countries may share an outline ----
+   Rwanda shipped showing Saudi Arabia, because mapsicon's own rw folder holds
+   the Saudi file. Identical bytes are the cheap half of catching that;
+   tools/shapeverify.py is the half that catches a wrong outline which does not
+   happen to duplicate another one in the set. */
+const seenBytes = new Map();
+for (const c of data.countries) {
+  const f = `${DIR}/${c.code}.svg`;
+  if (!fs.existsSync(f)) continue;
+  const h = crypto.createHash('sha1').update(fs.readFileSync(f)).digest('hex');
+  if (seenBytes.has(h)) {
+    err(`${c.code} (${c.name}) and ${seenBytes.get(h)} are the same outline file`);
+  } else {
+    seenBytes.set(h, `${c.code} (${c.name})`);
+  }
 }
 
 const bytes = fs.readdirSync(DIR).filter((f) => f.endsWith('.svg'))

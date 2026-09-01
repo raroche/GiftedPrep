@@ -23,6 +23,38 @@ def rr_sdf(x, y, x0, y0, w, h, r):
 def circ_sdf(x, y, cx, cy, r):
     return ((x - cx) ** 2 + (y - cy) ** 2) ** 0.5 - r
 
+def quad_points(p0, p1, p2, n=18):
+    """A quadratic Bezier walked as n+1 points."""
+    pts = []
+    for i in range(n + 1):
+        t, u = i / n, 1 - i / n
+        pts.append((u * u * p0[0] + 2 * u * t * p1[0] + t * t * p2[0],
+                    u * u * p0[1] + 2 * u * t * p1[1] + t * t * p2[1]))
+    return pts
+
+def poly_sdf(x, y, pts, r):
+    """Signed distance to a round-capped stroke of radius r along a polyline.
+
+    The bar under the eyes is a curve now, and there is no closed form for the
+    distance to a Bezier. Walking it as a polyline and taking the nearest
+    segment is exact enough: at eighteen segments over a curve this shallow the
+    error is well under a tenth of a unit, and one unit here is under three
+    pixels even on the 180px icon. The point list is built once per render, not
+    once per subsample, or this would take minutes.
+    """
+    best = 1e9
+    for i in range(len(pts) - 1):
+        ax, ay = pts[i]
+        bx, by = pts[i + 1]
+        px, py = x - ax, y - ay
+        dx, dy = bx - ax, by - ay
+        t = (px * dx + py * dy) / (dx * dx + dy * dy)
+        t = 0.0 if t < 0.0 else (1.0 if t > 1.0 else t)
+        d = ((px - t * dx) ** 2 + (py - t * dy) ** 2) ** 0.5
+        if d < best:
+            best = d
+    return best - r
+
 HEX = lambda h: (int(h[1:3], 16), int(h[3:5], 16), int(h[5:7], 16))
 
 MANGO, WALL, INK, WHITE = HEX('#BA5828'), HEX('#8E3F17'), HEX('#2B2926'), (255, 255, 255)
@@ -35,9 +67,13 @@ def shapes(radius=14):
     corners baked into the file come back as black notches on an iPad.
     """
     ring = 2.6 / 2
+    # The bar is a smile, so it is a curve of half-width 7.5 rather than a
+    # rounded rect. Ends at x 13.5 and 50.5 put its outer edges at 6 and 58,
+    # exactly where the rect's were. No seam: at 16px a 2.6 line is mud.
+    mouth = quad_points((13.5, 51), (32, 58), (50.5, 51))
     return [
         (lambda x, y: rr_sdf(x, y, 0, 0, 64, 64, radius), MANGO),
-        (lambda x, y: rr_sdf(x, y, 6, 45, 52, 15, 7), WALL),
+        (lambda x, y: poly_sdf(x, y, mouth, 7.5), WALL),
         (lambda x, y: circ_sdf(x, y, 21, 29, 12 + ring), INK),
         (lambda x, y: circ_sdf(x, y, 43, 29, 12 + ring), INK),
         (lambda x, y: circ_sdf(x, y, 21, 29, 12 - ring), WHITE),

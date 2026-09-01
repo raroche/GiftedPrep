@@ -18,17 +18,27 @@
  * mascot and the eight static room creatures can never drift apart.
  *
  * MOODS
- *   idle     breathing, blinking. The resting state.
+ *   idle     breathing, blinking, glancing about. The resting state, and not
+ *            a still one: three loops of different lengths run at once so the
+ *            combination takes almost a minute to repeat.
  *   curious  looks around, twitches its ears, tilts its head. The signature.
- *   happy    hops, eyes turn to arcs, three sparkles. After a right answer.
- *   oops     ducks behind the wall and looks down. After a wrong one.
- *   think    eyes up, ears down, three dots. Instead of a spinner.
- *   sleep    eyes shut, slow breath, drifting z. For an idle app.
+ *   happy    hops, eyes turn to arcs, mouth opens wide, three sparkles.
+ *   oops     ducks behind the bar, looks down, mouth turns down a little.
+ *   think    eyes up, ears down, mouth flat, three dots. Instead of a spinner.
+ *   sleep    eyes shut, slow breath, drifting z.
+ *   wink     one eye shut and a wide smile. For a small reward.
+ *   wow      eyes wide, ears up, a round open mouth. For a surprise.
+ *
+ * THE MOUTH
+ * The bar under the eyes carries a seam along its centre. Every expression is
+ * that one path scaled vertically about its own end points, so the corners
+ * never move and the curve deepens, flattens or inverts. One path, eight
+ * faces, and the logo's silhouette never changes.
  */
 
-import { EYE, earPair, wall } from './sections.js';
+import { EYE, MOUTH_LINE, MOUTH_SEAM, earPair } from './sections.js';
 
-export const MOODS = ['idle', 'curious', 'happy', 'oops', 'think', 'sleep'];
+export const MOODS = ['idle', 'curious', 'happy', 'oops', 'think', 'sleep', 'wink', 'wow'];
 
 const c = (o, fill, extra = '') =>
   `<circle cx="${o.cx}" cy="${o.cy}" r="${o.r}" fill="${fill}"${extra}/>`;
@@ -107,8 +117,18 @@ export function mascot({
     + arcs('happy', 'M15 29.5 Q21.5 21 28 29.5', 'M36 29.5 Q42.5 21 49 29.5')
     + arcs('sleep', 'M15 25 Q21.5 31.5 28 25', 'M36 25 Q42.5 31.5 49 25')
     + `</g>`
-    /* Drawn after the head, so ducking hides it rather than sliding it out. */
-    + wall(tone, paper)
+    /* Drawn after the head, so ducking hides it rather than sliding it out.
+       The bar and the seam are separate elements here, unlike sections.js's
+       wall(), because the seam has to be animatable on its own. */
+    + `<path class="cz-mascot__bar" d="${MOUTH_LINE}" fill="none" stroke="${tone}"`
+    + ` stroke-width="22" stroke-linecap="round"/>`
+    + `<path class="cz-mascot__mouth" d="${MOUTH_SEAM}" fill="none" stroke="${paper}"`
+    + ` stroke-width="2.6" stroke-linecap="round" opacity=".6"`
+    /* Without this a deepened smile is also a thicker one, because a CSS
+       scale takes the stroke with it. */
+    + ` vector-effect="non-scaling-stroke"/>`
+    /* The one expression the seam cannot make: a round open mouth. */
+    + `<ellipse class="cz-mascot__oh" cx="32" cy="51" rx="4.4" ry="5.4" fill="#2B2926"/>`
     /* Sparkles, thinking dots and sleeping z. All three are always in the
        markup at zero opacity; the mood decides which one runs. Twelve extra
        nodes is cheaper than rebuilding the SVG on every answer. */

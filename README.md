@@ -204,7 +204,11 @@ single silhouette that would otherwise be black on a black page. Country flags c
 (MIT), names and regions from the world-countries dataset, and the historical
 flags from Wikimedia Commons, where every one used here is public domain.
 Country outlines come from [mapsicon](https://github.com/djaiss/mapsicon) by
-Regis Freyd. It carries no standard licence: its terms are "do what you want
+Regis Freyd — with one correction. Its `rw` folder contains the outline of Saudi
+Arabia, so Rwanda shipped here showing the wrong country until a child noticed.
+Rwanda is now redrawn from Natural Earth, and every outline is checked against
+independent geometry by `tools/shapeverify.py` rather than trusted because of
+its filename. It carries no standard licence: its terms are "do what you want
 with them as long as you mention me" and no reselling, so it is credited here
 and in the data file. `tools/flagcheck.mjs` and `tools/shapecheck.mjs` check
 the join: every country has a real image file, every bundled image is used, no
@@ -433,7 +437,10 @@ GiftedPrep/
     ├── mathcheck.mjs           checks the Math Lab data
     ├── mathverify.mjs          recomputes every Math Lab answer from scratch
     ├── flagcheck.mjs           checks the flag data against the image files
-    ├── shapecheck.mjs          checks the outline data and typed-answer names
+    ├── shapecheck.mjs          checks the outline data, names, and that no two
+    │                           countries share an outline file
+    ├── shapeverify.py          proves each outline IS that country, by comparing
+    │                           it against independent public-domain geometry
     ├── roomcheck.mjs           checks the room registry against CSS and creatures
     ├── archcheck.mjs           checks the import layering and finds cycles
     ├── linkcheck.mjs           follows every internal link to a real route

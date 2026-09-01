@@ -59,8 +59,8 @@ const ICONS = {
     + '<circle cx="45.5" cy="25.5" r="4.6" fill="#2B2926"/>'
     + '<circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF"/>'
     + '<circle cx="47.3" cy="23.6" r="1.6" fill="#FFFFFF"/>'
-    + '<rect x="4" y="36" width="56" height="22" rx="9" fill="var(--gp-accent, #BA5828)"/>'
-    + '<path d="M18 41.5v11M32 41.5v11M46 41.5v11" fill="none" stroke="var(--gp-bg, #FDFBF7)" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>'
+    + '<path d="M 15 46 Q 32 56 49 46" fill="none" stroke="var(--gp-accent, #BA5828)" stroke-width="22" stroke-linecap="round"/>'
+    + '<path d="M 21 48.9 Q 32 53.1 43 48.9" fill="none" stroke="var(--gp-bg, #FDFBF7)" stroke-width="2.6" stroke-linecap="round" opacity=".6"/>'
     + '</g>',
   rotate:    stroke('M4 12a8 8 0 1 1 3 6.2') + stroke('M3 14.5 4 19l4.5-1') + stroke('M9.5 9.5h5v5h-5Z')
 };
