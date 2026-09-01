@@ -22,6 +22,14 @@ that practice is now one section among several, and more are planned.
 
 Everything explains itself afterwards, in words a six-year-old can follow.
 
+`app.js` is the shell: the theme, the router, one delegated listener and boot.
+Each room owns its screen under `assets/js/screens/`, shared state lives in
+`modules/shell.js`, and the rules a room needs live in `modules/` next to their
+tests. The import graph runs one way — app imports screens, screens import
+shell, shell imports neither — and `tools/archcheck.mjs` fails the build on a
+cycle, because a cycle in ES modules does not fail at parse time; it hands you
+`undefined` at call time, in one branch, on a route nobody clicked.
+
 Sections are declared in one list, [`sections.js`](assets/js/modules/sections.js).
 The home page, the room banners and `tools/roomcheck.mjs` all read from it, so
 adding a section is an entry in that list and a module — not a new screen in
@@ -383,7 +391,14 @@ GiftedPrep/
 │           ├── mathlab.js      Math Lab lessons and exercise engine
 │           ├── flags.js        the flag game
 │           ├── shapes.js       the country outline game
-│           └── sections.js     the rooms, and the creature that fronts each
+│           ├── sections.js     the rooms, and the creature that fronts each
+│           └── shell.js        shared state and DOM helpers
+│
+│       screens/                one file per room
+│           ├── gifted.js       test practice: pickers, questions, results
+│           ├── math.js         the Math Lab lessons and every exercise type
+│           ├── fun.js          the games hub, flags and country shapes
+│           └── parents.js      the Parent Guide screen
 ├── data/
 │   ├── manifest.json           tests, grades, category index
 │   ├── cogat/  nnat/  olsat/   one JSON file per category
@@ -397,6 +412,7 @@ GiftedPrep/
     ├── flagcheck.mjs           checks the flag data against the image files
     ├── shapecheck.mjs          checks the outline data and typed-answer names
     ├── roomcheck.mjs           checks the room registry against CSS and creatures
+    ├── archcheck.mjs           checks the import layering and finds cycles
     ├── palette.mjs             builds the palette and proves every contrast ratio
     ├── mkicon.py               rasterises the app icon (no dependencies)
     ├── serve.py                dev server with the production CSP
