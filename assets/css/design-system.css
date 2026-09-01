@@ -146,9 +146,18 @@
      against the background, Mango and Lagoon landed on the same lightness and
      measured 1.00:1 against each other. Deep is 3.0:1 against Mango, so the
      pair reads as a pair, including without colour vision. */
-  --cz-deep:         #0A303D;   /* white on it        13.97:1  AAA          */
+  --cz-deep:         #0A303D;
   --cz-deep-soft:    #E6F1F5;
   --cz-deep-line:    #B9D5DE;
+
+  /* What is allowed to sit ON Deep. The brand orange is NOT: #BA5828 measures
+     3.00:1 there, and 2.30:1 on the dark theme's Deep, so orange type on a
+     deep teal panel fails as text in both themes -- it looked muddy before it
+     was measured. Deep is a dark surface, so it borrows the dark theme's
+     lifted accent, which clears AA on both. */
+  --cz-on-deep:        #FDFBF7;   /* 13.52:1  AAA                             */
+  --cz-on-deep-muted:  #A1AEB0;   /*  6.12:1  AA                              */
+  --cz-on-deep-accent: #F0A16A;   /*  6.66:1  AA                              */
   --cz-mango:        #BA5828;
   --cz-mango-soft:   #FEEDE4;
   --cz-mango-line:   #F0C0A8;
@@ -301,6 +310,9 @@
     --cz-deep:         #184353;
     --cz-deep-soft:    #0E2831;
     --cz-deep-line:    #2A5A6C;
+    --cz-on-deep:        #FDFBF7;   /* 10.33:1  AAA                           */
+    --cz-on-deep-muted:  #A1AEB0;   /*  4.68:1  AA                            */
+    --cz-on-deep-accent: #F0A16A;   /*  5.09:1  AA                            */
     --cz-mango:        #DD6528;
     --cz-mango-soft:   #2D1F18;
     --cz-mango-line:   #624537;
