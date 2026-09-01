@@ -425,6 +425,65 @@ function onKeydown(ev) {
 }
 
 /* ------------------------------------------------------------------ */
+/* The mascot                                                          */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Everything that makes the mascot in the top bar feel watched-over.
+ *
+ * All of it is chrome, none of it is load-bearing, and every listener is
+ * passive or trivial. Answering a question is wired where the answer is
+ * marked, not here: see screens/gifted.js and screens/fun.js.
+ */
+function wireMascot() {
+  const brand = $('.gp-brand');
+  const mark = brand && brand.querySelector('[data-mascot]');
+  if (!mark) return;
+
+  /* The one piece of the chrome a child is allowed to poke at for no reason. */
+  brand.addEventListener('pointerenter', () => setMood(mark, 'curious', 2600));
+  brand.addEventListener('click', () => setMood(mark, 'happy', 1800));
+
+  /* Flipping the lights gets a wink. There is no reason for this beyond the
+     fact that a child will flip it twenty times to see what happens, and the
+     twentieth time should still answer. */
+  $('#gp-theme-toggle').addEventListener('click', () => setMood(mark, 'wink', 1400));
+
+  /* It looks over at whichever room you are pointing at. Delegated, because
+     the room cards are rebuilt from ROOMS on every visit to the home page. */
+  document.addEventListener('pointerover', (ev) => {
+    if (ev.target.closest && ev.target.closest('.cz-tile:not(.is-soon)')) {
+      setMood(mark, 'curious', 2200);
+    }
+  }, { passive: true });
+
+  /* Left alone, it dozes off, and any sign of life wakes it. Forty seconds is
+     long enough that it never nods off while a child is reading a question,
+     and short enough that an abandoned iPad shows something friendly rather
+     than a page that looks broken.
+
+     pointermove fires hundreds of times a second, so the timer is only reset
+     twice a second; without that this would be the most expensive listener on
+     the page by a wide margin. */
+  const IDLE = 40000;
+  let timer = null;
+  let last = 0;
+  const doze = () => setMood(mark, 'sleep');
+  const wake = () => {
+    const now = Date.now();
+    if (now - last < 500 && timer) return;
+    last = now;
+    clearTimeout(timer);
+    const svg = mark.querySelector('.cz-mascot');
+    if (svg && svg.dataset.mood === 'sleep') setMood(mark, 'idle');
+    timer = setTimeout(doze, IDLE);
+  };
+  ['pointerdown', 'pointermove', 'keydown', 'wheel', 'touchstart']
+    .forEach((e) => document.addEventListener(e, wake, { passive: true }));
+  wake();
+}
+
+/* ------------------------------------------------------------------ */
 /* Boot                                                                */
 /* ------------------------------------------------------------------ */
 
@@ -450,15 +509,7 @@ async function boot() {
   ));
   $('#gp-theme-toggle').addEventListener('click', toggleTheme);
 
-  /* The mascot in the top bar looks up when you reach for the logo and hops
-     when you press it. It is the one piece of the chrome a child is allowed to
-     poke at for no reason, and it costs three lines. */
-  const brand = $('.gp-brand');
-  if (brand) {
-    const mark = brand.querySelector('[data-mascot]');
-    brand.addEventListener('pointerenter', () => setMood(mark, 'curious', 2600));
-    brand.addEventListener('click', () => setMood(mark, 'happy', 1800));
-  }
+  wireMascot();
   $('#gp-lang-toggle').addEventListener('click', toggleGuideLanguage);
   $('#gp-ex-prev').addEventListener('click', () => stepExercise(-1));
   $('#gp-ex-next').addEventListener('click', () => stepExercise(1));

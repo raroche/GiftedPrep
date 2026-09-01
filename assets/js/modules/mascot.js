@@ -104,9 +104,14 @@ export function mascot({
     + c(EYE.pupil[1], '#2B2926') + c(EYE.glint[1], '#FFFFFF') + `</g>`
     + `</g></g>`;
 
+  /* Each arc carries a side class as well, so a wink can show one of them.
+     A held shut eye has to be an arc: the momentary flat line a blink uses
+     reads as a dash, or as a dead eye, the instant it stops moving. */
   const arcs = (cls2, d1, d2) =>
     `<g class="cz-mascot__eyes cz-mascot__eyes--${cls2}" fill="none" stroke="#2B2926"`
-    + ` stroke-width="3.2" stroke-linecap="round"><path d="${d1}"/><path d="${d2}"/></g>`;
+    + ` stroke-width="3.2" stroke-linecap="round">`
+    + `<path class="cz-mascot__arc cz-mascot__arc--l" d="${d1}"/>`
+    + `<path class="cz-mascot__arc cz-mascot__arc--r" d="${d2}"/></g>`;
 
   return `<svg class="${cls}" data-mood="${mood}" data-home="${mood}"`
     + ` viewBox="0 0 64 64"${a11y} focusable="false">`
@@ -141,9 +146,13 @@ export function mascot({
     + `<circle class="cz-mascot__dot cz-mascot__dot--3" cx="38" cy="4" r="2.4"/>`
     + `<g class="cz-mascot__z" fill="none" stroke="${tone}" stroke-width="2.2"`
     + ` stroke-linecap="round" stroke-linejoin="round">`
-    + `<path class="cz-mascot__z1" d="M46 26 h5.5 l-5.5 6.5 h5.5"/>`
-    + `<path class="cz-mascot__z2" d="M46 26 h5.5 l-5.5 6.5 h5.5"/>`
-    + `<path class="cz-mascot__z3" d="M46 26 h5.5 l-5.5 6.5 h5.5"/>`
+    /* x=52.5 puts these clear of the right eye, which reaches x=53.5 at its
+       widest and which the first draft drew them straight through. They fade
+       in a moment later, by which point the drift has carried them further
+       out still. */
+    + `<path class="cz-mascot__z1" d="M52.5 26 h5.5 l-5.5 6.5 h5.5"/>`
+    + `<path class="cz-mascot__z2" d="M52.5 26 h5.5 l-5.5 6.5 h5.5"/>`
+    + `<path class="cz-mascot__z3" d="M52.5 26 h5.5 l-5.5 6.5 h5.5"/>`
     + `</g></g>`
     + `</svg>`;
 }

@@ -6,11 +6,11 @@
   <!-- The one to reach for by default. It is the static mark plus a breath and
        a blink, and nothing else, so it stays legible down to about 20 pixels
        and never pulls attention off the question a child is working on.
-       See mascot-peek.svg for why this is SMIL. One cycle is 5s. -->
+       See mascot-peek.svg for why this is SMIL. One cycle is 4.2s. -->
 
   <g>
     <animateTransform attributeName="transform" attributeType="XML" type="translate"
-      dur="5s" repeatCount="indefinite" calcMode="spline"
+      dur="4.2s" repeatCount="indefinite" calcMode="spline"
       keyTimes="0; 0.5; 1" values="0 0; 0 1.4; 0 0"
       keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
 
@@ -19,39 +19,52 @@
 
     <ellipse cx="21.5" cy="27" rx="11" ry="11" fill="#FFFFFF" stroke="#2B2926"
              stroke-width="2.6" vector-effect="non-scaling-stroke">
-      <animate attributeName="ry" dur="5s" repeatCount="indefinite"
+      <animate attributeName="ry" dur="4.2s" repeatCount="indefinite"
         keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1"
         values="11; 11; 0.9; 11; 0.9; 11; 11"/>
     </ellipse>
     <ellipse cx="42.5" cy="27" rx="11" ry="11" fill="#FFFFFF" stroke="#2B2926"
              stroke-width="2.6" vector-effect="non-scaling-stroke">
-      <animate attributeName="ry" dur="5s" repeatCount="indefinite"
+      <animate attributeName="ry" dur="4.2s" repeatCount="indefinite"
         keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1"
         values="11; 11; 0.9; 11; 0.9; 11; 11"/>
     </ellipse>
 
     <ellipse cx="24.5" cy="25.5" rx="4.6" ry="4.6" fill="#2B2926">
-      <animate attributeName="ry" dur="5s" repeatCount="indefinite"
+      <animate attributeName="ry" dur="4.2s" repeatCount="indefinite"
         keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1"
         values="4.6; 4.6; 0.3; 4.6; 0.3; 4.6; 4.6"/>
     </ellipse>
     <ellipse cx="45.5" cy="25.5" rx="4.6" ry="4.6" fill="#2B2926">
-      <animate attributeName="ry" dur="5s" repeatCount="indefinite"
+      <animate attributeName="ry" dur="4.2s" repeatCount="indefinite"
         keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1"
         values="4.6; 4.6; 0.3; 4.6; 0.3; 4.6; 4.6"/>
     </ellipse>
     <circle cx="26.3" cy="23.6" r="1.6" fill="#FFFFFF">
-      <animate attributeName="opacity" dur="5s" repeatCount="indefinite"
+      <animate attributeName="opacity" dur="4.2s" repeatCount="indefinite"
         keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1" values="1; 1; 0; 1; 0; 1; 1"/>
     </circle>
     <circle cx="47.3" cy="23.6" r="1.6" fill="#FFFFFF">
-      <animate attributeName="opacity" dur="5s" repeatCount="indefinite"
+      <animate attributeName="opacity" dur="4.2s" repeatCount="indefinite"
         keyTimes="0; 0.76; 0.784; 0.808; 0.832; 0.856; 1" values="1; 1; 0; 1; 0; 1; 1"/>
     </circle>
   </g>
 
   <path d="M 15 46 Q 32 56 49 46" fill="none" stroke="var(--gp-accent, #BA5828)"
         stroke-width="22" stroke-linecap="round"/>
-  <path d="M 21 48.9 Q 32 53.1 43 48.9" fill="none" stroke="var(--gp-bg, #FDFBF7)"
-        stroke-width="2.6" stroke-linecap="round" opacity=".6"/>
+  <!-- The mouth. The seam is drawn about the origin and the group carries the
+       translate, so an additive scale here pivots on the seam's end points:
+       the corners stay pinned and only the curve between them deepens or
+       flattens. That one transform is every expression in the set.
+       non-scaling-stroke keeps a deep smile from also being a fat one. -->
+  <g transform="translate(32 48.9)">
+    <animateTransform attributeName="transform" attributeType="XML" type="scale"
+      additive="sum" dur="4.2s" repeatCount="indefinite" calcMode="spline"
+      keyTimes="0; 0.42; 0.60; 1"
+      values="1 1; 1 1; 1 1.2; 1 1"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <path d="M -11 0 Q 0 4.2 11 0" fill="none" stroke="var(--gp-bg, #FDFBF7)"
+          stroke-width="2.6" stroke-linecap="round" opacity=".6"
+          vector-effect="non-scaling-stroke"/>
+  </g>
 </svg>

@@ -9,6 +9,7 @@
 import * as data from './data.js';
 import * as storage from './storage.js';
 import { icon } from './icons.js';
+import { setMood } from './mascot.js';
 import { applyStyles } from './style.js';
 
 /* ------------------------------------------------------------------ */
@@ -63,6 +64,16 @@ export const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 /* ------------------------------------------------------------------ */
 /* Icons: index.html marks slots with data-icon, filled in once here    */
 /* ------------------------------------------------------------------ */
+
+/**
+ * Nudge the mascot in the top bar.
+ *
+ * It lives here rather than in each screen because the top bar is chrome: a
+ * screen should be able to say "that was right" without knowing where the
+ * mascot is or whether there is one. If the top bar ever loses it, this
+ * quietly does nothing.
+ */
+export const react = (mood, ms = 1800) => setMood($('.gp-brand__mark'), mood, ms);
 
 export function hydrateIcons(root = document) {
   root.querySelectorAll('[data-icon]').forEach((el) => {

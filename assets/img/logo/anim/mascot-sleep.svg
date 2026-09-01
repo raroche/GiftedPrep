@@ -29,29 +29,31 @@
     </g>
   </g>
 
-  <!-- Three z letters, each drifting up and right and fading out. -->
+  <!-- Three z letters, each drifting up and right and fading out. They start
+       at x=52.5, clear of the right eye, which reaches x=53.5 at its widest;
+       the first draft started them at 46 and drew them through it. -->
   <g fill="none" stroke="var(--gp-accent, #BA5828)" stroke-width="2.2"
      stroke-linecap="round" stroke-linejoin="round">
-    <g transform="translate(46 26)">
+    <g transform="translate(52.5 26)">
       <animateTransform attributeName="transform" attributeType="XML" type="translate"
         dur="4s" repeatCount="indefinite" additive="sum"
-        keyTimes="0; 1" values="0 0; 7 -22"/>
+        keyTimes="0; 1" values="0 0; 5 -21"/>
       <animate attributeName="opacity" dur="4s" repeatCount="indefinite"
         keyTimes="0; 0.15; 0.75; 1" values="0; 1; 1; 0"/>
       <path d="M0 0 h5.5 l-5.5 6.5 h5.5" transform="scale(0.85)"/>
     </g>
-    <g transform="translate(46 26)">
+    <g transform="translate(52.5 26)">
       <animateTransform attributeName="transform" attributeType="XML" type="translate"
         dur="4s" repeatCount="indefinite" additive="sum" begin="-1.33s"
-        keyTimes="0; 1" values="0 0; 7 -22"/>
+        keyTimes="0; 1" values="0 0; 5 -21"/>
       <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="-1.33s"
         keyTimes="0; 0.15; 0.75; 1" values="0; 1; 1; 0"/>
       <path d="M0 0 h5.5 l-5.5 6.5 h5.5" transform="scale(0.85)"/>
     </g>
-    <g transform="translate(46 26)">
+    <g transform="translate(52.5 26)">
       <animateTransform attributeName="transform" attributeType="XML" type="translate"
         dur="4s" repeatCount="indefinite" additive="sum" begin="-2.66s"
-        keyTimes="0; 1" values="0 0; 7 -22"/>
+        keyTimes="0; 1" values="0 0; 5 -21"/>
       <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="-2.66s"
         keyTimes="0; 0.15; 0.75; 1" values="0; 1; 1; 0"/>
       <path d="M0 0 h5.5 l-5.5 6.5 h5.5" transform="scale(0.85)"/>
@@ -60,6 +62,19 @@
 
   <path d="M 15 46 Q 32 56 49 46" fill="none" stroke="var(--gp-accent, #BA5828)"
         stroke-width="22" stroke-linecap="round"/>
-  <path d="M 21 48.9 Q 32 53.1 43 48.9" fill="none" stroke="var(--gp-bg, #FDFBF7)"
-        stroke-width="2.6" stroke-linecap="round" opacity=".6"/>
+  <!-- The mouth. The seam is drawn about the origin and the group carries the
+       translate, so an additive scale here pivots on the seam's end points:
+       the corners stay pinned and only the curve between them deepens or
+       flattens. That one transform is every expression in the set.
+       non-scaling-stroke keeps a deep smile from also being a fat one. -->
+  <g transform="translate(32 48.9)">
+    <animateTransform attributeName="transform" attributeType="XML" type="scale"
+      additive="sum" dur="4s" repeatCount="indefinite" calcMode="spline"
+      keyTimes="0; 0.5; 1"
+      values="1 0.95; 1 1.15; 1 0.95"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <path d="M -11 0 Q 0 4.2 11 0" fill="none" stroke="var(--gp-bg, #FDFBF7)"
+          stroke-width="2.6" stroke-linecap="round" opacity=".6"
+          vector-effect="non-scaling-stroke"/>
+  </g>
 </svg>

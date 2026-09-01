@@ -26,6 +26,6 @@
     "animcheck": "node tools/animcheck.mjs",
     "capitalcheck": "node tools/capitalcheck.mjs",
     "elementcheck": "node tools/elementcheck.mjs",
-    "shapeverify": "python3 tools/shapeverify.py"
+    "shapeverify": "node tools/shapeverify.mjs"
   }
 }

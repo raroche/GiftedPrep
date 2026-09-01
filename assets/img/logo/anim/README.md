@@ -25,12 +25,12 @@ places CSS cannot reach: a native launch image, a store listing, a Markdown file
 
 | File | What it does | Loops |
 |---|---|---|
-| `mascot-blink.svg` | Breathes and blinks twice. The quiet default; legible to about 20px. | yes |
-| `mascot-curious.svg` | Looks around, tilts its head, twitches its ears. The signature. | yes |
-| `mascot-peek.svg` | Rises from behind the wall, looks about, ducks back down. | yes |
-| `mascot-cheer.svg` | Crouches, hops, happy eyes, three sparkles. | yes |
-| `mascot-think.svg` | Eyes up, ears down, three counting dots. Use instead of a spinner. | yes |
-| `mascot-sleep.svg` | Dozes, breathing slowly, three drifting z. | yes |
+| `mascot-blink.svg` | Breathes, blinks twice, smile deepens once. The quiet default; legible to about 20px. 4.2s. | yes |
+| `mascot-curious.svg` | Looks around, tilts, twitches its ears, smile comes and goes. 6.4s. | yes |
+| `mascot-peek.svg` | Rises from behind the bar, looks about, ducks back down. Its smile arrives with it. 6s. | yes |
+| `mascot-cheer.svg` | Crouches, hops, arc eyes, mouth wide open, three sparkles. 2.6s. | yes |
+| `mascot-think.svg` | Eyes up, ears down, mouth flat, three counting dots. Use instead of a spinner. 3s. | yes |
+| `mascot-sleep.svg` | Dozes, breathing slowly, three drifting z. 4s. | yes |
 | `curiozoo-logo-intro.svg` | The wordmark draws itself, the two o of Zoo open as eyes, the mascot peeks up. **Plays once and freezes**, then only the eyes move. | no |
 
 All seven are drawn on the same 64 grid as `../curiozoo-mark.svg`, except the
@@ -66,16 +66,41 @@ setMood(el, 'happy', 1800);   // hop, then go back to resting
 
 | Mood | What it does | Where it is used |
 |---|---|---|
-| `idle` | breath and blink | the top bar |
-| `curious` | looks around, twitches, tilts | the welcome panel; the top bar on hover |
-| `happy` | two hops, happy eyes, sparkles | after a right answer |
-| `oops` | ducks behind the wall, looks down | after a wrong one |
-| `think` | eyes up, ears down, counting dots | instead of a spinner |
-| `sleep` | shut eyes, slow breath, drifting z | an app left open |
+| `idle` | breath, blink, eyes wander, one ear flicks | the top bar |
+| `curious` | looks around, twitches, tilts | the welcome panel; the brand on hover; a room card on hover |
+| `happy` | three hops, arc eyes, wide smile, sparkles | after a right answer, in every game |
+| `oops` | ducks behind the bar, looks down, small frown | after a wrong one |
+| `think` | eyes up, ears down, flat mouth, counting dots | instead of a spinner |
+| `sleep` | shut eyes, slow breath, drifting z | the page left alone for 40 seconds |
+| `wink` | one arc eye, a nod, a wider smile | a run of three right answers; the theme toggle |
+| `wow` | eyes wide, ears up, a round open mouth | a surprise |
 
-`oops` ducks and looks away. It is never a sad face: the panel underneath
-already says *here is why*, and a disappointed animal on top of that reads to a
-child as a telling-off.
+### The mouth
+
+The bar under the eyes carries a seam along its centre line. Every expression
+is that one path scaled vertically about its own end points, so the corners
+stay pinned and only the curve between them deepens, flattens, or inverts into
+a frown. One path, eight faces, and the logo's silhouette never moves — which
+is what stops an expressive mascot from becoming an unstable logo.
+
+```
+idle 1 · curious 0.85 · happy 2.1 · oops -0.75 · think 0.2 · sleep 1 · wink 1.75
+```
+
+`wow` is the one face the seam cannot make, so it has a second element: a
+round dark ellipse that cross-fades in while the seam fades out.
+
+### Why idle is not a still state
+
+The breath, the blink, the glance and the ear flick run at 4.3s, 4.3s, 9.1s
+and 7.7s. Nothing lines up, so the combination takes about five minutes to
+repeat and the mascot reads as alive rather than as a loop. Put them all on one
+period and the eye finds the seam within seconds.
+
+`oops` ducks, looks away, and turns the smile down by three quarters. It is
+never a sad face: the panel underneath already says *here is why*, and a
+disappointed animal on top of that reads to a child as a telling-off. That is
+why the frown is small and the duck is not.
 
 ### Recolouring
 
@@ -101,9 +126,9 @@ and the eight static room creatures cannot drift apart.
 
 1. **Nothing flashes, buzzes or shakes.** The design system's first promise is
    to a nervous seven year old days away from a real test, and it is not
-   suspended because the thing moving is cute. Rotations stay under fifteen
-   degrees, the hop is eight units, and the only fast thing in the set is a
-   blink, which is fast in life too.
+   suspended because the thing moving is cute. It moves often; it never moves
+   fast. Rotations stay under twenty degrees, the hop is eight units, and the
+   only quick thing in the set is a blink, which is quick in life too.
 2. **Dark ink only ever goes on the white eye disc.** The disc is the one part
    of this mascot that is white in every theme and on every background. The
    first version of the happy face replaced the whole eye with a bold dark arc.

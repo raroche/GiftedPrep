@@ -12,7 +12,7 @@ import * as flags from './../modules/flags.js';
 import * as shapes from './../modules/shapes.js';
 import * as capitals from './../modules/capitals.js';
 import * as elements from './../modules/elements.js';
-import { $, $$, paint, showError, showScreen, state } from './../modules/shell.js';
+import { $, $$, paint, react, showError, showScreen, state } from './../modules/shell.js';
 
 /* ------------------------------------------------------------------ */
 /* Fun: name the flag                                                  */
@@ -154,6 +154,7 @@ export function answerFlag(code) {
   const country = r.list[r.index];
   const right = code === country.code;
   if (right) r.right += 1; else r.wrong += 1;
+  react(right ? 'happy' : 'oops', right ? 2300 : 1800);
   flagScore();
 
   $$('#gp-flag-body [data-flagpick]').forEach((b) => {
@@ -304,6 +305,7 @@ function settleShape(right, saidWhat) {
   const country = r.list[r.index];
   r.answered = true;
   if (right) r.right += 1; else r.wrong += 1;
+  react(right ? 'happy' : 'oops', right ? 2300 : 1800);
   shapeScore();
 
   $$('#gp-shape-body [data-shapeanswer]').forEach((b) => {
@@ -489,6 +491,7 @@ function settleCap(verdict) {
   r.answered = true;
   const right = verdict.verdict === 'right' || verdict.verdict === 'close';
   if (right) r.right += 1; else r.wrong += 1;
+  react(right ? 'happy' : 'oops', right ? 2300 : 1800);
   capScore();
 
   $$('#gp-cap-body [data-capanswer]').forEach((b) => {
@@ -633,6 +636,7 @@ function settleElem(pickedZ) {
   const right = pickedZ === el.z;
   r.answered = true;
   if (right) r.right += 1; else r.wrong += 1;
+  react(right ? 'happy' : 'oops', right ? 2300 : 1800);
   elemScore();
 
   const mark = (sel) => $$(sel).forEach((b) => {

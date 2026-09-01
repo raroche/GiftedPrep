@@ -8,12 +8,14 @@ import { mascot, hydrateMascots, setMood, MOODS } from '../../../js/modules/masc
 import { CREATURES } from '../../../js/modules/sections.js';
 
 const NOTES = {
-  idle:    'Top bar. Breath and blink.',
+  idle:    'Top bar. Breath, blink, wander, ear flick.',
   curious: 'The signature. Looks around.',
-  happy:   'After a right answer.',
+  happy:   'After a right answer. Three hops.',
   oops:    'After a wrong one. Ducks, never sulks.',
   think:   'Instead of a spinner.',
-  sleep:   'App left open.'
+  sleep:   'App left open for 40 seconds.',
+  wink:    'A run of three right answers.',
+  wow:     'A surprise.'
 };
 
 const FILES = [

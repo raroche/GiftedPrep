@@ -13,11 +13,10 @@ import * as speech from './../modules/speech.js';
 import { QuizSession, encouragement, relabel } from './../modules/quiz.js';
 import { renderFigure, describeFigure } from './../modules/figures.js';
 import { icon } from './../modules/icons.js';
-import { setMood } from './../modules/mascot.js';
 import { ring, bars, escapeHtml } from './../modules/charts.js';
 import { ROOMS, roomGrid, creature, roomById } from './../modules/sections.js';
 import { renderTestsExplainer } from './../modules/parents.js';
-import { $, $$, paint, showError, state } from './../modules/shell.js';
+import { $, $$, paint, react, showError, state } from './../modules/shell.js';
 
 /* ------------------------------------------------------------------ */
 /* Read aloud                                                          */
@@ -458,11 +457,16 @@ function showResult(q, choiceId, correct, { speak = false, review = false } = {}
 
   /* The mascot in the top bar answers too. Not on a revisited question: the
      child is reading, not being marked, and a hop there would be noise.
-     'oops' ducks and looks away; it is never a sad face, because the panel
-     underneath already says "here is why" and a disappointed animal on top of
-     that reads as a telling-off. */
+     'oops' ducks and turns the smile down a quarter; it is never a sad face,
+     because the panel underneath already says "here is why" and a
+     disappointed animal on top of that reads as a telling-off.
+
+     A run of three gets a wink instead of a third identical hop. The same
+     reward every time stops being a reward. */
   if (!review) {
-    setMood($('.gp-brand__mark'), result.correct ? 'happy' : 'oops', 1800);
+    if (!result.correct) react('oops', 1800);
+    else if (result.streak >= 3) react('wink', 1400);
+    else react('happy', 2300);
   }
 
   if (!review) {

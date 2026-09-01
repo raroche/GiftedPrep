@@ -439,7 +439,7 @@ GiftedPrep/
     ├── flagcheck.mjs           checks the flag data against the image files
     ├── shapecheck.mjs          checks the outline data, names, and that no two
     │                           countries share an outline file
-    ├── shapeverify.py          proves each outline IS that country, by comparing
+    ├── shapeverify.mjs         proves each outline IS that country, by comparing
     │                           it against independent public-domain geometry
     ├── roomcheck.mjs           checks the room registry against CSS and creatures
     ├── archcheck.mjs           checks the import layering and finds cycles

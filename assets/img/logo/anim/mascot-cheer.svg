@@ -94,6 +94,19 @@
 
   <path d="M 15 46 Q 32 56 49 46" fill="none" stroke="var(--gp-accent, #BA5828)"
         stroke-width="22" stroke-linecap="round"/>
-  <path d="M 21 48.9 Q 32 53.1 43 48.9" fill="none" stroke="var(--gp-bg, #FDFBF7)"
-        stroke-width="2.6" stroke-linecap="round" opacity=".6"/>
+  <!-- The mouth. The seam is drawn about the origin and the group carries the
+       translate, so an additive scale here pivots on the seam's end points:
+       the corners stay pinned and only the curve between them deepens or
+       flattens. That one transform is every expression in the set.
+       non-scaling-stroke keeps a deep smile from also being a fat one. -->
+  <g transform="translate(32 48.9)">
+    <animateTransform attributeName="transform" attributeType="XML" type="scale"
+      additive="sum" dur="2.6s" repeatCount="indefinite" calcMode="spline"
+      keyTimes="0; 0.08; 0.16; 0.44; 0.54; 1"
+      values="1 1; 1 1; 1 2.1; 1 2.1; 1 1; 1 1"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
+    <path d="M -11 0 Q 0 4.2 11 0" fill="none" stroke="var(--gp-bg, #FDFBF7)"
+          stroke-width="2.6" stroke-linecap="round" opacity=".6"
+          vector-effect="non-scaling-stroke"/>
+  </g>
 </svg>
