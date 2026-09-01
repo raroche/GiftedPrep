@@ -1,0 +1,23 @@
+{
+  "name": "giftedprep",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Free familiarization practice for the CogAT, NNAT and OLSAT, plus a Math Lab and a flag game.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "parse": "node --experimental-vm-modules --no-warnings tools/parsecheck.mjs",
+    "validate": "node tools/validate.mjs",
+    "dupcheck": "node tools/dupcheck.mjs",
+    "rulecheck": "node tools/rulecheck.mjs",
+    "mathcheck": "node tools/mathcheck.mjs",
+    "mathverify": "node tools/mathverify.mjs",
+    "flagcheck": "node tools/flagcheck.mjs",
+    "test": "node --test \"tools/tests/**/*.test.mjs\"",
+    "verify": "npm run parse && npm run validate && npm run dupcheck && npm run rulecheck && npm run mathcheck && npm run mathverify && npm run flagcheck && npm test",
+    "serve": "python3 tools/serve.py 8765"
+  }
+}

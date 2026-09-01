@@ -29,6 +29,7 @@ const state = {
   session: null,
   /** what the current session was built from, so "another set" can repeat it */
   lastRun: null,
+  missingTypes: [],
   answered: false,
   audioUnlocked: false,
   /** Math Lab: the topic being worked through and where we are in it. */
@@ -154,7 +155,8 @@ function renderGradePicker() {
   const box = $('#gp-grade-picker');
   box.innerHTML = state.manifest.grades.map((g) => `
     <button type="button" class="gp-pill${g.n === state.settings.grade ? ' is-selected' : ''}"
-            role="radio" aria-checked="${g.n === state.settings.grade}" data-grade="${g.n}">
+            role="radio" aria-checked="${g.n === state.settings.grade}" data-grade="${g.n}"
+            tabindex="${g.n === state.settings.grade ? 0 : -1}">
       ${g.label}
     </button>`).join('');
   $('#gp-grade-note').textContent = GRADE_NOTES[state.settings.grade] || '';
@@ -181,6 +183,7 @@ function renderCountPicker() {
   $('#gp-count-picker').innerHTML = QUESTION_COUNTS.map((n) => `
     <button type="button" class="gp-pill${n === chosen ? ' is-selected' : ''}"
             role="radio" aria-checked="${n === chosen}" data-count="${n}"
+            tabindex="${n === chosen ? 0 : -1}"
             aria-label="${n} questions">
       ${n}
     </button>`).join('');
@@ -331,6 +334,15 @@ async function startSession({ testId = null, categoryId = null, limit = 10, labe
     if (!ids.length) { showError('There are no puzzles for that grade yet.'); return; }
 
     const cats = await data.loadCategories(ids);
+    const failed = cats.failed || [];
+
+    /* Asking for one puzzle type and not getting it is a plain error: there is
+       nothing to fall back to. */
+    if (categoryId && failed.length) {
+      showError('That puzzle type could not be loaded. Please try again, or pick a different one.');
+      return;
+    }
+
     const pool = data.selectQuestions(cats, { grade: state.settings.grade });
     if (!pool.length) { showError('There are no puzzles for that grade yet.'); return; }
 
@@ -340,6 +352,7 @@ async function startSession({ testId = null, categoryId = null, limit = 10, labe
       mode: categoryId ? 'category' : 'mixed'
     });
     state.lastRun = { testId, categoryId, limit, label };
+    state.missingTypes = failed;
     state.answered = false;
     storage.markSessionStarted();
     storage.setSetting('lastTest', testId);
@@ -403,6 +416,7 @@ function renderQuestion() {
 
   $('#gp-feedback').hidden = true;
   $('#gp-replay').hidden = !speech.isSupported();
+  showMissingTypes();
 
   /* Stepping back onto a question already answered restores what happened:
      the same tiles marked, the same explanation. It never re-scores. */
@@ -543,6 +557,27 @@ function goForward() {
 /* ------------------------------------------------------------------ */
 /* Results                                                             */
 /* ------------------------------------------------------------------ */
+
+/**
+ * Say so when part of the question bank did not load.
+ *
+ * A mixed round still runs, because a child mid-click should not be dumped
+ * back to the home screen, but the round is shorter than it should be and
+ * pretending otherwise would be dishonest to both child and parent.
+ */
+function showMissingTypes() {
+  const box = $('#gp-missing-types');
+  if (!box) return;
+  const failed = state.missingTypes || [];
+  if (!failed.length) { box.hidden = true; return; }
+  const names = failed.map((id) => {
+    const cat = (state.manifest.categories || []).find((c) => c.id === id);
+    return cat ? cat.name : id;
+  });
+  box.hidden = false;
+  box.innerHTML = `<p><strong>Some puzzle types are missing right now.</strong>
+    This round is shorter than it should be. Missing: ${escapeHtml(names.join(', '))}.</p>`;
+}
 
 function renderResults() {
   const s = state.session;
@@ -1462,6 +1497,45 @@ function onClick(ev) {
   }
 }
 
+/**
+ * The ARIA radio group pattern for the grade, question-count and flag-count
+ * pickers.
+ *
+ * These are buttons wearing role="radio". The README promised full keyboard
+ * control and they did not have it: every pill was its own tab stop and the
+ * arrow keys did nothing at all. A radio group should be a single tab stop
+ * that the arrows move through, selecting as they go.
+ */
+function radioGroupKeys(ev) {
+  const el = ev.target;
+  if (!el || !el.closest) return false;
+  const group = el.closest('[role="radiogroup"]');
+  if (!group || el.getAttribute('role') !== 'radio') return false;
+
+  const radios = Array.from(group.querySelectorAll('[role="radio"]'));
+  const at = radios.indexOf(el);
+  if (at === -1) return false;
+
+  if (ev.key === ' ' || ev.key === 'Enter') { ev.preventDefault(); el.click(); return true; }
+
+  let to = -1;
+  if (ev.key === 'ArrowRight' || ev.key === 'ArrowDown') to = (at + 1) % radios.length;
+  else if (ev.key === 'ArrowLeft' || ev.key === 'ArrowUp') to = (at - 1 + radios.length) % radios.length;
+  else if (ev.key === 'Home') to = 0;
+  else if (ev.key === 'End') to = radios.length - 1;
+  else return false;
+
+  ev.preventDefault();
+  const groupId = group.id;
+  radios[to].click();
+  /* Clicking re-renders the group, so the element to focus is looked up again
+     rather than held across the redraw. */
+  const after = groupId ? document.getElementById(groupId) : group;
+  const fresh = after && after.querySelectorAll('[role="radio"]')[to];
+  if (fresh) fresh.focus();
+  return true;
+}
+
 function onKeydown(ev) {
   if (!document.getElementById('screen-quiz').classList.contains('is-active')) return;
   if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
@@ -1489,6 +1563,7 @@ async function boot() {
   applySpeechButton();
 
   document.addEventListener('click', onClick);
+  document.addEventListener('keydown', (ev) => { radioGroupKeys(ev); });
   document.addEventListener('keydown', onKeydown);
   window.addEventListener('hashchange', route);
 

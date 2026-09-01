@@ -7,7 +7,7 @@
 **Friendly practice for the CogAT, NNAT and OLSAT — the group tests Florida
 districts use to screen children for gifted programs.**
 
-1,576 questions · grades 1–4 · no login · no tracking · works offline
+1,576 questions · grades 1–4 · no login · no tracking · nothing sent anywhere
 
 </div>
 
@@ -34,13 +34,29 @@ The repository root **is** the site. There is no build step and no dependencies.
 ```bash
 git clone https://github.com/raroche/GiftedPrep.git
 cd GiftedPrep
-python3 -m http.server 8765
+npm run serve
 ```
 
 Then open <http://localhost:8765>.
 
-> A small web server is needed because the app loads its questions with `fetch`,
-> and browsers block that on `file://` URLs. Any static server will do.
+> `npm run serve` runs `tools/serve.py`, which sends the **same
+> Content-Security-Policy Netlify does**. Use it rather than
+> `python3 -m http.server`. A plain server sends no CSP, and that gap once hid
+> a real bug all the way to production: `style="..."` attributes are silently
+> discarded under `style-src 'self'`, so the map-colouring grid collapsed and
+> the results bars drew at zero width, while everything looked perfect locally.
+
+Before pushing:
+
+```bash
+npm run verify
+```
+
+That parses every JS and JSON file, validates all 1,576 questions, runs the
+duplicate and rule scanners, checks the Math Lab, **recomputes every
+mathematical answer from first principles**, checks the flag data against the
+image files, and runs the unit tests. Netlify runs the same command, so a
+syntax error or a wrong answer fails the deploy instead of reaching a child.
 
 ### Deploying
 
@@ -62,7 +78,8 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Pick a category** | Practice one puzzle type, one whole test, or a mix of all three |
 | **iPad first** | Designed for a 1024×768 landscape iPad, works from 375 px up |
 | **Light and dark** | Follows the system theme, with a manual override |
-| **Nothing leaves the device** | No account, no analytics, no network calls at all. Progress lives in `localStorage` |
+| **Nothing is collected** | No account, no analytics, no third-party requests, no telemetry. The only network traffic is the site fetching its own question files from its own domain. Progress lives in `localStorage` and is never uploaded |
+| **Read-aloud stays on the device** | Voices are chosen device-first. Some browsers ship cloud-backed "Online" voices that send text to a server; those are used only if the device offers no voice of its own |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
 | **Fun and games** | A section for games and memorising. First one is Name the Flag: all 250 country flags, with a vault of flags that no longer exist, opened by a perfect round |
 | **Math Lab** | A separate section for advanced maths, grades 1 to 6. 86 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, pi, three unsolved problems) and number skills |

@@ -5,7 +5,9 @@
 
 [build]
   publish = "."
-  command = ""
+  # Nothing is compiled, but everything is checked. A syntax error or a broken
+  # question used to be able to reach production; now the deploy fails first.
+  command = "npm run verify"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -37,9 +39,7 @@
     # The app loads nothing from anywhere else, so lock it down completely.
     Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'"
 
-# The app is a single page with hash routing, so any deep path should still
-# serve index.html rather than a 404.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# No catch-all redirect on purpose. Routing is entirely hash based, so a deep
+# link never reaches the server and needs no rewrite. A catch-all would instead
+# turn a missing question file into a 200 with an HTML body, which surfaces as
+# a confusing JSON parse error rather than an honest 404.

@@ -2202,3 +2202,14 @@ button, a, label, summary, [role="button"] {
 @media (prefers-reduced-motion: reduce) {
   .gp-confetti span { animation: none; opacity: 0; }
 }
+
+/* Said out loud when part of the question bank did not load, so a short round
+   is never passed off as a full one. */
+.gp-warnbox {
+  margin-bottom: var(--gp-space-4);
+  padding: var(--gp-space-4);
+  border-radius: var(--gp-radius-md);
+  border-left: 5px solid var(--gp-retry);
+  background: var(--gp-retry-soft, var(--gp-surface-2));
+}
+.gp-warnbox p { margin: 0; }

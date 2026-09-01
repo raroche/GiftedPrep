@@ -96,6 +96,7 @@ export function renderSetup(data, chosen) {
   const countBtn = (v) => `
     <button type="button" class="gp-pill${String(chosen.count) === String(v) ? ' is-selected' : ''}"
             role="radio" aria-checked="${String(chosen.count) === String(v)}"
+            tabindex="${String(chosen.count) === String(v) ? 0 : -1}"
             data-flagcount="${v}">${v === 'all' ? 'All' : v}</button>`;
   const modeBtn = (m) => `
     <button type="button" class="gp-card gp-card--mode${chosen.mode === m.id ? ' is-selected' : ''}"

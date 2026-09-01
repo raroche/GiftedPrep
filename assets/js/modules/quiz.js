@@ -183,6 +183,24 @@ export class QuizSession {
   answer(choiceId) {
     const q = this.current;
     if (!q) return null;
+
+    /* A question already answered is being reviewed, not attempted. Return
+       what happened the first time and change nothing: the score, the streak
+       and the answer list all stay as they were. The screen used to be the
+       only thing stopping a second attempt from counting, which made the
+       promise that reviewing never changes the score a matter of luck. */
+    const already = this.answerFor(q.id);
+    if (already) {
+      return {
+        correct: already.correct,
+        correctChoiceId: q.answer,
+        explanation: relabel(q.explanation || '', q.letterOf),
+        strategy: relabel(q.strategy || '', q.letterOf),
+        streak: this.streak,
+        review: true
+      };
+    }
+
     const correct = choiceId === q.answer;
     const ms = Date.now() - this.questionShownAt;
 

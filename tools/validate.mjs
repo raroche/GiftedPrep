@@ -279,12 +279,33 @@ for (const cat of manifest.categories) {
       err(where, 'the first pair shows no visible change, so the rule cannot be worked out');
     }
     if (fig.kind === 'series') {
-      const steps = new Map();
-      (fig.cells || []).filter((c) => !c.missing).forEach((c, i) => {
-        const k = JSON.stringify(canonicalFigure(c));
-        if (steps.has(k)) warn(where, `series steps ${steps.get(k) + 1} and ${i + 1} look identical`);
-        else steps.set(k, i);
+      /* Repetition in a series is only wrong when it is NOT the pattern.
+         An alternating series repeats every other step on purpose, and a
+         question like "which animal is between the two cats" needs the two
+         cats to match. So flag adjacent duplicates, which really do mean
+         nothing happened, and otherwise only complain when the repeats do not
+         sit on a regular period. */
+      const shown = (fig.cells || []).filter((c) => !c.missing);
+      const keys = shown.map((c) => JSON.stringify(canonicalFigure(c)));
+      keys.forEach((k, i) => {
+        if (i > 0 && keys[i - 1] === k) {
+          warn(where, `series steps ${i} and ${i + 1} are the same, so that step shows no change`);
+        }
       });
+      /* A period is regular if every repeat of a value is the same distance
+         apart. 1,2,1,2 has period 2 everywhere and is fine. */
+      const seenAt = new Map();
+      keys.forEach((k, i) => {
+        if (!seenAt.has(k)) seenAt.set(k, []);
+        seenAt.get(k).push(i);
+      });
+      for (const [, at] of seenAt) {
+        if (at.length < 2) continue;
+        const gaps = at.slice(1).map((v, i) => v - at[i]);
+        if (new Set(gaps).size > 1) {
+          warn(where, `a step repeats at irregular spacing (${at.map((i) => i + 1).join(', ')}), which is probably not the pattern`);
+        }
+      }
     }
 
     /* Explanations name the tempting wrong answer by letter. If a choice is

@@ -57,6 +57,33 @@ const DEFAULTS = {
 
 function clone(obj) { return JSON.parse(JSON.stringify(obj)); }
 
+/**
+ * Bring an older saved state forward.
+ *
+ * Anything recognised is kept and anything unknown is dropped, so a shape
+ * change can never leave a half-valid object behind. Unknown-but-harmless
+ * settings fall back to their default rather than wiping the lot.
+ */
+function migrate(old) {
+  const next = clone(DEFAULTS);
+  if (old && typeof old === 'object') {
+    if (old.settings && typeof old.settings === 'object') {
+      for (const key of Object.keys(DEFAULTS.settings)) {
+        if (old.settings[key] !== undefined) next.settings[key] = old.settings[key];
+      }
+    }
+    if (old.stats && typeof old.stats === 'object') next.stats = old.stats;
+    if (Array.isArray(old.seenQuestionIds)) next.seenQuestionIds = old.seenQuestionIds;
+    if (old.totals && typeof old.totals === 'object') {
+      for (const key of Object.keys(DEFAULTS.totals)) {
+        if (typeof old.totals[key] === 'number') next.totals[key] = old.totals[key];
+      }
+    }
+  }
+  next.version = DEFAULTS.version;
+  return next;
+}
+
 let state = load();
 
 function load() {
@@ -64,7 +91,11 @@ function load() {
   if (!raw) return clone(DEFAULTS);
   try {
     const parsed = JSON.parse(raw);
-    if (!parsed || parsed.version !== DEFAULTS.version) return clone(DEFAULTS);
+    if (!parsed) return clone(DEFAULTS);
+    /* A version bump used to throw away every bit of progress. Migrate what is
+       still meaningful instead: a new field is not a reason to forget which
+       grade a child is in or how many puzzles they have done. */
+    if (parsed.version !== DEFAULTS.version) return migrate(parsed);
     return {
       ...clone(DEFAULTS),
       ...parsed,
@@ -85,6 +116,8 @@ function persist() {
 /* ------------------------------------------------------------------ */
 /* Public API                                                          */
 /* ------------------------------------------------------------------ */
+
+export { migrate as _migrate };
 
 export function getSettings() { return { ...state.settings }; }
 

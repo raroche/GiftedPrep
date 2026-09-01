@@ -61,6 +61,16 @@ ${callout('info', 'La versión corta',
    sorprenda, protege su sueño, mantén tu propia cara tranquila esa mañana, y
    luego suéltalo.</p>`)}
 
+${callout('warn', 'Sobre la puntuación que muestra este sitio',
+  `<p>El número al final de una ronda es información sobre esa ronda y nada
+   más. <strong>No</strong> es una estimación de CI, ni un percentil, ni una
+   medida de capacidad, ni una predicción de si tu hijo va a calificar. Las
+   preguntas de aquí se escribieron para dar familiaridad, no se calibraron con
+   ninguna población, así que una puntuación alta significa que los
+   rompecabezas le resultaron conocidos y una baja normalmente significa
+   cansancio o aburrimiento. Tómala como tomarías una puntuación de un
+   juego.</p>`)}
+
 <h2>Qué son estas pruebas</h2>
 
 <p>

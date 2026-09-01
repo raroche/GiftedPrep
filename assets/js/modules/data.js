@@ -43,17 +43,28 @@ export async function loadCategory(categoryId) {
 }
 
 /**
- * Load several categories at once. A category that fails to load is skipped
- * with a console warning rather than taking the whole session down — one bad
- * file should never leave a child staring at a blank screen.
+ * Load several categories at once.
+ *
+ * A category that fails is skipped rather than taking the whole session down,
+ * because one bad file should not leave a child staring at a blank screen. But
+ * it is no longer skipped SILENTLY: the caller is told what failed so it can
+ * say so on screen. A shortened session that quietly pretends nothing happened
+ * is worse than a short session that admits it.
+ *
+ * Returns the loaded categories, with a `failed` array of ids attached.
  */
 export async function loadCategories(categoryIds) {
   const results = await Promise.allSettled(categoryIds.map(loadCategory));
   const ok = [];
+  const failed = [];
   results.forEach((r, i) => {
     if (r.status === 'fulfilled') ok.push(r.value);
-    else console.warn(`[data] skipping ${categoryIds[i]}:`, r.reason);
+    else {
+      failed.push(categoryIds[i]);
+      console.warn(`[data] could not load ${categoryIds[i]}:`, r.reason);
+    }
   });
+  ok.failed = failed;
   return ok;
 }
 

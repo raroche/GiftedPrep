@@ -5,7 +5,12 @@
  * proctor, so read-aloud is not a nicety here: it is what makes the practice
  * match the real thing for a six-year-old who cannot yet read the stem.
  *
- * Everything is local to the device. No network, no account, no audio files.
+ * No account and no audio files. Voices are chosen local-first: some browsers
+ * ship cloud-backed voices whose names contain "Online", and those send the
+ * text to a server to be spoken. A device voice is always preferred, and a
+ * network-backed one is used only when the device offers nothing else. What is
+ * actually in use can be read with `usingLocalVoice()`.
+ *
  * If the browser has no voices (some Linux builds, some kiosk browsers) the
  * module degrades to a no-op and `isSupported()` returns false so the UI can
  * hide the speaker button instead of showing a dead control.
@@ -23,18 +28,29 @@ let preferredVoice = null;
    then common Windows/Android ones. Order is the preference order. */
 const VOICE_WISHLIST = [
   'Samantha', 'Karen', 'Moira', 'Tessa',       // Apple en-US / en-AU / en-IE / en-ZA
-  'Google US English', 'Microsoft Aria Online (Natural) - English (United States)',
-  'Microsoft Jenny Online (Natural) - English (United States)',
-  'Microsoft Zira - English (United States)'
+  'Google US English',
+  'Microsoft Zira - English (United States)'   // on-device Windows voice
 ];
+
+/* A voice is treated as leaving the device if the browser says it is not a
+   local service, or if its name carries the "Online" marker Microsoft uses for
+   its cloud voices. Either is enough to prefer something else. */
+const isLocalVoice = (v) => v.localService !== false && !/\bonline\b/i.test(v.name);
 
 function pickVoice() {
   if (!SUPPORTED) return null;
   voices = window.speechSynthesis.getVoices() || [];
   if (!voices.length) return null;
-  for (const wanted of VOICE_WISHLIST) {
-    const hit = voices.find((v) => v.name === wanted);
-    if (hit) return hit;
+  const local = voices.filter(isLocalVoice);
+  /* Try the wishlist among device voices first, then any device voice, and
+     only then fall back to whatever is left, which may be network-backed. */
+  for (const pool of [local, voices]) {
+    for (const wanted of VOICE_WISHLIST) {
+      const hit = pool.find((v) => v.name === wanted);
+      if (hit) return hit;
+    }
+    const en = pool.find((v) => /^en[-_]US/i.test(v.lang)) || pool.find((v) => /^en/i.test(v.lang));
+    if (en) return en;
   }
   return voices.find((v) => /^en[-_]US/i.test(v.lang))
     || voices.find((v) => /^en/i.test(v.lang))
@@ -55,6 +71,13 @@ let rate = 0.85;              // a little slower than default; kinder to young e
 const listeners = new Set();
 
 function emit(state) { listeners.forEach((fn) => fn(state)); }
+
+/** True when the voice in use is a device voice, so nothing leaves the machine.
+    Null when no voice has been chosen yet. */
+export function usingLocalVoice() {
+  if (!preferredVoice) return null;
+  return isLocalVoice(preferredVoice);
+}
 
 export function isSupported() { return SUPPORTED; }
 

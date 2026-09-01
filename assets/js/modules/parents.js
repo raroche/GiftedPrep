@@ -75,6 +75,15 @@ ${callout('info', 'The short version',
    once so nothing is a surprise, protect their sleep, keep your own face calm on
    the morning, and then let it go.</p>`)}
 
+${callout('warn', 'About the score this site shows you',
+  `<p>The number at the end of a practice round is feedback on that round and
+   nothing more. It is <strong>not</strong> an IQ estimate, not a percentile,
+   not an ability measure, and not a prediction of whether your child will
+   qualify. The questions here were written for familiarity, not calibrated on
+   any population, so a high score means the puzzles were familiar and a low
+   one usually means tired or bored. Treat it the way you would treat a score
+   in a game.</p>`)}
+
 <h2>What these tests are</h2>
 
 <p>
