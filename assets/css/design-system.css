@@ -2790,3 +2790,13 @@ button, a, label, summary, [role="button"] {
   .cz-mascot__z path { opacity: 0 !important; }
   .cz-mascot[data-mood="think"] .cz-mascot__dot { opacity: 0.55 !important; }
 }
+
+/* The parent guide link on the GiftedPrep page. It sits with the explainer
+   rather than in the grid of things to start, because that grid is what the
+   child taps and this is the one thing on the page aimed at the adult. */
+.cz-parentlink {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.cz-parentlink .gp-btn__label { white-space: normal; }
