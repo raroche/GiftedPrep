@@ -3377,3 +3377,16 @@ button, a, label, summary, [role="button"] {
   background: var(--room, var(--gp-accent));
   color: var(--gp-bg);
 }
+
+/* A topic's rule, repeated over every question in it. Quieter than the
+   question, because it is a reminder and not the thing being asked. */
+.gp-ex__recap {
+  margin: 0 0 var(--gp-space-3);
+  padding: var(--gp-space-2) var(--gp-space-3);
+  border-left: 3px solid var(--gp-accent-line);
+  border-radius: var(--gp-radius-sm);
+  background: var(--gp-accent-soft);
+  color: var(--gp-ink);
+  font-size: .88rem;
+  line-height: 1.45;
+}

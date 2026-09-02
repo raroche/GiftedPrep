@@ -1044,7 +1044,7 @@
         },
         {
           "type": "paper",
-          "ask": "1, 2, 4, 8, ? What is the rule and the next number?",
+          "ask": "1, 2, 4, 8, ? Work out what is happening each time, then write the next number.",
           "answer": 16,
           "hint": "It is not adding the same number each time.",
           "why": "Each number doubles. 8 doubled is 16. This is a doubling pattern, not a counting one."

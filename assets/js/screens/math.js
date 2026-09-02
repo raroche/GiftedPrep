@@ -126,7 +126,7 @@ function showExercise() {
   }
 
   const ex = topic.exercises[index];
-  $('#gp-exercise').innerHTML = mathlab.renderExercise(ex, index, total);
+  $('#gp-exercise').innerHTML = mathlab.renderExercise(ex, index, total, topic.recap);
   $('#gp-ex-dots').innerHTML = exDots(topic, index);
   $('#gp-ex-next').hidden = false;
   paint();

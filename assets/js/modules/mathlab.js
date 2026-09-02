@@ -169,13 +169,23 @@ function badge(type) {
   return `<span class="gp-ex__badge"><span aria-hidden="true">${b.icon}</span> ${b.label}</span>`;
 }
 
-/** Build the body of one exercise. Returns HTML only; wiring happens later. */
-export function renderExercise(ex, index, total) {
+/**
+ * Build the body of one exercise. Returns HTML only; wiring happens later.
+ *
+ * `recap` is a topic's rule, repeated above every question in it. Some topics
+ * teach a procedure and then ask about it, and the question alone is not a
+ * question: "Start at 8. How many steps to reach 1?" means nothing unless you
+ * still have the two rules in your head. A reader who scrolled past the lesson,
+ * or came back the next day, was being asked to guess. The rule now sits with
+ * the question rather than only above it.
+ */
+export function renderExercise(ex, index, total, recap = '') {
   const head = `
     <div class="gp-ex__head">
       ${badge(ex.type)}
       <span class="gp-ex__count">${index + 1} of ${total}</span>
     </div>
+    ${recap ? `<p class="gp-ex__recap">${esc(recap)}</p>` : ''}
     <p class="gp-ex__ask">${esc(ex.ask)}</p>
     ${ex.figure ? `<div class="gp-ex__fig">${renderFigure(ex.figure)}</div>` : ''}`;
 

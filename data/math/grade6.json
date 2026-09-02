@@ -21,6 +21,7 @@
       "name": "Gauss's Trick",
       "emoji": "➕",
       "big": "Add 1 to 100 in about five seconds.",
+      "recap": "The trick: fold the list. Pair the first number with the last, the second with the second-last, and so on. Every pair adds to the same total.",
       "parentNote": "The story is that Gauss, aged about nine, was set this as busywork and answered almost immediately. The pairing argument generalises to n(n+1)/2, which is the handshake formula from grade 1 arriving in algebraic form.",
       "teach": [
         {
@@ -89,7 +90,7 @@
         },
         {
           "type": "number",
-          "ask": "Add 1 to 10 the same way. What is the total?",
+          "ask": "Now use the pairing trick on 1 to 10. Pair 1 with 10, 2 with 9, and so on. What is the total?",
           "answer": 55,
           "why": "55. Five pairs of 11. And 55 is a triangle number, the same ones from the handshake puzzle."
         },
@@ -664,6 +665,7 @@
       "name": "Function Machines",
       "emoji": "⚙️",
       "big": "Feed numbers in. Work out what it does.",
+      "recap": "A function machine does the same thing to every number you put in. Work out the rule and you can say what comes out of any number.",
       "parentNote": "MA.6.AR.1.1 and 1.3. A function as a machine, and finding a rule from its behaviour, which is what algebra is actually for.",
       "teach": [
         {

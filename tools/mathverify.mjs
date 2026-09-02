@@ -292,28 +292,47 @@ function perimeter(cells) {
 }
 const area = (cells) => cells.flat().filter(Boolean).length;
 
-/* Collatz chains */
+/*
+ * Collatz chains.
+ *
+ * This block used to find its exercises by matching the question text --
+ * /Start at (\d+)\. How many steps/. Then the questions were reworded, because
+ * they did not say which steps they meant, and the pattern stopped matching.
+ * Two chains quietly went unverified and a third lookup returned undefined.
+ *
+ * A verifier that grips the prose lets go the moment anybody improves the
+ * wording, and says nothing when it does. So each exercise now carries a
+ * `verify` block saying what it is, the maths is worked from that, and every
+ * exercise in the topic must be accounted for.
+ */
 topic('nobody-knows').exercises.forEach((e, i) => {
   const id = `nobody-knows[${i + 1}]`;
-  const m = e.ask.match(/Start at (\d+)\. How many steps/i);
-  if (m) {
-    const want = collatz(Number(m[1])).length - 1;
-    if (e.answer !== want) bad(id, `${m[1]} takes ${want} steps, data says ${e.answer}`);
-    else ok(id, `${m[1]} reaches 1 in ${want} steps`);
+  const v = e.verify;
+  if (!v) { bad(id, 'no verify block, so nothing here can be recomputed'); return; }
+
+  if (v.kind === 'collatz-steps') {
+    const want = collatz(v.from).length - 1;
+    if (e.answer !== want) bad(id, `${v.from} takes ${want} steps, data says ${e.answer}`);
+    else ok(id, `${v.from} reaches 1 in ${want} steps`);
+    if (!String(e.ask).includes(String(v.from))) {
+      bad(id, `the question never mentions ${v.from}, so it is asking about something else`);
+    }
+  } else if (v.kind === 'collatz-next') {
+    const want = collatz(v.from)[1];
+    if (e.answer !== want) bad(id, `one step from ${v.from} is ${want}, data says ${e.answer}`);
+    else ok(id, `one step from ${v.from} is ${want}`);
+  } else if (v.kind !== 'open-question') {
+    bad(id, `unknown verify kind "${v.kind}"`);
   }
+
   if (e.figure && e.figure.kind === 'chain') {
-    const items = e.figure.items.filter((v) => v !== '?').map(Number);
+    const items = e.figure.items.filter((x) => x !== '?').map(Number);
     const want = collatz(items[0]);
     if (JSON.stringify(items) !== JSON.stringify(want)) {
       bad(id, `chain shown is ${items.join(',')}, the real one is ${want.join(',')}`);
     } else ok(id, `chain from ${items[0]} is correct`);
   }
 });
-{
-  const e = asked('nobody-knows', '5 is odd');
-  if (e.answer !== 3 * 5 + 1) bad('nobody-knows[3n+1]', `3*5+1 is ${3 * 5 + 1}`);
-  else ok('nobody-knows[3n+1]', '3 times 5 plus 1 = 16');
-}
 
 /* Squares from odd numbers */
 topic('staircase-squares').exercises.forEach((e, i) => {

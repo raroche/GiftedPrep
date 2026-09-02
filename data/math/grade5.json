@@ -107,6 +107,7 @@
       "name": "A Game You Always Win",
       "emoji": "♟️",
       "big": "There is a secret, and once you know it you cannot lose.",
+      "recap": "The game: a pile of counters. On your turn you take 1, 2 or 3. Whoever takes the very last counter wins.",
       "parentNote": "The subtraction game, the simplest case of Nim. The losing positions are the multiples of 4. A child who finds that rule can beat any adult who has not, which is a memorable way to learn what a strategy is.",
       "teach": [
         {
@@ -150,7 +151,7 @@
         },
         {
           "type": "number",
-          "ask": "They take 3. How many do you take to keep the pattern?",
+          "ask": "You went first and took 1, leaving 20. They take 3. How many do you take, so that the two of you took 4 between you?",
           "answer": 1,
           "why": "1, because 3 and 1 make 4. Whatever they take, you take the rest of the four."
         },
@@ -340,9 +341,9 @@
         },
         {
           "type": "number",
-          "ask": "How many steps of ten from 1 to 1,000,000?",
+          "ask": "Start at 1 and keep multiplying by 10. How many times until you reach 1,000,000?",
           "answer": 6,
-          "why": "6. Count the zeros: a million has six. Each zero is one multiplication by ten."
+          "why": "6. Count the zeros: a million has six, and each zero is one more multiply by ten."
         },
         {
           "type": "number",

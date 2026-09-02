@@ -185,6 +185,7 @@
       "name": "Nobody Knows",
       "emoji": "❓",
       "big": "A puzzle you can do that no one can solve.",
+      "recap": "The two rules: if the number is even, halve it. If it is odd, times it by 3 and add 1. Keep going.",
       "parentNote": "The Collatz conjecture, posed in 1937. Two rules a seven-year-old can follow, and no mathematician on Earth can prove it always ends at 1. MathPickle uses it with young children. The point is to meet a real open question.",
       "teach": [
         {
@@ -225,19 +226,31 @@
       "exercises": [
         {
           "type": "number",
-          "ask": "Start at 4. Halve it. What next?",
+          "verify": {
+            "kind": "collatz-next",
+            "from": 4
+          },
+          "ask": "Start at 4. It is even, so halve it. What do you get?",
           "answer": 2,
-          "why": "4 is even, so halve it to get 2. Then 2 halves to 1 and the chain stops."
+          "why": "4 is even, so halve it: 4 becomes 2. Then 2 is even too, so it halves to 1 and the chain stops."
         },
         {
           "type": "number",
-          "ask": "5 is odd. Times 3, add 1. What do you get?",
+          "verify": {
+            "kind": "collatz-next",
+            "from": 5
+          },
+          "ask": "Start at 5. It is odd, so times 3 and add 1. What do you get?",
           "answer": 16,
-          "why": "5 times 3 is 15, and 1 more is 16. Odd numbers jump up before they come back down."
+          "why": "5 times 3 is 15, and 1 more is 16. Odd numbers jump UP before they come back down."
         },
         {
           "type": "number",
-          "ask": "Start at 3. How many steps to reach 1?",
+          "verify": {
+            "kind": "collatz-steps",
+            "from": 3
+          },
+          "ask": "Here is the whole chain from 3. A step is one arrow. How many steps to reach 1?",
           "figure": {
             "kind": "chain",
             "items": [
@@ -252,32 +265,49 @@
             ]
           },
           "answer": 7,
-          "why": "Seven steps: 3, 10, 5, 16, 8, 4, 2, 1. Count the arrows, not the numbers."
+          "why": "Seven steps. There are 8 numbers but only 7 arrows between them, and it is the arrows you count."
         },
         {
           "type": "number",
-          "ask": "Start at 8. How many steps to reach 1?",
+          "verify": {
+            "kind": "collatz-steps",
+            "from": 8
+          },
+          "ask": "Now follow the two rules yourself, starting at 8. Count the steps to reach 1.",
+          "hint": "8 is even, so halve it. Keep halving while the number stays even.",
           "answer": 3,
-          "why": "Three: 8, 4, 2, 1. Powers of two fall straight down because they just keep halving."
+          "why": "Three steps: 8 to 4, 4 to 2, 2 to 1. Every number along the way was even, so it never had to jump up."
         },
         {
           "type": "truefalse",
-          "ask": "Somebody has proved every number reaches 1.",
+          "verify": {
+            "kind": "open-question"
+          },
+          "ask": "Someone has PROVED these two rules always end at 1, whatever number you start with.",
           "answer": false,
-          "why": "False, and that is the amazing part. It has been checked on computers for enormous numbers and it always works, but nobody has proved it must."
+          "why": "False, and that is the amazing part. Computers have checked numbers with twenty digits and it has never once failed. But checking is not proving, and nobody has managed to prove it can never fail. Grown-ups have been stuck on this since 1937."
         },
         {
           "type": "paper",
-          "ask": "Start at 7 and follow the rules on paper. How many steps to reach 1?",
-          "answer": 16,
+          "verify": {
+            "kind": "collatz-steps",
+            "from": 7
+          },
+          "ask": "Get some paper. Start at 7 and follow the two rules. How many steps to reach 1?",
           "hint": "7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1. Count the arrows.",
-          "why": "Sixteen steps, and it climbs all the way to 52 first. Small numbers can take a long and wild trip."
+          "answer": 16,
+          "why": "Sixteen steps, and it climbs all the way up to 52 before it comes down. A small number can take a long, wild trip."
         },
         {
           "type": "number",
-          "ask": "Start at 16. How many steps to reach 1?",
+          "verify": {
+            "kind": "collatz-steps",
+            "from": 16
+          },
+          "ask": "One more. Follow the two rules from 16. How many steps to reach 1?",
+          "hint": "16 is even. What do you get if you keep halving it?",
           "answer": 4,
-          "why": "Four: 16, 8, 4, 2, 1. Doubling numbers make the shortest chains of all."
+          "why": "Four steps: 16 to 8 to 4 to 2 to 1. 16 halves to an even number every time, so it drops straight down without a single jump."
         }
       ]
     },

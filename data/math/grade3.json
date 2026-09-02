@@ -370,6 +370,7 @@
       "name": "Magic Squares",
       "emoji": "🔢",
       "big": "Every line adds to the same number.",
+      "recap": "A magic square uses 1 to 9, once each, so that every row, every column and both diagonals add to the same total: 15.",
       "parentNote": "The 3x3 magic square, known in China as Lo Shu and over 2,000 years old. There is exactly one solution, and every other arrangement is that one turned or flipped.",
       "teach": [
         {
@@ -458,7 +459,7 @@
             8,
             9
           ],
-          "ask": "Fill in the two gaps.",
+          "ask": "Fill in the two gaps so every line adds to 15.",
           "answer": 15,
           "why": "6 and 5. The top row needs 6 to reach 15, and the middle must be 5 because it sits in four different lines."
         },
@@ -493,7 +494,7 @@
             8,
             9
           ],
-          "ask": "Now three gaps.",
+          "ask": "Now three gaps. Every line still adds to 15.",
           "answer": 15,
           "why": "8, 7 and 9. Find a line with only one gap first, fill it, and that opens up the next one."
         },
@@ -540,7 +541,7 @@
             8,
             9
           ],
-          "ask": "Three gaps again, harder places.",
+          "ask": "Three gaps again, in harder places. Every line still has to add to 15.",
           "answer": 15,
           "why": "8, 1 and 2. The right column already has 6 and 7, so the bottom right must be 2, and the rest follows."
         }

@@ -271,6 +271,31 @@ for (const file of files) {
 
     /* A topic that asks the same way every time stops being interesting. */
     if (kinds.size < 3) warn(where, `only ${kinds.size} exercise type(s); mix them up`);
+
+    /*
+     * A question that points back at something it does not carry.
+     *
+     * "Start at 8. How many steps to reach 1?" was reported from the live site
+     * by a reader who answered 7. It is a fair answer: nothing in the question
+     * says which steps. The two rules were in the lesson above, and the
+     * question assumed you still had them. So did "Add 1 to 10 the same way"
+     * and "Do it again to each of those 3".
+     *
+     * The fix is a topic `recap`, printed over every question in the topic, so
+     * the rule travels with the question instead of being left behind. This
+     * insists on one wherever a question leans on the lesson: an exercise may
+     * point backwards only if the topic repeats what it is pointing at.
+     */
+    const POINTS_BACK = /\b(the rules?|the trick|the machine|the same way|as before|do it again|again to|those \d|keep the pattern|how many steps)\b/i;
+    (t.exercises || []).forEach((e, i) => {
+      const text = `${e.ask || ''} ${e.hint || ''}`;
+      if (!POINTS_BACK.test(text)) return;
+      if (t.recap) return;
+      /* A figure that shows the whole thing answers the question by itself. */
+      if (e.figure) return;
+      errors.push(`${where} exercise ${i + 1} points back at the lesson `
+        + `("${(e.ask || '').slice(0, 52)}...") but the topic has no recap to carry it`);
+    });
   });
 }
 
