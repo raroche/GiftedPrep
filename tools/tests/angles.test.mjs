@@ -202,21 +202,41 @@ describe('nothing is claimed that is not true', () => {
 });
 
 describe('a round does not repeat itself', () => {
-  test('nine scenes fill nine questions without a repeat', () => {
+  /*
+   * Reported from the live site: the same laptop three times in one round.
+   * Shuffling the objects was not enough, because a round can be longer than
+   * the pack -- ten questions from nine objects repeats one every single time,
+   * and twenty showed one object three times. The round is capped now, and the
+   * test walks the lengths the setup screen actually offers rather than only
+   * the one that happens to fit.
+   */
+  test('no round repeats an object, at any length on offer', () => {
     const random = seeded(61);
-    for (let r = 0; r < 300; r += 1) {
-      const ids = A.buildRound(scenes, { ask: 'world', set: 'steps', count: SCENES.length, random })
-        .map((q) => q.scene);
-      assert.equal(new Set(ids).size, ids.length, 'the same object came round twice');
+    for (const count of A.COUNTS) {
+      for (const ask of ['world', 'mix']) {
+        for (let r = 0; r < 200; r += 1) {
+          const round = A.buildRound(scenes, { ask, set: 'steps', count, random });
+          const ids = round.map((q) => q.scene).filter(Boolean);
+          assert.equal(new Set(ids).size, ids.length,
+            `${ask}, ${count} questions: an object came round twice`);
+        }
+      }
     }
   });
 
-  test('and past that it deals a fresh pack rather than stopping', () => {
-    const random = seeded(67);
-    const ids = A.buildRound(scenes, { ask: 'world', set: 'steps', count: 20, random })
-      .map((q) => q.scene);
-    assert.equal(ids.length, 20);
-    assert.ok(ids.every(Boolean), 'the pack ran out and dealt nothing');
+  test('a world round is shortened to fit, and says how long it will be', () => {
+    assert.equal(A.roundLength('world', 30, SCENES.length), SCENES.length);
+    assert.equal(A.roundLength('world', 10, SCENES.length), 10);
+    /* Only this mode is capped; there is no shortage of angles. */
+    assert.equal(A.roundLength('estimate', 30, SCENES.length), 30);
+    const setup = A.renderSetup({ ask: 'world', set: 'steps', count: 30 }, SCENES.length);
+    assert.ok(setup.includes(String(SCENES.length)), 'the setup never says how many there are');
+  });
+
+  test('there are enough objects for the shortest round', () => {
+    /* Otherwise the cap silently turns a round of ten into a round of six. */
+    assert.ok(SCENES.length >= Math.min(...A.COUNTS),
+      `${SCENES.length} objects cannot fill a round of ${Math.min(...A.COUNTS)}`);
   });
 });
 

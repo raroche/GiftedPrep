@@ -64,7 +64,7 @@ export const SCENES = [
     ask: 'This pizza was cut into eight. How big is one slice?',
     fact: 'This one never changes. A whole pizza is 360, and 360 shared between eight '
       + 'slices is 45 each, every time.' },
-  { id: 'arrow', name: 'The point of an arrow', deg: 60, mid: 270, fixed: false, claim: 'this one',
+  { id: 'arrow', name: 'The point of an arrow', deg: 55, mid: 270, fixed: false, claim: 'this one',
     ask: 'How sharp is the point of this arrow?',
     fact: 'Arrowheads are made at all sorts of points. A sharp one goes in instead of '
       + 'sliding off.' },
@@ -79,10 +79,29 @@ export const SCENES = [
   { id: 'roof', name: 'The peak of a roof', deg: 110, mid: 270, fixed: false, claim: 'this one',
     ask: 'How wide is the peak of this roof?',
     fact: 'Roofs are built at many angles. A steeper peak sheds rain and snow faster.' },
-  { id: 'laptop', name: 'An open laptop', deg: 120, from: 0, fixed: false, claim: 'this one',
+  { id: 'laptop', name: 'An open laptop', deg: 125, from: 0, fixed: false, claim: 'this one',
     ask: 'How far back is this laptop screen pushed?',
     fact: 'The hinge turns freely. Plenty of laptops fold right back to 180, and some go '
-      + 'all the way to 360 to become a tablet. This one is at 120.' },
+      + 'all the way to 360 to become a tablet. This one is at 125.' },
+  { id: 'slide', name: 'A playground slide', deg: 35, from: 0, fixed: false, claim: 'this one',
+    ask: 'How steep is this slide?',
+    fact: 'Slides are built at all sorts of slopes. Too steep and you land too hard.' },
+  { id: 'door', name: 'A door, from above', deg: 40, from: 0, fixed: false, claim: 'this one',
+    ask: 'How far open is this door?',
+    fact: 'A door swings from shut to wide open — 0 all the way round to the wall.' },
+  { id: 'cake', name: 'A cake cut into six', deg: 60, from: 12, fixed: true, claim: 'always',
+    ask: 'This cake was cut into six. How big is one slice?',
+    fact: 'Same trick as the pizza. 360 shared between six is 60 — and between eight it '
+      + 'was 45. Fewer slices, bigger angle.' },
+  { id: 'hexagon', name: 'The corner of a hexagon tile', deg: 120, mid: 90, fixed: true,
+    claim: 'always',
+    ask: 'What is the corner angle of this hexagon tile?',
+    fact: 'Every corner of a regular hexagon is 120, always. Three of them meet to make '
+      + '360, which is why bees tile a honeycomb with them and leave no gaps.' },
+  { id: 'stopsign', name: 'The corner of a stop sign', deg: 135, mid: 90, fixed: true,
+    claim: 'always',
+    ask: 'What is the corner angle of this stop sign?',
+    fact: 'A stop sign is a regular octagon, and every corner of one is 135, always.' },
   { id: 'chair', name: 'A deck chair, reclined', deg: 150, from: 8, fixed: false, claim: 'this one',
     ask: 'How far back is this deck chair?',
     fact: 'Deck chairs recline to lots of angles. This one is nearly flat — almost a '
@@ -93,7 +112,8 @@ export const SCENES = [
 const VERTEX = {
   ramp: [30, 162], scissors: [100, 140], pizza: [44, 162], arrow: [100, 32],
   ladder: [52, 168], book: [100, 152], roof: [100, 58], laptop: [56, 152],
-  chair: [58, 150]
+  chair: [58, 150], slide: [26, 166], door: [56, 150], cake: [40, 158],
+  hexagon: [100, 172], stopsign: [100, 176]
 };
 
 /**
@@ -153,6 +173,32 @@ export function sceneSvg(id, { marked = true, size = 200 } = {}) {
 /* ------------------------------------------------------------------ */
 /* The scenes                                                          */
 /* ------------------------------------------------------------------ */
+
+
+/**
+ * A regular polygon, walked out from the corner being measured.
+ *
+ * The interior angle of a regular n-gon is 180 - 360/n: 120 for a hexagon, 135
+ * for an octagon. Rather than trust that and draw the shape separately, the
+ * shape is BUILT from the angle -- start at the corner, set off along one arm,
+ * and turn by the same exterior angle at every step. If the number were wrong
+ * the polygon would not close, which is a bug you can see.
+ */
+function polygon(g, n, side) {
+  const pts = [[g.cx, g.cy]];
+  let x = g.cx;
+  let y = g.cy;
+  let head = g.a2;
+  for (let i = 0; i < n - 1; i += 1) {
+    x += side * Math.cos((head * Math.PI) / 180);
+    y -= side * Math.sin((head * Math.PI) / 180);
+    pts.push([r1(x), r1(y)]);
+    head -= 180 - g.deg;
+  }
+  const d = `M ${pts.map((q) => q.join(' ')).join(' L ')} Z`;
+  return `<path d="${d}" fill="${g.p}" stroke="${g.t}" stroke-width="8"
+    stroke-linejoin="round"/>`;
+}
 
 const DRAW = {
   /* Ground along the first arm, slope along the second, filled between. */
@@ -278,6 +324,51 @@ const DRAW = {
   },
 
   /* Base along the first arm, screen opening back along the second. */
+
+  /* A slide: the slope, a rail, and the steps that get you up to it. */
+  slide: (g) => {
+    const [tx, ty] = g.P(g.a2, 156);
+    const [fx, fy] = g.P(g.a1, 156);
+    return `
+      <path d="M ${g.cx - 6} ${g.cy} L ${fx + 12} ${fy}" stroke="${g.INK}"
+            stroke-width="5" stroke-linecap="round"/>
+      ${g.slab(g.a2, 156, 10, g.t)}
+      <path d="M ${g.P(g.a2, 156).join(' ')} L ${tx} ${ty - 40}" stroke="${g.p}"
+            stroke-width="10" stroke-linecap="round"/>
+      <path d="M ${g.P(g.a2, 40).join(' ')} L ${g.P(g.a2, 40)[0]} ${g.P(g.a2, 40)[1] - 26}
+               M ${g.P(g.a2, 100).join(' ')} L ${g.P(g.a2, 100)[0]} ${g.P(g.a2, 100)[1] - 32}"
+            stroke="${g.p}" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="${g.P(g.a2, 128)[0]}" cy="${r1(g.P(g.a2, 128)[1] - 14)}" r="11" fill="${g.INK}"/>`;
+  },
+
+  /* A door seen from above: the wall it is set into, and the door swung open. */
+  door: (g) => `
+    <path d="M ${g.cx} ${g.cy} L ${g.P(g.a1, 132).join(' ')}" stroke="${g.INK}"
+          stroke-width="12" stroke-linecap="round"/>
+    <path d="M ${g.cx} ${g.cy} L ${g.P(g.a1 + 180, 44).join(' ')}" stroke="${g.INK}"
+          stroke-width="12" stroke-linecap="round"/>
+    ${g.slab(g.a2, 128, 14, g.t)}
+    <circle cx="${g.P(g.a2, 112)[0]}" cy="${g.P(g.a2, 112)[1]}" r="6" fill="${g.p}"/>
+    <circle cx="${g.cx}" cy="${g.cy}" r="6" fill="${g.p}"/>`,
+
+  /* A cake slice: the same wedge as the pizza, iced, with a candle. */
+  cake: (g) => {
+    const R = 138;
+    const [x1, y1] = g.P(g.a1, R);
+    const [x2, y2] = g.P(g.a2, R);
+    const [cxx, cyy] = g.P(g.a1 + g.deg / 2, R * 0.62);
+    return `
+      <path d="M ${g.cx} ${g.cy} L ${x1} ${y1} A ${R} ${R} 0 0 0 ${x2} ${y2} Z" fill="${g.p}"/>
+      <path d="M ${x1} ${y1} A ${R} ${R} 0 0 0 ${x2} ${y2}" fill="none" stroke="${g.t}"
+            stroke-width="15" stroke-linecap="round"/>
+      <path d="M ${cxx} ${cyy} L ${cxx} ${r1(cyy - 34)}" stroke="${g.INK}"
+            stroke-width="7" stroke-linecap="round"/>
+      <circle cx="${cxx}" cy="${r1(cyy - 42)}" r="7" fill="${g.t}"/>`;
+  },
+
+  hexagon: (g) => polygon(g, 6, 62),
+  stopsign: (g) => polygon(g, 8, 50),
+
   /* Seen from the side, which is the only view where the hinge angle IS the
      angle. Face-on the screen foreshortens and the drawing would lie. */
   laptop: (g) => `

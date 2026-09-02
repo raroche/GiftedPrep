@@ -631,18 +631,33 @@ export function dealer(list, random = Math.random) {
   };
 }
 
+/**
+ * How many questions a round really gets.
+ *
+ * Every other kind draws from angles, of which there is an endless supply. "Out
+ * in the world" draws from a fixed set of drawings, and asking for more
+ * questions than there are objects means showing one twice however well the
+ * pack is shuffled. Ten questions from nine objects repeated in every single
+ * round measured, and twenty showed one object three times. So the round is
+ * capped instead, and the setup screen says so before it starts.
+ */
+export function roundLength(ask, count, sceneCount) {
+  const want = Math.max(1, Number(count) || 10);
+  return ask === 'world' ? Math.min(want, sceneCount) : want;
+}
+
 export function buildRound(scenes, { set = 'steps', ask = 'estimate', count = 10,
   random = Math.random } = {}) {
-  const want = Math.max(1, Number(count) || 10);
+  const n = roundLength(ask, count, scenes.length);
   const draw = dealer(scenes, random);
-  return Array.from({ length: want }, () => buildQuestion(ask, set, scenes, random, draw));
+  return Array.from({ length: n }, () => buildQuestion(ask, set, scenes, random, draw));
 }
 
 /* ------------------------------------------------------------------ */
 /* Rendering                                                           */
 /* ------------------------------------------------------------------ */
 
-export function renderSetup(chosen) {
+export function renderSetup(chosen, sceneCount = 0) {
   const card = (attr, list, current) => list.map((m) => `
     <button type="button" class="gp-card gp-card--mode${current === m.id ? ' is-selected' : ''}"
             ${attr}="${m.id}" aria-pressed="${current === m.id}">
@@ -674,8 +689,12 @@ export function renderSetup(chosen) {
     </fieldset>
 
     <p class="gp-muted gp-grade-note">
-      Every angle is turned and its arms are different lengths, on purpose.
-      <strong>Long arms never mean a big angle.</strong>
+      ${chosen.ask === 'world' && sceneCount
+        ? `There are <strong>${sceneCount}</strong> objects to find angles in, and no round `
+          + `repeats one. So this round is `
+          + `<strong>${roundLength('world', chosen.count, sceneCount)}</strong> questions.`
+        : 'Every angle is turned and its arms are different lengths, on purpose. '
+          + '<strong>Long arms never mean a big angle.</strong>'}
     </p>
 
     <button type="button" class="gp-btn gp-btn--primary gp-btn--big"
@@ -713,5 +732,5 @@ export function renderQuestion(q, index, total, streak = 0) {
 export default {
   SETS, ASKS, COUNTS, FAMILIES, familyOf, poolFor, numberChoices, dressing,
   angleSvg, clockSvg, bounceSvg, clockAngle, bounceRun, buildQuestion, buildRound,
-  renderSetup, renderQuestion, shuffle, pointAt, dealer
+  renderSetup, renderQuestion, shuffle, pointAt, dealer, roundLength
 };

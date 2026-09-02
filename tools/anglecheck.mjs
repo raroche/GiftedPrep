@@ -216,14 +216,31 @@ for (const set of A.SETS.map((x) => x.id)) {
   }
 }
 
-/* One round should not show the same object twice when there are nine of them. */
-for (let r = 0; r < 300; r += 1) {
-  const round = A.buildRound(scenes, { ask: 'world', set: 'steps', count: scenes.length });
-  const ids = round.map((q) => q.scene);
-  if (new Set(ids).size !== ids.length) {
-    err('a round of world questions repeated a scene before using them all');
-    break;
+/*
+ * No round may show the same object twice, at any length the setup screen
+ * offers. Shuffling was not enough: with nine objects and ten questions, every
+ * round repeated one, and a round of twenty showed one object three times.
+ * Checking only a round the same size as the pack missed both.
+ */
+let repeated = 0;
+for (const count of A.COUNTS) {
+  for (const ask of ['world', 'mix']) {
+    for (let r = 0; r < 400; r += 1) {
+      const round = A.buildRound(scenes, { ask, set: 'steps', count });
+      if (ask === 'world' && round.length > scenes.length) {
+        err(`a world round of ${round.length} was built from ${scenes.length} objects`);
+        break;
+      }
+      const ids = round.map((q) => q.scene).filter(Boolean);
+      if (new Set(ids).size !== ids.length) {
+        repeated += 1;
+        err(`${ask}, ${count} questions: the same object came round twice`);
+        break;
+      }
+    }
+    if (repeated) break;
   }
+  if (repeated) break;
 }
 
 /* ---- the setup screen offers what the code accepts ---- */
@@ -244,6 +261,7 @@ console.log(`${KINDS.length} kinds of question, ${A.SETS.length} difficulties, `
 console.log(`${judged} of them re-marked against the number their own picture shows`);
 console.log(`${art.SCENES.filter((s) => s.fixed).length} scenes have an angle that is really `
   + `theirs; the other ${art.SCENES.filter((s) => !s.fixed).length} ask about the picture`);
+console.log(`rounds of ${A.COUNTS.join(', ')} checked for repeats in both world and mix`);
 
 if (warnings.length) {
   console.log(`\nwarnings (${warnings.length}):`);

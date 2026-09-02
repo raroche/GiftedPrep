@@ -765,7 +765,7 @@ export function renderAngles(step) {
 }
 
 export function drawAngSetup() {
-  $('#gp-ang-setup').innerHTML = angles.renderSetup(state.angles.setup);
+  $('#gp-ang-setup').innerHTML = angles.renderSetup(state.angles.setup, SCENES.length);
   paint();
   showScreen('angsetup');
 }
