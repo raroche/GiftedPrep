@@ -43,14 +43,25 @@
       screen: '#screen-capgame',  next: '[data-action="cap-next"]',  setup: [] },
     { id: 'elements', setupScreen: 'screen-elemsetup', start: '[data-action="elem-start"]',  answer: '[data-elemanswer]',
       screen: '#screen-elemgame', next: '[data-action="elem-next"]',
-      setup: ['[data-elemask="use"]'] }
+      setup: ['[data-elemask="use"]'] },
+    /* Every kind of angle question gets its own pass. They share a game loop
+       but not a picture, and "bigger" is the only one where the choices ARE the
+       figures -- which is exactly the sort of difference that renders nothing
+       and throws nothing. */
+    ...['estimate', 'bigger', 'sort', 'clock', 'world', 'bounce'].map((ask) => ({
+      id: 'angles', label: `angles/${ask}`, setupScreen: 'screen-angsetup',
+      start: '[data-action="ang-start"]', answer: '[data-anganswer]',
+      screen: '#screen-anggame', next: '[data-action="ang-next"]',
+      setup: [`[data-angask="${ask}"]`]
+    }))
   ];
 
   for (const g of GAMES) {
+    const name = g.label || g.id;
     location.hash = `#/fun/${g.id}`;
     await wait(1300);
     const shown = [...document.querySelectorAll('.gp-screen')].filter(vis).map((s) => s.id);
-    check(`${g.id}: setup is visible`, shown.length === 1, shown.join(',') || 'nothing visible');
+    check(`${name}: setup is visible`, shown.length === 1, shown.join(',') || 'nothing visible');
 
     for (const sel of g.setup) {
       const b = document.querySelector(sel);
@@ -59,30 +70,30 @@
     /* The two things a page offers must both be reachable, and the looking one
        must be visible rather than a link buried under the form. */
     const learnGo = document.querySelector(`#${g.setupScreen} .cz-mode--learn .cz-mode__go`);
-    check(`${g.id}: learn button is visible`, !!learnGo && vis(learnGo));
+    check(`${name}: learn button is visible`, !!learnGo && vis(learnGo));
 
     const startBtn = document.querySelector(g.start);
-    check(`${g.id}: has a start button`, !!startBtn);
+    check(`${name}: has a start button`, !!startBtn);
     if (!startBtn) continue;
     startBtn.click();
     await wait(1400);
 
-    check(`${g.id}: the game screen is visible`, vis(document.querySelector(g.screen)));
+    check(`${name}: the game screen is visible`, vis(document.querySelector(g.screen)));
     const pick = document.querySelector(g.answer);
-    check(`${g.id}: the question can be answered`, !!pick);
+    check(`${name}: the question can be answered`, !!pick);
     if (!pick) continue;
 
     pick.click();
     await wait(800);
-    check(`${g.id}: feedback appears`, !!document.querySelector('.gp-flagq__say'),
+    check(`${name}: feedback appears`, !!document.querySelector('.gp-flagq__say'),
       document.querySelector('.gp-flagq__say')?.textContent?.slice(0, 50) || 'none');
-    check(`${g.id}: there is a way to the next question`, !!document.querySelector(g.next));
+    check(`${name}: there is a way to the next question`, !!document.querySelector(g.next));
 
     const nextBtn = document.querySelector(g.next);
     if (nextBtn) {
       nextBtn.click();
       await wait(900);
-      check(`${g.id}: next actually advances`, vis(document.querySelector(g.screen)));
+      check(`${name}: next actually advances`, vis(document.querySelector(g.screen)));
     }
 
     /* The browsing mode is a page a child can land on directly, so it gets the
@@ -90,7 +101,7 @@
     location.hash = `#/fun/${g.id}/learn`;
     await wait(1600);
     const seen = [...document.querySelectorAll('.gp-screen')].filter(vis).map((s) => s.id);
-    check(`${g.id}: learn mode is visible`, seen.length === 1, seen.join(',') || 'nothing visible');
+    check(`${name}: learn mode is visible`, seen.length === 1, seen.join(',') || 'nothing visible');
   }
 
   /* Every page below home offers a way back, it says where it goes, and it is

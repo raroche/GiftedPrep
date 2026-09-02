@@ -12,6 +12,8 @@ import * as flags from './../modules/flags.js';
 import * as shapes from './../modules/shapes.js';
 import * as capitals from './../modules/capitals.js';
 import * as elements from './../modules/elements.js';
+import * as angles from './../modules/angles.js';
+import { SCENES, sceneSvg } from './../modules/angleart.js';
 import { renderBrowser, order, ORDERS } from './../modules/learn.js';
 import { $, $$, paint, showError, showScreen, state } from './../modules/shell.js';
 
@@ -271,4 +273,174 @@ export function showElementDetail(z) {
     </div>`;
   paint();
   $('#cz-elem-detail').scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+/* ------------------------------------------------------------------ */
+/* The angle workshop                                                  */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Three things a child should meet before being asked to guess anything, in
+ * this order, because each one depends on the last:
+ *
+ *   an angle is a TURN, and the number counts how far it turned
+ *   arm length is not part of that, however strongly it looks like it is
+ *   a clock face is a protractor you already know how to read
+ *
+ * The second is the one the research keeps pointing at, so it is not a footnote
+ * here — it gets its own demonstration with a button that changes the arms and
+ * a number that stubbornly refuses to move.
+ *
+ * Everything is operated by tapping. Nothing has to be drawn or dragged.
+ */
+
+const TURN_STOPS = [0, 30, 45, 60, 90, 120, 135, 180, 270, 360];
+
+const TURN_NOTE = {
+  0: 'Closed. The two arms lie on top of each other.',
+  30: 'A twelfth of the way round. One hour on a clock.',
+  45: 'Half of a corner. Fold a square corner in half and this is what you get.',
+  60: 'A third of a half turn. The corner of a triangle where all sides match.',
+  90: 'A corner. Square. The one every wall and page is built from.',
+  120: 'Past the corner. Where most people stop opening a laptop.',
+  135: 'A corner and a half.',
+  180: 'Flat. Half a full turn. The two arms point opposite ways.',
+  270: 'Three quarters of the way round.',
+  360: 'All the way round. Back where it started.'
+};
+
+export function renderAngleLearn() {
+  const d = state.angles.demo;
+  $('#gp-anglearn-body').innerHTML = `
+    <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun/angles">&larr; Back to the game</a>
+    <h1 class="gp-page-title" id="anglearn-title">The angle workshop</h1>
+    <p class="gp-page-lede">An angle is not a shape. It is an amount of <strong>turn</strong>.
+       Everything below can be tapped.</p>
+
+    <section class="gp-card cz-ang-lab" id="cz-ang-turn"></section>
+    <section class="gp-card cz-ang-lab cz-ang-lab--trap" id="cz-ang-trap"></section>
+    <section class="gp-card cz-ang-lab" id="cz-ang-clockdemo"></section>
+
+    <section class="gp-card cz-ang-lab">
+      <h2 class="cz-ang-lab__head">The five names</h2>
+      <p class="cz-ang-lab__lede">Every angle has a family, and the family is decided by one
+         thing: how it compares to a corner and to flat.</p>
+      <div class="cz-ang-fams">
+        ${angles.FAMILIES.map((f) => {
+    const shown = { acute: 50, right: 90, obtuse: 130, straight: 180, reflex: 250 }[f.id];
+    return `<div class="cz-ang-fam">
+            <div class="cz-ang-fam__pic">${angles.angleSvg(shown,
+      { armA: 0.95, armB: 0.8, rotate: 12, size: 120, label: `${f.name} angle` })}</div>
+            <p class="cz-ang-fam__name">${escapeHtml(f.name)}</p>
+            <p class="cz-ang-fam__hint">${escapeHtml(f.hint)}</p>
+          </div>`;
+  }).join('')}
+      </div>
+      <p class="gp-muted">In Spanish: ${angles.FAMILIES.map((f) =>
+    `${escapeHtml(f.name.toLowerCase())} is <strong>${escapeHtml(f.es)}</strong>`).join(', ')}.</p>
+    </section>
+
+    <section class="gp-card cz-ang-lab">
+      <h2 class="cz-ang-lab__head">Angles you have already seen</h2>
+      <p class="cz-ang-lab__lede">None of these were put there by a maths teacher. They are the
+         angle that makes the thing work.</p>
+      <div class="cz-ang-scenes">
+        ${SCENES.map((s) => `
+          <figure class="cz-ang-scene">
+            <div class="cz-ang-scene__pic">${sceneSvg(s.id)}</div>
+            <figcaption>
+              <strong>${escapeHtml(s.name)}</strong>
+              <span class="cz-ang-scene__deg">${s.deg}&deg;</span>
+              <span class="cz-ang-scene__fact">${escapeHtml(s.fact)}</span>
+            </figcaption>
+          </figure>`).join('')}
+      </div>
+    </section>`;
+
+  paintAngTurn();
+  paintAngTrap();
+  paintAngClock();
+  paint();
+  showScreen('anglearn');
+  void d;
+}
+
+/** Section one: open the angle by tapping, and watch the number follow. */
+export function paintAngTurn() {
+  const deg = state.angles.demo.deg;
+  const fam = angles.FAMILIES.find((f) => f.id === angles.familyOf(deg));
+  $('#cz-ang-turn').innerHTML = `
+    <h2 class="cz-ang-lab__head">Open it and watch</h2>
+    <p class="cz-ang-lab__lede">One arm stays still. The other turns. The number counts how far
+       it went, out of 360 for the whole way round.</p>
+    <div class="cz-ang-lab__stage">
+      ${angles.angleSvg(deg, { armA: 1, armB: 0.9, rotate: 0, size: 260,
+    label: `An angle of ${deg} degrees` })}
+      <p class="cz-ang-lab__read"><strong>${deg}&deg;</strong>
+        <span>${deg === 0 || deg === 360 ? '' : escapeHtml(fam.name)}</span></p>
+    </div>
+    <p class="cz-ang-lab__note">${escapeHtml(TURN_NOTE[deg] || '')}</p>
+    <div class="gp-row gp-row--wrap cz-ang-stops">
+      ${TURN_STOPS.map((v) => `
+        <button type="button" class="gp-pill${v === deg ? ' is-selected' : ''}"
+                data-angdemo="${v}">${v}&deg;</button>`).join('')}
+    </div>`;
+  paint();
+}
+
+/**
+ * Section two: the trap.
+ *
+ * Both angles are the same. Only the arms change. A child who believes long
+ * arms mean a big angle can press the button as many times as they like and
+ * the number will not move, which is a more convincing argument than being
+ * told.
+ */
+export function paintAngTrap() {
+  const swap = state.angles.demo.swap;
+  const deg = 55;
+  const short = { armA: 0.42, armB: 0.34, rotate: 8, size: 170 };
+  const long = { armA: 1, armB: 0.96, rotate: 8, size: 170 };
+  const pair = swap ? [long, short] : [short, long];
+  $('#cz-ang-trap').innerHTML = `
+    <h2 class="cz-ang-lab__head">The trap almost everybody falls into</h2>
+    <p class="cz-ang-lab__lede">Which of these two opens wider?</p>
+    <div class="cz-ang-trap__pair">
+      ${pair.map((o, i) => `
+        <div class="cz-ang-trap__one">
+          ${angles.angleSvg(deg, { ...o, label: `Angle ${i + 1}` })}
+          <p class="cz-ang-trap__val">${deg}&deg;</p>
+        </div>`).join('')}
+    </div>
+    <p class="cz-ang-lab__note"><strong>Neither.</strong> They are the same angle. Only the arms
+       changed, and the arms are not the angle — the <em>opening</em> is. This is the single most
+       common mistake there is with angles, and now you know it.</p>
+    <button type="button" class="gp-btn gp-btn--ghost" data-action="ang-arms">
+      Change the arms again
+    </button>`;
+  paint();
+}
+
+/** Section three: the clock you already own, used as a protractor. */
+export function paintAngClock() {
+  const hour = state.angles.demo.hour;
+  const deg = angles.clockAngle(hour, 0);
+  const hours = Math.min(hour, 12 - hour);
+  $('#cz-ang-clockdemo').innerHTML = `
+    <h2 class="cz-ang-lab__head">The clock trick</h2>
+    <p class="cz-ang-lab__lede">You do not need a protractor. A clock face is already cut into
+       twelve equal pieces, and each piece is <strong>30&deg;</strong>.</p>
+    <div class="cz-ang-lab__stage">
+      ${angles.clockSvg(hour, 0, { size: 240 })}
+      <p class="cz-ang-lab__read"><strong>${deg}&deg;</strong>
+        <span>${hours} hour${hours === 1 ? '' : 's'} &times; 30&deg;</span></p>
+    </div>
+    <p class="cz-ang-lab__note">Twelve to one is 30&deg;. Twelve to two is 60&deg;. Twelve to three
+       is a right angle. To guess any angle, imagine a clock behind it and count the hours.</p>
+    <div class="gp-row gp-row--wrap cz-ang-stops">
+      ${Array.from({ length: 11 }, (_, i) => i + 1).map((h) => `
+        <button type="button" class="gp-pill${h === hour ? ' is-selected' : ''}"
+                data-angclock="${h}">${h}</button>`).join('')}
+    </div>`;
+  paint();
 }

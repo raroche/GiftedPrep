@@ -3229,3 +3229,144 @@ button, a, label, summary, [role="button"] {
 .gp-backslot:empty { display: none; }
 .gp-backslot { margin-bottom: var(--gp-space-4); }
 .gp-backslot .gp-backlink { margin: 0; }
+
+/* ============================================================ */
+/* Guess the Angle                                               */
+/* ============================================================ */
+
+/* The room keeps the blue of the tile the child tapped to get here. Declared
+   after the tile hues so it wins, and it only sets values -- it never provides
+   a --room default, which is what made the purple room turn orange. */
+.cz-room--sky {
+  --room: var(--cz-sky);
+  --room-soft: var(--cz-sky-soft);
+  --room-line: var(--cz-sky-line);
+  --room-ink: var(--cz-sky-ink);
+}
+
+.cz-ang { display: block; width: 100%; height: auto; }
+
+.cz-ang-fig {
+  display: flex;
+  justify-content: center;
+  margin: var(--gp-space-4) 0 var(--gp-space-5);
+}
+.cz-ang-fig .cz-ang { max-width: 280px; }
+.cz-ang-fig .cz-ang--bounce { max-width: 420px; }
+
+.cz-ang-ask {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--gp-ink);
+}
+.cz-ang-hint { margin: var(--gp-space-2) 0 0; text-align: center; font-size: .92rem; }
+.cz-ang-extra { margin-top: var(--gp-space-3); text-align: center; }
+
+/* Only shown from three upwards, so it always reads as something earned. */
+.cz-ang-streak {
+  margin: var(--gp-space-2) auto 0;
+  padding: 2px var(--gp-space-3);
+  width: max-content;
+  border-radius: var(--gp-radius-pill);
+  background: var(--room-soft, var(--gp-accent-soft));
+  color: var(--room-ink, var(--gp-accent-strong));
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+/* Two angles side by side. They stay side by side even on a narrow phone,
+   because comparing them is the entire question and stacking would turn it
+   into a memory test. */
+.cz-ang-choices--wide { grid-template-columns: 1fr 1fr; gap: var(--gp-space-3); }
+.gp-choice--fig { min-height: 0; padding: var(--gp-space-3); }
+.gp-choice--fig .gp-choice__body { width: 100%; }
+.gp-choice--fig .cz-ang { max-width: 190px; margin: 0 auto; }
+
+.cz-ang-choices--sort { grid-template-columns: repeat(2, 1fr); gap: var(--gp-space-3); }
+.cz-ang-choices--sort .gp-choice { min-height: 72px; padding: var(--gp-space-3) var(--gp-space-4); }
+.cz-ang-choice__sub {
+  display: block;
+  margin-top: 2px;
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--gp-ink-muted);
+}
+@media (min-width: 700px) {
+  .cz-ang-choices--sort { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---- the workshop ---- */
+
+.cz-ang-lab { margin-bottom: var(--gp-space-5); }
+.cz-ang-lab__head { margin: 0 0 var(--gp-space-2); font-size: 1.2rem; }
+.cz-ang-lab__lede { margin: 0 0 var(--gp-space-4); color: var(--gp-ink-muted); }
+.cz-ang-lab__note {
+  margin: var(--gp-space-4) 0 0;
+  padding: var(--gp-space-3) var(--gp-space-4);
+  border-left: 4px solid var(--room-line, var(--gp-accent-line));
+  border-radius: var(--gp-radius-sm);
+  background: var(--room-soft, var(--gp-accent-soft));
+  color: var(--gp-ink);
+  font-size: .95rem;
+}
+
+.cz-ang-lab__stage { display: grid; justify-items: center; gap: var(--gp-space-2); }
+.cz-ang-lab__stage .cz-ang { max-width: 260px; }
+.cz-ang-lab__read { margin: 0; text-align: center; line-height: 1.2; }
+.cz-ang-lab__read strong { display: block; font-size: 2.1rem; color: var(--room-ink, var(--gp-accent-strong)); }
+.cz-ang-lab__read span { font-size: .9rem; color: var(--gp-ink-muted); }
+
+.cz-ang-stops { margin-top: var(--gp-space-4); justify-content: center; }
+
+.cz-ang-lab--trap { border-color: var(--room-line, var(--gp-accent-line)); }
+.cz-ang-trap__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gp-space-3);
+  align-items: center;
+}
+.cz-ang-trap__one { text-align: center; }
+.cz-ang-trap__one .cz-ang { max-width: 170px; margin: 0 auto; }
+.cz-ang-trap__val {
+  margin: var(--gp-space-1) 0 0;
+  font-weight: 700;
+  color: var(--room-ink, var(--gp-accent-strong));
+}
+
+.cz-ang-fams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--gp-space-4);
+  margin-bottom: var(--gp-space-4);
+}
+.cz-ang-fam { text-align: center; }
+.cz-ang-fam__pic .cz-ang { max-width: 120px; margin: 0 auto; }
+.cz-ang-fam__name { margin: var(--gp-space-1) 0 0; font-weight: 700; }
+.cz-ang-fam__hint { margin: 2px 0 0; font-size: .82rem; color: var(--gp-ink-muted); }
+
+.cz-ang-scenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--gp-space-4);
+}
+.cz-ang-scene { margin: 0; }
+.cz-ang-scene__pic .cz-ang { max-width: 180px; margin: 0 auto; }
+.cz-ang-scene figcaption { display: block; text-align: center; font-size: .88rem; }
+.cz-ang-scene__deg {
+  display: inline-block;
+  margin-left: var(--gp-space-2);
+  padding: 1px var(--gp-space-2);
+  border-radius: var(--gp-radius-pill);
+  background: var(--room-soft, var(--gp-accent-soft));
+  color: var(--room-ink, var(--gp-accent-strong));
+  font-weight: 700;
+}
+.cz-ang-scene__fact {
+  display: block;
+  margin-top: 2px;
+  color: var(--gp-ink-muted);
+  font-size: .8rem;
+}

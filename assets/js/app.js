@@ -24,11 +24,11 @@ import { describeFigure } from './modules/figures.js';
 import { icon } from './modules/icons.js';
 import { hydrateMascots, setMood } from './modules/mascot.js';
 import { $, $$, hydrateIcons, showError, showScreen, state } from './modules/shell.js';
-import { answerElement, drawElemQuestion, drawElemSetup, nextElement, startElemRound, answerCapChoice, answerCapTyped, drawCapQuestion, drawCapSetup, nextCapital, startCapRound, answerFlag, answerShapeChoice, answerShapeTyped, answerShapeVault, answerVault, drawFlagQuestion, drawFlagSetup, drawShapeQuestion, drawShapeSetup, renderFun, startFlagRound, startShapeRound } from './screens/fun.js';
+import { answerAngle, drawAngSetup, nextAngle, startAngRound, answerElement, drawElemQuestion, drawElemSetup, nextElement, startElemRound, answerCapChoice, answerCapTyped, drawCapQuestion, drawCapSetup, nextCapital, startCapRound, answerFlag, answerShapeChoice, answerShapeTyped, answerShapeVault, answerVault, drawFlagQuestion, drawFlagSetup, drawShapeQuestion, drawShapeSetup, renderFun, startFlagRound, startShapeRound } from './screens/fun.js';
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
-import { renderLearn, renderElemLearn, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
+import { renderLearn, renderElemLearn, renderAngleLearn, paintAngTurn, paintAngTrap, paintAngClock, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
 import { backTarget } from './modules/routes.js';
 
 /* ------------------------------------------------------------------ */
@@ -186,6 +186,26 @@ function onClick(ev) {
   const en = ev.target.closest('[data-elemcount]');
   if (en) { state.elements.setup.count = en.dataset.elemcount; drawElemSetup(); return; }
 
+  /* ---- the angle workshop ---- */
+  const ad = ev.target.closest('[data-angdemo]');
+  if (ad) { state.angles.demo.deg = Number(ad.dataset.angdemo); paintAngTurn(); return; }
+
+  const ac = ev.target.closest('[data-angclock]');
+  if (ac) { state.angles.demo.hour = Number(ac.dataset.angclock); paintAngClock(); return; }
+
+  /* ---- guess the angle ---- */
+  const aa = ev.target.closest('[data-angask]');
+  if (aa) { state.angles.setup.ask = aa.dataset.angask; drawAngSetup(); return; }
+
+  const asv = ev.target.closest('[data-angset]');
+  if (asv) { state.angles.setup.set = asv.dataset.angset; drawAngSetup(); return; }
+
+  const an = ev.target.closest('[data-angcount]');
+  if (an) { state.angles.setup.count = an.dataset.angcount; drawAngSetup(); return; }
+
+  const ap = ev.target.closest('[data-anganswer]');
+  if (ap) { answerAngle(ap.dataset.anganswer); return; }
+
   const ans = ev.target.closest('[data-elemanswer]');
   if (ans) { answerElement(ans.dataset.elemanswer); return; }
 
@@ -334,6 +354,19 @@ function onClick(ev) {
   switch (action.dataset.action) {
     case 'leave-quiz':
       leaveQuiz();
+      break;
+    case 'ang-arms':
+      state.angles.demo.swap = !state.angles.demo.swap;
+      paintAngTrap();
+      break;
+    case 'ang-start':
+      startAngRound();
+      break;
+    case 'ang-next':
+      nextAngle();
+      break;
+    case 'ang-again':
+      startAngRound();
       break;
     case 'elem-start':
       startElemRound();

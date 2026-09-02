@@ -51,7 +51,7 @@ listing — in [`assets/img/logo/anim/`](assets/img/logo/anim/README.md).
 | Room | What it is |
 |---|---|
 | **Math Lab** | 86 topics and 609 exercises across grades 1–6. Real mathematics — primes, symmetry, graph colouring, the pigeonhole principle — not worksheets |
-| **Fun and games** | Name the Flag, Name the Country Shape, Name the Capital and Name the Element — typed answers in English or Spanish, and a typo still counts |
+| **Fun and games** | Name the Flag, Name the Country Shape, Name the Capital, Name the Element and Guess the Angle — typed answers in English or Spanish, and a typo still counts |
 | **GiftedPrep** | 1,576 questions in the shapes used by the CogAT, NNAT and OLSAT, grades 1–4 |
 
 The gifted practice is built for **familiarization, not coaching** — a
@@ -116,7 +116,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Nothing is collected** | No account, no analytics, no third-party requests, no telemetry. The only network traffic is the site fetching its own question files from its own domain. Progress lives in `localStorage` and is never uploaded |
 | **Read-aloud stays on the device** | Voices are chosen device-first. Some browsers ship cloud-backed "Online" voices that send text to a server; those are used only if the device offers no voice of its own |
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
-| **Fun and games** | Name the Flag (250 flags, vault of flags that no longer exist), Name the Country Shape (242 outlines), Name the Capital (192 capitals) and Name the Element (all 118, four kinds of question). Every game also has a browsing mode with no score, so the material can be met before it is tested, and the element one is a full periodic table with the story of how it was built. Typed answers take English or Spanish and forgive a spelling slip |
+| **Fun and games** | Name the Flag (250 flags, vault of flags that no longer exist), Name the Country Shape (242 outlines), Name the Capital (192 capitals) and Name the Element (all 118, four kinds of question). Every game also has a browsing mode with no score, so the material can be met before it is tested, and the element one is a full periodic table with the story of how it was built. Typed answers take English or Spanish and forgive a spelling slip. Guess the Angle asks six different ways — estimate it, sort it, read it off a clock face, find it on a roof or a ladder, or work out where a bounced ball lands — and every angle is drawn with mismatched arms at a random rotation, because judging an angle by the length of its arms is the mistake children actually make |
 | **Math Lab** | A separate section for advanced maths, grades 1 to 6. 86 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, pi, three unsolved problems) and number skills |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 

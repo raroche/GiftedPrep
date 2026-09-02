@@ -462,6 +462,63 @@
   </section>
 
   <!-- ============================================================ -->
+  <!-- Fun: guess the angle                                          -->
+  <!-- ============================================================ -->
+  <section class="gp-screen cz-room--sky" id="screen-angsetup" aria-labelledby="angsetup-title">
+    <div class="gp-container">
+      <div class="gp-backslot"></div>
+      <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
+      <h1 class="gp-page-title" id="angsetup-title">Guess the Angle</h1>
+      <p class="gp-page-lede">How far does it open? Learn the tricks first — a clock face beats a
+         protractor — then test yourself six different ways.</p>
+      <!-- Two things a child can do here, and they are not the same thing.
+           Looking comes first because being tested on material you have never
+           met is not a game. -->
+      <section class="cz-mode cz-mode--learn">
+        <p class="cz-mode__tag">Learn</p>
+        <div class="cz-mode__body">
+          <span class="cz-mode__icon" data-icon="book" aria-hidden="true"></span>
+          <div>
+            <h2 class="cz-mode__title">See how angles work</h2>
+            <p class="cz-mode__blurb">Turn an angle and watch the number change, meet the clock
+               trick, and find out why long arms fool almost everybody. No score, nothing to get wrong.</p>
+          </div>
+        </div>
+        <a class="gp-btn gp-btn--primary gp-btn--big cz-mode__go" href="#/fun/angles/learn">
+          Open the angle workshop &rarr;
+        </a>
+      </section>
+
+      <section class="cz-mode cz-mode--practice">
+        <p class="cz-mode__tag">Practice</p>
+        <div class="gp-card gp-card--setup" id="gp-ang-setup"></div>
+      </section>
+    </div>
+  </section>
+
+  <section class="gp-screen cz-room--sky" id="screen-anggame" aria-labelledby="anggame-title">
+    <div class="gp-container">
+      <div class="gp-flagbar">
+        <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun/angles">&larr; Change the round</a>
+        <p class="gp-flagbar__score">
+          <span class="gp-tally gp-tally--right"><span aria-hidden="true">&#10003;</span>
+            <strong data-ang-right>0</strong><span class="gp-sr-only">right</span></span>
+          <span class="gp-tally gp-tally--wrong"><span aria-hidden="true">&#10007;</span>
+            <strong data-ang-wrong>0</strong><span class="gp-sr-only">wrong</span></span>
+        </p>
+      </div>
+      <h1 class="gp-sr-only" id="anggame-title">Guess the angle</h1>
+      <div id="gp-ang-body" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="gp-screen cz-room--sky" id="screen-anglearn" aria-labelledby="anglearn-title">
+    <div class="gp-container">
+      <div id="gp-anglearn-body"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
   <!-- Fun: name the capital city                                    -->
   <!-- ============================================================ -->
   <section class="gp-screen" id="screen-capsetup" aria-labelledby="capsetup-title">

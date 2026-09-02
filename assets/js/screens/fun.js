@@ -12,8 +12,10 @@ import * as flags from './../modules/flags.js';
 import * as shapes from './../modules/shapes.js';
 import * as capitals from './../modules/capitals.js';
 import * as elements from './../modules/elements.js';
+import * as angles from './../modules/angles.js';
+import { SCENES, sceneSvg } from './../modules/angleart.js';
 import { spreadAnswer, noteSlot } from './../modules/slots.js';
-import { renderLearn, renderElemLearn } from './learn.js';
+import { renderLearn, renderElemLearn, renderAngleLearn } from './learn.js';
 import { $, $$, paint, react, showError, showScreen, state } from './../modules/shell.js';
 
 /* ------------------------------------------------------------------ */
@@ -51,6 +53,17 @@ const ART = {
     <circle cx="28" cy="43" r="2.6" fill="${p}"/>
     <circle cx="36" cy="47" r="2" fill="${p}"/>`,
 
+  /* An opened angle with its arc, which is the whole game in one mark. The
+     arms are deliberately unequal here too -- the tile should not teach the
+     mistake the game exists to undo. */
+  angle: (t, p) => `
+    <rect x="4" y="4" width="56" height="56" rx="13" fill="${p}"/>
+    <path d="M16 48 H52" stroke="${t}" stroke-width="5" stroke-linecap="round"/>
+    <path d="M16 48 L44 18" stroke="${t}" stroke-width="5" stroke-linecap="round"/>
+    <path d="M32 48 A16 16 0 0 0 27.3 36.7" fill="none" stroke="var(--gp-ink)"
+          stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="16" cy="48" r="4" fill="var(--gp-ink)"/>`,
+
   capital: (t, p) => `
     <rect x="4" y="4" width="56" height="56" rx="13" fill="${p}"/>
     <path d="M32 10 l2.6 5.6 6.1 .8 -4.5 4.2 1.1 6 -5.3 -2.9 -5.3 2.9 1.1 -6 -4.5 -4.2 6.1 -.8 Z"
@@ -77,7 +90,10 @@ const FUN_GAMES = [
     meta: '192 capitals \u00b7 a typo still counts' },
   { id: 'elements', art: 'flask', hue: 'jade', name: 'Name the Element',
     sub: 'Everything is made of these. What is in a pencil, a balloon, a banana?',
-    meta: '118 elements \u00b7 4 kinds of question' }
+    meta: '118 elements \u00b7 4 kinds of question' },
+  { id: 'angles', art: 'angle', hue: 'sky', name: 'Guess the Angle',
+    sub: 'How far does it open? Clock hands, roofs, ramps and a ball that bounces.',
+    meta: '6 kinds of question \u00b7 no protractor needed' }
 ];
 
 function renderFunHub() {
@@ -99,12 +115,15 @@ function renderFunHub() {
 export async function renderFun(game, step) {
   if (!game) { renderFunHub(); return; }
   if (step === 'learn') {
-    await (game === 'elements' ? renderElemLearn() : renderLearn(game));
+    if (game === 'elements') { await renderElemLearn(); return; }
+    if (game === 'angles') { renderAngleLearn(); return; }
+    await renderLearn(game);
     return;
   }
   if (game === 'shapes') { await renderShapes(step); return; }
   if (game === 'capitals') { await renderCapitals(step); return; }
   if (game === 'elements') { await renderElements(step); return; }
+  if (game === 'angles') { renderAngles(step); return; }
   if (game !== 'flags') { renderFunHub(); return; }
   try {
     if (!state.flags.data) state.flags.data = await flags.loadFlags();
@@ -727,4 +746,134 @@ function drawElemResults() {
     </div>`;
   paint();
   showScreen('elemgame');
+}
+
+/* ------------------------------------------------------------------ */
+/* Fun: guess the angle                                                */
+/* ------------------------------------------------------------------ */
+
+/* The scenes are drawn once. Each is a fixed picture of a fixed angle, so
+   rebuilding the SVG on every question would be work for no difference. */
+let sceneCache = null;
+const scenes = () => (sceneCache || (sceneCache = SCENES.map((s) => ({
+  ...s, svg: sceneSvg(s.id)
+}))));
+
+export function renderAngles(step) {
+  if (step === 'play' && state.angles.round) { drawAngQuestion(); return; }
+  drawAngSetup();
+}
+
+export function drawAngSetup() {
+  $('#gp-ang-setup').innerHTML = angles.renderSetup(state.angles.setup);
+  paint();
+  showScreen('angsetup');
+}
+
+export function startAngRound() {
+  const list = angles.buildRound(scenes(), state.angles.setup);
+  if (!list.length) return;
+  state.angles.round = {
+    list, index: 0, right: 0, wrong: 0, answered: false, streak: 0, best: 0
+  };
+  location.hash = '#/fun/angles/play';
+  drawAngQuestion();
+}
+
+function angScore() {
+  const r = state.angles.round;
+  $('[data-ang-right]').textContent = r.right;
+  $('[data-ang-wrong]').textContent = r.wrong;
+}
+
+export function drawAngQuestion() {
+  const r = state.angles.round;
+  if (!r) { drawAngSetup(); return; }
+  if (r.index >= r.list.length) { drawAngResults(); return; }
+  r.answered = false;
+  $('#gp-ang-body').innerHTML =
+    angles.renderQuestion(r.list[r.index], r.index, r.list.length, r.streak);
+  angScore();
+  paint();
+  showScreen('anggame');
+}
+
+function settleAng(picked) {
+  const r = state.angles.round;
+  if (r.answered) return;
+  const q = r.list[r.index];
+  const right = String(picked) === String(q.answer);
+  r.answered = true;
+  if (right) {
+    r.right += 1;
+    r.streak += 1;
+    if (r.streak > r.best) r.best = r.streak;
+  } else {
+    r.wrong += 1;
+    r.streak = 0;
+  }
+  react(right ? 'happy' : 'oops', right ? 2300 : 1800);
+  angScore();
+
+  $$('#gp-ang-body [data-anganswer]').forEach((b) => {
+    b.disabled = true;
+    if (b.dataset.anganswer === String(q.answer)) b.classList.add('is-correct');
+    else if (b.dataset.anganswer === String(picked)) b.classList.add('is-incorrect');
+  });
+  $$('#gp-ang-body .gp-choice.is-correct .gp-choice__mark')
+    .forEach((m) => { m.innerHTML = icon('check', { size: 20 }); });
+  $$('#gp-ang-body .gp-choice.is-incorrect .gp-choice__mark')
+    .forEach((m) => { m.innerHTML = icon('cross', { size: 20 }); });
+
+  const card = $('#gp-ang-body .gp-flagq');
+  const say = document.createElement('p');
+  say.className = `gp-flagq__say ${right ? 'is-right' : 'is-wrong'}`;
+  say.textContent = right ? `Yes. ${q.explain}` : `Not that one. ${q.explain}`;
+  card.appendChild(say);
+
+  /* A wrong bounce or a wrong sort has a reason worth hearing, and it is
+     specific to the answer the child actually gave. Being told only the right
+     answer leaves the wrong idea in place. */
+  const wrongCup = !right && q.kind === 'bounce'
+    && (q.cupWhy || {})[String(picked)];
+  if (wrongCup) {
+    const extra = document.createElement('p');
+    extra.className = 'gp-muted cz-ang-extra';
+    extra.textContent = wrongCup;
+    card.appendChild(extra);
+  }
+
+  const next = document.createElement('button');
+  next.type = 'button';
+  next.className = 'gp-btn gp-btn--primary gp-btn--big';
+  next.dataset.action = 'ang-next';
+  next.textContent = r.index + 1 >= r.list.length ? 'See how you did →' : 'Next one →';
+  card.appendChild(next);
+  next.focus();
+}
+
+export function answerAngle(id) { settleAng(id); }
+
+export function nextAngle() {
+  state.angles.round.index += 1;
+  drawAngQuestion();
+}
+
+function drawAngResults() {
+  const r = state.angles.round;
+  const total = r.right + r.wrong;
+  const pct = total ? Math.round((r.right / total) * 100) : 0;
+  $('#gp-ang-body').innerHTML = `
+    <div class="gp-flagdone">
+      <h2 class="gp-flagdone__title">${pct >= 70 ? 'Sharp eyes!' : 'All done!'}</h2>
+      <p class="gp-flagdone__score"><strong>${r.right}</strong> out of ${total}</p>
+      ${r.best >= 3 ? `<p class="gp-muted">Best run: <strong>${r.best}</strong> in a row.</p>` : ''}
+      <div class="gp-row gp-row--wrap">
+        <button type="button" class="gp-btn gp-btn--primary" data-action="ang-again">Play again</button>
+        <a class="gp-btn gp-btn--ghost" href="#/fun/angles">Change the round</a>
+        <a class="gp-btn gp-btn--quiet" href="#/fun">Back to games</a>
+      </div>
+    </div>`;
+  paint();
+  showScreen('anggame');
 }

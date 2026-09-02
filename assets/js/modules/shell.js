@@ -43,6 +43,16 @@ export const state = {
     round: null
   },
   /* The capital game. Same shape as the others; `pick` is four choices or typed. */
+  /* Guess the angle. `ask` is which of the six kinds of question, `set` is how
+     close the wrong answers sit. */
+  angles: {
+    setup: { ask: 'mix', set: 'steps', count: 10 },
+    round: null,
+    /* The workshop's three demonstrations remember where the child left them,
+       so scrolling away and back does not reset the lesson. */
+    demo: { deg: 45, swap: false, hour: 4 }
+  },
+
   capitals: {
     data: null,
     setup: { count: 10, mode: 'random', continents: [], pick: 'choice' },
@@ -92,7 +102,8 @@ export function hydrateIcons(root = document) {
 
 const SCREENS = ['home', 'gifted', 'tests', 'categories', 'quiz', 'results', 'parents',
   'math', 'mathtopic', 'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame',
-  'capsetup', 'capgame', 'elemsetup', 'elemgame', 'learn', 'elemlearn', 'error'];
+  'capsetup', 'capgame', 'elemsetup', 'elemgame', 'angsetup', 'anggame',
+  'learn', 'elemlearn', 'anglearn', 'error'];
 
 /**
  * Show one screen and hide the rest.

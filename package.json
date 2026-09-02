@@ -17,7 +17,7 @@
     "mathverify": "node tools/mathverify.mjs",
     "flagcheck": "node tools/flagcheck.mjs",
     "test": "node --test",
-    "verify": "npm run parse && npm run validate && npm run dupcheck && npm run rulecheck && npm run mathcheck && npm run mathverify && npm run flagcheck && npm run shapecheck && npm run shapeverify && npm run capitalcheck && npm run elementcheck && npm run roomcheck && npm run animcheck && npm run archcheck && npm run linkcheck && npm test",
+    "verify": "npm run parse && npm run validate && npm run dupcheck && npm run rulecheck && npm run mathcheck && npm run mathverify && npm run flagcheck && npm run shapecheck && npm run shapeverify && npm run capitalcheck && npm run elementcheck && npm run anglecheck && npm run roomcheck && npm run animcheck && npm run archcheck && npm run linkcheck && npm test",
     "serve": "python3 tools/serve.py 8765",
     "shapecheck": "node tools/shapecheck.mjs",
     "roomcheck": "node tools/roomcheck.mjs",
@@ -26,6 +26,7 @@
     "animcheck": "node tools/animcheck.mjs",
     "capitalcheck": "node tools/capitalcheck.mjs",
     "elementcheck": "node tools/elementcheck.mjs",
-    "shapeverify": "node tools/shapeverify.mjs"
+    "shapeverify": "node tools/shapeverify.mjs",
+    "anglecheck": "node tools/anglecheck.mjs"
   }
 }
