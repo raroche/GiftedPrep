@@ -93,6 +93,49 @@
     check(`${g.id}: learn mode is visible`, seen.length === 1, seen.join(',') || 'nothing visible');
   }
 
+  /* Every page below home offers a way back, it says where it goes, and it is
+     the first thing in the body rather than an arrow beside the logo. Both
+     bugs this guards against were invisible to node: the link painted into the
+     screen the router was leaving, so nothing appeared; and a listener left
+     bound to the removed top-bar button threw during boot and the whole site
+     came up blank. */
+  const BACK = [
+    ['#/home', null],
+    ['#/gifted', '#/home'],
+    ['#/tests', '#/gifted'],
+    ['#/parents', '#/gifted'],
+    ['#/math', '#/home'],
+    ['#/math/1', '#/math'],
+    ['#/math/1/four-colours', '#/math/1'],
+    ['#/fun', '#/home'],
+    ['#/fun/flags', '#/fun'],
+    ['#/fun/elements', '#/fun'],
+    ['#/fun/flags/learn', '#/fun/flags']
+  ];
+  for (const [hash, want] of BACK) {
+    location.hash = hash;
+    await wait(1200);
+    const screen = document.querySelector('.gp-screen.is-active');
+    const backs = [...(screen ? screen.querySelectorAll('.gp-backlink') : [])].filter(vis);
+    if (want === null) {
+      check(`${hash}: home offers no way back`, backs.length === 0,
+        backs.map((b) => b.textContent.trim()).join(','));
+      continue;
+    }
+    check(`${hash}: has exactly one back control`, backs.length === 1,
+      `${backs.length} found`);
+    if (backs.length !== 1) continue;
+    check(`${hash}: back goes to ${want}`, backs[0].getAttribute('href') === want,
+      backs[0].getAttribute('href') || 'no href');
+    check(`${hash}: back says where it goes`, backs[0].textContent.trim().length > 2,
+      backs[0].textContent.trim());
+    /* Top of the body, not the top bar: above the title and left-aligned. */
+    const title = screen.querySelector('h1');
+    const box = backs[0].getBoundingClientRect();
+    check(`${hash}: back sits above the title`,
+      !title || box.bottom <= title.getBoundingClientRect().top);
+  }
+
   const failed = results.filter((r) => !r.ok);
   console.log(`${results.length - failed.length}/${results.length} checks passed`);
   failed.forEach((r) => console.log(`  FAIL  ${r.name}  ${r.detail}`));

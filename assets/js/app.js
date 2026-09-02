@@ -29,6 +29,7 @@ import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnsw
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
 import { renderLearn, renderElemLearn, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
+import { backTarget } from './modules/routes.js';
 
 /* ------------------------------------------------------------------ */
 /* Theme                                                               */
@@ -112,18 +113,17 @@ function route() {
 }
 
 function goBack() {
-  const hash = location.hash || '#/home';
-  /* Test practice is a room now, so backing out of anything inside it lands in
-     that room rather than on the zoo map. Coming out of a room goes to the map. */
-  if (hash === '#/categories/all') location.hash = '#/gifted';
-  else if (hash.startsWith('#/categories')) location.hash = '#/tests';
-  else if (hash.startsWith('#/tests')) location.hash = '#/gifted';
-  else if (hash.startsWith('#/quiz')) {
-    if (state.session && state.session.answers.length && !confirmLeave()) return;
-    speech.cancel();
-    location.hash = state.lastRun && state.lastRun.testId
-      ? `#/categories/${state.lastRun.testId}` : '#/gifted';
-  } else location.hash = '#/home';
+  const target = backTarget();
+  if (!target) { location.hash = '#/home'; return; }
+  if (target.href) { location.hash = target.href; return; }
+  leaveQuiz();
+}
+
+function leaveQuiz() {
+  if (state.session && state.session.answers.length && !confirmLeave()) return;
+  speech.cancel();
+  location.hash = state.lastRun && state.lastRun.testId
+    ? `#/categories/${state.lastRun.testId}` : '#/gifted';
 }
 
 function confirmLeave() {
@@ -332,6 +332,9 @@ function onClick(ev) {
   const action = ev.target.closest('[data-action]');
   if (!action) return;
   switch (action.dataset.action) {
+    case 'leave-quiz':
+      leaveQuiz();
+      break;
     case 'elem-start':
       startElemRound();
       break;
@@ -530,7 +533,6 @@ async function boot() {
   document.addEventListener('keydown', onKeydown);
   window.addEventListener('hashchange', route);
 
-  $('#gp-back').addEventListener('click', goBack);
   $('#gp-next').addEventListener('click', nextQuestion);
   $('#gp-prev').addEventListener('click', goPrev);
   $('#gp-fwd').addEventListener('click', goForward);

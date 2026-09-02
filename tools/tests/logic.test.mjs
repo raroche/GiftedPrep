@@ -13,6 +13,7 @@ import fs from 'node:fs';
 
 import { orderPool, shuffle, relabel, QuizSession } from '../../assets/js/modules/quiz.js';
 import { buildRound, makeChoices } from '../../assets/js/modules/flags.js';
+import { backTarget } from '../../assets/js/modules/routes.js';
 import {
   hanoiStart, hanoiMove, hanoiLegal, hanoiWon,
   checkMagic, checkSieve, sieveKeep, isPrime,
@@ -266,5 +267,49 @@ describe('figure symmetry', () => {
   test('a circle looks the same however it is turned', () => {
     assert.equal(symmetryOf('circle'), Infinity);
     assert.deepEqual(canonical({ s: 'circle', r: 137 }), { s: 'circle' });
+  });
+});
+
+describe('where back goes', () => {
+  /* The chain this replaced had a hole: nothing matched #/math, so a child
+     inside a lesson was thrown out to the home page instead of up one step. */
+  test('a Math Lab lesson goes up to its grade, not to the home page', () => {
+    assert.equal(backTarget('#/math/1/four-colours').href, '#/math/1');
+    assert.equal(backTarget('#/math/6/gausss-trick').href, '#/math/6');
+  });
+
+  test('and a grade goes up to the Math Lab, which goes home', () => {
+    assert.equal(backTarget('#/math/1').href, '#/math');
+    assert.equal(backTarget('#/math').href, '#/home');
+  });
+
+  test('the test practice path walks back one step at a time', () => {
+    assert.equal(backTarget('#/tests').href, '#/gifted');
+    assert.equal(backTarget('#/categories/cogat').href, '#/tests');
+    assert.equal(backTarget('#/categories/all').href, '#/gifted');
+    assert.equal(backTarget('#/gifted').href, '#/home');
+  });
+
+  test('the home page is the top, and the games label their own way out', () => {
+    assert.equal(backTarget('#/home'), null);
+    assert.equal(backTarget('#/'), null);
+    assert.equal(backTarget('#/fun/flags'), null);
+    assert.equal(backTarget('#/fun/elements/learn'), null);
+    /* The games hub itself has no link of its own, so it gets one. */
+    assert.equal(backTarget('#/fun').href, '#/home');
+  });
+
+  test('leaving a quiz is an action, not a link, so it can ask first', () => {
+    const t = backTarget('#/quiz');
+    assert.equal(t.href, null);
+    assert.equal(t.action, 'leave-quiz');
+  });
+
+  test('every back target names where it goes', () => {
+    for (const h of ['#/gifted', '#/tests', '#/categories/cogat', '#/math/1',
+                     '#/math/1/four-colours', '#/parents', '#/fun']) {
+      const t = backTarget(h);
+      assert.ok(t && t.label && t.label.length > 1, `${h} has no label`);
+    }
   });
 });

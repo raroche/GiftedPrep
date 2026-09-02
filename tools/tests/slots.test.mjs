@@ -46,6 +46,14 @@ test('nothing breaks when there is no answer or nothing to swap with', () => {
 });
 
 test('over a long run the four positions stay even and no streak exceeds two', () => {
+  /* A seeded generator, because a chi-square test against the 5% threshold
+     fails 5% of runs by definition. A test that cries wolf one time in twenty
+     teaches people to ignore it. */
+  let seed = 20260901;
+  const random = () => {
+    seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+    return seed / 0x7fffffff;
+  };
   const pool = inScope(data, 'countries');
   const at = [0, 0, 0, 0];
   const recent = [];
@@ -53,8 +61,8 @@ test('over a long run the four positions stay even and no streak exceeds two', (
   for (let i = 0; i < 8000; i += 1) {
     const c = pool[i % pool.length];
     const choices = spreadAnswer(
-      makeChoices(c, data, 4, Math.random, 'countries'),
-      (x) => x.code === c.code, recent);
+      makeChoices(c, data, 4, random, 'countries'),
+      (x) => x.code === c.code, recent, 2, random);
     const k = choices.findIndex((x) => x.code === c.code);
     noteSlot(recent, k);
     at[k] += 1;

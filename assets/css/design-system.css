@@ -3221,3 +3221,11 @@ button, a, label, summary, [role="button"] {
   .cz-mode__icon { width: 46px; height: 46px; }
   .cz-mode__icon svg { width: 24px; height: 24px; }
 }
+
+/* The back control sits in the page, above the title, not in the top bar.
+   In the bar it was a bare arrow beside the logo with no idea where it went;
+   here it says its destination and is the same shape on every screen, next to
+   the thing it takes you back from. */
+.gp-backslot:empty { display: none; }
+.gp-backslot { margin-bottom: var(--gp-space-4); }
+.gp-backslot .gp-backlink { margin: 0; }

@@ -129,6 +129,27 @@ for (const m of html.matchAll(/id="screen-([a-z]+)"/g)) {
   if (!listed.has(m[1])) warn(`index.html has #screen-${m[1]} but SCREENS does not list it`);
 }
 
+/* ---- every element the code reaches for must exist in the markup ----
+   Removing the top-bar back button left a listener bound to it. $('#gp-back')
+   returned null, addEventListener threw during boot, and the whole app died
+   before it drew anything: a blank page with one console line. The element was
+   gone from index.html and nothing checked that the code had let go of it. */
+const known = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));
+/* Plenty of ids are created by the JS itself, so those count too. What must
+   not happen is reaching for an id that exists in neither place. */
+for (const f of files) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/\bid="([A-Za-z][\w-]*)"/g)) known.add(m[1]);
+}
+for (const f of files) {
+  const src = fs.readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/\$\('#([A-Za-z][\w-]*)'\)/g)) {
+    if (!known.has(m[1])) {
+      err(`${f} reaches for #${m[1]}, which nothing creates`);
+    }
+  }
+}
+
 /* ---- report ---- */
 
 const byLayer = { app: 0, screens: 0, modules: 0 };

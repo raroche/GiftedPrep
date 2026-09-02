@@ -11,6 +11,7 @@ import * as storage from './storage.js';
 import { icon } from './icons.js';
 import { setMood } from './mascot.js';
 import { applyStyles } from './style.js';
+import { backTarget } from './routes.js';
 
 /* ------------------------------------------------------------------ */
 /* State                                                               */
@@ -102,6 +103,26 @@ const SCREENS = ['home', 'gifted', 'tests', 'categories', 'quiz', 'results', 'pa
  * been built, so nothing threw and nothing logged. It only looked broken to a
  * person. Now it says so.
  */
+/**
+ * The one back control, drawn into whichever screen is showing.
+ *
+ * It says where it goes rather than being a bare arrow, and it sits in the page
+ * above the title instead of in the top bar, where it was a mystery arrow
+ * beside the logo.
+ */
+function paintBack() {
+  $$('.gp-backslot').forEach((slot) => { slot.innerHTML = ''; });
+  const target = backTarget();
+  if (!target) return;
+  const slot = document.querySelector('.gp-screen.is-active .gp-backslot');
+  if (!slot) return;
+  slot.innerHTML = target.href
+    ? `<a class="gp-btn gp-btn--ghost gp-backlink" href="${target.href}">`
+      + `&larr; ${target.label}</a>`
+    : '<button type="button" class="gp-btn gp-btn--ghost gp-backlink"'
+      + ` data-action="${target.action}">&larr; ${target.label}</button>`;
+}
+
 export function showScreen(name) {
   if (!SCREENS.includes(name)) {
     throw new Error(`showScreen("${name}"): not in SCREENS, so every screen `
@@ -111,7 +132,11 @@ export function showScreen(name) {
     const el = document.getElementById(`screen-${s}`);
     if (el) el.classList.toggle('is-active', s === name);
   });
-  $('#gp-back').hidden = (name === 'home');
+  /* The back control lives in the page now, not the top bar, and is drawn
+     here rather than in the router. The router calls route() before the screen
+     it is building becomes active, so painting there filled the slot of the
+     screen the child was leaving — which is to say, nothing appeared. */
+  paintBack();
   const inQuiz = name === 'quiz';
   $('#gp-score-chip').hidden = !inQuiz;
   $('#gp-streak-chip').hidden = !inQuiz;
