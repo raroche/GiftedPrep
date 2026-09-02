@@ -440,6 +440,7 @@ GiftedPrep/
 │           ├── elemart.js      a drawn picture per everyday element use
 │           └── learn.js        the browsing component the games share
 │           ├── fuzzy.js        typo tolerance shared by both typed games
+│           ├── slots.js        caps how often the answer sits in one place
 │           ├── sections.js     the rooms, and the creature that fronts each
 │           └── shell.js        shared state and DOM helpers
 │

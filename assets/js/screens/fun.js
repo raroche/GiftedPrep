@@ -12,6 +12,7 @@ import * as flags from './../modules/flags.js';
 import * as shapes from './../modules/shapes.js';
 import * as capitals from './../modules/capitals.js';
 import * as elements from './../modules/elements.js';
+import { spreadAnswer, noteSlot } from './../modules/slots.js';
 import { renderLearn, renderElemLearn } from './learn.js';
 import { $, $$, paint, react, showError, showScreen, state } from './../modules/shell.js';
 
@@ -127,7 +128,7 @@ export function startFlagRound() {
   const list = flags.buildRound(state.flags.data, setup);
   if (!list.length) return;
   state.flags.round = {
-    list, index: 0, right: 0, wrong: 0, answered: false,
+    list, index: 0, right: 0, wrong: 0, answered: false, slots: [],
     choices: null, vault: null, vaultDone: false
   };
   location.hash = '#/fun/flags/play';
@@ -147,8 +148,10 @@ export function drawFlagQuestion() {
   const country = r.list[r.index];
   /* Choices stay inside the chosen scope: a child who asked for countries
      should not be shown Guam as a plausible wrong answer. */
-  r.choices = flags.makeChoices(country, state.flags.data, 4, Math.random,
-    state.flags.setup.scope);
+  r.choices = spreadAnswer(
+    flags.makeChoices(country, state.flags.data, 4, Math.random, state.flags.setup.scope),
+    (x) => x.code === country.code, r.slots);
+  noteSlot(r.slots, r.choices.findIndex((x) => x.code === country.code));
   r.answered = false;
   $('#gp-flag-body').innerHTML = flags.renderQuestion(country, r.choices, r.index, r.list.length);
   flagScore();
@@ -276,7 +279,7 @@ export function startShapeRound() {
   const list = shapes.buildRound(state.shapes.data, setup);
   if (!list.length) return;
   state.shapes.round = {
-    list, index: 0, right: 0, wrong: 0, answered: false,
+    list, index: 0, right: 0, wrong: 0, answered: false, slots: [],
     pick: setup.pick, vault: null, vaultDone: false
   };
   location.hash = '#/fun/shapes/play';
@@ -300,7 +303,11 @@ export async function drawShapeQuestion() {
   let svg;
   try { svg = await shapes.shapeSvg(country.code); }
   catch (err) { console.error(err); showError('That outline could not be loaded.'); return; }
-  const choices = r.pick === 'choice' ? shapes.makeChoices(country, state.shapes.data) : [];
+  const choices = r.pick === 'choice'
+    ? spreadAnswer(shapes.makeChoices(country, state.shapes.data),
+      (x) => x.code === country.code, r.slots)
+    : [];
+  if (choices.length) noteSlot(r.slots, choices.findIndex((x) => x.code === country.code));
   $('#gp-shape-body').innerHTML = shapes.renderQuestion(svg, choices, r.index, r.list.length, r.pick);
   shapeScore();
   const box = $('#gp-shape-body [data-shapetyped]');
@@ -454,7 +461,7 @@ export function startCapRound() {
   const list = capitals.buildRound(state.capitals.data, state.capitals.setup);
   if (!list.length) return;
   state.capitals.round = {
-    list, index: 0, right: 0, wrong: 0, answered: false, choices: null
+    list, index: 0, right: 0, wrong: 0, answered: false, choices: null, slots: []
   };
   location.hash = '#/fun/capitals/play';
   drawCapQuestion();
@@ -472,7 +479,11 @@ export function drawCapQuestion() {
   if (r.index >= r.list.length) { drawCapResults(); return; }
   const country = r.list[r.index];
   const pick = state.capitals.setup.pick;
-  if (!r.choices) r.choices = capitals.makeChoices(country, state.capitals.data);
+  if (!r.choices) {
+    r.choices = spreadAnswer(capitals.makeChoices(country, state.capitals.data),
+      (x) => x.code === country.code, r.slots);
+    noteSlot(r.slots, r.choices.findIndex((x) => x.code === country.code));
+  }
   r.answered = false;
   $('#gp-cap-body').innerHTML =
     capitals.renderQuestion(country, r.choices, r.index, r.list.length, pick);
@@ -609,7 +620,7 @@ export function startElemRound() {
   const list = elements.buildRound(state.elements.data, state.elements.setup);
   if (!list.length) return;
   state.elements.round = {
-    list, index: 0, right: 0, wrong: 0, answered: false, choices: null
+    list, index: 0, right: 0, wrong: 0, answered: false, choices: null, slots: []
   };
   location.hash = '#/fun/elements/play';
   drawElemQuestion();
@@ -627,7 +638,11 @@ export function drawElemQuestion() {
   if (r.index >= r.list.length) { drawElemResults(); return; }
   const el = r.list[r.index];
   const ask = state.elements.setup.ask;
-  if (!r.choices) r.choices = elements.makeChoices(el, state.elements.data);
+  if (!r.choices) {
+    r.choices = spreadAnswer(elements.makeChoices(el, state.elements.data),
+      (x) => x.z === el.z, r.slots);
+    noteSlot(r.slots, r.choices.findIndex((x) => x.z === el.z));
+  }
   r.answered = false;
   $('#gp-elem-body').innerHTML = elements.renderQuestion(
     el, r.choices, r.index, r.list.length, ask, state.elements.data);
