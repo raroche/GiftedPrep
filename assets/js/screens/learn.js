@@ -33,7 +33,13 @@ const GAMES = {
     continentOf: (c) => c.continent,
     media: (c) => `<img class="cz-learn__flag" src="${flags.flagSrc(c.code)}"
       alt="The flag of ${escapeHtml(c.name)}" width="320" height="240" decoding="async">`,
-    sub: (c, d) => continentName(d, c.continent)
+    sub: (c, d) => continentName(d, c.continent),
+    /* Eleven places have no flag of their own. That is worth meeting here even
+       though it cannot be asked as a question. */
+    note: (c, d) => (c.usesFlagOf
+      ? `No flag of its own — it flies the flag of `
+        + `${(d.countries.find((x) => x.code === c.usesFlagOf) || {}).name || c.usesFlagOf}.`
+      : '')
   },
   shapes: {
     title: 'Every country by its outline',
@@ -112,7 +118,7 @@ export async function paintLearn() {
       media,
       title: g.title2 ? g.title2(item) : g.nameOf(item),
       sub: g.title2 ? g.nameOf(item) : g.sub(item, L.data),
-      note: g.note ? g.note(item) : ''
+      note: g.note ? g.note(item, L.data) : ''
     }
   });
   paint();

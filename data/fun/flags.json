@@ -485,7 +485,8 @@
    "code": "gf",
    "name": "French Guiana",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "usesFlagOf": "fr"
   },
   {
    "code": "pf",
@@ -557,7 +558,8 @@
    "code": "gp",
    "name": "Guadeloupe",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "usesFlagOf": "fr"
   },
   {
    "code": "gu",
@@ -605,7 +607,8 @@
    "code": "hm",
    "name": "Heard Island and McDonald Islands",
    "continent": "antarctic",
-   "un": false
+   "un": false,
+   "usesFlagOf": "au"
   },
   {
    "code": "hn",
@@ -869,7 +872,8 @@
    "code": "yt",
    "name": "Mayotte",
    "continent": "africa",
-   "un": false
+   "un": false,
+   "usesFlagOf": "fr"
   },
   {
    "code": "mx",
@@ -1133,19 +1137,22 @@
    "code": "re",
    "name": "Réunion",
    "continent": "africa",
-   "un": false
+   "un": false,
+   "usesFlagOf": "fr"
   },
   {
    "code": "bl",
    "name": "Saint Barthélemy",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "usesFlagOf": "fr"
   },
   {
    "code": "sh",
    "name": "Saint Helena, Ascension and Tristan da Cunha",
    "continent": "africa",
-   "un": false
+   "un": false,
+   "usesFlagOf": "gb"
   },
   {
    "code": "kn",
@@ -1163,13 +1170,15 @@
    "code": "mf",
    "name": "Saint Martin",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "usesFlagOf": "fr"
   },
   {
    "code": "pm",
    "name": "Saint Pierre and Miquelon",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "usesFlagOf": "fr"
   },
   {
    "code": "vc",
@@ -1451,7 +1460,8 @@
    "code": "um",
    "name": "United States Minor Outlying Islands",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "usesFlagOf": "us"
   },
   {
    "code": "vi",
@@ -1499,7 +1509,8 @@
    "code": "wf",
    "name": "Wallis and Futuna",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "usesFlagOf": "fr"
   },
   {
    "code": "eh",
@@ -1741,5 +1752,6 @@
    ],
    "answer": 0
   }
- ]
+ ],
+ "note": "Eleven territories carry usesFlagOf: they have no flag of their own and fly their parent country's, so they are never asked about and never offered as an answer. They still appear in the browsing mode, where that fact is the thing worth learning."
 }

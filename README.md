@@ -210,7 +210,15 @@ Rwanda is now redrawn from Natural Earth, and every outline is checked against
 independent geometry by `tools/shapeverify.py` rather than trusted because of
 its filename. It carries no standard licence: its terms are "do what you want
 with them as long as you mention me" and no reselling, so it is credited here
-and in the data file. `tools/flagcheck.mjs` and `tools/shapecheck.mjs` check
+and in the data file. Eleven entries have no flag of their own and fly a parent country's: nine share
+the French tricolour, and Heard Island, the US Minor Outlying Islands and the
+Saint Helena territory fly the Australian, American and British flags. They are
+marked `usesFlagOf` and never asked about or offered as an answer, because
+showing the tricolour with nine correct answers is not a question. They still
+appear in the browsing mode, where having no flag of your own is the fact worth
+meeting.
+
+`tools/flagcheck.mjs` and `tools/shapecheck.mjs` check
 the join: every country has a real image file, every bundled image is used, no
 two countries share a name or a typed answer, and every vault answer matches
 the picture it is shown against.

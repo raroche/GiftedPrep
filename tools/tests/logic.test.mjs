@@ -132,7 +132,9 @@ describe('flag game', () => {
 
   test('asking for more than a continent holds gives what exists, with no repeats', () => {
     const got = buildRound(data, { count: 50, mode: 'continent', continents: ['antarctic'] });
-    const pool = data.countries.filter((c) => c.continent === 'antarctic');
+    /* Territories flying a parent country's flag are not askable, so the pool
+       is what is askable in that continent, not everything in it. */
+    const pool = data.countries.filter((c) => c.continent === 'antarctic' && !c.usesFlagOf);
     assert.equal(got.length, pool.length);
     assert.equal(new Set(got.map((c) => c.code)).size, got.length);
   });

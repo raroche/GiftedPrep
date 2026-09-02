@@ -10,7 +10,9 @@
  */
 
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 import path from 'node:path';
+import { askable } from '../assets/js/modules/flags.js';
 
 const DATA = 'data/fun/flags.json';
 const DIR = 'assets/img/flags';
@@ -95,6 +97,54 @@ data.past.forEach((p, i) => {
 
 for (const key of ['flags', 'countries', 'past']) {
   if (!data.attribution || !data.attribution[key]) err(`no attribution recorded for "${key}"`);
+}
+
+/* ---- no two askable entries may show the same flag ----
+   Nine entries carry the French tricolour, and Heard Island, the US Minor
+   Outlying Islands and the Saint Helena territory fly the Australian, American
+   and British flags — they have no flag of their own. That made the question
+   unanswerable: the tricolour appeared with Saint Martin and Saint Pierre and
+   Miquelon among the choices and France absent.
+
+   Byte equality is not enough to catch it. The files differ only in their id
+   attribute, so they hash differently while drawing exactly the same flag. */
+const draws = (file) => fs.readFileSync(file, 'utf8')
+  .replace(/\sid="[^"]*"/g, '')
+  .replace(/url\(#[^)]*\)/g, 'url(#x)')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const seenFlag = new Map();
+for (const c of data.countries) {
+  const f = `${DIR}/${c.code}.svg`;
+  if (!fs.existsSync(f)) continue;
+  const h = crypto.createHash('sha1').update(draws(f)).digest('hex');
+  const twin = seenFlag.get(h);
+  if (twin) {
+    /* Sharing is allowed only when it is declared and only one of the pair is
+       asked about. */
+    const declared = c.usesFlagOf === twin.code || twin.usesFlagOf === c.code
+      || (c.usesFlagOf && c.usesFlagOf === twin.usesFlagOf);
+    if (!declared) {
+      err(`${c.code} (${c.name}) and ${twin.code} (${twin.name}) draw the same flag, `
+        + 'and neither declares usesFlagOf — one of them is an unanswerable question');
+    }
+  } else {
+    seenFlag.set(h, c);
+  }
+}
+
+/* Whatever a territory points at must exist and must not itself be a pointer. */
+for (const c of data.countries.filter((x) => x.usesFlagOf)) {
+  const parent = data.countries.find((x) => x.code === c.usesFlagOf);
+  if (!parent) err(`${c.code}: usesFlagOf "${c.usesFlagOf}" is not a country here`);
+  else if (parent.usesFlagOf) err(`${c.code}: points at ${parent.code}, which also points elsewhere`);
+}
+
+/* And a shared flag must never reach a question or a choice. */
+const askableList = askable(data);
+for (const c of askableList) {
+  if (c.usesFlagOf) err(`${c.code} (${c.name}) flies another flag but is still askable`);
 }
 
 /* ---- report ---- */

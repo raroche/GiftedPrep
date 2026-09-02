@@ -50,8 +50,22 @@ export function shuffle(list, random = Math.random) {
  * `count` may be a number or 'all'. Asking for more than the pool holds gives
  * the whole pool rather than repeating a flag, which would look like a bug.
  */
+/**
+ * Anything that flies another country's flag cannot be asked about.
+ *
+ * Nine entries share the French tricolour, and Heard Island, the US Minor
+ * Outlying Islands and the Saint Helena territory fly the Australian, American
+ * and British flags. Showing the tricolour and asking "which country is this?"
+ * has nine correct answers, which is how Saint Martin and Saint Pierre and
+ * Miquelon came to appear as choices for a flag that is France's.
+ *
+ * They are not deleted. In the browsing mode they are worth meeting, because
+ * "this place flies France's flag" is the fact itself.
+ */
+export const askable = (data) => data.countries.filter((c) => !c.usesFlagOf);
+
 export function buildRound(data, { count = 10, mode = 'random', continents = [], random = Math.random } = {}) {
-  let pool = data.countries;
+  let pool = askable(data);
   if (mode === 'continent' && continents.length) {
     pool = pool.filter((c) => continents.includes(c.continent));
   }
@@ -70,12 +84,11 @@ export function buildRound(data, { count = 10, mode = 'random', continents = [],
  * Peru, Norway" is not.
  */
 export function makeChoices(country, data, howMany = 4, random = Math.random) {
-  const sameArea = data.countries.filter(
-    (c) => c.code !== country.code && c.continent === country.continent
-  );
-  const elsewhere = data.countries.filter(
-    (c) => c.code !== country.code && c.continent !== country.continent
-  );
+  /* A territory flying this flag would be an equally correct answer, so it
+     cannot be offered as a wrong one. */
+  const pool = askable(data).filter((c) => c.code !== country.code);
+  const sameArea = pool.filter((c) => c.continent === country.continent);
+  const elsewhere = pool.filter((c) => c.continent !== country.continent);
   const picked = shuffle(sameArea, random).slice(0, howMany - 1);
   while (picked.length < howMany - 1 && elsewhere.length) {
     const extra = shuffle(elsewhere, random)[0];
