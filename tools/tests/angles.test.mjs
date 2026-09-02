@@ -78,6 +78,70 @@ describe('the choices offered', () => {
   });
 });
 
+describe('the answer is the right answer', () => {
+  /*
+   * These are the tests that were missing, and a wrong answer shipped because
+   * of it. The comparison question worked out the answer from the order the two
+   * angles were drawn in, while separately always putting the larger one on the
+   * left -- so half the time it ticked the narrower angle, and printed "the
+   * wider one is 165" under a ticked 60.
+   *
+   * Everything else in this file passed throughout. Checking that the answer is
+   * among the choices, that the choices differ, and that no clue leaks is worth
+   * nothing if nobody checks that the answer is true.
+   */
+  test('the wider angle is the one that is marked wider', () => {
+    const random = seeded(31);
+    for (const set of ['corners', 'steps', 'sharp']) {
+      for (let i = 0; i < 1500; i += 1) {
+        const q = A.buildQuestion('bigger', set, scenes, random);
+        const chosen = q.choices.find((c) => c.id === q.answer);
+        const other = q.choices.find((c) => c.id !== q.answer);
+        assert.ok(chosen.deg > other.deg,
+          `${set}: marked ${chosen.deg} as wider than ${other.deg}`);
+      }
+    }
+  });
+
+  test('the wider angle is on the left about half the time', () => {
+    /* Always drawing it on one side would let a child win without looking. */
+    const random = seeded(37);
+    let left = 0;
+    for (let i = 0; i < 4000; i += 1) {
+      if (A.buildQuestion('bigger', 'steps', scenes, random).answer === 'left') left += 1;
+    }
+    assert.ok(left / 4000 > 0.45 && left / 4000 < 0.55, `left wins ${left / 4000}`);
+  });
+
+  test('every question agrees with the number its own picture shows', () => {
+    const random = seeded(41);
+    for (let i = 0; i < 6000; i += 1) {
+      const q = A.buildQuestion('mix', 'sharp', scenes, random);
+      if (q.truth == null) continue;
+      if (q.kind === 'sort') {
+        assert.equal(q.answer, A.familyOf(q.truth), `${q.truth} sorted as ${q.answer}`);
+      } else if (q.kind === 'bigger') {
+        const chosen = q.choices.find((c) => c.id === q.answer);
+        assert.equal(chosen.deg, q.truth);
+      } else {
+        assert.equal(Number(q.answer), q.truth, `${q.kind} shows ${q.truth}, answers ${q.answer}`);
+      }
+      /* The sentence under the answer has to say the same thing as the tick. */
+      assert.ok(q.explain.includes(String(q.truth)),
+        `${q.kind}: the explanation never mentions ${q.truth}`);
+    }
+  });
+
+  test('a clock question matches the time on its own face', () => {
+    const random = seeded(43);
+    for (let i = 0; i < 2000; i += 1) {
+      const q = A.buildQuestion('clock', 'sharp', scenes, random);
+      assert.equal(Number(q.answer), A.clockAngle(q.hands.hour, q.hands.minute));
+      assert.ok(q.prompt.includes(String(q.hands.hour)), 'the prompt names another time');
+    }
+  });
+});
+
 describe('arm length must never be a clue', () => {
   test('the arms are always a useful size and always visibly different', () => {
     /* If the arms match, the question does not put the mistake to the child at

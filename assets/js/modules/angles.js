@@ -398,8 +398,9 @@ function askEstimate(set, random) {
   const step = SETS.find((s) => s.id === set).step;
   return {
     kind: 'estimate',
+    truth: deg,
     prompt: 'How big is this angle?',
-    figure: angleSvg(deg, { ...d, size: 240, label: 'An angle to measure' }),
+    figure: angleSvg(deg, { ...d, size: 240, label: `An angle of ${deg} degrees` }),
     choices: numberChoices(deg, step, 4, random).map((v) => ({ id: String(v), html: degLabel(v) })),
     answer: String(deg),
     explain: `It is ${degLabel(deg)} — ${FAMILIES.find((f) => f.id === familyOf(deg)).name.toLowerCase()}.`
@@ -422,26 +423,39 @@ function askBigger(set, random) {
   let a = pick(pool, random);
   let b = pick(pool.filter((v) => Math.abs(v - a) >= gap), random);
   if (b == null) { a = 40; b = a + gap; }
-  const bigger = a > b ? 'left' : 'right';
-  const left = a > b ? a : b;
-  const right = a > b ? b : a;
+
+  /* Sort first, THEN toss for which side the wider one goes to. The first
+     version worked out the answer from the draw order and separately put the
+     larger value on the left every time, so whenever the second draw was the
+     larger one the game marked the narrower angle correct. It said so out loud
+     in its own feedback -- "the wider one is 165" while ticking the 60 -- and
+     the tests did not notice, because none of them asked the only question that
+     matters here: is the answer the wider angle? */
+  const wide = Math.max(a, b);
+  const narrow = Math.min(a, b);
+  const wideLeft = random() < 0.5;
+  const answer = wideLeft ? 'left' : 'right';
 
   const side = (deg, id) => ({
     id,
+    deg,
     html: angleSvg(deg, {
       ...dressing(random), size: 190, fit: false, label: 'One of two angles'
     })
   });
   return {
     kind: 'bigger',
+    truth: wide,
     prompt: 'Which angle opens wider?',
     hint: 'The arms are different lengths on purpose. Length is not the answer.',
     figure: '',
     wide: true,
-    choices: [side(left, 'left'), side(right, 'right')],
-    answer: bigger,
-    explain: `The wider one is ${degLabel(Math.max(left, right))}. `
-      + `The other is ${degLabel(Math.min(left, right))}.`
+    choices: [
+      side(wideLeft ? wide : narrow, 'left'),
+      side(wideLeft ? narrow : wide, 'right')
+    ],
+    answer,
+    explain: `The wider one is ${degLabel(wide)}. The other is ${degLabel(narrow)}.`
   };
 }
 
@@ -455,8 +469,10 @@ function askSort(set, random) {
   const fam = familyOf(deg);
   return {
     kind: 'sort',
+    truth: deg,
     prompt: 'What kind of angle is this?',
-    figure: angleSvg(deg, { ...dressing(random), size: 240, label: 'An angle to sort' }),
+    figure: angleSvg(deg, { ...dressing(random), size: 240,
+      label: `An angle of ${deg} degrees` }),
     choices: FAMILIES.map((f) => ({ id: f.id, html: f.name, sub: f.hint })),
     answer: fam,
     explain: `${degLabel(deg)} is ${FAMILIES.find((f) => f.id === fam).name.toLowerCase()} — `
@@ -481,6 +497,8 @@ function askClock(set, random) {
   const step = half ? 15 : 30;
   return {
     kind: 'clock',
+    truth: deg,
+    hands: { hour, minute },
     prompt: `The clock says ${hour}${minute === 30 ? ':30' : " o'clock"}. `
       + 'What angle is between the hands?',
     figure: clockSvg(hour, minute),
@@ -496,6 +514,8 @@ function askWorld(scenes, set, random) {
   const step = SETS.find((s) => s.id === set).step;
   return {
     kind: 'world',
+    truth: scene.deg,
+    scene: scene.id,
     prompt: `${scene.name}. What is the angle?`,
     figure: scene.svg,
     choices: numberChoices(scene.deg, Math.max(step, 15), 4, random)

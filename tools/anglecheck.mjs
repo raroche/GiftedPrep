@@ -102,6 +102,63 @@ for (const f of A.FAMILIES) {
   if (!famSeen.has(f.id)) warn(`no "sort" question ever asked about ${f.name} angles`);
 }
 
+/* ---- the answer is the RIGHT answer ---- */
+
+/*
+ * This section exists because it did not, and a shipped question marked a 60
+ * degree angle wider than a 165 degree one -- while printing "the wider one is
+ * 165" underneath it. Every check up to here passed: the answer was among the
+ * choices, they did not repeat, arm length told you nothing. Not one of them
+ * asked whether the answer was correct.
+ *
+ * So each kind is now checked against the number its own picture shows, and
+ * where that number can be recomputed from something else -- a clock face, a
+ * named scene, the second angle in a comparison -- it is recomputed rather
+ * than trusted.
+ */
+let judged = 0;
+for (const set of A.SETS.map((x) => x.id)) {
+  for (let i = 0; i < 2000; i += 1) {
+    const q = A.buildQuestion('mix', set, scenes);
+    judged += 1;
+    const chosen = q.choices.find((c) => c.id === q.answer);
+
+    if (q.kind === 'bigger') {
+      const other = q.choices.find((c) => c.id !== q.answer);
+      if (!(chosen.deg > other.deg)) {
+        err(`bigger: marked ${chosen.deg} wider than ${other.deg}`);
+        break;
+      }
+      if (chosen.deg !== q.truth) { err(`bigger: says the wider one is ${q.truth}`); break; }
+    } else if (q.kind === 'estimate' || q.kind === 'world') {
+      if (Number(q.answer) !== q.truth) {
+        err(`${q.kind}: the picture is ${q.truth} but the answer is ${q.answer}`);
+        break;
+      }
+    } else if (q.kind === 'sort') {
+      if (q.answer !== A.familyOf(q.truth)) {
+        err(`sort: ${q.truth} degrees marked ${q.answer}`);
+        break;
+      }
+    } else if (q.kind === 'clock') {
+      const again = A.clockAngle(q.hands.hour, q.hands.minute);
+      if (again !== Number(q.answer)) {
+        err(`clock: ${q.hands.hour}:${q.hands.minute} is ${again}, not ${q.answer}`);
+        break;
+      }
+      if (!q.figure.includes(`${q.hands.hour}`)) warn('the clock drawing may not match the time');
+    }
+
+    /* And the explanation must not contradict the tick. That is what would have
+       caught the comparison bug from the outside: the sentence under the answer
+       was right while the answer was wrong. */
+    if (q.truth != null && !q.explain.includes(String(q.truth))) {
+      err(`${q.kind}: the explanation never mentions ${q.truth}`);
+      break;
+    }
+  }
+}
+
 /* ---- the setup screen offers what the code accepts ---- */
 
 const setup = A.renderSetup({ set: 'steps', ask: 'mix', count: 10 });
@@ -117,6 +174,7 @@ for (const s of A.SETS) {
 console.log(`${art.SCENES.length} real-world scenes, all drawn from their own degrees`);
 console.log(`${KINDS.length} kinds of question, ${A.SETS.length} difficulties, `
   + `${asked} questions generated and checked`);
+console.log(`${judged} of them re-marked against the number their own picture shows`);
 
 if (warnings.length) {
   console.log(`\nwarnings (${warnings.length}):`);
