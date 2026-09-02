@@ -35,13 +35,13 @@
   const check = (name, ok, detail = '') => results.push({ name, ok, detail });
 
   const GAMES = [
-    { id: 'flags',    start: '[data-action="flag-start"]',  answer: '[data-flagpick]',
+    { id: 'flags', setupScreen: 'screen-flagsetup',    start: '[data-action="flag-start"]',  answer: '[data-flagpick]',
       screen: '#screen-flaggame', next: '[data-action="flag-next"]', setup: [] },
-    { id: 'shapes',   start: '[data-action="shape-start"]', answer: '[data-shapeanswer]',
+    { id: 'shapes', setupScreen: 'screen-shapesetup',   start: '[data-action="shape-start"]', answer: '[data-shapeanswer]',
       screen: '#screen-shapegame', next: '[data-action="shape-next"]', setup: [] },
-    { id: 'capitals', start: '[data-action="cap-start"]',   answer: '[data-capanswer]',
+    { id: 'capitals', setupScreen: 'screen-capsetup', start: '[data-action="cap-start"]',   answer: '[data-capanswer]',
       screen: '#screen-capgame',  next: '[data-action="cap-next"]',  setup: [] },
-    { id: 'elements', start: '[data-action="elem-start"]',  answer: '[data-elemanswer]',
+    { id: 'elements', setupScreen: 'screen-elemsetup', start: '[data-action="elem-start"]',  answer: '[data-elemanswer]',
       screen: '#screen-elemgame', next: '[data-action="elem-next"]',
       setup: ['[data-elemask="use"]'] }
   ];
@@ -56,6 +56,11 @@
       const b = document.querySelector(sel);
       if (b) { b.click(); await wait(300); }
     }
+    /* The two things a page offers must both be reachable, and the looking one
+       must be visible rather than a link buried under the form. */
+    const learnGo = document.querySelector(`#${g.setupScreen} .cz-mode--learn .cz-mode__go`);
+    check(`${g.id}: learn button is visible`, !!learnGo && vis(learnGo));
+
     const startBtn = document.querySelector(g.start);
     check(`${g.id}: has a start button`, !!startBtn);
     if (!startBtn) continue;

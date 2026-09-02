@@ -3134,3 +3134,90 @@ button, a, label, summary, [role="button"] {
   .cz-pt { min-width: 560px; }
   .cz-pt-scroll { margin-inline: calc(var(--gp-space-5) * -1); padding-inline: var(--gp-space-5); }
 }
+
+/* ====================================================================
+   Learn and Practice
+   ====================================================================
+   A game page offers two different things and used to present them as a form
+   with a link under it. They are now two labelled sections, in the order they
+   should be used: looking first, because being tested on material you have
+   never met is not a game.
+
+   The colour means the ACTION, not the game — learn is jade everywhere, so it
+   is recognisable as a mode across all four. */
+
+.cz-mode {
+  position: relative;
+  border: 2px solid var(--mode-line, var(--gp-line));
+  border-radius: var(--gp-radius-xl);
+  background: var(--mode-bg, var(--gp-surface));
+  padding: var(--gp-space-6) var(--gp-space-5) var(--gp-space-5);
+  margin-top: var(--gp-space-6);
+}
+.cz-mode__tag {
+  position: absolute;
+  top: 0; left: var(--gp-space-5);
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 4px 12px;
+  border-radius: var(--gp-radius-pill);
+  background: var(--mode-tag, var(--gp-ink));
+  color: var(--gp-on-accent);
+  font-size: var(--gp-text-xs);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.cz-mode__body {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gp-space-4);
+  margin-bottom: var(--gp-space-4);
+}
+.cz-mode__icon {
+  display: grid; place-items: center;
+  width: 56px; height: 56px; flex: none;
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  border: 2px solid var(--mode-line, var(--gp-line));
+  color: var(--mode-ink, var(--gp-ink));
+}
+.cz-mode__icon svg { width: 30px; height: 30px; }
+.cz-mode__title {
+  margin: 0 0 2px;
+  font-size: var(--gp-text-lg);
+  color: var(--mode-ink, var(--gp-ink));
+}
+.cz-mode__blurb {
+  margin: 0;
+  color: var(--gp-ink-soft);
+  font-size: var(--gp-text-sm);
+  line-height: var(--gp-leading-snug);
+}
+.cz-mode__go { width: 100%; justify-content: center; }
+
+.cz-mode--learn {
+  --mode-bg: var(--cz-jade-soft);
+  --mode-line: var(--cz-jade-line);
+  --mode-ink: var(--cz-jade-ink);
+  --mode-tag: var(--cz-jade);
+}
+.cz-mode--learn .cz-mode__go {
+  background: var(--cz-jade);
+  border-color: var(--cz-jade);
+  color: var(--gp-on-accent);
+}
+.cz-mode--practice {
+  --mode-tag: var(--gp-accent);
+  padding: var(--gp-space-6) 0 0;
+  border: 0;
+  background: none;
+}
+.cz-mode--practice .cz-mode__tag { left: var(--gp-space-4); }
+.cz-mode--practice .gp-card--setup { margin-top: 0; }
+
+@media (max-width: 560px) {
+  .cz-mode { padding: var(--gp-space-6) var(--gp-space-4) var(--gp-space-4); }
+  .cz-mode__icon { width: 46px; height: 46px; }
+  .cz-mode__icon svg { width: 24px; height: 24px; }
+}

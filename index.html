@@ -348,12 +348,28 @@
     <div class="gp-container">
       <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
       <h1 class="gp-page-title" id="flagsetup-title">Name the Flag</h1>
-      <p class="gp-page-lede">Every flag in the world. Choose how many and which ones.</p>
-      <div class="gp-card gp-card--setup" id="gp-flag-setup"></div>
-      <a class="gp-btn gp-btn--quiet gp-btn--big cz-learnlink" href="#/fun/flags/learn">
-        <span data-icon="book"></span>
-        <span class="gp-btn__label">See every flag first, one at a time</span>
-      </a>
+      <p class="gp-page-lede">Every flag in the world. Look through them first, then see how many you can name.</p>
+      <!-- Two things a child can do here, and they are not the same thing.
+           Looking comes first because being tested on material you have never
+           met is not a game. -->
+      <section class="cz-mode cz-mode--learn">
+        <p class="cz-mode__tag">Learn</p>
+        <div class="cz-mode__body">
+          <span class="cz-mode__icon" data-icon="book" aria-hidden="true"></span>
+          <div>
+            <h2 class="cz-mode__title">See them first</h2>
+            <p class="cz-mode__blurb">Look through all 250 flags, one at a time, with the country underneath. No score, nothing to get wrong.</p>
+          </div>
+        </div>
+        <a class="gp-btn gp-btn--primary gp-btn--big cz-mode__go" href="#/fun/flags/learn">
+          Look through the flags &rarr;
+        </a>
+      </section>
+
+      <section class="cz-mode cz-mode--practice">
+        <p class="cz-mode__tag">Practice</p>
+        <div class="gp-card gp-card--setup" id="gp-flag-setup"></div>
+      </section>
     </div>
   </section>
 
@@ -397,13 +413,29 @@
     <div class="gp-container">
       <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
       <h1 class="gp-page-title" id="elemsetup-title">Name the Element</h1>
-      <p class="gp-page-lede">Everything is made of these. Four ways to ask, and
-         you can start with only the ones you actually meet.</p>
-      <div class="gp-card gp-card--setup" id="gp-elem-setup"></div>
-      <a class="gp-btn gp-btn--quiet gp-btn--big cz-learnlink" href="#/fun/elements/learn">
-        <span data-icon="book"></span>
-        <span class="gp-btn__label">See the whole periodic table, and how it works</span>
-      </a>
+      <p class="gp-page-lede">Everything is made of these. Open the table and read how it works, then test
+         yourself four different ways.</p>
+      <!-- Two things a child can do here, and they are not the same thing.
+           Looking comes first because being tested on material you have never
+           met is not a game. -->
+      <section class="cz-mode cz-mode--learn">
+        <p class="cz-mode__tag">Learn</p>
+        <div class="cz-mode__body">
+          <span class="cz-mode__icon" data-icon="book" aria-hidden="true"></span>
+          <div>
+            <h2 class="cz-mode__title">See them first</h2>
+            <p class="cz-mode__blurb">See the whole periodic table, tap any element, and read how it was worked out. No score, nothing to get wrong.</p>
+          </div>
+        </div>
+        <a class="gp-btn gp-btn--primary gp-btn--big cz-mode__go" href="#/fun/elements/learn">
+          Open the periodic table &rarr;
+        </a>
+      </section>
+
+      <section class="cz-mode cz-mode--practice">
+        <p class="cz-mode__tag">Practice</p>
+        <div class="gp-card gp-card--setup" id="gp-elem-setup"></div>
+      </section>
     </div>
   </section>
 
@@ -430,13 +462,29 @@
     <div class="gp-container">
       <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
       <h1 class="gp-page-title" id="capsetup-title">Name the Capital</h1>
-      <p class="gp-page-lede">The country is given, the capital city is the answer.
-         Choose how many, which ones, and how hard.</p>
-      <div class="gp-card gp-card--setup" id="gp-cap-setup"></div>
-      <a class="gp-btn gp-btn--quiet gp-btn--big cz-learnlink" href="#/fun/capitals/learn">
-        <span data-icon="book"></span>
-        <span class="gp-btn__label">See every capital first, one at a time</span>
-      </a>
+      <p class="gp-page-lede">The country is given, the capital is the answer. Look through them first,
+         then see how many you can name.</p>
+      <!-- Two things a child can do here, and they are not the same thing.
+           Looking comes first because being tested on material you have never
+           met is not a game. -->
+      <section class="cz-mode cz-mode--learn">
+        <p class="cz-mode__tag">Learn</p>
+        <div class="cz-mode__body">
+          <span class="cz-mode__icon" data-icon="book" aria-hidden="true"></span>
+          <div>
+            <h2 class="cz-mode__title">See them first</h2>
+            <p class="cz-mode__blurb">Look through all 192 countries, one at a time, with the capital underneath. No score, nothing to get wrong.</p>
+          </div>
+        </div>
+        <a class="gp-btn gp-btn--primary gp-btn--big cz-mode__go" href="#/fun/capitals/learn">
+          Look through the capitals &rarr;
+        </a>
+      </section>
+
+      <section class="cz-mode cz-mode--practice">
+        <p class="cz-mode__tag">Practice</p>
+        <div class="gp-card gp-card--setup" id="gp-cap-setup"></div>
+      </section>
     </div>
   </section>
 
@@ -460,12 +508,28 @@
     <div class="gp-container">
       <a class="gp-btn gp-btn--ghost gp-backlink" href="#/fun">&larr; Back to games</a>
       <h1 class="gp-page-title" id="shapesetup-title">Name the Country Shape</h1>
-      <p class="gp-page-lede">Every country outline. Choose how many, which ones, and how hard.</p>
-      <div class="gp-card gp-card--setup" id="gp-shape-setup"></div>
-      <a class="gp-btn gp-btn--quiet gp-btn--big cz-learnlink" href="#/fun/shapes/learn">
-        <span data-icon="book"></span>
-        <span class="gp-btn__label">See every outline first, one at a time</span>
-      </a>
+      <p class="gp-page-lede">Every country by its outline. Look through them first, then see how many you can name.</p>
+      <!-- Two things a child can do here, and they are not the same thing.
+           Looking comes first because being tested on material you have never
+           met is not a game. -->
+      <section class="cz-mode cz-mode--learn">
+        <p class="cz-mode__tag">Learn</p>
+        <div class="cz-mode__body">
+          <span class="cz-mode__icon" data-icon="book" aria-hidden="true"></span>
+          <div>
+            <h2 class="cz-mode__title">See them first</h2>
+            <p class="cz-mode__blurb">Look through all 242 outlines, one at a time, with the country underneath. No score, nothing to get wrong.</p>
+          </div>
+        </div>
+        <a class="gp-btn gp-btn--primary gp-btn--big cz-mode__go" href="#/fun/shapes/learn">
+          Look through the outlines &rarr;
+        </a>
+      </section>
+
+      <section class="cz-mode cz-mode--practice">
+        <p class="cz-mode__tag">Practice</p>
+        <div class="gp-card gp-card--setup" id="gp-shape-setup"></div>
+      </section>
     </div>
   </section>
 
