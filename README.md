@@ -210,7 +210,20 @@ Rwanda is now redrawn from Natural Earth, and every outline is checked against
 independent geometry by `tools/shapeverify.py` rather than trusted because of
 its filename. It carries no standard licence: its terms are "do what you want
 with them as long as you mention me" and no reselling, so it is credited here
-and in the data file. Eleven entries have no flag of their own and fly a parent country's: nine share
+and in the data file. The setup offers two scopes. **Countries** is 199 places, and is the default.
+**Countries and territories** adds 40 islands and territories that have flags of
+their own — Greenland, Puerto Rico, Hong Kong, the Faroes, Aruba, Guam. They are
+off by default because Saint Barthélemy arriving unannounced among 239 is
+discouraging rather than interesting; meeting them should be a choice. Answer
+choices stay inside the chosen scope, since offering Guam to a child who asked
+for countries is a trick.
+
+Sovereignty comes from the mledoze/countries dataset with one documented
+exception: Taiwan, Kosovo, Palestine, the Cook Islands and Niue are counted as
+countries. They govern themselves, a child would call them countries, and a site
+for children should not imply otherwise through a data field.
+
+Eleven entries have no flag of their own and fly a parent country's: nine share
 the French tricolour, and Heard Island, the US Minor Outlying Islands and the
 Saint Helena territory fly the Australian, American and British flags. They are
 marked `usesFlagOf` and never asked about or offered as an answer, because

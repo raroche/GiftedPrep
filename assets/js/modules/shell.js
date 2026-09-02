@@ -29,7 +29,7 @@ export const state = {
   /* The flag game. `setup` is what the child picked, `round` is the run. */
   flags: {
     data: null,
-    setup: { count: 10, mode: 'random', continents: [] },
+    setup: { count: 10, mode: 'random', continents: [], scope: 'countries' },
     round: null
   },
   /* Browsing mode, shared by the flag, outline and capital games. */

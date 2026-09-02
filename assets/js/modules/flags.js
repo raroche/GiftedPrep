@@ -64,8 +64,25 @@ export function shuffle(list, random = Math.random) {
  */
 export const askable = (data) => data.countries.filter((c) => !c.usesFlagOf);
 
-export function buildRound(data, { count = 10, mode = 'random', continents = [], random = Math.random } = {}) {
-  let pool = askable(data);
+export const SCOPES = [
+  { id: 'countries', name: 'Countries', blurb: 'The 199 countries of the world.' },
+  { id: 'all', name: 'Countries and territories',
+    blurb: 'Adds 40 islands and territories with flags of their own.' }
+];
+
+/**
+ * The pool for a scope.
+ *
+ * Territories are off by default. 40 of them do have their own flag and are
+ * perfectly fair questions, but Saint Barthélemy arriving unannounced among 239
+ * is discouraging rather than interesting, so meeting them is a choice.
+ */
+export const inScope = (data, scope) =>
+  askable(data).filter((c) => scope === 'all' || c.sovereign);
+
+export function buildRound(data, { count = 10, mode = 'random', continents = [],
+  scope = 'countries', random = Math.random } = {}) {
+  let pool = inScope(data, scope);
   if (mode === 'continent' && continents.length) {
     pool = pool.filter((c) => continents.includes(c.continent));
   }
@@ -83,10 +100,12 @@ export function buildRound(data, { count = 10, mode = 'random', continents = [],
  * because "which of these four is Chad" is a real question and "Chad, Japan,
  * Peru, Norway" is not.
  */
-export function makeChoices(country, data, howMany = 4, random = Math.random) {
+export function makeChoices(country, data, howMany = 4, random = Math.random,
+  scope = 'countries') {
   /* A territory flying this flag would be an equally correct answer, so it
-     cannot be offered as a wrong one. */
-  const pool = askable(data).filter((c) => c.code !== country.code);
+     cannot be offered as a wrong one. Choices also stay inside the chosen
+     scope: offering Guam to a child who asked for countries is a trick. */
+  const pool = inScope(data, scope).filter((c) => c.code !== country.code);
   const sameArea = pool.filter((c) => c.continent === country.continent);
   const elsewhere = pool.filter((c) => c.continent !== country.continent);
   const picked = shuffle(sameArea, random).slice(0, howMany - 1);
@@ -117,16 +136,23 @@ export function renderSetup(data, chosen) {
       <span class="gp-card__title">${esc(m.name)}</span>
       <span class="gp-card__sub">${esc(m.blurb)}</span>
     </button>`;
+  const scopeBtn = (m) => `
+    <button type="button" class="gp-card gp-card--mode${chosen.scope === m.id ? ' is-selected' : ''}"
+            data-flagscope="${m.id}" aria-pressed="${chosen.scope === m.id}">
+      <span class="gp-card__title">${esc(m.name)}</span>
+      <span class="gp-card__sub">${esc(m.blurb)}</span>
+    </button>`;
   const contBtn = (c) => {
-    const n = data.countries.filter((x) => x.continent === c.id).length;
+    const n = inScope(data, chosen.scope).filter((x) => x.continent === c.id).length;
     const on = chosen.continents.includes(c.id);
     return `<button type="button" class="gp-pill${on ? ' is-selected' : ''}"
               aria-pressed="${on}" data-flagcont="${c.id}">${esc(c.name)} <small>${n}</small></button>`;
   };
 
+  const pool = inScope(data, chosen.scope);
   const total = chosen.mode === 'continent' && chosen.continents.length
-    ? data.countries.filter((c) => chosen.continents.includes(c.continent)).length
-    : data.countries.length;
+    ? pool.filter((c) => chosen.continents.includes(c.continent)).length
+    : pool.length;
   const willPlay = chosen.count === 'all' ? total : Math.min(Number(chosen.count), total);
 
   return `
@@ -135,6 +161,11 @@ export function renderSetup(data, chosen) {
       <div class="gp-row gp-row--wrap" id="gp-flag-counts" role="radiogroup" aria-label="How many flags">
         ${COUNTS.map(countBtn).join('')}
       </div>
+    </fieldset>
+
+    <fieldset class="gp-fieldset">
+      <legend class="gp-fieldset__legend">Countries, or everywhere?</legend>
+      <div class="gp-grid gp-grid--modes">${SCOPES.map(scopeBtn).join('')}</div>
     </fieldset>
 
     <fieldset class="gp-fieldset">

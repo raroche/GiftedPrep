@@ -145,7 +145,10 @@ export function drawFlagQuestion() {
   if (!r) { drawFlagSetup(); return; }
   if (r.index >= r.list.length) { drawFlagResults(); return; }
   const country = r.list[r.index];
-  r.choices = flags.makeChoices(country, state.flags.data);
+  /* Choices stay inside the chosen scope: a child who asked for countries
+     should not be shown Guam as a plausible wrong answer. */
+  r.choices = flags.makeChoices(country, state.flags.data, 4, Math.random,
+    state.flags.setup.scope);
   r.answered = false;
   $('#gp-flag-body').innerHTML = flags.renderQuestion(country, r.choices, r.index, r.list.length);
   flagScore();

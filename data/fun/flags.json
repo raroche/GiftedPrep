@@ -35,1512 +35,1762 @@
    "code": "af",
    "name": "Afghanistan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "al",
    "name": "Albania",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "dz",
    "name": "Algeria",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "as",
    "name": "American Samoa",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "ad",
    "name": "Andorra",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ao",
    "name": "Angola",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ai",
    "name": "Anguilla",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "aq",
    "name": "Antarctica",
    "continent": "antarctic",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "ag",
    "name": "Antigua and Barbuda",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ar",
    "name": "Argentina",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "am",
    "name": "Armenia",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "aw",
    "name": "Aruba",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "au",
    "name": "Australia",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "at",
    "name": "Austria",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "az",
    "name": "Azerbaijan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bs",
    "name": "Bahamas",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bh",
    "name": "Bahrain",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bd",
    "name": "Bangladesh",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bb",
    "name": "Barbados",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "by",
    "name": "Belarus",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "be",
    "name": "Belgium",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bz",
    "name": "Belize",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bj",
    "name": "Benin",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bm",
    "name": "Bermuda",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "bt",
    "name": "Bhutan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bo",
    "name": "Bolivia",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ba",
    "name": "Bosnia and Herzegovina",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bw",
    "name": "Botswana",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bv",
    "name": "Bouvet Island",
    "continent": "antarctic",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "br",
    "name": "Brazil",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "io",
    "name": "British Indian Ocean Territory",
    "continent": "africa",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "vg",
    "name": "British Virgin Islands",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "bn",
    "name": "Brunei",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bg",
    "name": "Bulgaria",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bf",
    "name": "Burkina Faso",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bi",
    "name": "Burundi",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "kh",
    "name": "Cambodia",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cm",
    "name": "Cameroon",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ca",
    "name": "Canada",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cv",
    "name": "Cape Verde",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "bq",
    "name": "Caribbean Netherlands",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "ky",
    "name": "Cayman Islands",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "cf",
    "name": "Central African Republic",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "td",
    "name": "Chad",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cl",
    "name": "Chile",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cn",
    "name": "China",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cx",
    "name": "Christmas Island",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "cc",
    "name": "Cocos (Keeling) Islands",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "co",
    "name": "Colombia",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "km",
    "name": "Comoros",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ck",
    "name": "Cook Islands",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": true
   },
   {
    "code": "cr",
    "name": "Costa Rica",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "hr",
    "name": "Croatia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cu",
    "name": "Cuba",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cw",
    "name": "Curaçao",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "cy",
    "name": "Cyprus",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cz",
    "name": "Czechia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cd",
    "name": "DR Congo",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "dk",
    "name": "Denmark",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "dj",
    "name": "Djibouti",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "dm",
    "name": "Dominica",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "do",
    "name": "Dominican Republic",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ec",
    "name": "Ecuador",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "eg",
    "name": "Egypt",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sv",
    "name": "El Salvador",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gq",
    "name": "Equatorial Guinea",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "er",
    "name": "Eritrea",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ee",
    "name": "Estonia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sz",
    "name": "Eswatini",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "et",
    "name": "Ethiopia",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "fk",
    "name": "Falkland Islands",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "fo",
    "name": "Faroe Islands",
    "continent": "europe",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "fj",
    "name": "Fiji",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "fi",
    "name": "Finland",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "fr",
    "name": "France",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gf",
    "name": "French Guiana",
    "continent": "americas",
    "un": false,
-   "usesFlagOf": "fr"
+   "usesFlagOf": "fr",
+   "sovereign": false
   },
   {
    "code": "pf",
    "name": "French Polynesia",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "tf",
    "name": "French Southern and Antarctic Lands",
    "continent": "antarctic",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "ga",
    "name": "Gabon",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gm",
    "name": "Gambia",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ge",
    "name": "Georgia",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "de",
    "name": "Germany",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gh",
    "name": "Ghana",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gi",
    "name": "Gibraltar",
    "continent": "europe",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "gr",
    "name": "Greece",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gl",
    "name": "Greenland",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "gd",
    "name": "Grenada",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gp",
    "name": "Guadeloupe",
    "continent": "americas",
    "un": false,
-   "usesFlagOf": "fr"
+   "usesFlagOf": "fr",
+   "sovereign": false
   },
   {
    "code": "gu",
    "name": "Guam",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "gt",
    "name": "Guatemala",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gg",
    "name": "Guernsey",
    "continent": "europe",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "gn",
    "name": "Guinea",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gw",
    "name": "Guinea-Bissau",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gy",
    "name": "Guyana",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ht",
    "name": "Haiti",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "hm",
    "name": "Heard Island and McDonald Islands",
    "continent": "antarctic",
    "un": false,
-   "usesFlagOf": "au"
+   "usesFlagOf": "au",
+   "sovereign": false
   },
   {
    "code": "hn",
    "name": "Honduras",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "hk",
    "name": "Hong Kong",
    "continent": "asia",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "hu",
    "name": "Hungary",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "is",
    "name": "Iceland",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "in",
    "name": "India",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "id",
    "name": "Indonesia",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ir",
    "name": "Iran",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "iq",
    "name": "Iraq",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ie",
    "name": "Ireland",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "im",
    "name": "Isle of Man",
    "continent": "europe",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "il",
    "name": "Israel",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "it",
    "name": "Italy",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ci",
    "name": "Ivory Coast",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "jm",
    "name": "Jamaica",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "jp",
    "name": "Japan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "je",
    "name": "Jersey",
    "continent": "europe",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "jo",
    "name": "Jordan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "kz",
    "name": "Kazakhstan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ke",
    "name": "Kenya",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ki",
    "name": "Kiribati",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "xk",
    "name": "Kosovo",
    "continent": "europe",
-   "un": false
+   "un": false,
+   "sovereign": true
   },
   {
    "code": "kw",
    "name": "Kuwait",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "kg",
    "name": "Kyrgyzstan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "la",
    "name": "Laos",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "lv",
    "name": "Latvia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "lb",
    "name": "Lebanon",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ls",
    "name": "Lesotho",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "lr",
    "name": "Liberia",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ly",
    "name": "Libya",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "li",
    "name": "Liechtenstein",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "lt",
    "name": "Lithuania",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "lu",
    "name": "Luxembourg",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mo",
    "name": "Macau",
    "continent": "asia",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "mg",
    "name": "Madagascar",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mw",
    "name": "Malawi",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "my",
    "name": "Malaysia",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mv",
    "name": "Maldives",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ml",
    "name": "Mali",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mt",
    "name": "Malta",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mh",
    "name": "Marshall Islands",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mq",
    "name": "Martinique",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "mr",
    "name": "Mauritania",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mu",
    "name": "Mauritius",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "yt",
    "name": "Mayotte",
    "continent": "africa",
    "un": false,
-   "usesFlagOf": "fr"
+   "usesFlagOf": "fr",
+   "sovereign": false
   },
   {
    "code": "mx",
    "name": "Mexico",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "fm",
    "name": "Micronesia",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "md",
    "name": "Moldova",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mc",
    "name": "Monaco",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mn",
    "name": "Mongolia",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "me",
    "name": "Montenegro",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ms",
    "name": "Montserrat",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "ma",
    "name": "Morocco",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mz",
    "name": "Mozambique",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mm",
    "name": "Myanmar",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "na",
    "name": "Namibia",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "nr",
    "name": "Nauru",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "np",
    "name": "Nepal",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "nl",
    "name": "Netherlands",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "nc",
    "name": "New Caledonia",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "nz",
    "name": "New Zealand",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ni",
    "name": "Nicaragua",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ne",
    "name": "Niger",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ng",
    "name": "Nigeria",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "nu",
    "name": "Niue",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": true
   },
   {
    "code": "nf",
    "name": "Norfolk Island",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "kp",
    "name": "North Korea",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mk",
    "name": "North Macedonia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mp",
    "name": "Northern Mariana Islands",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "no",
    "name": "Norway",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "om",
    "name": "Oman",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "pk",
    "name": "Pakistan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "pw",
    "name": "Palau",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ps",
    "name": "Palestine",
    "continent": "asia",
-   "un": false
+   "un": false,
+   "sovereign": true
   },
   {
    "code": "pa",
    "name": "Panama",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "pg",
    "name": "Papua New Guinea",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "py",
    "name": "Paraguay",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "pe",
    "name": "Peru",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ph",
    "name": "Philippines",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "pn",
    "name": "Pitcairn Islands",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "pl",
    "name": "Poland",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "pt",
    "name": "Portugal",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "pr",
    "name": "Puerto Rico",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "qa",
    "name": "Qatar",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "cg",
    "name": "Republic of the Congo",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ro",
    "name": "Romania",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ru",
    "name": "Russia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "rw",
    "name": "Rwanda",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "re",
    "name": "Réunion",
    "continent": "africa",
    "un": false,
-   "usesFlagOf": "fr"
+   "usesFlagOf": "fr",
+   "sovereign": false
   },
   {
    "code": "bl",
    "name": "Saint Barthélemy",
    "continent": "americas",
    "un": false,
-   "usesFlagOf": "fr"
+   "usesFlagOf": "fr",
+   "sovereign": false
   },
   {
    "code": "sh",
    "name": "Saint Helena, Ascension and Tristan da Cunha",
    "continent": "africa",
    "un": false,
-   "usesFlagOf": "gb"
+   "usesFlagOf": "gb",
+   "sovereign": false
   },
   {
    "code": "kn",
    "name": "Saint Kitts and Nevis",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "lc",
    "name": "Saint Lucia",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "mf",
    "name": "Saint Martin",
    "continent": "americas",
    "un": false,
-   "usesFlagOf": "fr"
+   "usesFlagOf": "fr",
+   "sovereign": false
   },
   {
    "code": "pm",
    "name": "Saint Pierre and Miquelon",
    "continent": "americas",
    "un": false,
-   "usesFlagOf": "fr"
+   "usesFlagOf": "fr",
+   "sovereign": false
   },
   {
    "code": "vc",
    "name": "Saint Vincent and the Grenadines",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ws",
    "name": "Samoa",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sm",
    "name": "San Marino",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sa",
    "name": "Saudi Arabia",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sn",
    "name": "Senegal",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "rs",
    "name": "Serbia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sc",
    "name": "Seychelles",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sl",
    "name": "Sierra Leone",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sg",
    "name": "Singapore",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sx",
    "name": "Sint Maarten",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "sk",
    "name": "Slovakia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "si",
    "name": "Slovenia",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sb",
    "name": "Solomon Islands",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "so",
    "name": "Somalia",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "za",
    "name": "South Africa",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gs",
    "name": "South Georgia",
    "continent": "antarctic",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "kr",
    "name": "South Korea",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ss",
    "name": "South Sudan",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "es",
    "name": "Spain",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "lk",
    "name": "Sri Lanka",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sd",
    "name": "Sudan",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sr",
    "name": "Suriname",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sj",
    "name": "Svalbard and Jan Mayen",
    "continent": "europe",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "se",
    "name": "Sweden",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ch",
    "name": "Switzerland",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "sy",
    "name": "Syria",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "st",
    "name": "São Tomé and Príncipe",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tw",
    "name": "Taiwan",
    "continent": "asia",
-   "un": false
+   "un": false,
+   "sovereign": true
   },
   {
    "code": "tj",
    "name": "Tajikistan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tz",
    "name": "Tanzania",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "th",
    "name": "Thailand",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tl",
    "name": "Timor-Leste",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tg",
    "name": "Togo",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tk",
    "name": "Tokelau",
    "continent": "oceania",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "to",
    "name": "Tonga",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tt",
    "name": "Trinidad and Tobago",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tn",
    "name": "Tunisia",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tm",
    "name": "Turkmenistan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tc",
    "name": "Turks and Caicos Islands",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "tv",
    "name": "Tuvalu",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "tr",
    "name": "Türkiye",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ug",
    "name": "Uganda",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ua",
    "name": "Ukraine",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ae",
    "name": "United Arab Emirates",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "gb",
    "name": "United Kingdom",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "us",
    "name": "United States",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "um",
    "name": "United States Minor Outlying Islands",
    "continent": "americas",
    "un": false,
-   "usesFlagOf": "us"
+   "usesFlagOf": "us",
+   "sovereign": false
   },
   {
    "code": "vi",
    "name": "United States Virgin Islands",
    "continent": "americas",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "uy",
    "name": "Uruguay",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "uz",
    "name": "Uzbekistan",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "vu",
    "name": "Vanuatu",
    "continent": "oceania",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "va",
    "name": "Vatican City",
    "continent": "europe",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ve",
    "name": "Venezuela",
    "continent": "americas",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "vn",
    "name": "Vietnam",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "wf",
    "name": "Wallis and Futuna",
    "continent": "oceania",
    "un": false,
-   "usesFlagOf": "fr"
+   "usesFlagOf": "fr",
+   "sovereign": false
   },
   {
    "code": "eh",
    "name": "Western Sahara",
    "continent": "africa",
-   "un": false
+   "un": false,
+   "sovereign": false
   },
   {
    "code": "ye",
    "name": "Yemen",
    "continent": "asia",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "zm",
    "name": "Zambia",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "zw",
    "name": "Zimbabwe",
    "continent": "africa",
-   "un": true
+   "un": true,
+   "sovereign": true
   },
   {
    "code": "ax",
    "name": "Åland Islands",
    "continent": "europe",
-   "un": false
+   "un": false,
+   "sovereign": false
   }
  ],
  "past": [
@@ -1753,5 +2003,5 @@
    "answer": 0
   }
  ],
- "note": "Eleven territories carry usesFlagOf: they have no flag of their own and fly their parent country's, so they are never asked about and never offered as an answer. They still appear in the browsing mode, where that fact is the thing worth learning."
+ "note": "Eleven territories carry usesFlagOf: they have no flag of their own and fly their parent country's, so they are never asked about and never offered as an answer. They still appear in the browsing mode, where that fact is the thing worth learning. Sovereignty comes from the mledoze/countries dataset, with one documented exception: Taiwan, Kosovo, Palestine, the Cook Islands and Niue are counted as countries here. They govern themselves, a child would call them countries, and a site for children should not imply otherwise through a data field."
 }

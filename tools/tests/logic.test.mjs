@@ -131,12 +131,18 @@ describe('flag game', () => {
   });
 
   test('asking for more than a continent holds gives what exists, with no repeats', () => {
-    const got = buildRound(data, { count: 50, mode: 'continent', continents: ['antarctic'] });
-    /* Territories flying a parent country's flag are not askable, so the pool
-       is what is askable in that continent, not everything in it. */
+    /* Antarctica is the sharpest case for the scope: it holds no sovereign
+       country at all, so the default scope must return nothing rather than
+       quietly falling back to everything. */
+    const only = buildRound(data, { count: 50, mode: 'continent', continents: ['antarctic'] });
+    assert.equal(only.length, 0);
+
+    const all = buildRound(data, {
+      count: 50, mode: 'continent', continents: ['antarctic'], scope: 'all'
+    });
     const pool = data.countries.filter((c) => c.continent === 'antarctic' && !c.usesFlagOf);
-    assert.equal(got.length, pool.length);
-    assert.equal(new Set(got.map((c) => c.code)).size, got.length);
+    assert.equal(all.length, pool.length);
+    assert.equal(new Set(all.map((c) => c.code)).size, all.length);
   });
 
   test('a round never repeats a country', () => {

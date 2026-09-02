@@ -10,7 +10,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { askable, buildRound, makeChoices } from '../../assets/js/modules/flags.js';
+import { askable, inScope, buildRound, makeChoices } from '../../assets/js/modules/flags.js';
 
 const data = JSON.parse(readFileSync(new URL('../../data/fun/flags.json', import.meta.url)));
 /* Two files that draw the same flag differ only in their id, and in the url(#id)
@@ -63,8 +63,29 @@ test('every usesFlagOf points at a real country that has its own flag', () => {
   }
 });
 
-test('a round never contains a territory', () => {
-  const round = buildRound(data, { count: 50, mode: 'random' });
-  assert.equal(round.length, 50);
-  for (const c of round) assert.equal(c.usesFlagOf, undefined);
+test('the two scopes are what they claim, and countries is the default', () => {
+  const countries = inScope(data, 'countries');
+  const everywhere = inScope(data, 'all');
+  assert.ok(countries.every((c) => c.sovereign), 'a territory leaked into countries');
+  assert.ok(everywhere.length > countries.length, 'the wider scope is not wider');
+  assert.equal(everywhere.length, askable(data).length);
+  /* No argument means countries, so a child gets the friendlier set by default. */
+  const round = buildRound(data, { count: 250 });
+  assert.ok(round.every((c) => c.sovereign));
+});
+
+test('choices never leave the scope that was asked for', () => {
+  for (const c of inScope(data, 'countries').slice(0, 60)) {
+    for (const x of makeChoices(c, data, 4, Math.random, 'countries')) {
+      assert.ok(x.sovereign, `${x.name} was offered to a countries-only round`);
+    }
+  }
+});
+
+test('no round ever contains a place with no flag of its own', () => {
+  for (const scope of ['countries', 'all']) {
+    const round = buildRound(data, { count: 50, mode: 'random', scope });
+    assert.equal(round.length, 50);
+    for (const c of round) assert.equal(c.usesFlagOf, undefined);
+  }
 });

@@ -19,6 +19,7 @@
 import * as data from './modules/data.js';
 import * as storage from './modules/storage.js';
 import * as speech from './modules/speech.js';
+import * as flags from './modules/flags.js';
 import { describeFigure } from './modules/figures.js';
 import { icon } from './modules/icons.js';
 import { hydrateMascots, setMood } from './modules/mascot.js';
@@ -253,6 +254,16 @@ function onClick(ev) {
   if (sv) { answerShapeVault(sv.dataset.shapevault); return; }
 
   /* ---- flag game ---- */
+  const fs2 = ev.target.closest('[data-flagscope]');
+  if (fs2) {
+    state.flags.setup.scope = fs2.dataset.flagscope;
+    /* A continent chosen under one scope may hold nothing under the other. */
+    state.flags.setup.continents = state.flags.setup.continents.filter((id) =>
+      flags.inScope(state.flags.data, state.flags.setup.scope).some((c) => c.continent === id));
+    drawFlagSetup();
+    return;
+  }
+
   const fc = ev.target.closest('[data-flagcount]');
   if (fc) { state.flags.setup.count = fc.dataset.flagcount; drawFlagSetup(); return; }
 
