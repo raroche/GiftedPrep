@@ -121,7 +121,7 @@ export function angleSvg(deg, {
   const frame = `translate(${n(size / 2 - k * bcx)} ${n(size / 2 - k * bcy)}) scale(${n(k)})`;
 
   return `<svg class="cz-ang" viewBox="0 0 ${size} ${size}" role="img"
-    aria-label="${esc(label || `An angle of ${Math.round(deg)} degrees`)}">
+    aria-label="${esc(label || 'An angle')}">
     <g transform="${frame}" stroke-width="${n(5 / k)}">
       <line x1="${n(c)}" y1="${n(c)}" x2="${n(ax)}" y2="${n(ay)}" stroke="var(--gp-ink)"
             stroke-linecap="round"/>
@@ -400,7 +400,7 @@ function askEstimate(set, random) {
     kind: 'estimate',
     truth: deg,
     prompt: 'How big is this angle?',
-    figure: angleSvg(deg, { ...d, size: 240, label: `An angle of ${deg} degrees` }),
+    figure: angleSvg(deg, { ...d, size: 240, label: 'An angle to measure' }),
     choices: numberChoices(deg, step, 4, random).map((v) => ({ id: String(v), html: degLabel(v) })),
     answer: String(deg),
     explain: `It is ${degLabel(deg)} — ${FAMILIES.find((f) => f.id === familyOf(deg)).name.toLowerCase()}.`
@@ -471,8 +471,7 @@ function askSort(set, random) {
     kind: 'sort',
     truth: deg,
     prompt: 'What kind of angle is this?',
-    figure: angleSvg(deg, { ...dressing(random), size: 240,
-      label: `An angle of ${deg} degrees` }),
+    figure: angleSvg(deg, { ...dressing(random), size: 240, label: 'An angle to sort' }),
     choices: FAMILIES.map((f) => ({ id: f.id, html: f.name, sub: f.hint })),
     answer: fam,
     explain: `${degLabel(deg)} is ${FAMILIES.find((f) => f.id === fam).name.toLowerCase()} — `
@@ -504,19 +503,30 @@ function askClock(set, random) {
     figure: clockSvg(hour, minute),
     choices: numberChoices(deg, step, 4, random).map((v) => ({ id: String(v), html: degLabel(v) })),
     answer: String(deg),
-    explain: `${degLabel(deg)}. Every hour on the clock face is ${degLabel(30)}, `
-      + `so counting the hours between the hands gets you there.`
+    /* Counting whole hours only works when the minute hand is on the twelve.
+       At half past, the hour hand has already crept halfway to the next hour,
+       so the old blanket explanation was simply wrong: it told a child that
+       3:30 was 90 degrees when the picture showed 75. */
+    explain: minute === 0
+      ? `${degLabel(deg)}. Every hour on the clock face is ${degLabel(30)}, so counting `
+        + 'the hours between the hands gets you there.'
+      : `${degLabel(deg)}. Careful — at half past, the hour hand has already crept `
+        + `halfway towards the next hour, so it is not a whole number of hours.`
   };
 }
 
-function askWorld(scenes, set, random) {
-  const scene = pick(scenes, random);
+function askWorld(scenes, set, random, draw) {
+  /* `draw` deals from a shuffled pack when a round is being built, so the same
+     book does not turn up three times in ten questions. There are only nine
+     scenes, and drawing each one independently repeated at least one in every
+     single ten-question round that was measured. */
+  const scene = draw ? draw() : pick(scenes, random);
   const step = SETS.find((s) => s.id === set).step;
   return {
     kind: 'world',
     truth: scene.deg,
     scene: scene.id,
-    prompt: `${scene.name}. What is the angle?`,
+    prompt: scene.ask,
     figure: scene.svg,
     choices: numberChoices(scene.deg, Math.max(step, 15), 4, random)
       .map((v) => ({ id: String(v), html: degLabel(v) })),
@@ -600,22 +610,32 @@ function askBounce(set, random) {
   };
 }
 
-export function buildQuestion(ask, set, scenes, random = Math.random) {
+export function buildQuestion(ask, set, scenes, random = Math.random, draw = null) {
   const kind = ask === 'mix' ? pick(KINDS, random) : ask;
   switch (kind) {
     case 'bigger': return askBigger(set, random);
     case 'sort': return askSort(set, random);
     case 'clock': return askClock(set, random);
-    case 'world': return askWorld(scenes, set, random);
+    case 'world': return askWorld(scenes, set, random, draw);
     case 'bounce': return askBounce(set, random);
     default: return askEstimate(set, random);
   }
 }
 
+/** Deal from a shuffled pack, reshuffling only once the pack runs out. */
+export function dealer(list, random = Math.random) {
+  let rest = [];
+  return () => {
+    if (!rest.length) rest = shuffle(list, random);
+    return rest.pop();
+  };
+}
+
 export function buildRound(scenes, { set = 'steps', ask = 'estimate', count = 10,
   random = Math.random } = {}) {
   const want = Math.max(1, Number(count) || 10);
-  return Array.from({ length: want }, () => buildQuestion(ask, set, scenes, random));
+  const draw = dealer(scenes, random);
+  return Array.from({ length: want }, () => buildQuestion(ask, set, scenes, random, draw));
 }
 
 /* ------------------------------------------------------------------ */
@@ -693,5 +713,5 @@ export function renderQuestion(q, index, total, streak = 0) {
 export default {
   SETS, ASKS, COUNTS, FAMILIES, familyOf, poolFor, numberChoices, dressing,
   angleSvg, clockSvg, bounceSvg, clockAngle, bounceRun, buildQuestion, buildRound,
-  renderSetup, renderQuestion, shuffle, pointAt
+  renderSetup, renderQuestion, shuffle, pointAt, dealer
 };

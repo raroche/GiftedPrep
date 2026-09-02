@@ -159,6 +159,73 @@ for (const set of A.SETS.map((x) => x.id)) {
   }
 }
 
+/* ---- the game must not give itself away, or claim what is not true ---- */
+
+/*
+ * Three more failures that every earlier check passed straight over.
+ *
+ * The picture's aria-label read "An angle of 30 degrees" while the question
+ * asked how big the angle was, so anybody using a screen reader was told the
+ * answer before being asked. It looked fine because you cannot see a label.
+ *
+ * The clock explanation said "counting the hours between the hands gets you
+ * there" whatever the time, which is only true on the hour. At 3:30 it told a
+ * child the answer was 90 while the picture showed 75.
+ *
+ * And a scene's angle was stated as though it belonged to the object: "an open
+ * book, standing -- 90 degrees, a right angle". A book opens to anything
+ * between shut and flat. Only the pizza slice and the ladder have an angle that
+ * is really theirs.
+ */
+for (const s of art.SCENES) {
+  if (typeof s.fixed !== 'boolean') err(`${s.id} does not say whether its angle can vary`);
+  if (!s.ask) err(`${s.id} has no question of its own`);
+  if (!['always', 'the rule is', 'this one'].includes(s.claim)) {
+    err(`${s.id} makes an unrecognised claim: "${s.claim}"`);
+  }
+  /* "always" is arithmetic. A safety rule is not arithmetic, and saying so in
+     the same words would be the reported bug again, only quieter. */
+  if (s.claim === 'always' && !s.fixed) err(`${s.id} says "always" about a varying angle`);
+  if (!s.fixed && s.claim !== 'this one') err(`${s.id} overclaims its varying angle`);
+  /* A question about an object whose angle varies has to ask about the picture
+     in front of the child, not about the object in general. */
+  if (!s.fixed && !/\bthis\b|\bthese\b/i.test(s.ask)) {
+    err(`${s.id} can be any angle, but asks "${s.ask}" as if it were fixed`);
+  }
+}
+
+let leaks = 0;
+for (const set of A.SETS.map((x) => x.id)) {
+  for (let i = 0; i < 1200; i += 1) {
+    const q = A.buildQuestion('mix', set, scenes);
+    const shown = q.figure + q.choices.map((c) => c.html).join('');
+    const labels = [...shown.matchAll(/aria-label="([^"]*)"/g)].map((m) => m[1]);
+    for (const l of labels) {
+      if (q.truth != null && new RegExp(`\\b${q.truth}\\b`).test(l)) {
+        err(`${q.kind}: the picture is labelled "${l}" and the answer is ${q.truth}`);
+        leaks += 1;
+      }
+    }
+    if (leaks) break;
+
+    if (q.kind === 'clock' && q.hands.minute !== 0
+        && /counting the hours/.test(q.explain)) {
+      err(`clock: ${q.hands.hour}:${q.hands.minute} is explained by counting whole hours`);
+      break;
+    }
+  }
+}
+
+/* One round should not show the same object twice when there are nine of them. */
+for (let r = 0; r < 300; r += 1) {
+  const round = A.buildRound(scenes, { ask: 'world', set: 'steps', count: scenes.length });
+  const ids = round.map((q) => q.scene);
+  if (new Set(ids).size !== ids.length) {
+    err('a round of world questions repeated a scene before using them all');
+    break;
+  }
+}
+
 /* ---- the setup screen offers what the code accepts ---- */
 
 const setup = A.renderSetup({ set: 'steps', ask: 'mix', count: 10 });
@@ -175,6 +242,8 @@ console.log(`${art.SCENES.length} real-world scenes, all drawn from their own de
 console.log(`${KINDS.length} kinds of question, ${A.SETS.length} difficulties, `
   + `${asked} questions generated and checked`);
 console.log(`${judged} of them re-marked against the number their own picture shows`);
+console.log(`${art.SCENES.filter((s) => s.fixed).length} scenes have an angle that is really `
+  + `theirs; the other ${art.SCENES.filter((s) => !s.fixed).length} ask about the picture`);
 
 if (warnings.length) {
   console.log(`\nwarnings (${warnings.length}):`);

@@ -26,25 +26,67 @@
 const INK = 'var(--gp-ink)';
 const r1 = (x) => Math.round(x * 10) / 10;
 
+/*
+ * Two kinds of object live here, and confusing them was a real bug.
+ *
+ * A slice cut from a pizza into eight is ALWAYS 45 degrees. A ladder has a
+ * safety rule that puts it at about 75. Those angles belong to the object.
+ *
+ * A book is not like that. A book opens anywhere from shut to flat, and a
+ * laptop hinge turns freely -- some fold right back to 180, some all the way to
+ * 360 to become a tablet. The first version asked "An open book, standing. What
+ * is the angle?" and answered "90 -- a right angle, the same corner as this
+ * page", which states as a fact about books something that is only true of that
+ * one drawing. A child could reasonably come away believing open books are
+ * right angles.
+ *
+ * So each scene now says how strong its claim is, and asks accordingly: "How
+ * big is one slice?" against "How far open is THIS book?". The facts say the
+ * same thing out loud, and where the angle varies they give the range, which is
+ * worth more than the number.
+ *
+ * There turned out to be three strengths, not two. A pizza slice is 45 by
+ * arithmetic and cannot be otherwise. A ladder is a different case again: real
+ * ladders lean at all sorts of angles, and 75 is what they are SUPPOSED to lean
+ * at. Calling that "always 75" would repeat the same mistake in a quieter
+ * voice, so it says "the rule is".
+ */
 export const SCENES = [
-  { id: 'ramp', name: 'A skateboard ramp', deg: 20, from: 0,
-    fact: 'A gentle slope. Much steeper and you could not roll up it.' },
-  { id: 'scissors', name: 'Open scissors', deg: 30, mid: 90,
-    fact: 'Just far enough open to cut paper.' },
-  { id: 'pizza', name: 'A slice of pizza', deg: 45, from: 8,
-    fact: 'A whole pizza is 360. Cut it into eight and each slice is 45.' },
-  { id: 'arrow', name: 'The point of an arrow', deg: 60, mid: 270,
-    fact: 'Sharp, so it goes in instead of sliding off.' },
-  { id: 'ladder', name: 'A leaning ladder', deg: 75, from: 0,
-    fact: 'The angle a ladder is supposed to lean at. Flatter and it slides.' },
-  { id: 'book', name: 'An open book, standing', deg: 90, mid: 90,
-    fact: 'A right angle. The same corner as this page.' },
-  { id: 'roof', name: 'The peak of a roof', deg: 110, mid: 270,
-    fact: 'Steep enough that rain and snow slide off.' },
-  { id: 'laptop', name: 'An open laptop', deg: 120, from: 0,
-    fact: 'Where most people stop pushing the screen back.' },
-  { id: 'chair', name: 'A deck chair, reclined', deg: 150, from: 8,
-    fact: 'Nearly flat. Almost a straight angle.' }
+  { id: 'ramp', name: 'A skateboard ramp', deg: 20, from: 0, fixed: false, claim: 'this one',
+    ask: 'How steep is this skateboard ramp?',
+    fact: 'Ramps are built at every slope there is. This one is gentle — much steeper '
+      + 'and you could not roll up it.' },
+  { id: 'scissors', name: 'Open scissors', deg: 30, mid: 90, fixed: false, claim: 'this one',
+    ask: 'How far open are these scissors?',
+    fact: 'Scissors open as wide as you like, right back to the hinge. This is about '
+      + 'far enough to cut paper.' },
+  { id: 'pizza', name: 'A slice of pizza', deg: 45, from: 8, fixed: true, claim: 'always',
+    ask: 'This pizza was cut into eight. How big is one slice?',
+    fact: 'This one never changes. A whole pizza is 360, and 360 shared between eight '
+      + 'slices is 45 each, every time.' },
+  { id: 'arrow', name: 'The point of an arrow', deg: 60, mid: 270, fixed: false, claim: 'this one',
+    ask: 'How sharp is the point of this arrow?',
+    fact: 'Arrowheads are made at all sorts of points. A sharp one goes in instead of '
+      + 'sliding off.' },
+  { id: 'ladder', name: 'A leaning ladder', deg: 75, from: 0, fixed: true, claim: 'the rule is',
+    ask: 'How far back is this ladder leaning?',
+    fact: 'Ladders have a rule: lean at about 75. Any flatter and the bottom slides out '
+      + 'from under you.' },
+  { id: 'book', name: 'An open book, standing', deg: 90, mid: 90, fixed: false, claim: 'this one',
+    ask: 'How far open is this book?',
+    fact: 'A book opens anywhere from 0 shut to 180 laid flat. This one is halfway — '
+      + 'a right angle.' },
+  { id: 'roof', name: 'The peak of a roof', deg: 110, mid: 270, fixed: false, claim: 'this one',
+    ask: 'How wide is the peak of this roof?',
+    fact: 'Roofs are built at many angles. A steeper peak sheds rain and snow faster.' },
+  { id: 'laptop', name: 'An open laptop', deg: 120, from: 0, fixed: false, claim: 'this one',
+    ask: 'How far back is this laptop screen pushed?',
+    fact: 'The hinge turns freely. Plenty of laptops fold right back to 180, and some go '
+      + 'all the way to 360 to become a tablet. This one is at 120.' },
+  { id: 'chair', name: 'A deck chair, reclined', deg: 150, from: 8, fixed: false, claim: 'this one',
+    ask: 'How far back is this deck chair?',
+    fact: 'Deck chairs recline to lots of angles. This one is nearly flat — almost a '
+      + 'straight angle.' }
 ];
 
 /* Where each scene's vertex sits in its 200x200 box. */

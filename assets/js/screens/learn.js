@@ -302,7 +302,7 @@ const TURN_NOTE = {
   45: 'Half of a corner. Fold a square corner in half and this is what you get.',
   60: 'A third of a half turn. The corner of a triangle where all sides match.',
   90: 'A corner. Square. The one every wall and page is built from.',
-  120: 'Past the corner. Where most people stop opening a laptop.',
+  120: 'Past the corner. Two thirds of the way to flat.',
   135: 'A corner and a half.',
   180: 'Flat. Half a full turn. The two arms point opposite ways.',
   270: 'Three quarters of the way round.',
@@ -342,15 +342,18 @@ export function renderAngleLearn() {
 
     <section class="gp-card cz-ang-lab">
       <h2 class="cz-ang-lab__head">Angles you have already seen</h2>
-      <p class="cz-ang-lab__lede">None of these were put there by a maths teacher. They are the
-         angle that makes the thing work.</p>
+      <p class="cz-ang-lab__lede">None of these were put there by a maths teacher. But read the
+         label carefully. A slice of eight is <strong>always</strong> 45. A ladder has a
+         <strong>rule</strong> it is meant to follow. Everything else is only how far
+         <em>this one</em> happens to be open.</p>
       <div class="cz-ang-scenes">
         ${SCENES.map((s) => `
           <figure class="cz-ang-scene">
             <div class="cz-ang-scene__pic">${sceneSvg(s.id)}</div>
             <figcaption>
               <strong>${escapeHtml(s.name)}</strong>
-              <span class="cz-ang-scene__deg">${s.deg}&deg;</span>
+              <span class="cz-ang-scene__deg${s.fixed ? ' is-fixed' : ''}">${
+  escapeHtml(s.claim)} ${s.deg}&deg;</span>
               <span class="cz-ang-scene__fact">${escapeHtml(s.fact)}</span>
             </figcaption>
           </figure>`).join('')}

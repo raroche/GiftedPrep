@@ -3370,3 +3370,10 @@ button, a, label, summary, [role="button"] {
   color: var(--gp-ink-muted);
   font-size: .8rem;
 }
+
+/* An angle that belongs to the object is a different claim from an angle that
+   happens to be in one drawing, so the two do not get to look the same. */
+.cz-ang-scene__deg.is-fixed {
+  background: var(--room, var(--gp-accent));
+  color: var(--gp-bg);
+}

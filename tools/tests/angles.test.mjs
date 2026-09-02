@@ -142,6 +142,84 @@ describe('the answer is the right answer', () => {
   });
 });
 
+describe('the game must not give itself away', () => {
+  test('no picture is labelled with its own answer', () => {
+    /* A screen reader announces the aria-label. It read "An angle of 30
+       degrees" on a question asking how big the angle was, so the one group of
+       children who most need the label were the only ones told the answer. */
+    const random = seeded(53);
+    for (let i = 0; i < 4000; i += 1) {
+      const q = A.buildQuestion('mix', 'sharp', scenes, random);
+      if (q.truth == null) continue;
+      const shown = q.figure + q.choices.map((c) => c.html).join('');
+      for (const [, label] of shown.matchAll(/aria-label="([^"]*)"/g)) {
+        assert.ok(!new RegExp(`\\b${q.truth}\\b`).test(label),
+          `${q.kind}: label "${label}" gives away ${q.truth}`);
+      }
+    }
+  });
+});
+
+describe('nothing is claimed that is not true', () => {
+  test('the clock trick is only offered when the clock trick works', () => {
+    /* Counting whole hours between the hands works on the hour and nowhere
+       else. At 3:30 it gives 90; the picture shows 75. */
+    const random = seeded(59);
+    let halves = 0;
+    for (let i = 0; i < 4000; i += 1) {
+      const q = A.buildQuestion('clock', 'sharp', scenes, random);
+      if (q.hands.minute === 0) continue;
+      halves += 1;
+      assert.ok(!/counting the hours/.test(q.explain),
+        `${q.hands.hour}:${q.hands.minute} explained by counting whole hours`);
+    }
+    assert.ok(halves > 200, `only ${halves} half-past questions seen`);
+  });
+
+  test('an object whose angle varies is asked about as a picture', () => {
+    /* A book opens anywhere from shut to flat and a laptop hinge turns freely
+       -- some fold to 180, some to 360. "An open book. What is the angle?"
+       states as a fact about books what is true only of one drawing. */
+    for (const s of SCENES) {
+      assert.equal(typeof s.fixed, 'boolean', `${s.id} does not say if its angle can vary`);
+      if (s.fixed) continue;
+      assert.match(s.ask, /\bthis\b|\bthese\b/i,
+        `${s.id} varies but asks "${s.ask}"`);
+      assert.ok(s.fact.length > 30, `${s.id} does not say what its range is`);
+    }
+    /* And the ones that really are fixed must not be watered down. */
+    assert.ok(SCENES.some((s) => s.fixed), 'no scene has an angle of its own any more');
+    /* Three strengths of claim, and they must not be muddled. A slice of eight
+       is 45 by arithmetic; a ladder at 75 is a rule real ladders often break. */
+    for (const s of SCENES) {
+      assert.ok(['always', 'the rule is', 'this one'].includes(s.claim),
+        `${s.id} claims "${s.claim}"`);
+      if (!s.fixed) assert.equal(s.claim, 'this one', `${s.id} overclaims`);
+    }
+    assert.equal(SCENES.find((s) => s.id === 'pizza').claim, 'always');
+    assert.equal(SCENES.find((s) => s.id === 'ladder').claim, 'the rule is');
+  });
+});
+
+describe('a round does not repeat itself', () => {
+  test('nine scenes fill nine questions without a repeat', () => {
+    const random = seeded(61);
+    for (let r = 0; r < 300; r += 1) {
+      const ids = A.buildRound(scenes, { ask: 'world', set: 'steps', count: SCENES.length, random })
+        .map((q) => q.scene);
+      assert.equal(new Set(ids).size, ids.length, 'the same object came round twice');
+    }
+  });
+
+  test('and past that it deals a fresh pack rather than stopping', () => {
+    const random = seeded(67);
+    const ids = A.buildRound(scenes, { ask: 'world', set: 'steps', count: 20, random })
+      .map((q) => q.scene);
+    assert.equal(ids.length, 20);
+    assert.ok(ids.every(Boolean), 'the pack ran out and dealt nothing');
+  });
+});
+
 describe('arm length must never be a clue', () => {
   test('the arms are always a useful size and always visibly different', () => {
     /* If the arms match, the question does not put the mistake to the child at
