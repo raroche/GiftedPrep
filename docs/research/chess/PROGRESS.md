@@ -618,3 +618,47 @@ Do not run a long verification loop in the background while editing the files
 it tests. Runs 5, 6 and 7 of one loop "failed" because I was deliberately
 breaking `angles.js` to prove a guard at the same moment. It looks exactly
 like a real intermittent failure.
+
+## Two more deploys failed. Both were real defects. (2026-09-03)
+
+Netlify runs `npm run verify`, so any check that can fail by chance is a
+deploy that can fail by chance. Three separate lotteries were running.
+
+### 1. A question could be built with only three choices
+`makeChoices` fills the wrong answers from the same continent first, then tops
+up from the rest of the world. The top-up reshuffled the WHOLE world for each
+one and took the first: when that one was already picked it gave up — and
+returned three choices instead of four. Antarctica and Bouvet Island have no
+sovereign neighbours at all, so every one of their wrong answers comes from
+the top-up, and they hit it about one question in seventy.
+
+Silent, and real: a child asking about Antarctica sometimes got a question
+with a choice missing. `tools/tests/flags.test.mjs` failed 11 runs in 150.
+
+Fixed by shuffling once and walking the list, which cannot collide with
+itself. Two new tests catch it by construction rather than by luck: one drives
+it with a `random()` that always returns the same number, so every shuffle
+comes out the same way and the collision happens every time; the other finds
+any place whose continent holds fewer than three others and hammers it. Both
+fail 8 out of 8 with the bug and never without it.
+
+### 2. Fixing that broke the answer-position spread, quietly
+`slots.test.mjs` checks that the right answer does not favour one of the four
+positions. The first fix shuffled the rest of the world for EVERY question,
+not just the ones that needed it — two hundred unused random draws per
+question — and that was enough to knock the distribution off: chi-square went
+from 3 seeds in 60 over the threshold (fair) to 60 in 60.
+
+The `if` that skips the top-up when the choices are already full puts it back
+to exactly 3 in 60. **Measured against sixty seeds before and after, not one.**
+A seeded test that fails is not automatically a bad seed; check whether the
+behaviour actually changed before touching the seed.
+
+### 3. The angles check (see the section above)
+Already fixed: a mixed round could ask for more objects than there are.
+
+### The rule to keep
+A check in the build path must give the same answer twice. Where a defect is
+rare, construct it instead of sampling for it. `tools/anglecheck.mjs` now
+fails if anything in it calls `Math.random(` again; the tests that sample are
+either seeded or paired with a deterministic case that pins the same fact.

@@ -109,10 +109,29 @@ export function makeChoices(country, data, howMany = 4, random = Math.random,
   const sameArea = pool.filter((c) => c.continent === country.continent);
   const elsewhere = pool.filter((c) => c.continent !== country.continent);
   const picked = shuffle(sameArea, random).slice(0, howMany - 1);
-  while (picked.length < howMany - 1 && elsewhere.length) {
-    const extra = shuffle(elsewhere, random)[0];
-    if (!picked.some((p) => p.code === extra.code)) picked.push(extra);
-    else break;
+
+  /* Some places have almost no neighbours -- Antarctica and Bouvet Island
+     share a continent with barely anybody -- so the rest of the choices have
+     to come from further afield.
+
+     This used to draw one at a time, reshuffling the whole world each go and
+     taking the first: if that one was already picked it gave up and returned
+     THREE choices instead of four. A rare draw, about one question in seventy,
+     and completely silent -- a child simply got a question with a choice
+     missing. Shuffling once and walking the list cannot collide with itself,
+     so it always fills up if there is anything left to fill it with.
+
+     The `if` matters as much as the loop. Nearly every country has plenty of
+     neighbours and never needs this at all; shuffling the rest of the world
+     for all of them anyway drew two hundred random numbers per question that
+     nothing used, which was enough to knock the answer's position off even.
+     Skipping it entirely when the choices are already full keeps the common
+     case exactly as it was. */
+  if (picked.length < howMany - 1) {
+    for (const extra of shuffle(elsewhere, random)) {
+      if (picked.length >= howMany - 1) break;
+      if (!picked.some((p) => p.code === extra.code)) picked.push(extra);
+    }
   }
   return shuffle(picked.concat(country), random);
 }

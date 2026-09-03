@@ -44,6 +44,48 @@ test('every question has exactly one correct answer among its four choices', () 
   }
 });
 
+/*
+ * The one that failed deploys. Antarctica and Bouvet Island have no sovereign
+ * neighbours at all, so every wrong answer has to come from the other side of
+ * the world. The top-up used to reshuffle the whole world for each one and
+ * take the first: when that was already picked it gave up and handed back
+ * THREE choices. About one question in seventy, silently.
+ *
+ * A random() that always returns the same number makes every shuffle come out
+ * the same way, so the collision happens every time instead of one run in
+ * seventy. The test above would find this eventually; this one finds it now.
+ */
+test('four choices even when the shuffle keeps offering the same country', () => {
+  const stubborn = () => 0;
+  for (const scope of ['countries', 'all']) {
+    for (const c of inScope(data, scope)) {
+      const choices = makeChoices(c, data, 4, stubborn, scope);
+      assert.equal(choices.length, 4, `${c.name} (${scope}): got ${choices.length} choices`);
+      assert.equal(new Set(choices.map((x) => x.code)).size, 4,
+        `${c.name} (${scope}): a choice was repeated`);
+      assert.ok(choices.some((x) => x.code === c.code),
+        `${c.name} (${scope}): the right answer is not among them`);
+    }
+  }
+});
+
+test('a place whose continent is nearly empty still gets a full question', () => {
+  /* Named rather than found by search, so this keeps testing the hard case
+     even if the data changes under it. */
+  const lonely = askable(data).filter((c) => {
+    const mates = inScope(data, 'countries')
+      .filter((x) => x.continent === c.continent && x.code !== c.code);
+    return mates.length < 3;
+  });
+  assert.ok(lonely.length > 0, 'no thin continent left to test — check the data');
+  for (const c of lonely) {
+    for (let i = 0; i < 200; i += 1) {
+      assert.equal(makeChoices(c, data).length, 4,
+        `${c.name} has ${c.continent} to itself and came up short`);
+    }
+  }
+});
+
 test('a territory is never offered as a wrong answer either', () => {
   for (const c of askable(data).slice(0, 60)) {
     for (const x of makeChoices(c, data)) {
