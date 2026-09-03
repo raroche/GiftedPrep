@@ -302,6 +302,7 @@ strength from more depth without replacing chess.js.
 - 02-gamification.md rewards, progress, what backfires
 - 03-curriculum.md  lesson lists for the three levels
 - 04-tech.md        libraries, CSP, offline, mobile
+- 05-mobile.md      what a phone wrapper needs, written after the build
 - PLAN.md           the step-by-step build plan (the deliverable)
 - PLAN-lessons.md   every lesson, step by step, with checked FENs
 - PLAN-codebase-notes.md how a room is wired in this app
@@ -343,3 +344,77 @@ opens Forest at 10 and Ocean at 25; a locked colour refuses to be picked; a
 replayed lesson done worse never lowers the total; a locked lesson and a
 locked level both explain themselves instead of opening; and
 #/chess/games/pawnwars/0 selects Sleepy Sloth while the saved level stays 3.
+
+## Phase 9 — the mobile notes (2026-09-03)
+
+`05-mobile.md` is written. It is notes, not code, as PLAN.md asks. Every claim
+in it was checked against the repository rather than restated from the plan,
+and the line references are real.
+
+The plan's own assumptions held: no build step, module worker (WKWebView
+supports it), no WASM so no COOP/COEP, progress is one JSON object, touch
+targets already 44px. One thing the plan did not mention turned out to matter
+more than any of them.
+
+### The policy does not travel, and the app is written around it
+
+The Content-Security-Policy is an HTTP header, sent by Netlify in production
+and by `tools/serve.py` locally. **A native wrapper serves the files itself and
+sends neither**, so the mobile app would run with no policy at all.
+
+That is not only a security question. `style="..."` attributes are silently
+deleted under `style-src 'self'`, so nothing in the app sets one and
+`chesscheck` fails the build if the board or the pieces ever do. Without the
+policy those attributes start working, and the mobile app and the website
+quietly stop behaving the same way while every check goes on passing.
+`05-mobile.md` gives the two ways to close it.
+
+### A gap found while checking that: the two policies could drift
+
+They are two hand-kept copies with nothing holding them equal. If the local
+one drifts, local work stops predicting production — which is precisely the
+failure the local policy was added to prevent (the map-colouring grid drew
+perfectly on a laptop and collapsed in production).
+
+`tools/cspcheck.mjs` now compares them directive by directive, ignoring order
+and whitespace, and also refuses a policy that has gone loose (`unsafe-inline`,
+`unsafe-eval`, a missing `base-uri`). It is in `npm run verify`. Proved by
+breaking it three ways: dropping a directive locally, loosening `style-src` in
+production, and deleting the production policy entirely.
+
+**If a third copy of the policy is ever added — a `<meta>` tag, a wrapper
+config — add it to `SOURCES` in `tools/cspcheck.mjs`.**
+
+## Definition of done
+
+- [x] `npm run verify` green: 349 tests, every check passes.
+- [x] Browser smoke test: **169/169**, no console errors on any route.
+- [x] Every chess route fits 375px with 44px squares and 768px with 68px.
+- [x] **A child can finish level 1 and beat Sleepy Sloth.** Measured, not
+      assumed: a simulated beginner (takes the biggest capture on offer, plays
+      mate when it is there, otherwise random) wins 63% and loses 0% over 40
+      games. That is inside the 60–70% band `02-gamification.md` asks for.
+      Now a test in `tools/tests/chessbot.test.mjs`, because the bot got
+      measurably stronger twice while being made to work — iterative deepening,
+      then quiescence — and neither change touched a test. A bot that quietly
+      climbs past a beginner ruins the room and breaks nothing.
+
+      The measure is sharp enough to be worth having. Same harness, same
+      beginner, one rung at a time (6 games each, shortened so it finishes):
+
+          rung 0  Sleepy Sloth   child loses  0%
+          rung 1  Grabby Goat    child loses 33%
+          rung 2  Careful Cat    child loses 83%
+
+      So `losses === 0` fails the moment the bottom rung is anything but the
+      bottom rung. Everything is seeded, so the test cannot flake.
+
+      **Do not try to prove this test by making level 0 play like level 4.**
+      The strong bot takes seconds per move, and 12 games of it does not
+      finish inside any sensible timeout. Compare rungs in a standalone
+      script instead, which is what the table above is.
+- [x] A five-year-old can reach a board and move a piece with no reading:
+      the first lesson is tap-only and the hub opens on a single Start.
+- [ ] A 600-rated child finds level 3 fair. This one needs a real 600-rated
+      child; the puzzle ratings come from Lichess and the lessons were played
+      end to end, but nobody has watched a child at that strength use it.

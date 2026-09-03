@@ -185,6 +185,62 @@ describe('no bot stalemates when it is winning', () => {
 });
 
 describe('the easiest bot really is easy', () => {
+  /* The promise level 1 makes is that it ends in a win. Everything else here
+     checks the bot in a position; this checks the only thing a child cares
+     about, which is the result. The opponent is a child who has just finished
+     level 1: takes the biggest thing on offer, plays the mate if it is there,
+     and otherwise moves at random. No plan, no lookahead.
+
+     Written because the bot got measurably stronger twice while being made to
+     work -- iterative deepening and then quiescence -- and neither change
+     touched a test. A bot that quietly climbs past a beginner ruins the room
+     and breaks nothing. */
+  test('a child who has finished level 1 beats it, and never loses to it', () => {
+    const VALUE = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
+    const rng = (seed) => () => {
+      seed = (seed + 0x6D2B79F5) | 0;
+      let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+
+    const childMove = (game, rnd) => {
+      const moves = game.moves({ verbose: true });
+      const mate = moves.find((m) => m.san.includes('#'));
+      if (mate) return mate;
+      const grabs = moves.filter((m) => m.captured);
+      if (grabs.length) {
+        const best = Math.max(...grabs.map((m) => VALUE[m.captured] || 0));
+        const top = grabs.filter((m) => (VALUE[m.captured] || 0) === best);
+        return top[Math.floor(rnd() * top.length)];
+      }
+      return moves[Math.floor(rnd() * moves.length)];
+    };
+
+    const GAMES = 12;
+    let wins = 0;
+    let losses = 0;
+    for (let g = 0; g < GAMES; g += 1) {
+      const rnd = rng(1000 + g);
+      const game = new Chess();
+      /* Long enough for a beginner to convert a won position, short enough
+         that the suite stays quick. A game still going at this point is
+         neither a win nor a loss and is counted as neither. */
+      for (let ply = 0; ply < 160 && !game.isGameOver(); ply += 1) {
+        if (game.turn() === 'w') { game.move(childMove(game, rnd)); continue; }
+        const uci = B.chooseMove(game.fen(), 0, 1000 + g + ply);
+        if (!uci) break;
+        game.move({ from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] || 'q' });
+      }
+      if (game.isCheckmate()) { if (game.turn() === 'b') wins += 1; else losses += 1; }
+    }
+
+    assert.equal(losses, 0,
+      `the easiest bot beat a beginner ${losses} time(s) out of ${GAMES}`);
+    assert.ok(wins >= GAMES / 2,
+      `a beginner won only ${wins} of ${GAMES}; the bottom rung has got too strong`);
+  });
+
   test('it does not always play the same move', () => {
     const seen = new Set();
     for (let seed = 1; seed <= 30; seed += 1) seen.add(B.chooseMove(START, 0, seed));
