@@ -766,6 +766,83 @@ else if (room.status === 'live') {
 }
 
 /* ------------------------------------------------------------------ */
+/* Looking back at a finished game                                     */
+/* ------------------------------------------------------------------ */
+
+/* The board has to survive the end of the game. It used to be thrown away and
+   replaced by a result card, so a child was told they had lost something they
+   could no longer look at -- and "why did I lose?" had no answer on screen.
+   The result now goes into a box UNDER the board. If the end card ever goes
+   back to replacing the whole body, this fails. */
+{
+  const src = fs.readFileSync(new URL('../assets/js/screens/chessplay.js', import.meta.url), 'utf8');
+  const finishAt = src.indexOf('function finish(');
+  const finishBody = finishAt === -1 ? '' : src.slice(finishAt, finishAt + 2600);
+  if (!finishAt) {
+    err('screens/chessplay.js: no finish() — the end of a game is not handled');
+  } else if (/\$\('#gp-chessplay-body'\)\.innerHTML/.test(finishBody)) {
+    err('screens/chessplay.js: finish() replaces the whole screen, which throws '
+      + 'the board away — a child cannot look back at the game they just lost');
+  }
+  for (const [needle, why] of [
+    ['cz-play-taken-you', 'the pieces a child has taken are not shown'],
+    ['cz-play-taken-them', 'the pieces the opponent has taken are not shown'],
+    ['chess-back', 'there is no way to step back through a game'],
+    ['chess-fwd', 'there is no way to step forward through a game'],
+    ['chess-live', 'there is no way back to the live game from a review']
+  ]) {
+    if (!src.includes(needle)) err(`screens/chessplay.js: ${why} (${needle} is gone)`);
+  }
+  /* Looking back must never be able to move a piece. */
+  if (!/viewAt !== null/.test(src)) {
+    err('screens/chessplay.js: nothing stops a move being made while reviewing '
+      + 'a past position');
+  }
+}
+
+/* Every ending says what actually happened. One sentence for all of them told
+   a child whose last piece was taken that somebody "got there first". */
+{
+  const { endReason, result, GAMES, ENDINGS } = await import('../assets/js/modules/chessgames.js');
+  const REASONS = ['promotion', 'nothing-left', 'no-moves', 'checkmate', 'held-out', 'other'];
+  const bare = new ChessLib('8/8/8/8/8/8/PPPPPPPP/RNBQ1BNR b - - 0 1', { skipValidation: true });
+  if (typeof endReason !== 'function') err('chessgames.js no longer says HOW a game ended');
+  else if (!REASONS.includes(endReason('flag', bare))) {
+    err(`chessgames.js: endReason returned "${endReason('flag', bare)}", which is not one of `
+      + REASONS.join(', '));
+  }
+  /* Every line in the table, not only the ones this one position can reach.
+     Checking through result() looked thorough and quietly skipped four of the
+     six endings, because a single board can only end one way. */
+  for (const why of REASONS) {
+    const pair = ENDINGS[why];
+    if (!pair) { err(`no ending message for "${why}"`); continue; }
+    for (const outcome of ['win', 'loss']) {
+      const say = pair[outcome];
+      if (!say || say.length < 8) {
+        err(`the "${why}" ${outcome} message is missing or too short`);
+        continue;
+      }
+      if (/\b(lost|lose|loser|beaten|failed)\b/i.test(say)) {
+        err(`"${say}" tells a beginner they failed`);
+      }
+      if (outcome === 'loss' && !/again|another go/i.test(say)) {
+        err(`"${say}" does not invite a child to try again`);
+      }
+      if (outcome === 'win' && !/won|cornered/i.test(say)) {
+        err(`"${say}" does not tell a child they won`);
+      }
+    }
+  }
+  for (const spec of GAMES) {
+    const out = result(spec, bare, 0, 'b');
+    if (out && !REASONS.includes(out.why)) {
+      err(`${spec.id}: ended with reason "${out.why}", which is not one of ${REASONS.join(', ')}`);
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /* Report                                                              */
 /* ------------------------------------------------------------------ */
 

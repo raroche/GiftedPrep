@@ -249,26 +249,85 @@ export function winner(variant, game, moveCount = 0) {
 }
 
 /**
+ * HOW the game ended, which is not the same question as who won.
+ *
+ * Every ending used to be described with one sentence -- "They got there
+ * first this time" -- whatever had actually happened. A child whose last
+ * piece was taken, or who simply had no legal move left, was told about a
+ * race they had not lost, and could not tell from the screen what had gone
+ * on. It is the first thing they ask.
+ *
+ * @returns {'promotion'|'nothing-left'|'no-moves'|'checkmate'|'held-out'|'other'}
+ */
+export function endReason(variant, game, moveCount = 0) {
+  const spec = typeof variant === 'string' ? gameById(variant) : variant;
+  if (!spec || !game) return 'other';
+
+  if (game.isCheckmate()) return 'checkmate';
+  if (game.history({ verbose: true }).some((m) => m.promotion)) return 'promotion';
+
+  const white = census(game, 'w');
+  const black = census(game, 'b');
+  if (!spec.kings && (white.count === 0 || black.count === 0)) return 'nothing-left';
+  /* The piece-against-pawns games end when the pawns are gone, even though
+     the piece itself is still standing. */
+  if (white.pawns === 0 && black.pawns === 0
+    && ['queenvspawns', 'rookvspawns', 'knightsvspawns'].includes(spec.id)) {
+    return 'nothing-left';
+  }
+  if (spec.id === 'kinghunt' && spec.maxMoves && moveCount >= spec.maxMoves) return 'held-out';
+  if (game.moves().length === 0) return 'no-moves';
+  return 'other';
+}
+
+/* What to say, by how it ended and whether the child won. Losing is never
+   described as losing: the research is specific that beginners punished for
+   mistakes stop playing, and every one of these has to leave a child willing
+   to press "again". Saying plainly what happened is not punishment -- being
+   told the wrong thing is what leaves a child stuck. */
+export const ENDINGS = {
+  promotion: {
+    win: 'You got a pawn all the way across. You won that one.',
+    loss: 'They got a pawn across first. Step back and see how, then try again.'
+  },
+  'nothing-left': {
+    win: 'You took every piece they had. You won that one.',
+    loss: 'They took your last piece. Step back and see where it went, then try again.'
+  },
+  'no-moves': {
+    win: 'They ran out of moves. Nothing left for them to play. You won that one.',
+    loss: 'You ran out of moves — everything you had was blocked. Have another go.'
+  },
+  checkmate: {
+    win: 'Checkmate. You won that one.',
+    loss: 'Checkmate that time. Step back and watch it coming, then try again.'
+  },
+  'held-out': {
+    win: 'You cornered the king. You won that one.',
+    loss: 'The king got away this time. Have another go.'
+  },
+  other: {
+    win: 'You won that one.',
+    loss: 'They got there first this time. Have another go.'
+  }
+};
+
+/**
  * Whether the game is over, and what to tell the child.
  *
- * Losing is never described as losing. The research is specific about this:
- * beginners who are punished for mistakes stop playing, and every result has
- * to leave a child willing to press "again".
+ * The sentence says what actually happened, because "why did that end?" is
+ * the first thing a child asks and the screen is the only thing that can
+ * answer it.
  */
 export function result(variant, game, moveCount, childSide = 'w') {
   const won = winner(variant, game, moveCount);
   if (!won) return null;
+  const why = endReason(variant, game, moveCount);
   if (won === 'draw') {
-    return { over: true, outcome: 'draw', say: 'A draw. Nobody could get through.' };
+    return { over: true, outcome: 'draw', why, say: 'A draw. Nobody could get through.' };
   }
-  if (won === childSide) {
-    return { over: true, outcome: 'win', say: 'You won that one.' };
-  }
-  return {
-    over: true,
-    outcome: 'loss',
-    say: 'They got there first this time. Play it again and watch what they did.'
-  };
+  const outcome = won === childSide ? 'win' : 'loss';
+  return { over: true, outcome, why, say: (ENDINGS[why] || ENDINGS.other)[outcome] };
 }
 
-export default { GAMES, gameById, open, winner, result };
+export default { GAMES, gameById, open, winner, endReason, result, ENDINGS };

@@ -3965,6 +3965,58 @@ button, a, label, summary, [role="button"] {
 .cz-play__tools { justify-content: center; }
 .cz-play__done { display: grid; gap: var(--gp-space-3); justify-items: center; text-align: center; }
 .cz-play__ladder { margin: 0; }
+.cz-play__replay { margin: 0; font-size: .9rem; color: var(--gp-ink-soft); }
+
+/* ---- what each player has taken ---- */
+
+/* Pushed to the end of the row, so the two strips line up with each other
+   above and below the board however long the names beside them are. */
+.cz-play__taken {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-inline-start: auto;
+  min-height: 1.6rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+/* Small, and overlapping slightly: eight of them still have to fit beside a
+   name on a phone. They are a tally, not a gallery. */
+.cz-play__tk { width: 1.5rem; height: 1.5rem; margin-inline-end: -.35rem; }
+.cz-play__tk:last-of-type { margin-inline-end: 0; }
+
+/* Only ever shown beside the player who is ahead. */
+.cz-play__lead {
+  margin-inline-start: var(--gp-space-2);
+  padding: 0 .4rem;
+  border-radius: var(--gp-radius-pill);
+  background: var(--gp-surface-2);
+  font-size: .8rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- stepping back through the game ---- */
+
+.cz-play__review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gp-space-2);
+  flex-wrap: wrap;
+  width: 100%;
+}
+.cz-play__at {
+  min-width: 7ch;
+  text-align: center;
+  font-size: .85rem;
+  color: var(--gp-ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+/* Disabled means "there is nothing that way", which is information. It is
+   dimmed rather than hidden so the pair of arrows stays put and a child does
+   not have to hunt for the one that is left. */
+.cz-play__review .gp-btn[disabled] { opacity: .4; cursor: default; }
 
 /* ---- choosing ---- */
 

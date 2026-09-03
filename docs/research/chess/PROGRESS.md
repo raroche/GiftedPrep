@@ -503,3 +503,68 @@ Any rule of the form "the board looks like X, therefore Y happened". The other
 mini-games are safe by luck rather than design: `queenvspawns`, `rookvspawns`
 and `knightsvspawns` only ask about the pawn side, and that side has nothing
 but pawns.
+
+## The end of a game (2026-09-03)
+
+Asked after a real game: "I was winning, it ended, and it said *They got there
+first this time*. What does that mean? Why one star?"
+
+Both parts were fair questions with unhelpful answers.
+
+**The star** was working as designed and reads as a punishment. A win is 3
+(2 if a hint was used), a draw 2, a loss 1. Stars only ever go up, so the 1 is
+"you played", not "you were bad". Unchanged, but worth knowing.
+
+**The message was the same sentence for every ending.** "They got there first
+this time" was shown whether a pawn had promoted, your last piece had been
+taken, or you simply had no legal move left. A child whose army was captured
+was told about a race they had not lost — and there was no way to find out
+what really happened, because the board was gone.
+
+`endReason()` now says HOW it ended — promotion, nothing-left, no-moves,
+checkmate, held-out — and `ENDINGS` holds one line per ending per side.
+chesscheck reads that table as DATA: every line must invite a child back and
+none may call them a loser. Checking it through `result()` first looked
+thorough and silently skipped four of the six endings, because one board can
+only end one way.
+
+Note for whoever reads this next: the reported game could not be reproduced.
+120 games of a careful White against the weakest bot produced no case of
+White being told they lost while level or ahead on material and with no
+promotion. The likeliest explanation is that it ended a real way and said the
+wrong thing about it, which is now fixed.
+
+## The board stays, and you can walk back through it (2026-09-03)
+
+Three things, asked for together.
+
+**What each side has taken.** `modules/chesstaken.js`, pure, reading the MOVE
+LIST rather than the board — the board cannot answer it, because eight pawns
+look the same whether the missing two were captured or promoted, and the
+mini-games do not start with matching armies. Taking a move back removes the
+capture with it, for free, because `undo()` shortens the history.
+
+The lead is counted in PIECES ("+2"), as asked, and only the player who is
+ahead gets a badge — a "+0" beside one and a "-2" beside the other say the
+same thing twice, the second time to the child who least wants to read it.
+Points are there too as `valueLead` for anything that wants them.
+
+**Arrows to step back and forth.** `play.viewAt` is the position on the board;
+null means the live one. While looking at the past the board is LOCKED, so a
+move is impossible — there is nothing sensible for a move in an abandoned
+position to do. Touching the board comes back to the game, which is what a
+child tries first. That needed its own listener on the container: a locked
+board does not report taps to its owner at all, which is right.
+
+**A finished game is not thrown away.** `finish()` used to replace the whole
+screen with a result card. The position vanished at the exact moment a child
+wants to look at it. The card now goes in a box UNDER the board, the arrows
+keep working, and the strip of captured pieces rewinds with the position.
+chesscheck fails if `finish()` ever writes to `#gp-chessplay-body` again.
+
+## Unrelated: an intermittent failure that can fail a deploy
+`npm run verify` failed once with `mix, 30 questions: the same object came
+round twice` from `tools/anglecheck.mjs`. It did not repeat in 25 further
+runs, so it is a rare draw from a random seed. It matters more than it looks:
+`npm run verify` is the Netlify build command, so a rare flake is a rare
+failed deploy. Not touched here.

@@ -25,6 +25,8 @@ import { createBoard, fenToPosition } from './../modules/chessboard.js';
 import * as bot from './../modules/chessbot.js';
 import * as games from './../modules/chessgames.js';
 import * as progress from './../modules/chessprogress.js';
+import { taken, leadLabel } from './../modules/chesstaken.js';
+import { pieceHref, pieceName } from './../modules/chesspieces.js';
 import { escapeHtml } from './../modules/charts.js';
 import { creature } from './../modules/sections.js';
 import { $, paint, react, showScreen, state } from './../modules/shell.js';
@@ -129,6 +131,8 @@ function startGame(spec, level, side) {
     over: null,
     hinted: false,
     thinking: false,
+    /** which position is on the board: null means the live one */
+    viewAt: null,
     /* Every position since the start, so taking back is exact rather than
        clever. A game is at most a couple of hundred of these. */
     history: [game.fen()]
@@ -143,14 +147,17 @@ function startGame(spec, level, side) {
         ${botFace(opponent)}
         <span class="cz-play__name">${esc(opponent.name)}</span>
         <span class="cz-play__think" id="cz-play-think" hidden>thinking&hellip;</span>
+        <span class="cz-play__taken" id="cz-play-taken-them"></span>
       </div>
       <div id="cz-play-board"></div>
       <div class="cz-play__who cz-play__who--you">
         <span class="cz-play__name">You</span>
         <span class="cz-play__goal">${esc(spec.goal)}</span>
+        <span class="cz-play__taken" id="cz-play-taken-you"></span>
       </div>
+      ${reviewBar()}
       <p class="cz-play__say" id="cz-play-say"></p>
-      <div class="gp-row gp-row--wrap cz-play__tools">
+      <div class="gp-row gp-row--wrap cz-play__tools" id="cz-play-tools">
         <button type="button" class="gp-btn gp-btn--quiet" data-action="chess-takeback">
           Take that back</button>
         <button type="button" class="gp-btn gp-btn--quiet" data-action="chess-hint">
@@ -158,6 +165,7 @@ function startGame(spec, level, side) {
         <button type="button" class="gp-btn gp-btn--quiet" data-action="chess-newgame">
           Different game</button>
       </div>
+      <div id="cz-play-done"></div>
     </div>`;
 
   const board = createBoard($('#cz-play-board'), {
@@ -166,7 +174,7 @@ function startGame(spec, level, side) {
     label: `${spec.name} board`,
     theme: progress.load().theme,
     canMove: (sq) => {
-      if (play.over || play.thinking) return false;
+      if (play.over || play.thinking || play.viewAt !== null) return false;
       const piece = game.get(sq);
       return Boolean(piece) && piece.color === side && game.turn() === side;
     },
@@ -182,12 +190,142 @@ function startGame(spec, level, side) {
     }
   });
   state.chess.board = board;
+
+  /* Touching the board while looking at the past brings you back to the game.
+     It has to be its own listener: the board is locked while reviewing, and a
+     locked board does not report taps to its owner at all -- which is right,
+     because a tap there must never be read as a move. */
+  board.el.addEventListener('pointerdown', () => {
+    const now = state.chess.play;
+    if (now === play && now.viewAt !== null) viewAt(null);
+  });
+
   paint();
   showScreen('chessplay');
   paintBoardState(null);
+  paintTaken();
+  paintReview();
 
   /* If the child is Black, the bot opens. */
   if (game.turn() !== side) botTurn();
+}
+
+/* ------------------------------------------------------------------ */
+/* What has been taken, and looking back                               */
+/* ------------------------------------------------------------------ */
+
+/**
+ * The strip of captured pieces beside a player, and the "+2" beside it.
+ *
+ * Drawn from the move list rather than the board, so that taking a move back
+ * takes the piece off the strip with it, and so that stepping back through a
+ * finished game shows what had been taken AT THAT POINT rather than at the
+ * end.
+ */
+function paintTaken() {
+  const play = state.chess.play;
+  if (!play) return;
+  const all = play.game.history({ verbose: true });
+  const upTo = play.viewAt === null ? all.length : play.viewAt;
+  const score = taken(all.slice(0, upTo));
+
+  const theirs = play.side === 'w' ? 'b' : 'w';
+  const draw = (id, side) => {
+    const box = $(id);
+    if (!box) return;
+    /* `side` is who did the taking, so the pieces shown are the OTHER
+       colour: a row of the things this player has won. */
+    const gone = score[side];
+    const colour = side === 'w' ? 'b' : 'w';
+    const badge = leadLabel(score.countLead, side);
+    box.innerHTML = gone.map((t) => {
+      const code = colour + t.toUpperCase();
+      return `<svg class="cz-play__tk" viewBox="0 0 45 45" role="img"
+        aria-label="${esc(pieceName(code))}"><use href="${pieceHref(code)}"></use></svg>`;
+    }).join('')
+      + (badge ? `<span class="cz-play__lead">${badge}</span>` : '');
+    box.setAttribute('aria-label', gone.length
+      ? `taken: ${gone.length} piece${gone.length === 1 ? '' : 's'}${badge ? `, ${badge} ahead` : ''}`
+      : 'nothing taken yet');
+  };
+  draw('#cz-play-taken-you', play.side);
+  draw('#cz-play-taken-them', theirs);
+}
+
+/** The back/forward bar. Rendered once; its buttons are enabled as they apply. */
+function reviewBar() {
+  return `<div class="cz-play__review" id="cz-play-review">
+      <button type="button" class="gp-btn gp-btn--icon" data-action="chess-back"
+        aria-label="Back one move">&larr;</button>
+      <span class="cz-play__at" id="cz-play-at" aria-live="polite"></span>
+      <button type="button" class="gp-btn gp-btn--icon" data-action="chess-fwd"
+        aria-label="Forward one move">&rarr;</button>
+      <button type="button" class="gp-btn gp-btn--quiet cz-play__live"
+        data-action="chess-live">Back to the game</button>
+    </div>`;
+}
+
+/**
+ * Show the position as it was after `at` moves, or the live one when null.
+ *
+ * Looking back is looking only. The board is locked the whole time a child is
+ * in the past, because a move made there would be a move in a position the
+ * game has already left -- and there is no sensible thing for it to do.
+ * Touching the board is how you come back, which is what a child tries first.
+ */
+function viewAt(at) {
+  const play = state.chess.play;
+  const board = state.chess.board;
+  if (!play || !board) return;
+  const last = play.history.length - 1;
+  play.viewAt = at === null ? null : Math.max(0, Math.min(last, at));
+
+  const showing = play.viewAt === null ? last : play.viewAt;
+  board.setFen(play.history[showing]);
+
+  const moves = play.game.history({ verbose: true });
+  const move = showing > 0 ? moves[showing - 1] : null;
+  board.mark({ last: move ? [move.from, move.to] : [] });
+
+  /* Locked while reviewing, and locked for good once the game is over. */
+  if (play.viewAt !== null || play.over) board.lock();
+  else board.unlock();
+
+  paintTaken();
+  paintReview();
+}
+
+/** Enable, disable and label the review bar for where we are. */
+function paintReview() {
+  const play = state.chess.play;
+  if (!play) return;
+  const last = play.history.length - 1;
+  const at = play.viewAt === null ? last : play.viewAt;
+
+  const bar = $('#cz-play-review');
+  if (bar) bar.hidden = last === 0;
+
+  const back = $('[data-action="chess-back"]');
+  const fwd = $('[data-action="chess-fwd"]');
+  if (back) back.disabled = at === 0;
+  if (fwd) fwd.disabled = at === last;
+
+  const live = $('[data-action="chess-live"]');
+  if (live) live.hidden = play.viewAt === null;
+
+  const where = $('#cz-play-at');
+  if (where) {
+    where.textContent = at === 0 ? 'the start'
+      : `move ${at}${at === last && play.viewAt === null ? '' : ` of ${last}`}`;
+  }
+
+  /* Nothing that changes the game is offered while looking at the past, or
+     after it has finished. */
+  const busy = play.viewAt !== null || Boolean(play.over);
+  for (const name of ['chess-takeback', 'chess-hint']) {
+    const el = $(`[data-action="${name}"]`);
+    if (el) el.disabled = busy;
+  }
 }
 
 function paintBoardState(move) {
@@ -214,6 +352,8 @@ function afterMove(move) {
   const play = state.chess.play;
   if (!play) return;
   paintBoardState(move);
+  paintTaken();
+  paintReview();
 
   const moveCount = Math.floor(play.game.history().length / 2);
   const done = games.result(play.spec, play.game, moveCount, play.side);
@@ -299,7 +439,16 @@ function finish(done) {
   const opponent = bot.levelInfo(after.bot.level);
 
   react(done.outcome === 'win' ? 'wow' : 'happy', 2400);
-  $('#gp-chessplay-body').innerHTML = `
+
+  /* The board stays. Replacing the whole screen with a card was the quickest
+     thing to write and the worst thing to meet: a game ends, the position
+     vanishes, and a child is told the result of something they can no longer
+     look at. "Why did I lose?" has no answer on a blank screen. The result
+     goes UNDER the board, and the back and forward arrows still work, so the
+     first thing a child can do after losing is walk back through it. */
+  const card = $('#cz-play-done');
+  if (!card) return;
+  card.innerHTML = `
     <div class="gp-done cz-play__done">
       <p class="cz-lesson__stars">${Array.from({ length: 3 }, (_, i) =>
         `<span class="cz-chess-star${i < stars ? ' is-on' : ''}">${i < stars ? '★' : '☆'}</span>`
@@ -308,6 +457,8 @@ function finish(done) {
       <p class="gp-muted">${moved} move${moved === 1 ? '' : 's'} in ${esc(play.spec.name)}.</p>
       ${moveOn ? `<p class="cz-play__ladder">Next time you will play
         <strong>${esc(opponent.name)}</strong>.</p>` : ''}
+      <p class="cz-play__replay">The board is still there. Use
+        &larr; and &rarr; to see how it went.</p>
       <div class="gp-row gp-row--wrap cz-lesson__after">
         <button type="button" class="gp-btn gp-btn--primary gp-btn--big" data-action="chess-again">
           Play again</button>
@@ -316,6 +467,11 @@ function finish(done) {
         <a class="gp-btn gp-btn--quiet" href="#/chess">Back to Chess Club</a>
       </div>
     </div>`;
+
+  const tools = $('#cz-play-tools');
+  if (tools) tools.hidden = true;
+  tell('');
+  paintReview();
   paint();
 }
 
@@ -331,7 +487,7 @@ function finish(done) {
  */
 function takeBack() {
   const play = state.chess.play;
-  if (!play || play.over || play.thinking) return;
+  if (!play || play.over || play.thinking || play.viewAt !== null) return;
   let undone = 0;
   while (play.history.length > 1 && undone < 2) {
     play.history.pop();
@@ -340,18 +496,21 @@ function takeBack() {
     if (play.game.turn() === play.side) break;
   }
   if (!undone) return;
+  play.viewAt = null;
   if (state.chess.board) {
     state.chess.board.setFen(play.game.fen());
     const last = play.game.history({ verbose: true }).at(-1);
     state.chess.board.mark(last ? { last: [last.from, last.to] } : {});
   }
+  paintTaken();
+  paintReview();
   tell('Taken back. Have another go.');
 }
 
 /** Draw an arrow along a move the strongest bot likes. */
 async function showHint() {
   const play = state.chess.play;
-  if (!play || play.over || play.thinking) return;
+  if (!play || play.over || play.thinking || play.viewAt !== null) return;
   play.hinted = true;
   tell('Looking&hellip;');
   const uci = await engine().move(play.game.fen(), bot.MAX_LEVEL, 1);
@@ -386,6 +545,28 @@ export function playAction(name, el) {
 
     case 'chess-takeback':
       takeBack();
+      return true;
+
+    case 'chess-back':
+      if (play) {
+        const at = play.viewAt === null ? play.history.length - 1 : play.viewAt;
+        viewAt(at - 1);
+      }
+      return true;
+
+    case 'chess-fwd':
+      if (play) {
+        const at = play.viewAt === null ? play.history.length - 1 : play.viewAt;
+        /* Stepping forward onto the last position is being back in the game,
+           not looking at a picture of it -- so it becomes live again, unless
+           the game is over and there is nothing to be live for. */
+        const next = at + 1;
+        viewAt(!play.over && next >= play.history.length - 1 ? null : next);
+      }
+      return true;
+
+    case 'chess-live':
+      if (play) viewAt(null);
       return true;
 
     case 'chess-hint':

@@ -206,6 +206,73 @@ describe('a whole game', () => {
   });
 });
 
+describe('what a child is told about HOW it ended', () => {
+  /* One sentence for every ending told a child whose last piece had just been
+     taken that somebody "got there first" in a race, which is not what
+     happened and not something they could work out from the screen. */
+  const flagPromo = () => after('1nbq1bnr/Pppppppp/8/8/8/8/1PPPPPPP/RNBQ1BNR w - - 0 1',
+    { from: 'a7', to: 'a8', promotion: 'q' });
+
+  test('a pawn getting across says so', () => {
+    const g = flagPromo();
+    assert.equal(G.endReason('flag', g), 'promotion');
+    assert.match(G.result('flag', g, 0, 'w').say, /pawn/i);
+    assert.match(G.result('flag', g, 0, 'b').say, /pawn/i);
+  });
+
+  test('running the other side out of pieces says THAT', () => {
+    const bare = at('8/8/8/8/8/8/PPPPPPPP/RNBQ1BNR b - - 0 1');
+    assert.equal(G.endReason('flag', bare), 'nothing-left');
+    assert.match(G.result('flag', bare, 0, 'w').say, /every piece|last piece/i);
+    assert.doesNotMatch(G.result('flag', bare, 0, 'b').say, /got there first/i,
+      'a child who lost their last piece must not be told about a race');
+  });
+
+  test('being blocked says you were blocked', () => {
+    const stuck = at('8/8/8/8/8/p7/P7/8 w - - 0 1');
+    assert.equal(stuck.moves().length, 0, 'the fixture must really be stuck');
+    assert.equal(G.endReason('pawnwars', stuck), 'no-moves');
+    assert.match(G.result('pawnwars', stuck, 0, 'w').say, /moves|blocked/i);
+  });
+
+  test('checkmate is called checkmate', () => {
+    /* A real back-rank mate. The old fixture used here was a STALEMATE that
+       happened to look like one, which is exactly the sort of thing a test
+       should not assume from a position alone. */
+    const mated = after('6k1/5ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1', 'Re8#');
+    assert.equal(mated.isCheckmate(), true, 'the fixture must really be mate');
+    assert.equal(G.endReason('full', mated), 'checkmate');
+    assert.match(G.result('full', mated, 0, 'w').say, /checkmate/i);
+  });
+
+  /* Every way of losing has to leave a child willing to press the button
+     again. It is checked across all of them rather than on one example,
+     because a new ending is exactly where the invitation gets forgotten. */
+  test('every way of losing still invites another go', () => {
+    const endings = [
+      ['flag', flagPromo(), 'promotion'],
+      ['flag', at('8/8/8/8/8/8/PPPPPPPP/RNBQ1BNR b - - 0 1'), 'nothing-left'],
+      ['pawnwars', at('8/8/8/8/8/p7/P7/8 w - - 0 1'), 'no-moves'],
+      ['full', after('6k1/5ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1', 'Re8#'), 'checkmate']
+    ];
+    const seen = new Set();
+    for (const [id, g, why] of endings) {
+      assert.equal(G.endReason(id, g), why, `${id} should end by ${why}`);
+      seen.add(why);
+      const loser = G.result(id, g, 0, G.winner(id, g) === 'w' ? 'b' : 'w');
+      assert.equal(loser.outcome, 'loss');
+      assert.match(loser.say, /again|another go/i,
+        `"${loser.say}" does not invite a child back`);
+      assert.doesNotMatch(loser.say, /\b(lost|lose|loser|beaten|failed|sorry)\b/i,
+        `"${loser.say}" tells a beginner they failed`);
+      const won = G.result(id, g, 0, G.winner(id, g));
+      assert.match(won.say, /won|cornered/i, `"${won.say}" does not say they won`);
+    }
+    assert.equal(seen.size, 4, 'every ending kind must be covered');
+  });
+
+});
+
 describe('what a child is told', () => {
   /* White has just got a pawn across in Pawn Wars. The same finished game is
      read once from each side. */
