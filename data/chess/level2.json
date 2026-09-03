@@ -739,7 +739,7 @@
           "choices": [
             {
               "id": "order",
-              "text": "A pin has the big piece behind; a skewer has it in front"
+              "text": "A pin has the big piece behind, a skewer in front"
             },
             {
               "id": "piece",

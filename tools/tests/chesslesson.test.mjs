@@ -216,16 +216,43 @@ describe('the star hunt', () => {
   });
 });
 
-describe('playing a game inside a lesson', () => {
-  const step = { t: 'play', game: 'pawnwars', bot: 0, goal: 'Get a pawn to the end.' };
+describe('steps that hand the child to another screen', () => {
+  const playStep = { t: 'play', game: 'pawnwars', bot: 0, goal: 'Get a pawn to the end.' };
+  const puzzleStep = { t: 'puzzle', theme: 'fork', count: 5 };
 
-  test('winning is three, a draw two, and losing still passes', () => {
-    assert.equal(L.judge(step, L.start({}), { result: 'win' }).stars, 3);
-    assert.equal(L.judge(step, L.start({}), { result: 'draw' }).stars, 2);
-    const lost = L.judge(step, L.start({}), { result: 'loss' });
-    assert.equal(lost.stars, 1);
-    assert.equal(lost.ok, true, 'losing a game must never block a lesson');
-    assert.doesNotMatch(lost.say, /lost|fail|wrong/i);
+  /* These used to be scored, and the score was never collected: the screen
+     sends the child to the play or puzzle screen and cannot see what happens
+     there. A step that grades work it did not watch is a step that lies. */
+  test('they earn no stars, because nothing here can see the result', () => {
+    assert.equal(L.STEPS.play.scores, false);
+    assert.equal(L.STEPS.puzzle.scores, false);
+  });
+
+  test('they are never wrong and always finish', () => {
+    for (const step of [playStep, puzzleStep]) {
+      const out = L.judge(step, L.start({}), null);
+      assert.equal(out.ok, true, step.t);
+      assert.equal(out.done, true, step.t);
+    }
+  });
+
+  test('recording one adds nothing to the score', () => {
+    const run = L.record(L.start({}), L.judge(playStep, L.start({}), null), playStep);
+    assert.deepEqual(run.stars, []);
+  });
+
+  test('a play step still has to name the opponent it wants', () => {
+    /* The level goes into the link, so a lesson asking for the gentlest bot
+       gets it rather than whichever rung the ladder has the child on. */
+    assert.deepEqual(L.checkStep(playStep), []);
+    const noBot = L.checkStep({ t: 'play', game: 'pawnwars', goal: 'go' });
+    assert.ok(noBot.some((m) => /"bot" must be a level/.test(m)));
+  });
+
+  test('a lesson cannot lean on one for its only interaction', () => {
+    const lazy = lesson({ t: 'say', text: 'Watch this.' }, playStep, DONE);
+    assert.ok(L.checkLesson(lazy).some((m) => /nothing to do/.test(m)),
+      'a lesson whose only activity is somewhere else is not a lesson');
   });
 });
 

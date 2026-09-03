@@ -133,7 +133,7 @@ function route() {
     case 'chess':
       chessRoom().then((room) => {
         /* The child may have moved on while it loaded. */
-        if ((location.hash || '#/home').startsWith('#/chess')) room.renderChess(parts[1], parts[2]);
+        if ((location.hash || '#/home').startsWith('#/chess')) room.renderChess(parts[1], parts[2], parts[3]);
       }).catch((err) => {
         console.error(err);
         showError('The Chess Club could not be loaded.');

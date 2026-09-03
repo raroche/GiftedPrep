@@ -399,7 +399,7 @@
           "choices": [
             {
               "id": "same",
-              "text": "A pin is an x-ray that the front piece is not allowed to leave"
+              "text": "A pin is an x-ray the front piece may not leave"
             },
             {
               "id": "none",
@@ -1296,12 +1296,12 @@
         },
         {
           "t": "say",
-          "text": "Touch move. If you touch a piece you must move it. If you let go of it on a square, it stays there.",
+          "text": "Touch move. Decide before you reach out, because once you touch a piece you are usually committed to it.",
           "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
         },
         {
           "t": "say",
-          "text": "If a piece is just sitting crooked, say adjust out loud before you touch it. Then you may straighten it.",
+          "text": "If a piece sits crooked, say \"I adjust\" out loud first. Then you may straighten it.",
           "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
         },
         {
@@ -1310,7 +1310,7 @@
           "choices": [
             {
               "id": "move",
-              "text": "You must move it, to the least bad square"
+              "text": "You have to move it if it has a legal move"
             },
             {
               "id": "back",
@@ -1318,7 +1318,7 @@
             }
           ],
           "answer": "move",
-          "why": "Touch move is the rule everybody learns the hard way once. Decide before you reach out."
+          "why": "If that piece has a legal move you must play one. Decide before you reach out."
         },
         {
           "t": "say",
@@ -1339,7 +1339,7 @@
             }
           ],
           "answer": "hand",
-          "why": "Stop the clock, raise your hand, wait. Other games are going on all around you."
+          "why": "Stop the clock, raise your hand, wait. If you are ever unsure of a rule, ask the arbiter."
         },
         {
           "t": "say",

@@ -32,7 +32,12 @@ import * as storage from './storage.js';
 /* The record                                                          */
 /* ------------------------------------------------------------------ */
 
-/** Board themes, and the star total that opens each. Cosmetic, earned only. */
+/**
+ * Board colours, and the star total that opens each. Cosmetic, earned only.
+ *
+ * Which of these a child owns is never stored. See normalise(): it is a
+ * function of the star total, which only ever goes up.
+ */
 export const THEMES = [
   { id: 'wood', name: 'Wood', stars: 0 },
   { id: 'forest', name: 'Forest', stars: 10 },
@@ -98,6 +103,16 @@ export const isoDay = (d = new Date()) => {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 };
 
+/** Board colours earned so far. Derived from the star total, never stored. */
+export function themesFor(starTotal) {
+  return THEMES.filter((t) => starTotal >= t.stars);
+}
+
+/** The next colour and what it costs, or null once they are all found. */
+export function nextTheme(starTotal) {
+  return THEMES.find((t) => starTotal < t.stars) || null;
+}
+
 /**
  * Any shape in, a valid progress object out.
  *
@@ -122,7 +137,14 @@ export function normalise(raw) {
 
   out.unlocked = [...new Set(list(raw.unlocked).filter((x) => typeof x === 'string'))];
   out.metThemes = [...new Set(list(raw.metThemes).filter((x) => typeof x === 'string'))];
-  out.themes = [...new Set(['wood', ...list(raw.themes).filter((x) => THEMES.some((t) => t.id === x))])];
+
+  /* Which board colours are owned is WORKED OUT from the star total, never
+     stored. Stored, it was a second copy of the same fact that nothing kept
+     up to date: earning stars raised the total and never touched the list, so
+     a child with a hundred and twenty stars still had only the wooden board
+     and always would. The total already only goes up, so ownership only goes
+     up, and there is nothing left to keep in step. */
+  out.themes = themesFor(out.starTotal).map((t) => t.id);
   out.theme = out.themes.includes(raw.theme) ? raw.theme : 'wood';
 
   out.days = [...new Set(list(raw.days).filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)))]
@@ -236,15 +258,6 @@ export function weekDots(days, today = isoDay()) {
     out.push({ day: isoDay(d), done: set.has(isoDay(d)), today: i === 0 });
   }
   return out;
-}
-
-/** Board themes earned so far, and the next one with what it costs. */
-export function themesFor(starTotal) {
-  return THEMES.filter((t) => starTotal >= t.stars);
-}
-
-export function nextTheme(starTotal) {
-  return THEMES.find((t) => starTotal < t.stars) || null;
 }
 
 /* ------------------------------------------------------------------ */

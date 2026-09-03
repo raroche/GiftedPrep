@@ -125,6 +125,13 @@ export function createBoard(container, opts = {}) {
   /* ---- skeleton ---- */
 
   container.classList.add('cz-cb');
+  /* A board built into a container a previous board used starts clean.
+     Lessons destroy and rebuild the board on every step, into the same host
+     element, and lock() had left `is-locked` on that element. The new board's
+     own state said unlocked -- taps worked -- but the class stayed on for the
+     rest of the lesson, so every piece kept the "you cannot touch this"
+     cursor. Nothing threw and nothing looked broken in the markup. */
+  container.classList.remove('is-locked', 'is-still');
   /* A board colour a child has earned. The board itself knows nothing about
      stars: it is handed a name and puts it on the wrapper, and the stylesheet
      swaps two tokens. Anything unknown falls back to wood rather than drawing
@@ -702,7 +709,7 @@ export function createBoard(container, opts = {}) {
       svg.removeEventListener('pointerup', onPointerUp);
       svg.removeEventListener('pointercancel', onCancel);
       container.innerHTML = '';
-      container.classList.remove('cz-cb');
+      container.classList.remove('cz-cb', 'is-locked', 'is-still');
     }
   };
 

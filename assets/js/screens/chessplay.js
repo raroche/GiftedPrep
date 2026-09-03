@@ -412,12 +412,23 @@ export function playPick(kind, value) {
 /* Routing                                                             */
 /* ------------------------------------------------------------------ */
 
-/** Route target: #/chess/play, and #/chess/games/<id> for one fixed game. */
-export function renderPlay(gameId) {
+/**
+ * Route target: #/chess/play, #/chess/games/<id>, and
+ * #/chess/games/<id>/<bot> when a lesson asks for a particular opponent.
+ *
+ * A lesson that says "play Pawn Wars against the gentlest bot" means it: the
+ * child has just met pawns and should not meet Wise Owl in the same minute.
+ * Without the third part of the address the lesson's request was dropped and
+ * whatever rung the ladder had them on was used instead.
+ */
+export function renderPlay(gameId, askedLevel) {
   const spec = gameId ? games.gameById(gameId) : null;
   state.chess.fixedGame = spec ? spec.id : null;
   if (spec) {
-    state.chess.pick = { level: progress.load().bot.level, game: spec.id, side: spec.side };
+    const wanted = askedLevel === undefined || askedLevel === null || askedLevel === ''
+      ? progress.load().bot.level
+      : bot.levelInfo(Number(askedLevel)).level;
+    state.chess.pick = { level: wanted, game: spec.id, side: spec.side };
   }
   closePlay();
   renderSetup(state.chess.fixedGame);

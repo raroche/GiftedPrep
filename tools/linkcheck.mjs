@@ -122,6 +122,10 @@ for (const [link, from] of links) {
     if (parts[1] === 'games' && parts[2] && !chessGames.has(parts[2])) {
       err(`${link} -> no chess game called "${parts[2]}"   [${where}]`);
     }
+    /* A lesson may name the opponent it wants: #/chess/games/pawnwars/0 */
+    if (parts[1] === 'games' && parts[3] && !/^[0-4]$/.test(parts[3])) {
+      err(`${link} -> "${parts[3]}" is not a bot level from 0 to 4   [${where}]`);
+    }
     if (parts[1] === 'puzzles' && parts[2] && !chessThemes.has(parts[2])) {
       err(`${link} -> no puzzle theme called "${parts[2]}"   [${where}]`);
     }

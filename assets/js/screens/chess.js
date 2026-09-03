@@ -354,6 +354,57 @@ function renderLevel(level, all, p) {
 }
 
 /* ------------------------------------------------------------------ */
+/* Reached out of order                                                */
+/* ------------------------------------------------------------------ */
+
+/**
+ * A lesson whose turn has not come, reached by address rather than by card.
+ *
+ * It says the same thing the locked card says and offers the lesson a child
+ * should actually be doing. A closed door with a sign on it and somewhere to
+ * go is help; a closed door on its own is just a wall.
+ */
+function renderShutLesson(level, lesson, all, p) {
+  const before = level.lessons[level.lessons.findIndex((l) => l.id === lesson.id) - 1];
+  const next = nextReadyLesson(all, p);
+  $('#chesslesson-title').textContent = `${lesson.emoji} ${lesson.name}`;
+  $('#screen-chesslesson').className = `gp-screen cz-room--${level.hue}`;
+  $('#gp-chesslesson-body').innerHTML = `
+    <div class="gp-callout gp-callout--info">
+      <p class="gp-callout__title">Not yet</p>
+      <p>${before
+        ? `Do "${esc(before.name)}" first. Each lesson uses the one before it.`
+        : 'Work through the earlier lessons first.'}</p>
+    </div>
+    <div class="gp-row gp-row--wrap">
+      ${next ? `<a class="gp-btn gp-btn--primary gp-btn--big"
+         href="#/chess/${next.level.level}/${esc(next.lesson.id)}">
+         Do ${esc(next.lesson.name)} instead &rarr;</a>` : ''}
+      <a class="gp-btn gp-btn--quiet" href="#/chess/${level.level}">See the lessons</a>
+    </div>`;
+  paint();
+  showScreen('chesslesson');
+}
+
+/** A whole level whose turn has not come. */
+function renderShutLevel(level, gate) {
+  $('#cz-chesslevel-head').className = `cz-roomhead cz-tile--${level.hue}`;
+  $('#screen-chesslevel').className = `gp-screen cz-room--${level.hue}`;
+  $('#cz-chesslevel-pic').innerHTML = pieceMark(
+    LEVEL_PIECE[level.level - 1] || 'wP', 'cz-chess-piece--big');
+  $('#chesslevel-title').textContent = level.name;
+  $('#gp-chesslevel-lede').textContent = level.who;
+  $('#gp-chesslevel-body').innerHTML = `
+    <div class="gp-callout gp-callout--info">
+      <p class="gp-callout__title">${esc(level.name)} is not open yet</p>
+      <p>${esc(gate.why)}</p>
+    </div>
+    <a class="gp-btn gp-btn--primary" href="#/chess">&larr; Back to Chess Club</a>`;
+  paint();
+  showScreen('chesslevel');
+}
+
+/* ------------------------------------------------------------------ */
 /* Not built yet                                                       */
 /* ------------------------------------------------------------------ */
 
@@ -421,12 +472,12 @@ export { lessonChoice };
  * Route target: #/chess, #/chess/<level>, #/chess/<level>/<lessonId>,
  * #/chess/play, #/chess/games/<id> and #/chess/puzzles.
  */
-export async function renderChess(step, lessonId) {
+export async function renderChess(step, lessonId, third) {
   ensurePieceDefs();
   closePlay();
 
   if (step === 'play') { closeLesson(); closePuzzles(); renderPlay(null); return; }
-  if (step === 'games') { closeLesson(); closePuzzles(); renderPlay(lessonId); return; }
+  if (step === 'games') { closeLesson(); closePuzzles(); renderPlay(lessonId, third); return; }
 
 
   let all;
@@ -442,18 +493,34 @@ export async function renderChess(step, lessonId) {
   if (step === 'puzzles') { closeLesson(); renderPuzzles(lessonId, all); return; }
 
   const level = all.find((lv) => String(lv.level) === step);
+
   if (level && lessonId) {
     const lesson = level.lessons.find((l) => l.id === lessonId);
     if (!lesson) { window.location.hash = `#/chess/${level.level}`; return; }
+    /* The card that leads here is drawn locked, and the same rule has to hold
+       when the address is typed instead. A lesson opened out of order is not
+       cheating so much as being dropped somewhere that will not make sense --
+       the whole point of the order is that each lesson assumes the one before. */
+    if (!progress.isUnlocked(lesson.id, all, p)) {
+      renderShutLesson(level, lesson, all, p);
+      return;
+    }
     $('#chesslesson-title').textContent = `${lesson.emoji} ${lesson.name}`;
     if (isReady(lesson)) { openLesson(level, lesson, all); return; }
     renderSoon('chesslesson', 'gp-chesslesson-body', lesson.name,
       `"${lesson.big}" This lesson is being written.`);
     return;
   }
+
   closeLesson();
   closePuzzles();
-  if (level) { renderLevel(level, all, p); return; }
+  if (level) {
+    /* And the same for a whole level. */
+    const gate = progress.levelGate(all, all.indexOf(level), p);
+    if (!gate.open) { renderShutLevel(level, gate); return; }
+    renderLevel(level, all, p);
+    return;
+  }
 
   paintRoomHead('chess', 'cz-chess-pic');
   renderHub(all, p);

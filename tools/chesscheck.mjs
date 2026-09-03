@@ -329,12 +329,33 @@ for (const n of [1, 2, 3]) {
        learning app down, and level 1 is written for someone who may not be
        reading fluently at all. The ceiling rises with the level. */
     const SAY_WORDS = { 1: 12, 2: 20, 3: 30 }[level.level] || 30;
+    /* An explanation may run longer than an instruction. It is read after the
+       child has already answered, so nobody is stuck in front of it, and
+       cutting a "why" to twelve words usually costs the reason. */
+    const WHY_WORDS = SAY_WORDS + 8;
+    const countWords = (t) => t.trim().split(/\s+/).length;
+    const complain = (where, field, words, cap, text) =>
+      err(`${where}: "${field}" is ${words} words and the ceiling here is ${cap}. "${text}"`);
+
     for (const [j, step] of (lesson.steps || []).entries()) {
-      if (typeof step.text !== 'string') continue;
-      const words = step.text.trim().split(/\s+/).length;
-      if (words > SAY_WORDS) {
-        err(`${at} step ${j + 1}: ${words} words, and level ${level.level} allows `
-          + `${SAY_WORDS}. "${step.text}"`);
+      const where = `${at} step ${j + 1}`;
+      /* Everything a child has to read BEFORE they can act. */
+      for (const field of ['text', 'ask', 'cap', 'goal']) {
+        if (typeof step[field] !== 'string') continue;
+        const words = countWords(step[field]);
+        if (words > SAY_WORDS) complain(where, field, words, SAY_WORDS, step[field]);
+      }
+      /* Everything they read afterwards. */
+      for (const field of ['why', 'hint', 'wrongSay']) {
+        if (typeof step[field] !== 'string') continue;
+        const words = countWords(step[field]);
+        if (words > WHY_WORDS) complain(where, field, words, WHY_WORDS, step[field]);
+      }
+      /* An answer they have to choose between has to be readable at a glance. */
+      for (const choice of step.choices || []) {
+        if (!choice || typeof choice.text !== 'string') continue;
+        const words = countWords(choice.text);
+        if (words > 12) complain(where, `choice "${choice.id}"`, words, 12, choice.text);
       }
     }
 
@@ -644,6 +665,57 @@ else {
   const credits = fs.readFileSync(CREDITS, 'utf8');
   for (const must of ['Burnett', 'chess.js', 'BSD']) {
     if (!credits.includes(must)) err(`${CREDITS} does not mention ${must}`);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* What the room tells people it has                                   */
+/* ------------------------------------------------------------------ */
+
+/* The home page tile and the README both quote counts. A number that has
+   drifted from the data is a small lie a child can check, and the sort of
+   thing nobody notices until somebody counts. */
+const { ROOMS } = await import('../assets/js/modules/sections.js');
+const room = ROOMS.find((r) => r.id === 'chess');
+if (!room) err('there is no chess room in sections.js');
+else if (room.status === 'live') {
+  const claims = [
+    [`${seenLessonIds.size} lessons`, 'lessons'],
+    [`${GAMES.length} games`, 'mini-games'],
+    [`${puzzleTotal.toLocaleString()} puzzles`, 'puzzles']
+  ];
+  for (const [text, what] of claims) {
+    if (!room.meta.includes(text)) {
+      err(`the home page tile says "${room.meta}" but there are ${text} — `
+        + `update the ${what} count in modules/sections.js`);
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* The board hands back a clean container                              */
+/* ------------------------------------------------------------------ */
+
+/* A lesson destroys and rebuilds the board into the SAME element on every
+   step. lock() puts `is-locked` on that element, and building a new board did
+   not take it off: the new board's own state said unlocked, so taps still
+   worked, but every piece kept the "you cannot touch this" cursor for the rest
+   of the lesson. It threw nothing and the markup looked right, which is why it
+   survived a browser pass. Both places have to wipe the state classes. */
+{
+  const src = fs.readFileSync(new URL('../assets/js/modules/chessboard.js', import.meta.url), 'utf8');
+  const STATE_CLASSES = ['is-locked', 'is-still'];
+  /* Counting each class on its own is not enough: lock/unlock and still/moving
+     already remove them one at a time in the normal run of things. What has to
+     exist is a call that wipes the WHOLE set at once, in both the build and
+     the teardown. */
+  const wipes = [...src.matchAll(/container\.classList\.remove\(([^)]*)\)/g)]
+    .map((m) => m[1])
+    .filter((args) => STATE_CLASSES.every((cls) => args.includes(`'${cls}'`)));
+  if (wipes.length < 2) {
+    err('chessboard.js must clear every state class '
+      + `(${STATE_CLASSES.join(', ')}) from the container in one go, both when a `
+      + `board is built and when it is destroyed — found ${wipes.length} of the 2 places`);
   }
 }
 

@@ -375,7 +375,7 @@
         {
           "t": "show",
           "fen": "k7/8/8/8/3N4/8/8/7K w - - 0 1",
-          "cap": "Eight places to land. It is the only piece that jumps over others.",
+          "cap": "Eight places to land. It is the only piece that jumps.",
           "mark": {
             "dots": [
               "b3",
@@ -443,7 +443,7 @@
             "e6"
           ],
           "par": 3,
-          "ask": "Gallop to all three stars. Three jumps is the best you can do."
+          "ask": "Gallop to all three stars. Three jumps is the best."
         },
         {
           "t": "done",
@@ -821,7 +821,7 @@
         {
           "t": "show",
           "fen": "7k/5Q2/5K2/8/8/8/8/8 b - - 0 1",
-          "cap": "But he has nowhere to go. That is stalemate, and it is a draw.",
+          "cap": "But he has nowhere to go. That is stalemate: a draw.",
           "mark": {
             "ring": [
               "g7",
@@ -942,7 +942,7 @@
         },
         {
           "t": "quiz",
-          "ask": "Your rook moved out and came back. Can you still castle with it?",
+          "ask": "That rook moved out and came back. Can you still castle?",
           "choices": [
             {
               "id": "no",
@@ -1143,7 +1143,7 @@
             "g4",
             "Qh4#"
           ],
-          "cap": "The shortest game there is. Watch it in the code you just learned.",
+          "cap": "The shortest game there is, in the code you just learned.",
           "notes": {
             "1": "1. f3 — a poor first move.",
             "2": "1... e5 — Black takes the middle.",
@@ -1341,7 +1341,7 @@
           "game": "full",
           "bot": 0,
           "side": "w",
-          "goal": "A whole game, all the rules. Win or lose, play it to the end."
+          "goal": "A whole game, all the rules. Play it to the end."
         },
         {
           "t": "done",

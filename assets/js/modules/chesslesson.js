@@ -59,10 +59,18 @@ export const STEPS = {
   /* Replay a real game, one move at a time, with a note on the moves that
      matter. Nothing to get wrong: it is a story. */
   game: { scores: false, needs: ['moves'] },
-  /* Play a mini-game or a whole game against a bot. Phase 4. */
-  play: { scores: true, needs: ['game', 'goal'] },
-  /* Solve some puzzles from one theme. Phase 5. */
-  puzzle: { scores: true, needs: ['theme', 'count'] },
+  /* Play a mini-game or a whole game against a bot, on the play screen.
+     Deliberately UNSCORED. The game deserves the whole board rather than a
+     corner of a lesson, so the step hands the child over with a link -- and a
+     step that sends you somewhere else cannot honestly grade you on what you
+     did when you got there. A lesson that scored it would either have to be a
+     smaller copy of the game screen or lie about having watched. Every lesson
+     that uses one also has real scored steps of its own. */
+  play: { scores: false, needs: ['game', 'goal'] },
+  /* Solve some puzzles from one theme, on the puzzle screen. Unscored, for
+     the same reason: the puzzle screen keeps its own score and its own
+     rating, and grading it twice would mean two numbers that can disagree. */
+  puzzle: { scores: false, needs: ['theme', 'count'] },
   /* The end card. */
   done: { scores: false, needs: ['text'] }
 };
@@ -278,28 +286,7 @@ export function judge(step, run, input) {
       return { ok: true, say, stars, done: true, help: false };
     }
 
-    case 'play': {
-      const result = (input && input.result) || 'loss';
-      const stars = result === 'win' ? 3 : result === 'draw' ? 2 : 1;
-      const say = result === 'win' ? 'You won that one.'
-        : result === 'draw' ? 'A draw. Nobody could break through.'
-          : 'You played the whole game out. That is how everybody starts.';
-      return { ok: true, say, stars, done: true, help: false };
-    }
-
-    case 'puzzle': {
-      const right = (input && input.right) || 0;
-      const total = (input && input.total) || (step.count || 1);
-      const share = total ? right / total : 0;
-      const stars = share >= 0.9 ? 3 : share >= 0.6 ? 2 : 1;
-      return {
-        ok: true,
-        say: `${right} of ${total} first try.`,
-        stars, done: true, help: false
-      };
-    }
-
-    /* Reading and watching steps are never wrong. */
+    /* Reading, watching and handing-over steps are never wrong. */
     default:
       return { ok: true, say: '', stars: 0, done: true, help: false };
   }

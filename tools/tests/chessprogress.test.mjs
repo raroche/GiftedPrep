@@ -122,7 +122,7 @@ describe('days practised', () => {
   });
 });
 
-describe('board themes', () => {
+describe('board colours', () => {
   test('wood is free and the rest are earned', () => {
     assert.deepEqual(P.themesFor(0).map((t) => t.id), ['wood']);
     assert.deepEqual(P.themesFor(10).map((t) => t.id), ['wood', 'forest']);
@@ -133,6 +133,46 @@ describe('board themes', () => {
     assert.equal(P.nextTheme(0).id, 'forest');
     assert.equal(P.nextTheme(25).id, 'sunset');
     assert.equal(P.nextTheme(1000), null);
+  });
+
+  /* These go through the real path -- earn stars the way a child earns them,
+     then look at the record. The tests above pass a number to a helper and
+     prove nothing about whether a colour ever actually arrives, which is how
+     a version shipped where a child with a hundred and twenty stars still had
+     only the wooden board and always would. */
+  test('earning stars really does hand over the colours', () => {
+    const earn = (lessons) => {
+      let p = P.BLANK();
+      for (let i = 0; i < lessons; i += 1) p = P.setStars(p, `lesson-${i}`, 3);
+      return P.save(p);
+    };
+    assert.deepEqual(earn(3).themes, ['wood'], '9 stars is not enough for Forest');
+    assert.deepEqual(earn(4).themes, ['wood', 'forest'], '12 stars earns Forest');
+    assert.deepEqual(earn(9).themes, ['wood', 'forest', 'ocean']);
+    assert.deepEqual(earn(17).themes, ['wood', 'forest', 'ocean', 'sunset']);
+    assert.deepEqual(earn(34).themes, P.THEMES.map((t) => t.id));
+  });
+
+  test('a colour survives being saved and read back', () => {
+    let p = P.BLANK();
+    for (let i = 0; i < 10; i += 1) p = P.setStars(p, `l${i}`, 3);
+    p.theme = 'forest';
+    P.save(p);
+    const back = P.load();
+    assert.equal(back.theme, 'forest');
+    assert.ok(back.themes.includes('forest'));
+  });
+
+  test('a colour nobody has earned cannot be selected', () => {
+    const p = P.normalise({ stars: {}, theme: 'night' });
+    assert.equal(p.theme, 'wood', 'an unearned colour falls back rather than sticking');
+  });
+
+  test('ownership is worked out, never taken from the record', () => {
+    /* A saved record claiming every colour with no stars behind it gets
+       exactly one. Storing the list is what let it drift in the first place. */
+    const p = P.normalise({ stars: {}, themes: ['wood', 'forest', 'ocean', 'sunset', 'night'] });
+    assert.deepEqual(p.themes, ['wood']);
   });
 });
 
@@ -268,9 +308,12 @@ describe('reading back what was saved', () => {
     assert.equal(p.games.won, 2, 'you cannot win more games than you played');
   });
 
-  test('a theme that was never earned is not honoured', () => {
+  test('a stored list of colours counts for nothing without the stars', () => {
+    /* This used to assert that a saved list was honoured. It is not any more:
+       ownership is worked out from the star total every time, because a stored
+       copy of the same fact drifted and nobody noticed. */
     const p = P.normalise({ themes: ['night', 'made-up'], theme: 'made-up' });
-    assert.deepEqual(p.themes, ['wood', 'night']);
+    assert.deepEqual(p.themes, ['wood']);
     assert.equal(p.theme, 'wood');
   });
 

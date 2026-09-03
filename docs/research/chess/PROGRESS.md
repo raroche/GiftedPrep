@@ -305,3 +305,41 @@ strength from more depth without replacing chess.js.
 - PLAN.md           the step-by-step build plan (the deliverable)
 - PLAN-lessons.md   every lesson, step by step, with checked FENs
 - PLAN-codebase-notes.md how a room is wired in this app
+
+## Phase 6 & 7 review fixes (2026-09-03)
+
+All seven points in the review were valid and are fixed.
+
+1. Board colours were stored as a list nobody updated, so they never arrived.
+   The list is now worked out from the star total every time it is read.
+2. A locked lesson or level opened if you typed its address. Both now check
+   the gate in the route and show the explanation instead.
+3. A lesson's practice hand-off scored stars for pressing "next", and threw
+   away the bot level it asked for. Hand-off steps no longer score, and the
+   level travels in the address: #/chess/games/<id>/<botLevel>.
+4. Tests exercised helpers rather than the flow they belong to.
+5. The reading-limit check only read some of the fields children read.
+6. The touch-move wording was softer than the take-backs the app allows.
+7. The README claimed a count the data did not support.
+
+Found while verifying, not in the review:
+
+  A stale `is-locked` class. A lesson destroys and rebuilds the board into the
+  same element every step. lock() put `is-locked` on that element and building
+  a new board never took it off. The new board's own state said unlocked, so
+  taps still worked and nothing threw -- but every piece kept the "you cannot
+  touch this" cursor for the rest of the lesson. Both build and destroy now
+  wipe the state classes, and tools/chesscheck.mjs fails if either stops.
+
+### Traps found while building
+
+  Do not drive the app from a long-running async loop in the browser console
+  while also probing it from another call. The probe kills the loop. It looks
+  exactly like the app hanging on a step that works perfectly by hand. Drive
+  it, or watch it, never both.
+
+Verified in the browser: real lessons raise the star total; the star total
+opens Forest at 10 and Ocean at 25; a locked colour refuses to be picked; a
+replayed lesson done worse never lowers the total; a locked lesson and a
+locked level both explain themselves instead of opening; and
+#/chess/games/pawnwars/0 selects Sleepy Sloth while the saved level stays 3.

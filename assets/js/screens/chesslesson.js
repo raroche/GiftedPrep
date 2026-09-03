@@ -315,15 +315,18 @@ export function drawStep() {
     case 'play': {
       /* The mini-game and the puzzle set both live on their own screens, and
          both are worth doing properly rather than in a corner of this one. So
-         the step hands the child over with a link and marks itself done: the
-         lesson is a doorway to the game, not a smaller copy of it. */
+         the step hands the child over with a link and scores nothing: a step
+         that sends you elsewhere cannot honestly grade what you did when you
+         got there. The lesson's own opponent goes in the link, so a lesson
+         asking for the gentlest bot gets it rather than whichever rung the
+         ladder has the child on. */
       const spec = gameById(step.game);
       makeBoard({ fen: spec ? spec.fen : undefined });
       card(`
         ${ask(step.goal || (spec ? spec.goal : 'Time to play.'))}
         ${spec ? `<p class="cz-lesson__count">${esc(spec.name)} &middot; ${esc(spec.blurb)}</p>` : ''}
         <a class="gp-btn gp-btn--primary gp-btn--big cz-lesson__go"
-           href="#/chess/games/${esc(step.game)}">Play it &rarr;</a>
+           href="#/chess/games/${esc(step.game)}/${Number(step.bot) || 0}">Play it &rarr;</a>
         ${nextButton('I have played it')}`);
       break;
     }
