@@ -29,8 +29,35 @@ Add a "Chess" room to the CurioZoo home page with three levels:
   fixes vs 03-curriculum.md: piece-lesson kings go on h1/a8 (else bishop = 12, queen = 26);
   the check-escape position has FIVE legal moves (Nc1 also blocks), not four.
 
+## Traps found while building (do not step in these again)
+- **The cburnett SVGs carry `style="fill:#fff; ..."` on every path.** Under
+  `style-src 'self'` the browser deletes that attribute silently, so pasting the
+  files in unchanged draws twelve black silhouettes — in production only. Every
+  declaration is now a presentation attribute (`fill="#fff"`), and
+  `tools/chesscheck.mjs` fails the build if a `style=` ever comes back.
+- **`.claude/launch.json` was running `python3 -m http.server`,** which sends no
+  CSP, so the browser pane could never have caught the bug above. It now runs
+  `tools/serve.py`, which sends the same policy Netlify does. Check the header is
+  really there before trusting a browser test:
+  `curl -s -D - -o /dev/null http://localhost:8765/ | grep -i content-security`
+- **`tools/archcheck.mjs` now skips `assets/js/vendor/`** for the 700-line size
+  warning. A vendored file is one thing by definition and must not be split.
+- When testing a checker by breaking a file on purpose, target the piece body,
+  not the whole file: the module's own header comment contains example markup
+  (`fill="#fff"`, `style="fill:#fff"`) and a naive replace hits the comment
+  instead of the drawing, so the checker looks broken when it is fine.
+
+## Phases done
+- [x] **Phase 0 — foundations.** chess.js 1.4.0 vendored at `assets/js/vendor/chess.js`
+      with a header saying where it came from; the 12 cburnett pieces are SVG
+      symbols in `assets/js/modules/chesspieces.js`; `docs/research/chess/CREDITS.md`
+      written; `tools/chesscheck.mjs` added to `npm run verify`; empty
+      `data/chess/`, `data/chess/puzzles/` and `assets/js/workers/` created.
+      Verified in a real browser under the production CSP: all 12 pieces draw.
+
 ## Next step for the next model
-Start PLAN.md Phase 0. The room is `status: 'soon'`; flip to 'live' at the end of Phase 6.
+Start PLAN.md **Phase 1: the board**. The room is `status: 'soon'`; flip to 'live'
+at the end of Phase 6.
 
 ## Files in this folder
 - 01-pedagogy.md    how kids are taught chess, what engages them

@@ -39,6 +39,9 @@ const walk = (dir) => {
 walk(ROOT);
 
 const graph = new Map();
+/* vendor/ sits at the bottom with modules: it may be imported by anything and
+   imports nothing of ours. It is listed separately so the size rule can skip
+   it and so an import OF a screen FROM vendor would still be caught. */
 const layerOf = (f) => (f === `${ROOT}/app.js` ? 'app'
   : f.includes(`${ROOT}/screens/`) ? 'screens' : 'modules');
 
@@ -80,8 +83,14 @@ files.forEach(visit);
 
 /* ---- size, as a warning only ---- */
 
+/* A vendored library is one thing by definition: it is somebody else's file,
+   copied whole and replaced whole. Splitting it would mean editing it, which
+   is exactly what must not happen, so the size rule does not apply. */
+const VENDOR = `${ROOT}/vendor/`;
+const isVendor = (f) => f.startsWith(VENDOR);
+
 const LIMIT = 700;
-for (const f of files) {
+for (const f of files.filter((x) => !isVendor(x))) {
   const n = fs.readFileSync(f, 'utf8').split('\n').length;
   if (n > LIMIT) warn(`${f} is ${n} lines; past ${LIMIT} it is probably two things`);
 }
