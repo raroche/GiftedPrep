@@ -180,16 +180,18 @@ describe('which themes are open', () => {
     assert.equal(P.themeGate('fork', done).open, true);
   });
 
-  test('a theme whose lesson is not done is shut, and says which lesson', () => {
+  /* Nothing is gated any more. A theme still names the lesson that teaches it,
+     because a card that says "Skewers — taught in Shove and Take" is a
+     signpost worth having; it is just not a door. */
+  test('a theme whose lesson is not done is open, and still names the lesson', () => {
     const gate = P.themeGate('fork', { stars: {} });
-    assert.equal(gate.open, false);
+    assert.equal(gate.open, true);
     assert.equal(gate.opens, 'l2-fork');
   });
 
-  test('a child with no record at all opens nothing that is gated', () => {
+  test('a child with no record at all can start any of them', () => {
     for (const t of P.THEMES) {
-      if (!t.opens) continue;
-      assert.equal(P.themeGate(t, {}).open, false, `${t.id} was open to a brand new child`);
+      assert.equal(P.themeGate(t, {}).open, true, `${t.id} was shut to a brand new child`);
     }
   });
 
@@ -318,20 +320,20 @@ describe('stars for a sitting', () => {
   });
 });
 
-describe('a lesson opening its own puzzles', () => {
-  test('reaching the puzzle step opens the theme, before the lesson is finished', () => {
-    /* The lesson that teaches forks ends with fork puzzles. Gating those
-       behind that lesson locks a child out of what they were just sent to do. */
-    const met = { stars: {}, metThemes: ['fork'] };
-    assert.equal(P.themeGate('fork', met).open, true);
+describe('a lesson sending a child to its own puzzles', () => {
+  /* The lesson that teaches forks ends with fork puzzles, and there was a
+     whole mechanism -- metThemes -- to stop that link being blocked by the
+     very lesson containing it. With nothing gated the mechanism has nothing
+     to do, but the link it protected still has to work whatever a child has
+     or has not done. */
+  test('the link out of a lesson works from any state at all', () => {
+    for (const p of [{}, { stars: {} }, { stars: {}, metThemes: ['fork'] },
+      { stars: { 'l2-fork': 1 } }]) {
+      assert.equal(P.themeGate('fork', p).open, true, JSON.stringify(p));
+    }
   });
 
-  test('meeting one theme does not open the others', () => {
-    const met = { stars: {}, metThemes: ['fork'] };
-    assert.equal(P.themeGate('skewer', met).open, false);
-  });
-
-  test('finishing the lesson still opens it on its own', () => {
-    assert.equal(P.themeGate('fork', { stars: { 'l2-fork': 1 } }).open, true);
+  test('a theme nobody has heard of is still not open', () => {
+    assert.equal(P.themeGate('quidditch', { stars: { everything: 3 } }).open, false);
   });
 });

@@ -166,12 +166,87 @@ describe('tapping squares', () => {
   });
 
   test('tapping a square twice takes it back off', () => {
+    const many = { t: 'tap', answer: ['c6', 'e6', 'b5'] };
     let run = L.start({});
-    run = L.togglePick(run, 'c6');
-    run = L.togglePick(run, 'e6');
+    run = L.togglePick(run, 'c6', many);
+    run = L.togglePick(run, 'e6', many);
     assert.deepEqual(run.picked, ['c6', 'e6']);
-    run = L.togglePick(run, 'c6');
+    run = L.togglePick(run, 'c6', many);
     assert.deepEqual(run.picked, ['e6']);
+  });
+
+  /* A step that wants one square used to let a child ring two of them and
+     then told them "one of those is not right" for an answer they had already
+     changed their mind about. */
+  test('a step that wants one square moves the choice instead of adding to it', () => {
+    const one = { t: 'tap', answer: ['d5'] };
+    let run = L.start({});
+    run = L.togglePick(run, 'a1', one);
+    assert.deepEqual(run.picked, ['a1']);
+    run = L.togglePick(run, 'd5', one);
+    assert.deepEqual(run.picked, ['d5'], 'the first square must let go');
+    run = L.togglePick(run, 'd5', one);
+    assert.deepEqual(run.picked, [], 'tapping it again still clears it');
+  });
+
+  test('a many-answer step wants one square too', () => {
+    const any = { t: 'tap', anyOf: ['a2', 'b3', 'c6'] };
+    assert.equal(L.picksWanted(any), 1);
+    let run = L.start({});
+    run = L.togglePick(run, 'a2', any);
+    run = L.togglePick(run, 'c6', any);
+    assert.deepEqual(run.picked, ['c6']);
+  });
+
+  test('picksWanted counts what the step actually asks for', () => {
+    assert.equal(L.picksWanted({ t: 'tap', answer: ['d1', 'f1'] }), 2);
+    assert.equal(L.picksWanted({ t: 'tap', answer: ['d5'] }), 1);
+    assert.equal(L.picksWanted(null), 0);
+  });
+});
+
+describe('a question with many right answers', () => {
+  /* "Tap a square the queen can NOT reach" has thirty-six right answers.
+     Listing one of them told thirty-five correct children they were wrong. */
+  const step = {
+    t: 'tap', fen: 'k7/8/8/8/3Q4/8/8/7K w - - 0 1',
+    ask: 'Tap a square the queen can NOT reach in one move.',
+    anyOf: ['b3', 'c6', 'h7'],
+    why: 'Off her lines.'
+  };
+
+  test('any one of them is right', () => {
+    for (const sq of step.anyOf) {
+      const out = L.judge(step, L.start({}), { squares: [sq] });
+      assert.equal(out.ok, true, `${sq} should be accepted`);
+      assert.equal(out.say, step.why);
+    }
+  });
+
+  test('a square that is not on the list is not', () => {
+    const out = L.judge(step, L.start({}), { squares: ['d8'] });
+    assert.equal(out.ok, false);
+  });
+
+  test('two squares at once is not an answer to "tap a square"', () => {
+    const out = L.judge(step, L.start({}), { squares: ['b3', 'c6'] });
+    assert.equal(out.ok, false);
+  });
+
+  test('tapping nothing is not an answer either', () => {
+    assert.equal(L.judge(step, L.start({}), { squares: [] }).ok, false);
+  });
+
+  test('a step may not carry both kinds of answer', () => {
+    const both = { ...step, answer: ['b3'] };
+    const bad = L.checkStep(both, 'x');
+    assert.ok(bad.some((m) => m.includes('exactly one')), bad.join(' | '));
+  });
+
+  test('a one-square anyOf is an answer written the long way', () => {
+    const thin = { ...step, anyOf: ['b3'] };
+    const bad = L.checkStep(thin, 'x');
+    assert.ok(bad.some((m) => m.includes('use "answer"')), bad.join(' | '));
   });
 });
 

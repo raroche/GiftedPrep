@@ -52,8 +52,10 @@ export const STEPS = {
   try: { scores: true, needs: ['fen', 'ask', 'accept'] },
   /* Move one piece around collecting stars, in as few moves as you can. */
   starhunt: { scores: true, needs: ['fen', 'piece', 'stars', 'par'] },
-  /* Tap the squares that answer the question. */
-  tap: { scores: true, needs: ['fen', 'ask', 'answer', 'why'] },
+  /* Tap the squares that answer the question. `answer` lists the squares that
+     must ALL be tapped; a step with many right answers uses `anyOf` instead
+     and takes any single one of them. */
+  tap: { scores: true, needs: ['fen', 'ask', 'why'], oneOf: ['answer', 'anyOf'] },
   /* Pick one of a few written answers. */
   quiz: { scores: true, needs: ['ask', 'choices', 'answer', 'why'] },
   /* Replay a real game, one move at a time, with a note on the moves that
@@ -101,11 +103,28 @@ export function checkStep(step, at = 'step') {
   const spec = STEPS[step.t];
   if (!spec) return [`${at}: "${step.t}" is not a kind of step (have: ${STEP_TYPES.join(', ')})`];
 
-  for (const key of spec.needs) {
+  const missing = (key) => {
     const v = step[key];
-    const empty = v === undefined || v === null || v === ''
+    return v === undefined || v === null || v === ''
       || (Array.isArray(v) && v.length === 0);
-    if (empty) bad.push(`${at}: a "${step.t}" step needs "${key}"`);
+  };
+
+  for (const key of spec.needs) {
+    if (missing(key)) bad.push(`${at}: a "${step.t}" step needs "${key}"`);
+  }
+
+  /* Some steps answer to one field OR another, never both. A tap step with
+     both `answer` and `anyOf` is not a harmless duplicate: one of them is
+     being ignored, and which one is a detail of the judge that nobody reading
+     the lesson can see. */
+  if (spec.oneOf) {
+    const given = spec.oneOf.filter((key) => !missing(key));
+    if (given.length === 0) {
+      bad.push(`${at}: a "${step.t}" step needs one of ${spec.oneOf.join(' or ')}`);
+    } else if (given.length > 1) {
+      bad.push(`${at}: a "${step.t}" step has both ${given.join(' and ')}; `
+        + 'it must have exactly one');
+    }
   }
 
   if (step.t === 'try') {
@@ -127,8 +146,14 @@ export function checkStep(step, at = 'step') {
     }
   }
   if (step.t === 'tap') {
-    for (const sq of step.answer || []) {
+    for (const sq of [...(step.answer || []), ...(step.anyOf || [])]) {
       if (!isSquare(sq)) bad.push(`${at}: "${sq}" is not a square`);
+    }
+    /* An `anyOf` with one square is an `answer` written the long way, and the
+       two behave differently when a child taps twice. Say which you mean. */
+    if (step.anyOf && step.anyOf.length < 2) {
+      bad.push(`${at}: "anyOf" lists ${step.anyOf.length}; with one right `
+        + 'answer use "answer" instead');
     }
   }
   if (step.t === 'quiz') {
@@ -253,8 +278,26 @@ export function judge(step, run, input) {
     }
 
     case 'tap': {
-      const want = new Set(step.answer || []);
       const got = new Set((input && input.squares) || []);
+
+      /* Some questions have many right answers. "Tap a square the queen can
+         NOT reach" has thirty-six of them, and listing one turned thirty-five
+         correct answers into "not quite" -- a child who understood the idea
+         perfectly was told they were wrong, over and over, which is the worst
+         thing this app can do. `anyOf` says: one square, and it must be in
+         this list. */
+      if (step.anyOf) {
+        const ok = got.size === 1 && [...got].every((sq) => step.anyOf.includes(sq));
+        if (!ok) {
+          return miss(step.wrongSay
+            || (got.size > 1 ? 'Just one square this time.'
+              : 'Not that one. Have another look.'));
+        }
+        const stars = starsForTries(run.tries);
+        return { ok: true, say: step.why, stars, done: true, help: false };
+      }
+
+      const want = new Set(step.answer || []);
       const same = want.size === got.size && [...want].every((sq) => got.has(sq));
       if (!same) {
         const extra = [...got].filter((sq) => !want.has(sq)).length;
@@ -308,13 +351,28 @@ export function advance(run) {
   return { ...run, index: run.index + 1, tries: 0, picked: [] };
 }
 
-/** Add or remove a square in a multi-tap step. */
-export function togglePick(run, square) {
+/** How many squares this step is asking for. */
+export function picksWanted(step) {
+  if (!step) return 0;
+  if (step.anyOf) return 1;
+  return (step.answer || []).length;
+}
+
+/**
+ * Add or remove a square in a tap step.
+ *
+ * When the step wants exactly one square, a second tap MOVES the choice
+ * rather than adding to it. Letting it pile up meant a child who changed
+ * their mind sat there with two squares ringed and no way to tell which one
+ * counted, and then got "one of those is not right" for an answer they had
+ * already thought better of. Tapping the same square again still clears it,
+ * so there is always a way back to nothing chosen.
+ */
+export function togglePick(run, square, step) {
   const has = run.picked.includes(square);
-  return {
-    ...run,
-    picked: has ? run.picked.filter((s) => s !== square) : [...run.picked, square]
-  };
+  if (has) return { ...run, picked: run.picked.filter((s) => s !== square) };
+  const wanted = picksWanted(step);
+  return { ...run, picked: wanted === 1 ? [square] : [...run.picked, square] };
 }
 
 /**
@@ -340,5 +398,5 @@ export function progressOf(lesson, run) {
 export default {
   STEPS, STEP_TYPES, MAX_STARS, HELP_AFTER,
   checkStep, checkLesson, start, stepAt, currentStep, isLastStep, wantsHelp,
-  praise, judge, record, advance, togglePick, lessonStars, progressOf
+  praise, judge, record, advance, togglePick, picksWanted, lessonStars, progressOf
 };

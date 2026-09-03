@@ -198,17 +198,14 @@ export const isFinished = (prepared, at) => at >= prepared.solution.length;
  * into skewer puzzles before the skewer lesson does not learn about skewers,
  * they learn that puzzles are impossible.
  */
-export function themeGate(theme, progress) {
+export function themeGate(theme, progress) {   // eslint-disable-line no-unused-vars
   const spec = typeof theme === 'string' ? themeById(theme) : theme;
   if (!spec) return { open: false, opens: null };
-  if (!spec.opens) return { open: true, opens: null };
-  const stars = (progress && progress.stars && progress.stars[spec.opens]) || 0;
-  /* Or the lesson has sent them here. A lesson that teaches forks ends with
-     fork puzzles, and gating those behind that same lesson would lock a child
-     out of the very thing they were just told to go and do. */
-  const met = Boolean(progress && progress.metThemes
-    && progress.metThemes.includes(spec.id));
-  return { open: stars > 0 || met, opens: spec.opens };
+  /* Every theme is open, for the same reason every lesson is (see isUnlocked
+     in chessprogress.js). A child who already plays and wants skewers should
+     get skewers. `opens` is still returned, because the card still says which
+     lesson teaches the theme — that is a signpost now, not a gate. */
+  return { open: true, opens: spec.opens || null };
 }
 
 /* ------------------------------------------------------------------ */

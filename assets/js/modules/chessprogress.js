@@ -315,41 +315,38 @@ export function badgeGoal(progress, levels = []) {
 /**
  * May this lesson be opened yet?
  *
- * The first lesson of a level is always open, and after that each one needs a
- * star on the one before it. A whole level opens when the level before it is
- * finished.
+ * Yes. Every lesson is open, always.
  *
- * Takes ALL the levels rather than one, because the gate on a level is about
- * the level before it, and a function that cannot see it would have to be
- * told the answer by its caller — which is where that rule would then really
- * live, in whichever caller remembered.
+ * It was a chain: each lesson needed a star on the one before it, and a whole
+ * level needed the level before it finished. That is the right shape for a
+ * child meeting chess for the first time, and the wrong shape for the nine-
+ * year-old who already plays and wanted to see the endgames. They met two
+ * padlocked levels and a wall of lessons they did not need, with no way past
+ * except to sit through all fifteen. 02-gamification.md warned about exactly
+ * this: unlocking by grinding is the thing children quit over.
+ *
+ * Order is still there, and still shown: the lessons are in teaching order,
+ * `nextLesson` still points at the sensible next one, and the level pages
+ * still read as a path. It is a suggestion now rather than a gate. A child
+ * who jumps to a lesson they are not ready for finds it hard and goes back,
+ * which costs them a minute; a child who is ready and cannot get in leaves.
+ *
+ * The signature keeps its arguments. Callers pass what they have, and if the
+ * gate ever comes back — for one level, or behind a grown-up's switch — it
+ * comes back here, in the one place, with everything it needs already to hand.
  */
-export function isUnlocked(lessonId, levels, progress) {
-  /* Anything already done stays open, whatever the gates say. A lesson
-     finished with three stars showed a padlock the moment a child reached it
-     out of order, and taking back something already earned is the one thing
-     this whole file exists to prevent. Access only goes up, like stars. */
-  if ((progress.stars[lessonId] || 0) > 0) return true;
-
-  const at = levels.findIndex((lv) => lv.lessons.some((l) => l.id === lessonId));
-  if (at === -1) return false;
-  const level = levels[at];
-  if (at > 0 && !allDone(levels[at - 1], progress)) return false;
-  const i = level.lessons.findIndex((l) => l.id === lessonId);
-  if (i === 0) return true;
-  return (progress.stars[level.lessons[i - 1].id] || 0) > 0;
+export function isUnlocked(lessonId, levels, progress) {   // eslint-disable-line no-unused-vars
+  /* The one thing still worth answering no to: a lesson that does not exist.
+     Nothing can open it, and a caller that gets `true` for a typo goes on to
+     render a lesson it does not have. */
+  return (levels || []).some((lv) => (lv.lessons || []).some((l) => l.id === lessonId));
 }
 
 /** Whether a whole level may be entered, and if not, what opens it. */
-export function levelGate(levels, index, progress) {
-  if (index === 0) return { open: true, why: '' };
-  const before = levels[index - 1];
-  if (allDone(before, progress)) return { open: true, why: '' };
-  const left = before.lessons.length - startedIn(before, progress);
-  return {
-    open: false,
-    why: `Finish ${left} more lesson${left === 1 ? '' : 's'} in ${before.name} to open this.`
-  };
+export function levelGate(levels, index, progress) {       // eslint-disable-line no-unused-vars
+  /* Open, for the same reason as isUnlocked. The shape of the answer is kept
+     so the screens do not have to change and a gate can return. */
+  return { open: true, why: '' };
 }
 
 /** The lesson a child should be offered next: the first one not yet starred. */

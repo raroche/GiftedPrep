@@ -223,38 +223,29 @@ describe('what is open', () => {
     assert.equal(P.isUnlocked('l1-1', LEVELS, P.BLANK()), true);
   });
 
-  test('the next lesson needs a star on the one before it', () => {
+  /* Nothing is gated. A child who already plays can go straight to the
+     endgames, and a five-year-old still meets the lessons in order because
+     that is the order they are listed in and where nextLesson points. */
+  test('every lesson is open to a child who has done nothing', () => {
     const blank = P.BLANK();
-    assert.equal(P.isUnlocked('l1-2', LEVELS, blank), false);
-    const p = P.setStars(blank, 'l1-1', 1);
-    assert.equal(P.isUnlocked('l1-2', LEVELS, p), true);
-    assert.equal(P.isUnlocked('l1-3', LEVELS, p), false);
+    for (const level of LEVELS) {
+      for (const lesson of level.lessons) {
+        assert.equal(P.isUnlocked(lesson.id, LEVELS, blank), true,
+          `${lesson.id} must be open`);
+      }
+    }
   });
 
-  test('a later level stays shut until the one before it is finished', () => {
-    let p = P.setStars(P.BLANK(), 'l1-1', 3);
-    assert.equal(P.isUnlocked('l2-1', LEVELS, p), false);
-    p = finish(p, LEVELS[0]);
-    assert.equal(P.isUnlocked('l2-1', LEVELS, p), true);
-    assert.equal(P.isUnlocked('l3-1', LEVELS, p), false);
-  });
-
-  test('a lesson nobody has heard of is not open', () => {
+  test('a lesson nobody has heard of is still not open', () => {
     assert.equal(P.isUnlocked('nonsense', LEVELS, P.BLANK()), false);
   });
 
-  test('a shut level says how many lessons open it', () => {
-    const gate = P.levelGate(LEVELS, 1, P.setStars(P.BLANK(), 'l1-1', 1));
-    assert.equal(gate.open, false);
-    assert.match(gate.why, /3 more lessons in Pawn Camp/);
-    assert.equal(P.levelGate(LEVELS, 0, P.BLANK()).open, true);
-  });
-
-  test('one lesson left is singular, because "1 more lessons" is not English', () => {
-    let p = P.setStars(P.BLANK(), 'l1-1', 1);
-    p = P.setStars(p, 'l1-2', 1);
-    p = P.setStars(p, 'l1-3', 1);
-    assert.match(P.levelGate(LEVELS, 1, p).why, /1 more lesson in/);
+  test('every level is open, and none of them explains itself away', () => {
+    for (const [i] of LEVELS.entries()) {
+      const gate = P.levelGate(LEVELS, i, P.BLANK());
+      assert.equal(gate.open, true, `level ${i + 1} must be open`);
+      assert.equal(gate.why, '');
+    }
   });
 });
 
@@ -340,17 +331,15 @@ describe('reading back what was saved', () => {
 });
 
 describe('nothing already earned is taken back', () => {
-  test('a lesson with stars stays open even when the one before it has none', () => {
-    /* Reached out of order -- from a link, or because the order changed --
-       and finished. A padlock on it afterwards is taking something back. */
-    const p = P.setStars(P.BLANK(), 'l1-3', 3);
-    assert.equal(P.isUnlocked('l1-3', LEVELS, p), true);
-    assert.equal(P.isUnlocked('l1-2', LEVELS, p), false, 'the gate still holds for the rest');
-  });
-
-  test('a finished lesson in a shut level is still open', () => {
-    const p = P.setStars(P.BLANK(), 'l3-2', 1);
-    assert.equal(P.levelGate(LEVELS, 2, p).open, false);
+  /* This used to be about padlocks reappearing on finished lessons. Nothing
+     is locked any more, so the promise is simpler and stronger: whatever a
+     child has done stays done and stays reachable, and the stars behind it
+     never fall. */
+  test('a lesson done out of order keeps its stars and stays open', () => {
+    const p = P.setStars(P.BLANK(), 'l3-2', 3);
     assert.equal(P.isUnlocked('l3-2', LEVELS, p), true);
+    assert.equal(p.stars['l3-2'], 3);
+    const worse = P.setStars(p, 'l3-2', 1);
+    assert.equal(worse.stars['l3-2'], 3, 'a worse replay must not lower it');
   });
 });

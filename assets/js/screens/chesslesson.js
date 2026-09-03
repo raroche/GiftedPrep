@@ -267,7 +267,7 @@ export function drawStep() {
         /* Every tap is an answer, including one on an occupied square. */
         canMove: () => false,
         onSquare: (sq) => {
-          state.chess.run = lessonKit.togglePick(state.chess.run, sq);
+          state.chess.run = lessonKit.togglePick(state.chess.run, sq, step);
           board.mark({ ...(step.mark || {}), ring: state.chess.run.picked });
           const n = state.chess.run.picked.length;
           const btn = $('[data-action="chess-check"]');

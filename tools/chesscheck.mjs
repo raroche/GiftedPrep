@@ -408,9 +408,38 @@ for (const n of [1, 2, 3]) {
           if (game.get(sq)) err(`${where}: a star sits on top of a piece at ${sq}`);
         }
       }
-      if (step.t === 'tap' && game) {
-        /* Nothing to prove about the answer itself, but the squares have to
-           be on the board, which checkStep already did. */
+      if (step.t === 'tap' && game && step.anyOf) {
+        /* An `anyOf` list is a claim about the position: these are the squares
+           that answer the question. Written by hand it drifts from the FEN the
+           moment either changes, and the symptom is a child being told a right
+           answer is wrong -- which is the bug this field was added to fix.
+
+           The only question the app asks this way is "which squares can this
+           piece NOT reach", so that is what is checked: every listed square
+           must be one the mover cannot legally move to, and no reachable
+           square may be in the list. */
+        const mover = Object.entries(fenToPosition(step.fen))
+          .find(([, code]) => code[0] === game.turn() && code[1] !== 'K');
+        if (!mover) {
+          err(`${where}: "anyOf" needs one piece of the side to move to ask about`);
+        } else {
+          const [from] = mover;
+          const reach = new Set(game.moves({ square: from, verbose: true }).map((m) => m.to));
+          const wrong = step.anyOf.filter((sq) => reach.has(sq));
+          if (wrong.length) {
+            err(`${where}: "anyOf" lists ${wrong.join(', ')}, which the piece on `
+              + `${from} CAN reach — a child tapping one is told they are wrong`);
+          }
+          const missed = [...reach].length
+            ? [...Array(64).keys()]
+              .map((n) => 'abcdefgh'[n % 8] + '12345678'[Math.floor(n / 8)])
+              .filter((sq) => sq !== from && !reach.has(sq) && !step.anyOf.includes(sq))
+            : [];
+          if (missed.length) {
+            err(`${where}: "anyOf" leaves out ${missed.join(', ')}, which the piece `
+              + `on ${from} cannot reach either — a child tapping one is told they are wrong`);
+          }
+        }
       }
       if (step.t === 'game') {
         const g = step.fen ? new ChessLib(step.fen, { skipValidation: true }) : new ChessLib();

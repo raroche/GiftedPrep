@@ -418,3 +418,54 @@ config — add it to `SOURCES` in `tools/cspcheck.mjs`.**
 - [ ] A 600-rated child finds level 3 fair. This one needs a real 600-rated
       child; the puzzle ratings come from Lichess and the lessons were played
       end to end, but nobody has watched a child at that strength use it.
+
+## Every door is open now (2026-09-03)
+
+Asked for directly: a child who already plays should be able to go straight to
+the endgames. `isUnlocked`, `levelGate` and `themeGate` all return open.
+
+`02-gamification.md` warned about this and the "Two design notes" section
+above named `levelGate()` / `isUnlocked()` as the one place to change if it
+ever bit. It bit, and that was the one place.
+
+What is left of the order: the lessons are still listed in teaching order,
+`nextLesson` still points at the sensible next one, and a puzzle theme still
+names the lesson that teaches it. Signposts, not doors.
+
+`isUnlocked` still says no to a lesson id that does not exist, because a
+caller that gets `true` for a typo goes on to render a lesson it does not
+have. `renderShutLesson` and `renderShutLevel` in screens/chess.js are now
+unreachable. They are kept on purpose: the screens are correct for a shut
+gate, only the policy changed, so a gate can come back without rewriting them.
+
+`metThemes` no longer decides anything. It is still recorded, and the test for
+it now checks the thing it protected -- that the link out of a lesson into its
+own puzzles works from any state at all.
+
+## A tap step may have many right answers (2026-09-03)
+
+"Tap a square the queen can NOT reach in one move" listed one square. There
+are thirty-six. A child tapping any of the other thirty-five was told they
+were wrong, over and over, while understanding the idea perfectly.
+
+`tap` steps now take EITHER `answer` (tap all of these) OR `anyOf` (tap any
+one of these), never both. `chesscheck` replays `anyOf` against the step's own
+FEN: every listed square must be one the piece cannot reach, and no
+unreachable square may be left out. A hand-written list cannot drift from the
+position without failing the build.
+
+### Tap steps that want one square now take one square
+
+Selecting a second square used to add to the first. A child who changed their
+mind sat with two squares ringed, no way to tell which counted, and then got
+"one of those is not right" for an answer they had already abandoned.
+`togglePick` now takes the step: when it wants one, a new tap moves the
+choice. Tapping the same square again still clears it. Steps that want eight
+pawns still collect eight.
+
+### Trap, again
+
+Two overlapping browser loops toggled the same squares and produced a
+"multi-select is broken" reading that was entirely my own doing. It has now
+cost time three times. **One harness at a time. If a javascript_exec call
+times out, assume it is still running and clean up before the next one.**
