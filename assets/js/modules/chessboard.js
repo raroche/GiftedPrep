@@ -60,6 +60,16 @@ const el = (name, attrs = {}) => {
   return node;
 };
 
+/**
+ * Board colours a child can earn. Cosmetic only: a wooden board and a night
+ * board play exactly the same.
+ *
+ * The list is here rather than imported from the progress module, because the
+ * board must not depend on what a child has done -- it draws what it is told.
+ * modules/chessprogress.js owns which of these are unlocked and when.
+ */
+export const THEMES = ['wood', 'forest', 'ocean', 'sunset', 'night'];
+
 /* How far a pointer may wander before it counts as a drag rather than a tap.
    Six pixels: a finger on an iPad never holds still, and treating the wobble
    as a drag made tap-to-move feel broken. */
@@ -115,6 +125,11 @@ export function createBoard(container, opts = {}) {
   /* ---- skeleton ---- */
 
   container.classList.add('cz-cb');
+  /* A board colour a child has earned. The board itself knows nothing about
+     stars: it is handed a name and puts it on the wrapper, and the stylesheet
+     swaps two tokens. Anything unknown falls back to wood rather than drawing
+     a board with no colours at all. */
+  container.classList.add(`cz-cb--${THEMES.includes(opts.theme) ? opts.theme : 'wood'}`);
   container.innerHTML = '';
   container.dataset.orientation = state.orientation;
 
@@ -674,6 +689,13 @@ export function createBoard(container, opts = {}) {
     unlock() { state.locked = false; container.classList.remove('is-locked'); return board; },
     announce,
 
+    /** Repaint in a different earned colour, without rebuilding anything. */
+    setTheme(name) {
+      for (const t of THEMES) container.classList.remove(`cz-cb--${t}`);
+      container.classList.add(`cz-cb--${THEMES.includes(name) ? name : 'wood'}`);
+      return board;
+    },
+
     destroy() {
       svg.removeEventListener('pointerdown', onPointerDown);
       svg.removeEventListener('pointermove', onPointerMove);
@@ -687,4 +709,4 @@ export function createBoard(container, opts = {}) {
   return board;
 }
 
-export default { createBoard };
+export default { createBoard, THEMES };

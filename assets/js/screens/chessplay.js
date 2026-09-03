@@ -164,6 +164,7 @@ function startGame(spec, level, side) {
     fen: game.fen(),
     orientation: side,
     label: `${spec.name} board`,
+    theme: progress.load().theme,
     canMove: (sq) => {
       if (play.over || play.thinking) return false;
       const piece = game.get(sq);

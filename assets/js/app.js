@@ -391,6 +391,9 @@ function onClick(ev) {
   const chessGame = ev.target.closest('[data-chess-game]');
   if (chessGame && chess) { chess.playPick('game', chessGame.dataset.chessGame); return; }
 
+  const chessTheme = ev.target.closest('[data-chess-theme]');
+  if (chessTheme && chess) { chess.chessAction('chess-theme', chessTheme); return; }
+
   const choice = ev.target.closest('.gp-choice');
   if (choice && !state.answered) { handleAnswer(choice.dataset.choice); return; }
 

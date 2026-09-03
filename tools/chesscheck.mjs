@@ -540,6 +540,42 @@ for (const theme of THEMES) {
   }
 }
 
+/* Every board colour a child can earn must actually exist in the stylesheet,
+   and the two lists must agree. A colour with no rule draws a board with no
+   squares -- and it is only reachable after fifty stars, so nobody would find
+   out for a long time. */
+const { THEMES: BOARD_THEMES } = await import('../assets/js/modules/chessboard.js');
+const { THEMES: EARNED_THEMES } = await import('../assets/js/modules/chessprogress.js');
+for (const t of EARNED_THEMES) {
+  if (!BOARD_THEMES.includes(t.id)) {
+    err(`board colour "${t.id}" can be earned but the board does not know it`);
+  }
+  if (!new RegExp(`\\.cz-cb--${t.id}\\s*\\{[^}]*--cb-light`).test(css)) {
+    err(`board colour "${t.id}" has no .cz-cb--${t.id} rule, so it draws with no squares`);
+  }
+}
+for (const id of BOARD_THEMES) {
+  if (!EARNED_THEMES.some((t) => t.id === id)) {
+    warn(`board colour "${id}" exists but no number of stars unlocks it`);
+  }
+}
+
+/* The pieces a lesson can free have to be pieces. */
+const PIECES = ['rook', 'bishop', 'queen', 'knight', 'pawn', 'king'];
+const freed = new Set();
+for (const level of levels) {
+  for (const lesson of level.lessons || []) {
+    if (!lesson.piece) continue;
+    if (!PIECES.includes(lesson.piece)) continue;   /* already reported above */
+    if (freed.has(lesson.piece)) err(`two lessons both free the ${lesson.piece}`);
+    freed.add(lesson.piece);
+  }
+}
+if (levels.length && freed.size !== PIECES.length) {
+  const missing = PIECES.filter((x) => !freed.has(x));
+  err(`no lesson frees the ${missing.join(', ')}; that piece stays in its cage for ever`);
+}
+
 /* What the puzzle files were built from. Without it the data is reproducible
    in principle and nobody can tell you from what. */
 const MANIFEST = 'data/chess/puzzles/manifest.json';

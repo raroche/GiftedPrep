@@ -85,6 +85,7 @@ function makeBoard(step, opts = {}) {
     fen: (step && step.fen) || EMPTY_FEN,
     orientation: (step && step.side === 'b') ? 'b' : 'w',
     label: 'Lesson board',
+    theme: progress.load().theme,
     interactive: Boolean(opts.canMove || opts.onSquare),
     ...opts
   });
@@ -426,8 +427,16 @@ function finish() {
   $('#gp-lesson-board').innerHTML = '';
 
   const line = (step && step.text) || 'Lesson finished.';
+  /* Only for three stars. Confetti every time is wallpaper; confetti for the
+     best result is a reward. Anyone who asked for less movement gets the
+     stars and the words and no falling paper -- the stylesheet handles that. */
+  const cheer = stars >= lessonKit.MAX_STARS
+    ? `<span class="gp-confetti" aria-hidden="true">${
+      Array.from({ length: 14 }, (_, i) => `<span data-style="--i:${i}"></span>`).join('')}</span>`
+    : '';
   card(`
     <div class="gp-done cz-lesson__done">
+      ${cheer}
       <p class="cz-lesson__stars">${Array.from({ length: lessonKit.MAX_STARS }, (_, i) =>
         `<span class="cz-chess-star${i < stars ? ' is-on' : ''}">${i < stars ? '★' : '☆'}</span>`
       ).join('')}</p>

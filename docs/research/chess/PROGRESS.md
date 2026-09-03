@@ -221,10 +221,17 @@ Add a "Chess" room to the CurioZoo home page with three levels:
 - [x] **Phase 6, level 3 — Queen's Guild.** All 18 lessons written and played
       end to end. **Phase 6 is complete: all 52 lessons.**
 
+- [x] **Phase 7 — rewards and polish.** Caged pieces on the level pages, five
+      board colours earned with stars and a picker on the hub, the star pop on
+      every end card, confetti for three stars only. Stars on cards, the badge
+      and the week dots were already in from Phase 2. `chesscheck` now checks
+      that every earnable colour has a stylesheet rule and that every piece is
+      freed by exactly one lesson.
+
 ## Next step for the next model
-**Phase 7: rewards and polish** — caged pieces on the level page, board themes
-earned with stars, the week dots, the star pop. Then **Phase 8** (checks, the
-README numbers, ship).
+**Phase 8: checks, docs, ship** — most of it is already done (chesscheck runs
+in verify, smoke.js covers the room). What is left: confirm the README numbers,
+run the smoke test in a browser, and check every route at 375px and on an iPad.
 
 ### How to write a level
 1. Write a script that replays every FEN and every move you intend to use

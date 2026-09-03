@@ -190,6 +190,7 @@ function showPuzzle() {
     fen: game.fen(),
     orientation: side,
     label: 'Puzzle board',
+    theme: progress.load().theme,
     canMove: (sq) => {
       if (run.locked) return false;
       const piece = game.get(sq);

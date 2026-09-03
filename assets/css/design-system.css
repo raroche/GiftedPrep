@@ -3854,7 +3854,13 @@ button, a, label, summary, [role="button"] {
 
 /* ---- the end card ---- */
 
-.cz-lesson__done { display: grid; gap: var(--gp-space-3); justify-items: center; text-align: center; }
+.cz-lesson__done {
+  position: relative;   /* the confetti is absolutely placed inside it */
+  display: grid;
+  gap: var(--gp-space-3);
+  justify-items: center;
+  text-align: center;
+}
 .cz-lesson__done h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
 
 .cz-lesson__stars { margin: 0; font-size: 2.6rem; line-height: 1; letter-spacing: .08em; }
@@ -4068,3 +4074,134 @@ button, a, label, summary, [role="button"] {
 .cz-puz__say.is-retry { color: var(--gp-ink-soft); }
 .cz-puz__tools { justify-content: center; }
 .cz-puz__done { display: grid; gap: var(--gp-space-3); justify-items: center; text-align: center; }
+
+
+/* ==========================================================================
+   Board colours, earned with stars
+
+   Cosmetic only: a night board and a wooden board play identically. Each one
+   redefines exactly two tokens, so nothing else about the board has to know
+   these exist. The marks keep the same blue and orange throughout, because
+   they carry meaning and a child should not have to relearn them.
+   ========================================================================== */
+
+.cz-cb--wood   { --cb-light: #EFD8B4; --cb-dark: #B07C4F; }
+.cz-cb--forest { --cb-light: #E8E7CB; --cb-dark: #6C8A5A; }
+.cz-cb--ocean  { --cb-light: #DDE7EE; --cb-dark: #6389A8; }
+.cz-cb--sunset { --cb-light: #F5DDC8; --cb-dark: #B76E62; }
+.cz-cb--night  { --cb-light: #9AA4B4; --cb-dark: #45506B; }
+
+/* ---- the picker on the hub ---- */
+
+.cz-chess-themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gp-space-3);
+  justify-content: center;
+  margin-bottom: var(--gp-space-6);
+}
+
+.cz-chess-theme {
+  display: grid;
+  gap: var(--gp-space-1);
+  justify-items: center;
+  padding: var(--gp-space-2);
+  border: 2px solid transparent;
+  border-radius: var(--gp-radius-lg);
+  background: none;
+  color: var(--gp-ink);
+  font: inherit;
+  cursor: pointer;
+}
+.cz-chess-theme.is-on { border-color: var(--room, var(--gp-accent)); }
+.cz-chess-theme.is-locked { opacity: .5; cursor: default; }
+
+/* Four squares, which is the smallest drawing that still reads as a board. */
+.cz-chess-swatch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 42px; height: 42px;
+  border-radius: var(--gp-radius-sm);
+  overflow: hidden;
+}
+.cz-chess-swatch i { display: block; }
+.cz-chess-swatch i:nth-child(1),
+.cz-chess-swatch i:nth-child(4) { background: var(--cb-light); }
+.cz-chess-swatch i:nth-child(2),
+.cz-chess-swatch i:nth-child(3) { background: var(--cb-dark); }
+
+.cz-chess-theme__name { font-size: .72rem; font-weight: 700; }
+.cz-chess-theme__cost { font-size: .68rem; color: var(--gp-ink-soft); }
+
+
+/* ==========================================================================
+   Caged pieces on the level page
+
+   Magnus' Kingdom locks its pieces up and hands out keys, and it is the one
+   reward in the research that is not a number: a child can see at a glance
+   which pieces are theirs. The bars are drawn, not shaded, so they read the
+   same in both themes.
+   ========================================================================== */
+
+.cz-chess-cage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.6rem; height: 2.6rem;
+  margin-bottom: var(--gp-space-1);
+}
+.cz-chess-cage__piece { width: 2.2rem; height: 2.2rem; }
+
+/* A locked piece is dimmed and greyed, so the bars read as a state rather
+   than as decoration on top of a perfectly normal piece. */
+.cz-chess-cage:not(.is-free) .cz-chess-cage__piece { opacity: .45; filter: grayscale(1); }
+
+.cz-chess-cage__bars {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--gp-ink-soft);
+  border-radius: var(--gp-radius-sm);
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--gp-ink-soft) 0 2px,
+    transparent 2px 9px);
+  opacity: .8;
+  transition: opacity var(--gp-dur-slow) var(--gp-ease),
+              transform var(--gp-dur-slow) var(--gp-ease);
+}
+
+/* The bars drop away rather than vanishing. It is one transition and it is
+   the only moment in the room that says "that is yours now". */
+.cz-chess-cage.is-free .cz-chess-cage__bars {
+  opacity: 0;
+  transform: translateY(60%) scaleY(.2);
+}
+
+/* ---- stars arriving on the end card ---- */
+
+.cz-lesson__stars .cz-chess-star,
+.cz-play__done .cz-chess-star,
+.cz-puz__done .cz-chess-star { display: inline-block; }
+
+.cz-lesson__stars .cz-chess-star.is-on,
+.cz-play__done .cz-chess-star.is-on,
+.cz-puz__done .cz-chess-star.is-on {
+  animation: cz-star-pop 420ms var(--gp-ease) backwards;
+}
+.cz-lesson__stars .cz-chess-star.is-on:nth-child(2),
+.cz-play__done .cz-chess-star.is-on:nth-child(2),
+.cz-puz__done .cz-chess-star.is-on:nth-child(2) { animation-delay: 180ms; }
+.cz-lesson__stars .cz-chess-star.is-on:nth-child(3),
+.cz-play__done .cz-chess-star.is-on:nth-child(3),
+.cz-puz__done .cz-chess-star.is-on:nth-child(3) { animation-delay: 360ms; }
+
+@keyframes cz-star-pop {
+  0%   { transform: scale(.2) rotate(-25deg); opacity: 0; }
+  60%  { transform: scale(1.25) rotate(6deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cz-chess-cage__bars { transition: none; }
+  .cz-chess-star.is-on { animation: none; }
+}

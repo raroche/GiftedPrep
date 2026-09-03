@@ -136,6 +136,14 @@ function statRow(p, all) {
     ${goal ? `<p class="cz-chess-goal">${esc(goal)}</p>` : ''}`;
 }
 
+/** What the next board colour costs, in a sentence a child can act on. */
+function nextColour(p) {
+  const next = progress.nextTheme(p.starTotal);
+  if (!next) return 'You have found every colour.';
+  const left = next.stars - p.starTotal;
+  return `${left} more star${left === 1 ? '' : 's'} and ${next.name} is yours.`;
+}
+
 /* The piece each level is named after. Pawn Camp shows a pawn, Knight School
    a knight, Queen's Guild a queen -- the icon and the name have to be the same
    word or the picture is decoration. */
@@ -232,6 +240,26 @@ function renderHub(all, p) {
       </a>
     </div>
 
+    <div class="cz-sectionhead"><h2>Your board</h2>
+      <p>${p.themes.length === progress.THEMES.length
+        ? 'You have found every colour.'
+        : `${esc(nextColour(p))}`}</p></div>
+    <div class="cz-chess-themes">
+      ${progress.THEMES.map((t) => {
+        const owned = p.themes.includes(t.id);
+        const swatch = `<span class="cz-chess-swatch cz-cb--${t.id}" aria-hidden="true">
+          <i></i><i></i><i></i><i></i></span>`;
+        const label = owned
+          ? `<span class="cz-chess-theme__cost">${t.id === p.theme ? 'On the board' : 'Yours'}</span>`
+          : `<span class="cz-chess-theme__cost">${t.stars} stars</span>`;
+        const inner = `${swatch}<span class="cz-chess-theme__name">${esc(t.name)}</span>${label}`;
+        return owned
+          ? `<button type="button" class="cz-chess-theme${t.id === p.theme ? ' is-on' : ''}"
+               aria-pressed="${t.id === p.theme}" data-chess-theme="${esc(t.id)}">${inner}</button>`
+          : `<span class="cz-chess-theme is-locked" aria-disabled="true">${inner}</span>`;
+      }).join('')}
+    </div>
+
     <div class="cz-sectionhead"><h2>Small games</h2>
       <p>Each one is short and you can win it. Start at the top.</p></div>
     <div class="cz-chess-mini">
@@ -251,13 +279,39 @@ function renderHub(all, p) {
 /* One level                                                           */
 /* ------------------------------------------------------------------ */
 
+/** The piece a lesson frees, drawn behind bars until it is done. */
+const PIECE_CODE = {
+  rook: 'wR', bishop: 'wB', queen: 'wQ', knight: 'wN', pawn: 'wP', king: 'wK'
+};
+
+/**
+ * A caged piece, or a freed one.
+ *
+ * Magnus' Kingdom locks its pieces up and hands out keys, and it is the one
+ * reward in the research that is not a number: a child can see at a glance
+ * which pieces are theirs. The bars are drawn rather than drop-shadowed so
+ * they survive both themes, and they slide away on a transition when the
+ * lesson is finished.
+ */
+function cage(piece, freed) {
+  const code = PIECE_CODE[piece];
+  if (!code) return '';
+  return `<span class="cz-chess-cage${freed ? ' is-free' : ''}"
+      role="img" aria-label="${freed ? `the ${esc(piece)} is yours` : `the ${esc(piece)} is still locked up`}">
+      ${pieceMark(code, 'cz-chess-cage__piece')}
+      <span class="cz-chess-cage__bars" aria-hidden="true"></span>
+    </span>`;
+}
+
 function lessonCard(lesson, i, level, all, p) {
   const stars = p.stars[lesson.id] || 0;
   const open = progress.isUnlocked(lesson.id, all, p);
   const ready = isReady(lesson);
   const inner = `
     <span class="gp-topic__num" aria-hidden="true">${i + 1}</span>
-    <span class="gp-topic__emoji" aria-hidden="true">${esc(lesson.emoji)}</span>
+    ${lesson.piece
+      ? cage(lesson.piece, p.unlocked.includes(lesson.piece))
+      : `<span class="gp-topic__emoji" aria-hidden="true">${esc(lesson.emoji)}</span>`}
     <span class="gp-card__title">${esc(lesson.name)}</span>
     <span class="gp-card__sub">${esc(lesson.big)}</span>
     <span class="cz-chess-lesson__foot">
@@ -337,6 +391,13 @@ export function chessAction(name, el) {
   if (puzzleAction(name)) return;
   if (lessonAction(name, el)) return;
   if (playAction(name, el)) return;
+
+  if (name === 'chess-theme') {
+    const pick = el && el.dataset.chessTheme;
+    progress.update((p) => (p.themes.includes(pick) ? { ...p, theme: pick } : p));
+    renderChess();
+    return;
+  }
 
   if (name === 'chess-begin') {
     progress.update((p) => ({ ...p, seenIntro: true }));
