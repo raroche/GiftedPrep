@@ -212,9 +212,15 @@ Add a "Chess" room to the CurioZoo home page with three levels:
       `chesscheck` now also enforces the per-level word limit and the 5-to-9
       step count.
 
+- [x] **Phase 6, level 2 — Knight School.** All 19 lessons written, every
+      position replayed first, every lesson played end to end in a browser to
+      three stars. `play` and `puzzle` steps now hand off to the real game and
+      puzzle screens instead of showing a skip card, and a lesson's own puzzle
+      theme opens when the child reaches that step.
+
 ## Next step for the next model
-**Phase 6, level 2 — Knight School**, 19 lessons, from PLAN-lessons.md. Then
-level 3, then Phase 7 (rewards and polish) and Phase 8 (checks and ship).
+**Phase 6, level 3 — Queen's Guild**, 18 lessons, from PLAN-lessons.md. Then
+Phase 7 (rewards and polish) and Phase 8 (checks and ship).
 
 ### How to write a level
 1. Write a script that replays every FEN and every move you intend to use
@@ -225,6 +231,13 @@ level 3, then Phase 7 (rewards and polish) and Phase 8 (checks and ship).
    and the step count.
 3. Play every lesson in the browser. A harness that drives the accessible grid
    is the quickest way; see the note below.
+
+### A trap in the puzzle gate
+A lesson that teaches forks ends with fork puzzles, and the theme gate keys off
+`stars[lesson]` — so the link inside the lesson was blocked by the lesson
+itself. `progress.metThemes` records that a child has reached a lesson's puzzle
+step, and `themeGate` accepts either. Any new lesson with a `puzzle` step gets
+this for free.
 
 ### Driving a lesson from the browser console
 `document.querySelector('.cz-cb__grid [data-sq="e4"]').click()` is a move.

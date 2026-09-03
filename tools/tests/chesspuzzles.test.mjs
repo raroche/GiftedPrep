@@ -317,3 +317,21 @@ describe('stars for a sitting', () => {
     assert.equal(P.starsFor(0, 0), 1);
   });
 });
+
+describe('a lesson opening its own puzzles', () => {
+  test('reaching the puzzle step opens the theme, before the lesson is finished', () => {
+    /* The lesson that teaches forks ends with fork puzzles. Gating those
+       behind that lesson locks a child out of what they were just sent to do. */
+    const met = { stars: {}, metThemes: ['fork'] };
+    assert.equal(P.themeGate('fork', met).open, true);
+  });
+
+  test('meeting one theme does not open the others', () => {
+    const met = { stars: {}, metThemes: ['fork'] };
+    assert.equal(P.themeGate('skewer', met).open, false);
+  });
+
+  test('finishing the lesson still opens it on its own', () => {
+    assert.equal(P.themeGate('fork', { stars: { 'l2-fork': 1 } }).open, true);
+  });
+});

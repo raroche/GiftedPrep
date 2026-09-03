@@ -21,6 +21,8 @@ import { Chess } from './../vendor/chess.js';
 import { createBoard } from './../modules/chessboard.js';
 import * as lessonKit from './../modules/chesslesson.js';
 import * as progress from './../modules/chessprogress.js';
+import { gameById } from './../modules/chessgames.js';
+import { themeById as puzzleThemeById } from './../modules/chesspuzzles.js';
 import * as speech from './../modules/speech.js';
 import { escapeHtml } from './../modules/charts.js';
 import { $, paint, react, showScreen, state } from './../modules/shell.js';
@@ -309,15 +311,33 @@ export function drawStep() {
       break;
     }
 
-    case 'play':
+    case 'play': {
+      /* The mini-game and the puzzle set both live on their own screens, and
+         both are worth doing properly rather than in a corner of this one. So
+         the step hands the child over with a link and marks itself done: the
+         lesson is a doorway to the game, not a smaller copy of it. */
+      const spec = gameById(step.game);
+      makeBoard({ fen: spec ? spec.fen : undefined });
+      card(`
+        ${ask(step.goal || (spec ? spec.goal : 'Time to play.'))}
+        ${spec ? `<p class="cz-lesson__count">${esc(spec.name)} &middot; ${esc(spec.blurb)}</p>` : ''}
+        <a class="gp-btn gp-btn--primary gp-btn--big cz-lesson__go"
+           href="#/chess/games/${esc(step.game)}">Play it &rarr;</a>
+        ${nextButton('I have played it')}`);
+      break;
+    }
+
     case 'puzzle': {
-      /* Phases 4 and 5. Until then the step is skippable rather than a wall,
-         so a lesson that uses one is still finishable. */
+      const theme = puzzleThemeById(step.theme);
+      /* Reaching this step is the introduction, so the puzzle room opens. */
+      progress.update((p) => progress.meetTheme(p, step.theme));
       makeBoard(step);
       card(`
-        ${ask(step.goal || 'A game to play here.')}
-        <p class="cz-lesson__say">This part is still being built. Skip it for now.</p>
-        ${nextButton('Skip for now')}`);
+        ${ask(step.goal || (theme ? theme.blurb : 'Some puzzles to try.'))}
+        ${theme ? `<p class="cz-lesson__count">${esc(theme.name)} &middot; ${step.count || 5} puzzles</p>` : ''}
+        <a class="gp-btn gp-btn--primary gp-btn--big cz-lesson__go"
+           href="#/chess/puzzles/${esc(step.theme)}">Try them &rarr;</a>
+        ${nextButton('I have tried them')}`);
       break;
     }
 

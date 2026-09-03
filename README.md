@@ -52,7 +52,7 @@ listing — in [`assets/img/logo/anim/`](assets/img/logo/anim/README.md).
 |---|---|
 | **Math Lab** | 86 topics and 609 exercises across grades 1–6. Real mathematics — primes, symmetry, graph colouring, the pigeonhole principle — not worksheets |
 | **Fun and games** | Name the Flag, Name the Country Shape, Name the Capital, Name the Element and Guess the Angle — typed answers in English or Spanish, and a typo still counts |
-| **Chess Club** | Fifteen lessons that start with "tap a piece, tap where it goes" and end with a whole game. Eight mini-games, five opponents, and 3,250 real puzzles |
+| **Chess Club** | Thirty-four lessons that start with "tap a piece, tap where it goes" and end with the six tricks that win pieces. Eight mini-games, five opponents, and 3,250 real puzzles |
 | **GiftedPrep** | 1,576 questions in the shapes used by the CogAT, NNAT and OLSAT, grades 1–4 |
 
 The gifted practice is built for **familiarization, not coaching** — a
@@ -119,7 +119,7 @@ router. GitHub Pages, Cloudflare Pages and S3 all work the same way.
 | **Parent Guide in Spanish** | A full translation, not a summary, behind a flag button on the guide. The child's screens stay English, matching the real tests |
 | **Fun and games** | Name the Flag (250 flags, vault of flags that no longer exist), Name the Country Shape (242 outlines), Name the Capital (192 capitals) and Name the Element (all 118, four kinds of question). Every game also has a browsing mode with no score, so the material can be met before it is tested, and the element one is a full periodic table with the story of how it was built. Typed answers take English or Spanish and forgive a spelling slip. Guess the Angle asks six different ways — estimate it, sort it, read it off a clock face, find it on a roof or a ladder, or work out where a bounced ball lands — and every angle is drawn with mismatched arms at a random rotation, because judging an angle by the length of its arms is the mistake children actually make |
 | **Math Lab** | A separate section for advanced maths, grades 1 to 6. 86 topics in two tracks: real mathematics (maps, bridges, primes, infinity, fractals, pi, three unsolved problems) and number skills |
-| **Chess Club** | Fifteen lessons, one piece at a time, in the order every serious chess programme uses: rook first, knight late, checkmate last. Eight mini-games from Pawn Wars up to a whole game, five opponents that lose on purpose, and 3,250 puzzles filtered out of the six million in the CC0 Lichess database. Stars only ever go up, there is no streak to break, and taking a move back is always free. The room is loaded only when a child opens it |
+| **Chess Club** | Thirty-four lessons, one idea at a time, in the order every serious chess programme uses: rook first, knight late, checkmate last. Eight mini-games from Pawn Wars up to a whole game, five opponents that lose on purpose, and 3,250 puzzles filtered out of the six million in the CC0 Lichess database. Stars only ever go up, there is no streak to break, and taking a move back is always free. The room is loaded only when a child opens it |
 | **Accessible** | WCAG AA contrast in both themes, full keyboard control, correct/incorrect never signalled by color alone |
 
 Keyboard: <kbd>1</kbd>–<kbd>6</kbd> to answer, <kbd>Enter</kbd> for the next

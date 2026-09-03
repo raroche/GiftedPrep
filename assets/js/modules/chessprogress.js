@@ -73,6 +73,9 @@ const blank = () => ({
   starTotal: 0,
   /** pieces whose lesson is done, so their cage on the level page opens */
   unlocked: [],
+  /** puzzle themes the child has been introduced to, by reaching the puzzle
+      step of the lesson that teaches them */
+  metThemes: [],
   themes: ['wood'],
   theme: 'wood',
   /** ISO dates, oldest first, bounded */
@@ -118,6 +121,7 @@ export function normalise(raw) {
   out.starTotal = Object.values(out.stars).reduce((a, b) => a + b, 0);
 
   out.unlocked = [...new Set(list(raw.unlocked).filter((x) => typeof x === 'string'))];
+  out.metThemes = [...new Set(list(raw.metThemes).filter((x) => typeof x === 'string'))];
   out.themes = [...new Set(['wood', ...list(raw.themes).filter((x) => THEMES.some((t) => t.id === x))])];
   out.theme = out.themes.includes(raw.theme) ? raw.theme : 'wood';
 
@@ -187,6 +191,20 @@ export function setStars(progress, lessonId, stars) {
 export function unlock(progress, piece) {
   if (!piece || progress.unlocked.includes(piece)) return progress;
   return { ...progress, unlocked: [...progress.unlocked, piece] };
+}
+
+/**
+ * Remember that a child has been shown a kind of puzzle.
+ *
+ * Puzzle themes are shut until the lesson that teaches them is done, so that
+ * nobody is dropped into skewer puzzles before the skewer lesson. But the
+ * lesson itself ENDS with those puzzles, and gating them behind their own
+ * lesson locks a child out of the thing they were just sent to do. Reaching
+ * the puzzle step is the introduction, so it counts.
+ */
+export function meetTheme(progress, theme) {
+  if (!theme || progress.metThemes.includes(theme)) return progress;
+  return { ...progress, metThemes: [...progress.metThemes, theme] };
 }
 
 /** Mark today as practised. Twice in one day is once. */
@@ -335,6 +353,6 @@ export function nextLesson(levels, progress) {
 
 export default {
   BADGES, THEMES, MAX_STARS, MAX_SEEN, BLANK, isoDay, normalise, load, save, update,
-  setStars, unlock, touchDay, weekCount, weekDots, themesFor, nextTheme,
+  setStars, unlock, meetTheme, touchDay, weekCount, weekDots, themesFor, nextTheme,
   startedIn, badge, badgeGoal, isUnlocked, levelGate, nextLesson
 };

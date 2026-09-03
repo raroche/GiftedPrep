@@ -13,7 +13,85 @@
       "emoji": "☀️",
       "big": "Take the middle, bring the pieces out, castle.",
       "minutes": 6,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "Three jobs in the first few moves. Middle, pieces out, king safe.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        },
+        {
+          "t": "try",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "ask": "Take the middle. Push a centre pawn two squares.",
+          "accept": [
+            "e2e4",
+            "d2d4"
+          ],
+          "hint": "The e pawn or the d pawn, two squares forward.",
+          "wrongSay": "A centre pawn. The e file or the d file."
+        },
+        {
+          "t": "say",
+          "text": "Knights before bishops. A knight has fewer good squares, so it is easier to choose.",
+          "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - - 2 7",
+          "cap": "Six moves in: middle taken, four pieces out, king tucked away behind three pawns.",
+          "mark": {
+            "ring": [
+              "g1",
+              "e4",
+              "c4",
+              "f3"
+            ]
+          }
+        },
+        {
+          "t": "quiz",
+          "ask": "Should you bring the queen out on move two?",
+          "choices": [
+            {
+              "id": "no",
+              "text": "No. Everybody chases her and you lose time"
+            },
+            {
+              "id": "yes",
+              "text": "Yes, she is the strongest piece"
+            }
+          ],
+          "answer": "no",
+          "why": "Every attack on her costs you a move, and they develop a piece while you run."
+        },
+        {
+          "t": "quiz",
+          "ask": "By roughly which move should your king have castled?",
+          "choices": [
+            {
+              "id": "ten",
+              "text": "About move ten"
+            },
+            {
+              "id": "never",
+              "text": "It can wait until the end"
+            }
+          ],
+          "answer": "ten",
+          "why": "A king in the middle is where all the lines meet. Get him out early."
+        },
+        {
+          "t": "play",
+          "game": "full",
+          "bot": 1,
+          "side": "w",
+          "goal": "Play a game. Take the middle, get your pieces out, and castle by move ten."
+        },
+        {
+          "t": "done",
+          "text": "Middle, pieces, king. Every game."
+        }
+      ]
     },
     {
       "id": "l2-italian",
@@ -21,7 +99,89 @@
       "emoji": "🍕",
       "big": "Point your bishop at the weak spot.",
       "minutes": 6,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "One opening, learned properly, is worth twenty half remembered.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        },
+        {
+          "t": "game",
+          "moves": [
+            "e4",
+            "e5",
+            "Nf3",
+            "Nc6",
+            "Bc4",
+            "Bc5",
+            "c3",
+            "Nf6",
+            "d3",
+            "d6",
+            "O-O",
+            "O-O",
+            "Re1"
+          ],
+          "cap": "The Italian Game. Watch the bishop on c4 and where it is pointing.",
+          "notes": {
+            "5": "3. Bc4 — the bishop aims at f7, the weakest square they have.",
+            "7": "4. c3 — making room to build a big centre with d4 later.",
+            "11": "6. O-O — king safe, and now the rook can come to e1.",
+            "13": "7. Re1 — every piece has a job. That is the whole opening."
+          }
+        },
+        {
+          "t": "try",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "ask": "Start it. Pawn to e4.",
+          "accept": [
+            "e2e4"
+          ],
+          "hint": "The king's pawn, two squares.",
+          "wrongSay": "e4. Two squares up the e file."
+        },
+        {
+          "t": "try",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+          "ask": "Now the knight. Nf3, attacking their pawn.",
+          "accept": [
+            "g1f3"
+          ],
+          "hint": "Knights before bishops.",
+          "wrongSay": "The knight on g1, out to f3."
+        },
+        {
+          "t": "try",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+          "ask": "Now the bishop to c4, pointing at f7.",
+          "accept": [
+            "f1c4"
+          ],
+          "hint": "The light bishop, out to c4.",
+          "wrongSay": "c4. It should stare at f7."
+        },
+        {
+          "t": "quiz",
+          "fen": "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - - 2 7",
+          "ask": "Why does the bishop want to look at f7?",
+          "choices": [
+            {
+              "id": "weak",
+              "text": "Only the king guards it"
+            },
+            {
+              "id": "pretty",
+              "text": "It looks nice"
+            }
+          ],
+          "answer": "weak",
+          "why": "At the start f7 and f2 are guarded by the king alone. That makes them the soft spot."
+        },
+        {
+          "t": "done",
+          "text": "One opening you actually know."
+        }
+      ]
     },
     {
       "id": "l2-london",
@@ -29,7 +189,83 @@
       "emoji": "🏠",
       "big": "Build the same house every game.",
       "minutes": 6,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "Some players build the same house every game. It saves a lot of thinking.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        },
+        {
+          "t": "game",
+          "moves": [
+            "d4",
+            "d5",
+            "Bf4",
+            "Nf6",
+            "e3",
+            "e6",
+            "Nf3",
+            "c5",
+            "c3",
+            "Nc6",
+            "Nbd2",
+            "Bd6",
+            "Bg3",
+            "O-O",
+            "Bd3"
+          ],
+          "cap": "The London System. Pawn d4, bishop out early to f4, then a little wall.",
+          "notes": {
+            "3": "2. Bf4 — the bishop goes out BEFORE the e pawn shuts it in.",
+            "5": "3. e3 — now the wall: pawns on c3, d4 and e3.",
+            "15": "8. Bd3 — the same setup whatever Black does."
+          }
+        },
+        {
+          "t": "quiz",
+          "ask": "Why does the bishop go to f4 before the e pawn moves?",
+          "choices": [
+            {
+              "id": "trapped",
+              "text": "Otherwise e3 shuts it in behind the pawns"
+            },
+            {
+              "id": "faster",
+              "text": "It is a faster route"
+            }
+          ],
+          "answer": "trapped",
+          "why": "Play e3 first and the bishop is stuck behind its own pawns all game. This is the one move order that matters."
+        },
+        {
+          "t": "try",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "ask": "Start the London. Pawn to d4.",
+          "accept": [
+            "d2d4"
+          ],
+          "hint": "The queen's pawn, two squares."
+        },
+        {
+          "t": "try",
+          "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
+          "ask": "Now the bishop out to f4, before anything blocks it.",
+          "accept": [
+            "c1f4"
+          ],
+          "hint": "The dark bishop, out to f4.",
+          "wrongSay": "f4. Get it out before you play e3."
+        },
+        {
+          "t": "say",
+          "text": "It works against almost anything Black plays. That is the point of it.",
+          "fen": "r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P4/2PBPNB1/PP1N1PPP/R2QK2R b KQ - 6 8"
+        },
+        {
+          "t": "done",
+          "text": "The same house, every time."
+        }
+      ]
     },
     {
       "id": "l2-scholar",
@@ -37,7 +273,93 @@
       "emoji": "🛡️",
       "big": "Beat the four-move checkmate.",
       "minutes": 6,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "Somebody will try the four-move mate on you. Here is how to end it.",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+          "mark": {
+            "arrows": [
+              [
+                "h5",
+                "f7"
+              ],
+              [
+                "c4",
+                "f7"
+              ]
+            ],
+            "ring": [
+              "f7"
+            ]
+          }
+        },
+        {
+          "t": "show",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+          "cap": "Queen and bishop both stare at f7. Next move is Qxf7 and it is over.",
+          "mark": {
+            "arrows": [
+              [
+                "h5",
+                "f7"
+              ],
+              [
+                "c4",
+                "f7"
+              ]
+            ],
+            "ring": [
+              "f7"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+          "ask": "Kick the queen away. Push the g pawn one square.",
+          "accept": [
+            "g7g6"
+          ],
+          "hint": "g6 attacks her, and she has to move.",
+          "wrongSay": "Push a pawn at the queen. The g pawn."
+        },
+        {
+          "t": "say",
+          "text": "She has to move. Now she cannot reach f7 at all.",
+          "fen": "r1bqkbnr/pppp1p1p/2n3p1/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 0 4"
+        },
+        {
+          "t": "try",
+          "fen": "r1bqkbnr/pppp1p1p/2n3p1/4p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR b KQkq - 1 4",
+          "ask": "She went to f3, still eyeing f7. Bring a knight over to guard it.",
+          "accept": [
+            "g8f6"
+          ],
+          "hint": "The knight on g8 covers f7 from e7 or from f6.",
+          "wrongSay": "A knight to f6. Now f7 has a guard."
+        },
+        {
+          "t": "quiz",
+          "ask": "Now you are a move ahead and their queen is out. What have they gained?",
+          "choices": [
+            {
+              "id": "nothing",
+              "text": "Nothing. Their queen has to run again"
+            },
+            {
+              "id": "attack",
+              "text": "A strong attack"
+            }
+          ],
+          "answer": "nothing",
+          "why": "Bringing the queen out early wastes moves. Beat the trap and you are simply better."
+        },
+        {
+          "t": "done",
+          "text": "That trick will never work on you again."
+        }
+      ]
     },
     {
       "id": "l2-hanging",
@@ -45,7 +367,69 @@
       "emoji": "🍭",
       "big": "Look for pieces nobody is holding on to.",
       "minutes": 7,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "Most games at this stage are decided by a piece nobody was guarding.",
+          "fen": "r1bq1rk1/ppp2ppp/2n2n2/3pN3/8/8/PPPP1PPP/R1BQKB1R b KQ - 0 8"
+        },
+        {
+          "t": "tap",
+          "fen": "r1bq1rk1/ppp2ppp/2n2n2/3pN3/8/8/PPPP1PPP/R1BQKB1R b KQ - 0 8",
+          "ask": "Find the white piece that has no friend near it.",
+          "answer": [
+            "e5"
+          ],
+          "hint": "Out on its own in the middle of the board.",
+          "why": "Nothing guards the knight on e5. It is simply free."
+        },
+        {
+          "t": "try",
+          "fen": "r1bq1rk1/ppp2ppp/2n2n2/3pN3/8/8/PPPP1PPP/R1BQKB1R b KQ - 0 8",
+          "ask": "Take it.",
+          "accept": [
+            "c6e5"
+          ],
+          "hint": "The knight on c6 can reach e5.",
+          "wrongSay": "Only one piece of yours reaches e5. Which one?"
+        },
+        {
+          "t": "say",
+          "text": "So here is the habit. Before every single move, ask three things.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        },
+        {
+          "t": "say",
+          "text": "What can they take? What can I take? What are they threatening?",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        },
+        {
+          "t": "quiz",
+          "ask": "When should you run that check?",
+          "choices": [
+            {
+              "id": "every",
+              "text": "Before every move, both sides"
+            },
+            {
+              "id": "sometimes",
+              "text": "When the position looks dangerous"
+            }
+          ],
+          "answer": "every",
+          "why": "Every move, for both sides. The one you skip is the one where you drop a piece."
+        },
+        {
+          "t": "puzzle",
+          "theme": "hangingPiece",
+          "count": 5,
+          "goal": "Five positions. Somebody has left something out."
+        },
+        {
+          "t": "done",
+          "text": "Free candy. Always look."
+        }
+      ]
     },
     {
       "id": "l2-count",
@@ -53,7 +437,90 @@
       "emoji": "✋",
       "big": "More attackers than defenders? Then take it.",
       "minutes": 6,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "Not everything you can take is worth taking. Count first.",
+          "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1",
+          "mark": {
+            "ring": [
+              "d5"
+            ]
+          }
+        },
+        {
+          "t": "show",
+          "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1",
+          "cap": "One of your bishops attacks the rook on d5. One knight guards it.",
+          "mark": {
+            "arrows": [
+              [
+                "b3",
+                "d5"
+              ],
+              [
+                "f6",
+                "d5"
+              ]
+            ],
+            "ring": [
+              "d5"
+            ]
+          }
+        },
+        {
+          "t": "quiz",
+          "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1",
+          "ask": "One attacker, one guard. Is taking on d5 a good idea?",
+          "choices": [
+            {
+              "id": "no",
+              "text": "No. You win a rook and lose a bishop"
+            },
+            {
+              "id": "yes",
+              "text": "Yes, a rook is worth more"
+            }
+          ],
+          "answer": "no",
+          "why": "Bishop takes rook is plus 5. Knight takes bishop is minus 3. It works, but only just."
+        },
+        {
+          "t": "say",
+          "text": "Better: get rid of the guard first. Then nothing is left to take back.",
+          "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1"
+        },
+        {
+          "t": "try",
+          "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1",
+          "ask": "Take the knight that is guarding d5.",
+          "accept": [
+            "h4f6"
+          ],
+          "hint": "Your other bishop can reach f6.",
+          "wrongSay": "The guard is the knight on f6. Take that one."
+        },
+        {
+          "t": "quiz",
+          "ask": "The rule in one line?",
+          "choices": [
+            {
+              "id": "count",
+              "text": "Count the attackers and the guards before you take"
+            },
+            {
+              "id": "grab",
+              "text": "Take whatever is biggest"
+            }
+          ],
+          "answer": "count",
+          "why": "More attackers than guards, and it is yours. Otherwise you are just trading."
+        },
+        {
+          "t": "done",
+          "text": "Count the hands on the square."
+        }
+      ]
     },
     {
       "id": "l2-fork",
@@ -61,7 +528,77 @@
       "emoji": "🍴",
       "big": "One piece, two victims.",
       "minutes": 7,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "A fork is one piece attacking two things at the same time.",
+          "fen": "r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1",
+          "cap": "The knight can land on c7 and hit the king and the rook together.",
+          "mark": {
+            "arrows": [
+              [
+                "b5",
+                "c7"
+              ]
+            ],
+            "ring": [
+              "e8",
+              "a8"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1",
+          "ask": "Play the fork.",
+          "accept": [
+            "b5c7"
+          ],
+          "hint": "c7 attacks the king on e8 and the rook on a8 at once.",
+          "wrongSay": "One square hits both. Look for it."
+        },
+        {
+          "t": "say",
+          "text": "They must answer the check. Then you take the rook for free.",
+          "fen": "r3k3/2N5/8/8/8/8/8/4K3 b - - 1 1",
+          "mark": {
+            "check": "e8",
+            "ring": [
+              "a8"
+            ]
+          }
+        },
+        {
+          "t": "quiz",
+          "ask": "Which piece forks most often?",
+          "choices": [
+            {
+              "id": "n",
+              "text": "The knight, because nothing else jumps"
+            },
+            {
+              "id": "r",
+              "text": "The rook"
+            }
+          ],
+          "answer": "n",
+          "why": "A knight attacks from squares no other piece can be chased off. That is why it forks so well."
+        },
+        {
+          "t": "puzzle",
+          "theme": "fork",
+          "count": 5,
+          "goal": "Five forks. One piece, two victims."
+        },
+        {
+          "t": "done",
+          "text": "One piece, two victims."
+        }
+      ]
     },
     {
       "id": "l2-pin",
@@ -69,7 +606,82 @@
       "emoji": "🪤",
       "big": "A pinned piece cannot run. Pile on it.",
       "minutes": 7,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "A pinned piece cannot move, because something worse is behind it.",
+          "fen": "4k3/8/8/4n3/8/3P4/8/4RK2 w - - 0 1",
+          "mark": {
+            "arrows": [
+              [
+                "e1",
+                "e8"
+              ]
+            ],
+            "ring": [
+              "e5"
+            ]
+          }
+        },
+        {
+          "t": "show",
+          "fen": "4k3/8/8/4n3/8/3P4/8/4RK2 w - - 0 1",
+          "cap": "The rook looks straight through the knight at the king. The knight is stuck.",
+          "mark": {
+            "arrows": [
+              [
+                "e1",
+                "e8"
+              ]
+            ],
+            "ring": [
+              "e5"
+            ]
+          }
+        },
+        {
+          "t": "quiz",
+          "fen": "4k3/8/8/4n3/8/3P4/8/4RK2 w - - 0 1",
+          "ask": "Can that knight move at all?",
+          "choices": [
+            {
+              "id": "no",
+              "text": "No. Moving it would leave the king in check"
+            },
+            {
+              "id": "yes",
+              "text": "Yes, knights jump over things"
+            }
+          ],
+          "answer": "no",
+          "why": "It is pinned against the king, so it is not allowed to move. It is stuck there."
+        },
+        {
+          "t": "say",
+          "text": "So attack it with something small. It cannot run away.",
+          "fen": "4k3/8/8/4n3/8/3P4/8/4RK2 w - - 0 1"
+        },
+        {
+          "t": "try",
+          "fen": "4k3/8/8/4n3/8/3P4/8/4RK2 w - - 0 1",
+          "ask": "Attack the pinned knight with your pawn.",
+          "accept": [
+            "d3d4"
+          ],
+          "hint": "One step forward and the pawn hits e5.",
+          "wrongSay": "Use the pawn. Push it one square."
+        },
+        {
+          "t": "puzzle",
+          "theme": "pin",
+          "count": 5,
+          "goal": "Five pins. Find the piece that cannot run."
+        },
+        {
+          "t": "done",
+          "text": "Stuck in the mud."
+        }
+      ]
     },
     {
       "id": "l2-skewer",
@@ -77,7 +689,77 @@
       "emoji": "🍢",
       "big": "Big piece in front, little one behind.",
       "minutes": 7,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "A skewer is a pin turned round. The big piece is in front.",
+          "fen": "1r6/8/8/4k3/8/8/8/4K1B1 w - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "1r6/8/8/4k3/8/8/8/4K1B1 w - - 0 1",
+          "cap": "Check the king along this line, and the rook behind him has nowhere to hide.",
+          "mark": {
+            "arrows": [
+              [
+                "g1",
+                "h2"
+              ],
+              [
+                "h2",
+                "b8"
+              ]
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "1r6/8/8/4k3/8/8/8/4K1B1 w - - 0 1",
+          "ask": "Give the check. Move the bishop to h2.",
+          "accept": [
+            "g1h2"
+          ],
+          "hint": "From h2 the bishop looks all the way down to b8.",
+          "wrongSay": "h2. From there the line runs through the king to the rook."
+        },
+        {
+          "t": "say",
+          "text": "The king must move. Then the rook is yours.",
+          "fen": "1r6/8/8/4k3/8/8/7B/4K3 b - - 1 1",
+          "mark": {
+            "check": "e5",
+            "ring": [
+              "b8"
+            ]
+          }
+        },
+        {
+          "t": "quiz",
+          "ask": "What is the difference between a pin and a skewer?",
+          "choices": [
+            {
+              "id": "order",
+              "text": "A pin has the big piece behind; a skewer has it in front"
+            },
+            {
+              "id": "piece",
+              "text": "Only rooks can skewer"
+            }
+          ],
+          "answer": "order",
+          "why": "Same idea, opposite order. In a skewer the front piece must move and you take what was behind."
+        },
+        {
+          "t": "puzzle",
+          "theme": "skewer",
+          "count": 5,
+          "goal": "Five skewers. Shove the big one and take what was hiding."
+        },
+        {
+          "t": "done",
+          "text": "A pin, backwards."
+        }
+      ]
     },
     {
       "id": "l2-discovered",
@@ -85,7 +767,84 @@
       "emoji": "🚪",
       "big": "One piece steps aside and another attacks.",
       "minutes": 7,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "Two pieces on one line. Move the front one and the back one attacks.",
+          "fen": "7k/4q3/8/8/3N4/8/1B6/6K1 w - - 0 1",
+          "mark": {
+            "arrows": [
+              [
+                "b2",
+                "h8"
+              ]
+            ]
+          }
+        },
+        {
+          "t": "show",
+          "fen": "7k/4q3/8/8/3N4/8/1B6/6K1 w - - 0 1",
+          "cap": "The bishop already looks at the king. The knight is standing in the way.",
+          "mark": {
+            "arrows": [
+              [
+                "b2",
+                "h8"
+              ]
+            ],
+            "ring": [
+              "d4"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "7k/4q3/8/8/3N4/8/1B6/6K1 w - - 0 1",
+          "ask": "Move the knight so it attacks the queen, and opens the bishop's line.",
+          "accept": [
+            "d4f5"
+          ],
+          "hint": "f5 hits the queen on e7 and steps off the long diagonal.",
+          "wrongSay": "It has to do two things at once: hit the queen and get out of the way."
+        },
+        {
+          "t": "say",
+          "text": "Now they must answer the check. The queen is lost.",
+          "fen": "7k/4q3/8/5N2/8/8/1B6/6K1 b - - 1 1",
+          "mark": {
+            "check": "h8",
+            "ring": [
+              "e7"
+            ]
+          }
+        },
+        {
+          "t": "quiz",
+          "ask": "Why is a discovered check so strong?",
+          "choices": [
+            {
+              "id": "free",
+              "text": "They must answer the check, so the moved piece takes for free"
+            },
+            {
+              "id": "two",
+              "text": "It gives check twice"
+            }
+          ],
+          "answer": "free",
+          "why": "The check is forced, so whatever the moving piece attacked cannot be saved."
+        },
+        {
+          "t": "puzzle",
+          "theme": "discoveredAttack",
+          "count": 5,
+          "goal": "Five of them. Move one piece and another one strikes."
+        },
+        {
+          "t": "done",
+          "text": "Open the door."
+        }
+      ]
     },
     {
       "id": "l2-backrank",
@@ -93,7 +852,80 @@
       "emoji": "🧱",
       "big": "Trapped behind your own wall. Make a hole.",
       "minutes": 7,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "A castled king is safe, until his own pawns become a wall.",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1",
+          "mark": {
+            "ring": [
+              "f7",
+              "g7",
+              "h7"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1",
+          "ask": "He has nowhere to go. Deliver the checkmate.",
+          "accept": [
+            "e1e8"
+          ],
+          "hint": "The rook comes to the back row. His pawns block every escape.",
+          "wrongSay": "The back row. That is where he is trapped."
+        },
+        {
+          "t": "say",
+          "text": "The cure is one small pawn move, made long before it is needed.",
+          "fen": "6k1/5pp1/7p/8/8/8/5PPP/4R1K1 w - - 0 1",
+          "mark": {
+            "ring": [
+              "h6",
+              "g8"
+            ]
+          }
+        },
+        {
+          "t": "show",
+          "fen": "6k1/5pp1/7p/8/8/8/5PPP/4R1K1 w - - 0 1",
+          "cap": "With that hole, the same rook check is just a check. The king steps up to h7.",
+          "mark": {
+            "arrows": [
+              [
+                "g8",
+                "h7"
+              ]
+            ]
+          }
+        },
+        {
+          "t": "quiz",
+          "ask": "When should you make that little hole?",
+          "choices": [
+            {
+              "id": "early",
+              "text": "Quietly, when you have nothing better to do"
+            },
+            {
+              "id": "late",
+              "text": "When the rook arrives"
+            }
+          ],
+          "answer": "early",
+          "why": "When the rook arrives it is usually too late. Make it in a quiet moment."
+        },
+        {
+          "t": "puzzle",
+          "theme": "backRankMate",
+          "count": 5,
+          "goal": "Five back rank mates. Their own pawns do the work."
+        },
+        {
+          "t": "done",
+          "text": "Give your king a window."
+        }
+      ]
     },
     {
       "id": "l2-defender",
@@ -101,7 +933,82 @@
       "emoji": "🥷",
       "big": "Get rid of the bodyguard first.",
       "minutes": 7,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "If something is guarded, do not take it. Take the guard.",
+          "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1",
+          "mark": {
+            "arrows": [
+              [
+                "f6",
+                "d5"
+              ]
+            ],
+            "ring": [
+              "d5",
+              "f6"
+            ]
+          }
+        },
+        {
+          "t": "show",
+          "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1",
+          "cap": "The rook on d5 is guarded once, by the knight. Remove that knight.",
+          "mark": {
+            "arrows": [
+              [
+                "h4",
+                "f6"
+              ],
+              [
+                "f6",
+                "d5"
+              ]
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1",
+          "ask": "Take the guard.",
+          "accept": [
+            "h4f6"
+          ],
+          "hint": "The bishop on h4 can reach f6.",
+          "wrongSay": "The guard is the knight on f6."
+        },
+        {
+          "t": "say",
+          "text": "They take back. Now nothing is guarding the rook.",
+          "fen": "6k1/pp3p1p/5p2/3r4/8/1B6/PP3PPP/6K1 w - - 0 2",
+          "mark": {
+            "ring": [
+              "d5"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "6k1/pp3p1p/5p2/3r4/8/1B6/PP3PPP/6K1 w - - 0 2",
+          "ask": "Now take the rook.",
+          "accept": [
+            "b3d5"
+          ],
+          "hint": "Your other bishop looks straight at d5.",
+          "wrongSay": "The bishop on b3 reaches d5."
+        },
+        {
+          "t": "puzzle",
+          "theme": "capturingDefender",
+          "count": 5,
+          "goal": "Five of them. Get rid of the bodyguard first."
+        },
+        {
+          "t": "done",
+          "text": "Take the guard, then take the thing."
+        }
+      ]
     },
     {
       "id": "l2-ladder",
@@ -109,7 +1016,78 @@
       "emoji": "🪜",
       "big": "Two rooks push the king up the stairs.",
       "minutes": 8,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "Two rooks can checkmate on their own. They take turns, like stairs.",
+          "fen": "4k3/8/8/8/8/8/R7/1R2K3 w - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "4k3/8/8/8/8/8/R7/1R2K3 w - - 0 1",
+          "cap": "One rook cuts off a row. The other one cuts off the next. The king has to go backwards.",
+          "mark": {
+            "arrows": [
+              [
+                "a2",
+                "a7"
+              ]
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "4k3/8/8/8/8/8/R7/1R2K3 w - - 0 1",
+          "ask": "Cut off the row above the king. Rook to a7.",
+          "accept": [
+            "a2a7"
+          ],
+          "hint": "The rook on a2 goes all the way up to a7.",
+          "wrongSay": "Up the a file, to a7. That takes away the seventh row."
+        },
+        {
+          "t": "say",
+          "text": "He can only go along his row now. Then the other rook lands behind him.",
+          "fen": "3k4/R7/8/8/8/8/8/1R2K3 w - - 2 2"
+        },
+        {
+          "t": "try",
+          "fen": "3k4/R7/8/8/8/8/8/1R2K3 w - - 2 2",
+          "ask": "Finish it. Bring the other rook to the eighth row.",
+          "accept": [
+            "b1b8"
+          ],
+          "hint": "The rook on b1 runs straight up to b8.",
+          "wrongSay": "b8. The row the king is standing on."
+        },
+        {
+          "t": "quiz",
+          "ask": "What must you never do with the ladder?",
+          "choices": [
+            {
+              "id": "take",
+              "text": "Let the king get near enough to take a rook"
+            },
+            {
+              "id": "slow",
+              "text": "Take too long"
+            }
+          ],
+          "answer": "take",
+          "why": "If he can reach a rook, move that rook far away along its row and carry on."
+        },
+        {
+          "t": "play",
+          "game": "kinghunt",
+          "bot": 1,
+          "side": "w",
+          "goal": "A whole army against one king. Corner him within 25 moves."
+        },
+        {
+          "t": "done",
+          "text": "Up the stairs."
+        }
+      ]
     },
     {
       "id": "l2-kq",
@@ -117,7 +1095,71 @@
       "emoji": "📦",
       "big": "Shrink the box, and never freeze him by mistake.",
       "minutes": 8,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "King and queen against a lone king. Make the box smaller.",
+          "fen": "8/8/8/4k3/8/8/8/4K2Q w - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "8/8/8/4k3/8/8/8/4K2Q w - - 0 1",
+          "cap": "The queen draws a box round him. Every move you make it smaller.",
+          "mark": {
+            "ring": [
+              "e5"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "8/8/8/4k3/8/8/8/4K2Q w - - 0 1",
+          "ask": "Start the box. Bring the queen a knight's jump from him, to f3.",
+          "accept": [
+            "h1f3"
+          ],
+          "hint": "f3 is a knight's move from e5. That is the trick.",
+          "wrongSay": "f3. Think where a knight would go from his square."
+        },
+        {
+          "t": "say",
+          "text": "Keep a knight's jump away and he can never touch her. Walk him to the edge.",
+          "fen": "8/8/8/4k3/8/5Q2/8/4K3 b - - 1 1"
+        },
+        {
+          "t": "say",
+          "text": "Then bring your own king up. The queen alone can never finish it.",
+          "fen": "8/8/8/8/4k3/5Q2/8/4K3 w - - 0 1"
+        },
+        {
+          "t": "quiz",
+          "fen": "7k/5Q2/5K2/8/8/8/8/8 b - - 0 1",
+          "ask": "He is on the edge with no moves and he is not in check. What is this?",
+          "choices": [
+            {
+              "id": "stale",
+              "text": "Stalemate. A draw, and you threw the game away"
+            },
+            {
+              "id": "mate",
+              "text": "Checkmate"
+            }
+          ],
+          "answer": "stale",
+          "why": "This is the one way to lose a won game. Always leave him one square until you can mate."
+        },
+        {
+          "t": "play",
+          "game": "full",
+          "bot": 2,
+          "side": "w",
+          "goal": "Play a game against the Careful Cat. If you win a queen, use the box."
+        },
+        {
+          "t": "done",
+          "text": "Shrink the box. Never freeze him."
+        }
+      ]
     },
     {
       "id": "l2-kr",
@@ -125,7 +1167,71 @@
       "emoji": "🚧",
       "big": "The rook is the wall. The king pushes.",
       "minutes": 8,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "A rook can do it too, but it needs your king to help.",
+          "fen": "8/8/8/4k3/8/8/8/R3K3 w - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "8/8/8/4k3/8/8/8/R3K3 w - - 0 1",
+          "cap": "The rook builds a wall. Your king pushes him against it.",
+          "mark": {
+            "arrows": [
+              [
+                "a1",
+                "a5"
+              ]
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "8/8/8/4k3/8/8/8/R3K3 w - - 0 1",
+          "ask": "Build the wall. Bring the rook alongside him, to a5.",
+          "accept": [
+            "a1a5"
+          ],
+          "hint": "a5 is his row. Now he cannot come any closer.",
+          "wrongSay": "a5. Put the rook on the same row as the king."
+        },
+        {
+          "t": "say",
+          "text": "Now walk your own king up. The rook holds the line while he does.",
+          "fen": "8/8/8/R3k3/8/8/8/4K3 b - - 1 1"
+        },
+        {
+          "t": "try",
+          "fen": "4k3/8/4K3/8/8/8/8/R7 w - - 0 1",
+          "ask": "The kings are facing. Finish it along the back row.",
+          "accept": [
+            "a1a8"
+          ],
+          "hint": "Up the a file to a8, the row he is standing on.",
+          "wrongSay": "a8. Cut off the row he is on."
+        },
+        {
+          "t": "quiz",
+          "ask": "Why does the rook alone not work?",
+          "choices": [
+            {
+              "id": "help",
+              "text": "It cannot take squares away and guard itself at once"
+            },
+            {
+              "id": "slow",
+              "text": "It is too slow"
+            }
+          ],
+          "answer": "help",
+          "why": "Your king is what stops him escaping forwards. The rook only builds the wall."
+        },
+        {
+          "t": "done",
+          "text": "Wall, then bulldozer."
+        }
+      ]
     },
     {
       "id": "l2-passed",
@@ -133,7 +1239,75 @@
       "emoji": "📐",
       "big": "Can the king catch that pawn?",
       "minutes": 6,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "A pawn with nobody in front of it is a passed pawn. It is dangerous.",
+          "fen": "8/8/8/8/P4k2/8/8/K7 b - - 0 1",
+          "mark": {
+            "ring": [
+              "a4"
+            ]
+          }
+        },
+        {
+          "t": "say",
+          "text": "There is a trick for working out whether the king can catch it.",
+          "fen": "8/8/8/8/P4k2/8/8/K7 b - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "8/8/8/8/P4k2/8/8/K7 b - - 0 1",
+          "cap": "Draw a box from the pawn to the end. If the king can step inside, he catches it.",
+          "mark": {
+            "ring": [
+              "a4",
+              "a8",
+              "e8",
+              "e4"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "8/8/8/8/P4k2/8/8/K7 b - - 0 1",
+          "ask": "Black to move. Step into the box.",
+          "accept": [
+            "f4e5",
+            "f4e4",
+            "f4e3"
+          ],
+          "hint": "Move the king one square towards the pawn, into the box.",
+          "wrongSay": "Towards the pawn. Any square inside the box will do."
+        },
+        {
+          "t": "quiz",
+          "fen": "8/8/8/8/P4k2/8/8/K7 w - - 0 1",
+          "ask": "Same board, but White moves first. Now who wins the race?",
+          "choices": [
+            {
+              "id": "pawn",
+              "text": "The pawn. It gets one square outside the box"
+            },
+            {
+              "id": "king",
+              "text": "The king still catches it"
+            }
+          ],
+          "answer": "pawn",
+          "why": "One move changes everything in a race. Count it, do not guess it."
+        },
+        {
+          "t": "puzzle",
+          "theme": "promotion",
+          "count": 5,
+          "goal": "Five races. Get the pawn home, or stop theirs."
+        },
+        {
+          "t": "done",
+          "text": "Draw the box."
+        }
+      ]
     },
     {
       "id": "l2-kingfight",
@@ -141,7 +1315,69 @@
       "emoji": "🥊",
       "big": "At the end, the king is a fighter.",
       "minutes": 7,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "With most pieces gone, the king stops hiding and starts fighting.",
+          "fen": "8/4k1pp/8/P7/8/8/6PP/4K3 w - - 0 1"
+        },
+        {
+          "t": "say",
+          "text": "He is worth about four points as a fighter. Do not leave him at home.",
+          "fen": "8/4k1pp/8/P7/8/8/6PP/4K3 w - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "8/4k1pp/8/P4K2/8/8/6PP/8 b - - 0 1",
+          "cap": "Your king walks in and eats their pawns while yours runs.",
+          "mark": {
+            "arrows": [
+              [
+                "f5",
+                "g6"
+              ]
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "8/4k1pp/8/P7/8/8/6PP/4K3 w - - 0 1",
+          "ask": "March the king towards the middle.",
+          "accept": [
+            "e1e2",
+            "e1d2",
+            "e1f2"
+          ],
+          "hint": "Any step towards the centre. He has work to do.",
+          "wrongSay": "Move the king, not a pawn. He is the strongest piece left."
+        },
+        {
+          "t": "quiz",
+          "ask": "When is it safe to walk your king into the middle?",
+          "choices": [
+            {
+              "id": "queens",
+              "text": "When the queens and rooks have gone"
+            },
+            {
+              "id": "never",
+              "text": "Never"
+            }
+          ],
+          "answer": "queens",
+          "why": "He is only in danger while big pieces are on. Once they go, he is a fighter."
+        },
+        {
+          "t": "puzzle",
+          "theme": "endgame",
+          "count": 5,
+          "goal": "Five endings. Few pieces, one right answer."
+        },
+        {
+          "t": "done",
+          "text": "The king takes his crown off."
+        }
+      ]
     },
     {
       "id": "l2-opposition",
@@ -149,7 +1385,69 @@
       "emoji": "👀",
       "big": "Whoever has to move first, loses the square.",
       "minutes": 6,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "Two kings facing each other with one square between them.",
+          "fen": "8/8/4k3/8/4K3/4P3/8/8 b - - 0 1",
+          "mark": {
+            "ring": [
+              "e6",
+              "e4"
+            ]
+          }
+        },
+        {
+          "t": "say",
+          "text": "Whoever has to move first has to give way. That is the opposition.",
+          "fen": "8/8/4k3/8/4K3/4P3/8/8 b - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "8/8/4k3/8/4K3/4P3/8/8 b - - 0 1",
+          "cap": "Black must move, so Black steps aside and White walks forward. White has it.",
+          "mark": {
+            "ring": [
+              "e6",
+              "e4"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "8/8/4k3/8/4K3/4P3/8/8 b - - 0 1",
+          "ask": "Black to move. Step aside, either way.",
+          "accept": [
+            "e6d6",
+            "e6f6",
+            "e6d7",
+            "e6e7",
+            "e6f7"
+          ],
+          "hint": "He has to move somewhere. Any of them gives ground.",
+          "wrongSay": "Move the black king. He has no choice."
+        },
+        {
+          "t": "quiz",
+          "ask": "In a king and pawn ending, why does it matter so much?",
+          "choices": [
+            {
+              "id": "through",
+              "text": "The side with it walks their king through and wins"
+            },
+            {
+              "id": "pretty",
+              "text": "It does not, it is just a name"
+            }
+          ],
+          "answer": "through",
+          "why": "Whole endings turn on it. The king who gives way loses the squares in front of the pawn."
+        },
+        {
+          "t": "done",
+          "text": "Whoever blinks, loses the square."
+        }
+      ]
     },
     {
       "id": "l2-game",
@@ -157,7 +1455,77 @@
       "emoji": "🎣",
       "big": "Greedy captures lose games.",
       "minutes": 8,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "A famous short game. Watch what greed costs.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        },
+        {
+          "t": "game",
+          "moves": [
+            "e4",
+            "e5",
+            "Nf3",
+            "d6",
+            "Bc4",
+            "Bg4",
+            "Nc3",
+            "g6",
+            "Nxe5",
+            "Bxd1",
+            "Bxf7+",
+            "Ke7",
+            "Nd5#"
+          ],
+          "cap": "Legal's Mate, Paris, about 1750. White gives away the queen on purpose.",
+          "notes": {
+            "6": "3... Bg4 — pinning the knight against the queen. Or so Black thought.",
+            "9": "5. Nxe5 — the pinned knight moves anyway. White is offering the queen.",
+            "10": "5... Bxd1 — Black takes it. This is the losing move.",
+            "11": "6. Bxf7+ — check, and the king must step out.",
+            "13": "7. Nd5# — checkmate with three little pieces."
+          }
+        },
+        {
+          "t": "quiz",
+          "ask": "Black won a queen and lost. What went wrong?",
+          "choices": [
+            {
+              "id": "check",
+              "text": "They took without asking what was coming next"
+            },
+            {
+              "id": "unlucky",
+              "text": "They were unlucky"
+            }
+          ],
+          "answer": "check",
+          "why": "Checks, captures, threats. Every move. Especially the move where you win something."
+        },
+        {
+          "t": "say",
+          "text": "A pin is not a chain. A pinned piece can still move if the reward is big enough.",
+          "fen": "r2qkbnr/ppp2p1p/3p2p1/3nN3/2B1P3/8/PPPP1PPP/R1B1K2R b KQkq - 1 6"
+        },
+        {
+          "t": "puzzle",
+          "theme": "mateIn2",
+          "count": 5,
+          "goal": "Five mates in two. Find the first move, and the rest follows."
+        },
+        {
+          "t": "play",
+          "game": "full",
+          "bot": 2,
+          "side": "w",
+          "goal": "A whole game. Run checks, captures and threats before every move."
+        },
+        {
+          "t": "done",
+          "text": "Knight School is finished. The Guild is open."
+        }
+      ]
     }
   ]
 }

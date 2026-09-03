@@ -203,7 +203,12 @@ export function themeGate(theme, progress) {
   if (!spec) return { open: false, opens: null };
   if (!spec.opens) return { open: true, opens: null };
   const stars = (progress && progress.stars && progress.stars[spec.opens]) || 0;
-  return { open: stars > 0, opens: spec.opens };
+  /* Or the lesson has sent them here. A lesson that teaches forks ends with
+     fork puzzles, and gating those behind that same lesson would lock a child
+     out of the very thing they were just told to go and do. */
+  const met = Boolean(progress && progress.metThemes
+    && progress.metThemes.includes(spec.id));
+  return { open: stars > 0 || met, opens: spec.opens };
 }
 
 /* ------------------------------------------------------------------ */
