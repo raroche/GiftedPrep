@@ -3244,6 +3244,14 @@ button, a, label, summary, [role="button"] {
   --room-ink: var(--cz-sky-ink);
 }
 
+/* Chess Club. Same shape as the one above: a screen wearing its room's hue. */
+.cz-room--leaf {
+  --room: var(--cz-leaf);
+  --room-soft: var(--cz-leaf-soft);
+  --room-line: var(--cz-leaf-line);
+  --room-ink: var(--cz-leaf-ink);
+}
+
 .cz-ang { display: block; width: 100%; height: auto; }
 
 .cz-ang-fig {

@@ -195,6 +195,16 @@ export const ROOMS = [
     meta: '2 games · 492 things to learn'
   },
   {
+    id: 'chess',
+    name: 'Chess Club',
+    hue: 'leaf',
+    creature: 'fox',
+    href: '#/chess',
+    status: 'soon',
+    blurb: 'Meet the six pieces, win your first game, then learn the tricks.',
+    meta: '3 levels \u00b7 pawn camp to 600+'
+  },
+  {
     id: 'gifted',
     name: 'GiftedPrep',
     hue: 'orchid',

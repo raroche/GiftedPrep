@@ -103,7 +103,7 @@ export function hydrateIcons(root = document) {
 const SCREENS = ['home', 'gifted', 'tests', 'categories', 'quiz', 'results', 'parents',
   'math', 'mathtopic', 'fun', 'flagsetup', 'flaggame', 'shapesetup', 'shapegame',
   'capsetup', 'capgame', 'elemsetup', 'elemgame', 'angsetup', 'anggame',
-  'learn', 'elemlearn', 'anglearn', 'error'];
+  'learn', 'elemlearn', 'anglearn', 'chess', 'error'];
 
 /**
  * Show one screen and hide the rest.

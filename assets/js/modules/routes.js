@@ -27,6 +27,7 @@ export function backTarget(hash = location.hash || '#/home') {
   switch (head) {
     case 'fun':
     case 'gifted':
+    case 'chess':
     case 'math':
       /* #/math/1/four-colours -> #/math/1 -> #/math -> home */
       if (head === 'math' && parts.length >= 3) return { href: `#/math/${a}`, label: `Grade ${a}` };

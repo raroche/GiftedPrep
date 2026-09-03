@@ -28,6 +28,7 @@ import { answerAngle, drawAngSetup, nextAngle, startAngRound, answerElement, dra
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
+import { renderChess } from './screens/chess.js';
 import { renderLearn, renderElemLearn, renderAngleLearn, paintAngTurn, paintAngTrap, paintAngClock, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
 import { backTarget } from './modules/routes.js';
 
@@ -102,6 +103,9 @@ function route() {
       break;
     case 'math':
       renderMath(parts[1], parts[2]);
+      break;
+    case 'chess':
+      renderChess(parts[1], parts[2]);
       break;
     case 'parents':
       renderParents();
