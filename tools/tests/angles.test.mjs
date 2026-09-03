@@ -224,6 +224,39 @@ describe('a round does not repeat itself', () => {
     }
   });
 
+  /*
+   * The one that got through. A mixed round is NOT shortened -- there is no
+   * shortage of angles -- but it still asks for objects, and how many is
+   * chance. Thirty questions average five of them and can draw sixteen, from a
+   * pack of fourteen. The pack then reshuffled and handed back one the child
+   * had already seen, in about one round in ten thousand.
+   *
+   * That rate is why the sampling test above missed it and the build check
+   * caught it roughly one deploy in twenty-five, which read as the check being
+   * unreliable rather than the code being wrong. So this one does not sample:
+   * it empties the pack first and then asks, where the answer is certain.
+   */
+  test('a mixed round stops asking for objects once the pack is empty', () => {
+    const draw = A.dealer(scenes, seeded(7));
+    for (let i = 0; i < scenes.length; i += 1) draw();
+    assert.equal(draw.left(), 0, 'the pack should report itself empty');
+    const random = seeded(11);
+    for (let i = 0; i < 500; i += 1) {
+      const q = A.buildQuestion('mix', 'steps', scenes, random, draw);
+      assert.equal(Boolean(q && q.scene), false,
+        'an object was asked for after every one had been used');
+    }
+  });
+
+  test('the pack counts down as it is dealt, and never past zero', () => {
+    const draw = A.dealer(scenes, seeded(3));
+    assert.equal(draw.left(), scenes.length);
+    draw();
+    assert.equal(draw.left(), scenes.length - 1);
+    for (let i = 0; i < scenes.length * 3; i += 1) draw();
+    assert.equal(draw.left(), 0, 'left() must not go negative');
+  });
+
   test('a world round is shortened to fit, and says how long it will be', () => {
     assert.equal(A.roundLength('world', 30, SCENES.length), SCENES.length);
     assert.equal(A.roundLength('world', 10, SCENES.length), 10);

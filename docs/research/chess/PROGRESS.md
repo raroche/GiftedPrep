@@ -568,3 +568,53 @@ round twice` from `tools/anglecheck.mjs`. It did not repeat in 25 further
 runs, so it is a rare draw from a random seed. It matters more than it looks:
 `npm run verify` is the Netlify build command, so a rare flake is a rare
 failed deploy. Not touched here.
+
+## The deploy that failed at random (2026-09-03)
+
+Netlify runs `npm run verify` as its build command, so a check that fails by
+chance is a deploy that fails by chance. One did.
+
+**The defect was real, not a bad test.** `roundLength` caps an "out in the
+world" round at the number of drawings, because asking for more than there are
+means showing one twice. A MIXED round is not capped — there is no shortage of
+angles — but it still asks for objects, and how many is chance. Thirty
+questions average five and can draw sixteen, from a pack of fourteen. The
+dealer then reshuffled mid-round and handed back a drawing the child had
+already seen.
+
+Measured: 0.010% of thirty-question mixed rounds. Over the 400 rounds the
+check built, that is about a 4% chance of failing any given build — rare
+enough on a laptop to look like the check being flaky, common enough to lose a
+deploy.
+
+`dealer()` now reports `left()`, and a mixed round drops "out in the world"
+from the kinds it can pick once the pack is empty. Zero repeats in 120,000
+rounds, and world questions now top out at exactly the pack size.
+
+### Why the tests missed it and the build caught it
+The unit test used one fixed seed and 200 rounds; the seed never produced the
+case. The build check used `Math.random` and 400 rounds, so it found it
+roughly one run in twenty-five. **Neither is a good way to catch a
+one-in-ten-thousand defect.** Both now construct the bad case instead: empty
+the pack, then ask for more, where the answer is certain. That fails 8 out of
+8 with the bug and 0 out of 8 without it.
+
+### The bigger fix: a build gate must give the same answer twice
+`anglecheck.mjs` was the only check in `verify` using unseeded randomness, and
+nearly all of it works by generating questions and complaining if one is
+wrong — every loop was its own lottery. It is now seeded from one stream, so a
+run either always passes or always fails and a failure can be reproduced by
+running it again. Sample counts were raised five-fold at the same time, since
+determinism makes more of it cost only time (the whole check runs in ~1.4s).
+Byte-identical output over 30 runs.
+
+A guard fails the check if anything in that file calls `Math.random(` again.
+It looks for the CALL, with its bracket: matching the bare name caught the
+prose explaining the rule and the error message itself, and the check failed
+on itself.
+
+### Trap, for the third time
+Do not run a long verification loop in the background while editing the files
+it tests. Runs 5, 6 and 7 of one loop "failed" because I was deliberately
+breaking `angles.js` to prove a guard at the same moment. It looks exactly
+like a real intermittent failure.

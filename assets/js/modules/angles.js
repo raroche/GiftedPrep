@@ -611,7 +611,16 @@ function askBounce(set, random) {
 }
 
 export function buildQuestion(ask, set, scenes, random = Math.random, draw = null) {
-  const kind = ask === 'mix' ? pick(KINDS, random) : ask;
+  /* Once every object has been used, "out in the world" stops being one of the
+     kinds a mixed round can pick. Without this the pack reshuffled mid-round
+     and handed back an object the child had already seen: a thirty-question
+     mix averages five world questions but can draw sixteen, and there are
+     only fourteen drawings. It happened in about one round in ten thousand,
+     which is rare enough to look like nothing and often enough to fail a
+     build -- roughly one deploy in twenty-five. */
+  const spent = Boolean(draw && typeof draw.left === 'function' && draw.left() === 0);
+  const kinds = spent ? KINDS.filter((k) => k !== 'world') : KINDS;
+  const kind = ask === 'mix' ? pick(kinds, random) : ask;
   switch (kind) {
     case 'bigger': return askBigger(set, random);
     case 'sort': return askSort(set, random);
@@ -622,13 +631,23 @@ export function buildQuestion(ask, set, scenes, random = Math.random, draw = nul
   }
 }
 
-/** Deal from a shuffled pack, reshuffling only once the pack runs out. */
+/**
+ * Deal from a shuffled pack, reshuffling only once the pack runs out.
+ *
+ * `left()` says how many are still undealt. A round uses it to stop asking for
+ * more than the pack holds, because a reshuffle is the moment an object a
+ * child has already seen comes back round.
+ */
 export function dealer(list, random = Math.random) {
   let rest = [];
-  return () => {
+  let dealt = 0;
+  const deal = () => {
     if (!rest.length) rest = shuffle(list, random);
+    dealt += 1;
     return rest.pop();
   };
+  deal.left = () => Math.max(0, list.length - dealt);
+  return deal;
 }
 
 /**

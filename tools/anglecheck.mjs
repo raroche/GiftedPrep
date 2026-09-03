@@ -15,6 +15,8 @@
  * and that every family of angle can actually turn up.
  */
 
+import fs from 'node:fs';
+
 const errors = [];
 const warnings = [];
 const err = (m) => errors.push(m);
@@ -24,6 +26,31 @@ const art = await import('../assets/js/modules/angleart.js');
 const A = await import('../assets/js/modules/angles.js');
 
 const scenes = art.SCENES.map((s) => ({ ...s, svg: art.sceneSvg(s.id) }));
+
+/**
+ * The randomness in this file is SEEDED, and that is the point.
+ *
+ * Almost everything below works by generating questions and complaining if one
+ * of them is wrong. With Math.random that is a lottery: a defect in one round
+ * in ten thousand fails about one build in twenty-five and passes the rest,
+ * which reads as the check being unreliable rather than the code being wrong.
+ * It cost a real deploy.
+ *
+ * A build gate has to give the same answer twice. Seeded, this either always
+ * passes or always fails, and a failure can be reproduced by running it again.
+ * The sample counts are larger than they were to make up for the fixed stream
+ * -- it is deterministic, so more of it costs only time.
+ *
+ * Rare defects are then caught the other way: by constructing the bad case on
+ * purpose rather than waiting for it. See the pack-exhaustion check below.
+ */
+let seed = 20260903;
+const rnd = () => {
+  seed = (seed + 0x6D2B79F5) | 0;
+  let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+  t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+};
 
 /* ---- the drawings agree with their own numbers ---- */
 
@@ -69,7 +96,7 @@ for (const ask of KINDS) {
 /* "mix" has to reach all of them, or a mode is unreachable for anyone who
    leaves the default alone -- which is most people. */
 const seen = new Set();
-for (let i = 0; i < 4000; i += 1) seen.add(A.buildQuestion('mix', 'steps', scenes).kind);
+for (let i = 0; i < 20000; i += 1) seen.add(A.buildQuestion('mix', 'steps', scenes, rnd).kind);
 for (const k of KINDS) if (!seen.has(k)) err(`"mix" never produces a "${k}" question`);
 
 /* ---- questions are answerable ---- */
@@ -79,8 +106,8 @@ const famSeen = new Set();
 for (const set of A.SETS.map((s) => s.id)) {
   if (!A.poolFor(set).length) err(`set "${set}" has no angles to ask about`);
   for (const ask of A.ASKS.map((a) => a.id)) {
-    for (let i = 0; i < 500; i += 1) {
-      const q = A.buildQuestion(ask, set, scenes);
+    for (let i = 0; i < 2500; i += 1) {
+      const q = A.buildQuestion(ask, set, scenes, rnd);
       asked += 1;
       const ids = q.choices.map((c) => c.id);
       if (!ids.includes(q.answer)) {
@@ -118,8 +145,8 @@ for (const f of A.FAMILIES) {
  */
 let judged = 0;
 for (const set of A.SETS.map((x) => x.id)) {
-  for (let i = 0; i < 2000; i += 1) {
-    const q = A.buildQuestion('mix', set, scenes);
+  for (let i = 0; i < 10000; i += 1) {
+    const q = A.buildQuestion('mix', set, scenes, rnd);
     judged += 1;
     const chosen = q.choices.find((c) => c.id === q.answer);
 
@@ -196,8 +223,8 @@ for (const s of art.SCENES) {
 
 let leaks = 0;
 for (const set of A.SETS.map((x) => x.id)) {
-  for (let i = 0; i < 1200; i += 1) {
-    const q = A.buildQuestion('mix', set, scenes);
+  for (let i = 0; i < 6000; i += 1) {
+    const q = A.buildQuestion('mix', set, scenes, rnd);
     const shown = q.figure + q.choices.map((c) => c.html).join('');
     const labels = [...shown.matchAll(/aria-label="([^"]*)"/g)].map((m) => m[1]);
     for (const l of labels) {
@@ -222,16 +249,46 @@ for (const set of A.SETS.map((x) => x.id)) {
  * round repeated one, and a round of twenty showed one object three times.
  * Checking only a round the same size as the pack missed both.
  */
+/* The certain part first. Deal the whole pack, then ask for more mixed
+   questions: not one of them may be an "out in the world" question, because
+   there is no object left to show that the child has not already seen.
+
+   This used to be tested by building four hundred random rounds and hoping
+   one of them went wrong. It did go wrong -- about one round in ten thousand
+   -- which came to roughly one failed deploy in twenty-five and looked like
+   the check itself being unreliable. A rate that low is exactly what a
+   sampling test cannot be trusted with. */
+{
+  const draw = A.dealer(scenes, rnd);
+  for (let i = 0; i < scenes.length; i += 1) draw();
+  if (draw.left() !== 0) {
+    err(`the pack still reports ${draw.left()} left after all ${scenes.length} were dealt`);
+  }
+  for (let i = 0; i < 500; i += 1) {
+    const q = A.buildQuestion('mix', 'steps', scenes, rnd, draw);
+    if (q && q.scene) {
+      err('a mixed round asked for an object after every one had been used — '
+        + 'the pack reshuffles and a child sees the same drawing twice');
+      break;
+    }
+  }
+}
+
 let repeated = 0;
 for (const count of A.COUNTS) {
   for (const ask of ['world', 'mix']) {
-    for (let r = 0; r < 400; r += 1) {
-      const round = A.buildRound(scenes, { ask, set: 'steps', count });
+    for (let r = 0; r < 2000; r += 1) {
+      const round = A.buildRound(scenes, { ask, set: 'steps', count, random: rnd });
       if (ask === 'world' && round.length > scenes.length) {
         err(`a world round of ${round.length} was built from ${scenes.length} objects`);
         break;
       }
       const ids = round.map((q) => q.scene).filter(Boolean);
+      if (ids.length > scenes.length) {
+        err(`${ask}, ${count} questions: ${ids.length} objects asked for from `
+          + `a pack of ${scenes.length}`);
+        break;
+      }
       if (new Set(ids).size !== ids.length) {
         repeated += 1;
         err(`${ask}, ${count} questions: the same object came round twice`);
@@ -251,6 +308,21 @@ for (const a of A.ASKS) {
 }
 for (const s of A.SETS) {
   if (!setup.includes(`data-angset="${s.id}"`)) err(`the setup screen cannot choose "${s.id}"`);
+}
+
+/* ---- this check must give the same answer twice ---- */
+
+/* A build gate that samples randomly is a lottery, and this one lost: a defect
+   in one round in ten thousand failed about one deploy in twenty-five while
+   passing every run on a laptop. Nothing here may call Math.random. */
+{
+  const src = fs.readFileSync(new URL('./anglecheck.mjs', import.meta.url), 'utf8');
+  /* A CALL, with its bracket. Looking for the bare name matched the prose
+     above and this very message, and the check failed on itself. */
+  if (/Math\.random\s*\(/.test(src)) {
+    err('anglecheck.mjs calls Math.random, so the build can fail at random — '
+      + 'pass the seeded rnd() to whatever generates questions');
+  }
 }
 
 /* ---- report ---- */
