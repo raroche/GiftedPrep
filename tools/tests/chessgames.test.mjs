@@ -14,6 +14,22 @@ import * as G from '../../assets/js/modules/chessgames.js';
 /** Set up a variant at a given position rather than at its start. */
 const at = (fen) => new Chess(fen, { skipValidation: true });
 
+/**
+ * A position reached by actually playing the moves that got there.
+ *
+ * "Has a pawn got across" is a question about what HAPPENED, not about what
+ * the board looks like -- a promoted queen on a8 and a queen that walked to
+ * a8 are the same queen. So the fixtures for it have to play the move.
+ */
+const after = (fen, ...moves) => {
+  const game = at(fen);
+  for (const m of moves) {
+    const played = game.move(m);
+    assert.ok(played, `the fixture could not play ${JSON.stringify(m)}`);
+  }
+  return game;
+};
+
 describe('the games themselves', () => {
   test('every one has everything a card needs to show', () => {
     for (const g of G.GAMES) {
@@ -57,8 +73,9 @@ describe('the games themselves', () => {
 
 describe('Pawn Wars', () => {
   test('getting a pawn across wins on the spot', () => {
-    /* A white pawn has just promoted on a8. */
-    assert.equal(G.winner('pawnwars', at('Q7/1ppppppp/8/8/8/8/1PPPPPPP/8 b - - 0 1')), 'w');
+    const promoted = after('8/Ppppppp1/8/8/8/8/1PPPPPPP/8 w - - 0 1',
+      { from: 'a7', to: 'a8', promotion: 'q' });
+    assert.equal(G.winner('pawnwars', promoted), 'w');
   });
 
   test('so does taking every last pawn', () => {
@@ -89,11 +106,46 @@ describe('Capture the Flag', () => {
   });
 
   test('getting a pawn across wins too', () => {
-    assert.equal(G.winner('flag', at('Q7/1ppppppp/8/8/8/8/1PPPPPPP/RNBQ1BNR b - - 0 1')), 'w');
+    const promoted = after('1nbq1bnr/Pppppppp/8/8/8/8/1PPPPPPP/RNBQ1BNR w - - 0 1',
+      { from: 'a7', to: 'a8', promotion: 'q' });
+    assert.equal(G.winner('flag', promoted), 'w');
+  });
+
+  /* The bug this game shipped with. Both sides start with a full army, so
+     "a piece of yours on the far rank" is not the same thing as "a pawn got
+     across" -- and a child who walked a rook up the a-file was told they had
+     won a race they had not entered. */
+  test('walking a rook to the far rank is not getting a pawn across', () => {
+    const walked = after('8/Rppppppp/8/8/8/8/PPPPPPPP/1NBQ1BNR w - - 0 1',
+      { from: 'a7', to: 'a8' });
+    assert.equal(walked.get('a8').type, 'r', 'the fixture must really put a rook there');
+    assert.equal(G.winner('flag', walked), null);
   });
 
   test('running out of pawns is not losing here — there are other pieces', () => {
     assert.equal(G.winner('flag', at('rnbq1bnr/8/8/8/8/8/PPPPPPPP/RNBQ1BNR w - - 0 1')), null);
+  });
+});
+
+describe('Pawns and Kings', () => {
+  test('getting a pawn across wins', () => {
+    const promoted = after('4k3/Ppppppp1/8/8/8/8/1PPPPPPP/4K3 w - - 0 1',
+      { from: 'a7', to: 'a8', promotion: 'q' });
+    assert.equal(G.winner('kingpawn', promoted), 'w');
+  });
+
+  /* The same bug as Capture the Flag, in the one other game where a piece
+     that is not a pawn can stand on the far rank. Walking the king up the
+     board ended the game as a win. */
+  test('walking the king to the far rank wins nothing', () => {
+    const walked = after('8/3K4/8/8/8/8/ppp2P2/k7 w - - 0 1',
+      { from: 'd7', to: 'd8' });
+    assert.equal(walked.get('d8').type, 'k', 'the fixture must really put a king there');
+    assert.equal(G.winner('kingpawn', walked), null);
+  });
+
+  test('taking every pawn wins it too', () => {
+    assert.equal(G.winner('kingpawn', at('4k3/8/8/8/8/8/PPPPPPPP/4K3 b - - 0 1')), 'w');
   });
 });
 
@@ -103,7 +155,9 @@ describe('one piece against a crowd of pawns', () => {
   });
 
   test('the pawns win by getting one home', () => {
-    assert.equal(G.winner('queenvspawns', at('8/1ppppppp/8/8/8/8/8/q2Q4 w - - 0 1')), 'b');
+    const home = after('8/1ppppppp/8/8/8/8/p7/3Q4 b - - 0 1',
+      { from: 'a2', to: 'a1', promotion: 'q' });
+    assert.equal(G.winner('queenvspawns', home), 'b');
   });
 
   test('losing the queen loses the game', () => {
@@ -153,14 +207,19 @@ describe('a whole game', () => {
 });
 
 describe('what a child is told', () => {
+  /* White has just got a pawn across in Pawn Wars. The same finished game is
+     read once from each side. */
+  const raced = () => after('8/Ppppppp1/8/8/8/8/1PPPPPPP/8 w - - 0 1',
+    { from: 'a7', to: 'a8', promotion: 'q' });
+
   test('winning says so plainly', () => {
-    const won = G.result('pawnwars', at('Q7/1ppppppp/8/8/8/8/1PPPPPPP/8 b - - 0 1'), 0, 'w');
+    const won = G.result('pawnwars', raced(), 0, 'w');
     assert.equal(won.outcome, 'win');
     assert.match(won.say, /won/i);
   });
 
   test('losing is never called losing', () => {
-    const lost = G.result('pawnwars', at('Q7/1ppppppp/8/8/8/8/1PPPPPPP/8 b - - 0 1'), 0, 'b');
+    const lost = G.result('pawnwars', raced(), 0, 'b');
     assert.equal(lost.outcome, 'loss');
     assert.doesNotMatch(lost.say, /\b(lost|lose|beaten|failed|sorry)\b/i,
       `"${lost.say}" tells a beginner they failed`);

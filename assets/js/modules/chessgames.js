@@ -138,8 +138,6 @@ export function open(variant) {
 /* Who won                                                             */
 /* ------------------------------------------------------------------ */
 
-const PROMOTION_RANK = { w: '8', b: '1' };
-
 /** Every piece of a colour still on the board, by type. */
 function census(game, colour) {
   const out = { count: 0, pawns: 0, other: 0 };
@@ -154,18 +152,26 @@ function census(game, colour) {
   return out;
 }
 
-/** Has this side got a pawn all the way over? */
+/**
+ * Has this side got a pawn all the way over?
+ *
+ * It asks the move list, not the board, and it has to.
+ *
+ * The board cannot answer the question. This used to read "any piece of ours
+ * standing on the far rank", which is exact in Pawn Wars, where the only
+ * pieces are pawns and a pawn on the last rank has by definition just become
+ * something else. It is wrong everywhere else. In Capture the Flag both sides
+ * start with a full army, so a rook walking a1 to a8 ended the game on the
+ * spot -- a child who had simply moved a rook was told they had got a pawn
+ * across. In Pawns and Kings, marching the KING to the far rank did the same.
+ *
+ * There is no fixing this from the position: a rook on a8 and a promoted pawn
+ * on a8 are the same rook. A promotion is a thing that HAPPENS, so it is
+ * looked for where it happened.
+ */
 function promoted(game, colour) {
-  const rank = PROMOTION_RANK[colour];
-  for (const row of game.board()) {
-    for (const piece of row) {
-      /* A pawn cannot sit on the last rank -- reaching it turns it into
-         something else -- so any non-pawn of ours standing there in a game
-         that started with only pawns is a pawn that got across. */
-      if (piece && piece.color === colour && piece.square[1] === rank) return true;
-    }
-  }
-  return false;
+  return game.history({ verbose: true })
+    .some((m) => m.color === colour && m.promotion);
 }
 
 /**

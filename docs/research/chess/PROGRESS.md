@@ -469,3 +469,37 @@ Two overlapping browser loops toggled the same squares and produced a
 "multi-select is broken" reading that was entirely my own doing. It has now
 cost time three times. **One harness at a time. If a javascript_exec call
 times out, assume it is still running and clean up before the next one.**
+
+## "A pawn got across" was really "anything got across" (2026-09-03)
+
+Reported: in Capture the Flag, walking a rook or a knight to the far rank
+ended the game, although the goal says "Get a pawn across".
+
+`promoted()` read the BOARD: any piece of yours standing on the far rank. That
+is exact in Pawn Wars, where the only pieces are pawns and a pawn on the last
+rank has by definition just become something else. It is wrong in the two
+games where a non-pawn can stand there:
+
+  Capture the Flag  both sides start with a full army; a rook a1-a8 won.
+  Pawns and Kings   marching the KING to the far rank won. Not reported,
+                    found while fixing the first.
+
+There is no fixing this from the position. A rook on a8 and a promoted pawn on
+a8 are the same rook. A promotion is a thing that HAPPENS, so `promoted()` now
+looks for it in `game.history({ verbose: true })`.
+
+That makes `winner()` read the move list, not just the board, which changed
+what a test fixture has to be: five tests built "a pawn has promoted" out of a
+FEN, which no longer says any such thing. They now play the promoting move
+through a new `after()` helper. That is more honest anyway — the old fixtures
+asserted a fact about a game's history using a string that does not contain
+one, which is the same mistake the bug was.
+
+Both bugs have a test that fails if the old rule comes back; checked by
+putting it back.
+
+### Where else this pattern could hide
+Any rule of the form "the board looks like X, therefore Y happened". The other
+mini-games are safe by luck rather than design: `queenvspawns`, `rookvspawns`
+and `knightsvspawns` only ask about the pawn side, and that side has nothing
+but pawns.
