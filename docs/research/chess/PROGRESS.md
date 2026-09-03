@@ -218,9 +218,13 @@ Add a "Chess" room to the CurioZoo home page with three levels:
       puzzle screens instead of showing a skip card, and a lesson's own puzzle
       theme opens when the child reaches that step.
 
+- [x] **Phase 6, level 3 — Queen's Guild.** All 18 lessons written and played
+      end to end. **Phase 6 is complete: all 52 lessons.**
+
 ## Next step for the next model
-**Phase 6, level 3 — Queen's Guild**, 18 lessons, from PLAN-lessons.md. Then
-Phase 7 (rewards and polish) and Phase 8 (checks and ship).
+**Phase 7: rewards and polish** — caged pieces on the level page, board themes
+earned with stars, the week dots, the star pop. Then **Phase 8** (checks, the
+README numbers, ship).
 
 ### How to write a level
 1. Write a script that replays every FEN and every move you intend to use
@@ -231,6 +235,13 @@ Phase 7 (rewards and polish) and Phase 8 (checks and ship).
    and the step count.
 3. Play every lesson in the browser. A harness that drives the accessible grid
    is the quickest way; see the note below.
+
+### One position from the research did not survive
+`03-curriculum.md` gives a Petrosian x-ray position that is not an x-ray: the
+queen can simply take the bishop. It was replaced with a constructed rook x-ray
+(`3q2k1/5ppp/8/3r4/8/8/5PPP/3R2K1`) which demonstrates the idea properly.
+Research positions are a starting point, not a source of truth — replay every
+one.
 
 ### A trap in the puzzle gate
 A lesson that teaches forks ends with fork puzzles, and the theme gate keys off
