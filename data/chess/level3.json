@@ -1,0 +1,155 @@
+{
+  "level": 3,
+  "id": "queens-guild",
+  "name": "Queen's Guild",
+  "hue": "honey",
+  "band": "600 and up",
+  "blurb": "Deeper tricks, a real opening plan, endgames, and how to think about a whole game.",
+  "who": "For a player who already spots forks and pins and wants to get properly good.",
+  "lessons": [
+    {
+      "id": "l3-cct",
+      "name": "Say It Out Loud",
+      "emoji": "🗣️",
+      "big": "Checks, captures, threats. Before every move.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-deflection",
+      "name": "Look Over Here",
+      "emoji": "👉",
+      "big": "Drag the guard away from its job.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-decoy",
+      "name": "Bait on the Hook",
+      "emoji": "🪝",
+      "big": "Lure a piece onto a bad square.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-zwischenzug",
+      "name": "Wait, First This",
+      "emoji": "⏸️",
+      "big": "Before you take back, is there a check?",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-overload",
+      "name": "The Busy Babysitter",
+      "emoji": "👶",
+      "big": "One defender with two jobs cannot do both.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-xray",
+      "name": "X-ray Eyes",
+      "emoji": "🩻",
+      "big": "Attack straight through a piece.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-clearance",
+      "name": "Out of the Way",
+      "emoji": "🧹",
+      "big": "Empty a line, and do it with check.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-interference",
+      "name": "Slam the Door",
+      "emoji": "🛑",
+      "big": "Put something between the guard and its job.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-outposts",
+      "name": "Treehouses and Highways",
+      "emoji": "🌳",
+      "big": "Where your pieces want to live.",
+      "minutes": 9,
+      "steps": []
+    },
+    {
+      "id": "l3-pawns",
+      "name": "Bones That Cannot Go Back",
+      "emoji": "🦴",
+      "big": "Pawns are the skeleton of the position.",
+      "minutes": 9,
+      "steps": []
+    },
+    {
+      "id": "l3-white",
+      "name": "Your Openings as White",
+      "emoji": "⚪",
+      "big": "The same plan, every single game.",
+      "minutes": 10,
+      "steps": []
+    },
+    {
+      "id": "l3-black",
+      "name": "Your Openings as Black",
+      "emoji": "⚫",
+      "big": "Copy the plan, and know the three traps.",
+      "minutes": 10,
+      "steps": []
+    },
+    {
+      "id": "l3-kp",
+      "name": "Key Squares",
+      "emoji": "🔑",
+      "big": "Get your king in front and the pawn queens.",
+      "minutes": 9,
+      "steps": []
+    },
+    {
+      "id": "l3-rook",
+      "name": "Bridges and Fences",
+      "emoji": "🌉",
+      "big": "The two rook endings everybody should know.",
+      "minutes": 10,
+      "steps": []
+    },
+    {
+      "id": "l3-attack",
+      "name": "Ring the Doorbell",
+      "emoji": "🔔",
+      "big": "Three attackers beat two defenders.",
+      "minutes": 9,
+      "steps": []
+    },
+    {
+      "id": "l3-patterns",
+      "name": "Name the Mate",
+      "emoji": "🏷️",
+      "big": "You see it faster once it has a name.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l3-plan",
+      "name": "A Plan Is a Sentence",
+      "emoji": "📝",
+      "big": "I will do this, because of that.",
+      "minutes": 10,
+      "steps": []
+    },
+    {
+      "id": "l3-tournament",
+      "name": "Touch It, Move It",
+      "emoji": "🏆",
+      "big": "Clocks, notation, and how to behave.",
+      "minutes": 8,
+      "steps": []
+    }
+  ]
+}

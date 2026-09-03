@@ -1,0 +1,163 @@
+{
+  "level": 2,
+  "id": "knight-school",
+  "name": "Knight School",
+  "hue": "jade",
+  "band": "About 200 to 600",
+  "blurb": "Openings, the six tricks that win pieces, and three checkmates you can always do.",
+  "who": "For a player whose games are decided by leaving pieces where they can be taken.",
+  "lessons": [
+    {
+      "id": "l2-opening",
+      "name": "Wake Up the Team",
+      "emoji": "☀️",
+      "big": "Take the middle, bring the pieces out, castle.",
+      "minutes": 6,
+      "steps": []
+    },
+    {
+      "id": "l2-italian",
+      "name": "The Italian Game",
+      "emoji": "🍕",
+      "big": "Point your bishop at the weak spot.",
+      "minutes": 6,
+      "steps": []
+    },
+    {
+      "id": "l2-london",
+      "name": "The London System",
+      "emoji": "🏠",
+      "big": "Build the same house every game.",
+      "minutes": 6,
+      "steps": []
+    },
+    {
+      "id": "l2-scholar",
+      "name": "Stop the Bully Queen",
+      "emoji": "🛡️",
+      "big": "Beat the four-move checkmate.",
+      "minutes": 6,
+      "steps": []
+    },
+    {
+      "id": "l2-hanging",
+      "name": "Free Candy",
+      "emoji": "🍭",
+      "big": "Look for pieces nobody is holding on to.",
+      "minutes": 7,
+      "steps": []
+    },
+    {
+      "id": "l2-count",
+      "name": "Count the Hands",
+      "emoji": "✋",
+      "big": "More attackers than defenders? Then take it.",
+      "minutes": 6,
+      "steps": []
+    },
+    {
+      "id": "l2-fork",
+      "name": "The Fork",
+      "emoji": "🍴",
+      "big": "One piece, two victims.",
+      "minutes": 7,
+      "steps": []
+    },
+    {
+      "id": "l2-pin",
+      "name": "Stuck in the Mud",
+      "emoji": "🪤",
+      "big": "A pinned piece cannot run. Pile on it.",
+      "minutes": 7,
+      "steps": []
+    },
+    {
+      "id": "l2-skewer",
+      "name": "The Kebab",
+      "emoji": "🍢",
+      "big": "Big piece in front, little one behind.",
+      "minutes": 7,
+      "steps": []
+    },
+    {
+      "id": "l2-discovered",
+      "name": "Open the Door",
+      "emoji": "🚪",
+      "big": "One piece steps aside and another attacks.",
+      "minutes": 7,
+      "steps": []
+    },
+    {
+      "id": "l2-backrank",
+      "name": "The Back Rank",
+      "emoji": "🧱",
+      "big": "Trapped behind your own wall. Make a hole.",
+      "minutes": 7,
+      "steps": []
+    },
+    {
+      "id": "l2-defender",
+      "name": "Remove the Guard",
+      "emoji": "🥷",
+      "big": "Get rid of the bodyguard first.",
+      "minutes": 7,
+      "steps": []
+    },
+    {
+      "id": "l2-ladder",
+      "name": "The Rook Roller",
+      "emoji": "🪜",
+      "big": "Two rooks push the king up the stairs.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l2-kq",
+      "name": "The Queen's Box",
+      "emoji": "📦",
+      "big": "Shrink the box, and never freeze him by mistake.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l2-kr",
+      "name": "The Rook Wall",
+      "emoji": "🚧",
+      "big": "The rook is the wall. The king pushes.",
+      "minutes": 8,
+      "steps": []
+    },
+    {
+      "id": "l2-passed",
+      "name": "Draw the Box",
+      "emoji": "📐",
+      "big": "Can the king catch that pawn?",
+      "minutes": 6,
+      "steps": []
+    },
+    {
+      "id": "l2-kingfight",
+      "name": "The King Joins In",
+      "emoji": "🥊",
+      "big": "At the end, the king is a fighter.",
+      "minutes": 7,
+      "steps": []
+    },
+    {
+      "id": "l2-opposition",
+      "name": "The Staring Contest",
+      "emoji": "👀",
+      "big": "Whoever has to move first, loses the square.",
+      "minutes": 6,
+      "steps": []
+    },
+    {
+      "id": "l2-game",
+      "name": "The Bait Queen",
+      "emoji": "🎣",
+      "big": "Greedy captures lose games.",
+      "minutes": 8,
+      "steps": []
+    }
+  ]
+}

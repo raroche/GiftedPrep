@@ -215,6 +215,70 @@ if (!/min-width:\s*352px/.test(css)) {
 }
 
 /* ------------------------------------------------------------------ */
+/* The lessons                                                         */
+/* ------------------------------------------------------------------ */
+
+const seenLessonIds = new Map();
+const levels = [];
+for (const n of [1, 2, 3]) {
+  const file = `data/chess/level${n}.json`;
+  if (!fs.existsSync(file)) { err(`${file} is missing`); continue; }
+  let level;
+  try {
+    level = JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch (e) { err(`${file}: ${e.message}`); continue; }
+  levels.push(level);
+
+  for (const key of ['level', 'id', 'name', 'hue', 'band', 'blurb', 'who', 'lessons']) {
+    if (level[key] === undefined) err(`${file}: missing "${key}"`);
+  }
+  if (level.level !== n) err(`${file}: says it is level ${level.level}`);
+  if (!css.includes(`.cz-tile--${level.hue}`)) {
+    err(`${file}: hue "${level.hue}" has no .cz-tile--${level.hue} rule, so the tile is uncoloured`);
+  }
+  if (!Array.isArray(level.lessons) || level.lessons.length < 10) {
+    err(`${file}: a level needs at least 10 lessons, has ${level.lessons?.length ?? 0}`);
+    continue;
+  }
+
+  const emoji = new Map();
+  for (const [i, lesson] of level.lessons.entries()) {
+    const at = `${file} lesson ${i + 1} (${lesson.id || '?'})`;
+    for (const key of ['id', 'name', 'emoji', 'big', 'minutes']) {
+      if (!lesson[key]) err(`${at}: missing "${key}"`);
+    }
+    if (!Array.isArray(lesson.steps)) err(`${at}: "steps" must be an array, even an empty one`);
+    /* An id is a URL. A space or a slash in one is a route that never resolves. */
+    if (lesson.id && !/^l[123]-[a-z0-9]+$/.test(lesson.id)) {
+      err(`${at}: id must look like "l1-rook" — it is part of the address bar`);
+    }
+    if (seenLessonIds.has(lesson.id)) {
+      err(`${at}: id already used in ${seenLessonIds.get(lesson.id)}`);
+    } else seenLessonIds.set(lesson.id, file);
+
+    /* Two lessons with the same picture look like the same lesson on a grid
+       a child is scanning, which is the only way they are told apart at speed. */
+    if (emoji.has(lesson.emoji)) {
+      err(`${at}: the same emoji as ${emoji.get(lesson.emoji)}`);
+    } else emoji.set(lesson.emoji, lesson.id);
+
+    if (lesson.big && lesson.big.length > 60) {
+      warn(`${at}: "big" is ${lesson.big.length} chars; it wraps past two lines on a card`);
+    }
+    if (lesson.minutes > 12) {
+      warn(`${at}: ${lesson.minutes} minutes. Research says 3-5 for ages 5-8, 10 at the very top.`);
+    }
+    if (lesson.piece && !['rook', 'bishop', 'queen', 'knight', 'pawn', 'king'].includes(lesson.piece)) {
+      err(`${at}: "${lesson.piece}" is not a chess piece`);
+    }
+  }
+}
+
+if (levels.length === 3 && new Set(levels.map((l) => l.hue)).size !== 3) {
+  err('two levels share a hue, so their tiles are the same colour');
+}
+
+/* ------------------------------------------------------------------ */
 /* Credit where it is due                                              */
 /* ------------------------------------------------------------------ */
 
@@ -231,8 +295,11 @@ else {
 /* Report                                                              */
 /* ------------------------------------------------------------------ */
 
+const written = levels.reduce((n, lv) =>
+  n + lv.lessons.filter((l) => l.steps && l.steps.length).length, 0);
 console.log(`${pieces.PIECE_CODES.length} pieces, `
-  + `${(svg.length / 1024).toFixed(1)}KB of symbols, rules library present`);
+  + `${(svg.length / 1024).toFixed(1)}KB of symbols, rules library present, `
+  + `${levels.length} levels, ${seenLessonIds.size} lessons (${written} written)`);
 
 if (warnings.length) {
   console.log(`\nwarnings (${warnings.length}):`);

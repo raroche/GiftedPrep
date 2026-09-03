@@ -59,6 +59,11 @@ Add a "Chess" room to the CurioZoo home page with three levels:
   squares, create a new piece" meant the CSS transition on `.cz-cb__piece`
   existed and never once ran. `pairMovers()` matches each arriving piece to a
   departing one of the same kind so the node survives the move and slides.
+- **A `<span>` cannot have a width.** The level progress bar used
+  `<span class="gp-bar__fill">`, an inline box ignores width and height, and it
+  drew at zero by zero with no error — the same shape of failure the CSP once
+  caused here. `.gp-bar__fill` is now `display: block` so the trap is shut for
+  every caller, not just this one.
 - The parity of a light square is `(file index + rank number) % 2 === 0`.
   Written as `=== 1` the whole board is painted in negative, which still looks
   like a chessboard and quietly ruins every lesson about bishop colours.
@@ -83,9 +88,28 @@ Add a "Chess" room to the CurioZoo home page with three levels:
       Verified in a real browser under the production CSP: tap, drag,
       underpromotion, flip, keyboard grid, light and dark, 375px and 768px.
 
+- [x] **Phase 2 — progress and the hub.** `modules/chessprogress.js` (stars that
+      only go up, badge Pawn to King, unlock gates, days practised, board
+      themes, bot ladder and puzzle-rating fields; 36 tests). `data/chess/
+      level1..3.json` with all 52 lessons named and `steps: []` — content is
+      Phase 6. Hub, level page, and honest "being built" screens for the
+      lesson player, play and puzzles. `settings.chess` added to storage
+      DEFAULTS. `chesscheck` now validates the level files; `linkcheck` knows
+      every lesson id.
+
 ## Next step for the next model
-Start PLAN.md **Phase 2: progress and the hub**. The room is `status: 'soon'`;
+Start PLAN.md **Phase 3: the lesson player**. The room is `status: 'soon'`;
 flip to 'live' at the end of Phase 6.
+
+### Two design notes for whoever writes the lessons
+- A lesson with `steps: []` is treated as "not written yet" everywhere
+  (`isReady()` in screens/chess.js). It is not offered as the next lesson and
+  its card is not a link. Add steps and it becomes live on its own; there is no
+  second flag to remember.
+- The gate is strict: level 2 needs ALL of level 1. That follows PLAN.md, but
+  02-gamification.md warns against unlocking by grinding, and a nine-year-old
+  who already plays will meet two locked levels. If that turns out to bite,
+  the one place to change it is `levelGate()` / `isUnlocked()`.
 
 ## Files in this folder
 - 01-pedagogy.md    how kids are taught chess, what engages them

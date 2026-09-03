@@ -38,6 +38,13 @@ const grades = fs.readdirSync('data/math')
 const manifest = JSON.parse(fs.readFileSync('data/manifest.json', 'utf8'));
 const testIds = new Set((manifest.tests || []).map((t) => t.id).concat('all'));
 
+const chessLessons = new Set();
+for (const n of [1, 2, 3]) {
+  const file = `data/chess/level${n}.json`;
+  if (!fs.existsSync(file)) continue;
+  for (const l of JSON.parse(fs.readFileSync(file, 'utf8')).lessons || []) chessLessons.add(l.id);
+}
+
 const { ROOMS } = await import('../assets/js/modules/sections.js');
 
 /* ---- collect every link the app can produce ---- */
@@ -101,6 +108,11 @@ for (const [link, from] of links) {
   if (head === 'chess' && parts[1] && !open) {
     const pages = new Set(['1', '2', '3', 'play', 'puzzles', 'games', 'board']);
     if (!pages.has(parts[1])) err(`${link} -> no chess page called "${parts[1]}"   [${where}]`);
+    /* A third segment is a lesson id, and it has to be one that exists: a
+       typo lands the child on the level page with nothing to say why. */
+    if (parts[2] && /^[123]$/.test(parts[1]) && !chessLessons.has(parts[2])) {
+      err(`${link} -> no chess lesson called "${parts[2]}"   [${where}]`);
+    }
   }
   if (head === 'fun' && parts[1] && !open) {
     const games = new Set(['flags', 'shapes', 'capitals', 'elements', 'angles']);

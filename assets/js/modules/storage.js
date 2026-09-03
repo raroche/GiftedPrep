@@ -50,7 +50,11 @@ const DEFAULTS = {
     /* Language of the Parent Guide only. The child-facing screens are English. */
     guideLang: 'en',
     /* Math Lab progress: { "1:ten-frames": 4, ... } furthest exercise reached. */
-    mathDone: {}
+    mathDone: {},
+    /* Chess Club: stars, badge, days practised, bot ladder, puzzle rating.
+       One object, owned and validated by modules/chessprogress.js. It has to
+       be named here or migrate() drops it on the next version bump. */
+    chess: {}
   },
   /* stats[categoryId] = { seen, correct, streakBest, lastSeenIso } */
   stats: {},

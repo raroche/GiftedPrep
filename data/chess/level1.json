@@ -1,0 +1,137 @@
+{
+  "level": 1,
+  "id": "pawn-camp",
+  "name": "Pawn Camp",
+  "hue": "leaf",
+  "band": "Brand new",
+  "blurb": "Meet the six pieces one at a time, then play your first whole game.",
+  "who": "For anyone who has never played. No reading needed.",
+  "lessons": [
+    {
+      "id": "l1-board",
+      "name": "The Board",
+      "emoji": "🗺️",
+      "big": "Every square has a name.",
+      "minutes": 4,
+      "steps": []
+    },
+    {
+      "id": "l1-rook",
+      "name": "The Rook",
+      "emoji": "🏰",
+      "big": "Straight lines, as far as it likes.",
+      "minutes": 4,
+      "piece": "rook",
+      "steps": []
+    },
+    {
+      "id": "l1-bishop",
+      "name": "The Bishop",
+      "emoji": "🎪",
+      "big": "Slanted lines, and it keeps its colour forever.",
+      "minutes": 4,
+      "piece": "bishop",
+      "steps": []
+    },
+    {
+      "id": "l1-queen",
+      "name": "The Queen",
+      "emoji": "👑",
+      "big": "A rook and a bishop in one.",
+      "minutes": 4,
+      "piece": "queen",
+      "steps": []
+    },
+    {
+      "id": "l1-knight",
+      "name": "The Knight",
+      "emoji": "🐴",
+      "big": "Gallop, gallop, step to the side.",
+      "minutes": 5,
+      "piece": "knight",
+      "steps": []
+    },
+    {
+      "id": "l1-pawn",
+      "name": "The Pawn",
+      "emoji": "🧒",
+      "big": "Forward one. It eats sideways. It never goes back.",
+      "minutes": 5,
+      "piece": "pawn",
+      "steps": []
+    },
+    {
+      "id": "l1-king",
+      "name": "The King",
+      "emoji": "🤴",
+      "big": "One careful step, and never into danger.",
+      "minutes": 4,
+      "piece": "king",
+      "steps": []
+    },
+    {
+      "id": "l1-value",
+      "name": "Take, Protect, Count",
+      "emoji": "🍬",
+      "big": "Every piece is worth points.",
+      "minutes": 5,
+      "steps": []
+    },
+    {
+      "id": "l1-check",
+      "name": "Check, and Three Ways Out",
+      "emoji": "🚨",
+      "big": "Run, block, or take.",
+      "minutes": 5,
+      "steps": []
+    },
+    {
+      "id": "l1-mate",
+      "name": "Checkmate and Stalemate",
+      "emoji": "🏁",
+      "big": "Trapped is a win. Frozen is a tie.",
+      "minutes": 5,
+      "steps": []
+    },
+    {
+      "id": "l1-castle",
+      "name": "Castling",
+      "emoji": "🏯",
+      "big": "The king runs home and the tower shuts the door.",
+      "minutes": 4,
+      "steps": []
+    },
+    {
+      "id": "l1-special",
+      "name": "Growing Up, and Sneaking Past",
+      "emoji": "🎓",
+      "big": "A pawn can become a queen.",
+      "minutes": 5,
+      "steps": []
+    },
+    {
+      "id": "l1-notation",
+      "name": "The Secret Code",
+      "emoji": "🔤",
+      "big": "Every move has a name you can write down.",
+      "minutes": 4,
+      "steps": []
+    },
+    {
+      "id": "l1-draws",
+      "name": "How a Game Ends",
+      "emoji": "🤝",
+      "big": "Some games end in a handshake.",
+      "minutes": 4,
+      "steps": []
+    },
+    {
+      "id": "l1-firstgame",
+      "name": "Your First Real Game",
+      "emoji": "♟️",
+      "big": "Every move has a reason.",
+      "minutes": 8,
+      "steps": []
+    }
+  ]
+}

@@ -1357,6 +1357,11 @@ button, a, label, summary, [role="button"] {
   overflow: hidden;
 }
 .gp-bar__fill {
+  /* Blockified on purpose. A <span> is inline, and an inline box ignores both
+     width and height, so a fill written as a span draws at zero by zero: an
+     empty track, no error, no warning. That is the same shape of failure the
+     CSP once caused here, and it cost a real afternoon a second time. */
+  display: block;
   height: 100%;
   border-radius: inherit;
   background: var(--gp-secondary);
@@ -3576,4 +3581,193 @@ button, a, label, summary, [role="button"] {
 
 @media (prefers-reduced-motion: reduce) {
   .cz-cb__piece { transition: none; }
+}
+
+
+/* ==========================================================================
+   The Chess Club room (screens/chess.js)
+
+   The hub answers one question -- what do I do now? -- so the single biggest
+   thing on it is the button that opens the next lesson. Everything else is a
+   record of what has been done, never a demand.
+   ========================================================================== */
+
+/* A real chess piece, from the same symbols the board uses, so the Rook a
+   child earns is the rook they have been moving around. */
+.cz-chess-piece {
+  display: block;
+  width: 2.2rem; height: 2.2rem;
+}
+.cz-chess-piece--big { width: 3.4rem; height: 3.4rem; }
+
+/* ---- the one-screen welcome, shown once ---- */
+
+.cz-chess-intro {
+  display: grid;
+  justify-items: center;
+  gap: var(--gp-space-4);
+  max-width: 34rem;
+  margin: var(--gp-space-6) auto;
+  padding: var(--gp-space-7) var(--gp-space-5);
+  border: 2px solid var(--room-line, var(--gp-accent-line));
+  border-radius: var(--gp-radius-xl);
+  background: var(--room-soft, var(--gp-accent-soft));
+  text-align: center;
+}
+.cz-chess-intro__pic { margin: 0; }
+.cz-chess-intro__pic .cz-chess-piece { width: 5rem; height: 5rem; }
+.cz-chess-intro__title { margin: 0; font-size: 1.6rem; line-height: 1.2; }
+.cz-chess-intro__lede { margin: 0; max-width: 26rem; color: var(--gp-ink-soft); }
+
+/* ---- rank, stars, days ---- */
+
+.cz-chess-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gp-space-3);
+  margin-bottom: var(--gp-space-3);
+}
+.cz-chess-stat {
+  display: grid;
+  justify-items: center;
+  gap: var(--gp-space-1);
+  padding: var(--gp-space-4) var(--gp-space-2);
+  border: 1px solid var(--gp-line);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  text-align: center;
+}
+.cz-chess-stat__pic {
+  display: grid;
+  place-items: center;
+  min-height: 2.4rem;
+}
+.cz-chess-stat__pic--star { color: #E69F00; font-size: 2rem; line-height: 1; }
+.cz-chess-stat__num { font-size: 1.35rem; font-weight: 800; line-height: 1.1; }
+.cz-chess-stat__cap { font-size: .78rem; color: var(--gp-ink-soft); }
+
+/* What earns the next rank. It is a goal, so it is stated as one thing to do,
+   never as a bar that is nearly full. */
+.cz-chess-goal {
+  margin: 0 0 var(--gp-space-5);
+  text-align: center;
+  font-size: .9rem;
+  color: var(--gp-ink-soft);
+}
+
+/* ---- the next lesson: the loudest thing on the page ---- */
+
+.cz-chess-next {
+  display: grid;
+  justify-items: center;
+  gap: var(--gp-space-3);
+  margin-bottom: var(--gp-space-7);
+  padding: var(--gp-space-6) var(--gp-space-5);
+  border: 2px solid var(--room-line, var(--gp-accent-line));
+  border-radius: var(--gp-radius-xl);
+  background: var(--room-soft, var(--gp-accent-soft));
+  text-align: center;
+}
+.cz-chess-next__tag {
+  margin: 0;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--room-ink, var(--gp-accent-strong));
+}
+.cz-chess-next__title { margin: 0; font-size: 1.45rem; line-height: 1.2; }
+.cz-chess-next__blurb { margin: 0; max-width: 30rem; color: var(--gp-ink-soft); }
+.cz-chess-next__meta { margin: 0; font-size: .8rem; color: var(--gp-ink-soft); }
+
+/* ---- stars ---- */
+
+.cz-chess-stars { letter-spacing: .06em; font-size: 1.05rem; line-height: 1; }
+.cz-chess-star { color: var(--gp-line); }
+.cz-chess-star.is-on { color: #E69F00; }
+
+/* ---- the week ----
+   Seven dots, one per day. There is deliberately no streak: a five-year-old
+   does not decide when the iPad comes out, so a broken run would punish a
+   child for a decision a parent made. A gap costs nothing and says nothing. */
+
+.cz-chess-week { display: inline-flex; gap: 3px; align-items: center; }
+.cz-chess-day {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gp-line);
+}
+.cz-chess-day.is-on { background: var(--room, var(--gp-accent)); }
+.cz-chess-day.is-today { outline: 2px solid var(--gp-ink-soft); outline-offset: 1px; }
+
+/* ---- a locked level tile ---- */
+
+.cz-tile__lock { font-size: 1.2rem; opacity: .6; }
+
+/* ---- one level's page ---- */
+
+.cz-chess-levelbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gp-space-3);
+  margin-top: var(--gp-space-4);
+}
+.cz-chess-levelbar__band {
+  padding: 2px var(--gp-space-3);
+  border-radius: 999px;
+  background: var(--room-soft, var(--gp-accent-soft));
+  color: var(--room-ink, var(--gp-accent-strong));
+  font-size: .78rem;
+  font-weight: 700;
+}
+.cz-chess-levelbar__count { font-size: .85rem; color: var(--gp-ink-soft); }
+.cz-chess-levelbar__track { flex: 1 1 8rem; min-width: 6rem; }
+
+/* ---- one lesson card ---- */
+
+.cz-chess-lesson__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gp-space-2);
+  margin-top: var(--gp-space-3);
+}
+.cz-chess-lesson__mins { font-size: .76rem; color: var(--gp-ink-soft); }
+.cz-chess-lock { font-size: 1rem; opacity: .55; }
+
+/* A lesson that is shut, or not written yet. Quieter, and not a link -- a
+   card that looks tappable and does nothing is worse than one that plainly
+   is not ready. */
+.cz-chess-lesson.is-locked,
+.cz-chess-lesson.is-soon {
+  opacity: .62;
+  cursor: default;
+  box-shadow: none;
+}
+.cz-chess-lesson.is-locked:hover,
+.cz-chess-lesson.is-soon:hover { transform: none; box-shadow: none; }
+
+/* A tile's meta line is normally two or three shouted words -- "12 TOPICS" --
+   which uppercase suits. The reason a level is shut is a whole sentence, and a
+   sentence in capitals is a sentence nobody reads. */
+.cz-tile__meta--why {
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0;
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+.cz-chess-credits {
+  margin-top: var(--gp-space-7);
+  font-size: .78rem;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .cz-chess-stats { gap: var(--gp-space-2); }
+  .cz-chess-stat { padding: var(--gp-space-3) var(--gp-space-1); }
+  .cz-chess-stat__num { font-size: 1.1rem; }
+  .cz-chess-stat__cap { font-size: .7rem; }
 }
