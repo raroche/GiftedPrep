@@ -79,3 +79,7 @@ See 03-curriculum.md for the lesson list. In short:
 - **Level 3, Queen's Guild (600+):** deeper tactics, calculation habit, plans
   (open files, outposts, pawn structure), a real repertoire, rook and pawn
   endgames, attacking the king, notation, clocks, tournament manners.
+
+## Where the lesson content is
+`PLAN-lessons.md` has every lesson with its steps, FENs and puzzle themes.
+`03-curriculum.md` has the sources, rating bands and the framing cheat sheet.
