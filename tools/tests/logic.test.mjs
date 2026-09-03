@@ -313,3 +313,30 @@ describe('where back goes', () => {
     }
   });
 });
+
+describe('finding the way back out of the Chess Club', () => {
+  test('a lesson goes up to its own level', () => {
+    assert.deepEqual(backTarget('#/chess/1/l1-rook'),
+      { href: '#/chess/1', label: 'Back to the lessons' });
+  });
+
+  test('a level goes up to the hub', () => {
+    assert.deepEqual(backTarget('#/chess/2'), { href: '#/chess', label: 'Chess Club' });
+  });
+
+  test('the hub goes home', () => {
+    assert.deepEqual(backTarget('#/chess'), { href: '#/home', label: 'Home' });
+  });
+
+  test('a mini-game goes to the hub, not to a page that does not exist', () => {
+    /* #/chess/games/kinghunt has three segments like a lesson does, and
+       "one step up" from it was #/chess/games, which is nothing. */
+    assert.deepEqual(backTarget('#/chess/games/kinghunt'),
+      { href: '#/chess', label: 'Chess Club' });
+  });
+
+  test('playing and puzzles go to the hub', () => {
+    assert.deepEqual(backTarget('#/chess/play'), { href: '#/chess', label: 'Chess Club' });
+    assert.deepEqual(backTarget('#/chess/puzzles'), { href: '#/chess', label: 'Chess Club' });
+  });
+});

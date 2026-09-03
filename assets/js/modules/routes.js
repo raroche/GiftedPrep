@@ -34,9 +34,15 @@ export function backTarget(hash = location.hash || '#/home') {
       if (head === 'math' && parts.length === 2) return { href: '#/math', label: 'Math Lab' };
       /* #/chess/1/l1-rook -> #/chess/1 -> #/chess -> home. A lesson goes back
          to its own level, not to the hub: a child working through Pawn Camp
-         wants the next lesson, not the front door. */
-      if (head === 'chess' && parts.length >= 3) return { href: `#/chess/${a}`, label: 'Back to the lessons' };
-      if (head === 'chess' && parts.length === 2) return { href: '#/chess', label: 'Chess Club' };
+         wants the next lesson, not the front door.
+
+         Only when the middle segment is a level NUMBER. #/chess/games/kinghunt
+         is three segments too, and sending that one "up" produced a link to
+         #/chess/games, which is not a page. */
+      if (head === 'chess' && parts.length >= 3 && /^[123]$/.test(a)) {
+        return { href: `#/chess/${a}`, label: 'Back to the lessons' };
+      }
+      if (head === 'chess' && parts.length >= 2) return { href: '#/chess', label: 'Chess Club' };
       return { href: '#/home', label: 'Home' };
     case 'tests':
       return { href: '#/gifted', label: 'GiftedPrep' };

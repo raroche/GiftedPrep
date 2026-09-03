@@ -28,7 +28,7 @@ import { answerAngle, drawAngSetup, nextAngle, startAngRound, answerElement, dra
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
-import { renderChess, chessAction, lessonChoice } from './screens/chess.js';
+import { renderChess, chessAction, lessonChoice, playPick } from './screens/chess.js';
 import { renderLearn, renderElemLearn, renderAngleLearn, paintAngTurn, paintAngTrap, paintAngClock, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
 import { backTarget } from './modules/routes.js';
 
@@ -350,6 +350,12 @@ function onClick(ev) {
      and try to score them against a session that does not exist. */
   const chessPick = ev.target.closest('[data-chess-choice]');
   if (chessPick) { lessonChoice(chessPick.dataset.chessChoice); return; }
+
+  const chessBot = ev.target.closest('[data-chess-bot]');
+  if (chessBot) { playPick('bot', chessBot.dataset.chessBot); return; }
+
+  const chessGame = ev.target.closest('[data-chess-game]');
+  if (chessGame) { playPick('game', chessGame.dataset.chessGame); return; }
 
   const choice = ev.target.closest('.gp-choice');
   if (choice && !state.answered) { handleAnswer(choice.dataset.choice); return; }

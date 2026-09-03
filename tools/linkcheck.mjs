@@ -38,6 +38,9 @@ const grades = fs.readdirSync('data/math')
 const manifest = JSON.parse(fs.readFileSync('data/manifest.json', 'utf8'));
 const testIds = new Set((manifest.tests || []).map((t) => t.id).concat('all'));
 
+const { GAMES: CHESS_GAMES } = await import('../assets/js/modules/chessgames.js');
+const chessGames = new Set(CHESS_GAMES.map((g) => g.id));
+
 const chessLessons = new Set();
 for (const n of [1, 2, 3]) {
   const file = `data/chess/level${n}.json`;
@@ -106,12 +109,15 @@ for (const [link, from] of links) {
      Phase 1 workbench. A typo here lands a child on the home page with no
      error, the same way the country game once did. */
   if (head === 'chess' && parts[1] && !open) {
-    const pages = new Set(['1', '2', '3', 'play', 'puzzles', 'games', 'board']);
+    const pages = new Set(['1', '2', '3', 'play', 'puzzles', 'games']);
     if (!pages.has(parts[1])) err(`${link} -> no chess page called "${parts[1]}"   [${where}]`);
     /* A third segment is a lesson id, and it has to be one that exists: a
        typo lands the child on the level page with nothing to say why. */
     if (parts[2] && /^[123]$/.test(parts[1]) && !chessLessons.has(parts[2])) {
       err(`${link} -> no chess lesson called "${parts[2]}"   [${where}]`);
+    }
+    if (parts[1] === 'games' && parts[2] && !chessGames.has(parts[2])) {
+      err(`${link} -> no chess game called "${parts[2]}"   [${where}]`);
     }
   }
   if (head === 'fun' && parts[1] && !open) {

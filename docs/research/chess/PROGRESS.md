@@ -84,6 +84,26 @@ Add a "Chess" room to the CurioZoo home page with three levels:
   `createBoard()` puts `.cz-cb` on the element it is given, so the board wears
   the layout class too and equal specificity means the later rule wins. The
   floor is now `.cz-cb.cz-cb` and `chesscheck` insists on it.
+- **A search that runs out of time must throw the unfinished depth away.** The
+  first version returned whatever the position looked like at the instant the
+  clock stopped, which is the score of a capture that has not been recaptured
+  yet — so the strongest bot took a pawn with a knight and lost the knight, and
+  did it more often the slower the device. Iterative deepening now keeps only
+  the last completed ply.
+- **`evaluate()` must not ask chess.js whether the game is over.**
+  `isCheckmate()` plus `isDraw()` cost about 40 microseconds and it runs at
+  every leaf. Endings are settled in the search, where the move list already
+  exists. That plus a quiescence depth cap took a depth-2 search in a crowded
+  position from 15 seconds to 4.
+- **Negating zero gives negative zero,** which is not equal to zero under
+  `Object.is`, so "this move draws" quietly became a different value from
+  "this position is level". Scores are normalised in `search()`.
+- **A test that drives a time-capped bot is a flaky test.** Whether depth 2 or
+  depth 3 completes depends on how busy the machine is. The blunder tests call
+  `search()` at a fixed depth with no clock instead.
+- **`#/chess/games/<id>` has three segments, and so does a lesson.** The back
+  link sent it "one level up" to `#/chess/games`, which is not a page. Only a
+  middle segment that is a level number is treated as a lesson.
 - The parity of a light square is `(file index + rank number) % 2 === 0`.
   Written as `=== 1` the whole board is painted in negative, which still looks
   like a chessboard and quietly ruins every lesson about bishop colours.
@@ -125,9 +145,28 @@ Add a "Chess" room to the CurioZoo home page with three levels:
       `l1-board` and `l1-rook`, played end to end in a browser.
       `chesscheck` now replays every lesson's FENs and moves through chess.js.
 
+- [x] **Phase 4 — the bots, the mini-games and a place to play.**
+      `modules/chessbot.js` (negamax + piece-square tables, iterative
+      deepening, five personalities, seeded and testable; 44 tests),
+      `workers/chessbot.worker.js`, `modules/chessgames.js` (eight variants and
+      who wins each; 27 tests) and `screens/chessplay.js`. Take-back and hint
+      are free. The bot ladder moves three games at a time. The temporary
+      `#/chess/board` workbench is gone. Mini-games are listed on the hub and
+      reachable at `#/chess/games/<id>`.
+
 ## Next step for the next model
-Start PLAN.md **Phase 4: the bot, playing and the mini-games**. The room is
-`status: 'soon'`; flip to 'live' at the end of Phase 6.
+Start PLAN.md **Phase 5: puzzles**. The room is `status: 'soon'`; flip to
+'live' at the end of Phase 6.
+
+### What the bot can and cannot do
+chess.js charges about **one millisecond per move generation**, which is the
+hard ceiling on this engine. A depth-2 search in a quiet position takes 200ms;
+in a crowded middlegame it is several seconds. So `depth` in `LEVELS` is a
+ceiling, not a promise: the search deepens a ply at a time and keeps the last
+ply that finished inside `timeMs`. In practice the top bot plays at depth 2 to
+3. That is fine — the difference a child feels between rungs is mostly
+`spread`, how willing the bot is to play a worse move — but do not expect
+strength from more depth without replacing chess.js.
 
 ### Two design notes for whoever writes the lessons
 - A lesson with `steps: []` is treated as "not written yet" everywhere

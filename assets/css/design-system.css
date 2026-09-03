@@ -3873,3 +3873,124 @@ button, a, label, summary, [role="button"] {
   .cz-lesson__card { padding: var(--gp-space-4); }
   .cz-lesson__ask { font-size: 1.05rem; }
 }
+
+
+/* ==========================================================================
+   Playing against a bot (screens/chessplay.js)
+   ========================================================================== */
+
+.cz-play {
+  display: grid;
+  gap: var(--gp-space-3);
+  justify-items: center;
+  margin-top: var(--gp-space-4);
+}
+
+/* Who is playing, above and below the board. It is the same shape both ways
+   round, because a child should be able to see at a glance that there are two
+   sides and one of them is them. */
+.cz-play__who {
+  display: flex;
+  align-items: center;
+  gap: var(--gp-space-3);
+  width: min(92vw, 34rem);
+  min-width: 352px;
+  padding: var(--gp-space-2) var(--gp-space-3);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+}
+.cz-play__name { font-weight: 800; }
+.cz-play__goal,
+.cz-play__think { font-size: .85rem; color: var(--gp-ink-soft); }
+
+/* The bot's face, from the same creature set the rooms use, so an opponent
+   looks like somebody rather than like a difficulty setting. */
+.cz-play-face { display: block; width: 2.4rem; height: 2.4rem; }
+.cz-play-face .cz-creature { width: 100%; height: 100%; }
+
+.cz-play__say { margin: 0; min-height: 1.4em; font-size: .95rem; }
+.cz-play__say.is-retry { color: var(--gp-retry); }
+.cz-play__tools { justify-content: center; }
+.cz-play__done { display: grid; gap: var(--gp-space-3); justify-items: center; text-align: center; }
+.cz-play__ladder { margin: 0; }
+
+/* ---- choosing ---- */
+
+.cz-play-games,
+.cz-play-bots {
+  display: grid;
+  gap: var(--gp-space-3);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin-top: var(--gp-space-3);
+}
+
+.cz-play-game,
+.cz-play-bot {
+  display: grid;
+  gap: 2px;
+  justify-items: start;
+  padding: var(--gp-space-4);
+  border: 2px solid var(--gp-line);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.cz-play-game.is-on,
+.cz-play-bot.is-on {
+  border-color: var(--room, var(--gp-accent));
+  background: var(--room-soft, var(--gp-accent-soft));
+}
+.cz-play-game__name,
+.cz-play-bot__name { font-weight: 800; }
+.cz-play-game__blurb,
+.cz-play-bot__blurb { font-size: .85rem; color: var(--gp-ink-soft); line-height: 1.35; }
+
+/* Which rung the ladder thinks a child is on. A suggestion, never a lock:
+   picking your own opponent is the one bit of control this screen offers. */
+.cz-play-bot__tag {
+  margin-top: var(--gp-space-1);
+  padding: 1px var(--gp-space-2);
+  border-radius: 999px;
+  background: var(--room, var(--gp-accent));
+  color: var(--gp-bg);
+  font-size: .7rem;
+  font-weight: 800;
+}
+
+.cz-play-goal {
+  margin: var(--gp-space-5) 0 var(--gp-space-4);
+  padding: var(--gp-space-3) var(--gp-space-4);
+  border-left: 3px solid var(--room, var(--gp-accent));
+  background: var(--room-soft, var(--gp-accent-soft));
+  border-radius: var(--gp-radius-sm);
+}
+
+@media (max-width: 400px) {
+  .cz-play__who { min-width: 0; width: 100%; }
+}
+
+/* The small games, listed on the hub. Deliberately plainer than the level
+   tiles: these are a shelf of things to try, not the path through the room. */
+.cz-chess-mini {
+  display: grid;
+  gap: var(--gp-space-2);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-bottom: var(--gp-space-6);
+}
+.cz-chess-mini__one {
+  display: grid;
+  gap: 2px;
+  padding: var(--gp-space-3) var(--gp-space-4);
+  border: 1px solid var(--gp-line);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  text-decoration: none;
+}
+.cz-chess-mini__one:hover,
+.cz-chess-mini__one:focus-visible { border-color: var(--room, var(--gp-accent)); }
+.cz-chess-mini__name { font-weight: 800; }
+.cz-chess-mini__blurb { font-size: .82rem; color: var(--gp-ink-soft); line-height: 1.35; }

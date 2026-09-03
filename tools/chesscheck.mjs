@@ -381,6 +381,55 @@ if (levels.length === 3 && new Set(levels.map((l) => l.hue)).size !== 3) {
 }
 
 /* ------------------------------------------------------------------ */
+/* The opponents                                                       */
+/* ------------------------------------------------------------------ */
+
+const { LEVELS } = await import('../assets/js/modules/chessbot.js');
+const { CREATURES } = await import('../assets/js/modules/sections.js');
+
+const seenCreature = new Map();
+const seenHue = new Map();
+for (const b of LEVELS) {
+  const at = `bot level ${b.level} (${b.name})`;
+  if (!CREATURES.includes(b.creature)) {
+    err(`${at}: no creature called "${b.creature}"`);
+  }
+  /* Two opponents that look alike are one opponent as far as a child is
+     concerned, and the whole point of the ladder is that they are different
+     people. */
+  if (seenCreature.has(b.creature)) {
+    err(`${at}: the same creature as ${seenCreature.get(b.creature)}`);
+  } else seenCreature.set(b.creature, b.name);
+  if (seenHue.has(b.hue)) {
+    err(`${at}: the same colour as ${seenHue.get(b.hue)}`);
+  } else seenHue.set(b.hue, b.name);
+  for (const suffix of ['', '-soft']) {
+    if (!css.includes(`--cz-${b.hue}${suffix}:`)) {
+      err(`${at}: no --cz-${b.hue}${suffix} token, so it draws colourless`);
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* The mini-games                                                      */
+/* ------------------------------------------------------------------ */
+
+const { GAMES, open: openGame } = await import('../assets/js/modules/chessgames.js');
+for (const g of GAMES) {
+  const at = `game "${g.id}"`;
+  const problem = fenProblem(g.fen);
+  if (problem) { err(`${at}: the position ${problem}`); continue; }
+  const board = openGame(g);
+  if (!board) { err(`${at}: will not load`); continue; }
+  if (board.moves().length === 0) err(`${at}: starts with nothing to move`);
+  /* A game already won before anyone touches it is not a game. */
+  const { winner } = await import('../assets/js/modules/chessgames.js');
+  if (winner(g, board) !== null) err(`${at}: is already won at move one`);
+  const hasKing = /k/i.test(g.fen.split(' ')[0]);
+  if (hasKing !== g.kings) err(`${at}: says kings:${g.kings} but its position disagrees`);
+}
+
+/* ------------------------------------------------------------------ */
 /* Credit where it is due                                              */
 /* ------------------------------------------------------------------ */
 
