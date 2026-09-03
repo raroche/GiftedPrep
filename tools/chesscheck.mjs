@@ -249,8 +249,9 @@ const drawn = (cls) => boardSrc.includes(cls)
 for (const m of new Set([...css.matchAll(/\.(cz-cb__[\w-]+)/g)].map((x) => x[1]))) {
   if (!drawn(m)) warn(`${CSS}: .${m} is styled but nothing draws it`);
 }
-/* 44px is Apple's touch target and the size a six-year-old can actually hit. */
-if (!/min-width:\s*352px/.test(css)) {
+/* 44px is Apple's touch target and the size a six-year-old can actually hit,
+   so the board's default floor is eight of them. */
+if (!/--cb-floor:\s*352px/.test(css)) {
   warn(`${CSS}: the board no longer has a 352px floor, so squares can fall under 44px`);
 }
 /* The floor has to be written at doubled specificity. createBoard() puts
@@ -258,9 +259,25 @@ if (!/min-width:\s*352px/.test(css)) {
    class as well, and a plain `.cz-cb { min-width }` loses to any `min-width: 0`
    on that class written later in the file -- which is exactly what happened,
    costing a phone a pixel per square in silence. */
-if (!/\.cz-cb\.cz-cb\s*\{[^}]*min-width:\s*352px/.test(css)) {
-  err(`${CSS}: the board's 352px floor must be written as .cz-cb.cz-cb so a `
-    + 'layout class on the same element cannot override it');
+if (!/\.cz-cb\.cz-cb\s*\{[^}]*min-width:\s*var\(--cb-floor\)/.test(css)) {
+  err(`${CSS}: the board's floor must be written as `
+    + '`.cz-cb.cz-cb { min-width: var(--cb-floor) }` so a layout class on the '
+    + 'same element cannot override it');
+}
+/* The floor is one variable because two rules need it: the width, and the
+   negative margin that centres the board on a phone. Written as two numbers
+   they had to be kept equal by hand, and a board centred against the wrong
+   number sits off to one side with no error anywhere. */
+const literal352 = [...css.matchAll(/352px/g)].length;
+if (literal352 > 1) {
+  err(`${CSS}: 352px appears ${literal352} times — the board floor must live `
+    + 'only in --cb-floor, and everything else must read that variable');
+}
+/* A screen too narrow to hold the floor has to lower it, or the whole page
+   goes wider than the phone and every screen in the app slides sideways. */
+if (!/--cb-floor:\s*calc\(100vw/.test(css)) {
+  err(`${CSS}: no narrow-screen override for --cb-floor — on a 320px phone the `
+    + 'board is wider than the screen and the whole page scrolls sideways');
 }
 
 /* ------------------------------------------------------------------ */

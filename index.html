@@ -2,6 +2,18 @@
 <html lang="en" data-theme="auto">
 <head>
 <meta charset="utf-8">
+<!-- The same policy netlify.toml and tools/serve.py send as a header, minus
+     frame-ancestors, which a meta tag cannot express and which is why the
+     header stays. It is repeated here because a header only exists where
+     there is a server: a phone wrapper serves these files itself and sends
+     none, so without this the app would run with no policy at all. That is
+     not only a security question -- style="..." attributes are silently
+     dropped under style-src 'self', and the whole app is written around
+     that, with checks that fail the build if anything sets one. A build with
+     no policy would let them work, and the phone app and the website would
+     quietly stop behaving the same way. tools/cspcheck.mjs holds all three
+     copies to the same policy. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'">
 <title>CurioZoo — a place for curious kids</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="A free, no-login place for curious kids to spend screen time well: real mathematics, thinking games, and practice for gifted screening tests. No ads, no tracking, made for the iPad.">

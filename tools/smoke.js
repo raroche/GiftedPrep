@@ -126,8 +126,14 @@
       document.querySelectorAll('.cz-chess-lesson').length >= 10,
       `${document.querySelectorAll('.cz-chess-lesson').length} cards`);
 
-    /* A written lesson: the board has to draw and the step has to be answerable. */
-    location.hash = '#/chess/1/l1-rook';
+    /* A written lesson: the board has to draw and the step has to be answerable.
+
+       It has to be the FIRST lesson. Lessons unlock one at a time, and this
+       runs on whatever profile the browser happens to have -- usually an empty
+       one. Pointing this at the second lesson passed for weeks on a profile
+       with progress in it and then failed five checks the first time it ran
+       clean, which read exactly like a broken board. */
+    location.hash = '#/chess/1/l1-board';
     await wait(1500);
     const board = document.querySelector('.cz-cb');
     check('chess: the lesson board is drawn', !!board && vis(board));
@@ -208,7 +214,7 @@
     ['#/fun/flags/learn', '#/fun/flags'],
     ['#/chess', '#/home'],
     ['#/chess/1', '#/chess'],
-    ['#/chess/1/l1-rook', '#/chess/1'],
+    ['#/chess/1/l1-board', '#/chess/1'],
     ['#/chess/play', '#/chess'],
     ['#/chess/puzzles', '#/chess'],
     ['#/chess/games/pawnwars', '#/chess']

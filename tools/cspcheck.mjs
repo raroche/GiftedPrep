@@ -27,9 +27,18 @@ import fs from 'node:fs';
 const errors = [];
 const err = (m) => errors.push(m);
 
+/* `frame-ancestors` is header-only: a meta tag carrying it is ignored, and
+   the browser logs a warning. So it is the one directive a meta copy is
+   allowed to be missing, and the only one. */
+const HEADER_ONLY = ['frame-ancestors'];
+
 const SOURCES = [
   { file: 'netlify.toml', what: 'the deployed site' },
-  { file: 'tools/serve.py', what: 'the local server' }
+  { file: 'tools/serve.py', what: 'the local server' },
+  /* The copy that travels with the file, for anywhere that serves these files
+     without a server of its own -- a phone wrapper, an offline copy, a static
+     host that drops headers. See the comment beside it in index.html. */
+  { file: 'index.html', what: 'a build with no server', meta: true }
 ];
 
 /**
@@ -94,22 +103,39 @@ const found = SOURCES.map((s) => {
   return policy ? { ...s, policy, map: directives(policy) } : null;
 }).filter(Boolean);
 
-if (found.length === SOURCES.length) {
-  const [a, b] = found;
-  const names = new Set([...a.map.keys(), ...b.map.keys()]);
+/* Compare every copy against the first, which is the one the live site sends. */
+const [first, ...rest] = found;
+for (const other of rest) {
+  const names = new Set([...first.map.keys(), ...other.map.keys()]);
   for (const name of [...names].sort()) {
-    const left = a.map.get(name);
-    const right = b.map.get(name);
+    const left = first.map.get(name);
+    const right = other.map.get(name);
+    /* A meta copy may omit what a meta tag cannot carry, and only that. It may
+       never carry it: a frame-ancestors in a meta tag reads as protection and
+       is ignored.
+
+       This has to come BEFORE the "they are the same, move on" shortcut. With
+       the shortcut first, a meta tag that copied frame-ancestors verbatim from
+       the header matched it exactly and was waved through -- the one case this
+       branch exists to catch was the one case it could not see. */
+    if (other.meta && HEADER_ONLY.includes(name)) {
+      if (right !== undefined) {
+        err(`${other.file}: ${name} cannot be set in a meta tag — browsers `
+          + 'ignore it, so it reads as protection that is not there');
+      }
+      continue;
+    }
     if (left === right) continue;
     if (left === undefined) {
-      err(`${name} is set for ${b.what} (${b.file}) but not for ${a.what} `
-        + `(${a.file}) — the two must match or local work stops predicting production`);
+      err(`${name} is set for ${other.what} (${other.file}) but not for `
+        + `${first.what} (${first.file}) — every copy must match`);
     } else if (right === undefined) {
-      err(`${name} is set for ${a.what} (${a.file}) but not for ${b.what} `
-        + `(${b.file}) — the two must match or local work stops predicting production`);
+      err(`${name} is set for ${first.what} (${first.file}) but not for `
+        + `${other.what} (${other.file}) — every copy must match, or a build `
+        + 'served without that copy quietly runs under a different policy');
     } else {
-      err(`${name} differs: ${a.file} says "${name} ${left}" and ${b.file} `
-        + `says "${name} ${right}"`);
+      err(`${name} differs: ${first.file} says "${name} ${left}" and `
+        + `${other.file} says "${name} ${right}"`);
     }
   }
 }
@@ -129,6 +155,7 @@ const MUST = [
 ];
 for (const source of found) {
   for (const [name, want, why] of MUST) {
+    if (source.meta && HEADER_ONLY.includes(name)) continue;
     const got = source.map.get(name);
     if (got === undefined) {
       err(`${source.file}: ${name} is missing — ${why}`);
@@ -145,8 +172,8 @@ for (const source of found) {
 /* ------------------------------------------------------------------ */
 
 if (found.length) {
-  console.log(`${found.length} copies of the policy, `
-    + `${found[0].map.size} directives each`);
+  console.log(`${found.length} copies of the policy: `
+    + found.map((f) => `${f.file} (${f.map.size})`).join(', '));
 }
 if (errors.length) {
   console.log(`\nERRORS (${errors.length}):`);

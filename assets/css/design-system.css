@@ -228,6 +228,14 @@
   --gp-leading-snug:  1.4;
   --gp-leading-body:  1.65;
 
+  /* --- The chess board's smallest width -------------------------------- */
+  /* Eight squares of 44px, Apple's touch target and the size a six-year-old
+     can actually hit. It lives up here rather than on .cz-cb because the bar
+     that names the two players has to be exactly as wide as the board, and a
+     variable on the board itself cannot be read by its sibling. Written as two
+     numbers they had to be kept equal by hand. */
+  --cb-floor: 352px;
+
   /* --- Space (4px base) ----------------------------------------------- */
   --gp-space-1:  0.25rem;
   --gp-space-2:  0.5rem;
@@ -638,6 +646,11 @@ button, a, label, summary, [role="button"] {
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
+  /* A button may never be wider than what holds it. Without this a long label
+     -- "Parent guide: what the scores mean, and how to read them" -- pushed
+     the whole page 80px wider than a 375px phone, so every page below it
+     scrolled sideways while looking perfectly fine on a laptop. */
+  max-width: 100%;
   transition: transform var(--gp-dur-fast) var(--gp-ease),
               background-color var(--gp-dur-fast) var(--gp-ease),
               border-color var(--gp-dur-fast) var(--gp-ease),
@@ -702,6 +715,12 @@ button, a, label, summary, [role="button"] {
   .gp-topbar .gp-btn--quiet { width: 48px; padding: 0; }
 }
 @media (max-width: 560px) {
+  /* Long labels wrap rather than run off the side of the phone. Short ones are
+     unaffected: `normal` only breaks a line that does not fit, so "Next" and
+     "Start" stay on one line exactly as before. The top bar keeps nowrap --
+     its labels are already hidden at this width and its chips must not grow
+     a second line. */
+  .gp-btn:not(.gp-topbar .gp-btn) { white-space: normal; }
   .gp-topbar { padding-inline: var(--gp-space-3); gap: var(--gp-space-1); }
   .gp-brand__name { display: none; }
   .gp-topbar__left, .gp-topbar__right { gap: var(--gp-space-1); }
@@ -1635,6 +1654,22 @@ button, a, label, summary, [role="button"] {
 .gp-crumb { margin-bottom: var(--gp-space-2); font-size: var(--gp-text-sm); }
 .gp-crumb a { color: var(--gp-ink-soft); text-decoration: none; font-weight: 600; }
 .gp-crumb a:hover { color: var(--gp-ink); text-decoration: underline; }
+/* The crumb is small text, and small text is a small target: 18px tall is a
+   fiddly thing for a six-year-old to hit with a finger. On a phone it gets
+   padding until it is comfortably past 44px.
+
+   It takes the space rather than borrowing it back with a negative margin.
+   That was tried: the enlarged box then reached to within 3px of the back
+   link above it and lapped 5px over the title below, so a tap meant for
+   either could follow the crumb instead. Trading a couple of dozen pixels of
+   height for two controls that cannot be hit by accident is the better deal
+   on the one screen where it matters. */
+@media (max-width: 560px) {
+  .gp-crumb a {
+    display: inline-block;
+    padding-block: var(--gp-space-3);
+  }
+}
 
 .gp-grid--topics {
   display: grid;
@@ -3441,7 +3476,7 @@ button, a, label, summary, [role="button"] {
    `min-width: 0` on that class, written later in this file, beat the floor on
    equal specificity and quietly cost a phone a pixel per square. One extra
    class makes the floor win without anyone having to remember it exists. */
-.cz-cb.cz-cb { min-width: 352px; }
+.cz-cb.cz-cb { min-width: var(--cb-floor); }
 
 .cz-cb__svg {
   display: block;
@@ -3577,13 +3612,24 @@ button, a, label, summary, [role="button"] {
   font: inherit;
 }
 
-/* On a phone the 352px floor makes the board wider than the padded column it
+/* On a phone the floor makes the board wider than the padded column it
    sits in, and auto margins collapse to zero the moment a box overflows its
    parent -- so the board sat against the right edge with a 20px gutter on the
    left and 3px on the right. Pulling it out by half the overflow puts it back
    in the middle of the SCREEN, which is where a board belongs. */
 @media (max-width: 400px) {
-  .cz-cb { margin-inline: calc((100% - 352px) / 2); }
+  .cz-cb { margin-inline: calc((100% - var(--cb-floor)) / 2); }
+}
+
+/* On a phone too narrow to hold the floor at all -- an SE-sized 320px screen
+   -- the floor has to give way, because the alternative is worse. Holding 352
+   there made the whole PAGE 16px wider than the screen, so every screen in the
+   app slid sideways under a finger, and the board still could not be seen
+   whole. Squares drop to about 39px, which is under Apple's 44 but is still a
+   large, forgiving target for a drag, and the board fits. Nothing above this
+   width changes. */
+@media (max-width: 372px) {
+  :root { --cb-floor: calc(100vw - 8px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3900,7 +3946,7 @@ button, a, label, summary, [role="button"] {
   align-items: center;
   gap: var(--gp-space-3);
   width: min(92vw, 34rem);
-  min-width: 352px;
+  min-width: var(--cb-floor);
   padding: var(--gp-space-2) var(--gp-space-3);
   border-radius: var(--gp-radius-lg);
   background: var(--gp-surface);
