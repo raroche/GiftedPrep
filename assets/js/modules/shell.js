@@ -64,6 +64,10 @@ export const state = {
     setup: { count: 10, mode: 'random', continents: [], pick: 'choice' },
     round: null
   },
+  /* Chess Club. `board` and `game` are the live board and the rules object
+     for whatever screen is showing; both are torn down on the way out, since
+     a board left behind keeps its pointer listeners. */
+  chess: { board: null, game: null, level: null, lesson: null, run: null },
   math: { data: null, topic: null, index: 0, done: {}, collected: new Set(), built: new Set(), painted: {}, settled: false, hanoi: null, builtTotal: 0, crossed: new Set(), shift: 0, nim: null, doors: null }
 };
 

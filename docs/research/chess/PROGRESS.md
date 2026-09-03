@@ -46,6 +46,22 @@ Add a "Chess" room to the CurioZoo home page with three levels:
   not the whole file: the module's own header comment contains example markup
   (`fill="#fff"`, `style="fill:#fff"`) and a naive replace hits the comment
   instead of the drawing, so the checker looks broken when it is fine.
+- **A checker that only does `includes()` passes when it should not.** Two of
+  the board checks were written that way and both failed to fire: the import
+  line alone satisfied a search for `ensurePieceDefs`, and `.cz-cb__dot--take`
+  still matched after being renamed to `.cz-cb__dot--taken`. Always break the
+  file on purpose and watch the checker fail before believing it works.
+- **`requestAnimationFrame` never fires in a hidden tab.** The board used it to
+  take a "do not animate" class off after the first paint; built in a
+  background tab, the pieces stayed frozen for good. Use a forced reflow
+  (`void el.getBoundingClientRect()`) inside the same task instead.
+- **A new element does not transition.** Redrawing a move as "delete both
+  squares, create a new piece" meant the CSS transition on `.cz-cb__piece`
+  existed and never once ran. `pairMovers()` matches each arriving piece to a
+  departing one of the same kind so the node survives the move and slides.
+- The parity of a light square is `(file index + rank number) % 2 === 0`.
+  Written as `=== 1` the whole board is painted in negative, which still looks
+  like a chessboard and quietly ruins every lesson about bishop colours.
 
 ## Phases done
 - [x] **Phase 0 — foundations.** chess.js 1.4.0 vendored at `assets/js/vendor/chess.js`
@@ -55,9 +71,21 @@ Add a "Chess" room to the CurioZoo home page with three levels:
       `data/chess/`, `data/chess/puzzles/` and `assets/js/workers/` created.
       Verified in a real browser under the production CSP: all 12 pieces draw.
 
+- [x] **Phase 1 — the board.** `assets/js/modules/chesssquares.js` (pure square
+      maths, 33 tests) and `assets/js/modules/chessboard.js` (the SVG board).
+      Tap-to-move, drag, promotion picker, flip, last-move/dots/stars/check/
+      ring/arrow marks, coordinates, and a 64-button accessible grid with a
+      roving tab stop and an aria-live move announcer. Board CSS is under
+      `.cz-cb*` in design-system.css. `tools/chesscheck.mjs` now also guards the
+      board. A workbench route `#/chess/board` renders a free-play board; **it
+      is temporary and Phase 4 must delete it** along with `#gp-chess-board`,
+      `#gp-chess-tools` in index.html and `chessAction` in screens/chess.js.
+      Verified in a real browser under the production CSP: tap, drag,
+      underpromotion, flip, keyboard grid, light and dark, 375px and 768px.
+
 ## Next step for the next model
-Start PLAN.md **Phase 1: the board**. The room is `status: 'soon'`; flip to 'live'
-at the end of Phase 6.
+Start PLAN.md **Phase 2: progress and the hub**. The room is `status: 'soon'`;
+flip to 'live' at the end of Phase 6.
 
 ## Files in this folder
 - 01-pedagogy.md    how kids are taught chess, what engages them

@@ -2,9 +2,9 @@
 /**
  * Check everything the Chess Club depends on.
  *
- * It grows one section per phase of docs/research/chess/PLAN.md. Right now it
- * covers the two things Phase 0 shipped, both of which fail silently rather
- * than loudly if they break:
+ * It grows one section per phase of docs/research/chess/PLAN.md. Almost
+ * everything it looks for is a failure that is SILENT — no exception, no
+ * console line, just a page that is quietly wrong:
  *
  *   A style attribute on a piece. The site sends style-src 'self' with no
  *   unsafe-inline, so the browser DELETES style="fill:#fff" without a word.
@@ -17,8 +17,14 @@
  *   nothing and throws nothing. An empty board looks exactly like a board
  *   that has not loaded yet.
  *
- * Both are checked by reading the module rather than by trusting it, because
- * the module is generated from downloaded files and will be regenerated.
+ *   A board mark with no CSS rule. An unstyled <circle> is black on a brown
+ *   square and reads as a smudge rather than "you may move here".
+ *
+ *   The accessible grid quietly disappearing in a refactor. Nothing on screen
+ *   changes; the board simply stops being playable without a mouse.
+ *
+ * All of it is checked by READING the source rather than trusting it, because
+ * chesspieces.js is generated from downloaded files and will be regenerated.
  */
 
 import fs from 'node:fs';
@@ -128,6 +134,84 @@ else {
     err(`${VENDOR}: king-less boards no longer load with skipValidation (${e.message}); `
       + 'Pawn Wars and Capture the Flag depend on it');
   }
+}
+
+/* ------------------------------------------------------------------ */
+/* The board                                                           */
+/* ------------------------------------------------------------------ */
+
+const BOARD_SRC = 'assets/js/modules/chessboard.js';
+const SQUARES_SRC = 'assets/js/modules/chesssquares.js';
+if (!fs.existsSync(SQUARES_SRC)) err(`${SQUARES_SRC} is missing`);
+else {
+  /* The pure half must stay pure, or it stops being testable in node and
+     starts throwing in the worker and in the lesson checker. */
+  const squares = fs.readFileSync(SQUARES_SRC, 'utf8');
+  if (/\bdocument\b|\bwindow\b|createElementNS/.test(squares)) {
+    err(`${SQUARES_SRC} touches the DOM. It is the half that runs in node; `
+      + 'drawing belongs in chessboard.js.');
+  }
+}
+if (!fs.existsSync(BOARD_SRC)) err(`${BOARD_SRC} is missing`);
+else {
+  const board = fs.readFileSync(BOARD_SRC, 'utf8');
+  /* The same policy trap as the pieces, one level up: a piece positioned
+     through a style attribute lands on a1 and stays there. */
+  if (/\.style\.(cssText|transform)\s*=/.test(board) || /setAttribute\(\s*'style'/.test(board)) {
+    err(`${BOARD_SRC}: sets a style attribute or cssText, which CSP drops. `
+      + 'Position pieces with the transform ATTRIBUTE instead.');
+  }
+  /* Without this the pieces are <use> elements pointing at nothing: SVG draws
+     an empty board and reports no error at all. Checked as a CALL, not a
+     mention -- the import line alone satisfied `includes()` and the check
+     passed with the call deleted. */
+  if (!/ensurePieceDefs\s*\(/.test(board.replace(/^import[^;]+;$/gm, ''))) {
+    err(`${BOARD_SRC}: never calls ensurePieceDefs, so every <use> points at `
+      + 'a missing symbol and the board draws empty with no error');
+  }
+  /* The accessible half is the only way the board can be played without a
+     mouse, and it is the sort of thing a refactor quietly drops. */
+  for (const [needle, why] of [
+    ["role', 'grid'", 'the board must expose a real grid to a screen reader'],
+    ["aria-live", 'moves must be announced'],
+    ['tabIndex', 'the grid needs a roving tab stop, not 64 of them']
+  ]) {
+    if (!board.includes(needle)) err(`${BOARD_SRC}: no ${needle} — ${why}`);
+  }
+}
+
+const CSS = 'assets/css/design-system.css';
+const css = fs.readFileSync(CSS, 'utf8');
+/* Every class the board draws has to exist, or the mark is invisible: an
+   unstyled <circle> is black on a brown square and reads as a smudge.
+
+   The name has to END where the class ends. A plain substring search passes
+   when .cz-cb__dot--take has been renamed to .cz-cb__dot--taken, which is
+   exactly the sort of rename that loses a rule. */
+const hasClass = (cls) =>
+  new RegExp(`\\.${cls.replace(/[-]/g, '\\-')}(?![\\w-])`).test(css);
+for (const cls of ['cz-cb', 'cz-cb__sq--light', 'cz-cb__sq--dark', 'cz-cb__piece',
+  'cz-cb__dot', 'cz-cb__dot--take', 'cz-cb__star', 'cz-cb__check', 'cz-cb__ring',
+  'cz-cb__arrow', 'cz-cb__last', 'cz-cb__select', 'cz-cb__coord',
+  'cz-cb__promocell', 'cz-cb__promoveil', 'cz-cb__live', 'cz-cb__grid']) {
+  if (!hasClass(cls)) err(`${CSS}: no .${cls} rule; that mark draws unstyled`);
+}
+
+/* And the other way: a class in the stylesheet that nothing draws is dead
+   weight, or worse, evidence of a rename that only got half done.
+
+   Modifiers are often built rather than written -- `cz-cb__sq--${light ? ...}`
+   never appears whole in the source -- so a modifier counts as drawn when its
+   stem is drawn. */
+const boardSrc = fs.existsSync(BOARD_SRC) ? fs.readFileSync(BOARD_SRC, 'utf8') : '';
+const drawn = (cls) => boardSrc.includes(cls)
+  || (cls.includes('--') && boardSrc.includes(cls.split('--')[0]));
+for (const m of new Set([...css.matchAll(/\.(cz-cb__[\w-]+)/g)].map((x) => x[1]))) {
+  if (!drawn(m)) warn(`${CSS}: .${m} is styled but nothing draws it`);
+}
+/* 44px is Apple's touch target and the size a six-year-old can actually hit. */
+if (!/min-width:\s*352px/.test(css)) {
+  warn(`${CSS}: the board no longer has a 352px floor, so squares can fall under 44px`);
 }
 
 /* ------------------------------------------------------------------ */

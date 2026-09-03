@@ -28,7 +28,7 @@ import { answerAngle, drawAngSetup, nextAngle, startAngRound, answerElement, dra
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
-import { renderChess } from './screens/chess.js';
+import { renderChess, chessAction } from './screens/chess.js';
 import { renderLearn, renderElemLearn, renderAngleLearn, paintAngTurn, paintAngTrap, paintAngClock, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
 import { backTarget } from './modules/routes.js';
 
@@ -355,6 +355,7 @@ function onClick(ev) {
 
   const action = ev.target.closest('[data-action]');
   if (!action) return;
+  if (action.dataset.action.startsWith('chess-')) { chessAction(action.dataset.action); return; }
   switch (action.dataset.action) {
     case 'leave-quiz':
       leaveQuiz();

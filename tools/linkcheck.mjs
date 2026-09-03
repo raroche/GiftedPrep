@@ -95,6 +95,13 @@ for (const [link, from] of links) {
   if (head === 'categories' && parts[1] && !open && !testIds.has(parts[1])) {
     err(`${link} -> "${parts[1]}" is not a test id   [${where}]`);
   }
+  /* The chess room's second segment is a level number, a fixed page, or the
+     Phase 1 workbench. A typo here lands a child on the home page with no
+     error, the same way the country game once did. */
+  if (head === 'chess' && parts[1] && !open) {
+    const pages = new Set(['1', '2', '3', 'play', 'puzzles', 'games', 'board']);
+    if (!pages.has(parts[1])) err(`${link} -> no chess page called "${parts[1]}"   [${where}]`);
+  }
   if (head === 'fun' && parts[1] && !open) {
     const games = new Set(['flags', 'shapes', 'capitals', 'elements', 'angles']);
     if (!games.has(parts[1])) err(`${link} -> no game called "${parts[1]}"   [${where}]`);

@@ -3398,3 +3398,182 @@ button, a, label, summary, [role="button"] {
   font-size: .88rem;
   line-height: 1.45;
 }
+
+
+/* ==========================================================================
+   The chess board (modules/chessboard.js)
+
+   One SVG on an 8x8 grid. Everything here is a class, because the site sends
+   style-src 'self' and a style attribute would be dropped without a word --
+   the board would draw thirty-two pieces stacked on one square.
+
+   The board's two colours are tokens rather than literals so a "board theme"
+   earned with stars is a class on the wrapper and nothing else.
+   ========================================================================== */
+
+.cz-cb {
+  --cb-light: #EFD8B4;
+  --cb-dark:  #B07C4F;
+  /* Wong's colourblind-safe pair. Blue says "this is yours / this happened",
+     orange says "you may go here". They stay distinct under deuteranopia and
+     protanopia, and each mark also has its own SHAPE, so colour is never the
+     only thing carrying the meaning. */
+  --cb-mine:  #0072B2;
+  --cb-go:    #E69F00;
+  --cb-danger:#D55E00;
+
+  position: relative;
+  width: min(92vw, 62vh, 34rem);
+  /* 44px per square is Apple's touch target and the size a six-year-old can
+     actually hit; below this the board is a puzzle of a different kind. */
+  min-width: 352px;
+  margin-inline: auto;
+  touch-action: none;          /* a drag must not scroll the page instead */
+}
+
+.cz-cb__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--gp-radius-md);
+  overflow: visible;           /* the check ring reaches past its square */
+  box-shadow: var(--gp-shadow-sm);
+}
+
+.cz-cb__sq--light { fill: var(--cb-light); }
+.cz-cb__sq--dark  { fill: var(--cb-dark); }
+
+/* Each coordinate is painted in the colour of the opposite square, so it is
+   readable wherever it lands. A single fixed colour hides half of them, which
+   is exactly what happened first time: only 8, 6, 4 and 2 could be seen. */
+.cz-cb__coord {
+  font-size: .21px;
+  font-weight: 700;
+  font-family: var(--gp-font);
+  opacity: .8;
+  pointer-events: none;
+  user-select: none;
+}
+.cz-cb__coord.is-on-light { fill: var(--cb-dark); }
+.cz-cb__coord.is-on-dark  { fill: var(--cb-light); }
+.cz-cb__coord--file { text-anchor: end; }
+
+/* Pieces are moved with a transform ATTRIBUTE, which CSS may still animate:
+   a presentation attribute is a CSS declaration of the lowest priority, so
+   the transition below applies to it. Setting a style attribute instead would
+   be silently discarded by the policy. */
+.cz-cb__piece {
+  transition: transform .18s ease-out;
+  cursor: grab;
+  /* Without this the transform is measured from the viewBox origin and every
+     piece flies in from the corner. */
+  transform-box: view-box;
+}
+/* Turning the board round is not a move: every piece must jump, not swim.
+   Set on the wrapper for one synchronous reflow, never across a frame -- a
+   hidden tab runs no animation frames, and a frame-based version left the
+   pieces permanently frozen if the board was built in the background. */
+.cz-cb.is-still .cz-cb__piece { transition: none; }
+.cz-cb__piece.is-dragging {
+  transition: none;
+  cursor: grabbing;
+  filter: drop-shadow(0 .06px .1px rgb(0 0 0 / .45));
+  pointer-events: none;        /* the square underneath must receive the drop */
+}
+.cz-cb.is-locked .cz-cb__piece { cursor: default; }
+
+/* Where the last move came from and went to. A wash rather than an outline,
+   so a piece standing on it is still perfectly readable. */
+.cz-cb__last   { fill: var(--cb-mine); opacity: .36; }
+/* The piece in your hand: a filled square, the strongest mark on the board. */
+.cz-cb__select { fill: var(--cb-mine); opacity: .45; }
+
+/* Somewhere you may go. A dot on an empty square, a ring around a piece you
+   may take -- a dot under a piece cannot be seen, and "you can take that" is
+   the single most useful thing to show a beginner. */
+.cz-cb__dot { fill: var(--cb-go); opacity: .85; }
+.cz-cb__dot--take {
+  fill: none;
+  stroke: var(--cb-go);
+  stroke-width: .1;
+  opacity: .95;
+}
+
+/* A star to collect. Same orange as the dots: both mean "go here". */
+.cz-cb__star { fill: var(--cb-go); stroke: #6B4A00; stroke-width: .03; }
+
+/* The king is in check. The only red on the board, and the only circle. */
+.cz-cb__check {
+  fill: none;
+  stroke: var(--cb-danger);
+  stroke-width: .09;
+  opacity: .95;
+}
+
+/* "Look here" -- a lesson pointing at a square without claiming anything
+   about moves. A dashed outline, so it reads as annotation. */
+.cz-cb__ring {
+  fill: none;
+  stroke: var(--cb-mine);
+  stroke-width: .07;
+  stroke-dasharray: .16 .12;
+  opacity: .9;
+}
+
+.cz-cb__arrow {
+  stroke: var(--cb-mine);
+  stroke-width: .12;
+  stroke-linecap: round;
+  opacity: .8;
+}
+.cz-cb__arrowhead { fill: var(--cb-mine); opacity: .8; }
+
+/* Promotion. The board dims and four big pieces come up in the pawn's file. */
+.cz-cb__promoveil { fill: rgb(0 0 0 / .55); }
+.cz-cb__promocell { fill: var(--gp-bg); stroke: var(--cb-mine); stroke-width: .04; }
+.cz-cb__promopick { cursor: pointer; }
+.cz-cb__promopick:hover .cz-cb__promocell { fill: var(--cb-go); }
+
+/* Where each move is announced. It must never be visible: it repeats what the
+   board already shows, and a sighted child reading "White plays Nxe5" twice is
+   noise. It carries its own hiding rather than leaning only on .gp-sr-only,
+   because a live region that becomes visible is a bug nobody tests for. */
+.cz-cb__live {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The accessible board: 64 real buttons, off-screen but focusable, so the
+   game can be played with a keyboard and heard by a screen reader. It uses
+   .gp-sr-only for the hiding; this only puts the focus ring back where a
+   sighted keyboard user can see which square they are on. */
+.cz-cb__grid button:focus-visible {
+  position: fixed;
+  inset-block-start: var(--gp-space-2);
+  inset-inline-start: var(--gp-space-2);
+  z-index: 50;
+  width: auto; height: auto;
+  clip: auto; clip-path: none;
+  padding: var(--gp-space-2) var(--gp-space-3);
+  border: 2px solid var(--gp-accent);
+  border-radius: var(--gp-radius-sm);
+  background: var(--gp-bg);
+  color: var(--gp-ink);
+  font: inherit;
+}
+
+/* On a phone the 352px floor makes the board wider than the padded column it
+   sits in, and auto margins collapse to zero the moment a box overflows its
+   parent -- so the board sat against the right edge with a 20px gutter on the
+   left and 3px on the right. Pulling it out by half the overflow puts it back
+   in the middle of the SCREEN, which is where a board belongs. */
+@media (max-width: 400px) {
+  .cz-cb { margin-inline: calc((100% - 352px) / 2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cz-cb__piece { transition: none; }
+}
