@@ -461,14 +461,6 @@ for (const theme of THEMES) {
   puzzleTotal += list.length;
 
   const ids = new Set();
-  /* Checking every puzzle in every theme is thousands of positions and a slow
-     build. A sample catches a broken exporter, which is the failure that
-     actually happens; a single bad row is not worth the minute. */
-  const sample = list.length <= 40 ? list : [
-    ...list.slice(0, 15),
-    ...list.slice(Math.floor(list.length / 2), Math.floor(list.length / 2) + 10),
-    ...list.slice(-15)
-  ];
 
   let longest = 0;
   let lowest = Infinity;
@@ -491,7 +483,11 @@ for (const theme of THEMES) {
       + 'where a child starts');
   }
 
-  for (const puz of sample) {
+  /* Every puzzle, not a sample. This started as a sample on the assumption
+     that replaying thousands of positions would be slow; it takes under a
+     second for all 3,250, and a sample would have shipped a bad row without
+     anyone knowing. */
+  for (const puz of list) {
     const where = `${file} puzzle ${puz.id}`;
     for (const key of ['id', 'fen', 'moves', 'r']) {
       if (puz[key] === undefined) err(`${where}: missing "${key}"`);
@@ -522,6 +518,64 @@ for (const theme of THEMES) {
     const ready = prepare(puz);
     if (!ready) err(`${where}: will not prepare`);
   }
+}
+
+/* What the puzzle files were built from. Without it the data is reproducible
+   in principle and nobody can tell you from what. */
+const MANIFEST = 'data/chess/puzzles/manifest.json';
+if (!fs.existsSync(MANIFEST)) {
+  warn(`${MANIFEST} is missing; re-run tools/build_puzzles.mjs`);
+} else {
+  let man;
+  try { man = JSON.parse(fs.readFileSync(MANIFEST, 'utf8')); } catch (e) { err(`${MANIFEST}: ${e.message}`); }
+  if (man) {
+    for (const key of ['source', 'licence', 'builtAt', 'filters', 'themes', 'rows', 'unique']) {
+      if (man[key] === undefined) err(`${MANIFEST}: missing "${key}"`);
+    }
+    /* A manifest that has drifted from the files is worse than none: it says
+       with confidence where data came from that it did not come from. */
+    if (man.rows !== undefined && man.rows !== puzzleTotal) {
+      err(`${MANIFEST} says ${man.rows} puzzles but the files hold ${puzzleTotal}. `
+        + 'Re-run tools/build_puzzles.mjs.');
+    }
+    for (const [theme, n] of Object.entries(man.themes || {})) {
+      const file = `data/chess/puzzles/${theme}.json`;
+      if (!fs.existsSync(file)) { err(`${MANIFEST} lists ${theme}, which has no file`); continue; }
+      const have = JSON.parse(fs.readFileSync(file, 'utf8')).length;
+      if (have !== n) err(`${MANIFEST} says ${theme} has ${n} puzzles; it has ${have}`);
+    }
+  }
+}
+
+/* A child must never meet an old puzzle while new ones remain, which means
+   the record has to be able to remember the entire library. */
+const { MAX_SEEN } = await import('../assets/js/modules/chessprogress.js');
+const uniquePuzzles = new Set();
+for (const theme of THEMES) {
+  const file = `data/chess/puzzles/${theme.id}.json`;
+  if (!fs.existsSync(file)) continue;
+  try {
+    for (const p of JSON.parse(fs.readFileSync(file, 'utf8'))) uniquePuzzles.add(p.id);
+  } catch { /* already reported above */ }
+}
+/* Every puzzle should also carry its own rating deviation, or the Glicko
+   maths falls back to a made-up number for it. */
+for (const theme of THEMES) {
+  const file = `data/chess/puzzles/${theme.id}.json`;
+  if (!fs.existsSync(file)) continue;
+  try {
+    const list = JSON.parse(fs.readFileSync(file, 'utf8'));
+    const missing = list.filter((p) => typeof p.rd !== 'number').length;
+    if (missing) {
+      err(`${file}: ${missing} puzzles have no rating deviation, so the rating `
+        + 'has to guess one. Re-run tools/build_puzzles.mjs.');
+    }
+  } catch { /* already reported */ }
+}
+if (uniquePuzzles.size > MAX_SEEN) {
+  err(`the puzzle library holds ${uniquePuzzles.size} puzzles but a child's record `
+    + `only remembers ${MAX_SEEN} of them, so old ones will come back round `
+    + 'while new ones are still unseen. Raise MAX_SEEN in chessprogress.js.');
 }
 
 /* ------------------------------------------------------------------ */

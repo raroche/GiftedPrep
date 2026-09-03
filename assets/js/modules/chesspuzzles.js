@@ -80,9 +80,13 @@ export const forget = () => cache.clear();
 /**
  * `count` puzzles a child has not seen, as near their own rating as possible.
  *
- * Near, not below. A set that is always slightly easy teaches a child that
- * the number on the screen is a lie. Unseen ones come first and, when they
- * run out, the least recently seen — running out must not end the theme.
+ * Near, not below. A set that is always slightly easy teaches a child that the
+ * number on the screen is a lie.
+ *
+ * Every unseen puzzle is used before any repeat. That sounds obvious and the
+ * first version did not do it: with three unseen left and five wanted it gave
+ * up on freshness entirely and served five a child had already done. Repeats
+ * now only ever fill the slots that are left over.
  */
 export function pick(list, progress, count = SESSION, within = 150) {
   if (!Array.isArray(list) || !list.length) return [];
@@ -90,9 +94,21 @@ export function pick(list, progress, count = SESSION, within = 150) {
   const target = (progress && progress.puzzles && progress.puzzles.r) || 800;
 
   const fresh = list.filter((p) => !seen.has(p.id));
-  const pool = fresh.length >= count ? fresh : list;
+  const chosen = takeNear(fresh, target, count, within);
+  if (chosen.length >= count) return chosen;
 
-  const byCloseness = [...pool].sort((a, b) =>
+  /* Not enough new ones. Top up from the rest rather than ending the theme --
+     a child who has worked through every fork puzzle should still be able to
+     do fork puzzles. */
+  const taken = new Set(chosen.map((p) => p.id));
+  const rest = list.filter((p) => !taken.has(p.id));
+  return chosen.concat(takeNear(rest, target, count - chosen.length, within));
+}
+
+/** The `count` puzzles closest to `target`, preferring a spread inside `within`. */
+function takeNear(list, target, count, within) {
+  if (count <= 0 || !list.length) return [];
+  const byCloseness = [...list].sort((a, b) =>
     Math.abs(a.r - target) - Math.abs(b.r - target));
 
   const inRange = byCloseness.filter((p) => Math.abs(p.r - target) <= within);
@@ -130,17 +146,37 @@ function shuffle(list) {
 export function prepare(puzzle) {
   if (!puzzle || !Array.isArray(puzzle.moves) || puzzle.moves.length < 2) return null;
   const [setupMove, ...solution] = puzzle.moves;
-  return { id: puzzle.id, fen: puzzle.fen, rating: puzzle.r, setupMove, solution };
+  return {
+    id: puzzle.id,
+    fen: puzzle.fen,
+    rating: puzzle.r,
+    /* Carried through to the rating, which is Glicko-2 and wants how sure the
+       database is about this puzzle, not just how hard it says it is. */
+    rd: puzzle.rd,
+    setupMove,
+    solution
+  };
 }
 
-/** Is this the move the puzzle wanted, at this point in the solution? */
+/**
+ * Is this the move the puzzle recorded, at this point in the solution?
+ *
+ * The promotion piece has to match exactly. It once did not, on the reasoning
+ * that "the tactic is the same either way", which is simply untrue: a queen
+ * and a knight are different pieces and lead to different positions. In eight
+ * of the shipped puzzles, accepting the wrong one makes the opponent's next
+ * recorded reply illegal — so the board and the solution quietly part company
+ * and the screen carries on as though the child had solved it.
+ *
+ * A child who underpromotes and delivers checkmate is still right, of course.
+ * That is not this function's business: see `isMate` in the screen, which ends
+ * any puzzle the moment the opponent's king is mated, whatever the record says.
+ */
 export function isRight(prepared, at, uci) {
   if (!prepared || !uci) return false;
   const want = prepared.solution[at];
   if (!want) return false;
-  /* A promotion counts even when the child picked a different piece and the
-     puzzle only recorded a queen; the tactic is the same either way. */
-  return want === uci || want.slice(0, 4) === uci.slice(0, 4);
+  return want === uci;
 }
 
 /** The opponent's reply after a correct move, or null if the puzzle is done. */
@@ -148,6 +184,27 @@ export const replyAfter = (prepared, at) => prepared.solution[at + 1] || null;
 
 /** Has the child played every move of the solution? */
 export const isFinished = (prepared, at) => at >= prepared.solution.length;
+
+/* ------------------------------------------------------------------ */
+/* Which themes are open                                               */
+/* ------------------------------------------------------------------ */
+
+/**
+ * May this theme be started, and if not, which lesson opens it?
+ *
+ * One function, used by the card that draws the lock AND by the route that
+ * opens a theme. The gate lived only in the card renderer at first, so typing
+ * the address of a locked theme walked straight past it — and a child dropped
+ * into skewer puzzles before the skewer lesson does not learn about skewers,
+ * they learn that puzzles are impossible.
+ */
+export function themeGate(theme, progress) {
+  const spec = typeof theme === 'string' ? themeById(theme) : theme;
+  if (!spec) return { open: false, opens: null };
+  if (!spec.opens) return { open: true, opens: null };
+  const stars = (progress && progress.stars && progress.stars[spec.opens]) || 0;
+  return { open: stars > 0, opens: spec.opens };
+}
 
 /* ------------------------------------------------------------------ */
 /* The rating                                                          */
@@ -259,9 +316,14 @@ export function afterSession(progress, solved) {
   const before = progress.puzzles || { r: 800, rd: 350, vol: 0.06, seen: [] };
   const next = rate(
     { r: before.r, rd: before.rd, vol: before.vol },
+    /* Each puzzle's own deviation, shipped with it. The fallback is only for a
+       puzzle file built before the builder started exporting it. */
     solved.map((s) => ({ r: s.rating, rd: s.rd === undefined ? 60 : s.rd, score: s.right ? 1 : 0 }))
   );
-  const seen = [...new Set([...(before.seen || []), ...solved.map((s) => s.id)])].slice(-500);
+  /* Everything ever solved, newest last. The cap belongs to the record, not to
+     this function -- see MAX_SEEN in chessprogress.js -- and normalise() is
+     what applies it. */
+  const seen = [...new Set([...(before.seen || []), ...solved.map((s) => s.id)])];
   return {
     ...progress,
     puzzles: {
@@ -283,6 +345,6 @@ export function starsFor(firstTry, total = SESSION) {
 }
 
 export default {
-  THEMES, themeById, SESSION, load, forget, pick, prepare, isRight,
+  THEMES, themeById, themeGate, SESSION, load, forget, pick, prepare, isRight,
   replyAfter, isFinished, rate, afterSession, starsFor, TAU, MIN_RD, MAX_RD
 };

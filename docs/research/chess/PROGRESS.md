@@ -117,6 +117,37 @@ Add a "Chess" room to the CurioZoo home page with three levels:
   the board after the opponent's setup move, so "They play Bxc5" was announced
   into a node removed in the same breath. One board per puzzle now, built
   locked and unlocked when it is the child's turn.
+- **A checkmate is a checkmate, whatever the database recorded.** Five of the
+  250 mate-in-one puzzles have a second mating move, and nine across the whole
+  library; a child who found one was told "Not that one" about a checkmate they
+  had found themselves. The screen now ends any puzzle on any mating move,
+  before it consults the recorded answer.
+- **"The tactic is the same either way" was wrong about promotions.** `isRight`
+  accepted any promotion piece. In eight puzzles that makes the opponent's next
+  recorded reply illegal, after which the board and the solution part company
+  and the screen carries on as though all was well. Exact piece required; the
+  mate check covers the honest underpromotion case.
+- **A gate drawn on a card is not a gate.** The theme lock lived only in the
+  card renderer, so typing `#/chess/puzzles/skewer` walked straight past it.
+  The rule is now `themeGate()` in the pure module and both the card and the
+  route ask it.
+- **"Unseen first" has to mean every unseen one.** With three unseen left and
+  five wanted, `pick()` gave up on freshness entirely and served five the child
+  had already done. Repeats now only fill leftover slots.
+- **A `seen` cap of 500 against a library of 3,000 is not a cap, it is a leak.**
+  Raised to 4,000, and `chesscheck` fails if the library ever outgrows it.
+- **An `await` in a screen needs a token.** Choosing a theme and immediately
+  choosing another left two fetches racing, and the slower one won.
+- **A build tool that samples its output ships bad rows.** Replaying all 3,250
+  puzzles takes 0.9 seconds; the sample was a guess at a cost that was never
+  paid.
+- **Static imports make every visitor pay for every room.** The chess room is
+  316KB and was on the critical path for a child who only wanted the flag game.
+  It is a dynamic import now, and `archcheck` was taught to see dynamic imports
+  so the layering check still covers it.
+- **`git checkout <file>` throws away uncommitted work.** It bit twice in one
+  session, both times silently reverting a fix made minutes earlier. Copy the
+  file aside before deliberately breaking it, and restore from the copy.
 - The parity of a light square is `(file index + rank number) % 2 === 0`.
   Written as `=== 1` the whole board is painted in negative, which still looks
   like a chessboard and quietly ruins every lesson about bishop colours.
@@ -179,13 +210,18 @@ Start PLAN.md **Phase 6: content** — writing the other 50 lessons from
 PLAN-lessons.md. The room is `status: 'soon'`; flip to 'live' when level 1 is
 playable end to end.
 
+- [x] **Puzzle review fixes.** A read-only review found ten real problems; all
+      were confirmed against the data before being fixed. Notes below.
+
 ### Refreshing the puzzles
 ```bash
 curl -O https://database.lichess.org/lichess_db_puzzle.csv.zst   # 304MB, CC0
 zstd -dc lichess_db_puzzle.csv.zst | node tools/build_puzzles.mjs
 ```
-It streams, so the 1.1GB decompressed CSV never touches the disk, and it takes
-a couple of minutes. Update the dump date in CREDITS.md afterwards.
+It streams, so neither the 304MB archive nor the 1.1GB CSV touches the disk,
+and it takes a couple of minutes. Both filenames are in `.gitignore` anyway.
+`data/chess/puzzles/manifest.json` records the dump date, the thresholds and
+the counts, and `chesscheck` fails if it stops describing what is on disk.
 
 ### What the bot can and cannot do
 chess.js charges about **one millisecond per move generation**, which is the

@@ -53,6 +53,18 @@ export const BADGES = [
 
 export const MAX_STARS = 3;
 
+/**
+ * How many solved puzzles are remembered.
+ *
+ * It has to exceed the whole shipped library or a child starts meeting old
+ * puzzles again long before they have run out of new ones — which was the
+ * case at 500 against a library of over three thousand. Each id is five
+ * characters, so even a full list is about twenty kilobytes of the five
+ * megabytes localStorage allows. tools/chesscheck.mjs fails the build if the
+ * library ever outgrows this.
+ */
+export const MAX_SEEN = 4000;
+
 const blank = () => ({
   v: 1,
   /** lessonId -> best stars, 0 to 3 */
@@ -121,7 +133,8 @@ export function normalise(raw) {
     out.puzzles.r = clamp(num(raw.puzzles.r, 800), 100, 3000);
     out.puzzles.rd = clamp(num(raw.puzzles.rd, 350), 30, 350);
     out.puzzles.vol = clamp(num(raw.puzzles.vol, 0.06), 0.01, 0.2);
-    out.puzzles.seen = list(raw.puzzles.seen).filter((x) => typeof x === 'string').slice(-500);
+    out.puzzles.seen = list(raw.puzzles.seen)
+      .filter((x) => typeof x === 'string').slice(-MAX_SEEN);
   }
   if (raw.games && typeof raw.games === 'object') {
     out.games.played = Math.max(0, Math.round(num(raw.games.played)));
@@ -321,7 +334,7 @@ export function nextLesson(levels, progress) {
 }
 
 export default {
-  BADGES, THEMES, MAX_STARS, BLANK, isoDay, normalise, load, save, update,
+  BADGES, THEMES, MAX_STARS, MAX_SEEN, BLANK, isoDay, normalise, load, save, update,
   setStars, unlock, touchDay, weekCount, weekDots, themesFor, nextTheme,
   startedIn, badge, badgeGoal, isUnlocked, levelGate, nextLesson
 };

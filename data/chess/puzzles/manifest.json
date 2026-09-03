@@ -1,0 +1,35 @@
+{
+  "source": "https://database.lichess.org/lichess_db_puzzle.csv.zst",
+  "licence": "CC0",
+  "builtAt": "2026-09-03",
+  "rowsRead": 6100961,
+  "filters": {
+    "rating": [
+      400,
+      1400
+    ],
+    "maxRatingDeviation": 90,
+    "minPopularity": 80,
+    "minPlays": 500,
+    "maxPlies": 7,
+    "perTheme": 250
+  },
+  "themes": {
+    "mateIn1": 250,
+    "hangingPiece": 250,
+    "fork": 250,
+    "pin": 250,
+    "skewer": 250,
+    "discoveredAttack": 250,
+    "backRankMate": 250,
+    "capturingDefender": 250,
+    "mateIn2": 250,
+    "deflection": 250,
+    "attraction": 250,
+    "promotion": 250,
+    "endgame": 250
+  },
+  "rows": 3250,
+  "unique": 3245,
+  "bytes": 424785
+}

@@ -21,3 +21,11 @@ dist/
 # Python bytecode from the authoring helpers
 __pycache__/
 *.pyc
+
+# The Lichess puzzle database. 304MB compressed, 1.1GB open, CC0, and an
+# authoring input rather than site content: tools/build_puzzles.mjs cuts it
+# down to the few hundred per theme that ship. Stream it instead of keeping it:
+#   curl -L https://database.lichess.org/lichess_db_puzzle.csv.zst \
+#     | zstd -dc | node tools/build_puzzles.mjs
+lichess_db_puzzle.csv
+lichess_db_puzzle.csv.zst

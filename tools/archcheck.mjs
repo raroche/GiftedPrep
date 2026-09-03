@@ -47,8 +47,14 @@ const layerOf = (f) => (f === `${ROOT}/app.js` ? 'app'
 
 for (const f of files) {
   const src = fs.readFileSync(f, 'utf8');
-  const deps = [...src.matchAll(/^import\s[\s\S]*?from\s+'([^']+)';/gm)]
-    .map((m) => path.normalize(path.join(path.dirname(f), m[1])));
+  /* Static imports and dynamic ones both count. A room loaded with
+     `import('./screens/chess.js')` to keep it off the critical path is still a
+     dependency, and leaving it out of the graph would quietly exempt the
+     largest room in the app from the layering and cycle checks. */
+  const deps = [
+    ...[...src.matchAll(/^import\s[\s\S]*?from\s+'([^']+)';/gm)].map((m) => m[1]),
+    ...[...src.matchAll(/\bimport\(\s*'([^']+)'\s*\)/g)].map((m) => m[1])
+  ].map((spec) => path.normalize(path.join(path.dirname(f), spec)));
   graph.set(f, deps);
   for (const d of deps) {
     if (!files.includes(d)) { err(`${f} imports ${d}, which does not exist`); continue; }

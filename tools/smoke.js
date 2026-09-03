@@ -104,6 +104,90 @@
     check(`${name}: learn mode is visible`, seen.length === 1, seen.join(',') || 'nothing visible');
   }
 
+  /* ---- the Chess Club ----
+     It is loaded on demand, so the first visit has to wait for a fetch that
+     the other rooms do not need. Everything here is a failure node cannot
+     see: a board that draws nothing, a lesson that cannot be answered, a
+     locked theme that opens anyway. */
+  {
+    location.hash = '#/chess';
+    await wait(2200);
+    const hub = [...document.querySelectorAll('.gp-screen')].filter(vis).map((s) => s.id);
+    check('chess: the hub is visible', hub.length === 1, hub.join(',') || 'nothing visible');
+
+    /* A brand new child sees the welcome; one who has started sees the levels.
+       Either is fine, but one of them has to be there. */
+    const begin = document.querySelector('[data-action="chess-begin"]');
+    if (begin) { begin.click(); await wait(1200); }
+
+    location.hash = '#/chess/1';
+    await wait(1200);
+    check('chess: the level page lists lessons',
+      document.querySelectorAll('.cz-chess-lesson').length >= 10,
+      `${document.querySelectorAll('.cz-chess-lesson').length} cards`);
+
+    /* A written lesson: the board has to draw and the step has to be answerable. */
+    location.hash = '#/chess/1/l1-rook';
+    await wait(1500);
+    const board = document.querySelector('.cz-cb');
+    check('chess: the lesson board is drawn', !!board && vis(board));
+    check('chess: the board has pieces on it',
+      document.querySelectorAll('.cz-cb__piece').length > 0,
+      `${document.querySelectorAll('.cz-cb__piece').length} pieces`);
+    check('chess: every square is reachable without a mouse',
+      document.querySelectorAll('.cz-cb__grid [data-sq]').length === 64);
+    check('chess: the grid is one tab stop, not sixty-four',
+      [...document.querySelectorAll('.cz-cb__grid button')].filter((b) => b.tabIndex === 0).length === 1);
+    const next = document.querySelector('[data-action="chess-next"]');
+    check('chess: the lesson can be stepped through', !!next && vis(next));
+    if (next) {
+      next.click();
+      await wait(600);
+      check('chess: stepping on redraws the board', document.querySelectorAll('.cz-cb__piece').length > 0);
+    }
+
+    /* Playing: the setup card, then a real game with a bot that answers. */
+    location.hash = '#/chess/play';
+    await wait(1400);
+    check('chess: the play setup offers five opponents',
+      document.querySelectorAll('.cz-play-bot').length === 5);
+    const start = document.querySelector('[data-action="chess-start"]');
+    check('chess: a game can be started', !!start);
+    if (start) {
+      start.click();
+      await wait(1200);
+      check('chess: the game board is drawn', vis(document.querySelector('.cz-cb')));
+      const grid = document.querySelector('.cz-cb__grid');
+      if (grid) {
+        grid.querySelector('[data-sq="e2"]')?.click();
+        await wait(200);
+        grid.querySelector('[data-sq="e4"]')?.click();
+        await wait(2500);
+        check('chess: the bot answers a move',
+          (document.querySelector('.cz-cb__live')?.textContent || '').length > 0,
+          document.querySelector('.cz-cb__live')?.textContent || 'said nothing');
+      }
+    }
+
+    /* A locked puzzle theme must stay locked when its address is typed. */
+    const locked = [...document.querySelectorAll('.cz-puz-theme.is-locked')];
+    location.hash = '#/chess/puzzles';
+    await wait(1400);
+    check('chess: the puzzle themes are listed',
+      document.querySelectorAll('.cz-puz-theme').length >= 10);
+    const shut = document.querySelector('.cz-puz-theme.is-locked');
+    if (shut) {
+      const id = [...document.querySelectorAll('.cz-puz-theme')].indexOf(shut);
+      location.hash = '#/chess/puzzles/skewer';
+      await wait(1500);
+      const started = !!document.querySelector('.cz-puz__ask');
+      const explained = !!document.querySelector('.gp-callout');
+      check('chess: a locked theme stays locked when typed in',
+        !started || explained,
+        started ? 'it started the puzzles anyway' : 'ok');
+    }
+  }
+
   /* Every page below home offers a way back, it says where it goes, and it is
      the first thing in the body rather than an arrow beside the logo. Both
      bugs this guards against were invisible to node: the link painted into the
@@ -121,7 +205,13 @@
     ['#/fun', '#/home'],
     ['#/fun/flags', '#/fun'],
     ['#/fun/elements', '#/fun'],
-    ['#/fun/flags/learn', '#/fun/flags']
+    ['#/fun/flags/learn', '#/fun/flags'],
+    ['#/chess', '#/home'],
+    ['#/chess/1', '#/chess'],
+    ['#/chess/1/l1-rook', '#/chess/1'],
+    ['#/chess/play', '#/chess'],
+    ['#/chess/puzzles', '#/chess'],
+    ['#/chess/games/pawnwars', '#/chess']
   ];
   for (const [hash, want] of BACK) {
     location.hash = hash;

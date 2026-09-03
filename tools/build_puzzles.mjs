@@ -124,7 +124,12 @@ for await (const line of lines) {
   usable += 1;
   for (const theme of tags) {
     if (!kept.has(theme)) continue;
-    kept.get(theme).push({ id, fen, moves: uci, r, pop: Number(popularity) });
+    /* The puzzle's own rating deviation travels with it. The runtime rating
+       is Glicko-2 and needs the opponent's deviation as well as its rating;
+       dropping it here meant the app substituted a made-up 60 for every
+       puzzle, which turned an exact calculation into an approximation
+       nobody had asked for. It is one small number per puzzle. */
+    kept.get(theme).push({ id, fen, moves: uci, r, rd: Number(rd), pop: Number(popularity) });
   }
 }
 
@@ -140,7 +145,7 @@ for await (const line of lines) {
  * where every puzzle is rated 900 cannot follow a child up. Ten bands, the
  * most popular from each, round and round until the file is full.
  */
-function spread(list, want) {
+function spread(list, want, alreadyUsed) {
   if (list.length <= want) return list;
   const bands = 10;
   const width = (MAX_RATING - MIN_RATING) / bands;
@@ -149,7 +154,14 @@ function spread(list, want) {
     const at = Math.min(bands - 1, Math.floor((p.r - MIN_RATING) / width));
     buckets[at].push(p);
   }
-  buckets.forEach((b) => b.sort((a, c) => c.pop - a.pop));
+  /* Popularity decides within a band, but a puzzle another theme has already
+     taken goes to the back of its band. Plenty of puzzles are honestly both a
+     fork and an endgame, and both themes may want them -- but taking the same
+     three hundred positions twice buys a bigger library and no more variety.
+     This costs nothing and lifts the distinct count. */
+  buckets.forEach((b) => b.sort((a, c) =>
+    (alreadyUsed.has(a.id) ? 1 : 0) - (alreadyUsed.has(c.id) ? 1 : 0)
+    || c.pop - a.pop));
 
   const out = [];
   for (let round = 0; out.length < want; round += 1) {
@@ -166,17 +178,59 @@ function spread(list, want) {
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
 const report = [];
-for (const theme of WANTED) {
-  const all = kept.get(theme);
-  const chosen = spread(all, PER_THEME)
-    .sort((a, b) => a.r - b.r)
-    .map(({ id, fen, moves, r }) => ({ id, fen, moves, r }));
+const used = new Set();
+/* Rarest themes first, so a theme with only seven thousand candidates gets
+   first pick and the ones with hundreds of thousands take what is left. */
+const order = [...WANTED].sort((a, b) => kept.get(a).length - kept.get(b).length);
 
+const chosenByTheme = new Map();
+for (const theme of order) {
+  const all = kept.get(theme);
+  const chosen = spread(all, PER_THEME, used)
+    .sort((a, b) => a.r - b.r)
+    .map(({ id, fen, moves, r, rd }) => ({ id, fen, moves, r, rd }));
+  chosen.forEach((p) => used.add(p.id));
+  chosenByTheme.set(theme, chosen);
+}
+
+for (const theme of WANTED) {
+  const chosen = chosenByTheme.get(theme);
   const file = path.join(OUT_DIR, `${theme}.json`);
   fs.writeFileSync(file, `${JSON.stringify(chosen)}\n`);
   const size = fs.statSync(file).size;
-  report.push({ theme, found: all.length, kept: chosen.length, kb: (size / 1024).toFixed(1) });
+  report.push({
+    theme, found: kept.get(theme).length, kept: chosen.length,
+    kb: (size / 1024).toFixed(1), bytes: size
+  });
 }
+
+/**
+ * What this build was made from, written beside the puzzles.
+ *
+ * The files are reproducible in principle, but only if somebody remembers
+ * which dump and which thresholds produced them. tools/chesscheck.mjs reads
+ * this back and fails the build when it stops describing what is on disk.
+ */
+const manifest = {
+  source: 'https://database.lichess.org/lichess_db_puzzle.csv.zst',
+  licence: 'CC0',
+  builtAt: new Date().toISOString().slice(0, 10),
+  rowsRead: read,
+  filters: {
+    rating: [MIN_RATING, MAX_RATING],
+    maxRatingDeviation: MAX_RD,
+    minPopularity: MIN_POPULARITY,
+    minPlays: MIN_PLAYS,
+    maxPlies: MAX_PLIES,
+    perTheme: PER_THEME
+  },
+  themes: Object.fromEntries(report.map((r) => [r.theme, r.kept])),
+  rows: report.reduce((n, r) => n + r.kept, 0),
+  unique: used.size,
+  bytes: report.reduce((n, r) => n + r.bytes, 0)
+};
+fs.writeFileSync(path.join(OUT_DIR, 'manifest.json'),
+  `${JSON.stringify(manifest, null, 2)}\n`);
 
 /* ------------------------------------------------------------------ */
 /* Say what happened                                                   */
@@ -188,7 +242,9 @@ console.log(`${pad('theme', 20)}${pad('found', 10)}${pad('kept', 8)}size`);
 for (const row of report) {
   console.log(`${pad(row.theme, 20)}${pad(row.found.toLocaleString(), 10)}${pad(row.kept, 8)}${row.kb}KB`);
 }
-console.log(`\nwritten to ${OUT_DIR}`);
+console.log(`\n${manifest.rows} rows, ${manifest.unique} distinct puzzles, `
+  + `${(manifest.bytes / 1024).toFixed(0)}KB`);
+console.log(`written to ${OUT_DIR}`);
 const thin = report.filter((r) => r.kept < 40);
 if (thin.length) {
   console.log(`\nThin: ${thin.map((r) => `${r.theme} (${r.kept})`).join(', ')}`);

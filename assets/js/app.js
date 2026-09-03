@@ -28,7 +28,6 @@ import { answerAngle, drawAngSetup, nextAngle, startAngRound, answerElement, dra
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
-import { renderChess, chessAction, lessonChoice, playPick } from './screens/chess.js';
 import { renderLearn, renderElemLearn, renderAngleLearn, paintAngTurn, paintAngTrap, paintAngClock, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
 import { backTarget } from './modules/routes.js';
 
@@ -56,6 +55,33 @@ function toggleTheme() {
   state.settings.theme = dark ? 'light' : 'dark';
   storage.setSetting('theme', state.settings.theme);
   applyTheme();
+}
+
+/* ------------------------------------------------------------------ */
+/* The Chess Club, fetched only if somebody opens it                   */
+/* ------------------------------------------------------------------ */
+
+/**
+ * The chess room, loaded on the first visit to it.
+ *
+ * It is by far the heaviest room -- the vendored rules library alone is a
+ * hundred kilobytes, and with the board, the bot, the lessons and the puzzle
+ * code it comes to over three hundred. Imported statically, every child who
+ * only ever wanted the flag game downloaded all of it.
+ *
+ * The handlers below check whether it has loaded rather than awaiting it.
+ * They can only fire from a chess screen, and a chess screen cannot be on
+ * display unless this has already resolved.
+ */
+let chess = null;
+let chessLoading = null;
+
+function chessRoom() {
+  if (chess) return Promise.resolve(chess);
+  if (!chessLoading) {
+    chessLoading = import('./screens/chess.js').then((mod) => { chess = mod; return mod; });
+  }
+  return chessLoading;
 }
 
 /* ------------------------------------------------------------------ */
@@ -105,7 +131,13 @@ function route() {
       renderMath(parts[1], parts[2]);
       break;
     case 'chess':
-      renderChess(parts[1], parts[2]);
+      chessRoom().then((room) => {
+        /* The child may have moved on while it loaded. */
+        if ((location.hash || '#/home').startsWith('#/chess')) room.renderChess(parts[1], parts[2]);
+      }).catch((err) => {
+        console.error(err);
+        showError('The Chess Club could not be loaded.');
+      });
       break;
     case 'parents':
       renderParents();
@@ -348,14 +380,16 @@ function onClick(ev) {
      handler below: the chess cards wear that class to look like every other
      set of answers on the site, and the gifted quiz would otherwise grab them
      and try to score them against a session that does not exist. */
+  /* All three can only be pressed on a chess screen, which cannot be showing
+     unless the room has loaded -- so `chess` is never null when they fire. */
   const chessPick = ev.target.closest('[data-chess-choice]');
-  if (chessPick) { lessonChoice(chessPick.dataset.chessChoice); return; }
+  if (chessPick && chess) { chess.lessonChoice(chessPick.dataset.chessChoice); return; }
 
   const chessBot = ev.target.closest('[data-chess-bot]');
-  if (chessBot) { playPick('bot', chessBot.dataset.chessBot); return; }
+  if (chessBot && chess) { chess.playPick('bot', chessBot.dataset.chessBot); return; }
 
   const chessGame = ev.target.closest('[data-chess-game]');
-  if (chessGame) { playPick('game', chessGame.dataset.chessGame); return; }
+  if (chessGame && chess) { chess.playPick('game', chessGame.dataset.chessGame); return; }
 
   const choice = ev.target.closest('.gp-choice');
   if (choice && !state.answered) { handleAnswer(choice.dataset.choice); return; }
@@ -368,7 +402,10 @@ function onClick(ev) {
 
   const action = ev.target.closest('[data-action]');
   if (!action) return;
-  if (action.dataset.action.startsWith('chess-')) { chessAction(action.dataset.action, action); return; }
+  if (action.dataset.action.startsWith('chess-')) {
+    if (chess) chess.chessAction(action.dataset.action, action);
+    return;
+  }
   switch (action.dataset.action) {
     case 'leave-quiz':
       leaveQuiz();

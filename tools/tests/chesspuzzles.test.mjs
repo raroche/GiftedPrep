@@ -82,15 +82,27 @@ describe('marking a move', () => {
     assert.equal(P.isRight(ready, 9, 'e1e8'), false);
   });
 
-  test('a promotion counts whichever piece the child chose', () => {
-    /* The puzzle records a queen. A child who promoted to a knight and mated
-       has solved it, and telling them otherwise is the worst thing this could
-       do to somebody who just found something clever. */
+  test('a promotion needs the piece the puzzle asked for', () => {
+    /* This test used to assert the opposite, on the reasoning that "the tactic
+       is the same either way". It is not: a queen and a knight are different
+       pieces reaching different positions, and in eight of the shipped puzzles
+       accepting the wrong one makes the opponent's next recorded reply
+       illegal — after which the board and the solution have quietly parted
+       company and the screen carries on as though all was well.
+
+       A child who underpromotes and mates is still right. That is settled by
+       the mate check in the screen, not here. */
     const promo = P.prepare({ id: 'p', fen: '8/8/8/8/8/8/8/8 w - - 0 1', moves: ['a1a2', 'b7b8q'], r: 1 });
     assert.equal(P.isRight(promo, 0, 'b7b8q'), true);
-    assert.equal(P.isRight(promo, 0, 'b7b8n'), true);
-    assert.equal(P.isRight(promo, 0, 'b7b8'), true);
+    assert.equal(P.isRight(promo, 0, 'b7b8n'), false);
+    assert.equal(P.isRight(promo, 0, 'b7b8'), false);
     assert.equal(P.isRight(promo, 0, 'c7c8q'), false);
+  });
+
+  test('an ordinary move still needs no promotion letter', () => {
+    const plain = P.prepare({ id: 'q', fen: '8/8/8/8/8/8/8/8 w - - 0 1', moves: ['a1a2', 'e2e4'], r: 1 });
+    assert.equal(P.isRight(plain, 0, 'e2e4'), true);
+    assert.equal(P.isRight(plain, 0, 'e2e4q'), false);
   });
 
   test('it knows when the puzzle is over and when the opponent replies', () => {
@@ -131,6 +143,24 @@ describe('choosing which puzzles to show', () => {
     const allSeen = PUZZLES.map((p) => p.id);
     const got = P.pick(PUZZLES, player(800, allSeen), 3);
     assert.equal(got.length, 3, 'a child who has done them all must still be able to play');
+    assert.equal(new Set(got.map((p) => p.id)).size, 3, 'and not the same one three times');
+  });
+
+  test('every unseen puzzle is used before any repeat', () => {
+    /* Three unseen, five wanted. The first version gave up on freshness the
+       moment it could not fill the whole sitting and served five the child had
+       already done -- with three new ones sitting right there. */
+    const many = Array.from({ length: 20 }, (_, i) => ({
+      id: `p${i}`, fen: 'x', moves: ['a1a2', 'b1b2'], r: 800 + i * 10
+    }));
+    const seen = many.slice(0, 17).map((p) => p.id);
+    for (let go = 0; go < 20; go += 1) {
+      const got = P.pick(many, player(800, seen), 5);
+      assert.equal(got.length, 5);
+      assert.equal(new Set(got.map((p) => p.id)).size, 5, 'no puzzle twice in one sitting');
+      const fresh = got.filter((p) => !seen.includes(p.id)).length;
+      assert.equal(fresh, 3, `all three unseen must be used, got ${fresh}`);
+    }
   });
 
   test('an empty theme gives nothing rather than throwing', () => {
@@ -141,6 +171,34 @@ describe('choosing which puzzles to show', () => {
   test('a child with no record yet is treated as a beginner', () => {
     const got = P.pick(PUZZLES, {}, 1);
     assert.equal(got.length, 1);
+  });
+});
+
+describe('which themes are open', () => {
+  test('a theme whose lesson is done is open', () => {
+    const done = { stars: { 'l2-fork': 1 } };
+    assert.equal(P.themeGate('fork', done).open, true);
+  });
+
+  test('a theme whose lesson is not done is shut, and says which lesson', () => {
+    const gate = P.themeGate('fork', { stars: {} });
+    assert.equal(gate.open, false);
+    assert.equal(gate.opens, 'l2-fork');
+  });
+
+  test('a child with no record at all opens nothing that is gated', () => {
+    for (const t of P.THEMES) {
+      if (!t.opens) continue;
+      assert.equal(P.themeGate(t, {}).open, false, `${t.id} was open to a brand new child`);
+    }
+  });
+
+  test('a theme nobody has heard of is not open', () => {
+    assert.equal(P.themeGate('quidditch', { stars: { everything: 3 } }).open, false);
+  });
+
+  test('every theme names a lesson, so a shut one can explain itself', () => {
+    for (const t of P.THEMES) assert.ok(t.opens, `${t.id} has no lesson behind it`);
   });
 });
 
@@ -209,6 +267,16 @@ describe('after a sitting', () => {
     assert.equal(after.puzzles.rd, Math.round(after.puzzles.rd));
   });
 
+  test("each puzzle's own uncertainty is used, not a made-up one", () => {
+    /* The builder ships every puzzle's rating deviation. Substituting a fixed
+       60 for all of them turned an exact Glicko calculation into an
+       approximation nobody had asked for. */
+    const sure = P.afterSession(player(800), [{ id: 'a', rating: 1200, rd: 20, right: true }]);
+    const vague = P.afterSession(player(800), [{ id: 'a', rating: 1200, rd: 300, right: true }]);
+    assert.notEqual(sure.puzzles.r, vague.puzzles.r,
+      'how sure the database is about a puzzle has to change the answer');
+  });
+
   test('everything attempted is remembered, right or wrong', () => {
     const after = P.afterSession(player(800), solved);
     assert.deepEqual(after.puzzles.seen.sort(), ['aaa', 'bbb', 'ccc']);
@@ -219,10 +287,13 @@ describe('after a sitting', () => {
     assert.ok(after.puzzles.seen.includes('old'));
   });
 
-  test('the list of seen puzzles does not grow forever', () => {
-    const many = Array.from({ length: 900 }, (_, i) => `p${i}`);
+  test('nothing solved is forgotten while the library still has new ones', () => {
+    /* The cap used to be 500 against a library of 2,777, so a child started
+       meeting old puzzles again long before running out of new ones. The cap
+       now lives in chessprogress.js and exceeds the whole library. */
+    const many = Array.from({ length: 2800 }, (_, i) => `p${i}`);
     const after = P.afterSession(player(800, many), solved);
-    assert.ok(after.puzzles.seen.length <= 500);
+    assert.equal(after.puzzles.seen.length, 2803);
   });
 
   test('nothing else about the child is disturbed', () => {

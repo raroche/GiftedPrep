@@ -34,6 +34,8 @@ const GIVE_AFTER = 3;
 export function closePuzzles() {
   if (state.chess.board) { state.chess.board.destroy(); state.chess.board = null; }
   state.chess.puzzle = null;
+  /* Anything still loading is for a screen nobody is looking at. */
+  requested += 1;
 }
 
 /* ------------------------------------------------------------------ */
@@ -53,8 +55,9 @@ function renderThemes(levels) {
   const cards = puzzles.THEMES.map((t) => {
     /* A theme is open once its lesson has been done. Until then it is shown
        with the lesson named on it: a shut door with a sign teaches something,
-       one without just annoys. */
-    const open = !t.opens || (p.stars[t.opens] || 0) > 0;
+       one without just annoys. The rule itself lives in chesspuzzles.js so
+       that the route uses the same one. */
+    const { open } = puzzles.themeGate(t, p);
     const gate = lessonName(t.opens);
     const inner = `
       <span class="cz-puz-theme__name">${esc(t.name)}</span>
@@ -81,8 +84,16 @@ function renderThemes(levels) {
 /* One sitting                                                         */
 /* ------------------------------------------------------------------ */
 
+/* Which request for puzzles is the current one. Choosing a theme, changing
+   your mind and choosing another used to leave two fetches in flight, and the
+   slower one -- for the theme the child had already left -- finished last and
+   won. */
+let requested = 0;
+
 async function startSession(theme) {
   closePuzzles();
+  const mine = requested + 1;
+  requested = mine;
   const spec = puzzles.themeById(theme);
   $('#gp-chesspuzzle-body').innerHTML = '<p class="gp-muted">Finding some puzzles&hellip;</p>';
   showScreen('chesspuzzle');
@@ -91,6 +102,7 @@ async function startSession(theme) {
   try {
     list = await puzzles.load(theme);
   } catch {
+    if (requested !== mine) return;
     $('#gp-chesspuzzle-body').innerHTML = `
       <div class="gp-callout gp-callout--info">
         <p class="gp-callout__title">Not ready yet</p>
@@ -100,6 +112,9 @@ async function startSession(theme) {
     paint();
     return;
   }
+
+  /* Somebody else asked for a different theme while this was loading. */
+  if (requested !== mine) return;
 
   const p = progress.load();
   const chosen = puzzles.pick(list, p, puzzles.SESSION);
@@ -222,10 +237,40 @@ function armForChild() {
     : 'Black to move. Find it.';
 }
 
+/**
+ * Does this move checkmate?
+ *
+ * Asked before the recorded answer, because a checkmate ends the game and
+ * there is nothing left to solve — whatever move the database happened to
+ * write down. Five of the 250 mate-in-one puzzles have a second mating move,
+ * and a child who found Rxg7# when Lichess recorded Qxg7# was being told
+ * "Not that one" about a checkmate they had found themselves. In a program
+ * meant to teach chess that is the worst thing it could say.
+ */
+function isMate(game, uci) {
+  const copy = new Chess(game.fen(), { skipValidation: true });
+  try {
+    if (!copy.move({
+      from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] || undefined
+    })) return false;
+  } catch { return false; }
+  return copy.isCheckmate();
+}
+
 /** One attempt at the current puzzle. */
 function answer(uci) {
   const run = state.chess.puzzle;
   if (!run || !run.ready) return;
+
+  /* Checkmate is checkmate. It ends the puzzle here, on the child's own move,
+     rather than following the recorded line to the same place. */
+  if (isMate(run.game, uci)) {
+    playMove(uci);
+    react('wow', 1600);
+    tell(run.tries === 0 ? 'Checkmate, first try.' : 'Checkmate. You found it.', 'is-good');
+    finishPuzzle(run.tries === 0);
+    return;
+  }
 
   if (!puzzles.isRight(run.ready, run.step, uci)) {
     run.tries += 1;
@@ -302,7 +347,9 @@ function giveAway() {
 
 function finishPuzzle(firstTry) {
   const run = state.chess.puzzle;
-  run.done.push({ id: run.ready.id, rating: run.ready.rating, right: firstTry });
+  run.done.push({
+    id: run.ready.id, rating: run.ready.rating, rd: run.ready.rd, right: firstTry
+  });
   run.locked = true;
   if (state.chess.board) state.chess.board.lock();
   window.setTimeout(() => {
@@ -373,10 +420,46 @@ export function puzzleAction(name) {
   return false;
 }
 
+/** The name of the lesson that opens a theme, for the message on a shut one. */
+function openedBy(themeId, levels) {
+  for (const lv of levels || []) {
+    const found = (lv.lessons || []).find((l) => l.id === themeId);
+    if (found) return found.name;
+  }
+  return null;
+}
+
+/** A theme reached directly that is not open yet. */
+function renderShut(spec, levels) {
+  closePuzzles();
+  const gate = openedBy(puzzles.themeGate(spec, progress.load()).opens, levels);
+  $('#gp-chesspuzzle-body').innerHTML = `
+    <div class="gp-callout gp-callout--info">
+      <p class="gp-callout__title">${esc(spec.name)} is not open yet</p>
+      <p>${gate ? `Do the lesson called "${esc(gate)}" and these open up.`
+        : 'Work through a few more lessons and these open up.'}</p>
+    </div>
+    <a class="gp-btn gp-btn--primary" href="#/chess/puzzles">&larr; The puzzles that are open</a>`;
+  paint();
+  showScreen('chesspuzzle');
+}
+
 /** Route target: #/chess/puzzles and #/chess/puzzles/<theme>. */
 export function renderPuzzles(theme, levels) {
   state.chess.levels = levels || state.chess.levels;
-  if (theme && puzzles.themeById(theme)) { startSession(theme); return; }
+  const spec = theme ? puzzles.themeById(theme) : null;
+  if (spec) {
+    /* The same gate the cards draw. Without this check here, typing the
+       address of a locked theme walked straight past the lock -- and a child
+       dropped into skewer puzzles before the skewer lesson does not learn
+       about skewers, they learn that puzzles are impossible. */
+    if (!puzzles.themeGate(spec, progress.load()).open) {
+      renderShut(spec, state.chess.levels);
+      return;
+    }
+    startSession(theme);
+    return;
+  }
   closePuzzles();
   renderThemes(state.chess.levels);
 }
