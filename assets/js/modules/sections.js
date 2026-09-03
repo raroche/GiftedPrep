@@ -200,9 +200,9 @@ export const ROOMS = [
     hue: 'leaf',
     creature: 'fox',
     href: '#/chess',
-    status: 'soon',
+    status: 'live',
     blurb: 'Meet the six pieces, win your first game, then learn the tricks.',
-    meta: '3 levels \u00b7 pawn camp to 600+'
+    meta: '15 lessons \u00b7 8 games \u00b7 3,250 puzzles'
   },
   {
     id: 'gifted',

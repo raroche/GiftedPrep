@@ -205,10 +205,33 @@ Add a "Chess" room to the CurioZoo home page with three levels:
       from the 2 August 2026 Lichess dump (6,100,961 rows). A sitting is five
       puzzles; the rating moves after each sitting.
 
+- [x] **Phase 6, level 1 — Pawn Camp.** All 15 lessons written from
+      PLAN-lessons.md, every position replayed in chess.js before it was
+      written, and every lesson played end to end in a real browser to three
+      stars. The room is now **`status: 'live'`** on the home page.
+      `chesscheck` now also enforces the per-level word limit and the 5-to-9
+      step count.
+
 ## Next step for the next model
-Start PLAN.md **Phase 6: content** — writing the other 50 lessons from
-PLAN-lessons.md. The room is `status: 'soon'`; flip to 'live' when level 1 is
-playable end to end.
+**Phase 6, level 2 — Knight School**, 19 lessons, from PLAN-lessons.md. Then
+level 3, then Phase 7 (rewards and polish) and Phase 8 (checks and ship).
+
+### How to write a level
+1. Write a script that replays every FEN and every move you intend to use
+   through chess.js FIRST. Half the positions in PLAN-lessons.md needed a
+   small correction, and a wrong one is a lesson a child cannot finish.
+2. Write the steps into `data/chess/levelN.json`. `npm run chesscheck` checks
+   the shape, the FENs, the legality of every accepted move, the word limit
+   and the step count.
+3. Play every lesson in the browser. A harness that drives the accessible grid
+   is the quickest way; see the note below.
+
+### Driving a lesson from the browser console
+`document.querySelector('.cz-cb__grid [data-sq="e4"]').click()` is a move.
+Two of those make a move; a promotion needs a third click on
+`[data-promo="q"]`, dispatched as a `pointerdown`. **Run one harness at a
+time.** Two overlapping loops produced three "lesson did not open" failures
+that looked exactly like a real routing bug and were not.
 
 - [x] **Puzzle review fixes.** A read-only review found ten real problems; all
       were confirmed against the data before being fixed. Notes below.

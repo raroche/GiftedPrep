@@ -324,6 +324,26 @@ for (const n of [1, 2, 3]) {
     /* The shape of every step, from the runner's own rules. */
     for (const problem of checkLesson(lesson, at)) err(problem);
 
+    /* How much a child is asked to read at once. The teaching research is
+       specific: a wall of text is the commonest reason a child puts a
+       learning app down, and level 1 is written for someone who may not be
+       reading fluently at all. The ceiling rises with the level. */
+    const SAY_WORDS = { 1: 12, 2: 20, 3: 30 }[level.level] || 30;
+    for (const [j, step] of (lesson.steps || []).entries()) {
+      if (typeof step.text !== 'string') continue;
+      const words = step.text.trim().split(/\s+/).length;
+      if (words > SAY_WORDS) {
+        err(`${at} step ${j + 1}: ${words} words, and level ${level.level} allows `
+          + `${SAY_WORDS}. "${step.text}"`);
+      }
+    }
+
+    /* A lesson that is all reading is a video with extra taps, and one that
+       runs long loses a five-year-old halfway through. */
+    if (lesson.steps.length && (lesson.steps.length < 5 || lesson.steps.length > 9)) {
+      err(`${at}: ${lesson.steps.length} steps; a lesson is 5 to 9`);
+    }
+
     /* And then the chess itself. A lesson that asks for an illegal move is
        not a broken program -- the board simply refuses, forever, and the
        child is stuck on a step with no way past it. */
