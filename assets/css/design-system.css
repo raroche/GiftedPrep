@@ -3994,3 +3994,77 @@ button, a, label, summary, [role="button"] {
 .cz-chess-mini__one:focus-visible { border-color: var(--room, var(--gp-accent)); }
 .cz-chess-mini__name { font-weight: 800; }
 .cz-chess-mini__blurb { font-size: .82rem; color: var(--gp-ink-soft); line-height: 1.35; }
+
+
+/* ==========================================================================
+   Puzzles (screens/chesspuzzle.js)
+   ========================================================================== */
+
+/* The one number a child watches. Big, because it is the point of the screen,
+   and shown alone rather than in a row of statistics. */
+.cz-puz-power {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  margin: var(--gp-space-5) auto;
+  padding: var(--gp-space-4) var(--gp-space-6);
+  border: 2px solid var(--room-line, var(--gp-accent-line));
+  border-radius: var(--gp-radius-xl);
+  background: var(--room-soft, var(--gp-accent-soft));
+  width: fit-content;
+  text-align: center;
+}
+.cz-puz-power__num { font-size: 2.2rem; font-weight: 800; line-height: 1; }
+.cz-puz-power__cap { font-size: .8rem; color: var(--gp-ink-soft); }
+.cz-puz-power--after { margin-block: var(--gp-space-3); }
+
+/* Which way it went. Colour and an arrow, never colour alone. */
+.cz-puz-power__move { font-weight: 800; }
+.cz-puz-power__move.is-up { color: var(--gp-good); }
+.cz-puz-power__move.is-down { color: var(--gp-ink-soft); }
+
+.cz-puz-themes {
+  display: grid;
+  gap: var(--gp-space-3);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.cz-puz-theme {
+  display: grid;
+  gap: 2px;
+  padding: var(--gp-space-4);
+  border: 1px solid var(--gp-line);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  text-decoration: none;
+}
+.cz-puz-theme:hover,
+.cz-puz-theme:focus-visible { border-color: var(--room, var(--gp-accent)); }
+.cz-puz-theme.is-locked { opacity: .6; cursor: default; }
+.cz-puz-theme.is-locked:hover { border-color: var(--gp-line); }
+.cz-puz-theme__name { font-weight: 800; }
+.cz-puz-theme__blurb { font-size: .82rem; color: var(--gp-ink-soft); line-height: 1.35; }
+/* A shut door with a sign on it teaches something; one without just annoys. */
+.cz-puz-theme__lock { margin-top: var(--gp-space-1); font-size: .76rem; color: var(--gp-ink-soft); }
+
+/* ---- solving one ---- */
+
+.cz-puz { display: grid; gap: var(--gp-space-3); justify-items: center; }
+.cz-puz__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--gp-space-3);
+  width: min(92vw, 34rem);
+}
+.cz-puz__theme { font-weight: 800; }
+.cz-puz__count { margin-left: auto; font-size: .85rem; color: var(--gp-ink-soft); }
+
+/* Whose move it is. The single most important line on the screen, and the one
+   a beginner most often forgets to read. */
+.cz-puz__ask { margin: 0; font-size: 1.15rem; font-weight: 700; }
+
+.cz-puz__say { margin: 0; min-height: 1.4em; font-size: .95rem; }
+.cz-puz__say.is-good { color: var(--gp-good); font-weight: 700; }
+.cz-puz__say.is-retry { color: var(--gp-ink-soft); }
+.cz-puz__tools { justify-content: center; }
+.cz-puz__done { display: grid; gap: var(--gp-space-3); justify-items: center; text-align: center; }

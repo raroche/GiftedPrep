@@ -430,6 +430,101 @@ for (const g of GAMES) {
 }
 
 /* ------------------------------------------------------------------ */
+/* The puzzles                                                         */
+/* ------------------------------------------------------------------ */
+
+const { THEMES, prepare } = await import('../assets/js/modules/chesspuzzles.js');
+
+const lessonIds = new Set(seenLessonIds.keys());
+let puzzleTotal = 0;
+let puzzleFiles = 0;
+for (const theme of THEMES) {
+  const at = `puzzle theme "${theme.id}"`;
+  /* The lesson that opens a theme has to exist, or the theme is shut for
+     ever and the card says to go and do a lesson that is not there. */
+  if (theme.opens && !lessonIds.has(theme.opens)) {
+    err(`${at}: opened by "${theme.opens}", which is not a lesson`);
+  }
+
+  const file = `data/chess/puzzles/${theme.id}.json`;
+  if (!fs.existsSync(file)) {
+    warn(`${at}: no ${file} yet — run tools/build_puzzles.mjs`);
+    continue;
+  }
+  puzzleFiles += 1;
+
+  let list;
+  try {
+    list = JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch (e) { err(`${file}: ${e.message}`); continue; }
+  if (!Array.isArray(list) || !list.length) { err(`${file}: no puzzles in it`); continue; }
+  puzzleTotal += list.length;
+
+  const ids = new Set();
+  /* Checking every puzzle in every theme is thousands of positions and a slow
+     build. A sample catches a broken exporter, which is the failure that
+     actually happens; a single bad row is not worth the minute. */
+  const sample = list.length <= 40 ? list : [
+    ...list.slice(0, 15),
+    ...list.slice(Math.floor(list.length / 2), Math.floor(list.length / 2) + 10),
+    ...list.slice(-15)
+  ];
+
+  let longest = 0;
+  let lowest = Infinity;
+  for (const puz of list) {
+    if (ids.has(puz.id)) { err(`${file}: puzzle ${puz.id} appears twice`); break; }
+    ids.add(puz.id);
+    longest = Math.max(longest, (puz.moves || []).length);
+    lowest = Math.min(lowest, puz.r || Infinity);
+  }
+  /* A child who has found the right idea should not then have to hold it
+     together for eight more moves to be told they were right. The database
+     hands out sixteen-move puzzles happily. */
+  if (longest > 7) {
+    err(`${file}: a puzzle runs ${longest} moves; the limit is 7 including `
+      + "the opponent's first move");
+  }
+  /* A theme where nothing is easy cannot be a child's first attempt at it. */
+  if (lowest > 800) {
+    warn(`${file}: the easiest puzzle in it is rated ${lowest}, which is above `
+      + 'where a child starts');
+  }
+
+  for (const puz of sample) {
+    const where = `${file} puzzle ${puz.id}`;
+    for (const key of ['id', 'fen', 'moves', 'r']) {
+      if (puz[key] === undefined) err(`${where}: missing "${key}"`);
+    }
+    if (!Array.isArray(puz.moves) || puz.moves.length < 2) {
+      err(`${where}: needs the opponent's move and at least one answer`);
+      continue;
+    }
+    const problem = fenProblem(puz.fen);
+    if (problem) { err(`${where}: the position ${problem}`); continue; }
+
+    /* Every move must actually be playable, in order, from that position.
+       This is where an off-by-one in the exporter shows up: the stored FEN is
+       the position BEFORE the opponent's move, and a file built without that
+       in mind produces positions that look fine and solutions that do not
+       work. */
+    const game = new ChessLib(puz.fen, { skipValidation: true });
+    for (const [i, uci] of puz.moves.entries()) {
+      let ok = false;
+      try {
+        ok = Boolean(game.move({
+          from: uci.slice(0, 2), to: uci.slice(2, 4), promotion: uci[4] || undefined
+        }));
+      } catch { ok = false; }
+      if (!ok) { err(`${where}: move ${i + 1} "${uci}" cannot be played`); break; }
+    }
+
+    const ready = prepare(puz);
+    if (!ready) err(`${where}: will not prepare`);
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /* Credit where it is due                                              */
 /* ------------------------------------------------------------------ */
 
@@ -450,7 +545,8 @@ const written = levels.reduce((n, lv) =>
   n + lv.lessons.filter((l) => l.steps && l.steps.length).length, 0);
 console.log(`${pieces.PIECE_CODES.length} pieces, `
   + `${(svg.length / 1024).toFixed(1)}KB of symbols, rules library present, `
-  + `${levels.length} levels, ${seenLessonIds.size} lessons (${written} written)`);
+  + `${levels.length} levels, ${seenLessonIds.size} lessons (${written} written), `
+  + `${puzzleFiles} puzzle themes (${puzzleTotal.toLocaleString()} puzzles)`);
 
 if (warnings.length) {
   console.log(`\nwarnings (${warnings.length}):`);

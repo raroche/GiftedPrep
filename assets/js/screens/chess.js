@@ -23,6 +23,7 @@ import { escapeHtml } from './../modules/charts.js';
 import { paintRoomHead } from './gifted.js';
 import { openLesson, closeLesson, lessonAction, lessonChoice } from './chesslesson.js';
 import { renderPlay, closePlay, playAction, playPick } from './chessplay.js';
+import { renderPuzzles, closePuzzles, puzzleAction } from './chesspuzzle.js';
 import { $, paint, showError, showScreen } from './../modules/shell.js';
 
 const esc = escapeHtml;
@@ -226,7 +227,8 @@ function renderHub(all, p) {
       <a class="gp-card gp-card--action" href="#/chess/puzzles">
         <span class="gp-card__icon" aria-hidden="true">${pieceMark('wQ')}</span>
         <span class="gp-card__title">Puzzles</span>
-        <span class="gp-card__sub">One position, one best move. Find it.</span>
+        <span class="gp-card__sub">One position, one best move. Five in a row.</span>
+        <span class="gp-card__badge">Puzzle power ${p.puzzles.r}</span>
       </a>
     </div>
 
@@ -332,6 +334,7 @@ function renderSoon(screen, bodyId, title, what) {
  * first by returning true.
  */
 export function chessAction(name, el) {
+  if (puzzleAction(name)) return;
   if (lessonAction(name, el)) return;
   if (playAction(name, el)) return;
 
@@ -361,13 +364,9 @@ export async function renderChess(step, lessonId) {
   ensurePieceDefs();
   closePlay();
 
-  if (step === 'play') { closeLesson(); renderPlay(null); return; }
-  if (step === 'games') { closeLesson(); renderPlay(lessonId); return; }
-  if (step === 'puzzles') {
-    renderSoon('chesspuzzle', 'gp-chesspuzzle-body', 'Puzzles',
-      'Thousands of puzzles are being sorted into the right order. Coming soon.');
-    return;
-  }
+  if (step === 'play') { closeLesson(); closePuzzles(); renderPlay(null); return; }
+  if (step === 'games') { closeLesson(); closePuzzles(); renderPlay(lessonId); return; }
+
 
   let all;
   try {
@@ -378,6 +377,8 @@ export async function renderChess(step, lessonId) {
     return;
   }
   const p = progress.load();
+
+  if (step === 'puzzles') { closeLesson(); renderPuzzles(lessonId, all); return; }
 
   const level = all.find((lv) => String(lv.level) === step);
   if (level && lessonId) {
@@ -390,6 +391,7 @@ export async function renderChess(step, lessonId) {
     return;
   }
   closeLesson();
+  closePuzzles();
   if (level) { renderLevel(level, all, p); return; }
 
   paintRoomHead('chess', 'cz-chess-pic');

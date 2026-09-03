@@ -38,6 +38,9 @@ const grades = fs.readdirSync('data/math')
 const manifest = JSON.parse(fs.readFileSync('data/manifest.json', 'utf8'));
 const testIds = new Set((manifest.tests || []).map((t) => t.id).concat('all'));
 
+const { THEMES: CHESS_THEMES } = await import('../assets/js/modules/chesspuzzles.js');
+const chessThemes = new Set(CHESS_THEMES.map((t) => t.id));
+
 const { GAMES: CHESS_GAMES } = await import('../assets/js/modules/chessgames.js');
 const chessGames = new Set(CHESS_GAMES.map((g) => g.id));
 
@@ -118,6 +121,9 @@ for (const [link, from] of links) {
     }
     if (parts[1] === 'games' && parts[2] && !chessGames.has(parts[2])) {
       err(`${link} -> no chess game called "${parts[2]}"   [${where}]`);
+    }
+    if (parts[1] === 'puzzles' && parts[2] && !chessThemes.has(parts[2])) {
+      err(`${link} -> no puzzle theme called "${parts[2]}"   [${where}]`);
     }
   }
   if (head === 'fun' && parts[1] && !open) {

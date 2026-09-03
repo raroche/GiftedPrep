@@ -43,10 +43,23 @@ names of contributors are used to endorse this project.
 **Lichess puzzle database**, CC0 (public domain dedication).
 <https://database.lichess.org/>
 
-The full dump is about six million puzzles and is not in this repository.
-`tools/build_puzzles.mjs` filters a locally downloaded copy down to a few
-thousand suitable for children and writes `data/chess/puzzles/*.json`. The
-dump date used is recorded at the top of each generated file.
+The full dump is about six million puzzles and 304MB compressed. It is not in
+this repository and should never be: what ships is a few hundred per theme
+that a beginner can actually solve. `tools/build_puzzles.mjs` does the
+filtering from a locally downloaded copy:
+
+```bash
+curl -O https://database.lichess.org/lichess_db_puzzle.csv.zst
+zstd -dc lichess_db_puzzle.csv.zst | node tools/build_puzzles.mjs
+```
+
+**Database dump: 2 August 2026.** Kept: rating 400 to 1400, rating deviation
+under 90, popularity 80 or more, at least 500 plays, spread evenly across the
+rating range rather than taken by popularity — a theme where every puzzle is
+rated 900 cannot follow a child upwards.
+
+CC0 is a dedication to the public domain and asks for nothing. The credit is
+here because it is deserved, not because it is required.
 
 ## The openings
 

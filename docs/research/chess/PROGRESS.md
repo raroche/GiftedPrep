@@ -104,6 +104,19 @@ Add a "Chess" room to the CurioZoo home page with three levels:
 - **`#/chess/games/<id>` has three segments, and so does a lesson.** The back
   link sent it "one level up" to `#/chess/games`, which is not a page. Only a
   middle segment that is a level number is treated as a lesson.
+- **A build tool with a relative output path writes wherever it was run from.**
+  `build_puzzles.mjs` is normally run from wherever the 300MB download lives,
+  and it quietly wrote a complete set of puzzle files into that folder while
+  the real ones sat untouched — with console output identical to a successful
+  build. The output directory is now resolved from the script's own location.
+- **The Lichess database hands out sixteen-move puzzles.** A child who has
+  found the right idea should not then have to hold it together for eight more
+  moves to be told they were right. Capped at 7 plies, which also pulled every
+  theme's easiest puzzle down by a hundred points or more.
+- **Rebuilding a board destroys its live region.** The puzzle screen rebuilt
+  the board after the opponent's setup move, so "They play Bxc5" was announced
+  into a node removed in the same breath. One board per puzzle now, built
+  locked and unlocked when it is the child's turn.
 - The parity of a light square is `(file index + rank number) % 2 === 0`.
   Written as `=== 1` the whole board is painted in negative, which still looks
   like a chessboard and quietly ruins every lesson about bishop colours.
@@ -154,9 +167,25 @@ Add a "Chess" room to the CurioZoo home page with three levels:
       `#/chess/board` workbench is gone. Mini-games are listed on the hub and
       reachable at `#/chess/games/<id>`.
 
+- [x] **Phase 5 — puzzles.** `modules/chesspuzzles.js` (13 themes, picking by
+      rating, Glicko-2; 31 tests including Glickman's own worked example),
+      `screens/chesspuzzle.js`, and `tools/build_puzzles.mjs`.
+      `data/chess/puzzles/*.json` holds 3,250 real puzzles, 416KB, filtered
+      from the 2 August 2026 Lichess dump (6,100,961 rows). A sitting is five
+      puzzles; the rating moves after each sitting.
+
 ## Next step for the next model
-Start PLAN.md **Phase 5: puzzles**. The room is `status: 'soon'`; flip to
-'live' at the end of Phase 6.
+Start PLAN.md **Phase 6: content** — writing the other 50 lessons from
+PLAN-lessons.md. The room is `status: 'soon'`; flip to 'live' when level 1 is
+playable end to end.
+
+### Refreshing the puzzles
+```bash
+curl -O https://database.lichess.org/lichess_db_puzzle.csv.zst   # 304MB, CC0
+zstd -dc lichess_db_puzzle.csv.zst | node tools/build_puzzles.mjs
+```
+It streams, so the 1.1GB decompressed CSV never touches the disk, and it takes
+a couple of minutes. Update the dump date in CREDITS.md afterwards.
 
 ### What the bot can and cannot do
 chess.js charges about **one millisecond per move generation**, which is the
