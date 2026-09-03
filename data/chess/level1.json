@@ -13,7 +13,63 @@
       "emoji": "🗺️",
       "big": "Every square has a name.",
       "minutes": 4,
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "This is the board. Every square has a name.",
+          "fen": "8/8/8/8/8/8/8/8 w - - 0 1"
+        },
+        {
+          "t": "say",
+          "text": "A letter goes across. A number goes up.",
+          "fen": "8/8/8/8/8/8/8/8 w - - 0 1"
+        },
+        {
+          "t": "tap",
+          "fen": "8/8/8/8/8/8/8/8 w - - 0 1",
+          "ask": "Tap the square d5.",
+          "answer": [
+            "d5"
+          ],
+          "hint": "Find the letter d along the bottom. Then count up to 5.",
+          "why": "That is d5. Letter first, then number."
+        },
+        {
+          "t": "tap",
+          "fen": "8/8/8/8/8/8/8/8 w - - 0 1",
+          "ask": "Now tap h1.",
+          "answer": [
+            "h1"
+          ],
+          "hint": "h is the last letter. 1 is the bottom row.",
+          "why": "h1 is the corner nearest White. It is a light square."
+        },
+        {
+          "t": "quiz",
+          "ask": "Which corner square is on your right when you are White?",
+          "choices": [
+            {
+              "id": "h1",
+              "text": "h1, and it is light"
+            },
+            {
+              "id": "a1",
+              "text": "a1, and it is dark"
+            }
+          ],
+          "answer": "h1",
+          "why": "White on the right. The light square goes in the right corner."
+        },
+        {
+          "t": "say",
+          "text": "Now the pieces can move in.",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+        },
+        {
+          "t": "done",
+          "text": "You can read the board now."
+        }
+      ]
     },
     {
       "id": "l1-rook",
@@ -22,7 +78,82 @@
       "big": "Straight lines, as far as it likes.",
       "minutes": 4,
       "piece": "rook",
-      "steps": []
+      "steps": [
+        {
+          "t": "say",
+          "text": "This is a rook. It is the castle tower.",
+          "fen": "k7/8/8/8/3R4/8/8/7K w - - 0 1"
+        },
+        {
+          "t": "show",
+          "fen": "k7/8/8/8/3R4/8/8/7K w - - 0 1",
+          "cap": "A rook runs in straight lines. Up, down, left and right.",
+          "mark": {
+            "dots": [
+              "d5",
+              "d6",
+              "d7",
+              "d8",
+              "d3",
+              "d2",
+              "d1",
+              "a4",
+              "b4",
+              "c4",
+              "e4",
+              "f4",
+              "g4",
+              "h4"
+            ]
+          }
+        },
+        {
+          "t": "try",
+          "fen": "k7/8/8/8/3R4/8/8/7K w - - 0 1",
+          "ask": "Move the rook to d7.",
+          "accept": [
+            "d4d7"
+          ],
+          "hint": "Straight up the line it is already on.",
+          "wrongSay": "A rook does not go slanted. Try a straight line."
+        },
+        {
+          "t": "say",
+          "text": "A rook cannot jump. It stops at the first piece.",
+          "fen": "k7/8/3p4/8/3R4/8/8/7K w - - 0 1",
+          "mark": {
+            "ring": [
+              "d6"
+            ]
+          }
+        },
+        {
+          "t": "tap",
+          "fen": "k7/8/3p4/8/3R4/8/8/7K w - - 0 1",
+          "ask": "Tap the far square the rook can reach going up.",
+          "answer": [
+            "d6"
+          ],
+          "hint": "It stops where the black pawn is. It can take that pawn.",
+          "why": "It stops there and takes the pawn. It cannot jump over it."
+        },
+        {
+          "t": "starhunt",
+          "fen": "k7/8/8/8/8/8/8/R6K w - - 0 1",
+          "piece": "a1",
+          "stars": [
+            "a6",
+            "f6",
+            "f1"
+          ],
+          "par": 3,
+          "ask": "Collect all three stars. Three moves is the best you can do."
+        },
+        {
+          "t": "done",
+          "text": "Straight lines, every time."
+        }
+      ]
     },
     {
       "id": "l1-bishop",

@@ -29,6 +29,46 @@
 
 import fs from 'node:fs';
 
+import { Chess as ChessLib } from '../assets/js/vendor/chess.js';
+import { checkLesson } from '../assets/js/modules/chesslesson.js';
+import { fenToPosition } from '../assets/js/modules/chesssquares.js';
+
+/**
+ * Is this really a FEN?
+ *
+ * It has to be asked here, because chess.js with { skipValidation: true } --
+ * which every king-less mini-game needs -- does not ask. "not a fen at all"
+ * loads as a board with one knight on a8, and "xxxx/8/8/8/8/8/8/8 w - - 0 1"
+ * loads as an empty board. Neither throws, neither logs, and the lesson shows
+ * a child a board that is simply wrong.
+ *
+ * So: eight ranks, each adding up to exactly eight squares, made only of
+ * pieces and digits, and a side to move. Then the position chess.js ended up
+ * with is compared against a strict reading of the same string, which catches
+ * anything that slipped through as a difference rather than as a crash.
+ */
+function fenProblem(fen) {
+  if (typeof fen !== 'string' || !fen.trim()) return 'is empty';
+  const [board, side] = fen.trim().split(/\s+/);
+  if (!board) return 'has no board in it';
+  const ranks = board.split('/');
+  if (ranks.length !== 8) return `has ${ranks.length} ranks, not 8`;
+  for (const [i, rank] of ranks.entries()) {
+    if (!/^[pnbrqkPNBRQK1-8]+$/.test(rank)) return `rank ${8 - i} ("${rank}") has a character that is not a piece or a number`;
+    const squares = [...rank].reduce((n, ch) => n + (/\d/.test(ch) ? Number(ch) : 1), 0);
+    if (squares !== 8) return `rank ${8 - i} ("${rank}") covers ${squares} squares, not 8`;
+  }
+  if (side && !/^[wb]$/.test(side)) return `"${side}" is not a side to move`;
+
+  let got;
+  try { got = new ChessLib(fen, { skipValidation: true }).fen(); } catch (e) { return e.message; }
+  const want = JSON.stringify(fenToPosition(fen));
+  if (JSON.stringify(fenToPosition(got)) !== want) {
+    return `chess.js reads it as "${got}", which is a different position`;
+  }
+  return null;
+}
+
 const errors = [];
 const warnings = [];
 const err = (m) => errors.push(m);
@@ -213,6 +253,15 @@ for (const m of new Set([...css.matchAll(/\.(cz-cb__[\w-]+)/g)].map((x) => x[1])
 if (!/min-width:\s*352px/.test(css)) {
   warn(`${CSS}: the board no longer has a 352px floor, so squares can fall under 44px`);
 }
+/* The floor has to be written at doubled specificity. createBoard() puts
+   .cz-cb on whatever element it is handed, so the board usually wears a layout
+   class as well, and a plain `.cz-cb { min-width }` loses to any `min-width: 0`
+   on that class written later in the file -- which is exactly what happened,
+   costing a phone a pixel per square in silence. */
+if (!/\.cz-cb\.cz-cb\s*\{[^}]*min-width:\s*352px/.test(css)) {
+  err(`${CSS}: the board's 352px floor must be written as .cz-cb.cz-cb so a `
+    + 'layout class on the same element cannot override it');
+}
 
 /* ------------------------------------------------------------------ */
 /* The lessons                                                         */
@@ -270,6 +319,59 @@ for (const n of [1, 2, 3]) {
     }
     if (lesson.piece && !['rook', 'bishop', 'queen', 'knight', 'pawn', 'king'].includes(lesson.piece)) {
       err(`${at}: "${lesson.piece}" is not a chess piece`);
+    }
+
+    /* The shape of every step, from the runner's own rules. */
+    for (const problem of checkLesson(lesson, at)) err(problem);
+
+    /* And then the chess itself. A lesson that asks for an illegal move is
+       not a broken program -- the board simply refuses, forever, and the
+       child is stuck on a step with no way past it. */
+    for (const [j, step] of (lesson.steps || []).entries()) {
+      const where = `${at} step ${j + 1} (${step.t})`;
+      let game = null;
+      if (step.fen) {
+        const problem = fenProblem(step.fen);
+        if (problem) { err(`${where}: the position "${step.fen}" ${problem}`); continue; }
+        game = new ChessLib(step.fen, { skipValidation: true });
+      }
+      if (step.t === 'try' && game) {
+        for (const uci of step.accept || []) {
+          const move = { from: uci.slice(0, 2), to: uci.slice(2, 4) };
+          if (uci[4]) move.promotion = uci[4];
+          let ok = false;
+          try { ok = Boolean(new ChessLib(step.fen, { skipValidation: true }).move(move)); } catch { ok = false; }
+          if (!ok) err(`${where}: "${uci}" is not a legal move in that position`);
+        }
+      }
+      if (step.t === 'starhunt' && game) {
+        if (!game.get(step.piece)) err(`${where}: there is no piece on ${step.piece}`);
+        for (const sq of step.stars || []) {
+          if (game.get(sq)) err(`${where}: a star sits on top of a piece at ${sq}`);
+        }
+      }
+      if (step.t === 'tap' && game) {
+        /* Nothing to prove about the answer itself, but the squares have to
+           be on the board, which checkStep already did. */
+      }
+      if (step.t === 'game') {
+        const g = step.fen ? new ChessLib(step.fen, { skipValidation: true }) : new ChessLib();
+        for (const [k, san] of (step.moves || []).entries()) {
+          try { g.move(san); } catch {
+            err(`${where}: move ${k + 1} "${san}" cannot be played`);
+            break;
+          }
+        }
+        for (const ply of Object.keys(step.notes || {})) {
+          if (Number(ply) > (step.moves || []).length) {
+            err(`${where}: a note is attached to move ${ply}, past the end of the game`);
+          }
+        }
+      }
+      if (step.t === 'puzzle' && step.theme) {
+        const file = `data/chess/puzzles/${step.theme}.json`;
+        if (!fs.existsSync(file)) warn(`${where}: no ${file} yet (Phase 5)`);
+      }
     }
   }
 }

@@ -22,6 +22,7 @@ import { ensurePieceDefs, pieceHref } from './../modules/chesspieces.js';
 import * as progress from './../modules/chessprogress.js';
 import { escapeHtml } from './../modules/charts.js';
 import { paintRoomHead } from './gifted.js';
+import { openLesson, closeLesson, lessonAction, lessonChoice } from './chesslesson.js';
 import { $, paint, showError, showScreen, state } from './../modules/shell.js';
 
 const esc = escapeHtml;
@@ -377,7 +378,10 @@ function paintState(board, game, move) {
 /* ------------------------------------------------------------------ */
 
 /** Everything with a data-action="chess-...", wired from app.js. */
-export function chessAction(name) {
+export function chessAction(name, el) {
+  /* The lesson player owns most of them; it says so by returning true. */
+  if (lessonAction(name, el)) return;
+
   if (name === 'chess-begin') {
     progress.update((p) => ({ ...p, seenIntro: true }));
     /* Straight into the first level rather than back to the hub: the child
@@ -401,6 +405,9 @@ export function chessAction(name) {
     paintState(board, game, null);
   }
 }
+
+/** A tapped choice in a lesson question. */
+export { lessonChoice };
 
 /* ------------------------------------------------------------------ */
 /* Routing                                                             */
@@ -444,10 +451,12 @@ export async function renderChess(step, lessonId) {
     const lesson = level.lessons.find((l) => l.id === lessonId);
     if (!lesson) { window.location.hash = `#/chess/${level.level}`; return; }
     $('#chesslesson-title').textContent = `${lesson.emoji} ${lesson.name}`;
+    if (isReady(lesson)) { openLesson(level, lesson, all); return; }
     renderSoon('chesslesson', 'gp-chesslesson-body', lesson.name,
       `"${lesson.big}" This lesson is being written.`);
     return;
   }
+  closeLesson();
   if (level) { renderLevel(level, all, p); return; }
 
   paintRoomHead('chess', 'cz-chess-pic');

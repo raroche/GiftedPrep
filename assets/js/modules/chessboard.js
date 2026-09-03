@@ -103,9 +103,13 @@ export function createBoard(container, opts = {}) {
     promo: null
   };
 
-  const canMove = opts.canMove || (() => true);
+  /* A board with no onMove cannot move anything, so nothing on it should
+     look pickable-up. Without this a "tap the right square" step selected the
+     piece standing on the square instead of counting the tap, and the child
+     could never answer a question whose answer had a piece on it. */
+  const onMove = opts.onMove || null;
+  const canMove = opts.canMove || (onMove ? () => true : () => false);
   const dests = opts.dests || (() => []);
-  const onMove = opts.onMove || (() => false);
   const onSquare = opts.onSquare || null;
 
   /* ---- skeleton ---- */
@@ -374,8 +378,14 @@ export function createBoard(container, opts = {}) {
     }
     /* Dots for where a lifted piece may go. A capture gets a ring instead of
        a dot, because a dot under a piece is invisible and "you may take that"
-       is the one thing a beginner most needs to see. */
-    for (const sq of state.dots) {
+       is the one thing a beginner most needs to see.
+
+       While a piece is held they are that piece's moves; the rest of the time
+       they are whatever the caller asked for. That second half was missing at
+       first, so a lesson saying mark({ dots: [...] }) to show where a rook can
+       go drew nothing at all, in silence. */
+    const dots = state.select ? state.dots : (m.dots || []);
+    for (const sq of dots) {
       if (!isSquare(sq)) continue;
       const { x, y } = at(sq);
       gOver.appendChild(state.position[sq]
@@ -438,7 +448,7 @@ export function createBoard(container, opts = {}) {
   function attempt(from, to, promo) {
     if (needsPromotion(from, to) && !promo) { askPromotion(from, to); return; }
     select(null);
-    const ok = onMove(from, to, promo);
+    const ok = onMove ? onMove(from, to, promo) : false;
     if (ok === false) render();
   }
 

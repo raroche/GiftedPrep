@@ -28,7 +28,7 @@ import { answerAngle, drawAngSetup, nextAngle, startAngRound, answerElement, dra
 import { applySpeechButton, renderGiftedExplainer, goForward, goPrev, handleAnswer, nextQuestion, paintRoomHead, questionCount, renderCategories, renderCountPicker, renderGradePicker, renderHomeStats, renderResults, renderRooms, renderTests, startSession } from './screens/gifted.js';
 import { answerMath, checkMath, crossOut, nimTake, paintRegion, pickDoor, renderMath, runMachine, settleDoor, stepExercise, tapPeg, toggleBuildCell, turnDial } from './screens/math.js';
 import { renderParents, toggleGuideLanguage } from './screens/parents.js';
-import { renderChess, chessAction } from './screens/chess.js';
+import { renderChess, chessAction, lessonChoice } from './screens/chess.js';
 import { renderLearn, renderElemLearn, renderAngleLearn, paintAngTurn, paintAngTrap, paintAngClock, learnStep, learnJump, learnOrder, showElementDetail } from './screens/learn.js';
 import { backTarget } from './modules/routes.js';
 
@@ -344,6 +344,13 @@ function onClick(ev) {
 
   if (ev.target.closest('#gp-exercise [data-check]')) { checkMath(); return; }
 
+  /* A chess lesson's question. It has to come BEFORE the generic .gp-choice
+     handler below: the chess cards wear that class to look like every other
+     set of answers on the site, and the gifted quiz would otherwise grab them
+     and try to score them against a session that does not exist. */
+  const chessPick = ev.target.closest('[data-chess-choice]');
+  if (chessPick) { lessonChoice(chessPick.dataset.chessChoice); return; }
+
   const choice = ev.target.closest('.gp-choice');
   if (choice && !state.answered) { handleAnswer(choice.dataset.choice); return; }
 
@@ -355,7 +362,7 @@ function onClick(ev) {
 
   const action = ev.target.closest('[data-action]');
   if (!action) return;
-  if (action.dataset.action.startsWith('chess-')) { chessAction(action.dataset.action); return; }
+  if (action.dataset.action.startsWith('chess-')) { chessAction(action.dataset.action, action); return; }
   switch (action.dataset.action) {
     case 'leave-quiz':
       leaveQuiz();

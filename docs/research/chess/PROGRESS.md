@@ -64,6 +64,26 @@ Add a "Chess" room to the CurioZoo home page with three levels:
   drew at zero by zero with no error — the same shape of failure the CSP once
   caused here. `.gp-bar__fill` is now `display: block` so the trap is shut for
   every caller, not just this one.
+- **`new Chess(fen, { skipValidation: true })` accepts nonsense.** Every
+  king-less mini-game needs that flag, and with it `"not a fen at all"` loads
+  as a board with one knight and `"xxxx/8/..."` as an empty board — no throw,
+  no log, just a wrong board in front of a child. `fenProblem()` in
+  `tools/chesscheck.mjs` checks the string properly; never trust the library.
+- **chess.js hands the turn over after every move,** which ends a one-player
+  star hunt after one move: `moves({ square })` comes back empty and the piece
+  silently stops being movable. `keepTurn()` in screens/chesslesson.js forces
+  the side to move back each time.
+- **A board with no `onMove` must not let anything be selected.** On a "tap the
+  right square" step, tapping a square with a piece on it selected the piece
+  instead of answering, so any question whose answer had a piece on it was
+  unanswerable. `createBoard` now defaults `canMove` to false when there is no
+  `onMove`.
+- **`mark({ dots })` did nothing** — `drawMarks` only ever read the board's own
+  selection state, so a lesson asking to show a rook's moves drew nothing.
+- **`min-width: 0` on a board container cancels the board's 44px floor.**
+  `createBoard()` puts `.cz-cb` on the element it is given, so the board wears
+  the layout class too and equal specificity means the later rule wins. The
+  floor is now `.cz-cb.cz-cb` and `chesscheck` insists on it.
 - The parity of a light square is `(file index + rank number) % 2 === 0`.
   Written as `=== 1` the whole board is painted in negative, which still looks
   like a chessboard and quietly ruins every lesson about bishop colours.
@@ -97,9 +117,17 @@ Add a "Chess" room to the CurioZoo home page with three levels:
       DEFAULTS. `chesscheck` now validates the level files; `linkcheck` knows
       every lesson id.
 
+- [x] **Phase 3 — the lesson player.** `modules/chesslesson.js` (pure: ten step
+      kinds, scoring, second chances, `checkLesson` used by the build; 38
+      tests) and `screens/chesslesson.js` (the player). Working step kinds:
+      say, show, try, starhunt, tap, quiz, game, done. `play` and `puzzle`
+      render a skip card until Phases 4 and 5. Two lessons written as proof,
+      `l1-board` and `l1-rook`, played end to end in a browser.
+      `chesscheck` now replays every lesson's FENs and moves through chess.js.
+
 ## Next step for the next model
-Start PLAN.md **Phase 3: the lesson player**. The room is `status: 'soon'`;
-flip to 'live' at the end of Phase 6.
+Start PLAN.md **Phase 4: the bot, playing and the mini-games**. The room is
+`status: 'soon'`; flip to 'live' at the end of Phase 6.
 
 ### Two design notes for whoever writes the lessons
 - A lesson with `steps: []` is treated as "not written yet" everywhere

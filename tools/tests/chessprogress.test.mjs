@@ -295,3 +295,19 @@ describe('reading back what was saved', () => {
     assert.equal(P.load().stars['l1-king'], 2);
   });
 });
+
+describe('nothing already earned is taken back', () => {
+  test('a lesson with stars stays open even when the one before it has none', () => {
+    /* Reached out of order -- from a link, or because the order changed --
+       and finished. A padlock on it afterwards is taking something back. */
+    const p = P.setStars(P.BLANK(), 'l1-3', 3);
+    assert.equal(P.isUnlocked('l1-3', LEVELS, p), true);
+    assert.equal(P.isUnlocked('l1-2', LEVELS, p), false, 'the gate still holds for the rest');
+  });
+
+  test('a finished lesson in a shut level is still open', () => {
+    const p = P.setStars(P.BLANK(), 'l3-2', 1);
+    assert.equal(P.levelGate(LEVELS, 2, p).open, false);
+    assert.equal(P.isUnlocked('l3-2', LEVELS, p), true);
+  });
+});

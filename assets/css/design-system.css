@@ -3429,12 +3429,19 @@ button, a, label, summary, [role="button"] {
 
   position: relative;
   width: min(92vw, 62vh, 34rem);
-  /* 44px per square is Apple's touch target and the size a six-year-old can
-     actually hit; below this the board is a puzzle of a different kind. */
-  min-width: 352px;
   margin-inline: auto;
   touch-action: none;          /* a drag must not scroll the page instead */
 }
+
+/* 44px per square is Apple's touch target and the size a six-year-old can
+   actually hit; below this the board is a puzzle of a different kind.
+   
+   The doubled class is deliberate. createBoard() adds .cz-cb to whatever
+   element it is handed, so the board usually wears a layout class too -- and a
+   `min-width: 0` on that class, written later in this file, beat the floor on
+   equal specificity and quietly cost a phone a pixel per square. One extra
+   class makes the floor win without anyone having to remember it exists. */
+.cz-cb.cz-cb { min-width: 352px; }
 
 .cz-cb__svg {
   display: block;
@@ -3770,4 +3777,99 @@ button, a, label, summary, [role="button"] {
   .cz-chess-stat { padding: var(--gp-space-3) var(--gp-space-1); }
   .cz-chess-stat__num { font-size: 1.1rem; }
   .cz-chess-stat__cap { font-size: .7rem; }
+}
+
+
+/* ==========================================================================
+   Playing one chess lesson (screens/chesslesson.js)
+
+   Board on one side, one short card on the other. Each step replaces the card
+   and repaints the board; nothing else moves, so a child never has to re-find
+   the button they just pressed.
+   ========================================================================== */
+
+.cz-lesson {
+  display: grid;
+  gap: var(--gp-space-5);
+  align-items: start;
+  margin-top: var(--gp-space-4);
+}
+@media (min-width: 900px) {
+  /* Side by side once there is room, board first: it is the thing being
+     talked about, and on a left-to-right page that means it comes first. */
+  .cz-lesson { grid-template-columns: minmax(320px, 1fr) minmax(280px, 24rem); }
+}
+
+/* No min-width here on purpose: createBoard() puts .cz-cb on this very
+   element and the board sets its own width. */
+
+.cz-lesson__side {
+  display: grid;
+  gap: var(--gp-space-3);
+  align-content: start;
+}
+
+.cz-lesson__dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.cz-lesson__card {
+  display: grid;
+  gap: var(--gp-space-3);
+  justify-items: start;
+  padding: var(--gp-space-5);
+  border: 2px solid var(--room-line, var(--gp-accent-line));
+  border-radius: var(--gp-radius-xl);
+  background: var(--room-soft, var(--gp-accent-soft));
+}
+
+/* The one line that says what to do. Big, because it is the only instruction
+   on the screen, and short, because a wall of text is the single commonest
+   reason a child puts a learning app down. */
+.cz-lesson__ask {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.cz-lesson__count { margin: 0; font-size: .85rem; color: var(--gp-ink-soft); }
+
+/* Feedback. It appears under the card rather than replacing anything, so the
+   question a child is answering stays on screen while they read the answer. */
+.cz-lesson__say {
+  margin: 0;
+  min-height: 1.4em;
+  font-size: .95rem;
+  line-height: 1.4;
+}
+.cz-lesson__say.is-good { color: var(--gp-good); font-weight: 700; }
+.cz-lesson__say.is-retry { color: var(--gp-ink-soft); }
+
+.cz-lesson__go { justify-self: stretch; text-align: center; }
+.cz-lesson__read { font-size: .85rem; }
+
+/* ---- the end card ---- */
+
+.cz-lesson__done { display: grid; gap: var(--gp-space-3); justify-items: center; text-align: center; }
+.cz-lesson__done h2 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
+
+.cz-lesson__stars { margin: 0; font-size: 2.6rem; line-height: 1; letter-spacing: .08em; }
+
+/* Freeing a piece is the reward that is not a number. Magnus' Kingdom cages
+   the pieces and hands out keys; this is the same idea with less ceremony. */
+.cz-lesson__freed {
+  margin: 0;
+  font-weight: 700;
+  color: var(--room-ink, var(--gp-accent-strong));
+}
+
+.cz-lesson__after { justify-content: center; }
+
+@media (max-width: 560px) {
+  .cz-lesson__card { padding: var(--gp-space-4); }
+  .cz-lesson__ask { font-size: 1.05rem; }
 }

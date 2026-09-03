@@ -281,6 +281,12 @@ export function badgeGoal(progress, levels = []) {
  * live, in whichever caller remembered.
  */
 export function isUnlocked(lessonId, levels, progress) {
+  /* Anything already done stays open, whatever the gates say. A lesson
+     finished with three stars showed a padlock the moment a child reached it
+     out of order, and taking back something already earned is the one thing
+     this whole file exists to prevent. Access only goes up, like stars. */
+  if ((progress.stars[lessonId] || 0) > 0) return true;
+
   const at = levels.findIndex((lv) => lv.lessons.some((l) => l.id === lessonId));
   if (at === -1) return false;
   const level = levels[at];
