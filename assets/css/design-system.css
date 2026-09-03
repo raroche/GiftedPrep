@@ -3942,14 +3942,21 @@ button, a, label, summary, [role="button"] {
    round, because a child should be able to see at a glance that there are two
    sides and one of them is them. */
 .cz-play__who {
-  display: flex;
-  align-items: center;
-  gap: var(--gp-space-3);
+  display: grid;
+  gap: var(--gp-space-2);
   width: min(92vw, 34rem);
   min-width: var(--cb-floor);
   padding: var(--gp-space-2) var(--gp-space-3);
   border-radius: var(--gp-radius-lg);
   background: var(--gp-surface);
+}
+/* Who they are, on one line. What they have taken goes underneath it, on a
+   line of its own: squeezed onto the end of this one the pieces had to be
+   tiny to fit beside a name, and a tally nobody can make out is not a tally. */
+.cz-play__line {
+  display: flex;
+  align-items: center;
+  gap: var(--gp-space-3);
 }
 .cz-play__name { font-weight: 800; }
 .cz-play__goal,
@@ -3969,29 +3976,29 @@ button, a, label, summary, [role="button"] {
 
 /* ---- what each player has taken ---- */
 
-/* Pushed to the end of the row, so the two strips line up with each other
-   above and below the board however long the names beside them are. */
+/* Its own row, under the name, aligned with it. */
 .cz-play__taken {
   display: flex;
   align-items: center;
-  gap: 1px;
-  margin-inline-start: auto;
-  min-height: 1.6rem;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  gap: 2px;
 }
-/* Small, and overlapping slightly: eight of them still have to fit beside a
-   name on a phone. They are a tally, not a gallery. */
-.cz-play__tk { width: 1.5rem; height: 1.5rem; margin-inline-end: -.35rem; }
+.cz-play__taken[hidden] { display: none; }
+
+/* Big enough to tell a bishop from a knight at arm's length on a phone, which
+   is the whole point of showing them. They still overlap a little, because
+   sixteen of them have to fit on a 320px screen, and they wrap when they do
+   not. */
+.cz-play__tk { width: 3rem; height: 3rem; margin-inline-end: -.7rem; }
 .cz-play__tk:last-of-type { margin-inline-end: 0; }
 
 /* Only ever shown beside the player who is ahead. */
 .cz-play__lead {
-  margin-inline-start: var(--gp-space-2);
-  padding: 0 .4rem;
+  margin-inline-start: var(--gp-space-3);
+  padding: .1rem .5rem;
   border-radius: var(--gp-radius-pill);
   background: var(--gp-surface-2);
-  font-size: .8rem;
+  font-size: 1rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
 }

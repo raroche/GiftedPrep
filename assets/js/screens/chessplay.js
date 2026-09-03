@@ -144,16 +144,20 @@ function startGame(spec, level, side) {
   $('#gp-chessplay-body').innerHTML = `
     <div class="cz-play">
       <div class="cz-play__who cz-play__who--them">
-        ${botFace(opponent)}
-        <span class="cz-play__name">${esc(opponent.name)}</span>
-        <span class="cz-play__think" id="cz-play-think" hidden>thinking&hellip;</span>
-        <span class="cz-play__taken" id="cz-play-taken-them"></span>
+        <div class="cz-play__line">
+          ${botFace(opponent)}
+          <span class="cz-play__name">${esc(opponent.name)}</span>
+          <span class="cz-play__think" id="cz-play-think" hidden>thinking&hellip;</span>
+        </div>
+        <div class="cz-play__taken" id="cz-play-taken-them" hidden></div>
       </div>
       <div id="cz-play-board"></div>
       <div class="cz-play__who cz-play__who--you">
-        <span class="cz-play__name">You</span>
-        <span class="cz-play__goal">${esc(spec.goal)}</span>
-        <span class="cz-play__taken" id="cz-play-taken-you"></span>
+        <div class="cz-play__line">
+          <span class="cz-play__name">You</span>
+          <span class="cz-play__goal">${esc(spec.goal)}</span>
+        </div>
+        <div class="cz-play__taken" id="cz-play-taken-you" hidden></div>
       </div>
       ${reviewBar()}
       <p class="cz-play__say" id="cz-play-say"></p>
@@ -244,9 +248,12 @@ function paintTaken() {
         aria-label="${esc(pieceName(code))}"><use href="${pieceHref(code)}"></use></svg>`;
     }).join('')
       + (badge ? `<span class="cz-play__lead">${badge}</span>` : '');
-    box.setAttribute('aria-label', gone.length
-      ? `taken: ${gone.length} piece${gone.length === 1 ? '' : 's'}${badge ? `, ${badge} ahead` : ''}`
-      : 'nothing taken yet');
+    /* Nothing taken yet is not an empty shelf to look at. The row appears the
+       moment there is something to put on it, which is also when a child
+       first has a reason to look there. */
+    box.hidden = gone.length === 0;
+    box.setAttribute('aria-label',
+      `taken: ${gone.length} piece${gone.length === 1 ? '' : 's'}${badge ? `, ${badge} ahead` : ''}`);
   };
   draw('#cz-play-taken-you', play.side);
   draw('#cz-play-taken-them', theirs);
