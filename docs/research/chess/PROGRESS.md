@@ -756,3 +756,42 @@ not force spoilers.
 
 Writing that guard found eleven more vague instructions nobody had noticed,
 including four in level 3 and two in level 2. All fixed.
+
+## Puzzles: stop, explain, and say what the number is for (2026-09-04)
+
+Three things reported from the same room.
+
+### A solved puzzle no longer jumps away
+`finishPuzzle` waited 1100ms and moved on. A child who had just worked
+something out lost the board before they could look at what they had done, and
+was never told whether they had got it right. Solving something and being
+hurried past it is the opposite of the point.
+
+The board stays with the finished position on it, and a panel underneath says
+what happened and offers the two things anybody wants next: "Next puzzle" or
+"Try that one again".
+
+**A second go is not scored.** The entry was pushed the moment the puzzle
+ended, and `replaying` stops it being pushed twice — so a second look cannot
+turn a second-try solve into a first-try one, and cannot move the rating.
+Otherwise a child learns to farm the button rather than to look. The flag
+lasts exactly one puzzle: `showPuzzle` clears it, and `redoPuzzle` sets it
+immediately afterwards. Left on, it would silently stop every later puzzle
+counting, which would read as the rating being broken.
+
+### "Puzzle power 800" said nothing
+A number with no explanation is a number a child cannot use: not what it
+counts, not whether 800 is good, not why it moves. A line under it now says
+it goes up when you solve one, down when you miss, and that it picks puzzles
+that are hard enough but not too hard. The results screen says which way it
+went and what that means for the next puzzles, because "▼ 3" on its own reads
+as a telling-off.
+
+### "White to move. Find it."
+Find WHAT. The theme name is not an explanation, and the addresses are open,
+so a child can land on Decoys without ever meeting a decoy.
+
+Every theme now carries a `look` line -- what to hunt for -- shown above the
+board. It is a different job from `blurb`: the card has to make a child press
+it, this has to tell them what they are doing. `chesscheck` fails a theme with
+no `look`, one under eight words, or one that just repeats the blurb.

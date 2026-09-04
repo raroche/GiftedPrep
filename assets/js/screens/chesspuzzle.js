@@ -75,6 +75,12 @@ function renderThemes(levels) {
       <span class="cz-puz-power__num">${p.puzzles.r}</span>
       <span class="cz-puz-power__cap">Puzzle power</span>
     </div>
+    <!-- A number with no explanation is a number a child cannot use. It was
+         shown on its own, and "800" tells them nothing at all: not what it
+         counts, not whether it is good, not why it moves. -->
+    <p class="cz-puz-power__what">Solve a puzzle and it goes up. Miss one and it
+      goes down a little. It is how we pick puzzles that are hard enough for
+      you, but not too hard.</p>
     <div class="cz-puz-themes">${cards}</div>`;
   paint();
   showScreen('chesspuzzle');
@@ -138,10 +144,12 @@ async function startSession(theme) {
         <span class="cz-puz__theme">${esc(spec ? spec.name : theme)}</span>
         <span class="cz-puz__count" id="cz-puz-count"></span>
       </div>
+      ${spec && spec.look ? `<p class="cz-puz__look">${esc(spec.look)}</p>` : ''}
       <p class="cz-puz__ask" id="cz-puz-ask"></p>
       <div id="cz-puz-board"></div>
       <p class="cz-puz__say" id="cz-puz-say"></p>
-      <div class="gp-row gp-row--wrap cz-puz__tools">
+      <div class="cz-puz__after" id="cz-puz-after" hidden></div>
+      <div class="gp-row gp-row--wrap cz-puz__tools" id="cz-puz-tools">
         <button type="button" class="gp-btn gp-btn--quiet" data-action="chess-puzhint">
           I am stuck</button>
         <a class="gp-btn gp-btn--quiet" href="#/chess/puzzles">Stop here</a>
@@ -165,6 +173,11 @@ function showPuzzle() {
   const ready = puzzles.prepare(run.queue[run.at]);
   if (!ready) { run.at += 1; showPuzzle(); return; }
   run.ready = ready;
+  /* `replaying` is set only by the "try that one again" button, and it lasts
+     exactly one puzzle. Leaving it on would silently stop every later puzzle
+     counting, which is the kind of bug that looks like the rating being
+     broken. redoPuzzle() sets it immediately after this runs. */
+  run.replaying = false;
   run.step = 0;
   run.tries = 0;
 
@@ -233,9 +246,11 @@ function armForChild() {
   if (!run) return;
   run.locked = false;
   if (state.chess.board) state.chess.board.unlock();
+  /* Which side you are and what you are being asked for. "Find it" alone
+     assumed a child already knew what "it" was. */
   $('#cz-puz-ask').textContent = run.side === 'w'
-    ? 'White to move. Find it.'
-    : 'Black to move. Find it.';
+    ? 'You are White. Find the best move and play it.'
+    : 'You are Black. Find the best move and play it.';
 }
 
 /**
@@ -346,18 +361,91 @@ function giveAway() {
   }, 500);
 }
 
+/**
+ * One puzzle is over. Stop, and say so.
+ *
+ * This used to wait eleven hundred milliseconds and jump to the next puzzle.
+ * A child who had just worked one out got a board that vanished before they
+ * could look at what they had done, and no word about whether they had got it
+ * right. Solving something and being hurried on is the opposite of the point.
+ *
+ * The board stays, with the finished position on it, and the panel underneath
+ * offers the two things anybody wants next: do that one again, or go on.
+ */
 function finishPuzzle(firstTry) {
   const run = state.chess.puzzle;
-  run.done.push({
-    id: run.ready.id, rating: run.ready.rating, rd: run.ready.rd, right: firstTry
-  });
+  /* A puzzle counts once. Looking at it again is for understanding it, not
+     for a better score: a second go must not turn a second-try solve into a
+     first-try one, and must not move the rating. */
+  if (!run.replaying) {
+    run.done.push({
+      id: run.ready.id, rating: run.ready.rating, rd: run.ready.rd, right: firstTry
+    });
+  }
   run.locked = true;
+  run.over = true;
   if (state.chess.board) state.chess.board.lock();
-  window.setTimeout(() => {
-    if (state.chess.puzzle !== run) return;
-    run.at += 1;
-    showPuzzle();
-  }, 1100);
+
+  const last = run.at + 1 >= run.queue.length;
+  const head = run.replaying ? 'Solved it again.'
+    : firstTry ? 'Solved it, first try.' : 'Solved.';
+  const sub = run.replaying
+    ? 'That one is already counted. This go was just for you.'
+    : firstTry ? 'That is the one the game itself missed.'
+      : 'You have seen it now. That is how the next one gets easier.';
+
+  const box = $('#cz-puz-after');
+  if (box) {
+    box.hidden = false;
+    box.innerHTML = `
+      <p class="cz-puz__done-head">${firstTry ? '★ ' : ''}${esc(head)}</p>
+      <p class="cz-puz__done-sub">${esc(sub)}</p>
+      <div class="gp-row gp-row--wrap cz-puz__done-row">
+        <button type="button" class="gp-btn gp-btn--primary gp-btn--big" data-action="chess-puznext">
+          ${last ? 'See how I did' : 'Next puzzle'} &rarr;</button>
+        <button type="button" class="gp-btn gp-btn--quiet" data-action="chess-puzredo">
+          Try that one again</button>
+      </div>`;
+  }
+  const tools = $('#cz-puz-tools');
+  if (tools) tools.hidden = true;
+  tell('');
+  paint();
+}
+
+/** Move on, once the child says so. */
+function nextPuzzle() {
+  const run = state.chess.puzzle;
+  if (!run || !run.over) return;
+  run.over = false;
+  const box = $('#cz-puz-after');
+  if (box) { box.hidden = true; box.innerHTML = ''; }
+  const tools = $('#cz-puz-tools');
+  if (tools) tools.hidden = false;
+  run.at += 1;
+  showPuzzle();
+}
+
+/**
+ * Do the same puzzle again.
+ *
+ * The attempt already counted, and it is not counted twice: the entry pushed
+ * a moment ago stays exactly as it was, so a second look cannot turn a
+ * second-try solve into a first-try one, and cannot move the rating either.
+ * Trying something again to understand it should never be worth points, or a
+ * child learns to farm it rather than to look.
+ */
+function redoPuzzle() {
+  const run = state.chess.puzzle;
+  if (!run || !run.over) return;
+  run.over = false;
+  const box = $('#cz-puz-after');
+  if (box) { box.hidden = true; box.innerHTML = ''; }
+  const tools = $('#cz-puz-tools');
+  if (tools) tools.hidden = false;
+  showPuzzle();
+  /* After showPuzzle, which clears it for a fresh puzzle. */
+  run.replaying = true;
 }
 
 /* ------------------------------------------------------------------ */
@@ -390,6 +478,13 @@ function finish() {
           ${moved === 0 ? '' : `<span class="cz-puz-power__move${moved > 0 ? ' is-up' : ' is-down'}">${
             moved > 0 ? '▲' : '▼'} ${Math.abs(moved)}</span>`}</span>
       </p>
+      <!-- The arrow said "▼ 3" and nothing else, which reads as a telling-off.
+           Saying what the number is FOR turns it into a reason to come back. -->
+      <p class="cz-puz-power__what">${moved > 0
+        ? `Up ${moved}. The next puzzles will be a little harder.`
+        : moved < 0
+          ? `Down ${Math.abs(moved)}. The next ones will be a little easier, so you can get going again.`
+          : 'Just right. The next puzzles will be about this hard.'}</p>
       <div class="gp-row gp-row--wrap cz-lesson__after">
         <button type="button" class="gp-btn gp-btn--primary gp-btn--big" data-action="chess-puzagain">
           Five more</button>
@@ -407,6 +502,8 @@ function finish() {
 /** Every data-action="chess-puz..." on this screen. */
 export function puzzleAction(name) {
   const run = state.chess.puzzle;
+  if (name === 'chess-puznext') { nextPuzzle(); return true; }
+  if (name === 'chess-puzredo') { redoPuzzle(); return true; }
   if (name === 'chess-puzhint') {
     if (!run || !run.ready) return true;
     run.tries = Math.max(run.tries, HELP_AFTER);

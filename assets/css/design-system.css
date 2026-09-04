@@ -4155,6 +4155,15 @@ button, a, label, summary, [role="button"] {
   text-align: center;
 }
 .cz-puz-power__num { font-size: 2.2rem; font-weight: 800; line-height: 1; }
+/* What the number means, in the child's own words. Narrow on purpose: it is
+   two short lines under the number, not a paragraph to wade through. */
+.cz-puz-power__what {
+  max-width: 30rem;
+  margin: var(--gp-space-2) auto 0;
+  text-align: center;
+  font-size: .9rem;
+  color: var(--gp-ink-soft);
+}
 .cz-puz-power__cap { font-size: .8rem; color: var(--gp-ink-soft); }
 .cz-puz-power--after { margin-block: var(--gp-space-3); }
 
@@ -4180,6 +4189,33 @@ button, a, label, summary, [role="button"] {
 }
 .cz-puz-theme:hover,
 .cz-puz-theme:focus-visible { border-color: var(--room, var(--gp-accent)); }
+/* What this kind of puzzle is, above the board, for a child who has landed
+   here without doing the lesson that teaches it. */
+.cz-puz__look {
+  width: min(92vw, 34rem);
+  margin: 0 auto var(--gp-space-2);
+  text-align: center;
+  font-size: .9rem;
+  color: var(--gp-ink-soft);
+}
+
+/* The panel after a puzzle is solved. It sits under the board rather than over
+   it, because the finished position is the thing a child has just earned the
+   right to look at, and a box on top of it takes that away. */
+.cz-puz__after {
+  width: min(92vw, 34rem);
+  margin-inline: auto;
+  padding: var(--gp-space-4);
+  border: 2px solid var(--gp-line);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  text-align: center;
+}
+.cz-puz__after[hidden] { display: none; }
+.cz-puz__done-head { margin: 0; font-size: 1.15rem; font-weight: 800; }
+.cz-puz__done-sub { margin: var(--gp-space-2) 0 0; color: var(--gp-ink-soft); font-size: .9rem; }
+.cz-puz__done-row { justify-content: center; margin-top: var(--gp-space-4); }
+
 .cz-puz-theme.is-locked { opacity: .6; cursor: default; }
 .cz-puz-theme.is-locked:hover { border-color: var(--gp-line); }
 .cz-puz-theme__name { font-weight: 800; }

@@ -766,6 +766,39 @@ else if (room.status === 'live') {
 }
 
 /* ------------------------------------------------------------------ */
+/* A puzzle theme has to explain itself                                */
+/* ------------------------------------------------------------------ */
+
+/* A child can land straight on a theme without doing the lesson that teaches
+   it -- the addresses are open and the cards are all on one page. The board
+   said only "White to move. Find it.", which assumes they already know what a
+   decoy is. Every theme carries a line saying what to hunt for, and it is
+   shown above the board. */
+{
+  const { THEMES: PT } = await import('../assets/js/modules/chesspuzzles.js');
+  for (const t of PT) {
+    const look = typeof t.look === 'string' ? t.look.trim() : '';
+    if (!look) {
+      err(`puzzle theme "${t.id}" has no "look" line, so the board never says `
+        + 'what this kind of puzzle is');
+      continue;
+    }
+    const words = look.split(/\s+/).length;
+    if (words < 8) {
+      err(`puzzle theme "${t.id}": "${look}" is ${words} words — too short to `
+        + 'tell a child what to hunt for');
+    }
+    if (words > 24) {
+      warn(`puzzle theme "${t.id}": "${look}" is ${words} words, read above a board`);
+    }
+    if (look === t.blurb) {
+      err(`puzzle theme "${t.id}": "look" just repeats the card blurb — the card `
+        + 'sells it, this one has to explain it');
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /* An instruction has to say what to do                                */
 /* ------------------------------------------------------------------ */
 

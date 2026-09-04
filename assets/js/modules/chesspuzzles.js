@@ -32,20 +32,42 @@
  * not been done yet is shown but shut, with the lesson named — a locked door
  * with a sign on it teaches something; one without does not.
  */
+/*
+ * `blurb` is the line on the card, chosen to make a child want to press it.
+ * `look` is a different job: it is shown ABOVE the board while they are
+ * solving, and it has to say what to hunt for.
+ *
+ * The board used to say only "White to move. Find it." A child who has landed
+ * on Decoys without doing the decoy lesson has no idea what a decoy is, and
+ * "find it" does not tell them. The name of the theme is not an explanation.
+ */
 export const THEMES = [
-  { id: 'mateIn1', name: 'Checkmate in one', blurb: 'One move ends it.', opens: 'l1-mate' },
-  { id: 'hangingPiece', name: 'Free pieces', blurb: 'Somebody left something out.', opens: 'l2-hanging' },
-  { id: 'fork', name: 'Forks', blurb: 'One piece, two victims.', opens: 'l2-fork' },
-  { id: 'pin', name: 'Pins', blurb: 'It cannot move out of the way.', opens: 'l2-pin' },
-  { id: 'skewer', name: 'Skewers', blurb: 'Shove the big one and take what is behind.', opens: 'l2-skewer' },
-  { id: 'discoveredAttack', name: 'Discovered attacks', blurb: 'Move one piece, another one strikes.', opens: 'l2-discovered' },
-  { id: 'backRankMate', name: 'Back rank', blurb: 'Trapped behind their own pawns.', opens: 'l2-backrank' },
-  { id: 'capturingDefender', name: 'Remove the guard', blurb: 'Take the piece that was protecting it.', opens: 'l2-defender' },
-  { id: 'mateIn2', name: 'Checkmate in two', blurb: 'Two moves, and they cannot stop it.', opens: 'l2-game' },
-  { id: 'deflection', name: 'Deflection', blurb: 'Drag a defender off its job.', opens: 'l3-deflection' },
-  { id: 'attraction', name: 'Decoys', blurb: 'Lure a piece somewhere terrible.', opens: 'l3-decoy' },
-  { id: 'promotion', name: 'Promotion', blurb: 'Get the pawn home.', opens: 'l1-special' },
-  { id: 'endgame', name: 'Endgames', blurb: 'Few pieces, one right answer.', opens: 'l2-kingfight' }
+  { id: 'mateIn1', name: 'Checkmate in one', blurb: 'One move ends it.', opens: 'l1-mate',
+    look: 'One move ends the game. Look for a check their king cannot escape.' },
+  { id: 'hangingPiece', name: 'Free pieces', blurb: 'Somebody left something out.', opens: 'l2-hanging',
+    look: 'Something of theirs has nobody guarding it. Find it and take it.' },
+  { id: 'fork', name: 'Forks', blurb: 'One piece, two victims.', opens: 'l2-fork',
+    look: 'A fork is one piece attacking two things at once. Find the square that hits both.' },
+  { id: 'pin', name: 'Pins', blurb: 'It cannot move out of the way.', opens: 'l2-pin',
+    look: 'A pin freezes a piece, because something better is behind it. Line yours up and take aim.' },
+  { id: 'skewer', name: 'Skewers', blurb: 'Shove the big one and take what is behind.', opens: 'l2-skewer',
+    look: 'A skewer hits a big piece so it has to move, and takes the smaller one behind it.' },
+  { id: 'discoveredAttack', name: 'Discovered attacks', blurb: 'Move one piece, another one strikes.', opens: 'l2-discovered',
+    look: 'Move one piece out of the way, and the piece behind it does the damage.' },
+  { id: 'backRankMate', name: 'Back rank', blurb: 'Trapped behind their own pawns.', opens: 'l2-backrank',
+    look: 'Their king is stuck behind its own pawns. Get a rook or queen onto that back row.' },
+  { id: 'capturingDefender', name: 'Remove the guard', blurb: 'Take the piece that was protecting it.', opens: 'l2-defender',
+    look: 'Something is guarded. Take the guard first, and then the thing it was guarding.' },
+  { id: 'mateIn2', name: 'Checkmate in two', blurb: 'Two moves, and they cannot stop it.', opens: 'l2-game',
+    look: 'Two moves and it is over. Play the first one, and whatever they try, finish it.' },
+  { id: 'deflection', name: 'Deflection', blurb: 'Drag a defender off its job.', opens: 'l3-deflection',
+    look: 'A piece of theirs has a job. Make it an offer it cannot refuse, so it has to leave.' },
+  { id: 'attraction', name: 'Decoys', blurb: 'Lure a piece somewhere terrible.', opens: 'l3-decoy',
+    look: 'A decoy drags one of their pieces onto a bad square. Usually you give something away to do it.' },
+  { id: 'promotion', name: 'Promotion', blurb: 'Get the pawn home.', opens: 'l1-special',
+    look: 'Get a pawn to the far end, where it turns into a queen. Clear its path if you must.' },
+  { id: 'endgame', name: 'Endgames', blurb: 'Few pieces, one right answer.', opens: 'l2-kingfight',
+    look: 'Few pieces left, and one move is best. Think about the king and the pawns.' }
 ];
 
 export const themeById = (id) => THEMES.find((t) => t.id === id) || null;
