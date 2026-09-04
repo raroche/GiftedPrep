@@ -358,7 +358,7 @@
         {
           "t": "say",
           "text": "A piece can attack through another one. It cannot take yet, but it is waiting.",
-          "fen": "3q2k1/5ppp/8/3r4/8/8/5PPP/3R2K1 w - - 0 1",
+          "fen": "3q2k1/5pp1/7p/3b4/8/7P/5PP1/3R2K1 w - - 0 1",
           "mark": {
             "arrows": [
               [
@@ -370,23 +370,23 @@
         },
         {
           "t": "tap",
-          "fen": "3q2k1/5ppp/8/3r4/8/8/5PPP/3R2K1 w - - 0 1",
+          "fen": "3q2k1/5pp1/7p/3b4/8/7P/5PP1/3R2K1 w - - 0 1",
           "ask": "Your rook is on d1. What is it really aiming at, further up the file?",
           "answer": [
             "d8"
           ],
-          "hint": "Look past the black rook on d5, all the way up.",
-          "why": "The queen on d8. The black rook is the only thing in the way, and rooks move."
+          "hint": "Look past the black bishop on d5, all the way up.",
+          "why": "The queen on d8. The bishop is the only thing in the way, and it cannot stay there."
         },
         {
           "t": "say",
-          "text": "So the black rook is stuck. The moment it steps off the file, the queen is yours.",
-          "fen": "3q2k1/5ppp/8/3r4/8/8/5PPP/3R2K1 w - - 0 1"
+          "text": "So the bishop is stuck. A bishop cannot stay on that file, and the moment it leaves, the queen is yours.",
+          "fen": "3q2k1/5pp1/7p/3b4/8/7P/5PP1/3R2K1 w - - 0 1"
         },
         {
           "t": "try",
-          "fen": "3q2k1/5ppp/8/r7/8/8/5PPP/3R2K1 w - - 0 1",
-          "ask": "It has moved to a5. Collect the queen.",
+          "fen": "3q2k1/1b3pp1/7p/8/8/7P/5PP1/3R2K1 w - - 0 1",
+          "ask": "It has moved to b7. Collect the queen.",
           "accept": [
             "d1d8"
           ],

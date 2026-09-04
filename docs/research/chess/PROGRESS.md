@@ -662,3 +662,50 @@ A check in the build path must give the same answer twice. Where a defect is
 rare, construct it instead of sampling for it. `tools/anglecheck.mjs` now
 fails if anything in it calls `Math.random(` again; the tests that sample are
 either seeded or paired with a deterministic case that pins the same fact.
+
+## X-ray Eyes taught from a position that was already lost (2026-09-04)
+
+Reported: the example is bad. It was worse than that.
+
+`3q2k1/5ppp/8/3r4/8/8/5PPP/3R2K1` — the lesson says "So the black rook is
+stuck. The moment it steps off the file, the queen is yours." The black rook
+was not stuck. It could take the very rook that was supposedly holding it,
+and **Rxd1 is checkmate** — white's king sealed behind its own f2/g2/h2 pawns.
+A child was being shown a tactic from a position where the other side mates
+in one.
+
+Every FEN was legal and every accepted move was legal, so nothing caught it.
+The story only falls apart if you ask what the OTHER side would do.
+
+Replaced with `3q2k1/5pp1/7p/3b4/8/7P/5PP1/3R2K1`, verified through chess.js:
+black has no check and no mate; the only capture is Bxg2, which loses a bishop
+for a pawn; the bishop cannot stay on the d file at all, so every move it has
+gives up the queen; and after Bb7, Rxd8+ wins the queen and is a check rather
+than a mate, because both kings were given air (h6 and h3).
+
+A bishop is a better teaching piece here than the rook was. A rook could slide
+down the file and stay in the way; a bishop cannot be on that file at all
+after it moves, which is exactly the "it may move, but it dare not" idea the
+lesson's own quiz defines.
+
+### The guard
+`chesscheck` now reads the step's own words. Where a step claims a piece is
+stuck, pinned, frozen or dare not move, it gives the other side the move and
+fails if they have mate in one. It only inspects steps that make the claim:
+in ordinary chess the side to move having mate in one is not a fault, it is
+whose turn it is. Turn-flips that produce an impossible position (the side
+that just moved left themselves in check) are skipped, since nothing can be
+concluded from them.
+
+Proved by putting the old position and its old sentence back: it fails with
+the exact move, `Rxd1#`.
+
+### Checked while there: l2-pin is sound
+The other lesson that claims a piece cannot move. The knight really is
+absolutely pinned (zero legal moves), the rook doing the pinning cannot be
+taken, and black has no mate. Left alone.
+
+### Noted, not changed: l3-overload
+Black has Rxd1# available in that position too, but it is White to move and
+White's Rxd8+ comes first, so the lesson works as written. It is fragile
+rather than wrong. Worth revisiting if it is ever touched.

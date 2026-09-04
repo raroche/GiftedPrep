@@ -766,6 +766,58 @@ else if (room.status === 'live') {
 }
 
 /* ------------------------------------------------------------------ */
+/* A lesson that says a piece is stuck had better be right              */
+/* ------------------------------------------------------------------ */
+
+/*
+ * "So the black rook is stuck. The moment it steps off the file, the queen is
+ * yours." The rook was not stuck. It could take the rook that was supposedly
+ * holding it -- and that capture was CHECKMATE. A child following the lesson
+ * was being taught a tactic out of a position where the other side simply
+ * wins on the spot.
+ *
+ * Nothing caught it because every FEN was legal, every accepted move was
+ * legal, and the story only falls apart if you ask what the other side would
+ * do. So that is what this asks. Where a step's own words claim the opponent
+ * cannot move, give the opponent the move and check they have no mate.
+ *
+ * It only inspects steps that make the claim, because in ordinary chess the
+ * side to move having mate in one is not a fault -- it is whose turn it is.
+ */
+{
+  const CLAIMS = /stuck|cannot move|can not move|dare not|may not move|frozen|cannot leave|is pinned|pinned piece/i;
+  for (const level of levels) {
+    const file = `data/chess/level${level.level}.json`;
+    for (const lesson of level.lessons || []) {
+      for (const [j, step] of (lesson.steps || []).entries()) {
+        if (!step.fen) continue;
+        const words = [step.text, step.ask, step.why, step.hint, step.cap, step.goal]
+          .filter((t) => typeof t === 'string').join(' ');
+        if (!CLAIMS.test(words)) continue;
+
+        const parts = step.fen.split(' ');
+        const them = parts[1] === 'w' ? 'b' : 'w';
+        parts[1] = them;
+        parts[3] = '-';           /* an en-passant square from the other side is nonsense */
+        let theirs;
+        try { theirs = new ChessLib(parts.join(' '), { skipValidation: true }); } catch { continue; }
+        /* Flipping the turn can invent an impossible position -- one where the
+           side that just "moved" is in check. Nothing can be concluded from
+           those, so they are left alone. */
+        if (theirs.inCheck()) continue;
+
+        const mates = theirs.moves({ verbose: true }).filter((m) => m.san.includes('#'));
+        if (mates.length) {
+          err(`${file} lesson ${lesson.id} step ${j + 1}: it says a piece is stuck, `
+            + `but with the move that side plays ${mates.map((m) => m.san).join(' or ')} `
+            + 'and the game is over — the lesson is teaching from a position that is lost');
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /* Looking back at a finished game                                     */
 /* ------------------------------------------------------------------ */
 
