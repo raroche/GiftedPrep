@@ -41,36 +41,127 @@
  * on Decoys without doing the decoy lesson has no idea what a decoy is, and
  * "find it" does not tell them. The name of the theme is not an explanation.
  */
+/**
+ * Families, so sixty cards do not arrive as one wall.
+ *
+ * Thirteen flat cards already strained the page. The research note
+ * (06-openings-and-tactics.md) is blunt about it: grouping is what makes a
+ * big library feel small enough to start on.
+ */
+export const FAMILIES = [
+  { id: 'basics', name: 'The first ideas', blurb: 'Where everybody starts.' },
+  { id: 'sharp', name: 'Sharp tactics', blurb: 'One move, and something falls over.' },
+  { id: 'mates', name: 'Mates with names', blurb: 'Every shape has a name. Learn the name, spot the shape.' },
+  { id: 'ladder', name: 'The mate ladder', blurb: 'One move. Then two. See how far you get.' },
+  { id: 'endings', name: 'Endings', blurb: 'Few pieces left, and one right answer.' }
+];
+
 export const THEMES = [
-  { id: 'mateIn1', name: 'Checkmate in one', blurb: 'One move ends it.', opens: 'l1-mate',
+  /* ---- the first ideas ---- */
+  { id: 'mateIn1', family: 'basics', name: 'Checkmate in one', blurb: 'One move ends it.', opens: 'l1-mate',
     look: 'One move ends the game. Look for a check their king cannot escape.' },
-  { id: 'hangingPiece', name: 'Free pieces', blurb: 'Somebody left something out.', opens: 'l2-hanging',
+  { id: 'hangingPiece', family: 'basics', name: 'Free pieces', blurb: 'Somebody left something out.', opens: 'l2-hanging',
     look: 'Something of theirs has nobody guarding it. Find it and take it.' },
-  { id: 'fork', name: 'Forks', blurb: 'One piece, two victims.', opens: 'l2-fork',
+  { id: 'fork', family: 'basics', name: 'Forks', blurb: 'One piece, two victims.', opens: 'l2-fork',
     look: 'A fork is one piece attacking two things at once. Find the square that hits both.' },
-  { id: 'pin', name: 'Pins', blurb: 'It cannot move out of the way.', opens: 'l2-pin',
+  { id: 'pin', family: 'basics', name: 'Pins', blurb: 'It cannot move out of the way.', opens: 'l2-pin',
     look: 'A pin freezes a piece, because something better is behind it. Line yours up and take aim.' },
-  { id: 'skewer', name: 'Skewers', blurb: 'Shove the big one and take what is behind.', opens: 'l2-skewer',
+  { id: 'skewer', family: 'basics', name: 'Skewers', blurb: 'Shove the big one and take what is behind.', opens: 'l2-skewer',
     look: 'A skewer hits a big piece so it has to move, and takes the smaller one behind it.' },
-  { id: 'discoveredAttack', name: 'Discovered attacks', blurb: 'Move one piece, another one strikes.', opens: 'l2-discovered',
-    look: 'Move one piece out of the way, and the piece behind it does the damage.' },
-  { id: 'backRankMate', name: 'Back rank', blurb: 'Trapped behind their own pawns.', opens: 'l2-backrank',
-    look: 'Their king is stuck behind its own pawns. Get a rook or queen onto that back row.' },
-  { id: 'capturingDefender', name: 'Remove the guard', blurb: 'Take the piece that was protecting it.', opens: 'l2-defender',
-    look: 'Something is guarded. Take the guard first, and then the thing it was guarding.' },
-  { id: 'mateIn2', name: 'Checkmate in two', blurb: 'Two moves, and they cannot stop it.', opens: 'l2-game',
-    look: 'Two moves and it is over. Play the first one, and whatever they try, finish it.' },
-  { id: 'deflection', name: 'Deflection', blurb: 'Drag a defender off its job.', opens: 'l3-deflection',
-    look: 'A piece of theirs has a job. Make it an offer it cannot refuse, so it has to leave.' },
-  { id: 'attraction', name: 'Decoys', blurb: 'Lure a piece somewhere terrible.', opens: 'l3-decoy',
-    look: 'A decoy drags one of their pieces onto a bad square. Usually you give something away to do it.' },
-  { id: 'promotion', name: 'Promotion', blurb: 'Get the pawn home.', opens: 'l1-special',
+  { id: 'promotion', family: 'basics', name: 'Promotion', blurb: 'Get the pawn home.', opens: 'l1-special',
     look: 'Get a pawn to the far end, where it turns into a queen. Clear its path if you must.' },
-  { id: 'endgame', name: 'Endgames', blurb: 'Few pieces, one right answer.', opens: 'l2-kingfight',
-    look: 'Few pieces left, and one move is best. Think about the king and the pawns.' }
+
+  /* ---- sharp tactics ---- */
+  { id: 'discoveredAttack', family: 'sharp', name: 'Discovered attacks', blurb: 'Move one piece, another one strikes.', opens: 'l2-discovered',
+    look: 'Move one piece out of the way, and the piece behind it does the damage.' },
+  { id: 'doubleCheck', family: 'sharp', name: 'Double check', blurb: 'Two checks at once. Only the king can move.', opens: 'l2-discovered',
+    look: 'Two pieces give check at the same time. Blocking is impossible, so the king must run.' },
+  { id: 'capturingDefender', family: 'sharp', name: 'Remove the guard', blurb: 'Take the piece that was protecting it.', opens: 'l2-defender',
+    look: 'Something is guarded. Take the guard first, and then the thing it was guarding.' },
+  { id: 'deflection', family: 'sharp', name: 'Deflection', blurb: 'Drag a defender off its job.', opens: 'l3-deflection',
+    look: 'A piece of theirs has a job. Make it an offer it cannot refuse, so it has to leave.' },
+  { id: 'attraction', family: 'sharp', name: 'Decoys', blurb: 'Lure a piece somewhere terrible.', opens: 'l3-decoy',
+    look: 'A decoy drags one of their pieces onto a bad square. Usually you give something away to do it.' },
+  { id: 'interference', family: 'sharp', name: 'Interference', blurb: 'Slam a door in the middle of the line.', opens: 'l3-interference',
+    look: 'Put one of your pieces between a guard and the thing it guards. The line is cut.' },
+  { id: 'clearance', family: 'sharp', name: 'Clearance', blurb: 'Get out of your own way.', opens: 'l3-clearance',
+    look: 'One of your own pieces is blocking the winning line. Move it, ideally with check.' },
+  { id: 'intermezzo', family: 'sharp', name: 'In-between moves', blurb: 'Wait — do this first.', opens: 'l3-zwischenzug',
+    look: 'Before you take back, look for a check or a threat that comes first.' },
+  { id: 'xRayAttack', family: 'sharp', name: 'X-rays', blurb: 'Attack straight through a piece.', opens: 'l3-xray',
+    look: 'Your piece aims through one of theirs at something better behind it.' },
+  { id: 'sacrifice', family: 'sharp', name: 'Sacrifices', blurb: 'Give something up. Get more back.', opens: 'l3-attack',
+    look: 'Give a piece away on purpose. What comes after it is worth more than the piece.' },
+  { id: 'trappedPiece', family: 'sharp', name: 'Trapped pieces', blurb: 'It has nowhere to go.', opens: 'l2-count',
+    look: 'One of their pieces has run out of squares. Attack it and it cannot get away.' },
+  { id: 'advancedPawn', family: 'sharp', name: 'Runaway pawns', blurb: 'One step from becoming a queen.', opens: 'l1-special',
+    look: 'A pawn is nearly home. Push it, or clear the way, and it becomes a queen.' },
+  { id: 'quietMove', family: 'sharp', name: 'Quiet moves', blurb: 'No check, no capture, and it wins.', opens: 'l3-plan',
+    look: 'The winning move takes nothing and checks nothing. It just leaves them with no answer.' },
+  { id: 'zugzwang', family: 'sharp', name: 'Zugzwang', blurb: 'Having to move is the problem.', opens: 'l2-opposition',
+    look: 'They are fine until they have to move. Every move they have makes it worse.' },
+  { id: 'kingsideAttack', family: 'sharp', name: 'Storm the castle', blurb: 'They castled. Go and get them.', opens: 'l3-attack',
+    look: 'Their king castled on the king side. Bring more pieces at it than they have guarding.' },
+  { id: 'underPromotion', family: 'sharp', name: 'Not a queen', blurb: 'Sometimes a knight is better.', opens: 'l1-special',
+    look: 'Promote to a knight, rook or bishop instead. A queen is not always the winning one.' },
+  { id: 'defensiveMove', family: 'sharp', name: 'Save yourself', blurb: 'One move holds everything together.', opens: 'l2-count',
+    look: 'You are the one in trouble. Find the single move that holds it all together.' },
+
+  /* ---- mates with names ---- */
+  { id: 'backRankMate', family: 'mates', name: 'Back rank', blurb: 'Trapped behind their own pawns.', opens: 'l2-backrank',
+    look: 'Their king is stuck behind its own pawns. Get a rook or queen onto that back row.' },
+  { id: 'smotheredMate', family: 'mates', name: 'Smothered mate', blurb: 'Their own pieces do the work.', opens: 'l3-patterns',
+    look: 'Their king is boxed in by its own pieces. A knight check is the only thing that reaches it.' },
+  { id: 'arabianMate', family: 'mates', name: 'Arabian mate', blurb: 'A knight and a rook, in the corner.', opens: 'l3-patterns',
+    look: 'A rook and a knight team up to trap their king in the corner. The oldest mate there is.' },
+  { id: 'anastasiaMate', family: 'mates', name: 'Anastasia mate', blurb: 'Knight and rook, against the edge.', opens: 'l3-patterns',
+    look: 'A knight takes the escape squares and a rook comes down the side. The king is pinned to the edge.' },
+  { id: 'bodenMate', family: 'mates', name: 'Boden mate', blurb: 'Two bishops, crossing.', opens: 'l3-patterns',
+    look: 'Two bishops on crossing diagonals. Between them the king has nowhere left.' },
+  { id: 'dovetailMate', family: 'mates', name: 'Dovetail mate', blurb: 'A queen right next to the king.', opens: 'l3-patterns',
+    look: 'The queen mates from the next square along, and their own pieces block the two ways out.' },
+  { id: 'hookMate', family: 'mates', name: 'Hook mate', blurb: 'Rook, knight and pawn together.', opens: 'l3-patterns',
+    look: 'A rook, a knight and a pawn build a hook their king cannot climb out of.' },
+  { id: 'operaMate', family: 'mates', name: 'Opera mate', blurb: 'Named after a famous game at the opera.', opens: 'l3-patterns',
+    look: 'A rook checks along the back row, and a bishop guards the rook so it cannot be taken.' },
+  { id: 'doubleBishopMate', family: 'mates', name: 'Two bishops', blurb: 'Side by side, and it is over.', opens: 'l3-patterns',
+    look: 'Two bishops on next-door diagonals sweep every square the king could use.' },
+  { id: 'epauletteMate', family: 'mates', name: 'Epaulette mate', blurb: 'Boxed in by their own rooks.', opens: 'l3-patterns',
+    look: 'Their own two pieces sit either side of the king like shoulder pads. It cannot move.' },
+  { id: 'killBoxMate', family: 'mates', name: 'The kill box', blurb: 'Rook and queen build a cage.', opens: 'l3-patterns',
+    look: 'A rook and a queen box the king into three squares by three, and then close it.' },
+  { id: 'vukovicMate', family: 'mates', name: 'Vukovic mate', blurb: 'Rook and knight, with help.', opens: 'l3-patterns',
+    look: 'A rook gives the check and a knight covers the squares the king wanted.' },
+
+  /* ---- the mate ladder ---- */
+  { id: 'mateIn2', family: 'ladder', name: 'Mate in two', blurb: 'Two moves, and they cannot stop it.', opens: 'l2-game',
+    look: 'Two moves and it is over. Play the first one, and whatever they try, finish it.' },
+  { id: 'mateIn3', family: 'ladder', name: 'Mate in three', blurb: 'Three moves. Every reply loses.', opens: 'l3-patterns',
+    look: 'Three moves to the end. Every answer they have leads to the same place.' },
+  { id: 'mateIn4', family: 'ladder', name: 'Mate in four', blurb: 'Four moves. Hold the whole thing in your head.', opens: 'l3-cct',
+    look: 'Four moves, all forced. Follow every one of their replies to the end before you start.' },
+  { id: 'mateIn5', family: 'ladder', name: 'Mate in five', blurb: 'The long one. Take your time.', opens: 'l3-cct',
+    look: 'Five moves. Nobody sees this instantly. Work out the checks one at a time.' },
+
+  /* ---- endings ---- */
+  { id: 'endgame', family: 'endings', name: 'Endgames', blurb: 'Few pieces, one right answer.', opens: 'l2-kingfight',
+    look: 'Few pieces left, and one move is best. Think about the king and the pawns.' },
+  { id: 'pawnEndgame', family: 'endings', name: 'Kings and pawns', blurb: 'Just kings and pawns.', opens: 'l3-kp',
+    look: 'Only kings and pawns are left. Whose king gets in front of a pawn first?' },
+  { id: 'rookEndgame', family: 'endings', name: 'Rook endings', blurb: 'The commonest ending of all.', opens: 'l3-rook',
+    look: 'Rooks and pawns. Get your rook behind the passed pawn, whoever it belongs to.' },
+  { id: 'queenEndgame', family: 'endings', name: 'Queen endings', blurb: 'Queens, and endless checks.', opens: 'l2-kq',
+    look: 'Queens and pawns. Watch for their checks before you push anything.' },
+  { id: 'bishopEndgame', family: 'endings', name: 'Bishop endings', blurb: 'One colour, all game.', opens: 'l1-bishop',
+    look: 'Bishops and pawns. A bishop only ever touches one colour, so put pawns on the other one.' },
+  { id: 'knightEndgame', family: 'endings', name: 'Knight endings', blurb: 'Slow horses, careful squares.', opens: 'l1-knight',
+    look: 'Knights and pawns. A knight is slow, so count the moves before you race.' }
 ];
 
 export const themeById = (id) => THEMES.find((t) => t.id === id) || null;
+
+/** The themes in one family, in the order they are listed. */
+export const themesIn = (family) => THEMES.filter((t) => t.family === family);
 
 /** How many puzzles are in one sitting. Short on purpose. */
 export const SESSION = 5;

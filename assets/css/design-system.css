@@ -4375,3 +4375,114 @@ button, a, label, summary, [role="button"] {
   .cz-chess-cage__bars { transition: none; }
   .cz-chess-star.is-on { animation: none; }
 }
+
+/* ==========================================================================
+   The openings library (screens/chessopenings.js)
+
+   A shelf of named openings, and a page per opening that PLAYS the line
+   rather than printing it. The research is blunt about why: a child who
+   memorises a list of moves is helpless on the first move that is not in it,
+   so the moves are never a paragraph of notation.
+   ========================================================================== */
+
+.cz-open-note {
+  max-width: 44rem;
+  margin: 0 0 var(--gp-space-6);
+  color: var(--gp-ink-soft);
+}
+
+.cz-open-family { margin-bottom: var(--gp-space-8); }
+.cz-open-family__name { margin: 0 0 2px; font-size: 1.15rem; }
+.cz-open-family__blurb { margin: 0 0 var(--gp-space-4); color: var(--gp-ink-soft); font-size: .9rem; }
+
+.cz-open-cards {
+  display: grid;
+  gap: var(--gp-space-3);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.cz-open-card {
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+  padding: var(--gp-space-4);
+  border: 2px solid var(--gp-line);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  text-decoration: none;
+}
+.cz-open-card:hover { border-color: var(--gp-ink-soft); }
+.cz-open-card__emoji { font-size: 1.6rem; line-height: 1; }
+.cz-open-card__name { font-weight: 800; }
+.cz-open-card__idea { font-size: .88rem; color: var(--gp-ink-soft); }
+.cz-open-card__tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+.cz-open-tag {
+  padding: 1px .5rem;
+  border-radius: var(--gp-radius-pill);
+  background: var(--gp-surface-2);
+  font-size: .72rem;
+  font-weight: 700;
+}
+.cz-open-tag--trap { background: var(--cb-go, #E69F00); color: #1a1a1a; }
+
+/* ---- one opening ---- */
+
+.cz-open {
+  display: grid;
+  gap: var(--gp-space-5);
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: var(--gp-space-4);
+}
+@media (min-width: 900px) {
+  .cz-open { grid-template-columns: auto minmax(0, 1fr); align-items: start; }
+}
+.cz-open__side { display: grid; gap: var(--gp-space-4); align-content: start; }
+.cz-open__idea { margin: 0; font-size: 1.05rem; font-weight: 700; }
+
+/* Every move is its own button, so a child can jump to the one they want
+   instead of pressing an arrow nine times. */
+.cz-open__moves {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.cz-open__no { margin-inline-start: var(--gp-space-2); color: var(--gp-ink-soft); font-size: .85rem; }
+.cz-open__move {
+  min-height: 32px;
+  padding: 2px .5rem;
+  border: 2px solid transparent;
+  border-radius: var(--gp-radius-sm, 8px);
+  background: var(--gp-surface-2);
+  color: var(--gp-ink-soft);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cz-open__move.is-done { color: var(--gp-ink); }
+.cz-open__move.is-now { border-color: var(--cb-mine, #0072B2); color: var(--gp-ink); }
+
+.cz-open__nav { display: flex; align-items: center; gap: var(--gp-space-2); flex-wrap: wrap; }
+.cz-open__at { min-width: 8ch; font-size: .85rem; color: var(--gp-ink-soft); }
+.cz-open__nav .gp-btn[disabled] { opacity: .4; cursor: default; }
+.cz-open__lines .gp-btn.is-on { border-color: var(--cb-mine, #0072B2); color: var(--gp-ink); }
+
+.cz-open__facts { display: grid; gap: 2px; margin: 0; }
+.cz-open__facts dt {
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--gp-ink-soft);
+  margin-top: var(--gp-space-2);
+}
+.cz-open__facts dd { margin: 0; }
+.cz-open__back { margin: 0; }
+
+/* Puzzle themes, grouped. Forty-five cards in one grid is a wall rather than
+   a choice; the families give a child somewhere to start. */
+.cz-puz-family { margin-bottom: var(--gp-space-8); }
+.cz-puz-family__name { margin: 0 0 2px; font-size: 1.15rem; }
+.cz-puz-family__blurb { margin: 0 0 var(--gp-space-4); color: var(--gp-ink-soft); font-size: .9rem; }

@@ -391,6 +391,10 @@ function onClick(ev) {
   const chessGame = ev.target.closest('[data-chess-game]');
   if (chessGame && chess) { chess.playPick('game', chessGame.dataset.chessGame); return; }
 
+  /* Jumping straight to a move in an opening line. */
+  const openAt = ev.target.closest('[data-openat]');
+  if (openAt && chess) { chess.chessAction('chess-openat', openAt); return; }
+
   const chessTheme = ev.target.closest('[data-chess-theme]');
   if (chessTheme && chess) { chess.chessAction('chess-theme', chessTheme); return; }
 

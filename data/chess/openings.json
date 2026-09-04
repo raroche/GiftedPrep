@@ -1,0 +1,500 @@
+{
+  "families": [
+    {
+      "id": "open",
+      "name": "After 1.e4 e5",
+      "blurb": "Both sides grab the middle. The oldest games of all."
+    },
+    {
+      "id": "defence",
+      "name": "Answers to 1.e4",
+      "blurb": "What to play when they push the king pawn."
+    },
+    {
+      "id": "queen",
+      "name": "After 1.d4",
+      "blurb": "The quieter start. Plans instead of fireworks."
+    },
+    {
+      "id": "flank",
+      "name": "From the side",
+      "blurb": "Take the middle later, with pieces."
+    }
+  ],
+  "openings": [
+    {
+      "id": "italian",
+      "name": "The Italian Game",
+      "family": "open",
+      "side": "w",
+      "emoji": "🍕",
+      "moves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bc4",
+        "Bc5"
+      ],
+      "idea": "Point your bishop straight at f7, the weakest square near their king.",
+      "when": "Your first opening as White. Everything you want happens naturally.",
+      "famous": "Every beginner starts here. So did most world champions.",
+      "meet": "Copy it. Bishop to c5 and you both have the same good squares.",
+      "trap": {
+        "name": "Legal's Mate",
+        "moves": [
+          "e4",
+          "e5",
+          "Nf3",
+          "Nc6",
+          "Bc4",
+          "d6",
+          "Nc3",
+          "Bg4",
+          "h3",
+          "Bh5",
+          "Nxe5",
+          "Bxd1",
+          "Bxf7+",
+          "Ke7",
+          "Nd5#"
+        ],
+        "say": "White gives up the queen. Three moves later it is checkmate with two knights and a bishop."
+      }
+    },
+    {
+      "id": "ruylopez",
+      "name": "The Ruy Lopez",
+      "family": "open",
+      "side": "w",
+      "emoji": "⛪",
+      "moves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Be7"
+      ],
+      "idea": "Annoy the knight that guards their e5 pawn, then build slowly behind it.",
+      "when": "After the Italian feels easy. It rewards patience rather than tricks.",
+      "famous": "The favourite of Lasker, Capablanca, Fischer, Kasparov and Carlsen.",
+      "meet": "Push the bishop with a6, then take the middle with your own pieces.",
+      "trap": null
+    },
+    {
+      "id": "scotch",
+      "name": "The Scotch Game",
+      "family": "open",
+      "side": "w",
+      "emoji": "🏴",
+      "moves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "d4",
+        "exd4",
+        "Nxd4",
+        "Bc5",
+        "Be3",
+        "Qf6"
+      ],
+      "idea": "Open the middle at once so every piece has somewhere to go.",
+      "when": "You like pieces out fast and you do not want a long slow game.",
+      "famous": "Kasparov brought it back at the very top in the 1990s.",
+      "meet": "Take on d4 and develop. Nothing is wrong with your position.",
+      "trap": null
+    },
+    {
+      "id": "kingsgambit",
+      "name": "The King's Gambit",
+      "family": "open",
+      "side": "w",
+      "emoji": "🔥",
+      "moves": [
+        "e4",
+        "e5",
+        "f4",
+        "exf4",
+        "Nf3",
+        "g5",
+        "h4",
+        "g4",
+        "Ne5"
+      ],
+      "idea": "Give a pawn away on move two to rip the middle open.",
+      "when": "For fun, and for learning attack. It is genuinely risky.",
+      "famous": "Morphy and the players of the 1800s lived on this.",
+      "meet": "Take the pawn, then give it back later to finish developing.",
+      "trap": {
+        "name": "The Kieseritzky",
+        "moves": [
+          "e4",
+          "e5",
+          "f4",
+          "exf4",
+          "Nf3",
+          "g5",
+          "h4",
+          "g4",
+          "Ne5"
+        ],
+        "say": "Black holds the pawn with g5 and h4 breaks the chain. The knight lands on e5 and the game is wide open."
+      }
+    },
+    {
+      "id": "vienna",
+      "name": "The Vienna Game",
+      "family": "open",
+      "side": "w",
+      "emoji": "🎻",
+      "moves": [
+        "e4",
+        "e5",
+        "Nc3",
+        "Nf6",
+        "f4",
+        "d5",
+        "fxe5",
+        "Nxe4"
+      ],
+      "idea": "Develop the knight first, then push the f pawn like a gambit anyway.",
+      "when": "You want the King’s Gambit without the danger on move two.",
+      "famous": "Steinitz, the first world champion, played it as White.",
+      "meet": "Answer f4 with d5 in the middle. Never take the f pawn straight away.",
+      "trap": null
+    },
+    {
+      "id": "evans",
+      "name": "The Evans Gambit",
+      "family": "open",
+      "side": "w",
+      "emoji": "⚔️",
+      "moves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bc4",
+        "Bc5",
+        "b4",
+        "Bxb4",
+        "c3",
+        "Ba5",
+        "d4"
+      ],
+      "idea": "Give a pawn to gain time, then build a huge pawn centre with c3 and d4.",
+      "when": "Once the Italian is second nature and you want to attack.",
+      "famous": "Morphy’s weapon. Kasparov used it to win in 25 moves in 1995.",
+      "meet": "Take the pawn, give it back at the right moment, and finish developing.",
+      "trap": null
+    },
+    {
+      "id": "petrov",
+      "name": "The Petrov",
+      "family": "defence",
+      "side": "b",
+      "emoji": "🪞",
+      "moves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nf6",
+        "Nxe5",
+        "d6",
+        "Nf3",
+        "Nxe4",
+        "d4",
+        "d5"
+      ],
+      "idea": "Copy them. Instead of defending the pawn, attack theirs.",
+      "when": "You want a safe game as Black and you do not mind a quiet one.",
+      "famous": "Kramnik used it to hold the very strongest players to draws.",
+      "meet": "Take on e5, but be ready to retreat before you win anything.",
+      "trap": {
+        "name": "The copycat that goes wrong",
+        "moves": [
+          "e4",
+          "e5",
+          "Nf3",
+          "Nf6",
+          "Nxe5",
+          "Nxe4",
+          "Qe2",
+          "Nf6",
+          "Nc6+"
+        ],
+        "say": "Copying one move too long loses the queen. Play d6 first and kick the knight away."
+      }
+    },
+    {
+      "id": "sicilian",
+      "name": "The Sicilian Defence",
+      "family": "defence",
+      "side": "b",
+      "emoji": "🌋",
+      "moves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "d6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Nf6",
+        "Nc3",
+        "a6"
+      ],
+      "idea": "Do not copy them. Trade a side pawn for a middle one and play for a win.",
+      "when": "When a draw is no good to you. It is sharp: learn it slowly.",
+      "famous": "Tal, Fischer, Kasparov, Anand, Carlsen. The champions’ defence.",
+      "meet": "Open the middle with d4, take back with the knight, and castle quickly.",
+      "trap": null
+    },
+    {
+      "id": "french",
+      "name": "The French Defence",
+      "family": "defence",
+      "side": "b",
+      "emoji": "🥖",
+      "moves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "Nc3",
+        "Bb4",
+        "e5",
+        "c5"
+      ],
+      "idea": "Build a wall of pawns, let them have space, then hit the bottom of the wall.",
+      "when": "You like solid positions and you do not mind a cramped start.",
+      "famous": "Alekhine, Botvinnik and Petrosian all leaned on it.",
+      "meet": "Push past with e5 and take the space. Attack on the king side.",
+      "trap": null
+    },
+    {
+      "id": "carokann",
+      "name": "The Caro-Kann",
+      "family": "defence",
+      "side": "b",
+      "emoji": "🛡️",
+      "moves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "Nc3",
+        "dxe4",
+        "Nxe4",
+        "Bf5",
+        "Ng3",
+        "Bg6"
+      ],
+      "idea": "Like the French, but the light bishop gets out first. Nothing is left stuck.",
+      "when": "You want the safest answer to 1.e4 there is.",
+      "famous": "Karpov made a career of it. Carlsen still plays it.",
+      "meet": "Take the middle with d4 and play for the extra space.",
+      "trap": null
+    },
+    {
+      "id": "scandinavian",
+      "name": "The Scandinavian",
+      "family": "defence",
+      "side": "b",
+      "emoji": "🧊",
+      "moves": [
+        "e4",
+        "d5",
+        "exd5",
+        "Qxd5",
+        "Nc3",
+        "Qa5"
+      ],
+      "idea": "Challenge the middle on move one and get the queen out early on purpose.",
+      "when": "Your first defence as Black. There is almost nothing to remember.",
+      "famous": "The oldest recorded opening in chess, from 1475.",
+      "meet": "Hit the queen with Nc3, gaining time while you develop.",
+      "trap": {
+        "name": "The bishop that walks into a net",
+        "moves": [
+          "e4",
+          "d5",
+          "exd5",
+          "Qxd5",
+          "Nc3",
+          "Qa5",
+          "d4",
+          "Nf6",
+          "Nf3",
+          "Bg4",
+          "h3",
+          "Bh5",
+          "g4",
+          "Bg6",
+          "Ne5"
+        ],
+        "say": "The bishop is chased to g6 and then boxed in. Play Bxf3 or Bd7 instead and it stays free."
+      }
+    },
+    {
+      "id": "queensgambit",
+      "name": "The Queen's Gambit",
+      "family": "queen",
+      "side": "w",
+      "emoji": "👑",
+      "moves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Be7"
+      ],
+      "idea": "Offer a wing pawn to drag their middle pawn away from the middle.",
+      "when": "Your first opening after 1.d4. Every plan is about the centre.",
+      "famous": "Lasker and Capablanca both defended it as Black for years.",
+      "meet": "Decline it with e6 or c6. You do not have to take the pawn.",
+      "trap": {
+        "name": "Hanging on to the pawn",
+        "moves": [
+          "d4",
+          "d5",
+          "c4",
+          "dxc4",
+          "e3",
+          "b5",
+          "a4",
+          "c6",
+          "axb5",
+          "cxb5",
+          "Qf3"
+        ],
+        "say": "Trying to keep the extra pawn with b5 loses a rook to Qf3. Give the pawn back and develop."
+      }
+    },
+    {
+      "id": "slav",
+      "name": "The Slav Defence",
+      "family": "queen",
+      "side": "b",
+      "emoji": "🧱",
+      "moves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "dxc4",
+        "a4",
+        "Bf5"
+      ],
+      "idea": "Hold the middle with c6 so the light bishop still has a way out.",
+      "when": "The solid answer to 1.d4, and easier than it looks.",
+      "famous": "Euwe and Smyslov both used it to become world champion.",
+      "meet": "Play a4 to stop them keeping the pawn, then finish developing.",
+      "trap": null
+    },
+    {
+      "id": "kingsindian",
+      "name": "The King's Indian",
+      "family": "queen",
+      "side": "b",
+      "emoji": "🏹",
+      "moves": [
+        "d4",
+        "Nf6",
+        "c4",
+        "g6",
+        "Nc3",
+        "Bg7",
+        "e4",
+        "d6",
+        "Nf3",
+        "O-O"
+      ],
+      "idea": "Let them build a huge centre. Then blow it up with your own pawns.",
+      "when": "For later. It needs nerve and it needs a plan.",
+      "famous": "Fischer, Tal and Kasparov used it to win with Black.",
+      "meet": "Take the space, castle, and be ready for their king side push.",
+      "trap": null
+    },
+    {
+      "id": "london",
+      "name": "The London System",
+      "family": "queen",
+      "side": "w",
+      "emoji": "🏠",
+      "moves": [
+        "d4",
+        "d5",
+        "Bf4",
+        "Nf6",
+        "e3",
+        "e6",
+        "Nf3",
+        "c5",
+        "c3",
+        "Nc6"
+      ],
+      "idea": "Build the same safe house every single game, whatever they do.",
+      "when": "You want one setup you never have to think about.",
+      "famous": "Carlsen plays it at the top, which surprised everyone.",
+      "meet": "Play c5 early and hit the d4 pawn before the house is finished.",
+      "trap": null
+    },
+    {
+      "id": "english",
+      "name": "The English Opening",
+      "family": "flank",
+      "side": "w",
+      "emoji": "🫖",
+      "moves": [
+        "c4",
+        "e5",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "Nc6",
+        "g3",
+        "d5"
+      ],
+      "idea": "Take the middle from the side, with a pawn on c4 and a bishop on g2.",
+      "when": "You would rather squeeze than attack.",
+      "famous": "Botvinnik, Smyslov and Kramnik all used it as their main move.",
+      "meet": "Answer with e5 and treat it like a Sicilian with colours swapped.",
+      "trap": null
+    },
+    {
+      "id": "reti",
+      "name": "The Réti",
+      "family": "flank",
+      "side": "w",
+      "emoji": "🧭",
+      "moves": [
+        "Nf3",
+        "d5",
+        "c4",
+        "e6",
+        "g3",
+        "Nf6",
+        "Bg2",
+        "Be7"
+      ],
+      "idea": "Do not touch the middle yet. Aim at it from a distance and strike later.",
+      "when": "The newest idea here, and the hardest to play well.",
+      "famous": "Gukesh, the youngest world champion, opens with it.",
+      "meet": "Take the middle with pawns while they are still pointing at it.",
+      "trap": null
+    }
+  ]
+}

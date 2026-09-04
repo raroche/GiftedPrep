@@ -202,7 +202,7 @@ export const ROOMS = [
     href: '#/chess',
     status: 'live',
     blurb: 'Meet the six pieces, win your first game, then learn the tricks.',
-    meta: '52 lessons \u00b7 8 games \u00b7 3,250 puzzles'
+    meta: '52 lessons \u00b7 8 games \u00b7 11,157 puzzles'
   },
   {
     id: 'gifted',

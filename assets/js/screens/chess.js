@@ -24,6 +24,7 @@ import { paintRoomHead } from './gifted.js';
 import { openLesson, closeLesson, lessonAction, lessonChoice } from './chesslesson.js';
 import { renderPlay, closePlay, playAction, playPick } from './chessplay.js';
 import { renderPuzzles, closePuzzles, puzzleAction } from './chesspuzzle.js';
+import { renderOpenings, closeOpenings, openingsAction } from './chessopenings.js';
 import { $, paint, showError, showScreen } from './../modules/shell.js';
 
 const esc = escapeHtml;
@@ -238,6 +239,12 @@ function renderHub(all, p) {
         <span class="gp-card__sub">One position, one best move. Five in a row.</span>
         <span class="gp-card__badge">Puzzle power ${p.puzzles.r}</span>
       </a>
+      <a class="gp-card gp-card--action" href="#/chess/openings">
+        <span class="gp-card__icon" aria-hidden="true">${pieceMark('wB')}</span>
+        <span class="gp-card__title">Openings</span>
+        <span class="gp-card__sub">The famous ones, by name. What each is for, and
+          how to meet it.</span>
+      </a>
     </div>
 
     <div class="cz-sectionhead"><h2>Your board</h2>
@@ -440,6 +447,7 @@ function renderSoon(screen, bodyId, title, what) {
  */
 export function chessAction(name, el) {
   if (puzzleAction(name)) return;
+  if (openingsAction(name, el)) return;
   if (lessonAction(name, el)) return;
   if (playAction(name, el)) return;
 
@@ -476,8 +484,13 @@ export async function renderChess(step, lessonId, third) {
   ensurePieceDefs();
   closePlay();
 
-  if (step === 'play') { closeLesson(); closePuzzles(); renderPlay(null); return; }
-  if (step === 'games') { closeLesson(); closePuzzles(); renderPlay(lessonId, third); return; }
+  if (step === 'play') { closeLesson(); closePuzzles(); closeOpenings(); renderPlay(null); return; }
+  if (step === 'openings') {
+    closeLesson(); closePuzzles();
+    if (!await renderOpenings(lessonId)) showError('The openings could not be loaded.');
+    return;
+  }
+  if (step === 'games') { closeLesson(); closePuzzles(); closeOpenings(); renderPlay(lessonId, third); return; }
 
 
   let all;
@@ -490,7 +503,7 @@ export async function renderChess(step, lessonId, third) {
   }
   const p = progress.load();
 
-  if (step === 'puzzles') { closeLesson(); renderPuzzles(lessonId, all); return; }
+  if (step === 'puzzles') { closeLesson(); closeOpenings(); renderPuzzles(lessonId, all); return; }
 
   const level = all.find((lv) => String(lv.level) === step);
 
@@ -514,6 +527,7 @@ export async function renderChess(step, lessonId, third) {
 
   closeLesson();
   closePuzzles();
+  closeOpenings();
   if (level) {
     /* And the same for a whole level. */
     const gate = progress.levelGate(all, all.indexOf(level), p);

@@ -63,12 +63,13 @@ export const MAX_STARS = 3;
  *
  * It has to exceed the whole shipped library or a child starts meeting old
  * puzzles again long before they have run out of new ones — which was the
- * case at 500 against a library of over three thousand. Each id is five
- * characters, so even a full list is about twenty kilobytes of the five
- * megabytes localStorage allows. tools/chesscheck.mjs fails the build if the
- * library ever outgrows this.
+ * case at 500 against a library of over three thousand, and then again at
+ * 4000 when the library grew to eleven. Each id is five characters, so even a
+ * full list is about ninety kilobytes of the five megabytes localStorage
+ * allows. tools/chesscheck.mjs fails the build if the library ever outgrows
+ * this, which is how both of those were caught.
  */
-export const MAX_SEEN = 4000;
+export const MAX_SEEN = 16000;
 
 const blank = () => ({
   v: 1,

@@ -52,7 +52,7 @@ function renderThemes(levels) {
     return null;
   };
 
-  const cards = puzzles.THEMES.map((t) => {
+  const card = (t) => {
     /* A theme is open once its lesson has been done. Until then it is shown
        with the lesson named on it: a shut door with a sign teaches something,
        one without just annoys. The rule itself lives in chesspuzzles.js so
@@ -67,7 +67,21 @@ function renderThemes(levels) {
     return open
       ? `<a class="cz-puz-theme" href="#/chess/puzzles/${esc(t.id)}">${inner}</a>`
       : `<div class="cz-puz-theme is-locked" aria-disabled="true">${inner}</div>`;
-  }).join('');
+  };
+
+  /* Grouped, because forty-five cards in one grid is a wall rather than a
+     choice. The families come from the module so the order is decided in one
+     place and the page just draws it. */
+  const family = (f) => {
+    const mine = puzzles.themesIn(f.id);
+    if (!mine.length) return '';
+    return `<section class="cz-puz-family">
+        <h2 class="cz-puz-family__name">${esc(f.name)}</h2>
+        <p class="cz-puz-family__blurb">${esc(f.blurb)}</p>
+        <div class="cz-puz-themes">${mine.map(card).join('')}</div>
+      </section>`;
+  };
+  const cards = puzzles.FAMILIES.map(family).join('');
 
   $('#gp-chesspuzzle-body').innerHTML = `
     <p class="gp-page-lede">One position. One best move. Five in a row.</p>
@@ -81,7 +95,7 @@ function renderThemes(levels) {
     <p class="cz-puz-power__what">Solve a puzzle and it goes up. Miss one and it
       goes down a little. It is how we pick puzzles that are hard enough for
       you, but not too hard.</p>
-    <div class="cz-puz-themes">${cards}</div>`;
+    ${cards}`;
   paint();
   showScreen('chesspuzzle');
 }

@@ -71,6 +71,19 @@ const PER_THEME = 250;
    together for eight more moves to be told they were right. */
 const MAX_PLIES = 7;
 
+/*
+ * Except for the mate ladder, where the length IS the puzzle.
+ *
+ * One flat cap of seven silently excluded mate in four and mate in five
+ * entirely -- a mate in four is the setup move plus seven of its own, and a
+ * mate in five is nine. Asking for those themes under the old filter produced
+ * an empty file and no error, which is why the ladder stopped at two.
+ *
+ * Setup move + (2n - 1) plies for a mate in n, so: 3 -> 6, 4 -> 8, 5 -> 10.
+ */
+const PLIES_FOR = { mateIn3: 6, mateIn4: 8, mateIn5: 10 };
+const pliesFor = (theme) => PLIES_FOR[theme] || MAX_PLIES;
+
 const WANTED = THEMES.map((t) => t.id);
 
 const OUT_DIR = path.join(ROOT, 'data/chess/puzzles');
@@ -117,13 +130,15 @@ for await (const line of lines) {
 
   const uci = moves.trim().split(/\s+/);
   /* One move is the opponent's setup and there must be at least one for the
-     child, or there is nothing to solve. */
-  if (uci.length < 2 || uci.length > MAX_PLIES || !uci.every(isUci)) continue;
+     child, or there is nothing to solve. The upper limit is per theme now:
+     see PLIES_FOR. */
+  if (uci.length < 2 || !uci.every(isUci)) continue;
 
   const tags = themes.trim().split(/\s+/);
   usable += 1;
   for (const theme of tags) {
     if (!kept.has(theme)) continue;
+    if (uci.length > pliesFor(theme)) continue;
     /* The puzzle's own rating deviation travels with it. The runtime rating
        is Glicko-2 and needs the opponent's deviation as well as its rating;
        dropping it here meant the app substituted a made-up 60 for every
@@ -222,6 +237,7 @@ const manifest = {
     minPopularity: MIN_POPULARITY,
     minPlays: MIN_PLAYS,
     maxPlies: MAX_PLIES,
+    maxPliesByTheme: PLIES_FOR,
     perTheme: PER_THEME
   },
   themes: Object.fromEntries(report.map((r) => [r.theme, r.kept])),

@@ -559,9 +559,16 @@ for (const theme of THEMES) {
   }
   /* A child who has found the right idea should not then have to hold it
      together for eight more moves to be told they were right. The database
-     hands out sixteen-move puzzles happily. */
-  if (longest > 7) {
-    err(`${file}: a puzzle runs ${longest} moves; the limit is 7 including `
+     hands out sixteen-move puzzles happily.
+
+     The mate ladder is the exception, because there the length IS the puzzle:
+     a mate in four is the opponent's move plus seven of its own. The cap has
+     to match tools/build_puzzles.mjs, or a rebuilt library fails a check that
+     the build itself was happy with. */
+  const PLY_CAP = { mateIn3: 6, mateIn4: 8, mateIn5: 10 };
+  const cap = PLY_CAP[theme.id] || 7;
+  if (longest > cap) {
+    err(`${file}: a puzzle runs ${longest} moves; the limit is ${cap} including `
       + "the opponent's first move");
   }
   /* A theme where nothing is easy cannot be a child's first attempt at it. */

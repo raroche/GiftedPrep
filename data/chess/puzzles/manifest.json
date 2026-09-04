@@ -1,7 +1,7 @@
 {
   "source": "https://database.lichess.org/lichess_db_puzzle.csv.zst",
   "licence": "CC0",
-  "builtAt": "2026-09-03",
+  "builtAt": "2026-09-04",
   "rowsRead": 6100961,
   "filters": {
     "rating": [
@@ -12,6 +12,11 @@
     "minPopularity": 80,
     "minPlays": 500,
     "maxPlies": 7,
+    "maxPliesByTheme": {
+      "mateIn3": 6,
+      "mateIn4": 8,
+      "mateIn5": 10
+    },
     "perTheme": 250
   },
   "themes": {
@@ -20,16 +25,48 @@
     "fork": 250,
     "pin": 250,
     "skewer": 250,
+    "promotion": 250,
     "discoveredAttack": 250,
-    "backRankMate": 250,
+    "doubleCheck": 250,
     "capturingDefender": 250,
-    "mateIn2": 250,
     "deflection": 250,
     "attraction": 250,
-    "promotion": 250,
-    "endgame": 250
+    "interference": 250,
+    "clearance": 250,
+    "intermezzo": 250,
+    "xRayAttack": 250,
+    "sacrifice": 250,
+    "trappedPiece": 250,
+    "advancedPawn": 250,
+    "quietMove": 250,
+    "zugzwang": 250,
+    "kingsideAttack": 250,
+    "underPromotion": 157,
+    "defensiveMove": 250,
+    "backRankMate": 250,
+    "smotheredMate": 250,
+    "arabianMate": 250,
+    "anastasiaMate": 250,
+    "bodenMate": 250,
+    "dovetailMate": 250,
+    "hookMate": 250,
+    "operaMate": 250,
+    "doubleBishopMate": 250,
+    "epauletteMate": 250,
+    "killBoxMate": 250,
+    "vukovicMate": 250,
+    "mateIn2": 250,
+    "mateIn3": 250,
+    "mateIn4": 250,
+    "mateIn5": 250,
+    "endgame": 250,
+    "pawnEndgame": 250,
+    "rookEndgame": 250,
+    "queenEndgame": 250,
+    "bishopEndgame": 250,
+    "knightEndgame": 250
   },
-  "rows": 3250,
-  "unique": 3245,
-  "bytes": 424785
+  "rows": 11157,
+  "unique": 11090,
+  "bytes": 1459763
 }
