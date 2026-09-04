@@ -773,6 +773,87 @@ else if (room.status === 'live') {
 }
 
 /* ------------------------------------------------------------------ */
+/* The openings library                                                */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Every line here is REPLAYED. An opening page that prints an illegal move is
+ * worse than one that prints nothing: a child sets it up on a real board,
+ * cannot make the move, and concludes they have misunderstood chess.
+ *
+ * The rest of the checks are about what the research says an opening page
+ * must carry. Moves alone are a move dump, which is the thing every coaching
+ * source warns against; "how to meet it" is the half that most opening
+ * resources skip and is exactly what a child needs when they are on the other
+ * side of it.
+ */
+{
+  const file = 'data/chess/openings.json';
+  if (!fs.existsSync(file)) err(`${file} is missing`);
+  else {
+    let book;
+    try { book = JSON.parse(fs.readFileSync(file, 'utf8')); }
+    catch (e) { err(`${file}: ${e.message}`); book = null; }
+
+    if (book) {
+      const families = new Set((book.families || []).map((f) => f.id));
+      if (!families.size) err(`${file}: no families, so the shelf has no headings`);
+      const seen = new Set();
+
+      const replay = (moves, where) => {
+        const g = new ChessLib();
+        for (const [i, san] of (moves || []).entries()) {
+          let ok = false;
+          try { ok = Boolean(g.move(san)); } catch { ok = false; }
+          if (!ok) { err(`${where}: move ${i + 1} "${san}" cannot be played`); return null; }
+        }
+        return g;
+      };
+
+      for (const o of book.openings || []) {
+        const at = `${file} "${o.id}"`;
+        for (const key of ['id', 'name', 'family', 'side', 'emoji', 'moves',
+          'idea', 'when', 'famous', 'meet']) {
+          if (o[key] === undefined || o[key] === null || o[key] === '') {
+            err(`${at}: missing "${key}"`);
+          }
+        }
+        if (seen.has(o.id)) err(`${at}: id used twice`);
+        seen.add(o.id);
+        if (!families.has(o.family)) err(`${at}: family "${o.family}" is not one of the families`);
+        if (!['w', 'b'].includes(o.side)) err(`${at}: side must be "w" or "b"`);
+        if ((o.moves || []).length < 4) {
+          err(`${at}: ${(o.moves || []).length} moves is not enough to show what it is`);
+        }
+        replay(o.moves, `${at} main line`);
+
+        /* One sentence each, and they have to be different sentences: an
+           "idea" that repeats the "when" is one of them missing. */
+        for (const key of ['idea', 'when', 'meet', 'famous']) {
+          const t = typeof o[key] === 'string' ? o[key] : '';
+          const words = t.trim().split(/\s+/).filter(Boolean).length;
+          if (words && words > 26) warn(`${at}: "${key}" is ${words} words`);
+        }
+        if (o.idea && o.idea === o.when) err(`${at}: "idea" and "when" are the same sentence`);
+
+        if (o.trap) {
+          if (!o.trap.name) err(`${at}: the trap has no name`);
+          if (!o.trap.say) err(`${at}: the trap does not say what happened`);
+          replay(o.trap.moves, `${at} trap "${o.trap.name || '?'}"`);
+          if ((o.trap.moves || []).length < (o.moves || []).length) {
+            warn(`${at}: the trap line is shorter than the main line`);
+          }
+        }
+      }
+      if (seen.size < 12) {
+        err(`${file}: only ${seen.size} openings — the request named the Italian, `
+          + "Ruy Lopez, King's Gambit and the Sicilian among others");
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /* A puzzle theme has to explain itself                                */
 /* ------------------------------------------------------------------ */
 

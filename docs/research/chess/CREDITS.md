@@ -73,3 +73,9 @@ lists in `data/chess/openings.json`.
 
 The board, the bot, the lessons, the mini-games, the artwork around the board
 and every word a child reads were written for this project.
+
+## Puzzle database refresh, 2026-09-04
+Rebuilt from `lichess_db_puzzle.csv.zst` downloaded on 2026-09-04
+(6,100,961 rows). Grown from 13 themes to 45, and from 3,250 puzzles to
+11,157 (11,090 distinct). Still CC0. See
+`data/chess/puzzles/manifest.json` for the exact filters.
