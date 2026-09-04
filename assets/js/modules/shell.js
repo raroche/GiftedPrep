@@ -109,7 +109,7 @@ const SCREENS = ['home', 'gifted', 'tests', 'categories', 'quiz', 'results', 'pa
   'capsetup', 'capgame', 'elemsetup', 'elemgame', 'angsetup', 'anggame',
   'learn', 'elemlearn', 'anglearn',
   'chess', 'chesslevel', 'chesslesson', 'chessplay', 'chesspuzzle', 'chessopenings',
-  'error'];
+  'chesstournament', 'error'];
 
 /**
  * Show one screen and hide the rest.

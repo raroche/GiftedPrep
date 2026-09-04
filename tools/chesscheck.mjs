@@ -773,6 +773,92 @@ else if (room.status === 'live') {
 }
 
 /* ------------------------------------------------------------------ */
+/* The tournament guide                                                */
+/* ------------------------------------------------------------------ */
+
+/*
+ * These are RULES, and a wrong one costs a child a game in front of people.
+ * So every drill must cite where its answer comes from, and the citation must
+ * name the source rather than being a bare number: "10B" alone could be
+ * anybody's rulebook, and US Chess and FIDE differ on several of these.
+ *
+ * The word "arbiter" is banned outright. That is the FIDE title. US Chess has
+ * a Tournament Director, and a child who puts their hand up asking for an
+ * arbiter is asking for somebody who is not in the room. The old lesson said
+ * it, which is how this check came to exist.
+ */
+{
+  const file = 'data/chess/tournament.json';
+  if (!fs.existsSync(file)) err(`${file} is missing`);
+  else {
+    let guide;
+    try { guide = JSON.parse(fs.readFileSync(file, 'utf8')); }
+    catch (e) { err(`${file}: ${e.message}`); guide = null; }
+
+    if (guide) {
+      if (!(guide.day || []).length) err(`${file}: nothing about the day itself`);
+      if (!(guide.kit || []).length) err(`${file}: no list of what to bring`);
+
+      const ids = new Set();
+      let drills = 0;
+      for (const set of guide.sets || []) {
+        const at = `${file} set "${set.id}"`;
+        for (const key of ['id', 'name', 'emoji', 'blurb', 'drills']) {
+          if (!set[key]) err(`${at}: missing "${key}"`);
+        }
+        if (ids.has(set.id)) err(`${at}: id used twice`);
+        ids.add(set.id);
+        if ((set.drills || []).length < 4) {
+          err(`${at}: ${(set.drills || []).length} drills is not a set`);
+        }
+        for (const [i, d] of (set.drills || []).entries()) {
+          const where = `${at} drill ${i + 1}`;
+          drills += 1;
+          for (const key of ['ask', 'choices', 'answer', 'why', 'rule']) {
+            if (!d[key]) err(`${where}: missing "${key}"`);
+          }
+          const picks = d.choices || [];
+          if (picks.length < 2) err(`${where}: needs at least two answers to choose between`);
+          if (new Set(picks.map((c) => c.id)).size !== picks.length) {
+            err(`${where}: two choices share an id, so one of them can never be picked`);
+          }
+          if (!picks.some((c) => c.id === d.answer)) {
+            err(`${where}: the answer "${d.answer}" is not one of the choices`);
+          }
+          /* The citation has to say WHOSE rule it is. */
+          const rule = typeof d.rule === 'string' ? d.rule : '';
+          if (!/US Chess/i.test(rule)) {
+            err(`${where}: "${rule}" does not say which rulebook it is from — `
+              + 'US Chess and FIDE differ on several of these');
+          }
+        }
+      }
+      if (drills < 20) err(`${file}: only ${drills} drills across the whole guide`);
+
+      /* No FIDE vocabulary anywhere in a US Chess guide. */
+      const words = JSON.stringify(guide);
+      if (/\barbiter/i.test(words)) {
+        err(`${file}: says "arbiter", which is the FIDE word. US Chess has a `
+          + 'Tournament Director, and that is who a child should ask for');
+      }
+    }
+  }
+}
+
+/* The old lesson said it too. */
+{
+  for (const level of levels) {
+    for (const lesson of level.lessons || []) {
+      const words = JSON.stringify(lesson);
+      if (/\barbiter/i.test(words)) {
+        err(`lesson ${lesson.id} says "arbiter" — at a US Chess event the person `
+          + 'to ask for is the Tournament Director');
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /* The openings library                                                */
 /* ------------------------------------------------------------------ */
 

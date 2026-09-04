@@ -4486,3 +4486,89 @@ button, a, label, summary, [role="button"] {
 .cz-puz-family { margin-bottom: var(--gp-space-8); }
 .cz-puz-family__name { margin: 0 0 2px; font-size: 1.15rem; }
 .cz-puz-family__blurb { margin: 0 0 var(--gp-space-4); color: var(--gp-ink-soft); font-size: .9rem; }
+
+/* ==========================================================================
+   Getting ready for a tournament (screens/chesstournament.js)
+
+   Rules are not presented as rules. Each one arrives as a situation at your
+   own board, with the US Chess rule number underneath the answer — a child
+   will not read the number, but a parent or a coach can check it.
+   ========================================================================== */
+
+.cz-tn-h { margin: 0 0 var(--gp-space-2); font-size: 1.15rem; }
+.cz-tn-sub { margin: 0 0 var(--gp-space-4); color: var(--gp-ink-soft); font-size: .92rem; }
+.cz-tn-day, .cz-tn-drills, .cz-tn-kit { margin-bottom: var(--gp-space-8); }
+
+/* The walk through the day. Numbered, because it happens in an order and that
+   order is most of what a first-timer is worried about. */
+.cz-tn-steps { display: grid; gap: var(--gp-space-3); margin: 0; padding: 0; list-style: none; }
+.cz-tn-step {
+  display: flex;
+  gap: var(--gp-space-3);
+  align-items: flex-start;
+  padding: var(--gp-space-3) var(--gp-space-4);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+}
+.cz-tn-step__icon { font-size: 1.4rem; line-height: 1.4; }
+.cz-tn-step__body { display: grid; gap: 2px; }
+.cz-tn-step__body span { color: var(--gp-ink-soft); font-size: .92rem; }
+
+.cz-tn-sets {
+  display: grid;
+  gap: var(--gp-space-3);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.cz-tn-set {
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+  padding: var(--gp-space-4);
+  border: 2px solid var(--gp-line);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+  color: var(--gp-ink);
+  text-decoration: none;
+}
+.cz-tn-set:hover { border-color: var(--gp-ink-soft); }
+.cz-tn-set__emoji { font-size: 1.6rem; line-height: 1; }
+.cz-tn-set__name { font-weight: 800; }
+.cz-tn-set__blurb { font-size: .88rem; color: var(--gp-ink-soft); }
+.cz-tn-set__meta { font-size: .78rem; font-weight: 700; color: var(--gp-ink-soft); }
+
+.cz-tn-kitlist { display: grid; gap: var(--gp-space-2); margin: 0; padding: 0; list-style: none; }
+.cz-tn-kitlist li { display: grid; gap: 1px; }
+.cz-tn-kitlist span { color: var(--gp-ink-soft); font-size: .9rem; }
+
+.cz-tn-note { color: var(--gp-ink-soft); font-size: .85rem; }
+
+/* ---- a run of drills ---- */
+
+.cz-tn-run { display: grid; gap: var(--gp-space-4); max-width: 40rem; }
+.cz-tn-run__dots { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.cz-tn-card {
+  padding: var(--gp-space-5);
+  border-radius: var(--gp-radius-lg);
+  background: var(--gp-surface);
+}
+.cz-tn-ask { margin: 0 0 var(--gp-space-4); font-size: 1.1rem; font-weight: 700; }
+
+/* Both the right answer and the one that was picked are marked, so a child
+   can see the difference rather than just being told no. */
+.gp-choice.is-right { border-color: var(--gp-good, #2E7D32); }
+.gp-choice.is-wrong { border-color: var(--gp-retry); }
+
+.cz-tn-after { display: grid; gap: var(--gp-space-2); margin-top: var(--gp-space-4); }
+.cz-tn-verdict { margin: 0; font-weight: 800; }
+.cz-tn-verdict.is-good { color: var(--gp-good, #2E7D32); }
+.cz-tn-verdict.is-retry { color: var(--gp-retry); }
+.cz-tn-why { margin: 0; }
+.cz-tn-rule {
+  margin: 0;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--gp-ink-soft);
+}
+.cz-tn-done { display: grid; gap: var(--gp-space-3); justify-items: center; text-align: center; }

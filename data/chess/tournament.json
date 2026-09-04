@@ -1,0 +1,677 @@
+{
+  "day": [
+    {
+      "icon": "🎒",
+      "head": "Before you go",
+      "say": "Pack the night before. A board and a clock if you have them, a pen, and a snack. Nothing else matters."
+    },
+    {
+      "icon": "📋",
+      "head": "The pairing sheet",
+      "say": "A list goes up on the wall each round. Find your name. Beside it is your board number and whether you are White or Black."
+    },
+    {
+      "icon": "🪑",
+      "head": "Find your board",
+      "say": "Boards are numbered. Sit on your colour. If somebody is already in your seat, check the sheet again before you say anything."
+    },
+    {
+      "icon": "🤝",
+      "head": "Say hello",
+      "say": "Shake hands and say your name. You are about to spend an hour with this person."
+    },
+    {
+      "icon": "⏱️",
+      "head": "Start the clock",
+      "say": "White moves first, then presses the clock. If White is not there yet, Black starts White’s clock and waits."
+    },
+    {
+      "icon": "✍️",
+      "head": "Write it down",
+      "say": "If each player has 30 minutes or more, you must write your moves. Write the move, then play it, or play it and then write. Either is fine."
+    },
+    {
+      "icon": "🙋",
+      "head": "If you need help",
+      "say": "Stop both clocks and put your hand up. Wait. Do not shout across the room. The person who comes is the Tournament Director, the TD."
+    },
+    {
+      "icon": "🏁",
+      "head": "When it ends",
+      "say": "Shake hands whoever won. Then BOTH of you go and report the result. Do not let the other player report it alone."
+    },
+    {
+      "icon": "⏳",
+      "head": "Then you wait",
+      "say": "Rounds start when everybody is finished. Go outside, eat something, and do not talk about your game near the boards."
+    }
+  ],
+  "kit": [
+    {
+      "thing": "A pen",
+      "why": "For writing your moves. Bring two."
+    },
+    {
+      "thing": "A snack and a drink",
+      "why": "Rounds are long and there is often no shop."
+    },
+    {
+      "thing": "A board and pieces",
+      "why": "Only if the tournament asks you to bring them. Most supply them."
+    },
+    {
+      "thing": "A clock",
+      "why": "A digital one with delay if you have it. Not everybody does."
+    },
+    {
+      "thing": "A jumper",
+      "why": "Playing halls are always cold."
+    },
+    {
+      "thing": "Your US Chess ID",
+      "why": "If you have one. If not, they will sign you up on the day."
+    }
+  ],
+  "sets": [
+    {
+      "id": "touch",
+      "name": "Touching pieces",
+      "emoji": "✋",
+      "blurb": "The rule that causes more arguments than every other one put together.",
+      "drills": [
+        {
+          "ask": "You pick up your knight. Then you see the move loses your queen. What now?",
+          "choices": [
+            {
+              "id": "must",
+              "text": "You must move that knight, if it has any legal move"
+            },
+            {
+              "id": "back",
+              "text": "Put it back and think again"
+            },
+            {
+              "id": "ask",
+              "text": "Ask your opponent if it is all right"
+            }
+          ],
+          "answer": "must",
+          "why": "Touch a piece on purpose and you have to move it. Decide before you reach out.",
+          "rule": "US Chess 10B"
+        },
+        {
+          "ask": "A piece is sitting crooked, half off its square. You want to straighten it.",
+          "choices": [
+            {
+              "id": "say",
+              "text": "Say \"I adjust\" FIRST, then straighten it"
+            },
+            {
+              "id": "just",
+              "text": "Just straighten it, everyone can see what you meant"
+            },
+            {
+              "id": "after",
+              "text": "Straighten it, then say \"I adjust\""
+            }
+          ],
+          "answer": "say",
+          "why": "You have to say it before you touch, and it must be your turn. Afterwards is too late.",
+          "rule": "US Chess 10A"
+        },
+        {
+          "ask": "You touch your bishop. It turns out the bishop has no legal move at all.",
+          "choices": [
+            {
+              "id": "free",
+              "text": "You may play any legal move you like"
+            },
+            {
+              "id": "lose",
+              "text": "You lose your turn"
+            },
+            {
+              "id": "other",
+              "text": "You must move the piece next to it"
+            }
+          ],
+          "answer": "free",
+          "why": "If the piece you touched cannot move, nothing is lost. Play whatever you want.",
+          "rule": "US Chess 10D"
+        },
+        {
+          "ask": "Your pawn reaches the end. You pick a queen up out of the box, then change your mind and want a knight.",
+          "choices": [
+            {
+              "id": "fine",
+              "text": "Fine. A piece off the board does not count until it lands"
+            },
+            {
+              "id": "queen",
+              "text": "Too late, it has to be a queen"
+            },
+            {
+              "id": "td",
+              "text": "You must call the TD"
+            }
+          ],
+          "answer": "fine",
+          "why": "There is no penalty for touching a piece that is off the board.",
+          "rule": "US Chess 10H"
+        },
+        {
+          "ask": "You let go of your rook on a square you did not mean. The move is legal.",
+          "choices": [
+            {
+              "id": "stays",
+              "text": "It stays there. The move is done"
+            },
+            {
+              "id": "undo",
+              "text": "You may pick it up again, you did not mean it"
+            },
+            {
+              "id": "clock",
+              "text": "It only counts once you press the clock"
+            }
+          ],
+          "answer": "stays",
+          "why": "Let go on a legal square and that is your move, even by accident.",
+          "rule": "US Chess 10G"
+        },
+        {
+          "ask": "Your opponent touches their knight, then moves a pawn instead. You want to say something.",
+          "choices": [
+            {
+              "id": "now",
+              "text": "Say it now, before you touch anything of your own"
+            },
+            {
+              "id": "later",
+              "text": "Make your move, then mention it"
+            },
+            {
+              "id": "never",
+              "text": "It is too late once they let go"
+            }
+          ],
+          "answer": "now",
+          "why": "A touch-move claim has to come before you touch a piece yourself.",
+          "rule": "US Chess 10J"
+        }
+      ]
+    },
+    {
+      "id": "clock",
+      "name": "The clock",
+      "emoji": "⏱️",
+      "blurb": "Two buttons, and about six rules that decide games.",
+      "drills": [
+        {
+          "ask": "Your opponent’s time runs out. Their flag is down. What happens?",
+          "choices": [
+            {
+              "id": "say",
+              "text": "Nothing, until you stop the clock and say so"
+            },
+            {
+              "id": "auto",
+              "text": "You win automatically, the clock knows"
+            },
+            {
+              "id": "td",
+              "text": "The TD will notice and stop the game"
+            }
+          ],
+          "answer": "say",
+          "why": "Only the two players may call a flag. A TD will never do it for you, and neither may anybody watching.",
+          "rule": "US Chess 13C1"
+        },
+        {
+          "ask": "You want to claim a win on time. How, exactly?",
+          "choices": [
+            {
+              "id": "stop",
+              "text": "Stop both clocks, then say the claim out loud"
+            },
+            {
+              "id": "point",
+              "text": "Point at the flag and keep playing"
+            },
+            {
+              "id": "shout",
+              "text": "Put your hand up and shout for the TD"
+            }
+          ],
+          "answer": "stop",
+          "why": "Stop both clocks and state it. If they disagree, then put your hand up.",
+          "rule": "US Chess 13C5"
+        },
+        {
+          "ask": "You need the TD. When should you stop the clock?",
+          "choices": [
+            {
+              "id": "mine",
+              "text": "On your own time, not your opponent’s"
+            },
+            {
+              "id": "theirs",
+              "text": "On theirs, so it costs you nothing"
+            },
+            {
+              "id": "never",
+              "text": "Never stop the clock, just raise your hand"
+            }
+          ],
+          "answer": "mine",
+          "why": "You may always stop both clocks to make a claim, and it should be your own time you spend doing it.",
+          "rule": "US Chess 5I"
+        },
+        {
+          "ask": "You checkmate them. Do you have to press the clock?",
+          "choices": [
+            {
+              "id": "no",
+              "text": "No. Checkmate ends the game at once"
+            },
+            {
+              "id": "yes",
+              "text": "Yes, or the move does not count"
+            },
+            {
+              "id": "stop",
+              "text": "You must stop the clock instead"
+            }
+          ],
+          "answer": "no",
+          "why": "Checkmate ends it there and then. Even your own flag falling afterwards does not matter.",
+          "rule": "US Chess 13A"
+        },
+        {
+          "ask": "Your own flag falls. You have a queen and they have a lone king.",
+          "choices": [
+            {
+              "id": "lose",
+              "text": "You lose. Your flag fell"
+            },
+            {
+              "id": "draw",
+              "text": "It is a draw, you were winning"
+            },
+            {
+              "id": "win",
+              "text": "You win, you have more pieces"
+            }
+          ],
+          "answer": "lose",
+          "why": "A fallen flag is a fallen flag. Watch the clock as carefully as you watch the board.",
+          "rule": "US Chess 13C13"
+        },
+        {
+          "ask": "They run out of time. All you have left is your king.",
+          "choices": [
+            {
+              "id": "draw",
+              "text": "A draw. You cannot checkmate with a lone king"
+            },
+            {
+              "id": "win",
+              "text": "You win on time"
+            },
+            {
+              "id": "play",
+              "text": "The game carries on"
+            }
+          ],
+          "answer": "draw",
+          "why": "You can only win on time if you could ever checkmate. A lone king never can.",
+          "rule": "US Chess 14E1"
+        }
+      ]
+    },
+    {
+      "id": "wrong",
+      "name": "When it goes wrong",
+      "emoji": "🔧",
+      "blurb": "Pieces fall over. Somebody plays something impossible. Nobody is in trouble.",
+      "drills": [
+        {
+          "ask": "Four moves ago your opponent moved a knight like a bishop. You have just noticed.",
+          "choices": [
+            {
+              "id": "back",
+              "text": "Put the position back to before that move and carry on"
+            },
+            {
+              "id": "stand",
+              "text": "Too late, it stands"
+            },
+            {
+              "id": "lose",
+              "text": "They lose the game"
+            }
+          ],
+          "answer": "back",
+          "why": "Inside the last ten moves, the position goes back. Nobody is punished for a mistake.",
+          "rule": "US Chess 11A"
+        },
+        {
+          "ask": "The illegal move happened about twenty moves ago.",
+          "choices": [
+            {
+              "id": "stand",
+              "text": "It stands. Play on from here"
+            },
+            {
+              "id": "back",
+              "text": "Go back to it anyway"
+            },
+            {
+              "id": "restart",
+              "text": "Start the game again"
+            }
+          ],
+          "answer": "stand",
+          "why": "Past ten moves it is too late to unpick. The game carries on.",
+          "rule": "US Chess 11B"
+        },
+        {
+          "ask": "Your sleeve knocks six pieces over. Whose time do you use to put them back?",
+          "choices": [
+            {
+              "id": "mine",
+              "text": "Yours. Your clock keeps running"
+            },
+            {
+              "id": "theirs",
+              "text": "Theirs, they can wait"
+            },
+            {
+              "id": "stop",
+              "text": "Stop the clock, it was an accident"
+            }
+          ],
+          "answer": "mine",
+          "why": "You knocked them over, so you put them back on your own time. Be careful over the board.",
+          "rule": "US Chess 11C"
+        },
+        {
+          "ask": "You are watching a friend’s game and you spot an illegal move.",
+          "choices": [
+            {
+              "id": "quiet",
+              "text": "Say nothing. Only tell the TD, quietly"
+            },
+            {
+              "id": "tell",
+              "text": "Tell them, they are your friend"
+            },
+            {
+              "id": "point",
+              "text": "Point at the board so they look"
+            }
+          ],
+          "answer": "quiet",
+          "why": "People watching must never point things out to the players. That includes parents.",
+          "rule": "US Chess 11I"
+        },
+        {
+          "ask": "You put your opponent in check. Do you have to say \"check\"?",
+          "choices": [
+            {
+              "id": "no",
+              "text": "No. It is up to them to notice"
+            },
+            {
+              "id": "yes",
+              "text": "Yes, always"
+            },
+            {
+              "id": "kids",
+              "text": "Only in a children’s tournament"
+            }
+          ],
+          "answer": "no",
+          "why": "Saying check is not required and is rare at big events. You may say it, but nobody has to.",
+          "rule": "US Chess 12F"
+        }
+      ]
+    },
+    {
+      "id": "draws",
+      "name": "Draws and endings",
+      "emoji": "🤝",
+      "blurb": "Half a point is a real result. Here is how to claim one.",
+      "drills": [
+        {
+          "ask": "You want to offer a draw. When?",
+          "choices": [
+            {
+              "id": "after",
+              "text": "After you move, before you press the clock"
+            },
+            {
+              "id": "before",
+              "text": "Before you move"
+            },
+            {
+              "id": "any",
+              "text": "Any time you like"
+            }
+          ],
+          "answer": "after",
+          "why": "Move, offer, then press. Offering while their clock runs can be called annoying them.",
+          "rule": "US Chess 14B1"
+        },
+        {
+          "ask": "They say no. Ten moves later you would still like a draw.",
+          "choices": [
+            {
+              "id": "wait",
+              "text": "Wait until they offer, or until the position really changes"
+            },
+            {
+              "id": "again",
+              "text": "Ask again, it costs nothing"
+            },
+            {
+              "id": "never",
+              "text": "You may never ask again"
+            }
+          ],
+          "answer": "wait",
+          "why": "Asking over and over can be penalised as annoying your opponent.",
+          "rule": "US Chess 14B5"
+        },
+        {
+          "ask": "The same position has now appeared three times. What do you do?",
+          "choices": [
+            {
+              "id": "claim",
+              "text": "Stop both clocks on your turn and claim the draw"
+            },
+            {
+              "id": "auto",
+              "text": "The game is drawn by itself"
+            },
+            {
+              "id": "td",
+              "text": "Ask the TD to watch for it"
+            }
+          ],
+          "answer": "claim",
+          "why": "It is not automatic. Only the player about to move may claim, and you must say so.",
+          "rule": "US Chess 14C, 14C3"
+        },
+        {
+          "ask": "You claim a draw. The TD looks and says you are wrong.",
+          "choices": [
+            {
+              "id": "two",
+              "text": "Your opponent gets two extra minutes and you play on"
+            },
+            {
+              "id": "lose",
+              "text": "You lose the game"
+            },
+            {
+              "id": "nothing",
+              "text": "Nothing happens"
+            }
+          ],
+          "answer": "two",
+          "why": "A wrong claim costs two minutes, so be sure before you stop the clock.",
+          "rule": "US Chess 14C6"
+        },
+        {
+          "ask": "Only two kings are left on the board.",
+          "choices": [
+            {
+              "id": "draw",
+              "text": "Drawn. Neither side can ever checkmate"
+            },
+            {
+              "id": "play",
+              "text": "Keep playing until the clock runs out"
+            },
+            {
+              "id": "first",
+              "text": "Whoever has more time wins"
+            }
+          ],
+          "answer": "draw",
+          "why": "King against king can never be mate, so the game is over as a draw.",
+          "rule": "US Chess 14D1"
+        },
+        {
+          "ask": "Fifty moves each with no capture and no pawn moved. What now?",
+          "choices": [
+            {
+              "id": "claim",
+              "text": "You may claim a draw on your turn"
+            },
+            {
+              "id": "auto",
+              "text": "It is drawn automatically at fifty"
+            },
+            {
+              "id": "no",
+              "text": "There is no such rule"
+            }
+          ],
+          "answer": "claim",
+          "why": "Fifty moves by EACH side with no capture and no pawn move. You have to claim it.",
+          "rule": "US Chess 14F"
+        }
+      ]
+    },
+    {
+      "id": "manners",
+      "name": "Being a good opponent",
+      "emoji": "💛",
+      "blurb": "The part people remember about you long after the result.",
+      "drills": [
+        {
+          "ask": "You have lost. Badly. What do you do first?",
+          "choices": [
+            {
+              "id": "shake",
+              "text": "Shake hands and say well played"
+            },
+            {
+              "id": "go",
+              "text": "Get up and leave"
+            },
+            {
+              "id": "explain",
+              "text": "Explain where you went wrong"
+            }
+          ],
+          "answer": "shake",
+          "why": "Shake hands whoever won. It is the part of the day everybody remembers.",
+          "rule": "Sportsmanship, US Chess 20G"
+        },
+        {
+          "ask": "The game is over. Who reports the result?",
+          "choices": [
+            {
+              "id": "both",
+              "text": "Both of you go together"
+            },
+            {
+              "id": "winner",
+              "text": "The winner"
+            },
+            {
+              "id": "loser",
+              "text": "The loser"
+            }
+          ],
+          "answer": "both",
+          "why": "Go together, so there is no argument about what was written down.",
+          "rule": "US Chess 15H"
+        },
+        {
+          "ask": "Your phone is in your pocket and it rings during the game.",
+          "choices": [
+            {
+              "id": "off",
+              "text": "Never bring it on. Turn it right off before the round"
+            },
+            {
+              "id": "quiet",
+              "text": "Silent is fine"
+            },
+            {
+              "id": "ok",
+              "text": "It does not matter"
+            }
+          ],
+          "answer": "off",
+          "why": "A phone that makes any noise can cost you the game. Turn it off and leave it in the bag.",
+          "rule": "US Chess 20N"
+        },
+        {
+          "ask": "You arrive and your game started forty minutes ago.",
+          "choices": [
+            {
+              "id": "play",
+              "text": "Sit down and play. Your clock has been running"
+            },
+            {
+              "id": "lost",
+              "text": "You have lost already"
+            },
+            {
+              "id": "restart",
+              "text": "They restart the clock for you"
+            }
+          ],
+          "answer": "play",
+          "why": "You lose only after an hour, or when your time runs out, whichever comes first. Play on.",
+          "rule": "US Chess 13D"
+        },
+        {
+          "ask": "You are winning easily and your opponent is upset.",
+          "choices": [
+            {
+              "id": "quiet",
+              "text": "Play on quietly and finish properly"
+            },
+            {
+              "id": "chat",
+              "text": "Tell them what they did wrong"
+            },
+            {
+              "id": "easy",
+              "text": "Let them win one back"
+            }
+          ],
+          "answer": "quiet",
+          "why": "Play the game out without commentary. Talk about it afterwards, if they want to.",
+          "rule": "Sportsmanship, US Chess 20G"
+        }
+      ]
+    }
+  ]
+}

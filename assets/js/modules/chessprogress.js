@@ -89,6 +89,8 @@ const blank = () => ({
   bot: { level: 0, recent: [] },
   puzzles: { r: 800, rd: 350, vol: 0.06, seen: [] },
   games: { played: 0, won: 0 },
+  /** tournament drill set id -> best number right. Only ever goes up. */
+  tourn: {},
   seenIntro: false
 });
 
@@ -166,6 +168,12 @@ export function normalise(raw) {
   if (raw.games && typeof raw.games === 'object') {
     out.games.played = Math.max(0, Math.round(num(raw.games.played)));
     out.games.won = clamp(Math.round(num(raw.games.won)), 0, out.games.played);
+  }
+  if (raw.tourn && typeof raw.tourn === 'object') {
+    for (const [id, n] of Object.entries(raw.tourn)) {
+      const best = Math.round(num(n));
+      if (best > 0) out.tourn[id] = Math.min(best, 50);
+    }
   }
   out.seenIntro = raw.seenIntro === true;
   return out;

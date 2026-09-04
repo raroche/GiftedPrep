@@ -25,6 +25,7 @@ import { openLesson, closeLesson, lessonAction, lessonChoice } from './chessless
 import { renderPlay, closePlay, playAction, playPick } from './chessplay.js';
 import { renderPuzzles, closePuzzles, puzzleAction } from './chesspuzzle.js';
 import { renderOpenings, closeOpenings, openingsAction } from './chessopenings.js';
+import { renderTournament, closeTournament, tournamentAction, answerDrill } from './chesstournament.js';
 import { $, paint, showError, showScreen } from './../modules/shell.js';
 
 const esc = escapeHtml;
@@ -239,6 +240,12 @@ function renderHub(all, p) {
         <span class="gp-card__sub">One position, one best move. Five in a row.</span>
         <span class="gp-card__badge">Puzzle power ${p.puzzles.r}</span>
       </a>
+      <a class="gp-card gp-card--action" href="#/chess/tournament">
+        <span class="gp-card__icon" aria-hidden="true">${pieceMark('wR')}</span>
+        <span class="gp-card__title">Your first tournament</span>
+        <span class="gp-card__sub">What happens on the day, and what to do when
+          something odd happens at your board.</span>
+      </a>
       <a class="gp-card gp-card--action" href="#/chess/openings">
         <span class="gp-card__icon" aria-hidden="true">${pieceMark('wB')}</span>
         <span class="gp-card__title">Openings</span>
@@ -445,9 +452,13 @@ function renderSoon(screen, bodyId, title, what) {
  * both. Only one screen is ever showing, and whichever is live claims it
  * first by returning true.
  */
+/** The tournament drills answer through their own path, like the quiz does. */
+export function tournamentPick(id) { answerDrill(id); }
+
 export function chessAction(name, el) {
   if (puzzleAction(name)) return;
   if (openingsAction(name, el)) return;
+  if (tournamentAction(name)) return;
   if (lessonAction(name, el)) return;
   if (playAction(name, el)) return;
 
@@ -486,8 +497,13 @@ export async function renderChess(step, lessonId, third) {
 
   if (step === 'play') { closeLesson(); closePuzzles(); closeOpenings(); renderPlay(null); return; }
   if (step === 'openings') {
-    closeLesson(); closePuzzles();
+    closeLesson(); closePuzzles(); closeTournament();
     if (!await renderOpenings(lessonId)) showError('The openings could not be loaded.');
+    return;
+  }
+  if (step === 'tournament') {
+    closeLesson(); closePuzzles(); closeOpenings();
+    if (!await renderTournament(lessonId)) showError('The tournament guide could not be loaded.');
     return;
   }
   if (step === 'games') { closeLesson(); closePuzzles(); closeOpenings(); renderPlay(lessonId, third); return; }
@@ -528,6 +544,7 @@ export async function renderChess(step, lessonId, third) {
   closeLesson();
   closePuzzles();
   closeOpenings();
+  closeTournament();
   if (level) {
     /* And the same for a whole level. */
     const gate = progress.levelGate(all, all.indexOf(level), p);

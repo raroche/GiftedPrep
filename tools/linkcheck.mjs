@@ -112,7 +112,8 @@ for (const [link, from] of links) {
      Phase 1 workbench. A typo here lands a child on the home page with no
      error, the same way the country game once did. */
   if (head === 'chess' && parts[1] && !open) {
-    const pages = new Set(['1', '2', '3', 'play', 'puzzles', 'games', 'openings']);
+    const pages = new Set(['1', '2', '3', 'play', 'puzzles', 'games', 'openings',
+      'tournament']);
     if (!pages.has(parts[1])) err(`${link} -> no chess page called "${parts[1]}"   [${where}]`);
     /* A third segment is a lesson id, and it has to be one that exists: a
        typo lands the child on the level page with nothing to say why. */
