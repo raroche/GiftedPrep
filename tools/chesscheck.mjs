@@ -766,6 +766,46 @@ else if (room.status === 'live') {
 }
 
 /* ------------------------------------------------------------------ */
+/* An instruction has to say what to do                                */
+/* ------------------------------------------------------------------ */
+
+/*
+ * "Deliver it." was the whole instruction on a checkmate step. A child who
+ * does not already know the answer cannot even begin: it names no piece, no
+ * square, and no goal. "Take it", "Finish it" and "Play the fork" were the
+ * same.
+ *
+ * So every step a child has to ACT on must name something on the board -- a
+ * square, or a piece. "Now tap h1" is three words and perfectly clear; "Take
+ * the bigger one" is four and is not. Length is not the test; naming a target
+ * is.
+ */
+{
+  const SQUARE = /\b[a-h][1-8]\b/;
+  /* Something on the board, not a pronoun. A "find it yourself" question is
+     allowed to withhold the answer -- "tap the piece nobody is guarding" says
+     perfectly well what to do -- so the test is that SOMETHING concrete is
+     named, not that the answer is given away. */
+  const PIECE = new RegExp('\\b(king|queen|rook|bishop|knight|pawn|piece|square'
+    + '|row|column|star|checkmate|check|mate|fork|pin|castle)s?\\b', 'i');
+  const DOING = ['try', 'tap', 'starhunt'];
+  for (const level of levels) {
+    const file = `data/chess/level${level.level}.json`;
+    for (const lesson of level.lessons || []) {
+      for (const [j, step] of (lesson.steps || []).entries()) {
+        if (!DOING.includes(step.t)) continue;
+        const ask = typeof step.ask === 'string' ? step.ask : '';
+        if (!ask) continue;      /* a missing ask is already an error elsewhere */
+        if (SQUARE.test(ask) || PIECE.test(ask)) continue;
+        err(`${file} lesson ${lesson.id} step ${j + 1}: "${ask}" does not say what `
+          + 'to do it to — name a square or a piece, or a child who does not '
+          + 'already know the answer cannot start');
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /* A lesson that says a piece is stuck had better be right              */
 /* ------------------------------------------------------------------ */
 

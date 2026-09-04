@@ -709,3 +709,50 @@ taken, and black has no mate. Left alone.
 Black has Rxd1# available in that position too, but it is White to move and
 White's Rxd8+ comes first, so the lesson works as written. It is fragile
 rather than wrong. Worth revisiting if it is ever touched.
+
+## A way back, and words a child can act on (2026-09-04)
+
+### The back arrow
+Reported from inside a lesson: "I don't know what to do, I would like to
+review the previous step." There was no way back. The only way to re-read
+something was to start the lesson again.
+
+An arrow now sits beside the progress dots, from step two onwards. It opens a
+LOOK-BACK view: the earlier position, the words that went with it, and the
+"why" if the step had one. Arrows walk further back and forward, and "Back to
+my step" returns.
+
+It does NOT re-run the step, and that is the point. Re-running would wire the
+interactive kinds up again — a star hunt resetting its own counter, a tap step
+collecting squares — all writing over the run a child is in the middle of.
+Looking back must not be able to change anything, so it draws a picture
+instead of replaying the step. `run.index` is untouched throughout; verified
+in the browser.
+
+While looking back, every other action on the screen is ignored. The three
+look-back controls are the only way out.
+
+### file is a column, not a row
+Asked for "file" to be replaced with "row". A file is a COLUMN (a-h); a rank
+is a row (1-8). The offending sentence already used "row" correctly for the
+seventh rank, so using it for both would have taught a child something false.
+Used **column** for file and **row** for rank, everywhere: 17 texts.
+
+### Instructions have to say what to do
+"Deliver it." was the whole instruction on a checkmate step. Also "Take it",
+"Finish it", "Play the fork", "Play your first move". A child who does not
+already know the answer cannot begin.
+
+Sixteen instructions rewritten to name the piece and the square. Twenty-five
+more sentences shortened — one idea per sentence, no sentence over about
+fifteen words.
+
+`chesscheck` now fails any `try`, `tap` or `starhunt` step whose `ask` names
+nothing on the board. The test is NAMING something concrete, not length:
+"Now tap h1" is three words and fine, "Take the bigger one" is four and is
+not. A "find it yourself" question may still withhold the answer — "tap the
+piece nobody is guarding" names a piece and says the task — so the guard does
+not force spoilers.
+
+Writing that guard found eleven more vague instructions nobody had noticed,
+including four in level 3 and two in level 2. All fixed.

@@ -28,7 +28,7 @@
             "d2d4"
           ],
           "hint": "The e pawn or the d pawn, two squares forward.",
-          "wrongSay": "A centre pawn. The e file or the d file."
+          "wrongSay": "A centre pawn. The e column or the d column."
         },
         {
           "t": "say",
@@ -62,7 +62,7 @@
             }
           ],
           "answer": "no",
-          "why": "Every attack on her costs you a move, and they develop a piece while you run."
+          "why": "Every attack on her costs you a move. They bring out a piece while you run away."
         },
         {
           "t": "quiz",
@@ -138,7 +138,7 @@
             "e2e4"
           ],
           "hint": "The king's pawn, two squares.",
-          "wrongSay": "e4. Two squares up the e file."
+          "wrongSay": "e4. Two squares up the e column."
         },
         {
           "t": "try",
@@ -386,7 +386,7 @@
         {
           "t": "try",
           "fen": "r1bq1rk1/ppp2ppp/2n2n2/3pN3/8/8/PPPP1PPP/R1BQKB1R b KQ - 0 8",
-          "ask": "Take it.",
+          "ask": "Nobody is guarding that white knight on e5. Take it with your knight.",
           "accept": [
             "c6e5"
           ],
@@ -514,7 +514,7 @@
             }
           ],
           "answer": "count",
-          "why": "More attackers than guards, and it is yours. Otherwise you are just trading."
+          "why": "More of yours than theirs, and you win it. If not, you are only swapping."
         },
         {
           "t": "done",
@@ -554,7 +554,7 @@
         {
           "t": "try",
           "fen": "r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1",
-          "ask": "Play the fork.",
+          "ask": "Jump your knight to c7. It attacks the king and the rook at the same time.",
           "accept": [
             "b5c7"
           ],
@@ -805,7 +805,7 @@
             "d4f5"
           ],
           "hint": "f5 hits the queen on e7 and steps off the long diagonal.",
-          "wrongSay": "It has to do two things at once: hit the queen and get out of the way."
+          "wrongSay": "That move must do two jobs. Hit the queen, and step out of the way."
         },
         {
           "t": "say",
@@ -848,7 +848,7 @@
     },
     {
       "id": "l2-backrank",
-      "name": "The Back Rank",
+      "name": "The Back Row",
       "emoji": "🧱",
       "big": "Trapped behind your own wall. Make a hole.",
       "minutes": 7,
@@ -868,7 +868,7 @@
         {
           "t": "try",
           "fen": "6k1/5ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1",
-          "ask": "He has nowhere to go. Deliver the checkmate.",
+          "ask": "His king has nowhere to go. Play the checkmate: slide your rook up to e8.",
           "accept": [
             "e1e8"
           ],
@@ -919,7 +919,7 @@
           "t": "puzzle",
           "theme": "backRankMate",
           "count": 5,
-          "goal": "Five back rank mates. Their own pawns do the work."
+          "goal": "Five back row mates. Their own pawns do the work."
         },
         {
           "t": "done",
@@ -971,7 +971,7 @@
         {
           "t": "try",
           "fen": "6k1/pp3ppp/5n2/3r4/7B/1B6/PP3PPP/6K1 w - - 0 1",
-          "ask": "Take the guard.",
+          "ask": "Take the knight on f6 with your bishop. Then nothing is guarding the rook.",
           "accept": [
             "h4f6"
           ],
@@ -1043,7 +1043,7 @@
             "a2a7"
           ],
           "hint": "The rook on a2 goes all the way up to a7.",
-          "wrongSay": "Up the a file, to a7. That takes away the seventh row."
+          "wrongSay": "Up the a column, to a7. That takes away the seventh row."
         },
         {
           "t": "say",
@@ -1074,7 +1074,7 @@
             }
           ],
           "answer": "take",
-          "why": "If he can reach a rook, move that rook far away along its row and carry on."
+          "why": "If he can reach a rook, slide that rook far away along its row. Then carry on."
         },
         {
           "t": "play",
@@ -1204,11 +1204,11 @@
         {
           "t": "try",
           "fen": "4k3/8/4K3/8/8/8/8/R7 w - - 0 1",
-          "ask": "The kings are facing. Finish it along the back row.",
+          "ask": "The two kings are facing each other. Now slide your rook to a8 for checkmate.",
           "accept": [
             "a1a8"
           ],
-          "hint": "Up the a file to a8, the row he is standing on.",
+          "hint": "Up the a column to a8, the row he is standing on.",
           "wrongSay": "a8. Cut off the row he is on."
         },
         {
@@ -1271,7 +1271,7 @@
         {
           "t": "try",
           "fen": "8/8/8/8/P4k2/8/8/K7 b - - 0 1",
-          "ask": "Black to move. Step into the box.",
+          "ask": "You are Black now. Move your king into the box, towards the pawn.",
           "accept": [
             "f4e5",
             "f4e4",
@@ -1416,7 +1416,7 @@
         {
           "t": "try",
           "fen": "8/8/4k3/8/4K3/4P3/8/8 b - - 0 1",
-          "ask": "Black to move. Step aside, either way.",
+          "ask": "You are Black now. Your king must move aside. Either way will do.",
           "accept": [
             "e6d6",
             "e6f6",

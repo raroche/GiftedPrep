@@ -3861,6 +3861,35 @@ button, a, label, summary, [role="button"] {
   gap: 6px;
   align-items: center;
 }
+/* The way back to the step before, beside the dots that say where you are.
+   Smaller than a normal icon button, because it sits in a row of 6px dots and
+   a 44px circle beside them reads as the main thing to press. It is still 36px
+   across, which a finger finds. */
+.cz-lesson__back {
+  width: 36px;
+  min-height: 36px;
+  margin-inline-end: var(--gp-space-2);
+  font-size: 1rem;
+}
+
+/* Looking back at a step already done. */
+.cz-lesson__lookhead {
+  margin: 0 0 var(--gp-space-2);
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--gp-ink-soft);
+}
+.cz-lesson__why { margin: 0 0 var(--gp-space-3); color: var(--gp-ink-soft); }
+.cz-lesson__look {
+  display: flex;
+  align-items: center;
+  gap: var(--gp-space-2);
+  flex-wrap: wrap;
+  margin-top: var(--gp-space-3);
+}
+.cz-lesson__look .gp-btn[disabled] { opacity: .4; cursor: default; }
 
 .cz-lesson__card {
   display: grid;

@@ -40,6 +40,7 @@ export function closeLesson() {
   if (state.chess.board) { state.chess.board.destroy(); state.chess.board = null; }
   state.chess.game = null;
   state.chess.lesson = null;
+  state.chess.lookAt = null;
   state.chess.run = null;
   state.chess.hunt = null;
   state.chess.replay = null;
@@ -58,6 +59,7 @@ export function openLesson(level, lesson, levels) {
   state.chess.lesson = lesson;
   state.chess.levels = levels;
   state.chess.run = lessonKit.start(lesson);
+  state.chess.lookAt = null;
 
   $('#chesslesson-title').textContent = `${lesson.emoji} ${lesson.name}`;
   $('#screen-chesslesson').className = `gp-screen cz-room--${level.hue}`;
@@ -127,9 +129,20 @@ function keepTurn(game, side) {
 function dots() {
   const { lesson, run } = state.chess;
   const { at, total } = lessonKit.progressOf(lesson, run);
-  $('#gp-lesson-dots').innerHTML = Array.from({ length: total }, (_, i) =>
-    `<span class="gp-dot ${i === at ? 'is-now' : i < at ? 'is-done' : ''}" aria-hidden="true"></span>`
-  ).join('') + `<span class="gp-sr-only">Step ${at + 1} of ${total}</span>`;
+  const look = state.chess.lookAt;
+  const showing = look === null ? at : look;
+
+  /* The arrow lives beside the dots because that is where a child is already
+     looking to see where they are. It only exists once there is something
+     behind them: on the first step there is nothing to go back to, and a
+     dead button is a question a five-year-old cannot answer. */
+  const back = showing > 0
+    ? `<button type="button" class="gp-btn gp-btn--icon cz-lesson__back"
+         data-action="chess-lookback" aria-label="See the step before">&larr;</button>`
+    : '';
+  $('#gp-lesson-dots').innerHTML = back + Array.from({ length: total }, (_, i) =>
+    `<span class="gp-dot ${i === showing ? 'is-now' : i < showing ? 'is-done' : ''}" aria-hidden="true"></span>`
+  ).join('') + `<span class="gp-sr-only">Step ${showing + 1} of ${total}</span>`;
 }
 
 /** The one button that moves the lesson on. */
@@ -163,9 +176,54 @@ function card(inner) {
  * ten of them, each is a few lines, and having them side by side is the only
  * way to keep the cards looking like each other.
  */
+/**
+ * Look back at a step already done, without touching the lesson.
+ *
+ * A child who cannot remember what they were told cannot answer the question
+ * in front of them, and the only way back used to be starting the lesson
+ * again. This shows the earlier position and the words that went with it, and
+ * nothing else: it does NOT re-run the step.
+ *
+ * That is on purpose. Re-running would mean the interactive kinds wiring
+ * themselves up again -- a star hunt would reset its own counter, a tap step
+ * would collect squares -- all writing over the run a child is in the middle
+ * of. Looking back must not be able to change anything, so it draws a picture
+ * rather than replaying the step.
+ */
+function drawLookBack(at) {
+  const { lesson } = state.chess;
+  const step = lessonKit.stepAt(lesson, at);
+  if (!step) { state.chess.lookAt = null; drawStep(); return; }
+
+  dots();
+  makeBoard(step);
+  if (state.chess.board) state.chess.board.lock();
+
+  const words = [step.text, step.ask, step.cap, step.goal]
+    .filter((t) => typeof t === 'string' && t);
+  const why = typeof step.why === 'string' ? step.why : '';
+  const last = (lesson.steps || []).length - 1;
+
+  card(`<p class="cz-lesson__lookhead">Looking back &middot; step ${at + 1}</p>
+    ${words.map((t) => `<p class="cz-lesson__ask">${esc(t)}</p>`).join('')}
+    ${why ? `<p class="cz-lesson__why">${esc(why)}</p>` : ''}
+    <div class="cz-lesson__look">
+      <button type="button" class="gp-btn gp-btn--icon" data-action="chess-lookback"
+        aria-label="The step before this one"${at === 0 ? ' disabled' : ''}>&larr;</button>
+      <button type="button" class="gp-btn gp-btn--icon" data-action="chess-lookfwd"
+        aria-label="The step after this one"${at >= last ? ' disabled' : ''}>&rarr;</button>
+      <button type="button" class="gp-btn gp-btn--primary" data-action="chess-lookdone">
+        Back to my step</button>
+    </div>`);
+}
+
 export function drawStep() {
   const { lesson, run } = state.chess;
   if (!lesson || !run) return;
+  if (state.chess.lookAt !== null && state.chess.lookAt !== undefined) {
+    drawLookBack(state.chess.lookAt);
+    return;
+  }
   const step = lessonKit.currentStep(lesson, run);
   dots();
   if (!step) { finish(); return; }
@@ -375,6 +433,7 @@ function answerStep(input) {
   const board = state.chess.board;
   if (board) board.lock();
   window.setTimeout(() => {
+    state.chess.lookAt = null;
     state.chess.run = lessonKit.advance(state.chess.run);
     drawStep();
   }, out.say ? 1400 : 500);
@@ -502,8 +561,40 @@ export function lessonAction(name, el) {
   if (!lesson || !run) return false;
   const step = lessonKit.currentStep(lesson, run);
 
+  /* Looking back is looking only, so nothing else on this screen may act
+     while it is open. The three controls below are the way out of it. */
+  const look = state.chess.lookAt;
+  if (look !== null && look !== undefined
+      && !['chess-lookback', 'chess-lookfwd', 'chess-lookdone'].includes(name)) {
+    return true;
+  }
+
   switch (name) {
+    case 'chess-lookback': {
+      /* From the live step the first press shows the one BEFORE it. */
+      const from = look === null || look === undefined
+        ? lessonKit.progressOf(lesson, run).at : look;
+      state.chess.lookAt = Math.max(0, from - 1);
+      drawStep();
+      return true;
+    }
+
+    case 'chess-lookfwd': {
+      const at = (look || 0) + 1;
+      /* Walking forward past the last step already seen puts a child back in
+         their own lesson, which is where the arrow was pointing anyway. */
+      state.chess.lookAt = at >= lessonKit.progressOf(lesson, run).at ? null : at;
+      drawStep();
+      return true;
+    }
+
+    case 'chess-lookdone':
+      state.chess.lookAt = null;
+      drawStep();
+      return true;
+
     case 'chess-next':
+      state.chess.lookAt = null;
       state.chess.run = lessonKit.advance(run);
       drawStep();
       return true;
